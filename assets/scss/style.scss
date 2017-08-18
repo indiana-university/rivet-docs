@@ -1,0 +1,70 @@
+@import "variables";
+@import "tools";
+@import "../../node_modules/normalize.scss/normalize";
+
+html {
+    font-size: 100%;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+@include mq(1040px) {
+    html {
+        font-size: 115%;
+    }
+}
+
+body {
+    font-family: $font-system;
+    padding: 1rem;
+    line-height: 1.5;
+    background-color: #ffffff;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    h1 {
+        margin: 0;
+        line-height: 1;
+    }
+
+    nav {
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin-right: 1rem;
+        }
+    }
+}
+
+.col-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col-1,
+.col-2 {
+    padding: 1rem;
+    // flex-grow: 1;
+}
+
+.col-1 {
+    min-width: 30%;
+    flex-basis: 30%;
+}
+
+.col-2 {
+    min-width: 50%;
+    flex-basis: 50%;
+}

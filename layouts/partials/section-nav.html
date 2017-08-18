@@ -1,0 +1,16 @@
+<nav>
+    <ul>
+        {{ range .Site.Sections }}
+            {{ range .Sections }}
+            <li>
+                <h2>{{ .Title }}</h2>
+                <ul>
+                    {{ range .Pages }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+            </li>
+            {{ end }}
+        {{ end }}
+    </ul>
+</nav>
