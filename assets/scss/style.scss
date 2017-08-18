@@ -10,12 +10,6 @@ html * {
     box-sizing: border-box;
 }
 
-@include mq(1040px) {
-    html {
-        font-size: 115%;
-    }
-}
-
 body {
     font-family: $font-system;
     padding: 1rem;
@@ -28,9 +22,12 @@ header {
     align-items: center;
     width: 100%;
 
+    * {
+        line-height: 1;
+    }
+
     h1 {
         margin: 0;
-        line-height: 1;
     }
 
     nav {
@@ -55,16 +52,54 @@ header {
 
 .col-1,
 .col-2 {
-    padding: 1rem;
+    padding: 2rem;
     // flex-grow: 1;
 }
 
 .col-1 {
-    min-width: 30%;
-    flex-basis: 30%;
+    min-width: 25%;
+    flex-basis: 25%;
 }
 
 .col-2 {
-    min-width: 50%;
-    flex-basis: 50%;
+    // min-width: 50%;
+    flex-basis: 60%;
+    max-width: 800px;
+}
+
+
+.hljs {
+    font-size: .9rem;
+    padding: 1.5em;
+    line-height: 1.6;
+    border-radius: 4px;
+}
+
+.rvt-toc {
+    list-style: none;
+    padding: 0;
+
+    li a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    > li:first-child {
+        font-weight: 700;
+    }
+
+    li ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li span {
+        display: block;
+        margin-top: 1rem;
+        font-weight: 700;
+    }
+
 }

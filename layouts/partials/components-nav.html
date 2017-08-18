@@ -1,9 +1,12 @@
-<nav>
-    <ul>
-        {{ range .Site.Sections }}
+<nav class="rvt-nav">
+    <ul class="rvt-toc">
+        <li>
+            <a href="/components">Getting started</a>
+        </li>
+        {{ range where .Site.Sections "Section" "components" }}
             {{ range .Sections }}
             <li>
-                <h2>{{ .Title }}</h2>
+                <span>{{ .Title }}</span>
                 <ul>
                     {{ range .Pages }}
                     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>

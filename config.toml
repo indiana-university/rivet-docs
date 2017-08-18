@@ -1,8 +1,8 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Rivet Docs"
+title = "Rivet"
 paginate = 10
 [params]
     myVar = "Hi"
-    description = "Rivet documentation site"
+    description = "How do we design great experiences for users across UITS applications? Creating consistent front end code and documenting UX design best practices is a great place to start! "
 
