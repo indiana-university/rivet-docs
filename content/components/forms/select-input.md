@@ -2,15 +2,12 @@
 title = "Select element"
 description = "The select element creates a dropdown that allows users to choose one item from a list."
 +++
-## Usability notes
-
-### When to use
+## When to use
 Use the select element when you need to present users with a list of mutually exclusive options and they can **only select one option**.
 
-### When to consider something else
+## When to consider something else
 When you only need to present a user with three or less options, consider using a group of [radio inputs](radio-inputs.html) instead.
 
-## Microcopy notes
 ### Select labels
 - Write the label as a word or phrase, not as a sentence, and end it with a colon
 - Use sentence-style capitalization

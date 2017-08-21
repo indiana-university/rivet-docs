@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <h1>{{ .Title }}</h1>
+    <!-- <h1>{{ .Title }}</h1>
     {{ .Content }}
     <ul>
         {{ range .Data.Pages }}
@@ -7,5 +7,15 @@
                 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             </li>
         {{ end }}
-    </ul>
+    </ul> -->
+    <div class="rvtd-wrap">
+        <div class="rvtd-sidebar">
+            {{ partial "components-nav.html" .}}
+        </div>
+        <div class="rvtd-tube rvt-typeset">
+            <h1>{{ .Title }}</h1>
+            <p class="rvt-lead">{{ .Description }}</p>
+            {{ .Content }}
+        </div>
+    </div>
 {{ end }}

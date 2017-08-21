@@ -1,11 +1,11 @@
 {{ define "main" }}
-    <div class="col-wrapper">
-        <div class="col-1">
+    <div class="rvtd-wrap">
+        <div class="rvtd-sidebar">
             {{ partial "components-nav.html" .}}
         </div>
-        <div class="col-2">
+        <div class="rvtd-tube rvt-typeset">
             <h1>{{ .Title }}</h1>
-            <p>{{ .Description }}</p>
+            <p class="rvt-lead">{{ .Description }}</p>
             {{ .Content }}
         </div>
     </div>

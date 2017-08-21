@@ -1,9 +1,19 @@
-<header>
+
+{{ $currentNav := . }}
+<header class="p-left-sm p-right-sm">
     <h1><a href="/">{{ .Site.Title }}</a></h1>
     <nav>
         <ul>
             {{ range .Site.Sections }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                <li {{ if eq $currentNav.Permalink .Permalink }}class="is-active"{{ end }}>
+                    <a href="{{ .Permalink }}">
+                        {{ if .Params.navTitle }}
+                            {{ .Params.navTitle }}
+                        {{ else }}
+                            {{ .Title }}
+                        {{ end }}
+                    </a>
+                </li>
             {{ end }}
         </ul>
     </nav>

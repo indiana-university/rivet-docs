@@ -1,3 +1,6 @@
+<!-- Capture the current page here -->
+{{ $currentPage := . }}
+
 <nav class="rvt-nav">
     <ul class="rvt-toc">
         <li>
@@ -5,11 +8,14 @@
         </li>
         {{ range where .Site.Sections "Section" "components" }}
             {{ range .Sections }}
+
             <li>
                 <span>{{ .Title }}</span>
                 <ul>
                     {{ range .Pages }}
-                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    <li {{ if eq $currentPage.Permalink .Permalink }}class="is-current"{{ end }}>
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </li>
                     {{ end }}
                 </ul>
             </li>

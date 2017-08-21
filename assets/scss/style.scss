@@ -1,9 +1,15 @@
 @import "variables";
 @import "tools";
-@import "../../node_modules/normalize.scss/normalize";
+@import "../rivet/sass/rivet";
 
 html {
     font-size: 100%;
+}
+
+@include mq(1180px) {
+    html {
+        font-size: 110%;
+    }
 }
 
 html * {
@@ -11,8 +17,6 @@ html * {
 }
 
 body {
-    font-family: $font-system;
-    padding: 1rem;
     line-height: 1.5;
     background-color: #ffffff;
 }
@@ -21,9 +25,16 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
+    background-color:#fafafa;
+    border-bottom: 1px solid #ddd;
+    height: $lg * 2;
 
     * {
         line-height: 1;
+    }
+
+    a {
+        text-decoration: none;
     }
 
     h1 {
@@ -41,35 +52,36 @@ header {
         li {
             margin-right: 1rem;
         }
+
+        li.is-active {
+            box-shadow: 0 3px 0 $color-action;
+        }
     }
 }
 
-.col-wrapper {
+.rvtd-wrap {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
 }
 
-.col-1,
-.col-2 {
-    padding: 2rem;
-    // flex-grow: 1;
+.rvtd-sidebar {
+    border-right: 1px solid #eee;
+    background-color: #fafafa;
+    width: 300px;
+    padding: $lg;
+    height: calc(100vh - 4rem);
+    overflow-y: scroll;
 }
 
-.col-1 {
-    min-width: 25%;
-    flex-basis: 25%;
+.rvtd-tube {
+    flex-basis: 800px;
+    padding: $xl;
+    padding-left: $xxl;
+    height: calc(100vh - 4rem);
+    overflow-y: scroll;
 }
-
-.col-2 {
-    // min-width: 50%;
-    flex-basis: 60%;
-    max-width: 800px;
-}
-
 
 .hljs {
-    font-size: .9rem;
     padding: 1.5em;
     line-height: 1.6;
     border-radius: 4px;
@@ -79,16 +91,21 @@ header {
     list-style: none;
     padding: 0;
 
+    .is-current {
+        // font-weight: 700;
+        &:before {
+            content: "";
+            padding-left: $xxs;
+            border-left: 4px solid $color-midnight--300;
+        }
+    }
+
     li a {
         text-decoration: none;
 
         &:hover {
             text-decoration: underline;
         }
-    }
-
-    > li:first-child {
-        font-weight: 700;
     }
 
     li ul {
@@ -102,4 +119,58 @@ header {
         font-weight: 700;
     }
 
+}
+
+.rvt-typeset {
+
+
+
+    ul li {
+        line-height: 1.5;
+        margin-top: $sm;
+        margin-bottom: $sm;
+    }
+
+    h1 {
+        font-size: ts(46);
+    }
+
+    h2 {
+        font-size: ts(32);
+    }
+
+    h3 {
+        font-size: ts(29);
+    }
+
+    .rvt-lead {
+        font-size: ts(23);
+        color: $color-black--700;
+        margin-top: $sm;
+    }
+}
+
+.p-vertical-sm {
+    padding-top: $sm;
+    padding-bottom: $sm;
+}
+
+.p-vertical-md {
+    padding-top: $md;
+    padding-bottom: $md;
+}
+
+.p-vertical-lg {
+    padding-top: $lg;
+    padding-bottom: $lg;
+}
+
+.p-vertical-xl {
+    padding-top: $xl;
+    padding-bottom: $xl;
+}
+
+.p-vertical-xxl {
+    padding-top: $xxl;
+    padding-bottom: $xxl;
 }

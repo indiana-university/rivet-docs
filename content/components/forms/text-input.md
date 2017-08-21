@@ -3,15 +3,12 @@ title = "Text inputs and textarea"
 description = "Text inputs are the basic building blocks forms. They allow users to enter various types of data into web-based forms."
 weight = 1
 +++
-## Usability notes
-
-### When to use
+## When to use
 Use a text input for information that will only take up one line: a name, phone number, city, etc. Use textareas for information that includes multiple sentences or lines: descriptions, issues, proposals, etc.
 
-### When to consider something else
-Don’t ask the user to describe anything in a text input, which can hide text from view if the line is too long.
-
-Similarly, don’t ask users to copy large amounts of information from a document and paste it into a textarea. If possible, use a file input, and let them upload those documents instead.
+## When to consider something else
+- Don’t ask the user to describe anything in a text input, which can hide text from view if the line is too long.
+- Similarly, don’t ask users to copy large amounts of information from a document and paste it into a textarea. If possible, use a file input, and let them upload those documents instead.
 
 ```html
 <label for="select-demo">Select input:</label>
