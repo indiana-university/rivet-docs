@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    {{ partial "head.html" . }}
-    <body>
-        {{ block "header" . }}
-            {{ partial "header.html" . }}
-        {{ end}}
-        <main>
-            {{ block "main" . }}
+    <div id="wrapper">
+        {{ partial "head.html" . }}
+        <body>
+            {{ block "header" . }}
+                {{ partial "header.html" . }}
+            {{ end}}
+            <main>
+                {{ block "main" . }}
 
-            {{ end }}
-        </main>
+                {{ end }}
+            </main>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
-        <script>
-            hljs.initHighlightingOnLoad();
-        </script>
-    </body>
+            {{ partial "scripts.html" . }}
+        </body>
+    </div>
 </html>
