@@ -5,11 +5,12 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "index": "hugo-lunr"
+    "index": "hugo-lunr -o static/lunr.json"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "axios": "0.16.2",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-preset-env": "1.6.0",
@@ -21,6 +22,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "3.0.0",
     "gulp-util": "3.0.8",
+    "hugo-lunr": "0.0.4",
+    "lunr": "2.1.2",
     "normalize.css": "^7.0.0",
     "normalize.scss": "^0.1.0",
     "vue": "2.4.2",
