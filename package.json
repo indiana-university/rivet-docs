@@ -23,6 +23,7 @@
     "gulp-util": "3.0.8",
     "normalize.css": "^7.0.0",
     "normalize.scss": "^0.1.0",
+    "vue": "2.4.2",
     "vue-loader": "^12.1.0",
     "vue-template-compiler": "^2.3.3",
     "webpack": "^2.6.1"
