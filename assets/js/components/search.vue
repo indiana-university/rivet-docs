@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="search" class="m-bottom-lg">
+    <form @submit.prevent="searchDocs" class="m-bottom-lg">
         <label for="search-input">Search docs</label>
         <input v-model="searchInput" type="text" id="search-input">
     </form>
@@ -13,9 +13,25 @@
             }
         },
         methods: {
-            search: function () {
-                //https://www.npmjs.com/package/axios
+            searchDocs: function () {
+                // https://www.npmjs.com/package/axios
                 console.log("probably use axios for ajax")
+                
+                /*
+                axios.get('/api/docs', {
+                    params: {
+                      query: this.searchInput
+                    }
+                  })
+                  .then(function (response) {
+                    // if using $.emit for results or update vuex store
+                    console.log(response);
+                  })
+                  .catch(function (error) {
+                    // build a better API
+                    console.log(error);
+                  });
+                */
             }
         }
     }
