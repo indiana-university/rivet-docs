@@ -28,7 +28,7 @@ gulp.task('js:build', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(['assets/js/*.js', 'assets/js/**/*.js', 'tmp/vue-built.js'], ['js:build']);
+    gulp.watch(['assets/js/**/*.js', 'tmp/vue-built.js'], ['js:build']);
     gulp.watch(['assets/js/vue-main.js', 'assets/js/**/*.vue'], ['webpack:build']);
     gulp.watch('assets/scss/**/*.scss', ['sass:build']);
 });
