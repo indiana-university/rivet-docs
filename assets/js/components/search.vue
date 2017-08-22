@@ -11,6 +11,12 @@
             return {
                 searchInput: ""
             }
+        },
+        methods: {
+            search: function () {
+                //https://www.npmjs.com/package/axios
+                console.log("probably use axios for ajax")
+            }
         }
     }
 </script>
