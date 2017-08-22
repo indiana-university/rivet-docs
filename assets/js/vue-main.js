@@ -1,3 +1,7 @@
+/*
+    swap vue.min out for vue if you need vue devtools
+*/
+// const Vue = require('vue/dist/vue');
 const Vue = require('vue/dist/vue.min');
 
 new Vue({
@@ -6,6 +10,6 @@ new Vue({
         searchForm: require('./components/search.vue')
     },
     mounted() {
-        
+
     }
 })
