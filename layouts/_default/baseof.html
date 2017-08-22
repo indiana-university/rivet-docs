@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <div id="wrapper">
-        {{ partial "head.html" . }}
-        <body>
+    {{ partial "head.html" . }}
+    <body>
+        <div id="wrapper">
             {{ block "header" . }}
                 {{ partial "header.html" . }}
             {{ end}}
@@ -11,8 +11,7 @@
 
                 {{ end }}
             </main>
-
-            {{ partial "scripts.html" . }}
-        </body>
-    </div>
+        </div>
+        {{ partial "scripts.html" . }}
+    </body>
 </html>
