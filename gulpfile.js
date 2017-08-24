@@ -4,6 +4,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const gutil = require("gulp-util");
 const webpack = require('webpack');
+const hugoIndexer = require('./search-indexer.js');
 
 gulp.task('sass:build', function() {
     return gulp.src('assets/scss/**/*.scss')
@@ -27,10 +28,19 @@ gulp.task('js:build', function() {
         .pipe(gulp.dest('./static/js'));
 });
 
+gulp.task('index:build', function() {
+    var indexer = new hugoIndexer();
+    indexer.setInput('content/**');
+    indexer.setOutput('static/site-index.json');
+    indexer.index();
+});
+
 gulp.task('watch', function() {
-    gulp.watch(['assets/js/**/*.js', 'tmp/vue-built.js'], ['js:build']);
+    gulp.start(['webpack:build', 'js:build', 'sass:build', 'index:build']);
     gulp.watch(['assets/js/vue-main.js', 'assets/js/**/*.vue'], ['webpack:build']);
+    gulp.watch(['assets/js/**/*.js', 'tmp/vue-built.js'], ['js:build']);
     gulp.watch('assets/scss/**/*.scss', ['sass:build']);
+    gulp.watch(['content/**/*.md'], ['index:build']);
 });
 
 gulp.task('env:production', function() {
