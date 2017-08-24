@@ -30,8 +30,6 @@ gulp.task('js:build', function() {
 
 gulp.task('index:build', function() {
     var indexer = new hugoIndexer();
-    indexer.setInput('content/**');
-    indexer.setOutput('static/site-index.json');
     indexer.index();
 });
 

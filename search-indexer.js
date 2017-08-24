@@ -15,7 +15,7 @@ function indexer(input, output){
 
 	//defaults
 	this.input = 'content/**';
-	this.output = 'public/lunr.json';
+	this.output = 'static/site-index.json';
 
 	this.baseDir = path.dirname(this.input);
 }
@@ -76,6 +76,7 @@ indexer.prototype.readFile = function(filePath){
 
 	var uri = '/' + filePath.substring(0,filePath.lastIndexOf('.'));
 	uri = uri.replace(self.baseDir +'/', '');
+    uri = uri.replace(/\/_index$/, '')
 
 	if (meta.data.slug !=  undefined){
 		uri = path.dirname(uri) + meta.data.slug;
