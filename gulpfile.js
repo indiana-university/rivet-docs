@@ -45,6 +45,6 @@ gulp.task('env:production', function() {
     process.env.NODE_ENV = 'production';
 });
 
-gulp.task('build:prod', ['env:production', 'sass:build', 'webpack:build', 'js:build']);
+gulp.task('build:prod', ['env:production', 'sass:build', 'webpack:build', 'js:build', 'index:build']);
 
 gulp.task('default', ['watch']);
