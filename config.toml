@@ -3,6 +3,4 @@ languageCode = "en-us"
 title = "Rivet"
 paginate = 10
 [params]
-    myVar = "Hi"
-    description = "How do we design great experiences for users across UITS applications? Creating consistent front end code and documenting UX design best practices is a great place to start! "
-
+    
