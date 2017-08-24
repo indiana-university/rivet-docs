@@ -105,6 +105,9 @@ module.exports = {
             })
     },
     watch: {
+        query() {
+            this.search()
+        },
         matchesInIndex() {
             let regexQuery = new RegExp(this.query)
             let previewLength = 144
