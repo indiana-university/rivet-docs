@@ -89,25 +89,31 @@ module.exports = {
             let previewLength = 144
             this.results = this.matchesInIndex.map((result) => {
                 let document = this.documents[result.ref]
-                let start = 0
-                let firstOccurence = document.rawContent.search(regexQuery)   // find the first whitespace after 144 characters
-                if(firstOccurence > 0 && firstOccurence > (previewLength/2)) {
-                    start = firstOccurence - previewLength/2
-                    start = document.rawContent.indexOf(' ', start)
-                    end = firstOccurence + previewLength/2
-                    endOnWhitespace = document.rawContent.indexOf(' ', end)
-                    end = endOnWhitespace==-1 ? end : endOnWhitespace
+
+                if(document.description) {
+                    document.preview = description
                 } else {
-                    start = 0
-                    end = previewLength
-                }
-                console.log(start+ " " +end)
-                document.preview = document.rawContent.substring(start, end)
-                if(start!=0) {
-                    document.preview = "..."+document.preview
-                }
-                if(end < document.rawContent.length) {
-                    document.preview = document.preview+"..."
+                    // ugh...
+                    let start = 0
+                    let firstOccurence = document.rawContent.search(regexQuery)   // find the first whitespace after 144 characters
+                    if(firstOccurence > 0 && firstOccurence > (previewLength/2)) {
+                        start = firstOccurence - previewLength/2
+                        start = document.rawContent.indexOf(' ', start)
+                        end = firstOccurence + previewLength/2
+                        endOnWhitespace = document.rawContent.indexOf(' ', end)
+                        end = endOnWhitespace==-1 ? end : endOnWhitespace
+                    } else {
+                        start = 0
+                        end = previewLength
+                    }
+                    console.log(start+ " " +end)
+                    document.preview = document.rawContent.substring(start, end)
+                    if(start!=0) {
+                        document.preview = "..."+document.preview
+                    }
+                    if(end < document.rawContent.length) {
+                        document.preview = document.preview+"..."
+                    }
                 }
                 return document
             })
