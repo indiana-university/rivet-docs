@@ -68,6 +68,7 @@ module.exports = {
                     this.field('content')
                     this.field('tags')
                     this.field('rawContent')
+                    this.field('description')
 
                     response.data.forEach((doc) => {
                         this.add(doc)
@@ -91,7 +92,7 @@ module.exports = {
                 let document = this.documents[result.ref]
 
                 if(document.description) {
-                    document.preview = description
+                    document.preview = document.description
                 } else {
                     // ugh...
                     let start = 0
@@ -106,7 +107,6 @@ module.exports = {
                         start = 0
                         end = previewLength
                     }
-                    console.log(start+ " " +end)
                     document.preview = document.rawContent.substring(start, end)
                     if(start!=0) {
                         document.preview = "..."+document.preview
