@@ -60,7 +60,7 @@ module.exports = {
         }
     },
     mounted() {
-        http.get('/site-index.json')
+        http.get('site-index.json')
             .then((response) => {
                 this.index = lunr(function() {
                     this.ref('uri')
@@ -80,6 +80,26 @@ module.exports = {
                 }, {})
             })
             .catch(function(error) {
+                // if there was an error it may be a path issue. Let's try the root
+                http.get('/site-index.json')
+                .then((response) => {
+                    this.index = lunr(function() {
+                        this.ref('uri')
+                        this.field('title')
+                        this.field('content')
+                        this.field('tags')
+                        this.field('rawContent')
+
+                        response.data.forEach((doc) => {
+                            this.add(doc)
+                        })
+                    })
+                    let corpus = response.data
+                    this.documents = corpus.reduce(function(memo, doc) {
+                        memo[doc.uri] = doc
+                        return memo
+                    }, {})
+                })
                 console.log(error)
             })
     },
