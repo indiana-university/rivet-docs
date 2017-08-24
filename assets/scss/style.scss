@@ -6,12 +6,6 @@ html {
     font-size: 100%;
 }
 
-@include mq(1180px) {
-    html {
-        font-size: 110%;
-    }
-}
-
 html * {
     box-sizing: border-box;
 }
@@ -67,18 +61,22 @@ header {
 .rvtd-sidebar {
     border-right: 1px solid #eee;
     background-color: #fafafa;
-    width: 300px;
+    min-width: 300px;
+    flex-basis: 300px;
     padding: $lg;
     height: calc(100vh - 4rem);
     overflow-y: scroll;
 }
 
 .rvtd-tube {
-    flex-basis: 800px;
-    padding: $xl;
-    padding-left: $xxl;
     height: calc(100vh - 4rem);
+    width: 100%;
+    padding: $xl;
     overflow-y: scroll;
+
+    &__inner {
+        max-width: 760px;
+    }
 }
 
 .hljs {
