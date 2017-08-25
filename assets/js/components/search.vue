@@ -1,6 +1,6 @@
 <template>
-    <form @submit.prevent="searchDocs" class="m-bottom-lg">
-        <label for="search-input">Search docs</label>
+    <form @submit.prevent="searchDocs">
+        <label for="search-input" class="sr-only">Search docs</label>
         <input v-model="searchInput" type="text" id="search-input">
     </form>
 </template>
@@ -16,7 +16,7 @@
             searchDocs: function () {
                 // https://www.npmjs.com/package/axios
                 console.log("probably use axios for ajax")
-                
+
                 /*
                 axios.get('/api/docs', {
                     params: {

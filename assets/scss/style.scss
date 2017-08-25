@@ -15,41 +15,22 @@ body {
     background-color: #ffffff;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background-color:#fafafa;
-    border-bottom: 1px solid #ddd;
-    height: $lg * 2;
-
-    * {
-        line-height: 1;
-    }
-
-    a {
-        text-decoration: none;
-    }
+.rvtd-intro {
+    background-color: #f7f7f7;
+    padding: 4rem 0 5rem 0;
 
     h1 {
-        margin: 0;
+        line-height: 1.1;
     }
 
-    nav {
-        margin-left: auto;
+    img {
+        max-width: 100%;
     }
+}
 
-    nav ul {
-        display: flex;
-        list-style: none;
-
-        li {
-            margin-right: 1rem;
-        }
-
-        li.is-active {
-            box-shadow: 0 3px 0 $color-action;
-        }
+@include mq(bp(lg)) {
+    .rvtd-intro {
+        padding: 8rem 0 10rem 0;
     }
 }
 
@@ -75,7 +56,7 @@ header {
     overflow-y: scroll;
 
     &__inner {
-        max-width: 760px;
+        max-width: 720px;
     }
 }
 
@@ -120,31 +101,35 @@ header {
 }
 
 .rvt-typeset {
-
-
-
     ul li {
         line-height: 1.5;
         margin-top: $sm;
         margin-bottom: $sm;
     }
 
+    h2, h3 {
+        margin-top: $lg;
+    }
+
     h1 {
-        font-size: ts(46);
+        font-size: ts(41);
     }
 
     h2 {
-        font-size: ts(32);
+        font-size: ts(29);
     }
 
     h3 {
-        font-size: ts(29);
+        font-size: ts(23);
     }
 
     .rvt-lead {
         font-size: ts(23);
         color: $color-black--700;
-        margin-top: $sm;
+        line-height: 1.3;
+        margin-top: $xxs;
+        padding-bottom: $xl;
+        border-bottom: 1px solid $color-black--100;
     }
 }
 
