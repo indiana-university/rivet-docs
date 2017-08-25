@@ -36,27 +36,42 @@ body {
 
 .rvtd-wrap {
     display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
 .rvtd-sidebar {
-    border-right: 1px solid #eee;
     background-color: #fafafa;
-    min-width: 300px;
-    flex-basis: 300px;
+    border-bottom: 1px solid #eee;
     padding: $lg;
-    height: calc(100vh - 4rem);
-    overflow-y: scroll;
 }
 
 .rvtd-tube {
-    height: calc(100vh - 4rem);
     width: 100%;
     padding: $xl;
-    overflow-y: scroll;
 
     &__inner {
         max-width: 720px;
+    }
+}
+
+@include mq(bp(md)) {
+    .rvtd-wrap {
+        flex-direction: row;
+    }
+
+    .rvtd-sidebar {
+        border-right: 1px solid #eee;
+        border-bottom: none;
+        min-width: 320px;
+        flex-basis: 320px;
+        height: calc(100vh - 130px);
+        overflow-y: scroll;
+    }
+
+    .rvtd-tube {
+        height: calc(100vh - 130px);
+        overflow-y: scroll;
     }
 }
 
@@ -113,6 +128,8 @@ body {
 
     h1 {
         font-size: ts(41);
+        line-height: 1.2;
+        margin-bottom: $sm;
     }
 
     h2 {
