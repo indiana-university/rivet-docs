@@ -2,17 +2,29 @@
 title = "Select element"
 description = "The select element creates a dropdown that allows users to choose one item from a list."
 +++
+
+## Example
+{{< example "html" >}}
+<label for="select-demo">Select input:</label>
+    <select id="select-demo">
+    <option value="">Option One</option>
+    <option value="">Option Two</option>
+    <option value="">Option Three</option>
+    <option value="">Option Four</option>
+</select>
+{{< /example >}}
+
 ## When to use
 Use the select element when you need to present users with a list of mutually exclusive options and they can **only select one option**.
 
 ## When to consider something else
 When you only need to present a user with three or less options, consider using a group of [radio inputs](radio-inputs.html) instead.
 
-### Select labels
+## Select labels
 - Write the label as a word or phrase, not as a sentence, and end it with a colon
 - Use sentence-style capitalization
 
-### Select options
+## Select options
 - Don't make the content of the select list or combo box (or its units label) part of a sentence
 - Write each option as a word or phrase, not as a sentence, and use no ending punctuation
 - Use parallel phrasing, and try to keep the length about the same for all options

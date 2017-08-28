@@ -3,6 +3,7 @@ title = "Text inputs and textarea"
 description = "Text inputs are the basic building blocks forms. They allow users to enter various types of data into web-based forms."
 weight = 1
 +++
+
 ## When to use
 Use a text input for information that will only take up one line: a name, phone number, city, etc. Use textareas for information that includes multiple sentences or lines: descriptions, issues, proposals, etc.
 
@@ -10,15 +11,7 @@ Use a text input for information that will only take up one line: a name, phone 
 - Don’t ask the user to describe anything in a text input, which can hide text from view if the line is too long.
 - Similarly, don’t ask users to copy large amounts of information from a document and paste it into a textarea. If possible, use a file input, and let them upload those documents instead.
 
-```html
-<label for="select-demo">Select input:</label>
-<select class="m-bottom-md" id="select-demo">
-    <option value="">Option One</option>
-    <option value="">Option Two</option>
-    <option value="">Option Three</option>
-    <option value="">Option Four</option>
-</select>
-```
+
 
 ## Microcopy notes
 Keep labels clear and concise―around two to three words and never more than eight. But don’t be afraid to be descriptive or use a human voice. “Describe the problem you’re having” is clearer and kinder than “Problem description.”
