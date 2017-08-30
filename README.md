@@ -39,7 +39,7 @@ npm install
 ## Watching changes during development
 Hugo's built in dev server can watch for content or assets to change, and automatically rebuild the site, while gulp can watch CSS and JS source files and automatically rebuild assets. Combined, content and assets can be watched for changes, and the site will be continually rebuilt and hot-reloaded (updated in the browser without reloading the page). To start the processes, run:
 ```
-hugo server watch
+hugo server
 ```
 and
 ```
