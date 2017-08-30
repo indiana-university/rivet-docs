@@ -33,7 +33,6 @@ gulp.task('index:build', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.start(['webpack:build', 'js:build', 'sass:build', 'index:build']);
     gulp.watch(['assets/js/vue-main.js', 'assets/js/**/*.vue'], ['webpack:build']);
     gulp.watch(['assets/js/**/*.js', 'tmp/vue-built.js'], ['js:build']);
     gulp.watch('assets/scss/**/*.scss', ['sass:build']);
@@ -46,4 +45,4 @@ gulp.task('env:production', function() {
 
 gulp.task('build:prod', ['env:production', 'sass:build', 'webpack:build', 'js:build', 'index:build']);
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['webpack:build', 'js:build', 'sass:build', 'index:build', 'watch']);
