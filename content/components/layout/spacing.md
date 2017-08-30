@@ -8,7 +8,7 @@ status = "Alpha"
 To maintain consistent spacing between components and to help create a sense of vertical rhythm, we have created a spacing system based on `.5rem` (8px) unit. Margins and padding can be applied using a set of CSS utility classes to add or remove margin and padding from any element.
 
 ### Spacing examples
-<table>
+<table class="m-top-lg">
     <caption class="sr-only">Rivet spacing utilities</caption>
     <thead>
         <th>CSS suffix</th>
