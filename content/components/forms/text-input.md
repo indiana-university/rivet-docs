@@ -1,7 +1,7 @@
 +++
 title = "Text inputs"
 description = "Text inputs are the basic building blocks forms. They allow users to enter various types of data into web-based forms."
-weight = 1
+status = "Alpha"
 +++
 
 ## When to use
@@ -14,8 +14,8 @@ Use a text input for information that will only take up one line: a name, phone 
 ## Text input example
 
 {{< example "html" >}}<label for="demo-1">Text Input</label>
-<input type="text" id="demo-1">
-<small class="display-block m-bottom-md">This is a note about this field.</small>
+<input type="text" id="demo-1" aria-describedby="demo-1-note">
+<small id="demo-1-note" class="display-block m-bottom-md">This is a note about this field.</small>
 
 <label for="demo-2">Text Input (disabled)</label>
 <input type="text" id="demo-2" disabled>

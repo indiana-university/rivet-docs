@@ -6,7 +6,7 @@
             {{ range .Sections }}
 
             <li>
-                <span>{{ .Title }}</span>
+                <span class="text-uppercase">{{ .Title }}</span>
                 <ul>
                     {{ range .Pages }}
                     <li {{ if eq $currentPage.Permalink .Permalink }}class="is-current"{{ end }}>

@@ -1,6 +1,7 @@
 +++
 title = "Checkboxes"
 description = "Checkboxes allow users to select one or more options from a list of choices."
+status = "Alpha"
 +++
 ## Inline checkboxes example
 {{< example "html" >}}<form>
