@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
-static/
 public/
 .npmrc
 tmp/
+static/css/style.css
+static/js/rivet-docs.js
+static/site-index.json
