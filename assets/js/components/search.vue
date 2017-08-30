@@ -1,5 +1,5 @@
 <template>
-<div class="rvtd-search m-left-lg">
+<div class="rvtd-search">
     <form @submit.prevent="search" class="rvtd-search__form">
         <label class="sr-only" for="search-input">Search query</label>
         <div class="rvt-combo-input">

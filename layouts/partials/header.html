@@ -20,7 +20,7 @@
             <ul>
                 {{ $currentNav := . }}
                 {{ range .Site.Sections }}
-                <li {{ if eq $currentNav.Permalink .Permalink }}class="is-active" {{ end }}>
+                <li {{ if eq $currentNav.Section .Section }}class="is-current" {{ end }}>
                     <a href="{{ .Permalink }}">
                         {{ if .Params.navTitle }}
                             {{ .Params.navTitle }}
@@ -30,9 +30,9 @@
                     </a>
                 </li>
                 {{ end }}
+                <li><search-form></search-form></li>
             </ul>
         </nav>
-        <!-- <search-form></search-form> -->
         {{ partial "drawer-button.html" . }}
     </div>
     {{ partial "drawer.html" . }}

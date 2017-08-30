@@ -1,5 +1,5 @@
 +++
-title = "Text inputs and textarea"
+title = "Text inputs"
 description = "Text inputs are the basic building blocks forms. They allow users to enter various types of data into web-based forms."
 weight = 1
 +++
@@ -11,6 +11,24 @@ Use a text input for information that will only take up one line: a name, phone 
 - Don’t ask the user to describe anything in a text input, which can hide text from view if the line is too long.
 - Similarly, don’t ask users to copy large amounts of information from a document and paste it into a textarea. If possible, use a file input, and let them upload those documents instead.
 
+## Text input example
+
+{{< example "html" >}}<label for="demo-1">Text Input</label>
+<input type="text" id="demo-1">
+<small class="display-block m-bottom-md">This is a note about this field.</small>
+
+<label for="demo-2">Text Input (disabled)</label>
+<input type="text" id="demo-2" disabled>
+{{< /example >}}
+
+## Textarea example
+
+{{< example "html" >}}<label for="demo-3">Textarea</label>
+<textarea id="demo-3" class="m-bottom-md"></textarea>
+
+<label for="demo-4">Textarea (disabled)</label>
+<textarea id="demo-4" class="m-bottom-md" disabled></textarea>
+{{< /example >}}
 
 
 ## Microcopy notes

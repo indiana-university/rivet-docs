@@ -97,10 +97,10 @@ body {
 
 .rvtd-tube {
     width: 100%;
-    padding: $xl;
+    padding: $xxl;
 
     &__inner {
-        max-width: 720px;
+        max-width: 800px;
     }
 }
 
@@ -112,14 +112,14 @@ body {
     .rvtd-sidebar {
         border-right: 1px solid #eee;
         border-bottom: none;
-        min-width: 320px;
-        flex-basis: 320px;
-        height: calc(100vh - 130px);
+        min-width: 250px;
+        flex-basis: 250px;
+        height: calc(100vh - 71px);
         overflow-y: scroll;
     }
 
     .rvtd-tube {
-        height: calc(100vh - 130px);
+        height: calc(100vh - 71px);
         overflow-y: scroll;
     }
 }
@@ -145,6 +145,7 @@ body {
 
     li a {
         text-decoration: none;
+        font-size: ts(14);
 
         &:hover {
             text-decoration: underline;
@@ -165,6 +166,7 @@ body {
 }
 
 .rvtd-example {
+    margin-top: $md;
 
     &__demo {
         border: 2px solid $color-black--100;
@@ -243,4 +245,17 @@ body {
 .p-vertical-xxl {
     padding-top: $xxl;
     padding-bottom: $xxl;
+}
+
+
+/**
+ * Shame
+ */
+
+.rvt-header__main-nav {
+    margin-right: $lg;
+
+    ul li.is-current {
+        box-shadow: 0 3px 0 $color-action;
+    }
 }
