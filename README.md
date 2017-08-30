@@ -5,7 +5,7 @@ This is the source for the Rivet documentation site. It is built with [Hugo](htt
 git clone git@github.iu.edu:UITS/rivet-docs-source.git
 cd rivet-docs-source
 npm install
-gulp build
+gulp
 hugo server
 ```
 You should be able to browse a local version of the site at http://localhost:1313
@@ -24,7 +24,7 @@ from [Installing Node.js via package manager](https://nodejs.org/en/download/pac
 brew install node
 ```
 
-`gulp` is specified as a dependency of this project and will be installed later, or you can install it globally with npm:
+Gulp is specified as a dependency of this project and will be installed later, or you can install it globally with npm:
 ```
 npm install -g gulp
 ```
@@ -43,6 +43,6 @@ hugo server watch
 ```
 and
 ```
-gulp watch
+gulp
 ```
 It is currently necessary to run *two* terminal/shell windows, as the hugo and gulp processes are separate. Errors and build progress will appear in each window for its respective process.
