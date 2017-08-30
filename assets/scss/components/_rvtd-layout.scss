@@ -32,7 +32,7 @@
     padding: $lg;
 
     &__inner {
-        max-width: 800px;
+
     }
 }
 
@@ -41,5 +41,17 @@
         height: calc(100vh - 71px);
         overflow-y: scroll;
         padding: $lg $xxl;
+    }
+}
+
+@include mq(bp(xl)) {
+    .rvtd-tube__inner {
+        width: 80%;
+    }
+}
+
+@include mq(bp(xxl)) {
+    .rvtd-tube__inner {
+        width: 70%;
     }
 }
