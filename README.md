@@ -6,9 +6,8 @@ git clone git@github.iu.edu:UITS/rivet-docs-source.git
 cd rivet-docs-source
 npm install
 gulp
-hugo server
 ```
-You should be able to browse a local version of the site at http://localhost:1313
+You should be able to browse a local version of the site at http://localhost:3000
 
 ## Requirements
 
@@ -37,12 +36,9 @@ npm install
 ```
 
 ## Watching changes during development
-Hugo's built in dev server can watch for content or assets to change, and automatically rebuild the site, while gulp can watch CSS and JS source files and automatically rebuild assets. Combined, content and assets can be watched for changes, and the site will be continually rebuilt and hot-reloaded (updated in the browser without reloading the page). To start the processes, run:
-```
-hugo server
-```
-and
+[BrowserSync](https://www.browsersync.io/) is used to provide a dev server with hot-reloading while working on the site, while several gulp tasks run to watch for changes to CSS, JS, and the site content itself. The default gulp task watches all files of interest and serves the site at http://localhost:3000, so getting started simply requires:
 ```
 gulp
 ```
-It is currently necessary to run *two* terminal/shell windows, as the hugo and gulp processes are separate. Errors and build progress will appear in each window for its respective process.
+
+To watch and build files without running a server, you can run `gulp watch`. To package up the `public/` folder for distribution, run `gulp build:prod`. 
