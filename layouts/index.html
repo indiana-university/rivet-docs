@@ -1,6 +1,19 @@
 {{ define "main" }}
-    <div class="rvt-container">
-        <h1>{{ .Title }}</h1>
-        <p>{{ .Site.Params.description }}</p>
+<section class="rvtd-intro">
+    <div class="rvt-container rvt-container--center rvt-container--junior">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item-12-sm-up rvt-grid__item-6-md-up">
+                <h1 class="ts-32 ts-46--md-up">{{ .Title | markdownify }}</h1>
+                <p class="ts-20--md-up m-bottom-xl">{{ .Description }}</p>
+                <div class="button-group">
+                    <a href="{{ .Params.primaryCtaLink }}" class="button">{{ .Params.primaryCta }}</a>
+                    <a href="{{ .Params.secondaryCtaLink }}" class="button button--secondary">{{ .Params.secondaryCta }}</a>
+                </div>
+            </div>
+            <div class="rvt-grid__item-6-md-up hide-lg-down">
+                <img src="{{ "img/docs/rvtd-intro-illo.jpg" | absURL }}" alt="">
+            </div>
+        </div>
     </div>
+</section>
 {{ end }}

@@ -1,13 +1,7 @@
 <!-- Capture the current page here -->
 {{ $currentPage := . }}
-
-<search-form></search-form>
-
-<nav class="rvt-nav">
-    <ul class="rvt-toc">
-        <li>
-            <a href="/components">Getting started</a>
-        </li>
+<nav class="rvtd-nav">
+    <ul class="rvtd-toc">
         {{ range where .Site.Sections "Section" "components" }}
             {{ range .Sections }}
 

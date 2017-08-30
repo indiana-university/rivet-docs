@@ -1,10 +1,26 @@
-{{ $currentNav := . }}
-<header class="p-left-sm p-right-sm">
-    <h1><a href="/">{{ .Site.Title }}</a></h1>
-    <nav>
-        <ul>
-            {{ range .Site.Sections }}
-                <li {{ if eq $currentNav.Permalink .Permalink }}class="is-active"{{ end }}>
+<header class="rvt-header rvt-header--light" role="banner">
+    <a class="rvt-skip-link" href="#main-content">Skip to content</a>
+    <!-- Trident -->
+    <div class="rvt-header__trident">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
+            <title id="iu-logo">Indiana University</title>
+            <rect width="60" height="70" fill="#900" />
+            <polygon points="35.96 18.44 35.96 21.84 38.52 21.84 38.52 40.51 33.41 40.51 33.41 15.9 35.96 15.9 35.96 12.5 24.04 12.5 24.04 15.9 26.58 15.9 26.58 40.51 21.48 40.51 21.48 21.84 24.04 21.84 24.04 18.44 12.09 18.44 12.09 21.84 14.65 21.84 14.65 43.79 18.72 48.15 26.58 48.15 26.58 53.26 24.04 53.26 24.04 57.5 35.96 57.5 35.96 53.26 33.41 53.26 33.41 48.15 40.93 48.15 45.33 43.79 45.33 21.84 47.91 21.84 47.91 18.44 35.96 18.44"
+                fill="#fff" />
+        </svg>
+    </div>
+    <!-- App title -->
+    <h1 class="rvt-header__title">
+        <a href="/">{{ .Site.Title }}</a>
+    </h1>
+    <!-- Wrapper for header interactive elements -->
+    <div class="rvt-header__controls">
+        <!-- Main inline nav element -->
+        <nav class="rvt-header__main-nav" role="navigation">
+            <ul>
+                {{ $currentNav := . }}
+                {{ range .Site.Sections }}
+                <li {{ if eq $currentNav.Section .Section }}class="is-current" {{ end }}>
                     <a href="{{ .Permalink }}">
                         {{ if .Params.navTitle }}
                             {{ .Params.navTitle }}
@@ -13,7 +29,11 @@
                         {{ end }}
                     </a>
                 </li>
-            {{ end }}
-        </ul>
-    </nav>
+                {{ end }}
+                <li><search-form></search-form></li>
+            </ul>
+        </nav>
+        {{ partial "drawer-button.html" . }}
+    </div>
+    {{ partial "drawer.html" . }}
 </header>

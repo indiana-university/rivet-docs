@@ -1,7 +1,14 @@
 {{ define "main" }}
-    <section>
-        <h1>{{ .Title }}</h1>
-        <p>{{ .Description }}</p>
-        {{ .Content }}
-    </section>
+    <div class="rvtd-wrap">
+        <div class="rvtd-sidebar">
+            {{ partial "components-nav.html" .}}
+        </div>
+        <div class="rvtd-tube rvt-typeset">
+            <div class="rvtd-tube__inner">
+                <h1>{{ .Title }}</h1>
+                <p class="rvtd-lead">{{ .Description }}</p>
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
 {{ end }}

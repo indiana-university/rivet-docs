@@ -1,0 +1,27 @@
+{{ $currentNav := . }}
+<!--
+        Drawer - small screens only
+        NOTE: If we are going to give people the option to use the drawer
+        on desktop as well, a combo of duplicating markup and showing/hiding
+        is probably the best way to handle that kind of flexibility.
+        We'll just need to be clear about it in the documentation.
+    -->
+<div class="rvt-drawer" aria-hidden="true" id="mobile-drawer">
+    <!-- Drawer nav -->
+    <nav class="rvt-drawer__nav" role="navigation">
+        <ul>
+            {{ range .Site.Sections }}
+            <li {{ if eq $currentNav.Permalink .Permalink }}class="is-active" {{ end }}>
+                <a href="{{ .Permalink }}">
+                        {{ if .Params.navTitle }}
+                            {{ .Params.navTitle }}
+                        {{ else }}
+                            {{ .Title }}
+                        {{ end }}
+                    </a>
+            </li>
+            {{ end }}
+        </ul>
+        <a href="#0" class="rvt-drawer__bottom-close">Close nav</a>
+    </nav>
+</div>
