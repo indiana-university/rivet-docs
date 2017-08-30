@@ -1,0 +1,54 @@
+.rvt-typeset {
+    ul li {
+        line-height: 1.5;
+        margin-top: $sm;
+        margin-bottom: $sm;
+    }
+
+    h2, h3 {
+        margin-top: $lg;
+    }
+
+    h1 {
+        font-size: ts(41);
+        line-height: 1.2;
+        margin-bottom: $sm;
+    }
+
+    h2 {
+        font-size: ts(29);
+    }
+
+    h3 {
+        font-size: ts(23);
+    }
+
+    p,
+    li {
+        code {
+            background-color: #f7f7f7;
+            display: inline-block;
+            padding: .05rem .15rem;
+            border-radius: 3px;
+            /**
+             * NOTE: This is a magic number to help code snippets appear
+             * the same size optically as inline text.
+             */
+            font-size: .95rem;
+            /**
+             * NOTE: This matches the Highlightjs theme that we are using for
+             * syntax highlighting.
+             */
+            color: #d14;
+        }
+    }
+
+    .rvtd-lead {
+        font-size: ts(23);
+        color: $color-black--700;
+        line-height: 1.3;
+        margin-top: $xxs;
+        padding-bottom: $xl;
+        border-bottom: 1px solid $color-black--200;
+    }
+}

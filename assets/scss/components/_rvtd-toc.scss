@@ -1,0 +1,45 @@
+.rvtd-toc {
+    list-style: none;
+    padding: 0;
+
+    li {
+        line-height: 1.7;
+    }
+
+    > li span {
+        display: block;
+        font-size: ts(14);
+        margin-top: $lg;
+        margin-bottom: $xs;
+    }
+
+    > li:first-child span {
+        margin-top: 0;
+    }
+
+    .is-current {
+        &:before {
+            content: "";
+            margin-left: -$xxs;
+            padding-left: $xxs;
+            box-shadow: -4px 0 0 $color-action;
+        }
+
+        a {
+            font-weight: 700;
+        }
+    }
+
+    li a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    li ul {
+        list-style: none;
+        padding: 0;
+    }
+}
