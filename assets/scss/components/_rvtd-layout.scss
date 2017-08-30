@@ -30,10 +30,6 @@
 .rvtd-tube {
     width: 100%;
     padding: $lg;
-
-    &__inner {
-
-    }
 }
 
 @include mq(bp(md)) {
@@ -41,12 +37,6 @@
         height: calc(100vh - 71px);
         overflow-y: scroll;
         padding: $lg $xxl;
-    }
-}
-
-@include mq(bp(xl)) {
-    .rvtd-tube__inner {
-        width: 80%;
     }
 }
 

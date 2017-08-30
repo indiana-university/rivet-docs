@@ -109,11 +109,10 @@ So the class `.m-top-sm` would add 16px/1rem of margin on all screen sizes to th
 
 Each spacing utility class also comes with a set of modifiers that allow you to adjust spacing at different screen sizes. Take the following `div`
 
-```html
-<div class="p-bottom-sm p-bottom-lg--md-up">
+{{< code >}}<div class="p-bottom-sm p-bottom-lg--md-up">
     ...
 </div>
-```
+{{< /code >}}
 
 With these spacing classes applied, it would have 16px/1rem of bottom padding at all screen sizes and 32px/2rem of bottom padding on large screens (940px wide) and up.
 
