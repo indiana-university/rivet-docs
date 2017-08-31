@@ -2,11 +2,11 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './assets/js/vue-main.js',
+  entry: './assets/js/webpack-entry.js',
   output: {
     path: path.resolve(__dirname, './tmp'),
     publicPath: '/static/',
-    filename: 'vue-built.js'
+    filename: 'webpack-built.js'
   },
   module: {
     rules: [
