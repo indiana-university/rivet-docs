@@ -1,1 +1,5 @@
-<pre><code>{{ .Inner }}</code></pre>
+<div class="rvtd-example">
+    <div class="rvtd-example__code rvtd-example__code--only">
+        <pre><code class="language-{{ .Get 0 }}">{{- .Inner | string -}}</code></pre>
+    </div>
+</div>

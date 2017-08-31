@@ -1,6 +1,7 @@
 +++
 title = "Select element"
 description = "The select element creates a dropdown that allows users to choose one item from a list."
+status = "Alpha"
 +++
 
 ## When to use

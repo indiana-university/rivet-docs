@@ -1,0 +1,47 @@
+.rvtd-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@include mq(bp(md)) {
+    .rvtd-wrap {
+        flex-direction: row;
+    }
+}
+
+.rvtd-sidebar {
+    background-color: #fafafa;
+    border-bottom: 1px solid #eee;
+    padding: $lg;
+}
+
+@include mq(bp(md)) {
+    .rvtd-sidebar {
+        border-right: 1px solid #eee;
+        border-bottom: none;
+        min-width: 250px;
+        flex-basis: 250px;
+        height: calc(100vh - 71px);
+        overflow-y: scroll;
+    }
+}
+
+.rvtd-tube {
+    width: 100%;
+    padding: $lg;
+}
+
+@include mq(bp(md)) {
+    .rvtd-tube {
+        height: calc(100vh - 71px);
+        overflow-y: scroll;
+        padding: $lg $xxl;
+    }
+}
+
+@include mq(bp(xxl)) {
+    .rvtd-tube__inner {
+        width: 70%;
+    }
+}
