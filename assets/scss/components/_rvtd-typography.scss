@@ -1,18 +1,18 @@
-.rvt-typeset {
+.rvtd-typeset > {
     ul li {
         line-height: 1.5;
         margin-top: $sm;
         margin-bottom: $sm;
     }
 
-    h2, h3 {
-        margin-top: $lg;
-    }
-
     h1 {
         font-size: ts(41);
         line-height: 1.2;
         margin-bottom: $sm;
+    }
+
+    h2, h3 {
+        margin-top: $xl;
     }
 
     h2 {
@@ -24,7 +24,8 @@
     }
 
     p,
-    li,
+    ul li,
+    ol li,
     td {
         code {
             background-color: #f7f7f7;
@@ -47,7 +48,7 @@
     .rvtd-lead {
         font-size: ts(23);
         color: $color-black--700;
-        line-height: 1.3;
+        line-height: 1.4;
         margin-top: $xxs;
         padding-bottom: $xl;
         border-bottom: 1px solid $color-black--200;
