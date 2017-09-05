@@ -9,7 +9,7 @@ function hugo(includeDrafts) {
 
     gutil.log('src: ' + src + ' dst: ' + dst);
 
-    var conf = 'config.toml'
+    var conf = 'config.yml'
     var opt, i = process.argv.indexOf("--config");
     if (i > -1) {
         conf = process.argv[i+1];
