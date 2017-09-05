@@ -1,9 +1,9 @@
-+++
-title = "Tables"
-description = "Tables are used to display tabular data in rows and columns."
-requiresJs = false
-status = "Alpha"
-+++
+---
+title: "Tables"
+description: "Tables are used to display tabular data in rows and columns."
+requiresJs: false
+status: "Alpha"
+---
 
 ## Default table
 Default tables in Rivet come with styled headers and bottom borders on row to help with readability.

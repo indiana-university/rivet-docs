@@ -1,8 +1,8 @@
-+++
-title = "Lists"
-description = "Lists are used to group and organize collections of content."
-status = "Alpha"
-+++
+---
+title: "Lists"
+description: "Lists are used to group and organize collections of content."
+status: "Alpha"
+---
 
 ## Unordered list
 {{< example "html" >}}<ul>

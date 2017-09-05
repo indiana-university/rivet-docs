@@ -1,8 +1,8 @@
-+++
-title = "Select element"
-description = "The select element creates a dropdown that allows users to choose one item from a list."
-status = "Alpha"
-+++
+---
+title: "Select element"
+description: "The select element creates a dropdown that allows users to choose one item from a list."
+status: "Alpha"
+---
 
 ## When to use
 Use the select element when you need to present users with a list of mutually exclusive options and they can **only select one option**.

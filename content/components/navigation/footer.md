@@ -1,9 +1,9 @@
-+++
-title = "Footer"
-description = "The base footer provides consistent branding in a condensed space below all of your application content."
-requiresJs = false
-status = "Alpha"
-+++
+---
+title: "Footer"
+description: "The base footer provides consistent branding in a condensed space below all of your application content."
+requiresJs: false
+status: "Alpha"
+---
 
 ## About the footer
 

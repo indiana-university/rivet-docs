@@ -1,9 +1,9 @@
-+++
-title = "Spacing"
-description = "A robust set of responsive spacing utilites to help fine-tune your layout."
-requiresJs = false
-status = "Alpha"
-+++
+---
+title: "Spacing"
+description: "A robust set of responsive spacing utilites to help fine-tune your layout."
+requiresJs: false
+status: "Alpha"
+---
 ## About spacing
 To maintain consistent spacing between components and to help create a sense of vertical rhythm, we have created a spacing system based on `.5rem` (8px) unit. Margins and padding can be applied using a set of CSS utility classes to add or remove margin and padding from any element.
 
