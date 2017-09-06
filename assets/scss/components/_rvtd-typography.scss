@@ -54,3 +54,9 @@
         border-bottom: 1px solid $color-black--200;
     }
 }
+
+.rvtd-typeset blockquote {
+    font-size: $ts-18;
+    font-style: italic;
+    color: $color-black--600;
+}

@@ -1,9 +1,9 @@
-+++
-title = "Alerts"
-description = "Alerts are used to display brief important messages to users. They are designed to attract the user’s attention, but not interrupt their work."
-requiresJs = true
-status = "Alpha"
-+++
+---
+title: "Alerts"
+description: "Alerts are used to display brief important messages to users. They are designed to attract the user’s attention, but not interrupt their work."
+requiresJs: true
+status: "Alpha"
+---
 
 ## When to use
 - To notify users about system status including error, warnings, and updates.

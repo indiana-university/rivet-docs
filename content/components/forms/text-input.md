@@ -1,8 +1,8 @@
-+++
-title = "Text inputs"
-description = "Text inputs are the basic building blocks forms. They allow users to enter various types of data into web-based forms."
-status = "Alpha"
-+++
+---
+title: "Text inputs"
+description: "Text inputs are the basic building blocks forms. They allow users to enter various types of data into web-based forms."
+status: "Alpha"
+---
 
 ## When to use
 Use a text input for information that will only take up one line: a name, phone number, city, etc. Use textareas for information that includes multiple sentences or lines: descriptions, issues, proposals, etc.

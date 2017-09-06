@@ -1,9 +1,9 @@
-+++
-title = "Getting started"
-description = "Rivet is a well-documented set of HTML, CSS, and JavaScript assets. Learn how you can start building with it today."
-navTitle = "Components"
-weight = 1
-+++
+---
+title: "Getting started"
+description: "Rivet is a well-documented set of HTML, CSS, and JavaScript assets. Learn how you can start building with it today."
+navTitle: "Components"
+weight: 1
+---
 
 ## Compiled CSS and JavaScript
 The easiest way to start using Rivet is to download the compile CSS and javascript and inlcude them in your app.

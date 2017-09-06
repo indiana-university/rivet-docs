@@ -1,8 +1,8 @@
-+++
-title = "Radio buttons"
-description = "Radio buttons allow users to select a single value out of a set number of choices."
-status = "Alpha"
-+++
+---
+title: "Radio buttons"
+description: "Radio buttons allow users to select a single value out of a set number of choices."
+status: "Alpha"
+---
 ## Inline radios example
 {{< example "html" >}}<form>
     <fieldset>

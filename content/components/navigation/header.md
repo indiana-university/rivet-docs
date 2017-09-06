@@ -1,9 +1,9 @@
-+++
-title = "Header"
-description = "The Rivet header has provides consistent branding and flexible navigation layout for your application."
-requiresJs = true
-status = "Alpha"
-+++
+---
+title: "Header"
+description: "The Rivet header has provides consistent branding and flexible navigation layout for your application."
+requiresJs: true
+status: "Alpha"
+---
 
 ## Base header
 The base header provides consistent branding in a condensed space. It replaces the common text “Indiana University” with a more useful link to your application’s default view. The base header is the bare minimum version of the header that **must be included in your application**.

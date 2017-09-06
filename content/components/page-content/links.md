@@ -1,8 +1,8 @@
-+++
-title = "Links"
-description = "Inline text links are used to navigate between documents (pages)."
-status = "Alpha"
-+++
+---
+title: "Links"
+description: "Inline text links are used to navigate between documents (pages)."
+status: "Alpha"
+---
 
 ## Inline links
 {{< example "html" >}}<p class="m-top-remove">This is a <a href="#0">text link</a> on a light background.</p>

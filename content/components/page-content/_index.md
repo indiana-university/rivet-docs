@@ -1,4 +1,4 @@
-+++
-title =  "Page content"
-weight = 1
-+++
+---
+title:  "Page content"
+weight: 1
+---

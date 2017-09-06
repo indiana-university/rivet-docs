@@ -1,8 +1,10 @@
 <!-- Capture the current page here -->
 {{ $currentPage := . }}
+{{ $currentParentSection := .Section }}
+
 <nav class="rvtd-nav">
     <ul class="rvtd-toc">
-        {{ range where .Site.Sections "Section" "components" }}
+        {{ range where .Site.Sections "Section" $currentParentSection }}
             {{ range .Sections }}
             <li>
                 <span class="text-uppercase">{{ .Title }}</span>

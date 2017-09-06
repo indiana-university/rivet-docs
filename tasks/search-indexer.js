@@ -64,8 +64,8 @@ indexer.prototype.readFile = function(filePath) {
     var self = this;
     var ext = path.extname(filePath);
     var meta = matter.read(filePath, {
-        delims: '+++',
-        lang: 'toml'
+        delims: '---',
+        lang: 'yaml'
     });
     if (meta.data.draft === true) {
         return;
