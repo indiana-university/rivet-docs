@@ -14,3 +14,6 @@ new Vue({
 
     }
 })
+
+const Clipboard = require('clipboard')
+new Clipboard('.rvtd-example__copy');

@@ -3,7 +3,7 @@
         {{ .Inner }}
     </div>
     <div class="rvtd-example__code">
-        <button class="rvtd-example__copy">Copy</button>
-        <pre><code class="language-{{ .Get 0 }}">{{- .Inner | string -}}</code></pre>
+        <button class="rvtd-example__copy button button--small" data-clipboard-target="#code_{{ .Inner | md5 }}">Copy</button>
+        <pre><code id="code_{{ .Inner | md5 }}" class="language-{{ .Get 0 }}">{{- .Inner | string -}}</code></pre>
     </div>
 </div>
