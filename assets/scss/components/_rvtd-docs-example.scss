@@ -35,13 +35,13 @@
 
     &__copy {
         position: absolute;
-        right: .5rem;
-        bottom: -2.5rem;
+        right: $xs;
+        bottom: -$xl;
         z-index: 2;
     }
 
     &__copy--code-only {
         bottom: auto;
-        top: .5rem;
+        top: $xs;
     }
 }
