@@ -29,6 +29,7 @@ gulp.task('watch', ['build'], function() {
 
 gulp.task('env:production', function() {
     process.env.NODE_ENV = 'production';
+    process.env.HUGO_ENV = 'production';
 });
 
 gulp.task('build', ['webpack', 'js', 'sass', 'index']);

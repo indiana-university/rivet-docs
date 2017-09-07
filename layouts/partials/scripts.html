@@ -1,3 +1,9 @@
+{{ if eq (getenv "HUGO_ENV") "production" }}
+    {{ partial "analytics.html" .Site.Params.googleAnalytics }}
+{{ end }}
+{{ if ne (getenv "HUGO_ENV") "production" }}
+    {{ partial "analytics.html" .Site.Params.devGoogleAnalytics }}
+{{ end }}
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
 <script>
     hljs.initHighlightingOnLoad();
