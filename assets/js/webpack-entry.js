@@ -20,6 +20,9 @@ new Clipboard('.rvtd-example__copy')
 
 
 const tippy = require('tippy.js')
-const tip = tippy('.rvtd-example__copy', { trigger: 'click', onShown: function () {
-    setTimeout(() => { tip.hide(this) }, 1000)
-} })
+const tip = tippy('.rvtd-example__copy', {
+    trigger: 'click',
+    onShown: function () {
+        setTimeout(() => { tip.hide(this) }, 1000)
+    }
+})
