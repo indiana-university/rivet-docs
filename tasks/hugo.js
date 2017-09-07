@@ -33,6 +33,6 @@ gulp.task('hugo:dev', function() {
     hugo(true);
 });
 
-gulp.task('hugo:prod', function() {
+gulp.task('hugo:prod', ['env:production'], function() {
     hugo(false);
 });
