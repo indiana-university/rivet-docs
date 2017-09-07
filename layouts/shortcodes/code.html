@@ -1,5 +1,6 @@
 <div class="rvtd-example">
     <div class="rvtd-example__code rvtd-example__code--only">
-        <pre><code class="language-{{ .Get 0 }}">{{- .Inner | string -}}</code></pre>
+        <pre><code id="code_{{ .Inner | md5 }}" class="language-{{ .Get 0 }}">{{- .Inner | string -}}</code></pre>
+        <button class="rvtd-example__copy rvtd-example__copy--code-only button button--small" data-clipboard-target="#code_{{ .Inner | md5 }}" title="Copied">Copy</button>
     </div>
 </div>

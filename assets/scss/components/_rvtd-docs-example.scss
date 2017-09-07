@@ -30,6 +30,7 @@
     &__code--only {
         border: 2px solid $color-black--100;
         border-radius: 4px;
+        position: relative;
     }
 
     &__copy {
@@ -37,5 +38,10 @@
         right: .5rem;
         bottom: -2.5rem;
         z-index: 2;
+    }
+
+    &__copy--code-only {
+        bottom: auto;
+        top: .5rem;
     }
 }
