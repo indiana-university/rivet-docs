@@ -87,12 +87,12 @@
 
  @include mq(bp(md)) {
     .rvtd-comp-table{
-        padding: 6rem 0;
+        padding: $xxl*2 0;
     }
  }
 
  .rvtd-blurbs {
-     padding: 3rem 0;
+     padding: $xxl 0;
  }
 
  .rvtd-blurb {
