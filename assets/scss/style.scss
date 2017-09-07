@@ -13,32 +13,6 @@
 @import "components/rvtd-typography";
 
 
-.p-vertical-sm {
-    padding-top: $sm;
-    padding-bottom: $sm;
-}
-
-.p-vertical-md {
-    padding-top: $md;
-    padding-bottom: $md;
-}
-
-.p-vertical-lg {
-    padding-top: $lg;
-    padding-bottom: $lg;
-}
-
-.p-vertical-xl {
-    padding-top: $xl;
-    padding-bottom: $xl;
-}
-
-.p-vertical-xxl {
-    padding-top: $xxl;
-    padding-bottom: $xxl;
-}
-
-
 /**
  * Shame
  */
@@ -54,6 +28,7 @@
         box-shadow: 0 3px 0 $color-action;
     }
 }
+
 /**
  * These styles are for grid examples in the docs.
  */
@@ -100,3 +75,26 @@
     color: #ffffff;
     text-align: center;
 }
+
+
+/**
+ * Home page compare section
+ */
+
+ .rvtd-comp-table{
+     padding: $xxl 0;
+ }
+
+ @include mq(bp(md)) {
+    .rvtd-comp-table{
+        padding: $xxl*2 0;
+    }
+ }
+
+ .rvtd-blurbs {
+     padding: $xxl 0;
+ }
+
+ .rvtd-blurb {
+     margin-bottom: $xxl;
+ }
