@@ -43,6 +43,10 @@
  * Shame
  */
 
+.tippy-tooltip [x-circle] {
+    border-radius: 4px !important;
+}
+
 .rvt-header__main-nav {
     margin-right: $lg;
 
