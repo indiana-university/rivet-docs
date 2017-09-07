@@ -14,3 +14,16 @@ new Vue({
 
     }
 })
+
+const Clipboard = require('clipboard')
+new Clipboard('.rvtd-example__copy')
+
+
+const tippy = require('tippy.js')
+const tip = tippy('.rvtd-example__copy', {
+    trigger: 'click',
+    animation: 'fade',
+    onShown: function () {
+        setTimeout(() => { tip.hide(this) }, 1000)
+    }
+})

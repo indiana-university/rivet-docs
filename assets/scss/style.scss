@@ -2,6 +2,7 @@
 @import "core/tools";
 @import "core/base";
 
+@import "libs/tippy";
 @import "../rivet/sass/rivet";
 
 @import "components/rvtd-docs-example";
@@ -41,6 +42,10 @@
 /**
  * Shame
  */
+
+.tippy-tooltip [x-circle] {
+    border-radius: 4px !important;
+}
 
 .rvt-header__main-nav {
     margin-right: $lg;
