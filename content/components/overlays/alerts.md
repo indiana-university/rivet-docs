@@ -46,7 +46,7 @@ The system is currently unavailable.
 See the [Microcopy section](/docs/microcopy/) for additional information.
 
 ## Page-level alerts
-{{< example "html" >}}<div class="alert alert--info m-bottom-md" role="alertdialog" aria-labelledby="information-alert-title">
+{{< example lang="html" >}}<div class="alert alert--info m-bottom-md" role="alertdialog" aria-labelledby="information-alert-title">
     <h1 class="alert__title" id="information-alert-title">Scheduled System Maintenance</h1>
     <p class="alert__message">This system will be unavailable on August 1st due to scheduled system maintenance. Please check back on August 2nd.</p>
     <button class="alert__dismiss">
@@ -94,7 +94,7 @@ See the [Microcopy section](/docs/microcopy/) for additional information.
 ## Alert lists
 Alert lists provide a way to group a set of errors together. For instance, when summarizing a list of errors on a long form.
 
-{{< example "html" >}}<ul class="alert-list">
+{{< example lang="html" >}}<ul class="alert-list">
     <li class="alert-list__item">
         <div class="alert alert--error" role="alert">
             <h1 class="alert__title">Please correct the following errors.</h1>

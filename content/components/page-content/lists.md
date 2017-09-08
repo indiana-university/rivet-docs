@@ -5,7 +5,7 @@ status: "Alpha"
 ---
 
 ## Unordered list
-{{< example "html" >}}<ul>
+{{< example lang="html" >}}<ul>
     <li>List Item One</li>
     <li>List Item Two</li>
     <li>List Item Three</li>
@@ -14,7 +14,7 @@ status: "Alpha"
 {{< /example >}}
 
 ## Ordered list
-{{< example "html" >}}<ol>
+{{< example lang="html" >}}<ol>
     <li>List Item One</li>
     <li>List Item Two</li>
     <li>List Item Three</li>
@@ -25,7 +25,7 @@ status: "Alpha"
 ## Plain list
 You can use the helper class `.uitsds-plain-list` to remove list formatting for display purposes.
 
-{{< example "html" >}}<ul class="plain-list">
+{{< example lang="html" >}}<ul class="plain-list">
     <li>List Item One</li>
     <li>List Item Two</li>
     <li>List Item Three</li>
@@ -34,7 +34,7 @@ You can use the helper class `.uitsds-plain-list` to remove list formatting for 
 {{< /example >}}
 
 ## Definition list
-{{< example "html" >}}<dl>
+{{< example lang="html" >}}<dl>
    <dt>Definition list item one</dt>
    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
    <dd>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>

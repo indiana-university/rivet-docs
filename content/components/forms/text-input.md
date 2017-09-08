@@ -13,7 +13,7 @@ Use a text input for information that will only take up one line: a name, phone 
 
 ## Text input example
 
-{{< example "html" >}}<label for="demo-1">Text Input</label>
+{{< example lang="html" >}}<label for="demo-1">Text Input</label>
 <input type="text" id="demo-1" aria-describedby="demo-1-note">
 <small id="demo-1-note" class="display-block m-bottom-md">This is a note about this field.</small>
 
@@ -23,7 +23,7 @@ Use a text input for information that will only take up one line: a name, phone 
 
 ## Textarea example
 
-{{< example "html" >}}<label for="demo-3">Textarea</label>
+{{< example lang="html" >}}<label for="demo-3">Textarea</label>
 <textarea id="demo-3" class="m-bottom-md"></textarea>
 
 <label for="demo-4">Textarea (disabled)</label>

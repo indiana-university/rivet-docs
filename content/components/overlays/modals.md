@@ -13,7 +13,7 @@ status: "Alpha"
 - When you need to display large amounts of information for multiple tasks consider using a dedicated page instead.
 
 ## Modal example
-{{< example "html" >}}<button class="button" data-modal-trigger="modal-example-basic">Open modal example</button>
+{{< example lang="html" >}}<button class="button" data-modal-trigger="modal-example-basic">Open modal example</button>
 
 <div class="modal"
      id="modal-example-basic"
@@ -62,7 +62,7 @@ We use the generic term "Modal" to mean any smaller window that is displayed on 
 
 A modal dialog is similar to a regular modal except that **it requires the user to interact with it** before continuing any interaction with the main application. The user must select from the available actions in the dialog—they cannot disregard and simply close the window.
 
-{{< example "html" >}}<button class="button" data-modal-trigger="modal-dialog-example">Open modal dialog</button>
+{{< example lang="html" >}}<button class="button" data-modal-trigger="modal-dialog-example">Open modal dialog</button>
 <div class="modal"
      id="modal-dialog-example"
      role="dialog"

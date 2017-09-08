@@ -9,7 +9,7 @@ status: "Alpha"
 
 The Rivet footer provides space for localized auxiliary links and styling that includes height, width, and top border, as well as styling of the left aligned branding requirements, and the optional right aligned auxiliary links.
 
-{{< example "html" >}}<footer class="rvt-footer" role="contentinfo">
+{{< example lang="html" >}}<footer class="rvt-footer" role="contentinfo">
     <div class="rvt-footer__copyright-lockup">
         <div class=rvt-footer__trident>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25">

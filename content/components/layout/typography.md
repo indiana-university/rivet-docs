@@ -115,7 +115,7 @@ For instance, you might define a limited type scale for you app of:
 - `1.625rem` (26px) for **subheadings**
 - `1.125rem` (18px) for **interface copy**
 
-{{< example "html" >}}<h1 class="ts-32">Main headings</h1>
+{{< example lang="html" >}}<h1 class="ts-32">Main headings</h1>
 <h2 class="ts-26">Subheadings</h2>
 <h3 class="ts-18">Section headings</h3>
 {{< /example >}}

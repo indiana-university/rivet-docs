@@ -7,7 +7,7 @@ status: "Alpha"
 
 ## Default table
 Default tables in Rivet come with styled headers and bottom borders on row to help with readability.
-{{< example "html" >}}<table>
+{{< example lang="html" >}}<table>
     <caption class="sr-only">Table example one</caption>
     <thead>
         <tr>
@@ -43,7 +43,7 @@ Default tables in Rivet come with styled headers and bottom borders on row to he
 
 ## Stripped table
 You can use the `.table-stripes` class to alternate light gray backgrounds on table rows for improved scannability.
-{{< example "html" >}}<table class="table-stripes">
+{{< example lang="html" >}}<table class="table-stripes">
     <caption class="sr-only">Table example two</caption>
     <thead>
         <tr>
@@ -79,7 +79,7 @@ You can use the `.table-stripes` class to alternate light gray backgrounds on ta
 
 ## Plain table
 The `.table-plain` class will remove all borders and `thead` formatting on a table.
-{{< example "html" >}}<table class="table-plain">
+{{< example lang="html" >}}<table class="table-plain">
     <caption class="sr-only">Table example two</caption>
     <thead>
         <tr>
