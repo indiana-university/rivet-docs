@@ -75,3 +75,42 @@ a.button--secondary {
     color: #ffffff;
     text-align: center;
 }
+
+.rvtd-article-nav {
+    display: none;
+}
+
+@include mq(bp(xl)) {
+    .rvtd-article-nav {
+        display: block;
+        position: absolute;
+        top: $xxl*2;
+        right: 0;
+        width: 280px;
+        padding: 0 $lg;
+        border-left: 1px solid #eeeeee;
+
+        p {
+            margin-top: 0;
+            font-weight: 700;
+            font-size: $ts-18;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        ul li a {
+            font-size: $ts-14;
+            line-height: 1.5;
+            margin-bottom: $xs;
+            display: inline-block;
+        }
+    }
+}
