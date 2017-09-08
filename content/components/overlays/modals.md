@@ -62,8 +62,7 @@ We use the generic term "Modal" to mean any smaller window that is displayed on 
 
 A modal dialog is similar to a regular modal except that **it requires the user to interact with it** before continuing any interaction with the main application. The user must select from the available actions in the dialog—they cannot disregard and simply close the window.
 
-{{< example "html" >}}
-<button class="button" data-modal-trigger="modal-dialog-example">Open modal dialog</button>
+{{< example "html" >}}<button class="button" data-modal-trigger="modal-dialog-example">Open modal dialog</button>
 <div class="modal"
      id="modal-dialog-example"
      role="dialog"
