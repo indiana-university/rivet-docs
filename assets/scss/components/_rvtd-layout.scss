@@ -35,9 +35,6 @@
 
 @include mq(bp(md)) {
     .rvtd-sidebar {
-        // min-width: 300px;
-        // flex-basis: 300px;
-        // height: calc(100vh - 160px);
 
         &__nav-toggle {
             display: none;
@@ -50,8 +47,8 @@
         overflow-y: scroll;
         position: relative;
         display: block;
-        min-width: 300px;
-        flex-basis: 300px;
+        min-width: 296px;
+        flex-basis: 296px;
         height: calc(100vh - 160px);
 
         &[aria-hidden="true"] {
