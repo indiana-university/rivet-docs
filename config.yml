@@ -5,3 +5,4 @@ paginate: 10
 params:
     googleAnalytics: "UA-100560495-3"
     devGoogleAnalytics: "UA-100560495-4"
+    downloadLink: "https://github.iu.edu/UITS/rivet/archive/master.zip"

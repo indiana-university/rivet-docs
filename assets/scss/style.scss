@@ -29,6 +29,14 @@
     }
 }
 
+a.button--secondary {
+    color: $color-action;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 /**
  * These styles are for grid examples in the docs.
  */

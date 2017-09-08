@@ -2,10 +2,7 @@
 <div class="rvtd-search">
     <form @submit.prevent="search" class="rvtd-search__form">
         <label class="sr-only" for="search-input">Search query</label>
-        <div class="rvt-combo-input">
-            <input v-model="query" type="text" id="search-input" autocomplete="off">
-            <button type="submit">Search</button>
-        </div>
+        <input v-model="query" type="text" id="search-input" autocomplete="off" placeholder="Search the docs">
     </form>
     <div v-if="results.length" class="rvtd-search__results">
         <h2 class="sr-only">Search results</h2>
@@ -15,7 +12,6 @@
                     {{result.title}}
                 </a>
             </h3>
-
             <div class="rvtd-search__result-body">{{result.preview}}</div>
         </div>
     </div>

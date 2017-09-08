@@ -10,26 +10,59 @@
     }
 }
 
-.rvtd-sidebar {
+.rvtd-nav {
     background-color: #fafafa;
     border-bottom: 1px solid #eee;
-    padding: $lg;
+    padding: $md;
+
+    &[aria-hidden="true"] {
+        display: none;
+    }
+}
+
+.rvtd-sidebar {
+    position: relative;
+
+    &__nav-toggle {
+        position: absolute;
+        z-index: 1;
+        left: $md;
+        top: $md;
+        background-color: transparent;
+        display: block;
+    }
 }
 
 @include mq(bp(md)) {
     .rvtd-sidebar {
+        // min-width: 300px;
+        // flex-basis: 300px;
+        // height: calc(100vh - 160px);
+
+        &__nav-toggle {
+            display: none;
+        }
+    }
+
+    .rvtd-nav {
         border-right: 1px solid #eee;
         border-bottom: none;
-        min-width: 250px;
-        flex-basis: 250px;
-        height: calc(100vh - 71px);
         overflow-y: scroll;
+        position: relative;
+        display: block;
+        min-width: 300px;
+        flex-basis: 300px;
+        height: calc(100vh - 160px);
+
+        &[aria-hidden="true"] {
+            display: block;
+        }
     }
 }
 
 .rvtd-tube {
     width: 100%;
-    padding: $lg;
+    padding: $md;
 }
 
 @include mq(bp(md)) {

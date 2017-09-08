@@ -24,7 +24,7 @@ status: "Alpha"
 ## Radio list example
 {{< example "html" >}}<form>
     <fieldset>
-        <legend class="ts-14 text-uppercase m-bottom-sm">Radio list</legend>
+        <legend class="sr-only">Radio list</legend>
         <ul class="plain-list">
             <li>
                 <input type="radio" name="radio-demo-2" id="radio-3">
