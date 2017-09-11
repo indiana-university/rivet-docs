@@ -12,7 +12,7 @@ The `.rvt-container` is the basic layout unit in Rivet. A basic `.rvt-container`
 
 The container is meant to be a generic wrapper to add enough padding to the content of your application so that it doesn't bump up against the sides of the viewport. The container can be used as is without any other grid items inside, but it is required to wrap all other grid elements.
 
-{{< example "html" >}}<div class="rvt-container">
+{{< example lang="html" >}}<div class="rvt-container">
     <div class="rvt-grid">
         <div class="rvt-grid__item">
             <span>Grid item</span>
@@ -31,7 +31,7 @@ They are:
 - `.rvt-container--junior` = 1140px
 - `.rvt-container--senior` = 1380px
 
-{{< example "html" >}}<div class="rvt-container rvt-container--freshman">
+{{< example lang="html" >}}<div class="rvt-container rvt-container--freshman">
     <div class="rvt-grid">
         <div class="rvt-grid__item"><span><code>.rvt-container--freshman</code></span></div>
     </div>
@@ -56,7 +56,7 @@ They are:
 ### Centering a container
 To center a container that was given a max-width using the modifier classes above, you can add the modifier class `.rvt-container--center`.
 
-{{< example "html" >}}<div class="rvt-container rvt-container--freshman rvt-container--center">
+{{< example lang="html" >}}<div class="rvt-container rvt-container--freshman rvt-container--center">
     <div class="rvt-grid">
         <div class="rvt-grid__item">
             <span>.rvt-container--center</span>
@@ -68,7 +68,7 @@ To center a container that was given a max-width using the modifier classes abov
 ## Automatic columns
 The rivet grid uses the power of flexbox to evenly distribute children marked up with the CSS class `.rvt-grid__item` inside of a parent `.rvt-grid`  container. So a `.rvt-grid` parent with four `.rvt-grid__item` elements creates four columns with equal widths. See the example below.
 
-{{< example "html" >}}<div class="rvt-container">
+{{< example lang="html" >}}<div class="rvt-container">
     <div class="rvt-grid">
         <div class="rvt-grid__item">
             <span>Grid item</span>
@@ -93,7 +93,7 @@ In the example below, we've used the `-lg` suffix on the `.rvt-grid__item` CSS c
 
 This convention will work for any of Rivet's named breakpoints: `-sm`, `-md`, `-lg`, `-xl`, `-xxl`. The example below will start out stacked on small screens and become a grid of five equal-width columns at large screens (1080px) and wider.
 
-{{< example "html" >}}<div class="rvt-container">
+{{< example lang="html" >}}<div class="rvt-container">
     <div class="rvt-grid">
         <div class="rvt-grid__item-lg">
             <span>Auto grid item</span>
@@ -120,7 +120,7 @@ You can set a specific number of columns you want grid items to span by includin
 
 When you explicitly set column widths, remember that the total number of columns **should always equal 12**.
 
-{{< example "html" >}}<div class="rvt-container rvt-container--junior rvt-container--center">
+{{< example lang="html" >}}<div class="rvt-container rvt-container--junior rvt-container--center">
     <div class="rvt-grid">
         <div class="rvt-grid__item-4-md-up">
             <span>4 columns medium and up</span>
@@ -140,7 +140,7 @@ It's also possible to mix and match specified columns with `.rvt-grid__item` aut
 
 It's important to note that the auto grid items will stack at whichever grid breakpoint you specify on the non-auto grid item(s). In the example below we are using `.rvt-grid__item-6-md-up` to set a width of six columns on medium screens and larger, so the auto grid items will inherit the same behavior.
 
-{{< example "html" >}}<div class="rvt-container">
+{{< example lang="html" >}}<div class="rvt-container">
     <div class="rvt-grid">
         <div class="rvt-grid__item">
             <span><code>.rvt-grid__item</code></span>
@@ -158,7 +158,7 @@ It's important to note that the auto grid items will stack at whichever grid bre
 ## Push and pull
 When you need to change the visual order of the grid items you can use `.rvt-grid__item-push-*` and `.rvt-grid__item-pull-*` modifiers.
 
-{{< example "html" >}}<div class="rvt-container">
+{{< example lang="html" >}}<div class="rvt-container">
     <div class="rvt-grid">
         <div class="rvt-grid__item-4-md-up rvt-grid__item-push-8-md">
             <span>I'm first in the source order</span>
@@ -173,7 +173,7 @@ When you need to change the visual order of the grid items you can use `.rvt-gri
 ## Nesting
 You can nest new `.rvt-grid` blocks inside of `.rvt-grid__item-*` elements if you need more control over your layout.
 
-{{< example "html" >}}<div class="rvt-container">
+{{< example lang="html" >}}<div class="rvt-container">
     <div class="rvt-grid">
         <div class="rvt-grid__item-7-md-up rvt-grid__item-9-lg-up">
             <div style="background-color: #dce3ee; padding: .75rem;">

@@ -6,7 +6,7 @@ status: "Alpha"
 ---
 
 ## Button examples
-{{< example "html" >}}<div class="button-group">
+{{< example lang="html" >}}<div class="button-group">
     <button class="button">Primary</button>
     <button class="button button--success">Success</button>
     <button class="button button--danger">Danger</button>
@@ -15,7 +15,7 @@ status: "Alpha"
 {{< /example >}}
 
 ### Secondary variations
-{{< example "html" >}}<div class="button-group">
+{{< example lang="html" >}}<div class="button-group">
     <button class="button button--secondary">Secondary</button>
     <button class="button button--success-secondary">Success</button>
     <button class="button button--danger-secondary">Danger</button>
@@ -25,7 +25,7 @@ status: "Alpha"
 ### Small buttons
 You can create smaller buttons by adding the `.button--small` modifier class. The small button modifier can be used together with the other button modifier classes to make any variation of small buttons.
 
-{{< example "html" >}}<div class="button-group">
+{{< example lang="html" >}}<div class="button-group">
     <button class="button button--small">Primary</button>
     <button class="button button--success button--small">Success</button>
     <button class="button button--danger button--small">Danger</button>
@@ -61,7 +61,7 @@ The `.button button--*` classes are meant to be used on the `<button>` elements,
 ### Button groups
 When you need to display a group of buttons you can wrap them in a `div` with the class `.button-group` applied to it. The `.button-group` class will add an equal amount of margin to the right side of every button in the group except the last one.
 
-{{< example "html" >}}<div class="button-group">
+{{< example lang="html" >}}<div class="button-group">
     <button class="button">Ok</button>
     <button class="button button--secondary">Cancel</button>
 </div>
@@ -69,7 +69,7 @@ When you need to display a group of buttons you can wrap them in a `div` with th
 
 If you need to right align your buttons, you can add the `.button-group--right` modifier class to the `.button-group` div.
 
-{{< example "html" >}}<div class="button-group button-group--right">
+{{< example lang="html" >}}<div class="button-group button-group--right">
     <button class="button">Ok</button>
     <button class="button button--secondary">Cancel</button>
 </div>

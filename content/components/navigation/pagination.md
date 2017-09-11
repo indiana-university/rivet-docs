@@ -10,7 +10,7 @@ Use when a user's action returns a large data set such as search results, or a l
 ## When to consider something else
 With smaller amounts of data consider displaying the whole dataset in one page that users can scroll through instead of breaking it into pages.
 
-{{< example "html" >}}<nav role="navigation" aria-label="Default results pages">
+{{< example lang="html" >}}<nav role="navigation" aria-label="Default results pages">
     <ul class="rvt-pagination">
         <li class="rvt-pagination__item">
             <a href="#0" aria-label="Previous set of pages">Previous</a>
@@ -43,7 +43,7 @@ When using the `.is-disabled` classes to create pagination links that appear to 
 ### Positioning
 The pagination component is left-aligned by default, but you can easily center or right-align it using the `rvt-pagination--center` or `rvt-pagination--right` modifier classes.
 
-{{< example "html" >}}<nav role="navigation" aria-label="Right-aligned results pages">
+{{< example lang="html" >}}<nav role="navigation" aria-label="Right-aligned results pages">
     <ul class="rvt-pagination rvt-pagination--right">
         <li class="rvt-pagination__item is-disabled">
             <a href="#0" aria-label="Previous pages" tabindex="-1">Previous</a>
@@ -70,7 +70,7 @@ The pagination component is left-aligned by default, but you can easily center o
 ### Small pagination
 Add the CSS modifier class `.rvt-pagination--small` if you need to display the pagination component at a smaller size.
 
-{{< example "html" >}}<nav role="navigation" aria-label="Small results pages">
+{{< example lang="html" >}}<nav role="navigation" aria-label="Small results pages">
     <ul class="rvt-pagination rvt-pagination--small">
         <li class="rvt-pagination__item">
             <a href="#0" aria-label="Previous set of pages">Previous</a>

@@ -4,7 +4,7 @@ description: "Checkboxes allow users to select one or more options from a list o
 status: "Alpha"
 ---
 ## Inline checkboxes example
-{{< example "html" >}}<form>
+{{< example lang="html" >}}<form>
     <fieldset>
         <legend class="sr-only">Checkboxes inline</legend>
         <ul class="inline-list">
@@ -22,7 +22,7 @@ status: "Alpha"
 {{< /example >}}
 
 ## Checkbox list example
-{{< example "html" >}}<form>
+{{< example lang="html" >}}<form>
     <fieldset>
         <legend class="sr-only">Checkbox list</legend>
         <ul class="plain-list">

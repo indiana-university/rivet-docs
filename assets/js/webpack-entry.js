@@ -27,3 +27,37 @@ const tip = tippy('.rvtd-example__copy', {
         setTimeout(() => { tip.hide(this) }, 1000)
     }
 })
+
+
+/**
+ * Section Subnav menu
+ */
+const Subnav = (function() {
+
+    const subnavTrigger = document.querySelector('.rvtd-sidebar__nav-toggle');
+    const subnavEl = document.querySelector('.rvtd-nav');
+
+    var init = function() {
+        subnavTrigger.addEventListener('click', function() {
+            toggleBtnState(this);
+            toggleHiddenState(subnavEl);
+        });
+    }
+
+    var toggleBtnState = function (buttonEl) {
+        var isExpanded = buttonEl.getAttribute('aria-expanded') === 'true' || false;
+        buttonEl.setAttribute('aria-expanded', !isExpanded);
+    }
+
+    var toggleHiddenState = function (itemToToggle) {
+        var itemState = itemToToggle.getAttribute('aria-hidden') === 'true' || false;
+        itemToToggle.setAttribute('aria-hidden', !itemState);
+    }
+
+    return {
+        init: init
+    }
+
+})();
+
+Subnav.init();

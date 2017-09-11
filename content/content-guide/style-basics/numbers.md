@@ -3,8 +3,9 @@ title: Numbers, dates, and percentages
 ---
 We follow the Chicago Manual of Style here. The IT Communications Office (ITCO) says it best:
 
-<blockquote>Number formatting: Zero through nine, 10 and up.</blockquote>
-<blockquote>Date formatting: July 1 (add the year if date is more than one year prior/after)</blockquote>
+> Number formatting: Zero through nine, 10 and up.
+
+> Date formatting: July 1 (add the year if date is more than one year prior/after)
 
 See <a href="https://uits.iu.edu/itco/style-basics" target="_blank">ITCO's style guide</a> for more information.
 

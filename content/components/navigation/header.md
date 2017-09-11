@@ -11,7 +11,7 @@ The base header provides consistent branding in a condensed space. It replaces t
 - [Identity menu extension](#header-with-identity-menu)
 - [Main navigation extension](#header-with-main-navigation)
 
-{{< example "html" >}}<header class="rvt-header" role="banner">
+{{< example lang="html" >}}<header class="rvt-header" role="banner">
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <div class="rvt-header__trident">
         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
@@ -35,7 +35,7 @@ The base header can be extended to fit the navigation needs of your application 
 ## Header with identity menu
 The inclusion of an avatar and username, or only username are both appropriate choices. When your application has multiple user functions consider including the dropdown menu. When there is only one user function consider replacing the carat with a bar followed by the single function. (example:  username | Log out). On mobile this item collapses into the side menu above all other options.
 
-{{< example "html" >}}<header class="rvt-header" role="banner">
+{{< example lang="html" >}}<header class="rvt-header" role="banner">
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <div class="rvt-header__trident">
         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
@@ -92,7 +92,7 @@ The inclusion of an avatar and username, or only username are both appropriate c
 ## Header with main navigation
 These lists work best for priority tasks and internal navigation. Consider including **no more than five items** in this list. These items can optionally also include nested structural navigation as a Rivet standard styled dropdown on desktop. On mobile these items collapse into the side menu, below the identity row and above the side menu options.
 
-{{< example "html" >}}
+{{< example lang="html" >}}
 <header class="rvt-header" role="banner">
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <!-- Trident -->

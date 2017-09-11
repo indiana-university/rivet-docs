@@ -12,7 +12,7 @@ When you only need to present a user with three or less options, consider using 
 
 ## Example
 
-{{< example "html" >}}<label for="select-demo">Select input:</label>
+{{< example lang="html" >}}<label for="select-demo">Select input:</label>
     <select id="select-demo">
     <option value="">Option One</option>
     <option value="">Option Two</option>

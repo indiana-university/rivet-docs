@@ -4,7 +4,7 @@ description: "Radio buttons allow users to select a single value out of a set nu
 status: "Alpha"
 ---
 ## Inline radios example
-{{< example "html" >}}<form>
+{{< example lang="html" >}}<form>
     <fieldset>
         <legend class="sr-only">Radio inputs inline</legend>
         <ul class="inline-list">
@@ -22,9 +22,9 @@ status: "Alpha"
 {{< /example >}}
 
 ## Radio list example
-{{< example "html" >}}<form>
+{{< example lang="html" >}}<form>
     <fieldset>
-        <legend class="ts-14 text-uppercase m-bottom-sm">Radio list</legend>
+        <legend class="sr-only">Radio list</legend>
         <ul class="plain-list">
             <li>
                 <input type="radio" name="radio-demo-2" id="radio-3">
