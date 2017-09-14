@@ -2,6 +2,7 @@ baseurl: "/"
 languageCode: "en-us"
 title: "Rivet Design System"
 paginate: 10
+enableEmoji: true
 params:
     googleAnalytics: "UA-100560495-3"
     devGoogleAnalytics: "UA-100560495-4"

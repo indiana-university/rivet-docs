@@ -1,7 +1,7 @@
 ---
 title: "Download Rivet"
 description: Download the compiled Rivet CSS and JavaScript
-weight: 1
+weight: 15
 ---
 ## Rivet Download
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
