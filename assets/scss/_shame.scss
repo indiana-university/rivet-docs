@@ -17,9 +17,19 @@
     margin-right: $lg;
 
     ul li.is-current {
-        box-shadow: 0 3px 0 $color-action;
+        box-shadow: 0 2px 0 $color-text;
     }
 }
+
+@media screen and (min-height: 580px) {
+    .rvt-footer--sticky {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-top: 80px;
+    }
+}
+
 
 a.button--secondary {
     color: $color-action;

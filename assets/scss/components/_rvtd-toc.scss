@@ -24,11 +24,11 @@
             content: "";
             margin-left: -$xxs;
             padding-left: $xxs;
-            box-shadow: -4px 0 0 $color-action;
+            box-shadow: -2px 0 0 $color-text;
         }
 
         a {
-            font-weight: 700;
+            color: $color-text;
         }
     }
 
