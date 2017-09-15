@@ -123,7 +123,7 @@ For instance, you might define a limited type scale for you app of:
 ### Responsive type scale
 Each type scale helper class comes with a set of BEM-style modifiers that allow you adjust font-size at different screen sizes. Here's an example.
 
-{{< code >}}<h1 class="ts-20 ts-32--md-up">Profile page</h1>
+{{< code >}}<h1 class="ts-20 ts-32-md-up">Profile page</h1>
 <p class="ts-14">The profile page is where you can select your personal settings.</p>
 {{< /code >}}
 
@@ -131,8 +131,8 @@ Given the markup above, the `h1` would have a font size of 1.25rem/20px on all s
 
 The responsive type scale CSS classes use the following conventions:
 
-- `--sm-up` - screens **480–740px** and wider
-- `--md-up` - screens **740–1080px** and wider
-- `--lg-up` - screens **1080–1260px** and wider
-- `--xl-up` - screens **1260–1400px** and wider
-- `--xxl-up` - screens **1400px** and wider
+- `-sm-up` - screens **480–740px** and wider
+- `-md-up` - screens **740–1080px** and wider
+- `-lg-up` - screens **1080–1260px** and wider
+- `-xl-up` - screens **1260–1400px** and wider
+- `-xxl-up` - screens **1400px** and wider

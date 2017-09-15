@@ -38,10 +38,13 @@ const Subnav = (function() {
     const subnavEl = document.querySelector('.rvtd-nav');
 
     var init = function() {
-        subnavTrigger.addEventListener('click', function() {
-            toggleBtnState(this);
-            toggleHiddenState(subnavEl);
-        });
+        if(subnavTrigger) {
+            subnavTrigger.addEventListener('click', function () {
+                toggleBtnState(this);
+                toggleHiddenState(subnavEl);
+            });
+        }
+
     }
 
     var toggleBtnState = function (buttonEl) {

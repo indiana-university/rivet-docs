@@ -1,4 +1,4 @@
-/*! Rivet - @version v0.1.1 */
+/*! Rivet - @version v0.2.0 */
 
 var Alert = (function() {
 
@@ -80,7 +80,7 @@ var Drawer = (function() {
                 toggleHiddenState(subnavEl);
             });
         }
-
+        
         // Make sure the extra close button is present in the DOM
         if (drawerBottomClose) {
             drawerBottomClose.addEventListener('click', function () {
@@ -282,7 +282,7 @@ var Modal = (function() {
                 // Get all the close triggers for the current modal
                 var modalCloseButtons = modalEl.querySelectorAll('[data-modal-close]');
                 modalCloseButtons = Array.prototype.slice.call(modalCloseButtons);
-
+                
                 modalCloseButtons.forEach(function(el) {
                     el.addEventListener('click', function() {
                         closeModal(modalEl);
