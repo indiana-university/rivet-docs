@@ -1,5 +1,5 @@
 ---
-title: "Content"
+title: "Content guide"
 description: "Learn how to write content that works for your users."
 ---
 ## Our approach

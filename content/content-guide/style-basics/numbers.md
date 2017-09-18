@@ -1,5 +1,5 @@
 ---
-title: Numbers, dates, and percentages
+title: Numbers and dates
 ---
 We follow the Chicago Manual of Style here. The IT Communications Office (ITCO) says it best:
 

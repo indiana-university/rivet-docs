@@ -7,6 +7,14 @@
 }
 
 /**
+ * NOTE: These all override Rivet itselft
+ */
+
+.rvt-header--no-border {
+    border-bottom: none;
+}
+
+/**
  * :( I'm stuck in a z-index war of my own making!!!
  */
 .rvt-drawer {
@@ -21,16 +29,6 @@
     }
 }
 
-@media screen and (min-height: 580px) {
-    .rvt-footer--sticky {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        margin-top: 80px;
-    }
-}
-
-
 a.button--secondary {
     color: $color-action;
 
@@ -38,6 +36,17 @@ a.button--secondary {
         text-decoration: none;
     }
 }
+
+a.button--reverse-secondary {
+    border-color: $color-background;
+    color: $color-background;
+
+    &:hover {
+        border-color: $color-background;
+        background-color: $color-background;
+    }
+}
+
 
 /**
  * These styles are for grid examples in the docs.
@@ -86,45 +95,36 @@ a.button--secondary {
     text-align: center;
 }
 
-.rvtd-article-nav {
-    display: none;
+
+/**
+ * Home page layout stuff
+ */
+
+.rvtd-principles {
+    background-color: #f7f7f7;
+    padding: $xxl 0;
+    border-top: 1px solid $color-black--100;
+    border-bottom: 1px solid $color-black--100;
 }
 
-@include mq(bp(xl)) {
-    .rvtd-article-nav {
-        display: block;
-        position: absolute;
-        top: $xxl*2;
-        right: 0;
-        width: 280px;
-        padding: 0 $md;
-        border-left: 1px solid #eeeeee;
-
-        p {
-            margin-top: 0;
-            font-weight: 700;
-            font-size: $ts-18;
-        }
-
-        a {
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-
-        ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-
-        ul li a {
-            font-size: $ts-14;
-            line-height: 1.5;
-            margin-bottom: $xs;
-            display: inline-block;
-        }
+@include mq(bp(md)) {
+    .rvtd-principles {
+        padding: $xxl*1.5 0;
     }
+}
+
+
+
+.rvtd-blurbs {
+    padding: $xxl 0;
+}
+
+@include mq(bp(md)) {
+    .rvtd-blurbs {
+        padding: $xxl*2 0;
+    }
+}
+
+.rvtd-blurb {
+    margin-bottom: $xxl;
 }
