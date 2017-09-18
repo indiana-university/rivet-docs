@@ -2,7 +2,7 @@
 title: "Download Rivet"
 description: Download the compiled Rivet CSS and JavaScript
 weight: 15
-url: how-to-use/download
+url: /how-to-use/download
 ---
 ## Rivet Download
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
@@ -39,4 +39,3 @@ If you are using Sass in your project you can import the Rivet Sass files direct
 
 {{< code lang="css" >}}@import "./your-path-to-rivet/sass/rivet.scss"
 {{< /code >}}
-

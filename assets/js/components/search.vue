@@ -5,8 +5,23 @@
         <input v-model="query" type="text" id="search-input" autocomplete="off" placeholder="Search the docs">
     </form>
     <div v-if="results.length" class="rvtd-search__results">
-        <h2 class="sr-only">Search results</h2>
-        <div v-for="result in results" class="rvtd-search__result">
+        <h2 class="ts-14">Found {{results.length}} {{results.length|pluralizeResult}} for <strong>{{activeQuery}}</strong></h2>
+        <div class="m-top-sm" v-if="results.length > resultsPerPage">
+            <nav role="navigation" aria-label="Search result pages">
+                <ul class="rvt-pagination rvt-pagination--small rvt-pagination--center">
+                    <li :class="'rvt-pagination__item ' + (currentPage==0 ? 'is-disabled' : '')">
+                        <a href="javascript:void(0)" aria-label="Previous set of pages" @click='gotoPage(currentPage-1)'>Previous</a>
+                    </li>
+                    <li v-for="pageNumber in pages" :class="'rvt-pagination__item ' + (pageNumber-1==currentPage ? 'is-active': '')" :aria-current="(pageNumber-1==currentPage?'true':'')">
+                        <a href="javascript:void(0)" :aria-label="'Page '+pageNumber" @click='gotoPage(pageNumber-1)'>{{pageNumber}}</a>
+                    </li>
+                    <li :class="'rvt-pagination__item ' + (currentPage==pages-1 ? 'is-disabled' : '')">
+                        <a href="javascript:void(0)" aria-label="Next set of pages" @click='gotoPage(currentPage+1)'>Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div v-for="result in currentPageOfResults" class="rvtd-search__result m-top-sm">
             <h3 class="rvtd-search__result-title">
                 <a :href="result.uri">
                     {{result.title}}
@@ -15,6 +30,9 @@
             <div class="rvtd-search__result-body">{{result.preview}}</div>
         </div>
     </div>
+    <div v-if="activeQuery!='' && results.length==0" class="rvtd-search__results rvtd-search__results--none">
+        Your search for <strong class="rvtd-search__no-results-term">{{activeQuery}}</strong> returned no results.
+    </div>
 </div>
 </template>
 
@@ -22,37 +40,68 @@
 const http = require('axios')
 const lunr = require('lunr')
 const marked = require('marked');
+const debounce = require('lodash/debounce');
+
+const resultsPerPage = 5;
 
 module.exports = {
+    computed: {
+        pages() {
+            return Math.ceil(this.results.length / resultsPerPage)
+        },
+        currentPageOfResults() {
+            return this.results.slice(this.currentPage*resultsPerPage, (this.currentPage*resultsPerPage)+resultsPerPage)
+        }
+    },
     data: function() {
         return {
             query: "",
+            activeQuery: "",
             documents: null,
             index: null,
-            matchesInIndex: null,
-            results: []
+            matchesInIndex: [],
+            results: [],
+            currentPage: 0,
+            resultsPerPage: resultsPerPage
+        }
+    },
+    filters: {
+        pluralizeResult(n) {
+            return n > 1 ? 'results' : 'result'
         }
     },
     methods: {
         search() {
-            if (this.index) {
+            if (this.index && this.query!=this.activeQuery) {
+                console.log("searching")
+                this.activeQuery = this.query
                 try {
-                    this.matchesInIndex = this.index.search(this.query)
+                    this.matchesInIndex = this.index.search(this.activeQuery)
                 } catch (e) {
                     if (e instanceof lunr.QueryParseError) {
                         this.displayQueryError(this.query, e)
                         return
-                    } else {
-                        throw e
                     }
                 }
-                this.results = this.index.search(this.query)
+
+                this.$nextTick(()=>{
+                    console.log(this.results.length + " results for " + this.activeQuery);
+                })
             }
         },
         displayQueryError(q, e) {
             console.log("query error")
             console.log(q)
             console.log(e)
+        },
+        gotoPage(pageNumber) {
+            if(pageNumber < 0) {
+                pageNumber = 0;
+            }
+            if(pageNumber > (this.pages-1)) {
+                pageNumber = this.pages-1;
+            }
+            this.currentPage = pageNumber
         }
     },
     mounted() {
@@ -82,7 +131,12 @@ module.exports = {
     },
     watch: {
         query() {
-            this.search()
+            if(this.query=='') {
+                this.activeQuery = '';
+                this.matchesInIndex = [];
+            }
+            //debounce and call search
+            debounce(this.search, 1000)()
         },
         matchesInIndex() {
             let regexQuery = new RegExp(this.query)

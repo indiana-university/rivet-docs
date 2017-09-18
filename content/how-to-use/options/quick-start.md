@@ -2,7 +2,7 @@
 title: Quick start
 description: Use centrally-hosted assets and an HTML starter template.
 weight: 10
-url: how-to-use/quick-start
+url: /how-to-use/quick-start
 ---
 ## CDN assets
 There are several ways you can use Rivet in your project. The quickest way to get started is linking to the [centrally-hosted Rivet assets](../cdn) and using the basic [starter template below](#starter-template).
