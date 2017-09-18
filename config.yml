@@ -1,9 +1,10 @@
 baseurl: "/"
 languageCode: "en-us"
-title: "Rivet Design System"
+title: "Rivet"
 paginate: 10
 enableEmoji: true
 params:
+    tagline: "Software Design System"
     googleAnalytics: "UA-100560495-3"
     devGoogleAnalytics: "UA-100560495-4"
     downloadLink: "https://github.iu.edu/UITS/rivet/archive/v0.2.0.zip"
