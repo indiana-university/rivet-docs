@@ -7,6 +7,14 @@
 }
 
 /**
+ * NOTE: These all override Rivet itselft
+ */
+
+.rvt-header--no-border {
+    border-bottom: none;
+}
+
+/**
  * :( I'm stuck in a z-index war of my own making!!!
  */
 .rvt-drawer {
@@ -38,6 +46,17 @@ a.button--secondary {
         text-decoration: none;
     }
 }
+
+a.button--reverse-secondary {
+    border-color: $color-background;
+    color: $color-background;
+
+    &:hover {
+        border-color: $color-background;
+        background-color: $color-background;
+    }
+}
+
 
 /**
  * These styles are for grid examples in the docs.
@@ -125,6 +144,70 @@ a.button--secondary {
             line-height: 1.5;
             margin-bottom: $xs;
             display: inline-block;
+        }
+    }
+}
+
+
+.rvtd-principles {
+    background-color: #f7f7f7;
+    padding: $xxl 0;
+    border-top: 1px solid $color-black--100;
+    border-bottom: 1px solid $color-black--100;
+}
+
+@include mq(bp(md)) {
+    .rvtd-principles {
+        padding: $xxl*1.5 0;
+    }
+}
+
+.rvtd-home-page-marketing-list {
+    list-style: none;
+    padding-left: $xxl;
+
+    li {
+        line-height: 1.5;
+        position: relative;
+
+        &:before {
+            content: "1";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: -$xxl;
+            font-size: $ts-20;
+            width: 35px;
+            height: 35px;
+            background-color: #22af7c;
+            border-radius: 50%;
+            color: $color-background;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        &:nth-of-type(2):before {
+            content: "2";
+        }
+
+        &:nth-of-type(3):before {
+            content: "3";
+        }
+    }
+}
+
+@include mq(bp(md)) {
+    .rvtd-home-page-marketing-list {
+        li {
+            margin-bottom: $xxl;
+        }
+
+        li:before {
+            font-size: $ts-26;
+            width: 45px;
+            height: 45px;
+            top: -$xxs;
         }
     }
 }

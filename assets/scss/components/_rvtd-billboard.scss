@@ -1,0 +1,55 @@
+.rvtd-billboard {
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006298+0,52b09d+100 */
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006298+0,52b09d+59,52b09d+100 */
+    background: rgb(0,98,152); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(0,98,152,1) 0%, rgba(82,176,157,1) 59%, rgba(82,176,157,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,98,152,1) 0%,rgba(82,176,157,1) 59%,rgba(82,176,157,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,98,152,1) 0%,rgba(82,176,157,1) 59%,rgba(82,176,157,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006298', endColorstr='#52b09d',GradientType=0 ); /* IE6-9 */
+
+    background-attachment: fixed;
+    color: $color-background;
+    padding-top: $xxl;
+    padding-bottom: $xxl;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@include mq(bp(md)) {
+    .rvtd-billboard {
+        padding-top: $xxl * 2.5;
+        padding-bottom: $xxl * 2.5;
+    }
+}
+
+.rvtd-billboard__intro {
+    text-align: center;
+}
+
+@include mq(bp(md)) {
+    .rvtd-billboard__intro {
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+.rvtd-billboard__intro-title {
+    line-height: 1.2;
+}
+
+.rvtd-billboard__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../img/docs/uxo-hero-overlay.png");
+    background-size: cover;
+    z-index: -1;
+}
