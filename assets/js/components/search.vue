@@ -73,7 +73,7 @@ module.exports = {
     methods: {
         search() {
             if (this.index && this.query!=this.activeQuery) {
-                console.log("searching")
+                this.currentPage = 0
                 this.activeQuery = this.query
                 try {
                     this.matchesInIndex = this.index.search(this.activeQuery)
