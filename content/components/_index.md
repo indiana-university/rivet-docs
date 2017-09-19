@@ -12,7 +12,7 @@ You can download a ZIP file that contains the compiled and minified CSS and Java
 
 {{< button url="https://github.iu.edu/UITS/rivet/archive/v0.2.0.zip" variant="secondary" >}}Download Rivet{{< /button >}}
 
-### CSS and JavaScript
+### Hosted CSS and JavaScript
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. [Read the Quick start guide](../how-to-use/quick-start) for more information.
 
 Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
