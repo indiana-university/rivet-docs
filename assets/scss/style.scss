@@ -5,34 +5,14 @@
 @import "libs/tippy";
 @import "../rivet-0.2.0/sass/rivet";
 
+@import "components/rvtd-article-nav";
+@import "components/rvtd-banner";
+@import "components/rvtd-billboard";
 @import "components/rvtd-docs-example";
-@import "components/rvtd-intro";
 @import "components/rvtd-layout";
+@import "components/rvtd-marketing-list";
 @import "components/rvtd-search";
 @import "components/rvtd-toc";
 @import "components/rvtd-typography";
 
 @import "shame";
-
-
-/**
- * Home page compare section
- */
-
- .rvtd-comp-table{
-     padding: $xxl 0;
- }
-
- @include mq(bp(md)) {
-    .rvtd-comp-table{
-        padding: $xxl*2 0;
-    }
- }
-
- .rvtd-blurbs {
-     padding: $xxl 0;
- }
-
- .rvtd-blurb {
-     margin-bottom: $xxl;
- }

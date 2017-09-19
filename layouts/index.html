@@ -1,66 +1,54 @@
 {{ define "main" }}
-<section class="rvtd-intro">
+<section class="rvtd-billboard">
+    <div class="rvtd-billboard__bg"></div>
+    <div class="rvt-container rvt-container--center rvt-container--junior">
+        <div class="rvtd-billboard__intro">
+            <h1 class="rvtd-billboard__intro-title ts-32 ts-46-md-up">{{ .Title | markdownify }}</h1>
+            <p class="ts-20-md-up m-bottom-xl">{{ .Description }}</p>
+            <a href="/components" class="button button--secondary button--reverse-secondary">Read the docs</a>
+        </div>
+    </div>
+</section>
+<div class="rvt-container rvt-container--center rvt-container--junior">
+    <div class="rvtd-banner">
+        <div class="rvtd-banner__icon">
+            {{ partial "icons/banner-icon.svg" . }}
+        </div>
+        <p class="rvtd-banner__message">Read this guide to help you make a decision on wether you should use Rivet in your project.</p>
+        <div class="rvtd-banner__action">
+            <a href="#0" class="button button--secondary">Should I use Rivet?</a>
+        </div>
+    </div>
+</div>
+<section class="rvtd-principles">
     <div class="rvt-container rvt-container--center rvt-container--junior">
         <div class="rvt-grid">
-            <div class="rvt-grid__item-12-sm-up rvt-grid__item-6-md-up">
-                <h1 class="ts-32 ts-46-md-up">{{ .Title | markdownify }}</h1>
-                <p class="ts-20-md-up m-bottom-xl">{{ .Description }}</p>
-                <div class="button-group">
-                    <a href="{{ .Params.primaryCtaLink }}" class="button">{{ .Params.primaryCta }}</a>
-                    <a href="{{ .Params.secondaryCtaLink }}" class="button button--secondary">{{ .Params.secondaryCta }}</a>
-                </div>
+            <div class="rvt-grid__item-5-md-up">
+                <h1 class="ts-29 ts-36-md-up m-bottom-xl-md-up">Our <strong>principles</strong></h1>
+                <p>Rivet is a starting point for UITS applications. Its ready-to-use HTML/CSS components mean that you don’t have to reinvent the wheel for every new project. And its documentation focuses on best practices for accessibility and copy—letting you focus on great user experiences.</p>
+                <p class="m-bottom-xxl">We want to make it easier to design and develop great experiences for users across all UITS applications, and you can help. These are our guiding principles to contribute to the design system:</p>
             </div>
-            <div class="rvt-grid__item-6-md-up hide-lg-down">
-                <img src="{{ "img/docs/rvtd-intro-illo.jpg" | absURL }}" alt="">
-            </div>
-        </div>
-    </div>
-</section>
-<section class="rvtd-explainer">
-    <div class="rvtd-comp-table">
-        <div class="rvt-container rvt-container--center rvt-container--freshman text-center">
-            <h1 class="ts-26 ts-32--md-up" id="should-i-use">Should I use Rivet?</h1>
-            <p>Rivet is not a replacement for the IU Web Framework which should be used for static content-driven brochure websites. If you need more info on wether or not you should use Rivet, check out this table to help you make a decision.</p>
-        </div>
-        <div class="rvt-container rvt-container--center rvt-container--junior m-top-xxl">
-            Comparison chart here...
-        </div>
-    </div>
-    <div class="rvtd-blurbs">
-        <div class="rvt-container rvt-container--center rvt-container--junior">
-            <div class="rvt-grid">
-                <div class="rvt-grid__item-4-md-up">
-                    <div class="rvtd-blurb">
-                        <div class="m-bottom-sm m-bottom-xl-md-up">
-                            {{ partial "icons/examples-icon.svg" . }}
-                        </div>
-                        <h2 class="ts-20 ts-26-md-up">See what Rivet can do</h2>
-                        <p class="m-bottom-md m-bottom-xl-md-up">We’ve put together some examples to help you get some ideas on how you might implement Rivet on your new application.</p>
-                        <a href="/resources" class="button button--secondary">See examples</a>
-                    </div>
-                </div>
-                <div class="rvt-grid__item-4-md-up">
-                    <div class="rvtd-blurb">
-                        <div class="m-bottom-sm m-bottom-xl-md-up">
-                            {{ partial "icons/content-icon.svg" . }}
-                        </div>
-                        <h2 class="ts-20 ts-26-md-up">Refine your content</h2>
-                        <p class="m-bottom-md m-bottom-xl-md-up">We’ve put together some examples to help you get some ideas on how you might implement Rivet on your new application.</p>
-                        <a href="/content-guide" class="button button--secondary">Read about content</a>
-                    </div>
-                </div>
-                <div class="rvt-grid__item-4-md-up">
-                    <div class="rvtd-blurb">
-                        <div class="m-bottom-sm m-bottom-xl-md-up">
-                            {{ partial "icons/contribute-icon.svg" . }}
-                        </div>
-                        <h2 class="ts-20 ts-26-md-up">Tailor Rivet to your needs</h2>
-                        <p class="m-bottom-md m-bottom-xl-md-up">We’ve put together some examples to help you get some ideas on how you might implement Rivet on your new application.</p>
-                        <a href="/resources" class="button button--secondary">Learn how to contribute</a>
-                    </div>
-                </div>
+            <div class="rvt-grid__item-6-md-up rvt-grid__item--last">
+                <ol class="rvtd-home-page-marketing-list m-top-xs-md-up">
+                    <li>
+                        <h2 class="ts-23 ts-26-md-up">Be <strong>clear</strong>.</h2>
+                        <p>Make design decisions based on user needs. Design interfaces that help our users accomplish their
+                            goals quickly and easily.</p>
+                    </li>
+                    <li>
+                        <h2 class="ts-23 ts-26-md-up">Be <strong>flexible</strong>.</h2>
+                        <p>Our design system is for all types of UITS applications, even ones that have yet to be imagined.
+                            We need to design and build for flexibility.</p>
+                    </li>
+                    <li>
+                        <h2 class="ts-23 ts-26-md-up">Be <strong>productive</strong>.</h2>
+                        <p>Done is better than perfect. Iteration is only half the battle. Testing with users could reveal issues
+                            or questions we didn’t anticipate.</p>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
 </section>
+{{ partial "home-page-blurbs.html" . }}
 {{ end }}

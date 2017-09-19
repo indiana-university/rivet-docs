@@ -1,0 +1,30 @@
+.rvtd-banner {
+    padding: $xl 0;
+
+    &__message {
+        margin-bottom: $lg;
+    }
+}
+
+@include mq(bp(md)) {
+    .rvtd-banner {
+        padding: $lg 0;
+        display: flex;
+        align-items: center;
+
+        &__message {
+            font-size: $ts-18;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-right: $lg;
+        }
+
+        &__icon {
+            margin-right: $lg;
+        }
+
+        &__action {
+            margin-left: auto;
+        }
+    }
+}
