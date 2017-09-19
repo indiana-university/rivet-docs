@@ -35,7 +35,7 @@
         </div>
         <div v-for="result in currentPageOfResults" class="rvtd-search__result m-top-sm">
             <h3 class="rvtd-search__result-title">
-                <a :href="result.uri">
+                <a :href="result.uri" @click="trackClick(result.uri)">
                     {{result.title}}
                 </a>
             </h3>
@@ -96,20 +96,25 @@ module.exports = {
                     this.matchesInIndex = this.index.search(this.activeQuery)
                 } catch (e) {
                     if (e instanceof lunr.QueryParseError) {
-                        this.displayQueryError(this.query, e)
+                        this.handleQueryError(this.query, e)
                         return
                     }
                 }
 
                 this.$nextTick(()=>{
-                    console.log(this.results.length + " results for " + this.activeQuery);
+                    if(window.ga) {
+                        window.ga('send', 'event', 'search', 'search', this.activeQuery + ' (' + this.results.length + ' results)', this.results.length)
+                    }
                 })
             }
         },
-        displayQueryError(q, e) {
-            console.log("query error")
-            console.log(q)
-            console.log(e)
+        handleQueryError(q, e) {
+            if(window.ga) {
+                window.ga('send', 'exception', {
+                    'exDescription': e,
+                    'exFatal': false
+                })
+            }
         },
         gotoPage(pageNumber) {
             if(pageNumber < 0) {
@@ -119,6 +124,11 @@ module.exports = {
                 pageNumber = this.pages-1;
             }
             this.currentPage = pageNumber
+        },
+        trackClick(url) {
+            if(window.ga) {
+                window.ga('send', 'event', 'search', 'result click', this.activeQuery + ' : ' + url)
+            }
         }
     },
     mounted() {
