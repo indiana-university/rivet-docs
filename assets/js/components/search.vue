@@ -10,13 +10,25 @@
             <nav role="navigation" aria-label="Search result pages">
                 <ul class="rvt-pagination rvt-pagination--small rvt-pagination--center">
                     <li :class="'rvt-pagination__item ' + (currentPage==0 ? 'is-disabled' : '')">
-                        <a href="javascript:void(0)" aria-label="Previous set of pages" @click='gotoPage(currentPage-1)'>Previous</a>
+                        <a
+                            href="javascript:void(0)"
+                            aria-label="Previous page"
+                            @click='gotoPage(currentPage-1)'
+                            :tabindex="(currentPage==0?'-1':'0')">
+                            Previous
+                        </a>
                     </li>
                     <li v-for="pageNumber in pages" :class="'rvt-pagination__item ' + (pageNumber-1==currentPage ? 'is-active': '')" :aria-current="(pageNumber-1==currentPage?'true':'')">
                         <a href="javascript:void(0)" :aria-label="'Page '+pageNumber" @click='gotoPage(pageNumber-1)'>{{pageNumber}}</a>
                     </li>
                     <li :class="'rvt-pagination__item ' + (currentPage==pages-1 ? 'is-disabled' : '')">
-                        <a href="javascript:void(0)" aria-label="Next set of pages" @click='gotoPage(currentPage+1)'>Next</a>
+                        <a
+                            href="javascript:void(0)"
+                            aria-label="Next page"
+                            @click='gotoPage(currentPage+1)'
+                            :tabindex="(currentPage==pages-1?'-1':'0')">
+                            Next
+                        </a>
                     </li>
                 </ul>
             </nav>
