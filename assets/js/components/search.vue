@@ -78,7 +78,8 @@ module.exports = {
             matchesInIndex: [],
             results: [],
             currentPage: 0,
-            resultsPerPage: resultsPerPage
+            resultsPerPage: resultsPerPage,
+            debouncedSearch: null
         }
     },
     filters: {
@@ -121,6 +122,7 @@ module.exports = {
         }
     },
     mounted() {
+        this.debouncedSearch = debounce(this.search, 1000)
         http.get('/site-index.json')
             .then((response) => {
                 this.index = lunr(function() {
@@ -152,7 +154,7 @@ module.exports = {
                 this.matchesInIndex = [];
             }
             //debounce and call search
-            debounce(this.search, 1000)()
+            this.debouncedSearch()
         },
         matchesInIndex() {
             let regexQuery = new RegExp(this.query)
