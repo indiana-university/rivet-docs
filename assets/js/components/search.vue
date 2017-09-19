@@ -41,9 +41,13 @@
             </h3>
             <div class="rvtd-search__result-body">{{result.preview}}</div>
         </div>
+        <div class="rvtd-search__result m-top-sm">
+            <p>Is something missing? <a :href="'https://github.iu.edu/UITS/rivet-docs-source/issues/new?title='+activeQuery">Open an issue</a> on GitHub (requires an IU account).</p>
+        </div>
     </div>
     <div v-if="activeQuery!='' && results.length==0" class="rvtd-search__results rvtd-search__results--none">
-        Your search for <strong class="rvtd-search__no-results-term">{{activeQuery}}</strong> returned no results.
+        <p>Your search for <strong class="rvtd-search__no-results-term">{{activeQuery}}</strong> returned no results.</p>
+        <p>Is something missing? <a :href="'https://github.iu.edu/UITS/rivet-docs-source/issues/new?title='+activeQuery">Open an issue</a> on GitHub (requires an IU account).</p>
     </div>
 </div>
 </template>
