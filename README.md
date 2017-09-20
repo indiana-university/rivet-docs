@@ -42,3 +42,11 @@ gulp serve
 ```
 
 To watch and build files without running a server, you can run `gulp watch`. To package up the `public/` folder for distribution, run `gulp build:prod`. 
+
+## Automatic deployments
+There are 4 webhooks setup for this site (2 for push and delete, and on 2 separate servers):
+* [AWS](http://uxo.space): anytime you push or delete to any branch, it will deploy to AWS
+  * If you create a `feature/<NAME>` branch then it will create a sub-directory the the feature <NAME>
+  * If you delete a feature branch it will delete that sub directory
+  * A push to develop will clear out the web root and update with the latest code on develop *THIS DELETES FEATURE FOLDER*
+* [Webtest](https://rivet.webtest.iu.edu): Same as AWS, but sometimes not as fast or good.
