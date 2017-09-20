@@ -102,19 +102,14 @@ module.exports = {
                 }
 
                 this.$nextTick(()=>{
-                    if(window.ga) {
-                        window.ga('send', 'event', 'search', 'search', this.activeQuery + ' (' + this.results.length + ' results)', this.results.length)
+                    if(window.telemetrics) {
+                        window.telemetrics('search', 'search', this.activeQuery + ' (' + this.results.length + ' results)', this.results.length)
                     }
                 })
             }
         },
         handleQueryError(q, e) {
-            if(window.ga) {
-                window.ga('send', 'exception', {
-                    'exDescription': e,
-                    'exFatal': false
-                })
-            }
+            console.error(e)
         },
         gotoPage(pageNumber) {
             if(pageNumber < 0) {
@@ -126,8 +121,8 @@ module.exports = {
             this.currentPage = pageNumber
         },
         trackClick(url) {
-            if(window.ga) {
-                window.ga('send', 'event', 'search', 'result click', this.activeQuery + ' : ' + url)
+            if(window.telemetrics) {
+                window.telemetrics('search', 'result click', this.activeQuery + ' : ' + url)
             }
         }
     },

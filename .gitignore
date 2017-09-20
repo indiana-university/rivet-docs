@@ -6,5 +6,5 @@ public/
 .npmrc
 tmp/
 static/css/style.css
-static/js/rivet-docs.js
+static/js/*.js
 static/site-index.json
