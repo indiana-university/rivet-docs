@@ -12,53 +12,18 @@
         <div class="rvt-grid__item-7-md-up rvt-grid__item-7-xl-up">
             <h2 class="ts-32 m-bottom-md">Examples</h2>
             <p class="ts-18 m-bottom-xxl">These examples are meant to give you some ideas for how to use Rivet in your project. If you have a good example you would like to share of how you used Rivet in your application or service please let us know.</p>
-
             <div class="rvt-grid">
+                {{ range .Pages }}
                 <div class="rvt-grid__item-6-md-up m-bottom-lg">
-                    <a href="#0" class="rvtd-example-link">
+                    <a href="{{ .Params.externalLink }}" class="rvtd-example-link">
                         <figure class="rvtd-example-link__thumbnail">
-                            <img src="http://lorempixel.com/600/375/animals" alt="">
+                            <img src="{{ .Params.thumbnail }}" alt="">
                         </figure>
-                        <h3 class="ts-26 m-top-sm">Example 1</h3>
-                        <p>Consectetur nam quisquam sit et velit sit.</p>
+                        <h3 class="ts-26 m-top-sm">{{ .Title }}</h3>
+                        <p>{{ .Description }}</p>
                     </a>
                 </div>
-                <div class="rvt-grid__item-6-md-up m-bottom-lg">
-                    <a href="#0" class="rvtd-example-link">
-                        <figure class="rvtd-example-link__thumbnail">
-                            <img src="http://lorempixel.com/600/375/animals" alt="">
-                        </figure>
-                        <h3 class="ts-26 m-top-sm">Example 2</h3>
-                        <p>Consectetur nam quisquam sit et velit sit.</p>
-                    </a>
-                </div>
-                <div class="rvt-grid__item-6-md-up m-bottom-lg">
-                    <a href="#0" class="rvtd-example-link">
-                        <figure class="rvtd-example-link__thumbnail">
-                            <img src="http://lorempixel.com/600/375/animals" alt="">
-                        </figure>
-                        <h3 class="ts-26 m-top-sm">Example 3</h3>
-                        <p>Consectetur nam quisquam sit et velit sit.</p>
-                    </a>
-                </div>
-                <div class="rvt-grid__item-6-md-up m-bottom-lg">
-                    <a href="#0" class="rvtd-example-link">
-                        <figure class="rvtd-example-link__thumbnail">
-                            <img src="http://lorempixel.com/600/375/animals" alt="">
-                        </figure>
-                        <h3 class="ts-26 m-top-sm">Example 4</h3>
-                        <p>Consectetur nam quisquam sit et velit sit.</p>
-                    </a>
-                </div>
-                <div class="rvt-grid__item-6-md-up m-bottom-lg">
-                    <a href="#0" class="rvtd-example-link">
-                        <figure class="rvtd-example-link__thumbnail">
-                            <img src="http://lorempixel.com/600/375/animals" alt="">
-                        </figure>
-                        <h3 class="ts-26 m-top-sm">Example 5</h3>
-                        <p>Consectetur nam quisquam sit et velit sit.</p>
-                    </a>
-                </div>
+                {{ end }}
             </div>
         </div>
         <div class="rvt-grid__item-4-md-up rvt-grid__item--last">
