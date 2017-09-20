@@ -2,7 +2,7 @@
 title: CDN
 description: Use the centrally-hosted version of Rivet
 weight: 30
-url: how-to-use/cdn
+url: /how-to-use/cdn
 ---
 The easiest way to get started using Rivet is to link to the centrally hosted version of the Rivet CSS and JavaScript and use the handy [starter template]({{< relref "quick-start.md#starter-template" >}}).
 

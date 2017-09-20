@@ -67,7 +67,8 @@ indexer.prototype.readFile = function(filePath) {
         delims: '---',
         lang: 'yaml'
     });
-    if (meta.data.draft === true) {
+    
+    if (meta.data.draft === true || meta.data.excludeFromIndex === true) {
         return;
     }
 
