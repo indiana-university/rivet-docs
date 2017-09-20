@@ -37,6 +37,12 @@ img/
 index.html
 {{< /code >}}
 
+## Using Sass
+If you are using Sass in your project you can import the Rivet Sass files directly:
+
+{{< code lang="css" >}}@import "./your-path-to-rivet/sass/rivet.scss"
+{{< /code >}}
+
 ## Hosted CSS and JavaScript
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. [Read the Quick start guide](../how-to-use/quick-start) for more information.
 
@@ -47,5 +53,11 @@ Copy and paste this `<link>` element to `<head>` of your document. Make sure it 
 Rivet has a minimal amount of JavaScript that is required for some components, like the [header](../components/navigation/header). Copy and paste this link and add to the end of your document, just before the closing `</body>` tag.
 
 {{< code lang="html" >}}<script src="https://assets.uits.iu.edu/javascript/rivet/0.2.0/rivet.min.js"></script>{{< /code >}}
+
+## NPM dependency
+Rivet is also available to include in as a dependency in your app via NPM. To use the Rivet as a npm package you'll need to configure an `.npmrc` file using your IU credentials. Once your `.npmrc` config file is configured you can run `npm install rivet-uits --save-dev` in your terminal to use in your project.
+
+### Configuring NPM
+Coming soon...
 
 
