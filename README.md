@@ -57,4 +57,3 @@ There are 4 webhooks setup for this site (2 for push and delete, and on 2 separa
 2. Run npm install and gulp to compile the assets
 3. Run hugo to generate the site
 4. Clear out the www root directory and move the hugo site to the www root (or if it's a feature branch just move the hugo site to the feature branch folder name)
-5. On Webtest, commit the docs site to https://github.iu.edu/UITS/rivet-docs
