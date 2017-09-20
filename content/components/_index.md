@@ -3,6 +3,7 @@ title: "Components"
 description: "The Rivet components are a well-documented set of HTML, CSS, and JavaScript assets."
 navTitle: "Components"
 weight: 2
+sectionNav: true
 ---
 ## Get started
 The Rivet components documentation contains examples, code snippets, and guidance on UX best-practices. Visit the [**How to use**](../how-to-use) section to see all the ways you can use Rivet in your project and see some example implementations of Rivet.
