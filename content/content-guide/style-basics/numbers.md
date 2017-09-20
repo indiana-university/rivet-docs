@@ -11,6 +11,7 @@ See <a href="https://uits.iu.edu/itco/style-basics" target="_blank">ITCO's style
 
 ## Percentages
 Use the percent sign (%) in these circumstances:
+
 * Tables and in technical or scientific writing. For example: 60% of participants reported experiencing negative side effects.
 * Headings and subheadings. For example: Candidate Woof takes 7% lead in the election for best dog.
 * Interface labels
