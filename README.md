@@ -42,3 +42,18 @@ gulp serve
 ```
 
 To watch and build files without running a server, you can run `gulp watch`. To package up the `public/` folder for distribution, run `gulp build:prod`. 
+
+## Automatic deployments
+There are 4 webhooks setup for this site (2 for push and delete, and on 2 separate servers):
+* [AWS](http://uxo.space): anytime you push to or delete any branch, it will deploy to AWS
+  * If you create a `feature/<NAME>` branch then it will create a sub-directory the the feature <NAME>. For example, creating a branch called `feature/loading-indicator` will create a folder at http://uxo.space/loading-indicator
+  * If you delete a feature branch it will delete that sub directory. For example, deleting branch `feature/loading-indicator` will delete the folder at http://uxo.space/loading-indicator
+  * A push to develop will clear out the web root and update with the latest code on develop *THIS DELETES ALL FEATURE FOLDERS*
+* [Webtest](https://rivet.webtest.iu.edu): Webtest is in sync with the `develop` branch and will automatically deploy whenever pushing to develop.
+
+### The deploy process
+
+1. Pull the latest code from github on the appropriate branch/server
+2. Run npm install and gulp to compile the assets
+3. Run hugo to generate the site
+4. Clear out the www root directory and move the hugo site to the www root (or if it's a feature branch just move the hugo site to the feature branch folder name)
