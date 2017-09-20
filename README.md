@@ -45,8 +45,8 @@ To watch and build files without running a server, you can run `gulp watch`. To 
 
 ## Automatic deployments
 There are 4 webhooks setup for this site (2 for push and delete, and on 2 separate servers):
-* [AWS](http://uxo.space): anytime you push or delete to any branch, it will deploy to AWS
-  * If you create a `feature/<NAME>` branch then it will create a sub-directory the the feature <NAME>
-  * If you delete a feature branch it will delete that sub directory
-  * A push to develop will clear out the web root and update with the latest code on develop *THIS DELETES FEATURE FOLDER*
-* [Webtest](https://rivet.webtest.iu.edu): Same as AWS, but sometimes not as fast or good.
+* [AWS](http://uxo.space): anytime you push to or delete any branch, it will deploy to AWS
+  * If you create a `feature/<NAME>` branch then it will create a sub-directory the the feature <NAME>. For example, creating a branch called `feature/loading-indicator` will create a folder at http://uxo.space/loading-indicator
+  * If you delete a feature branch it will delete that sub directory. For example, deleting branch `feature/loading-indicator` will delete the folder at http://uxo.space/loading-indicator
+  * A push to develop will clear out the web root and update with the latest code on develop *THIS DELETES ALL FEATURE FOLDERS*
+* [Webtest](https://rivet.webtest.iu.edu): Same as AWS, but sometimes not as fast at deploying or consistent. But this is probably what you should use to show collegues.
