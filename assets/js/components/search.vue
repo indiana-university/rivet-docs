@@ -157,10 +157,6 @@ module.exports = {
             .catch(function(error) {
                 console.log(error)
             })
-
-
-        this.query = 'content';
-        this.search()
     },
     watch: {
         query() {
