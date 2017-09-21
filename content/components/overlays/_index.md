@@ -1,3 +1,4 @@
 ---
 title: "Overlays"
+excludeFromIndex: true
 ---
