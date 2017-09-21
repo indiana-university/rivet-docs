@@ -174,6 +174,21 @@ When you need to change the visual order of the grid items you can use `.rvt-gri
 </div>
 {{< /example >}}
 
+### Right-align last item
+You can right-align the last item in a `.rvt-grid` by adding the `.rvt-grid__item--last` modifier to any grid item. This can be helpful when using set column widths that add up to less than 12 columns. Using the `.rvt-grid__item--last` will push the last `.rvt-grid__item-*` to the right leaving the remaining columns as extra space.
+
+{{< example lang="html" >}}<div class="rvt-container">
+    <div class="rvt-grid">
+        <div class="rvt-grid__item-4-sm-up">
+            <span>Four</span>
+        </div>
+        <div class="rvt-grid__item-7-sm-up rvt-grid__item--last">
+            <span>Seven with one left over</span>
+        </div>
+    </div>
+</div>
+{{< /example >}}
+
 ## Nesting
 You can nest new `.rvt-grid` blocks inside of `.rvt-grid__item-*` elements if you need more control over your layout.
 
