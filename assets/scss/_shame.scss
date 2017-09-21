@@ -10,6 +10,10 @@
  * NOTE: These all override Rivet itselft
  */
 
+input[type="search"] {
+    box-sizing: border-box;
+}
+
 .rvt-header--no-border {
     border-bottom: none;
 }

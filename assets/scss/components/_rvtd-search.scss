@@ -8,6 +8,14 @@
     &__form {
         width: calc(100% - 3.5rem);
         margin-left: auto;
+        position: relative;
+
+        .rvtd-search__cancel {
+            @extend .button--plain;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
     }
 
     &__results {
