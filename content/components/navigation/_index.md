@@ -1,3 +1,4 @@
 ---
 title: "Navigation"
+excludeFromIndex: true
 ---

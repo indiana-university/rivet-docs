@@ -15,14 +15,18 @@
         top: 4.5rem;
         width: 92%;
         z-index: 2;
-        padding: $sm;
         border: 1px solid #eee;
         background-color: $color-background;
         border-radius: 4px;
         box-shadow: 0 1rem 5rem -2rem rgba(#000000, 0.5);
 
+        .rvtd-search__results-header {
+            @extend .modal__header;
+            padding: $sm;
+        }
+
         .rvtd-search__result {
-            margin-bottom: $sm;
+            margin: 0 $sm $sm;
             padding-bottom: $sm;
             border-bottom: 1px solid #ddd;
 
@@ -43,6 +47,21 @@
             margin-bottom: 0;
             padding-bottom: 0;
             border-bottom: none;
+        }
+
+        .rvtd-search__results-found {
+            font-size: $ts-14;
+            margin: $sm;
+        }
+
+        .rvtd-search__results-footer {
+            @extend .modal__controls;
+            padding: $sm;
+
+            p {
+                font-size: $ts-14;
+                margin: 0;
+            }
         }
     }
 }

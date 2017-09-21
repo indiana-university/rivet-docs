@@ -5,8 +5,7 @@
         <input v-model="query" type="text" id="search-input" autocomplete="off" placeholder="Search the docs">
     </form>
     <div v-if="results.length" class="rvtd-search__results">
-        <h2 class="ts-14">Found {{results.length}} {{results.length|pluralizeResult}} for <strong>{{activeQuery}}</strong></h2>
-        <div class="m-top-sm" v-if="results.length > resultsPerPage">
+        <div class="rvtd-search__results-header" v-if="results.length > resultsPerPage">
             <nav role="navigation" aria-label="Search result pages">
                 <ul class="rvt-pagination rvt-pagination--small rvt-pagination--center">
                     <li :class="'rvt-pagination__item ' + (currentPage==0 ? 'is-disabled' : '')">
@@ -41,13 +40,20 @@
             </h3>
             <div class="rvtd-search__result-body">{{result.preview}}</div>
         </div>
-        <div class="rvtd-search__result m-top-sm">
-            <p class="m-bottom-remove">Is something missing? <a :href="'https://github.iu.edu/UITS/rivet-docs-source/issues/new?title='+activeQuery">Open an issue</a> on GitHub (requires an IU account).</p>
+
+        <div class="rvtd-search__results-found">Found {{results.length}} {{results.length|pluralizeResult}} for <strong>{{activeQuery}}</strong></div>
+
+        <div class="rvtd-search__results-footer m-top-sm">
+            <p>Is something missing? <a :href="'https://github.iu.edu/UITS/rivet-docs-source/issues/new?title='+activeQuery">Open an issue</a> on GitHub (requires an IU account).</p>
         </div>
     </div>
     <div v-if="activeQuery!='' && results.length==0" class="rvtd-search__results rvtd-search__results--none">
-        <p>Your search for <strong class="rvtd-search__no-results-term">{{activeQuery}}</strong> returned no results.</p>
-        <p>Is something missing? <a :href="'https://github.iu.edu/UITS/rivet-docs-source/issues/new?title='+activeQuery">Open an issue</a> on GitHub (requires an IU account).</p>
+        <div class="rvtd-search__results-found m-top-sm m-bottom-sm">
+            Your search for <strong class="rvtd-search__no-results-term">{{activeQuery}}</strong> returned no results.
+        </div>
+        <div class="rvtd-search__results-footer">
+            <p>Is something missing? <a :href="'https://github.iu.edu/UITS/rivet-docs-source/issues/new?title='+activeQuery">Open an issue</a> on GitHub (requires an IU account).</p>
+        </div>
     </div>
 </div>
 </template>
