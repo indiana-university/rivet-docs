@@ -142,3 +142,23 @@ a.button--reverse-secondary {
         color: $color-text;
     }
 }
+
+
+
+// Component status badges
+
+ .rvt-badge--prototype {
+     @extend .rvt-badge--error;
+ }
+
+.rvt-badge--alpha {
+    @extend .rvt-badge--warning;
+}
+
+.rvt-badge--beta {
+    background-color: $color-alert-blue;
+}
+
+.rvt-badge--ready {
+    @extend .rvt-badge--success;
+}
