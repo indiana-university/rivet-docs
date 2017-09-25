@@ -1,6 +1,7 @@
 ---
 title: "Visibility"
 description: "These utilities make it easy to show and hide content depending on screen sizes."
+status: "Prototype"
 ---
 ## Hide down responsive utilities
 The `hide-*-down`responsive display utilities start out visible on any screen size above the largest breakpoint (1400px) and will **hide content as the screen size becomes smaller**.
