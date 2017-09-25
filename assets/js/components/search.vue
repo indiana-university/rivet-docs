@@ -3,7 +3,7 @@
     <form @submit.prevent="search" class="rvtd-search__form">
         <label class="sr-only" for="search-input">Search query</label>
         <input v-model="query" type="search" id="search-input" autocomplete="off" placeholder="Search the docs" ref="search-input">
-        <button v-if="activeQuery!=''" class="rvtd-search__cancel" @click.prevent="clearSearch">
+        <button v-if="activeQuery!=''" class="rvtd-search__cancel button--plain" @click.prevent="clearSearch">
             <span class="v-hide">Clear search</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 16 16">
                 <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: #333"/>
