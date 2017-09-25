@@ -10,6 +10,10 @@
  * NOTE: These all override Rivet itselft
  */
 
+ code {
+     font-size: 1.2rem;
+ }
+
 input[type="search"] {
     box-sizing: border-box;
 }
@@ -141,4 +145,24 @@ a.button--reverse-secondary {
     &:hover {
         color: $color-text;
     }
+}
+
+
+
+// Component status badges
+
+ .rvt-badge--prototype {
+     @extend .rvt-badge--error;
+ }
+
+.rvt-badge--alpha {
+    @extend .rvt-badge--warning;
+}
+
+.rvt-badge--beta {
+    background-color: $color-alert-blue;
+}
+
+.rvt-badge--ready {
+    @extend .rvt-badge--success;
 }

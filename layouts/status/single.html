@@ -1,0 +1,50 @@
+{{ define "main" }}
+<div class="rvtd-wrap">
+    <div class="rvtd-sidebar">
+        <button class="rvtd-sidebar__nav-toggle button button--secondary" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8">
+                    <polyline points="1 1 7 7 13 1" fill="none" stroke="#006298" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    />
+                </svg>
+            </button>
+        <search-form></search-form>
+        {{ partial "section-nav.html" .}}
+    </div>
+    <div class="rvtd-tube">
+        <div class="rvtd-tube__inner rvtd-typeset">
+            <h1>{{ .Title }}</h1>
+            <p class="rvtd-lead">{{ .Description }}</p>
+            {{ .Content }}
+            <div class="rvtd-component-status">
+                <table>
+                    <caption class="sr-only">Rivet component status</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" width="180">Component</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{ range where .Site.Sections "Section" "components" }}
+                            {{ range .Sections }}
+                                {{ range .Pages }}
+                                    {{ if not .Params.excludeFromStatus }}
+                                    <tr>
+                                        <th scope="row"><a href="{{ .Permalink }}">{{ .Title }}</a></th>
+                                        <td>{{ .Description }}</td>
+                                        <td><span class="rvt-badge rvt-badge--{{ lower .Params.status }}">{{ .Params.status }}</span></td>
+                                    </tr>
+                                    {{ end }}
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    </tbody>
+                </table>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

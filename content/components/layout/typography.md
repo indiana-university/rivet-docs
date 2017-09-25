@@ -2,7 +2,7 @@
 title: "Typography"
 description: "Use the Rivet type scale to apply consistent typographic design to your application."
 requiresJs: false
-status: "Add status here"
+status: "Alpha"
 ---
 
 ## About the type scale
