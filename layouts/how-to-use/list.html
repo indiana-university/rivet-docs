@@ -1,51 +1,81 @@
 {{ define "main" }}
-<div class="rvt-container rvt-container--senior rvt-container--center p-top-xl">
-    <div class="rvt-grid">
-        <div class="rvt-grid__item-7-md-up rvtd-typeset">
-            <h1>{{ .Title }}</h1>
-            <p class="rvtd-lead">{{ .Description }}</p>
-        </div>
-    </div>
-</div>
-<div class="rvt-container rvt-container--senior rvt-container--center rvtd-typeset p-top-md">
-    <div class="rvt-grid">
-        <div class="rvt-grid__item-7-md-up rvt-grid__item-7-xl-up">
-            <h2 class="ts-32 m-bottom-md">Examples</h2>
-            <p class="ts-18 m-bottom-xxl">These examples are meant to give you some ideas for how to use Rivet in your project. If you have a good example you would like to share of how you used Rivet in your application or service please let us know.</p>
+    <section class="rvtd-billboard">
+        <div class="rvtd-billboard__bg"></div>
+        <div class="rvt-container rvt-container--center rvt-container--junior" style="position: relative;">
             <div class="rvt-grid">
-                {{ range .Pages }}
-                <div class="rvt-grid__item-6-md-up m-bottom-lg">
-                    <a href="{{ .Params.externalLink }}" class="rvtd-example-link">
-                        <figure class="rvtd-example-link__thumbnail">
-                            <img src="{{ .Params.thumbnail }}" alt="">
-                        </figure>
-                        <h3 class="ts-26 m-top-sm">{{ .Title }}</h3>
-                        <p>{{ .Description }}</p>
-                    </a>
+                <div class="rvt-grid__item-4-md-up">
+                    <h1 class="ts-32 ts-41-md-up p-top-xs-md-up">{{ .Title | markdownify }}</h1>
+                    <p class="ts-20-md-up m-bottom-xl">{{ .Description }}</p>
                 </div>
-                {{ end }}
+            </div>
+            <div class="rvtd-billboard__img-htu">
+                <img src="../img/docs/rvtd-htu-intro.png" alt="">
             </div>
         </div>
-        <div class="rvt-grid__item-4-md-up rvt-grid__item--last">
-            <aside>
-                <h1 class="ts-29 m-bottom-lg">Get started</h1>
-                <div class="rvt-panel m-bottom-lg">
-                    <h2 class="ts-23">Download</h2>
-                    <p class="m-bottom-md"><a href="../components">Read more about the components</a> or download a ZIP file that contains everything you need to get started.</p>
-                    <a href="{{ .Site.Params.downloadLink }}" class="button ">Download Rivet</a>
+    </section>
+    <div class="rvtd-example rvtd-example--border-bottom rvtd-example--mega-top-padding">
+        <div class="rvt-container rvt-container--center rvt-container--junior">
+            <div class="rvt-grid">
+                <div class="rvt-grid__item-5-md-up rvt-grid__item--last p-top-xxl">
+                    <div class="rvtd-example-info">
+                        <h2 class="ts-26 ts-32-md-up">Mobile first dashboard</h2>
+                        <p>Create a dashboard view for you app using Rivet's mobile-first designed components. This example shows how Rivet's flexible type scale and spacing utilities can be combined to create layouts that work for all screens.</p>
+                        <a href="https://codepen.io/levimcg/pen/MEeYaE" target="_blank" class="button button--secondary m-top-lg">See the example</a>
+                    </div>
                 </div>
-                <div class="rvt-panel m-bottom-lg">
-                    <h2 class="ts-23">Axure Wireframe Kit</h2>
-                    <p class="m-bottom-md">We have created a static wireframe kit in Axure so that designers can create interactive prototypes that match Rivet’s visual style.</p>
-                    <a href="#0" class="button">Download the UI kit</a>
-                </div>
-                <div class="rvt-panel m-bottom-lg">
-                    <h2 class="ts-23">Hosted assets</h2>
-                    <p class="m-bottom-md">The easiest way to get started using Rivet is to link to the centrally hosted version of the Rivet CSS and JavaScript and use the handy starter template.</p>
-                    <a href="../components/#hosted-css-and-javascript" class="button">Get the links</a>
-                </div>
-            </aside>
+            </div>
+        </div>
+        <div class="rvtd-example__img-one">
+            <img src="../img/docs/rvtd-htu-example-one.png" alt="">
         </div>
     </div>
-</div>
+    <div class="rvtd-example rvtd-example--border-bottom rvtd-example--mega-bottom-padding">
+        <div class="rvt-container rvt-container--center rvt-container--junior">
+            <div class="rvt-grid">
+                <div class="rvt-grid__item-5-md-up p-top-xxl">
+                    <div class="rvtd-example-info">
+                        <h2 class="ts-26 ts-32-md-up">Working with data</h2>
+                        <p>Use Rivet components to build a data table listing with sidebar navigation. This example shows how you can easily layout a view in your application with the grid, good use of white space, and clean typography.</p>
+                        <a href="https://codepen.io/almilner/pen/bopZeP" target="_blank" class="button button--secondary m-top-lg">See the example</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rvtd-example__img-two">
+            <img src="../img/docs/rvtd-htu-example-two.png" alt="">
+        </div>
+    </div>
+
+    <div class="rvtd-example rvtd-example--border-bottom">
+        <div class="rvt-container rvt-container--center rvt-container--junior">
+            <div class="rvt-grid">
+                <div class="rvt-grid__item-5-md-up rvt-grid__item-push-7-md p-top-xxl">
+                    <div class="rvtd-example-info">
+                        <h2 class="ts-26 ts-32-md-up">Axure wireframe kit</h2>
+                        <p>Deserunt autem voluptatem et alias. Excepturi quis voluptas in. Voluptatem velit nesciunt ea maxime iusto a autem distinctio. Qui qui consequatur aut. Quo nisi quod est id pariatur.</p>
+                        <a href="{{ .Site.Params.axureKit }}" class="button button--secondary m-top-lg">Download the kit</a>
+                    </div>
+                </div>
+                <div class="rvt-grid__item-6-md-up rvt-grid__item-pull-5-md">
+                    <div class="rvtd-example__img-axure">
+                        <img src="../img/docs/rvtd-htu-example-axure.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rvtd-example rvtd-example--subtle m-top-remove">
+        <div class="rvt-container rvt-container--center rvt-container--junior">
+            {{ $curSection := . }}
+            {{ range $curSection.Pages }}
+                <a href="{{ .Params.externalLink }}">
+                    <div>
+                    {{ .Title }}<br>
+                    {{ .Description }}
+                    </div>
+                </a>
+            {{ end }}
+        </div>
+    </div>
 {{ end }}
