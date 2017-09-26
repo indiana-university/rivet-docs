@@ -51,7 +51,7 @@ status: "Alpha"
 Use radio button when you need to present users with a few mutually exclusive choices and they can only select one option.
 
 ## When to consider something else
-When you have a longer list of mutually exclusive options (for example a list of 50 states), consider using a [select input](select-input.html).
+When you have a longer list of mutually exclusive options (for example a list of 50 states), consider using a [select input]({{< relref "select-input.md" >}}).
 
 
 ## Radio button labels
