@@ -138,7 +138,7 @@ a.button--reverse-secondary {
 }
 
 
-.rvtd-example-link {
+.rvtd-htu-example-link {
     text-decoration: none;
     color: $color-text;
 
@@ -165,4 +165,125 @@ a.button--reverse-secondary {
 
 .rvt-badge--ready {
     @extend .rvt-badge--success;
+}
+
+
+
+/**
+ * Examples
+ */
+
+.rvtd-htu-example {
+    padding-top: $xxl;
+    padding-bottom: $xxl;
+    position: relative;
+    overflow: hidden;
+}
+
+.rvtd-htu-example--mega-top-padding {
+    padding-top: $xxl;
+}
+
+.rvtd-htu-example--mega-bottom-padding {
+    padding-bottom: $xxl;
+}
+
+ @include mq(bp(md)) {
+    .rvtd-htu-example {
+        padding-top: $xxl * 2;
+        padding-bottom: $xxl * 2;
+    }
+
+    .rvtd-htu-example--mega-top-padding {
+        padding-top: $xxl * 4;
+    }
+
+    .rvtd-htu-example--mega-bottom-padding {
+        padding-bottom: $xxl * 4;
+    }
+ }
+
+.rvtd-htu-example--subtle {
+    background-color: #f7f7f7;
+}
+
+.rvtd-htu-example--border-bottom {
+    border-bottom: 1px solid #eee;
+}
+
+.rvtd-htu-example-info {
+    p {
+        line-height: 1.65;
+    }
+}
+
+.rvtd-htu-example__img-one {
+    max-width: 100px;
+    margin-top: $md;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+@include mq(bp(md)) {
+    .rvtd-htu-example__img-one {
+        margin: 0;
+        left: 15%;
+        right: auto;
+        max-width: 350px;
+    }
+}
+
+.rvtd-htu-example__img-two {
+    max-width: 150px;
+    margin-top: $md;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+
+@include mq(bp(md)) {
+    .rvtd-htu-example__img-two {
+        bottom: 190px;
+        max-width: 500px;
+        margin: 0;
+
+        img {
+            display: block;
+            max-width: auto;
+            width: 100%;
+        }
+    }
+}
+
+
+@include mq(1100px) {
+    .rvtd-htu-example__img-two {
+        bottom: 150px;
+        max-width: 650px;
+    }
+}
+
+@include mq(1500px) {
+    .rvtd-htu-example__img-two {
+        bottom: 50px;
+        max-width: 700px;
+        padding-bottom: $xl;
+    }
+}
+
+.rvtd-htu-example-gallery-item {
+    text-decoration: none;
+    color: $color-text;
 }

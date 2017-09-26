@@ -15,7 +15,6 @@
     padding-bottom: $xxl;
     position: relative;
     z-index: 1;
-    overflow: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -52,4 +51,28 @@
     background: url("../img/docs/uxo-hero-overlay.png");
     background-size: cover;
     z-index: -1;
+}
+
+
+.rvtd-billboard__img-htu {
+    max-width: 400px;
+    margin-right: auto;
+    margin-bottom: -150px;
+    margin-left: auto;
+}
+
+@include mq(930px) {
+    .rvtd-billboard__img-htu {
+        position: absolute;
+        max-width: 750px;
+        left: auto;
+        margin-bottom: 0;
+        right: 0;
+        bottom: -252px;
+        z-index: 999;
+
+        img {
+            width: 100%;
+        }
+    }
 }
