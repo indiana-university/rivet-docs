@@ -8,3 +8,4 @@ params:
     googleAnalytics: "UA-100560495-3"
     devGoogleAnalytics: "UA-100560495-4"
     downloadLink: "https://github.iu.edu/UITS/rivet/archive/v0.2.0.zip"
+    axureKit: "https://github.iu.edu/UITS/rivet-source/releases/download/v0.2.0/rivet-axure-0.2.0.rp"
