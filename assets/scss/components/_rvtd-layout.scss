@@ -11,8 +11,6 @@
 }
 
 .rvtd-nav {
-    background-color: #fafafa;
-    border-bottom: 1px solid #eee;
     padding: $md;
 
     &[aria-hidden="true"] {
@@ -22,6 +20,8 @@
 
 .rvtd-sidebar {
     position: relative;
+    background-color: #fafafa;
+    border-bottom: 1px solid #eee;
 
     &__nav-toggle {
         position: absolute;
@@ -39,6 +39,7 @@
 
 @include mq(bp(md)) {
     .rvtd-sidebar {
+        border-right: 1px solid #eaeaea;
 
         &__nav-toggle {
             display: none;
@@ -46,14 +47,11 @@
     }
 
     .rvtd-nav {
-        border-right: 1px solid #eaeaea;
         border-bottom: none;
-        overflow-y: scroll;
         position: relative;
         display: block;
         min-width: 296px;
         flex-basis: 296px;
-        height: calc(100vh - 160px);
 
         &[aria-hidden="true"] {
             display: block;
@@ -68,8 +66,6 @@
 
 @include mq(bp(md)) {
     .rvtd-tube {
-        height: calc(100vh - 71px);
-        overflow-y: scroll;
         padding: $xl;
     }
 }
