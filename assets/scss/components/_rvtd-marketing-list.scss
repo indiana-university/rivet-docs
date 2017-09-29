@@ -1,4 +1,4 @@
-.rvtd-home-page-marketing-list {
+.rvtd-marketing-list {
     list-style: none;
     padding-left: $xxl;
 
@@ -34,7 +34,7 @@
 }
 
 @include mq(bp(md)) {
-    .rvtd-home-page-marketing-list {
+    .rvtd-marketing-list {
         li {
             margin-bottom: $xxl;
         }
