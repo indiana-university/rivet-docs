@@ -55,6 +55,10 @@ a.button--reverse-secondary {
     }
 }
 
+.rvt-drawer-button {
+    width: 71px;
+}
+
 
 /**
  * These styles are for grid examples in the docs.
@@ -201,6 +205,10 @@ a.button--reverse-secondary {
     .rvtd-htu-example--mega-bottom-padding {
         padding-bottom: $xxl * 4;
     }
+
+    .rvtd-htu-example--shorter {
+        padding: $xxl * 1.5;
+    }
  }
 
 .rvtd-htu-example--subtle {
@@ -287,3 +295,52 @@ a.button--reverse-secondary {
     text-decoration: none;
     color: $color-text;
 }
+
+
+.rvtd-check-list {
+    list-style: none;
+
+    li {
+        line-height: 1.6;
+        margin-bottom: $md;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: -$lg;
+            width: 20px;
+            height: 20px;
+            background-color: #22AF7C;
+            background-image: url('../img/checkbox-input-check.svg');
+            background-repeat: no-repeat;
+            background-size: 12px 12px;
+            background-position: 50% 50%;
+            border-radius: 50%;
+        }
+    }
+}
+
+.rvtd-about-issues {
+    display: none;
+}
+
+@include mq(bp(md)) {
+    .rvtd-about-issues {
+        display: block;
+        width: 500px;
+        position: absolute;
+        top: 6.5rem;
+        right: 0;
+    }
+}
+
+@include mq(bp(lg)) {
+    .rvtd-about-issues {
+        top: 5.5rem;
+        width: 700px;
+    }
+}
+

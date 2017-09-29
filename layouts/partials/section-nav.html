@@ -1,7 +1,7 @@
 <!-- Capture the current page here -->
 {{ $currentPage := . }}
 {{ $currentParentSection := .Section }}
-<nav class="rvtd-nav" aria-hidden="true" role="navigation">
+<nav class="rvtd-nav" :aria-hidden="!navIsVisible ? 'true' : 'false'" role="navigation">
     <ul class="rvtd-toc">
         {{ range where .Site.Sections "Section" $currentParentSection }}
             {{ range .Sections }}

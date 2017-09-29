@@ -76,3 +76,14 @@
         }
     }
 }
+
+.rvtd-billboard__img-feature {
+    color: $color-text;
+}
+
+@include mq(bp(md)) {
+    .rvtd-billboard__img-feature {
+        position: absolute;
+        top: 5rem;
+    }
+}

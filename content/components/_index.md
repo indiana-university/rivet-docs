@@ -45,9 +45,7 @@ If you are using Sass in your project you can import the Rivet Sass files direct
 {{< /code >}}
 
 ## Hosted CSS and JavaScript
-The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. [Read the Quick start guide](../how-to-use/quick-start) for more information.
-
-Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
+The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
 
 {{< code lang="html" >}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.2.0/rivet.min.css">{{< /code >}}
 
