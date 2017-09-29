@@ -64,30 +64,6 @@
             </div>
         </div>
     </div>
-
-    <section class="rvtd-htu-example rvtd-htu-example--subtle m-top-remove">
-        <div class="rvt-container rvt-container--center rvt-container--freshman text-center">
-            <h1 class="ts-26 ts-32-md-up m-bottom-md">Examples gallery</h1>
-            <p>Have a look at these examples of how you can implement Rivet on your site. If you have an example you think could be helpful to others, let us know.</p>
-        </div>
-        <div class="rvt-container rvt-container--center rvt-container--junior m-top-xl m-top-xxl-md-up">
-            <div class="rvt-grid">
-                {{ $curSection := . }}
-                {{ range $curSection.Pages }}
-                <div class="rvt-grid__item-4-md-up">
-                    <a href="{{ .Params.externalLink }}" class="rvtd-htu-example-gallery-item">
-                        <figure>
-                            <img src="../img/docs/{{ .Params.thumbnail }}" alt="">
-                        </figure>
-                        <h2 class="ts-23 m-top-md">{{ .Title }}</h2>
-                        <p class="m-top-xxs m-top-sm-md-up">{{ .Description }}</p>
-                    </a>
-                </div>
-                {{ end }}
-            </div>
-        </div>
-    </section>
-
     <section class="rvtd-htu-example">
         <div class="rvt-container rvt-container--center rvt-container--junior">
             <div class="rvt-grid">
