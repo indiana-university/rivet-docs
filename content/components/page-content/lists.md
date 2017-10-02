@@ -23,7 +23,7 @@ status: "Alpha"
 {{< /example >}}
 
 ## Plain list
-You can use the helper class `.uitsds-plain-list` to remove list formatting for display purposes.
+You can use the helper class `.plain-list` to remove list formatting for display purposes.
 
 {{< example lang="html" >}}<ul class="plain-list">
     <li>List Item One</li>
