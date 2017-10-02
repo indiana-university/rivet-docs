@@ -22,6 +22,10 @@ input[type="search"] {
     border-bottom: none;
 }
 
+.rvt-header--no-border .rvt-drawer {
+    top: 70px;
+}
+
 /**
  * :( I'm stuck in a z-index war of my own making!!!
  */
