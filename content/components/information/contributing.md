@@ -4,14 +4,14 @@ description: "If you have created a component you think would be useful to other
 excludeFromStatus: true
 ---
 ## Github issues
-We’ll be using Github issues to keep track of new component submissions, bugs, design feedback, and any other suggestions related to the design system. To help us understand the kind of contribution you want to make, we ask that you first [submit a Github issue on github.iu.edu](https://github.iu.edu/UITS/uitsds/issues).
+We’ll be using Github issues to keep track of new component submissions, bugs, design feedback, and any other suggestions related to the design system. To help us understand the kind of contribution you want to make, we ask that you first [submit a Github issue on github.iu.edu](https://github.iu.edu/UITS/rivet-source/issues).
 
-{{< button url="https://github.iu.edu/UITS/uitsds/issues" >}}Create an issue{{< /button >}}
+{{< button url="https://github.iu.edu/UITS/rivet-source/issues" >}}Create an issue{{< /button >}}
 
 ## Guidelines
 Here are a few guidelines to follow when creating a new issue:
 
-1. Go to the UITS Design system repository on [github.iu.edu](https://github.iu.edu/UITS/uitsds/issues).
+1. Go to the Rivet source repository on [github.iu.edu](https://github.iu.edu/UITS/rivet-source/issues).
 2. Login with your IU username and passphrase. Don't worry if you've never logged into github.iu.edu before—anyone with a CAS username and passphrase can login and use the service.
 3. Click the "New Issue" button.
 4. Fill out the provided issue template to the best of your ability. If you are submitting a design concept for a new or existing component please attach a screenshot, a link to an Axure mockup, or feel free to link to example HTML/CSS/javaScript (a link to pen on [Codepen](http://codepen.io/) would be great!). We’re looking for anything that will demonstrate your concept here. Don’t worry if it’s unstyled or lacks visual design.
