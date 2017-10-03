@@ -1,27 +1,47 @@
 {{ $currentNav := . }}
-<!--
-        Drawer - small screens only
-        NOTE: If we are going to give people the option to use the drawer
-        on desktop as well, a combo of duplicating markup and showing/hiding
-        is probably the best way to handle that kind of flexibility.
-        We'll just need to be clear about it in the documentation.
-    -->
+
 <div class="rvt-drawer" aria-hidden="true" id="mobile-drawer">
+    <form class="one-search">
+        <label for="one-search" class="sr-only">Search One.IU</label>
+        <input type="text" name="one-search" id="one-search" autocomplete="off" placeholder="Search One.IU">
+        <button class="sr-only">Search</button>
+        <div class="one-search__logo" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 34 34">
+              <title>One Icon</title>
+              <path d="M0,0V34H34V0ZM10,29H6V5h4Z" fill="#dc0031"/>
+            </svg>
+        </div>
+        <div class="one-search__search-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 23 23">
+                <title>Search icon</title>
+                <g>
+                    <circle cx="9" cy="9" r="7.55" fill="none" stroke="#b6b4b6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+                    <line x1="15" y1="15" x2="21" y2="21" fill="none" stroke="#b6b4b6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+                </g>
+            </svg>
+        </div>
+    </form>
     <!-- Drawer nav -->
     <nav class="rvt-drawer__nav" role="navigation">
-        <ul>
+        <ul class="hide-on-desktop">
             {{ range .Site.Sections }}
             <li {{ if eq $currentNav.Permalink .Permalink }}class="is-active" {{ end }}>
                 <a href="{{ .Permalink }}">
-                        {{ if .Params.navTitle }}
-                            {{ .Params.navTitle }}
-                        {{ else }}
-                            {{ .Title }}
-                        {{ end }}
-                    </a>
+                    {{ if .Params.navTitle }}
+                        {{ .Params.navTitle }}
+                    {{ else }}
+                        {{ .Title }}
+                    {{ end }}
+                </a>
             </li>
             {{ end }}
             <li><a href="{{ .Site.Params.downloadLink }}">Download Rivet</a></li>
+        </ul>
+        <h3 class="ts-14 m-top-sm m-bottom-sm text-uppercase">Resources</h3>
+        <ul>
+            {{ range .Site.Params.resourceLinks }}
+                <li><a target="_blank" href="{{ .url }}">{{ .text }}</a></li>
+            {{ end }}
         </ul>
         <a href="#0" class="rvt-drawer__bottom-close">Close nav</a>
     </nav>

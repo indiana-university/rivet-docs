@@ -63,6 +63,51 @@ a.button--reverse-secondary {
     width: 71px;
 }
 
+/**
+ * Combo input NOTE: should add this back to Rivet source. I think there's
+ * an issue open already.
+ */
+
+.rvt-combo-input {
+    display: flex;
+    flex-wrap: nowrap;
+
+    input[type] {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+    }
+
+    button {
+        font-weight: normal;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+
+.one-search {
+    margin-top: $md;
+    margin-bottom: $lg;
+    position: relative;
+
+    input[type=text] {
+        padding-right: $xl;
+        padding-left: $xl;
+    }
+
+    &__logo {
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+    }
+
+    &__search-icon {
+        position: absolute;
+        top: .55rem;
+        right: .5rem;
+    }
+}
 
 /**
  * These styles are for grid examples in the docs.
@@ -347,4 +392,3 @@ a.button--reverse-secondary {
         width: 700px;
     }
 }
-
