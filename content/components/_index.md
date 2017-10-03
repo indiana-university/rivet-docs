@@ -15,6 +15,7 @@ You can download a ZIP file that contains the compiled and minified CSS and Java
 
 ### Download contents
 The download contains the following files:
+
 - Compiled CSS (expanded and minified versions)
 - Compiled JavaScript (expanded and minified versions)
 - Images folder with all required images
@@ -123,5 +124,3 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
 </body>
 </html>
 {{< /code >}}
-
-
