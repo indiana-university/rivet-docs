@@ -17,5 +17,8 @@ params:
             text: "Accessibility"
             url: "https://uxo.iu.edu/accessibility"
         -
+            text: "Rivet Software Design System"
+            url: "https://rivet.uits.iu.edu"
+        -
             text: "IU Framework for WCMS"
             url: "https://framework.iu.edu"
