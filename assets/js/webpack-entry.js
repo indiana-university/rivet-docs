@@ -8,6 +8,7 @@ const Vue = require('vue/dist/vue.min');
 new Vue({
     el: '#wrapper',
     components: {
+        oneSearch: require('./components/one-search.vue'),
         searchForm: require('./components/search.vue')
     },
     data: {
