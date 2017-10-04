@@ -7,7 +7,7 @@
 }
 
 /**
- * NOTE: These all override Rivet itselft
+ * NOTE: These all override Rivet itself
  */
 
  code {
@@ -106,6 +106,44 @@ a.button--reverse-secondary {
         position: absolute;
         top: .55rem;
         right: .5rem;
+    }
+
+    &__results {
+        position: relative;
+        background-color: #ffffff;
+        margin-top: $xs;
+        border-radius: 4px;
+
+        ul {
+            padding: $sm 0;
+            list-style: none;
+        }
+
+        // li {
+        //     border-bottom: 2px solid $color-black--100;
+        // }
+
+        li a {
+            text-decoration: none;
+            display: block;
+            padding: 0 $sm;
+        }
+    }
+
+    &__results-label {
+        display: block;
+        padding: $sm;
+        border-bottom: 2px solid $color-black--100;
+    }
+
+    &__clear-button {
+        padding: .5rem;
+        position: absolute;
+        /**
+         * NOTE: Magic number here to center vertically
+         */
+        top: .65rem;
+        right: $xs;
     }
 }
 

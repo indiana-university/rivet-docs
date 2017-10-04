@@ -1,0 +1,38 @@
+<form class="one-search">
+    <label for="one-search" class="sr-only">Search One.IU</label>
+    <input type="text" name="one-search" id="one-search" value="**QUERY**" autocomplete="off" placeholder="Search One.IU">
+    <!-- NOTE: Do we need this button? I visually hid it for now, but it makes for an extra tab to get to the search results -->
+    <button class="sr-only">Search</button>
+    <div class="one-search__logo" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 34 34">
+            <title>One Icon</title>
+            <path d="M0,0V34H34V0ZM10,29H6V5h4Z" fill="#dc0031"/>
+        </svg>
+    </div>
+    <div class="one-search__search-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 23 23">
+            <title>Search icon</title>
+            <g>
+                <circle cx="9" cy="9" r="7.55" fill="none" stroke="#b6b4b6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+                <line x1="15" y1="15" x2="21" y2="21" fill="none" stroke="#b6b4b6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+            </g>
+        </svg>
+    </div>
+    <div class="one-search__results">
+        <button class="one-search__clear-button button--plain">
+            <span class="v-hide">Clear search</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 16 16">
+                <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: rgb(51, 51, 51);"></path>
+            </svg>
+        </button>
+        <!-- NOTE: Could this be something semantically more correct? -->
+        <span class="one-search__results-label">Found 4 results for <strong>**QUERY**</strong></span>
+        <ul>
+            <li><a href="https://one.iu.edu/launch-task/iu/manage-time-off" target="_blank">Paid Time Off</a></li>
+            <li><a href="https://one.iu.edu/launch-task/iu/qualtrics" target="_blank">Qualtrics</a></li>
+            <li><a href="https://one.iu.edu/launch-task/iu/dell" target="_blank">Dell Store for IU</a></li>
+            <li><a href="https://one.iu.edu/launch-task/iun/find-open-computer-labs" target="_blank">Open Computer Labs</a></li>
+            <li><a href="https://one.iu.edu/launch-task/iu/zoom" target="_blank">Zoom</a></li>
+        </ul>
+    </div>
+</form>
