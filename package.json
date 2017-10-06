@@ -24,6 +24,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "7.0.0",
     "gulp-concat": "2.6.1",
+    "gulp-connect-php": "1.0.1",
     "gulp-sass": "^3.1.0",
     "gulp-task-listing": "1.0.1",
     "gulp-uglify": "3.0.0",

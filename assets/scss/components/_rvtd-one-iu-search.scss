@@ -1,0 +1,54 @@
+.one-search {
+    margin-bottom: $lg;
+    position: relative;
+
+    input[type=text] {
+        padding-right: $xl;
+        padding-left: $xl;
+    }
+
+    &__logo {
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+    }
+
+    &__search-icon {
+        position: absolute;
+        top: .55rem;
+        right: .5rem;
+    }
+
+    &__results {
+        position: relative;
+        background-color: #ffffff;
+        margin-top: $xs;
+
+        ul {
+            padding: $sm 0;
+            list-style: none;
+        }
+
+        li a {
+            text-decoration: none;
+            display: block;
+            padding: 0 $sm;
+        }
+    }
+
+    &__results-label {
+        display: block;
+        padding: $sm;
+        border-bottom: 2px solid $color-black--100;
+    }
+
+    &__clear-button {
+        padding: .5rem;
+        position: absolute;
+        /**
+         * NOTE: Magic number here to center vertically
+         */
+        top: .65rem;
+        right: $xs;
+    }
+}
