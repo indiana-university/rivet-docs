@@ -1,6 +1,9 @@
 {{ $currentURL := .URL }}
-<header class="rvt-header rvt-header--light{{ if or (eq $currentURL "/") (eq $currentURL "/how-to-use/") }} rvt-header--no-border{{ end }}" role="banner">
-
+{{ if or (eq $currentURL "/") (eq $currentURL "/how-to-use/") (eq $currentURL "/about/") }}
+    <header class="rvt-header rvt-header--light rvt-header--no-border" role="banner">
+{{ else }}
+    <header class="rvt-header rvt-header--light" role="banner">
+{{ end }}
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <!-- Trident -->
     <div class="rvt-header__trident">

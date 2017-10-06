@@ -8,7 +8,18 @@ const Vue = require('vue/dist/vue.min');
 new Vue({
     el: '#wrapper',
     components: {
+        oneSearch: require('./components/one-search.vue'),
         searchForm: require('./components/search.vue')
+    },
+    data: {
+        // Controls the toggle of the section nav menu on mobile
+        navIsVisible: false
+    },
+    methods: {
+        // Toggles the visibility of the section nav on mobile
+        toggleNav: function() {
+            this.navIsVisible = !this.navIsVisible;
+        }
     },
     mounted() {
 
@@ -27,40 +38,3 @@ const tip = tippy('.rvtd-example__copy', {
         setTimeout(() => { tip.hide(this) }, 1000)
     }
 })
-
-
-/**
- * Section Subnav menu
- */
-const Subnav = (function() {
-
-    const subnavTrigger = document.querySelector('.rvtd-sidebar__nav-toggle');
-    const subnavEl = document.querySelector('.rvtd-nav');
-
-    var init = function() {
-        if(subnavTrigger) {
-            subnavTrigger.addEventListener('click', function () {
-                toggleBtnState(this);
-                toggleHiddenState(subnavEl);
-            });
-        }
-
-    }
-
-    var toggleBtnState = function (buttonEl) {
-        var isExpanded = buttonEl.getAttribute('aria-expanded') === 'true' || false;
-        buttonEl.setAttribute('aria-expanded', !isExpanded);
-    }
-
-    var toggleHiddenState = function (itemToToggle) {
-        var itemState = itemToToggle.getAttribute('aria-hidden') === 'true' || false;
-        itemToToggle.setAttribute('aria-hidden', !itemState);
-    }
-
-    return {
-        init: init
-    }
-
-})();
-
-Subnav.init();

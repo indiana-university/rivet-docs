@@ -15,6 +15,7 @@ You can download a ZIP file that contains the compiled and minified CSS and Java
 
 ### Download contents
 The download contains the following files:
+
 - Compiled CSS (expanded and minified versions)
 - Compiled JavaScript (expanded and minified versions)
 - Images folder with all required images
@@ -38,6 +39,20 @@ img/
 index.html
 {{< /code >}}
 
+## NPM dependency
+Rivet is also available to include in as a dependency in your app via NPM. Once your `.npmrc` config file is configured you can run `npm install rivet-uits --save-dev` in your terminal to use in your project. To use the Rivet as a npm package you'll need to configure an `.npmrc` file using your IU credentials.
+
+{{< button url="https://github.iu.edu/UITS/rivet-source/wiki/Configuring-NPM" variant="small" >}}Read instructions{{< /button >}}
+
+### Exclude NPM config from version control
+If you use version control, you'll want to **make sure this file isn't included** since it contains an `_auth` to access the npm registry. **Make sure to add your .npmrc file to your .gitignore file**
+
+### Installing via NPM
+Once you have this file in your project you can run:
+```bash
+npm install rivet-uits
+```
+
 ## Using Sass
 If you are using Sass in your project you can import the Rivet Sass files directly:
 
@@ -45,9 +60,7 @@ If you are using Sass in your project you can import the Rivet Sass files direct
 {{< /code >}}
 
 ## Hosted CSS and JavaScript
-The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. [Read the Quick start guide](../how-to-use/quick-start) for more information.
-
-Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
+The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
 
 {{< code lang="html" >}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.2.0/rivet.min.css">{{< /code >}}
 
@@ -111,11 +124,3 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
 </body>
 </html>
 {{< /code >}}
-
-## NPM dependency
-Rivet is also available to include in as a dependency in your app via NPM. To use the Rivet as a npm package you'll need to configure an `.npmrc` file using your IU credentials. Once your `.npmrc` config file is configured you can run `npm install rivet-uits --save-dev` in your terminal to use in your project.
-
-### Configuring NPM
-Coming soon...
-
-

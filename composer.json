@@ -1,0 +1,9 @@
+{
+    "name": "uits/rivet-docs-source",
+    "description": "A documentation site for the Rivet design system",
+    "type": "project",
+    "require": {
+        "vlucas/phpdotenv": "^2.4",
+        "php-http/guzzle6-adapter": "^1.1"
+    }
+}

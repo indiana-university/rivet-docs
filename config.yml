@@ -9,3 +9,16 @@ params:
     devGoogleAnalytics: "UA-100560495-4"
     downloadLink: "https://github.iu.edu/UITS/rivet/archive/v0.2.0.zip"
     axureKit: "https://github.iu.edu/UITS/rivet-source/releases/download/v0.2.0/rivet-axure-0.2.0.rp"
+    resourceLinks:
+        -
+            text: "User Experience Office"
+            url: "https://uxo.iu.edu"
+        -
+            text: "Accessibility"
+            url: "https://uxo.iu.edu/accessibility"
+        -
+            text: "Rivet Software Design System"
+            url: "https://rivet.uits.iu.edu"
+        -
+            text: "IU Framework for WCMS"
+            url: "https://framework.iu.edu"

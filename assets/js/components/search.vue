@@ -3,17 +3,11 @@
     <form @submit.prevent="search" class="rvtd-search__form">
         <label class="sr-only" for="search-input">Search query</label>
         <input v-model="query" type="search" id="search-input" autocomplete="off" placeholder="Search the docs" ref="search-input">
-        <button v-if="activeQuery!=''" class="rvtd-search__cancel button--plain" @click.prevent="clearSearch">
-            <span class="v-hide">Clear search</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 16 16">
-                <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: #333"/>
-            </svg>
-        </button>
     </form>
     <div v-if="results.length" class="rvtd-search__results">
         <div class="rvtd-search__results-header" v-if="results.length > resultsPerPage">
             <nav role="navigation" aria-label="Search result pages">
-                <ul class="rvt-pagination rvt-pagination--small rvt-pagination--center">
+                <ul class="rvt-pagination rvt-pagination--small">
                     <li :class="'rvt-pagination__item ' + (currentPage==0 ? 'is-disabled' : '')">
                         <a
                             href="javascript:void(0)"
@@ -37,6 +31,12 @@
                     </li>
                 </ul>
             </nav>
+            <button v-if="activeQuery!=''" class="rvtd-search__cancel button--plain button--small" @click.prevent="clearSearch">
+                <span class="v-hide">Clear search</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 16 16">
+                    <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: #333"/>
+                </svg>
+            </button>
         </div>
         <div v-for="result in currentPageOfResults" class="rvtd-search__result m-top-sm">
             <h3 class="rvtd-search__result-title">
@@ -71,11 +71,13 @@ const marked = require('marked');
 const debounce = require('lodash/debounce');
 
 const resultsPerPage = 5;
+const maxPages = 5;
 
 module.exports = {
     computed: {
         pages() {
-            return Math.ceil(this.results.length / resultsPerPage)
+            let nPages = Math.ceil(this.results.length / resultsPerPage)
+            return nPages > maxPages ? maxPages : nPages
         },
         currentPageOfResults() {
             return this.results.slice(this.currentPage*resultsPerPage, (this.currentPage*resultsPerPage)+resultsPerPage)

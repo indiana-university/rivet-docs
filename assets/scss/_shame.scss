@@ -7,7 +7,7 @@
 }
 
 /**
- * NOTE: These all override Rivet itselft
+ * NOTE: These all override Rivet itself
  */
 
  code {
@@ -20,6 +20,10 @@ input[type="search"] {
 
 .rvt-header--no-border {
     border-bottom: none;
+}
+
+.rvt-header--no-border .rvt-drawer {
+    top: 70px;
 }
 
 /**
@@ -55,6 +59,31 @@ a.button--reverse-secondary {
     }
 }
 
+.rvt-drawer-button {
+    width: 71px;
+}
+
+/**
+ * Combo input NOTE: should add this back to Rivet source. I think there's
+ * an issue open already.
+ */
+
+.rvt-combo-input {
+    display: flex;
+    flex-wrap: nowrap;
+
+    input[type] {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+    }
+
+    button {
+        font-weight: normal;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
 
 /**
  * These styles are for grid examples in the docs.
@@ -201,6 +230,10 @@ a.button--reverse-secondary {
     .rvtd-htu-example--mega-bottom-padding {
         padding-bottom: $xxl * 4;
     }
+
+    .rvtd-htu-example--shorter {
+        padding: $xxl * 1.5;
+    }
  }
 
 .rvtd-htu-example--subtle {
@@ -286,4 +319,52 @@ a.button--reverse-secondary {
 .rvtd-htu-example-gallery-item {
     text-decoration: none;
     color: $color-text;
+}
+
+
+.rvtd-check-list {
+    list-style: none;
+
+    li {
+        line-height: 1.6;
+        margin-bottom: $md;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: -$lg;
+            width: 20px;
+            height: 20px;
+            background-color: #22AF7C;
+            background-image: url('../img/checkbox-input-check.svg');
+            background-repeat: no-repeat;
+            background-size: 12px 12px;
+            background-position: 50% 50%;
+            border-radius: 50%;
+        }
+    }
+}
+
+.rvtd-about-issues {
+    display: none;
+}
+
+@include mq(bp(md)) {
+    .rvtd-about-issues {
+        display: block;
+        width: 500px;
+        position: absolute;
+        top: 6.5rem;
+        right: 0;
+    }
+}
+
+@include mq(bp(lg)) {
+    .rvtd-about-issues {
+        top: 5.5rem;
+        width: 700px;
+    }
 }
