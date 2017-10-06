@@ -1,7 +1,6 @@
 .rvtd-wrap {
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 @include mq(bp(md)) {
@@ -11,8 +10,6 @@
 }
 
 .rvtd-nav {
-    background-color: #fafafa;
-    border-bottom: 1px solid #eee;
     padding: $md;
 
     &[aria-hidden="true"] {
@@ -22,6 +19,8 @@
 
 .rvtd-sidebar {
     position: relative;
+    background-color: #fafafa;
+    border-bottom: 1px solid #eee;
 
     &__nav-toggle {
         position: absolute;
@@ -39,6 +38,8 @@
 
 @include mq(bp(md)) {
     .rvtd-sidebar {
+        flex: 0 0 296px;
+        border-right: 1px solid #eaeaea;
 
         &__nav-toggle {
             display: none;
@@ -46,14 +47,9 @@
     }
 
     .rvtd-nav {
-        border-right: 1px solid #eaeaea;
         border-bottom: none;
-        overflow-y: scroll;
         position: relative;
         display: block;
-        min-width: 296px;
-        flex-basis: 296px;
-        height: calc(100vh - 160px);
 
         &[aria-hidden="true"] {
             display: block;
@@ -62,20 +58,25 @@
 }
 
 .rvtd-tube {
-    width: 100%;
+    flex: 1 1;
     padding: $md;
 }
 
 @include mq(bp(md)) {
     .rvtd-tube {
-        height: calc(100vh - 71px);
-        overflow-y: scroll;
+        max-width: calc(100% - 296px);
         padding: $xl;
     }
 }
 
 @include mq(bp(xl)) {
+    .rvtd-tube {
+        max-width: calc(100% - 280px - 296px);
+    }
+}
+
+@include mq(bp(xl)) {
     .rvtd-tube__inner {
-        width: 70%;
+
     }
 }
