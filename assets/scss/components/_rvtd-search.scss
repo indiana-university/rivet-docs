@@ -16,12 +16,6 @@
             right: 0;
             top: 0;
         }
-
-        .rvtd-search__cancel {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
     }
 
     &__results {
@@ -36,7 +30,12 @@
 
         .rvtd-search__results-header {
             @extend .modal__header;
+            display: flex;
             padding: $sm;
+
+            .rvtd-search__cancel {
+                margin-left: auto;
+            }
         }
 
         .rvtd-search__result {
