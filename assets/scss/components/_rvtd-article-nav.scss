@@ -5,11 +5,11 @@
 @include mq(bp(xl)) {
     .rvtd-article-nav {
         display: block;
-        position: absolute;
-        top: $xxl*2;
-        right: 0;
-        width: 280px;
+        flex: 0 0 280px;
+        order: 3;
+        align-self: flex-start;
         padding: 0 $md;
+        margin-top: $xl;
         border-left: 1px solid #eeeeee;
 
         p {

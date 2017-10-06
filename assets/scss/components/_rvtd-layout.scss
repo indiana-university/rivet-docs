@@ -1,7 +1,6 @@
 .rvtd-wrap {
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 @include mq(bp(md)) {
@@ -39,6 +38,7 @@
 
 @include mq(bp(md)) {
     .rvtd-sidebar {
+        flex: 0 0 296px;
         border-right: 1px solid #eaeaea;
 
         &__nav-toggle {
@@ -50,8 +50,6 @@
         border-bottom: none;
         position: relative;
         display: block;
-        min-width: 296px;
-        flex-basis: 296px;
 
         &[aria-hidden="true"] {
             display: block;
@@ -60,18 +58,25 @@
 }
 
 .rvtd-tube {
-    width: 100%;
+    flex: 1 1;
     padding: $md;
 }
 
 @include mq(bp(md)) {
     .rvtd-tube {
+        max-width: calc(100% - 296px);
         padding: $xl;
     }
 }
 
 @include mq(bp(xl)) {
+    .rvtd-tube {
+        max-width: calc(100% - 280px - 296px);
+    }
+}
+
+@include mq(bp(xl)) {
     .rvtd-tube__inner {
-        width: 70%;
+
     }
 }
