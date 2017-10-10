@@ -25,7 +25,7 @@ Use the text alignment utilities to change the `text-align` property of any text
 <p class="text-right">Right-aligned text utilitiy</p>
 {{< /example >}}
 
-## Upercase
+## Uppercase
 The `.text-uppercase` utility class sets the `text-transform` CSS property to `uppercase` and adds a small amount of `letter-spacing` [to improve readablility](http://webtypography.net/2.1.6).
 
 {{< example lang="html" >}}<p class="text-uppercase">Uppercase text utilitiy</p>
