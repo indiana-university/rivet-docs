@@ -24,15 +24,21 @@
             <ul>
                 {{ $currentNav := . }}
                 {{ range .Site.Sections }}
-                <li {{ if eq $currentNav.Section .Section }}class="is-current"{{ end }}>
-                    <a href="{{ .Permalink }}">
-                        {{ if .Params.navTitle }}
-                            {{ .Params.navTitle }}
-                        {{ else }}
-                            {{ .Title }}
-                        {{ end }}
-                    </a>
-                </li>
+                    {{/*
+                        This checks for a hideFromNav parameter and shows
+                        the nav item and for unless set to true
+                    */}}
+                    {{ if ne .Params.hideFromNav true }}
+                    <li {{ if eq $currentNav.Section .Section }}class="is-current"{{ end }}>
+                        <a href="{{ .Permalink }}">
+                            {{ if .Params.navTitle }}
+                                {{ .Params.navTitle }}
+                            {{ else }}
+                                {{ .Title }}
+                            {{ end }}
+                        </a>
+                    </li>
+                    {{ end }}
                 {{ end }}
                 <li><a href="/components/#download-rivet" class="button button--secondary button--small">Download</a></li>
             </ul>
