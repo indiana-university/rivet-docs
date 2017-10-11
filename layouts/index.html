@@ -1,47 +1,51 @@
 {{ define "main" }}
-<section class="rvtd-billboard p-top-lg p-bottom-xl">
+<section class="rvtd-billboard">
     <div class="rvtd-billboard__bg"></div>
-    <div class="rvt-container rvt-container--center rvt-container--junior">
-        <div class="rvtd-billboard__intro">
-            <img class="rvtd-billboard__intro-img" src="/img/homepage-hero.png" alt="">
-            <h1 class="rvtd-billboard__intro-title ts-32 ts-46-md-up">{{ .Description | markdownify }}</h1>
-
-            <div class="m-top-md">
-                <a href="/components" class="m-right-sm button button--secondary button--reverse-secondary">Read the docs</a>
-                <a href="components/#download-rivet" class="button button--reverse">Download Rivet</a>
+    <div class="rvt-container rvt-container--center rvt-container--junior" style="position: relative;">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item-5-md-up rvt-grid__item--last p-left-xl-md-up">
+                <h1 class="ts-32 ts-41-md-up">{{ .Title }}</h1>
+                <p class="ts-20-md-up m-bottom-lg m-bottom-xxl-md-up">{{ .Description }}</p>
+                <div class="button-group">
+                    <a href="/components" class="m-right-sm button button--secondary button--reverse-secondary">Read the docs</a>
+                    <a href="components/#download-rivet" class="button button--reverse">Download Rivet</a>
+                </div>
+            </div>
+        </div>
+        <div class="rvtd-billboard__intro-img-home">
+            <img src="/img/homepage-hero.png" alt="">
+        </div>
+    </div>
+</section>
+<section class="rvtd-section">
+    <div class="rvt-container rvt-container--center rvt-container--junior p-top-xxl-md-up">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item-5-md-up m-top-xl">
+                <img src="../img/rvtd-illustration-examples.png" alt="">
+                <p class="m-top-lg m-bottom-lg">See some examples built using Rivet and get some ideas of how you can use it in your next project. Everything from forms to complex data tables.</p>
+                <a class="button button--secondary" href="how-to-use">See examples</a>
+            </div>
+            <div class="rvt-grid__item-5-md-up rvt-grid__item--last m-top-xl">
+                <img src="../img/rvtd-illustration-axure.png" alt="">
+                <p class="m-top-lg m-bottom-lg">Use the Axure wireframe kit with accurate representations of all Rivet components to quickly prototype and test your designs.</p>
+                <a class="button button--secondary" href="{{ .Site.Params.axureKit }}">Download Axure kit</a>
             </div>
         </div>
     </div>
 </section>
-<section class="rvtd-banner">
+<div class="rvtd-banner rvtd-banner--light m-top-xxl-lg-up">
     <div class="rvt-container rvt-container--center rvt-container--junior">
-        <div class="rvtd-banner__inner">
+        <div class="rvtd-banner__inner rvt-banner__inner--top-space">
             <div class="rvtd-banner__icon hide-on-small">
                 {{ partial "icons/banner-icon.svg" . }}
             </div>
             <p class="rvtd-banner__message">The IU Framework is better suited for many cases. Read this guide before you decide.</p>
             <div class="rvtd-banner__action">
-                <a href="about/#should-i-use" class="button button--secondary">Should I use Rivet?</a>
+                <a href="#should-i-use" class="button button--secondary">Should I use Rivet?</a>
             </div>
         </div>
     </div>
-</section>
-<section class="rvtd-section">
-    <div class="rvt-container rvt-container--center rvt-container--junior">
-        <div class="rvt-grid">
-            <div class="rvt-grid__item rvt-grid__item-5">
-                {{ partial "icons/homepage-examples.svg" }}
-                <p class="m-top-lg m-bottom-lg">See some examples built using Rivet and get some ideas of how you can use it in your next project. Everything from forms to complex data tables.</p>
-                <a class="button button--secondary" href="how-to-use">Download Axure kit</a>
-            </div>
-            <div class="rvt-grid__item rvt-grid__item-5 rvt-grid__item--last">
-                {{ partial "icons/homepage-axure-kit.svg" }}
-                <p class="m-top-lg m-bottom-lg">Use the Axure wireframe kit with accurate representations of all Rivet components to quickly prototype and test your designs.</p>
-                <a class="button button--secondary" href="https://github.iu.edu/UITS/rivet-source/releases/download/v0.2.0/rivet-axure-0.2.0.rp">Download Axure kit</a>
-            </div>
-        </div>
-    </div>
-</section>
+</div>
 <section class="rvtd-homepage-flare rvtd-homepage-flare--subtle">
     <div class="rvt-container rvt-container--center rvt-container--junior">
         <div class="rvt-grid">
@@ -69,7 +73,7 @@
                     <a href="#0" target="_blank" class="button button--secondary m-top-lg">View examples</a>
                 </div>
             </div>
-            <div class="rvt-grid__item-5-md-up rvt-grid__item--last">
+            <div class="rvt-grid__item-6-md-up rvt-grid__item--last">
                 <div class="rvtd-homepage-flare__figure">
                     <img src="../img/homepage-flare__flexible.png">
                 </div>
@@ -81,16 +85,16 @@
 <section class="rvtd-homepage-flare rvtd-homepage-flare--subtle">
     <div class="rvt-container rvt-container--center rvt-container--junior">
         <div class="rvt-grid">
-            <div class="rvt-grid__item-5-md-up">
-                <div class="rvtd-homepage-flare__figure">
-                    <img src="../img/homepage-flare__productive.png">
-                </div>
-            </div>
-            <div class="rvt-grid__item-5-md-up p-top-xxl rvt-grid__item--last">
+            <div class="rvt-grid__item-5-md-up rvt-grid__item-push-7-md p-top-xxl">
                 <div class="rvtd-htu-example-info">
                     <h2 class="ts-26 ts-32-md-up">Productive.</h2>
                     <p>Fast forward through development cycle by using Rivet’s robust, ready-to-use, UI components that follow industry best practices.</p>
-                    <a href="#0" target="_blank" class="button button--secondary m-top-lg">View examples</a>
+                    <a href="/components" target="_blank" class="button button--secondary m-top-lg">Read the documentation</a>
+                </div>
+            </div>
+            <div class="rvt-grid__item-6-md-up rvt-grid__item-pull-6-md rvt-grid__item--last">
+                <div class="rvtd-homepage-flare__figure">
+                    <img src="../img/homepage-flare__productive.png">
                 </div>
             </div>
         </div>
@@ -131,10 +135,11 @@
 <section class="rvtd-htu-example rvtd-htu-example--mega-bottom-padding">
     <div class="rvt-container rvt-container--junior rvt-container--center">
         <div class="rvt-grid">
-            <div class="rvt-grid__item-4-md-up m-bottom-lg p-top-xxl-lg-up">
+            <div class="rvt-grid__item-5-md-up m-bottom-lg p-top-xxl-lg-up">
                 <h1 class="ts-26 ts-32-md-up">Help make Rivet better</h1>
                 <p>We use Github issues to keep track of new component submissions, bugs, design feedback, and any other suggestions related to Rivet. If you have created a component you think would be useful to others or would like to make a suggestion, let us know.</p>
-                <a href="../components/information/contributing/" class="button button--secondary m-top-lg">See how you can help</a>
+                <a href="../components/information/contributing/" class="button button--secondary m-top-lg">See how you can help</a><br>
+                <a class="m-top-sm display-inline-block" href="{{ .Site.Params.githubRepo }}/issues" target="_blank">Or, create an issue on Github</a>
             </div>
         </div>
     </div>
