@@ -4,10 +4,10 @@
 
 .rvtd-banner__inner {
     padding: $xl 0;
+}
 
-    .rvtd-banner__message {
-        margin-bottom: $lg;
-    }
+.rvtd-banner__message {
+    margin-bottom: $lg;
 }
 
 @include mq(bp(md)) {
@@ -15,20 +15,20 @@
         padding: $lg 0;
         display: flex;
         align-items: center;
+    }
 
-        .rvtd-banner__message {
-            font-size: $ts-18;
-            margin-top: 0;
-            margin-bottom: 0;
-            margin-right: $lg;
-        }
+    .rvtd-banner__message {
+        font-size: $ts-18;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: $lg;
+    }
 
-        .rvtd-banner__icon {
-            margin-right: $lg;
-        }
+    .rvtd-banner__icon {
+        margin-right: $lg;
+    }
 
-        .rvtd-banner__action {
-            margin-left: auto;
-        }
+    .rvtd-banner__action {
+        margin-left: auto;
     }
 }
