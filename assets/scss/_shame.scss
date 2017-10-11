@@ -2,6 +2,15 @@
  * Shame
  */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
 .tippy-tooltip [x-circle] {
     border-radius: 4px !important;
 }
@@ -358,12 +367,13 @@ a.button--reverse-secondary {
 }
 
 .rvtd-homepage-flare__figure {
-    border-radius: 13px;
+    border-radius: 4px;
     box-shadow: 0 3px 2px 0 rgba(231,231,231,0.50), 0 0 50px 0 rgba(0,0,0,0.05);
     overflow: hidden;
 
     img {
         display: block;
+        width: 100%;
     }
 }
 .rvtd-homepage-flare__img-one {
