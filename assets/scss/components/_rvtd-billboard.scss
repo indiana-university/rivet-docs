@@ -33,12 +33,13 @@
 @include mq(bp(md)) {
     .rvtd-billboard__intro {
         text-align: center;
-        width: 60%;
+        width: 70%;
         margin: 0 auto;
     }
 }
 
 .rvtd-billboard__intro-title {
+    margin: $md 0 $xl;
     line-height: 1.2;
 }
 
@@ -51,6 +52,39 @@
     background: url("../img/docs/uxo-hero-overlay.png");
     background-size: cover;
     z-index: -1;
+}
+
+.rvtd-billboard__intro-img-home {
+    position: relative;
+    max-width: 400px;
+    margin-right: auto;
+    margin-bottom: -175px;
+    margin-left: auto;
+    margin-top: $xl;
+}
+
+@include mq(bp(md)) {
+    .rvtd-billboard__intro-img-home {
+        position: absolute;
+        top: 4rem;
+        max-width: 350px;
+    }
+}
+
+@include mq(bp(lg)) {
+    .rvtd-billboard__intro-img-home {
+        position: absolute;
+        top: 0;
+        max-width: 650px;
+        margin-top: 0;
+    }
+}
+
+@include mq(bp(xl)) {
+    .rvtd-billboard__intro-img-home {
+        top: $md;
+        left: -$md;
+    }
 }
 
 

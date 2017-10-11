@@ -1,30 +1,40 @@
 .rvtd-banner {
-    padding: $xl 0;
+    background: #f7f7f7;
+}
 
-    &__message {
-        margin-bottom: $lg;
-    }
+.rvtd-banner--light {
+    background-color: $color-background;
+    border-top: 1px solid $color-black--100;
+    border-bottom: 1px solid $color-black--100;
+}
+
+.rvtd-banner__inner {
+    padding: $xl 0;
+}
+
+.rvtd-banner__message {
+    margin-bottom: $lg;
 }
 
 @include mq(bp(md)) {
-    .rvtd-banner {
+    .rvtd-banner__inner {
         padding: $lg 0;
         display: flex;
         align-items: center;
+    }
 
-        &__message {
-            font-size: $ts-18;
-            margin-top: 0;
-            margin-bottom: 0;
-            margin-right: $lg;
-        }
+    .rvtd-banner__message {
+        font-size: $ts-18;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: $lg;
+    }
 
-        &__icon {
-            margin-right: $lg;
-        }
+    .rvtd-banner__icon {
+        margin-right: $lg;
+    }
 
-        &__action {
-            margin-left: auto;
-        }
+    .rvtd-banner__action {
+        margin-left: auto;
     }
 }
