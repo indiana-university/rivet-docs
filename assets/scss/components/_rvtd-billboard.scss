@@ -33,12 +33,13 @@
 @include mq(bp(md)) {
     .rvtd-billboard__intro {
         text-align: center;
-        width: 60%;
+        width: 70%;
         margin: 0 auto;
     }
 }
 
 .rvtd-billboard__intro-title {
+    margin: $md 0 $xl;
     line-height: 1.2;
 }
 

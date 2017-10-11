@@ -1,29 +1,33 @@
 .rvtd-banner {
+    background: #f7f7f7;
+}
+
+.rvtd-banner__inner {
     padding: $xl 0;
 
-    &__message {
+    .rvtd-banner__message {
         margin-bottom: $lg;
     }
 }
 
 @include mq(bp(md)) {
-    .rvtd-banner {
+    .rvtd-banner__inner {
         padding: $lg 0;
         display: flex;
         align-items: center;
 
-        &__message {
+        .rvtd-banner__message {
             font-size: $ts-18;
             margin-top: 0;
             margin-bottom: 0;
             margin-right: $lg;
         }
 
-        &__icon {
+        .rvtd-banner__icon {
             margin-right: $lg;
         }
 
-        &__action {
+        .rvtd-banner__action {
             margin-left: auto;
         }
     }

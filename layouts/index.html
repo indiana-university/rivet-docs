@@ -1,38 +1,147 @@
 {{ define "main" }}
-<section class="rvtd-billboard">
+<section class="rvtd-billboard p-top-lg p-bottom-xl">
     <div class="rvtd-billboard__bg"></div>
     <div class="rvt-container rvt-container--center rvt-container--junior">
         <div class="rvtd-billboard__intro">
-            <h1 class="rvtd-billboard__intro-title ts-32 ts-46-md-up">{{ .Title | markdownify }}</h1>
-            <p class="ts-20-md-up m-bottom-xl">{{ .Description }}</p>
-            <a href="/components" class="button button--secondary button--reverse-secondary">Read the docs</a>
+            <img class="rvtd-billboard__intro-img" src="/img/homepage-hero.png" alt="">
+            <h1 class="rvtd-billboard__intro-title ts-32 ts-46-md-up">{{ .Description | markdownify }}</h1>
+
+            <div class="m-top-md">
+                <a href="/components" class="m-right-sm button button--secondary button--reverse-secondary">Read the docs</a>
+                <a href="components/#download-rivet" class="button button--reverse">Download Rivet</a>
+            </div>
         </div>
     </div>
 </section>
-<div class="rvt-container rvt-container--center rvt-container--junior">
-    <div class="rvtd-banner">
-        <div class="rvtd-banner__icon">
-            {{ partial "icons/banner-icon.svg" . }}
-        </div>
-        <p class="rvtd-banner__message">Read this guide to help you make a decision on whether you should use Rivet in your project.</p>
-        <div class="rvtd-banner__action">
-            <a href="about/#should-i-use" class="button button--secondary">Should I use Rivet?</a>
+<section class="rvtd-banner">
+    <div class="rvt-container rvt-container--center rvt-container--junior">
+        <div class="rvtd-banner__inner">
+            <div class="rvtd-banner__icon hide-on-small">
+                {{ partial "icons/banner-icon.svg" . }}
+            </div>
+            <p class="rvtd-banner__message">The IU Framework is better suited for many cases. Read this guide before you decide.</p>
+            <div class="rvtd-banner__action">
+                <a href="about/#should-i-use" class="button button--secondary">Should I use Rivet?</a>
+            </div>
         </div>
     </div>
-</div>
-<section class="rvtd-principles">
+</section>
+<section class="rvtd-section">
+    <div class="rvt-container rvt-container--center rvt-container--junior">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item rvt-grid__item-5">
+                {{ partial "icons/homepage-examples.svg" }}
+                <p class="m-top-lg m-bottom-lg">See some examples built using Rivet and get some ideas of how you can use it in your next project. Everything from forms to complex data tables.</p>
+                <a class="button button--secondary" href="how-to-use">Download Axure kit</a>
+            </div>
+            <div class="rvt-grid__item rvt-grid__item-5 rvt-grid__item--last">
+                {{ partial "icons/homepage-axure-kit.svg" }}
+                <p class="m-top-lg m-bottom-lg">Use the Axure wireframe kit with accurate representations of all Rivet components to quickly prototype and test your designs.</p>
+                <a class="button button--secondary" href="https://github.iu.edu/UITS/rivet-source/releases/download/v0.2.0/rivet-axure-0.2.0.rp">Download Axure kit</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="rvtd-homepage-flare rvtd-homepage-flare--subtle">
+    <div class="rvt-container rvt-container--center rvt-container--junior">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item-5-md-up rvt-grid__item--last p-top-xxl">
+                <div class="rvtd-htu-example-info">
+                    <h2 class="ts-26 ts-32-md-up">Clear.</h2>
+                    <p>Create familiarity across UITS applications. Familiarity makes things quicker and easier for our users — it helps them understand our services and trust us.</p>
+                    <a href="#0" target="_blank" class="button button--secondary m-top-lg">View guide</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rvtd-homepage-flare__img-one">
+        <img src="../img/docs/rvtd-htu-example-one.png" alt="">
+    </div>
+</section>
+
+<section class="rvtd-homepage-flare">
+    <div class="rvt-container rvt-container--center rvt-container--junior">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item-5-md-up p-top-xxl">
+                <div class="rvtd-htu-example-info">
+                    <h2 class="ts-26 ts-32-md-up">Flexible.</h2>
+                    <p>Build everything from sign-up forms to complex, data-sense interfaces with ease. Rivet is for all UITS applications, even the ones that are yet to be imagined.</p>
+                    <a href="#0" target="_blank" class="button button--secondary m-top-lg">View examples</a>
+                </div>
+            </div>
+            <div class="rvt-grid__item-5-md-up rvt-grid__item--last">
+                <div class="rvtd-homepage-flare__figure">
+                    <img src="../img/homepage-flare__flexible.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="rvtd-homepage-flare rvtd-homepage-flare--subtle">
     <div class="rvt-container rvt-container--center rvt-container--junior">
         <div class="rvt-grid">
             <div class="rvt-grid__item-5-md-up">
-                <h1 class="ts-29 ts-36-md-up m-bottom-xl-md-up">Our <strong>principles</strong></h1>
-                <p>Rivet is a starting point for UITS applications. Its ready-to-use HTML/CSS components mean that you don’t have to reinvent the wheel for every new project. And its documentation focuses on best practices for accessibility and copyletting you focus on great user experience.</p>
-                <p class="m-bottom-xxl">We want to make it easier to design and develop great experiences for users across all UITS applications, and you can help. These are some guiding principles to contribute to the design system:</p>
+                <div class="rvtd-homepage-flare__figure">
+                    <img src="../img/homepage-flare__productive.png">
+                </div>
             </div>
-            <div class="rvt-grid__item-6-md-up rvt-grid__item--last">
-                {{ partial "principles.html" . }}
+            <div class="rvt-grid__item-5-md-up p-top-xxl rvt-grid__item--last">
+                <div class="rvtd-htu-example-info">
+                    <h2 class="ts-26 ts-32-md-up">Productive.</h2>
+                    <p>Fast forward through development cycle by using Rivet’s robust, ready-to-use, UI components that follow industry best practices.</p>
+                    <a href="#0" target="_blank" class="button button--secondary m-top-lg">View examples</a>
+                </div>
             </div>
         </div>
     </div>
 </section>
-{{ partial "home-page-blurbs.html" . }}
+
+<section class="rvtd-htu-example m-top-remove rvtd-htu-example--border-bottom" id="should-i-use">
+    <div class="rvt-container rvt-container--center rvt-container--freshman text-center">
+        <h1 class="ts-26 ts-32-md-up m-bottom-md">Should I use Rivet?</h1>
+        <p>Whether or not you use Rivet depends on the system you’re building. You may find that the IU Framework fits your needs better.</p>
+    </div>
+    <div class="rvt-container rvt-container--sophomore rvt-container--center m-top-xxl">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item-6-md-up">
+                <div class="rvt-panel m-bottom-md">
+                    <h2 class="ts-26 text-center m-bottom-lg">Yes, <strong>use Rivet</strong></h2>
+                    <ul class="rvtd-check-list">
+                        <li>Internal-facing web applications that consist of dynamic, user-generated content</li>
+                        <li>Enterprise systems that are used by large parts of the IU community and require CAS authentication</li>
+                        <li>Task-focused applications that are technically separate from your department or organization’s website</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rvt-grid__item-6-md-up p-top-md">
+                <h2 class="ts-26 text-center m-bottom-lg">Use the <strong>IU Framework</strong> instead</h2>
+                <ul>
+                    <li>Department and organization websites</li>
+                    <li>Websites that have mostly static text content</li>
+                    <li>External-facing marketing or campaign websites</li>
+                    <li>News websites and blogs</li>
+                    <li>Event sites and registration forms</li>
+                    <li>Contact forms contained in any of the abov</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="rvtd-htu-example rvtd-htu-example--mega-bottom-padding">
+    <div class="rvt-container rvt-container--junior rvt-container--center">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item-4-md-up m-bottom-lg p-top-xxl-lg-up">
+                <h1 class="ts-26 ts-32-md-up">Help make Rivet better</h1>
+                <p>We use Github issues to keep track of new component submissions, bugs, design feedback, and any other suggestions related to Rivet. If you have created a component you think would be useful to others or would like to make a suggestion, let us know.</p>
+                <a href="../components/information/contributing/" class="button button--secondary m-top-lg">See how you can help</a>
+            </div>
+        </div>
+    </div>
+    <div class="rvtd-about-issues">
+        <img src="../img/docs/rvtd-issues.jpg" alt="">
+    </div>
+</section>
+
+
 {{ end }}
