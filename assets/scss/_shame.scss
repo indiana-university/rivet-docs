@@ -198,8 +198,15 @@ a.button--reverse-secondary {
 }
 
 .rvtd-section {
-    padding: $xxl*2 0;
+    padding: $xxl 0;
 }
+
+@include mq(bp(md)) {
+    .rvtd-section {
+        padding: $xxl*2 0;
+    }
+}
+
 .rvtd-section--subtle {
     background: #f7f7f7;
 }
