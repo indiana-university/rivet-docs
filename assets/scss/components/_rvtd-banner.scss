@@ -2,6 +2,12 @@
     background: #f7f7f7;
 }
 
+.rvtd-banner--light {
+    background-color: $color-background;
+    border-top: 1px solid $color-black--100;
+    border-bottom: 1px solid $color-black--100;
+}
+
 .rvtd-banner__inner {
     padding: $xl 0;
 }
