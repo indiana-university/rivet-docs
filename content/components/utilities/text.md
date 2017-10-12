@@ -1,7 +1,7 @@
 ---
 title: "Text"
 description: "The Rivet text utilities make it easy to style text"
-status: "Prototype"
+status: "Alpha"
 ---
 ## Font weight
 You can use the rivet text utilities to change the `font-weight` property of text. The available utility classes are:

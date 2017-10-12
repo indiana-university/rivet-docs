@@ -1,7 +1,7 @@
 ---
 title: "Display"
 description: "The Rivet display utility classes make it easy to control how elements display on screen and how they are presented to assistive technologies like screen readers."
-status: "Prototype"
+status: "Alpha"
 ---
 
 ## Screen reader only
