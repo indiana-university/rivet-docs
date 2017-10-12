@@ -75,15 +75,16 @@
     .rvtd-billboard__intro-img-home {
         position: absolute;
         top: 0;
-        max-width: 650px;
+        max-width: 600px;
         margin-top: 0;
     }
 }
 
 @include mq(bp(xl)) {
     .rvtd-billboard__intro-img-home {
-        top: $md;
+        top: 0;
         left: -$md;
+        max-width: 650px;
     }
 }
 

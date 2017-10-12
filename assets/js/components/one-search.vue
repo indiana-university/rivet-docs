@@ -11,20 +11,20 @@
     </div>
     <div class="one-search__search-icon" aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 23 23">
-                <title>Search icon</title>
-                <g>
-                    <circle cx="9" cy="9" r="7.55" fill="none" stroke="#b6b4b6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
-                    <line x1="15" y1="15" x2="21" y2="21" fill="none" stroke="#b6b4b6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
-                </g>
-            </svg>
+            <title>Search icon</title>
+            <g>
+                <circle cx="9" cy="9" r="7.55" fill="none" stroke="#b6b4b6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+                <line x1="15" y1="15" x2="21" y2="21" fill="none" stroke="#b6b4b6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+            </g>
+        </svg>
     </div>
     <div v-if="isShowingResults" class="one-search__results">
         <button class="one-search__clear-button button--plain" @click.prevent="clearSearch">
-                <span class="v-hide">Clear search</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 16 16">
-                    <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: rgb(51, 51, 51);"></path>
-                </svg>
-            </button>
+            <span class="v-hide">Clear search</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 16 16">
+                <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: rgb(51, 51, 51);"></path>
+            </svg>
+        </button>
 
         <span class="one-search__results-label">Found {{results.length}} {{results.length|pluralizeResult}} for <strong>{{activeQuery}}</strong></span>
         <ul v-if="results.length > 0">

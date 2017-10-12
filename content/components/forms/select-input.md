@@ -8,12 +8,12 @@ status: "Alpha"
 Use the select element when you need to present users with a list of mutually exclusive options and they can **only select one option**.
 
 ## When to consider something else
-When you only need to present a user with three or less options, consider using a group of [radio inputs](radio-inputs.html) instead.
+When you only need to present a user with three or less options, consider using a group of [radio buttons]({{< ref "components/forms/radio-buttons.md" >}}) instead.
 
 ## Example
 
 {{< example lang="html" >}}<label for="select-demo">Select input:</label>
-    <select id="select-demo">
+<select id="select-demo">
     <option value="">Option One</option>
     <option value="">Option Two</option>
     <option value="">Option Three</option>
@@ -34,4 +34,3 @@ When you only need to present a user with three or less options, consider using 
 
 ## Resources
 - [MSDN Design Documentation](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742404.aspx)
-

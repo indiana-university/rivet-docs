@@ -57,6 +57,26 @@ The only elements required in order for the modal to work are the `.modal`, `.mo
 ### Modal controls
 The `.modal__controls` element provides a space to add additional controls like buttons. It is advisable to **stick to one or two buttons** action buttons in a modal. The primary action should **always appear as the left-most button** in the group with secondary actions, like "Cancel" appearing after.
 
+### Modal set up
+To use the modal component you'll need to do a few things. First, add the markup to your document.
+
+{{< code lang="html" >}}<button class="button" data-modal-trigger="my-modal-id">Open the modal</button>
+
+<div class="modal" id="my-modal-id">
+    modal markup here...
+
+    <button class="button button--plain modal__close" data-modal-close="close">
+        button markup here...
+    </button>
+</div>
+{{< /code >}}
+
+In the code above, `my-modal-id` should correspond to the `id` attribute on the the `.modal` container and the `data-modal-trigger` attribute on a `<button>` element that triggers the modal.
+
+The `data-modal-close="close"` attribute is used as a hook to close the modal. You can add the `data-modal-close` attribute to other buttons in the modal like a "**Cancel**" button if you need to allow users other options for closing the modal.
+
+Multiple modals can be placed on the same page, as long as each has a unique `id` and corresponding `data-modal-trigger` element.
+
 ## Modal dialog
 We use the generic term "Modal" to mean any smaller window that is displayed on top of the main application, but there are some subtle differences between a modal and a dialog.
 

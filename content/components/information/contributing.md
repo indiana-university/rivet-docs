@@ -14,7 +14,7 @@ Here are a few guidelines to follow when creating a new issue:
 1. Go to the Rivet source repository on [github.iu.edu](https://github.iu.edu/UITS/rivet-source/issues).
 2. Login with your IU username and passphrase. Don't worry if you've never logged into github.iu.edu before—anyone with a CAS username and passphrase can login and use the service.
 3. Click the "New Issue" button.
-4. Fill out the provided issue template to the best of your ability. If you are submitting a design concept for a new or existing component please attach a screenshot, a link to an Axure mockup, or feel free to link to example HTML/CSS/javaScript (a link to pen on [Codepen](http://codepen.io/) would be great!). We’re looking for anything that will demonstrate your concept here. Don’t worry if it’s unstyled or lacks visual design.
+4. Fill out the provided issue template to the best of your ability. If you are submitting a design concept for a new or existing component please attach a screenshot, a link to an Axure mockup, or feel free to link to example HTML/CSS/JavaScript (a link to a pen on Codepen would be great!). We’re looking for anything that will demonstrate your concept here. Don’t worry if it’s unstyled or lacks visual design.
 5. After you have filled out the issue template click the Submit new issue button to create your new issue.
 6. Once the issue is created it will move on to the review process.
 
@@ -52,4 +52,4 @@ Once they have enough info, the team will do a review of the proposed design bas
 - **Visual design** — Is the contribution consistent with our visual style?
 - **Content** — Does the pattern have plain language, correct spelling, and grammar? Does the author clearly describe actions?
 
-If the team decides to not move forward with the design submission, the issue will be marked as archived.
+If the team decides to not move forward with the design submission, the issue will be marked as archived with an explanation of why.

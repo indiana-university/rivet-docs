@@ -2,6 +2,10 @@
  * Shame
  */
 
+/**
+ * Set a global line-height that is shorted than the default 1.5 set higher
+ * up on the body. 1.5 is too tall for headline text.
+ */
 h1,
 h2,
 h3,
@@ -11,13 +15,22 @@ h6 {
     line-height: 1.2;
 }
 
+/**
+ * Tippy is the library we are using for toolip/popups on the copy buttons
+ * for code examples in the component docs.
+ */
 .tippy-tooltip [x-circle] {
     border-radius: 4px !important;
 }
 
+/**
+ * TODO: Should we replace these with the built-in Rivet visibility
+ * Utilities found here? - /components/utilities/visibility/
+ */
 .hide-on-large {
     display: block;
 }
+
 @media screen and (min-width: 900px) {
     .hide-on-large {
         display: none;
@@ -27,6 +40,7 @@ h6 {
 .hide-on-small {
     display: none;
 }
+
 @media screen and (min-width: 800px) {
     .hide-on-small {
         display: block;
@@ -96,6 +110,8 @@ a.button--reverse-secondary {
     width: 71px;
 }
 
+/* End Rivet core overrides */
+
 /**
  * Combo input NOTE: should add this back to Rivet source. I think there's
  * an issue open already.
@@ -130,31 +146,6 @@ a.button--reverse-secondary {
     margin-bottom: 1.5rem;
 }
 
-/**
- * This is for demo purposes only
- */
-
-.rvtd-space-example-key {
-    font-size: 0;
-}
-
-.rvtd-space-example-key li {
-    font-size: .875rem;
-    display: inline-block;
-    padding: .25rem .5rem;
-    color: #ffffff;
-}
-
-.rvtd-space-example-key li:first-child {
-    background-color: #006298;
-}
-
-.rvtd-space-example-key li:last-child {
-    background-color: #c9d7eb;
-    color: #006298;
-}
-
-
 .rvtd-space-example {
     background-color: #c9d7eb;
 }
@@ -167,36 +158,13 @@ a.button--reverse-secondary {
 
 
 /**
- * Home page layout stuff
+ * Custom layout stuff
  */
 
-.rvtd-principles {
-    background-color: #f7f7f7;
-    padding: $xxl 0;
-    border-top: 1px solid $color-black--100;
-    border-bottom: 1px solid $color-black--100;
-}
-
-@include mq(bp(md)) {
-    .rvtd-principles {
-        padding: $xxl*1.5 0;
-    }
-}
-
-.rvtd-blurbs {
-    padding: $xxl 0;
-}
-
-@include mq(bp(md)) {
-    .rvtd-blurbs {
-        padding: $xxl*2 0;
-    }
-}
-
-.rvtd-blurb {
-    margin-bottom: $xxl;
-}
-
+/**
+ * This is a generic wrapper that adds a decent amount of vertical
+ * spacing to bands/sections of content.
+ */
 .rvtd-section {
     padding: $xxl 0;
 }
@@ -205,25 +173,18 @@ a.button--reverse-secondary {
     .rvtd-section {
         padding: $xxl*2 0;
     }
+
+    .rvtd-section--tall {
+        padding: $xxl*3 0;
+    }
 }
 
+/* Adds a subtle light background */
 .rvtd-section--subtle {
     background: #f7f7f7;
 }
 
-.rvtd-htu-example-link {
-    text-decoration: none;
-    color: $color-text;
-
-    &:hover {
-        color: $color-text;
-    }
-}
-
-
-
-// Component status badges
-
+/* Component status badges */
  .rvt-badge--prototype {
      @extend .rvt-badge--error;
  }
@@ -243,7 +204,7 @@ a.button--reverse-secondary {
 
 
 /**
- * Examples
+ * How to use examples
  */
 
 .rvtd-htu-example {
@@ -309,13 +270,18 @@ a.button--reverse-secondary {
     }
 }
 
-
 @include mq(bp(md)) {
     .rvtd-htu-example__img-one {
         margin: 0;
-        left: 15%;
+        left: 10%;
         right: auto;
         max-width: 350px;
+    }
+}
+
+@include mq(bp(lg)) {
+    .rvtd-htu-example__img-one {
+        left: 15%;
     }
 }
 
@@ -360,15 +326,10 @@ a.button--reverse-secondary {
     }
 }
 
-.rvtd-htu-example-gallery-item {
-    text-decoration: none;
-    color: $color-text;
-}
-
-
 .rvtd-homepage-flare {
     @extend .rvtd-htu-example;
 }
+
 .rvtd-homepage-flare--subtle {
     background: #f7f7f7;
 }
@@ -383,10 +344,10 @@ a.button--reverse-secondary {
         width: 100%;
     }
 }
+
 .rvtd-homepage-flare__img-one {
     @extend .rvtd-htu-example__img-one;
 }
-
 
 .rvtd-check-list {
     list-style: none;
@@ -433,4 +394,26 @@ a.button--reverse-secondary {
         top: 5.5rem;
         width: 700px;
     }
+}
+
+/**
+ * This is used on in the header to show and hide at
+ * different screen sizes.
+ */
+.rvtd-subtitle {
+    display: none;
+}
+
+@include mq(bp(md)) {
+    .rvtd-subtitle {
+        display: inline-block;
+    }
+}
+
+/**
+ * HACK: I'm not sure why this is happening, but had to add this rule to the
+ * <span> wrapper we are using to hide on mobile.
+ */
+.rvt-header__title a:hover span {
+    text-decoration: underline;
 }

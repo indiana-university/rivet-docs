@@ -43,7 +43,7 @@ The system is currently unavailable.
 - Doesn't inform the user how long the system will be unavailable
 - Doesn't let the user know when the system is expected to be available again
 
-See the [Microcopy section](/docs/microcopy/) for additional information.
+See the [content guide section](/content-guide) for additional information.
 
 ## Page-level alerts
 {{< example lang="html" >}}<div class="alert alert--info m-bottom-md" role="alertdialog" aria-labelledby="information-alert-title">
@@ -87,7 +87,7 @@ See the [Microcopy section](/docs/microcopy/) for additional information.
 
 ### Implementation
 - Page-level alerts can be used with an optional dismiss button (X icon), however it’s important to avoid allowing users to dismiss alerts that are used to display error messages. Do allow users to dismiss alerts wherever appropriate.
-- It's important to note that the `Alert.init()` function has to be called after the alert element in loaded in the DOM. If you are dynamically adding new alerts in the DOM you will need to call the `Alert.init()` function each time a new alert is added.
+- It's important to note that the `Alert.init()` function in `rivet.js` has to be called after the alert element in loaded in the DOM. If you are dynamically adding new alerts in the DOM you will need to call the `Alert.init()` function each time a new alert is added.
 - Avoid using error messages that automatically disappear. If a user doesn’t have time to read the error message they may not know how to correct the problem once it has been automatically removed.
 - Write helpful alert messages. For errors, Include a brief description of the problem and how to fix it. Check out the Voice and tone/microcopy section for more information.
 
@@ -121,5 +121,4 @@ Alert lists provide a way to group a set of errors together. For instance, when 
 {{< /example >}}
 
 ### Alert list accessibility
-Alert lists can be particularly useful for summarizing multiple errors on a page, and providing links to the invalid fields. These summaries are especially helpful for non-sighted users, who will not receive the visual cue provided by multiple [inline alerts](#inline-alerts) appearing on the page when a form is submitted.
-
+Alert lists can be particularly useful for summarizing multiple errors on a page, and providing links to the invalid fields. These summaries are especially helpful for non-sighted users, who will not receive the visual cue provided by multiple inline alerts appearing on the page when a form is submitted.

@@ -6,22 +6,24 @@
     <nav class="rvt-drawer__nav" role="navigation">
         <ul class="hide-on-desktop">
             {{ range .Site.Sections }}
-            <li {{ if eq $currentNav.Permalink .Permalink }}class="is-active" {{ end }}>
-                <a href="{{ .Permalink }}">
-                    {{ if .Params.navTitle }}
-                        {{ .Params.navTitle }}
-                    {{ else }}
-                        {{ .Title }}
-                    {{ end }}
-                </a>
-            </li>
+                {{ if ne .Params.hideFromNav true }}
+                <li {{ if eq $currentNav.Permalink .Permalink }}class="is-active" {{ end }}>
+                    <a href="{{ .Permalink }}">
+                        {{ if .Params.navTitle }}
+                            {{ .Params.navTitle }}
+                        {{ else }}
+                            {{ .Title }}
+                        {{ end }}
+                    </a>
+                </li>
+                {{ end }}
             {{ end }}
-            <li><a href="{{ .Site.Params.downloadLink }}">Download Rivet</a></li>
+            <li><a href="/components/#download-rivet">Download Rivet</a></li>
         </ul>
         <h3 class="ts-14 m-top-sm m-bottom-sm text-uppercase">Resources</h3>
         <ul>
             {{ range .Site.Params.resourceLinks }}
-                <li><a target="_blank" href="{{ .url }}">{{ .text }}</a></li>
+                <li><a {{ if ne .self true }}target="_blank"{{ end }} href="{{ .url }}">{{ .text }}</a></li>
             {{ end }}
         </ul>
         <a href="#0" class="rvt-drawer__bottom-close">Close nav</a>
