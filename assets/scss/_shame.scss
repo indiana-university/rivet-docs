@@ -173,6 +173,10 @@ a.button--reverse-secondary {
     .rvtd-section {
         padding: $xxl*2 0;
     }
+
+    .rvtd-section--tall {
+        padding: $xxl*3 0;
+    }
 }
 
 /* Adds a subtle light background */
@@ -269,9 +273,15 @@ a.button--reverse-secondary {
 @include mq(bp(md)) {
     .rvtd-htu-example__img-one {
         margin: 0;
-        left: 15%;
+        left: 10%;
         right: auto;
         max-width: 350px;
+    }
+}
+
+@include mq(bp(lg)) {
+    .rvtd-htu-example__img-one {
+        left: 15%;
     }
 }
 
@@ -319,6 +329,7 @@ a.button--reverse-secondary {
 .rvtd-homepage-flare {
     @extend .rvtd-htu-example;
 }
+
 .rvtd-homepage-flare--subtle {
     background: #f7f7f7;
 }
@@ -333,6 +344,7 @@ a.button--reverse-secondary {
         width: 100%;
     }
 }
+
 .rvtd-homepage-flare__img-one {
     @extend .rvtd-htu-example__img-one;
 }
