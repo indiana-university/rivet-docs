@@ -13,7 +13,7 @@ When you only need to present a user with three or less options, consider using 
 ## Example
 
 {{< example lang="html" >}}<label for="select-demo">Select input:</label>
-    <select id="select-demo">
+<select id="select-demo">
     <option value="">Option One</option>
     <option value="">Option Two</option>
     <option value="">Option Three</option>
