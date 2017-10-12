@@ -2,6 +2,10 @@
  * Shame
  */
 
+/**
+ * Set a global line-height that is shorted than the default 1.5 set higher
+ * up on the body. 1.5 is too tall for headline text.
+ */
 h1,
 h2,
 h3,
@@ -11,13 +15,22 @@ h6 {
     line-height: 1.2;
 }
 
+/**
+ * Tippy is the library we are using for toolip/popups on the copy buttons
+ * for code examples in the component docs.
+ */
 .tippy-tooltip [x-circle] {
     border-radius: 4px !important;
 }
 
+/**
+ * TODO: Should we replace these with the built-in Rivet visibility
+ * Utilities found here? - /components/utilities/visibility/
+ */
 .hide-on-large {
     display: block;
 }
+
 @media screen and (min-width: 900px) {
     .hide-on-large {
         display: none;
@@ -27,6 +40,7 @@ h6 {
 .hide-on-small {
     display: none;
 }
+
 @media screen and (min-width: 800px) {
     .hide-on-small {
         display: block;
@@ -96,6 +110,8 @@ a.button--reverse-secondary {
     width: 71px;
 }
 
+/* End Rivet core overrides */
+
 /**
  * Combo input NOTE: should add this back to Rivet source. I think there's
  * an issue open already.
@@ -142,9 +158,13 @@ a.button--reverse-secondary {
 
 
 /**
- * Home page layout stuff
+ * Custom layout stuff
  */
 
+/**
+ * This is a generic wrapper that adds a decent amount of vertical
+ * spacing to bands/sections of content.
+ */
 .rvtd-section {
     padding: $xxl 0;
 }
@@ -155,12 +175,12 @@ a.button--reverse-secondary {
     }
 }
 
+/* Adds a subtle light background */
 .rvtd-section--subtle {
     background: #f7f7f7;
 }
 
-// Component status badges
-
+/* Component status badges */
  .rvt-badge--prototype {
      @extend .rvt-badge--error;
  }
@@ -180,7 +200,7 @@ a.button--reverse-secondary {
 
 
 /**
- * Examples
+ * How to use examples
  */
 
 .rvtd-htu-example {
@@ -246,7 +266,6 @@ a.button--reverse-secondary {
     }
 }
 
-
 @include mq(bp(md)) {
     .rvtd-htu-example__img-one {
         margin: 0;
@@ -297,12 +316,6 @@ a.button--reverse-secondary {
     }
 }
 
-.rvtd-htu-example-gallery-item {
-    text-decoration: none;
-    color: $color-text;
-}
-
-
 .rvtd-homepage-flare {
     @extend .rvtd-htu-example;
 }
@@ -323,7 +336,6 @@ a.button--reverse-secondary {
 .rvtd-homepage-flare__img-one {
     @extend .rvtd-htu-example__img-one;
 }
-
 
 .rvtd-check-list {
     list-style: none;
@@ -372,6 +384,10 @@ a.button--reverse-secondary {
     }
 }
 
+/**
+ * This is used on in the header to show and hide at
+ * different screen sizes.
+ */
 .rvtd-subtitle {
     display: none;
 }
