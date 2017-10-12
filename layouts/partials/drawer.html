@@ -23,7 +23,7 @@
         <h3 class="ts-14 m-top-sm m-bottom-sm text-uppercase">Resources</h3>
         <ul>
             {{ range .Site.Params.resourceLinks }}
-                <li><a target="_blank" href="{{ .url }}">{{ .text }}</a></li>
+                <li><a {{ if ne .self true }}target="_blank"{{ end }} href="{{ .url }}">{{ .text }}</a></li>
             {{ end }}
         </ul>
         <a href="#0" class="rvt-drawer__bottom-close">Close nav</a>
