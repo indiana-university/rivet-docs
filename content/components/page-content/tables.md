@@ -117,7 +117,7 @@ The `.table-plain` class will remove all borders and `thead` formatting on a tab
 If you’re wrangling a lot of data, tables can help you visualize that content. They’re much easier to scan than long paragraphs cluttered with numbers or dates.
 
 ## When to consider something else
-- Consider using a [definition list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl) when your data only has two dimensions.
+- Consider using a [definition list]({{< ref "components/page-content/lists.md#definition-list" >}}) when your data only has two dimensions.
 - Don’t use tables to structure web pages
 
 ## Microcopy notes

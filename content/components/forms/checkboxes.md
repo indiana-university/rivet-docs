@@ -51,7 +51,7 @@ status: "Alpha"
 Use checkboxes to allow users to pick zero, one, or many options from a list of values. A checkbox is a good choice when you need to present users a single option that they can turn on or off.
 
 ## When to consider something else
-When you need to present users with a list of mutually exclusive options and they can select only one option, consider using a list of [radio inputs](radio-inputs.html) or a [select input](select-input.html).
+When you need to present users with a list of mutually exclusive options and they can select only one option, consider using a list of [radio buttons]({{< ref "components/forms/radio-buttons.md" >}}) or a [select input]({{< ref "components/forms/select-input.md" >}}).
 
 ## Checkbox labels
 - Write the label so that it describes the selected state of the checkbox

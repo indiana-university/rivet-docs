@@ -46,7 +46,7 @@ You can create smaller buttons by adding the `.button--small` modifier class. Th
 There are a number of button styles and sizes that can be achieved using a handful of modifier CSS classes.
 
 ### Contextual button modifiers
-Certain contexts may require alternate button styles. For example, when a user is about to take a destructive action it may be advisable to use a different color button to alert them. In this case, adding the class `.button--danger` will create an orange button that matches the [error alert color](link-to-alerts).
+Certain contexts may require alternate button styles. For example, when a user is about to take a destructive action it may be advisable to use a different color button to alert them. In this case, adding the class `.button--danger` will create an orange button that matches the [error alert color]({{< ref "components/overlays/alerts.md" >}}).
 
 The available button color modifiers are:
 
@@ -56,7 +56,7 @@ The available button color modifiers are:
 - `.button--danger-secondary`
 
 ### Link and input buttons
-The `.button button--*` classes are meant to be used on the `<button>` elements, but they will work if you need to make an `<a>` tag or an `<input>` look like a button. If you're not sure whether to use a `<button>` or an `<a>` tag, you can reference the [documentation on links](/components/detail/links).
+The `.button button--*` classes are meant to be used on the `<button>` elements, but they will work if you need to make an `<a>` tag or an `<input>` look like a button. If you're not sure whether to use a `<button>` or an `<a>` tag, you can reference the [documentation on links]({{< ref "components/page-content/links.md" >}}).
 
 ### Button groups
 When you need to display a group of buttons you can wrap them in a `div` with the class `.button-group` applied to it. The `.button-group` class will add an equal amount of margin to the right side of every button in the group except the last one.

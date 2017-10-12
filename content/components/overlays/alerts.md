@@ -43,7 +43,7 @@ The system is currently unavailable.
 - Doesn't inform the user how long the system will be unavailable
 - Doesn't let the user know when the system is expected to be available again
 
-See the [Microcopy section](/docs/microcopy/) for additional information.
+See the [content guide section](/content-guide) for additional information.
 
 ## Page-level alerts
 {{< example lang="html" >}}<div class="alert alert--info m-bottom-md" role="alertdialog" aria-labelledby="information-alert-title">
@@ -121,5 +121,4 @@ Alert lists provide a way to group a set of errors together. For instance, when 
 {{< /example >}}
 
 ### Alert list accessibility
-Alert lists can be particularly useful for summarizing multiple errors on a page, and providing links to the invalid fields. These summaries are especially helpful for non-sighted users, who will not receive the visual cue provided by multiple [inline alerts](#inline-alerts) appearing on the page when a form is submitted.
-
+Alert lists can be particularly useful for summarizing multiple errors on a page, and providing links to the invalid fields. These summaries are especially helpful for non-sighted users, who will not receive the visual cue provided by multiple inline alerts appearing on the page when a form is submitted.
