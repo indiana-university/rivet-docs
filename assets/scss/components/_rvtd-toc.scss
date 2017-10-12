@@ -1,0 +1,47 @@
+.rvtd-toc {
+    list-style: none;
+    padding: 0;
+
+    li {
+        line-height: 1.3;
+        margin-top: $xs;
+    }
+
+    > li span {
+        color: $color-black--600;
+        display: block;
+        font-size: ts(14);
+        margin-top: $lg;
+        margin-bottom: $xs;
+    }
+
+    > li:first-child span {
+        margin-top: 0;
+    }
+
+    .is-current {
+        &:before {
+            content: "";
+            margin-left: -$xxs;
+            padding-left: $xxs;
+            box-shadow: -2px 0 0 $color-text;
+        }
+
+        a {
+            color: $color-text;
+        }
+    }
+
+    li a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    li ul {
+        list-style: none;
+        padding: 0;
+    }
+}

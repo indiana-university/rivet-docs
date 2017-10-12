@@ -1,0 +1,419 @@
+/**
+ * Shame
+ */
+
+/**
+ * Set a global line-height that is shorted than the default 1.5 set higher
+ * up on the body. 1.5 is too tall for headline text.
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
+/**
+ * Tippy is the library we are using for toolip/popups on the copy buttons
+ * for code examples in the component docs.
+ */
+.tippy-tooltip [x-circle] {
+    border-radius: 4px !important;
+}
+
+/**
+ * TODO: Should we replace these with the built-in Rivet visibility
+ * Utilities found here? - /components/utilities/visibility/
+ */
+.hide-on-large {
+    display: block;
+}
+
+@media screen and (min-width: 900px) {
+    .hide-on-large {
+        display: none;
+    }
+}
+
+.hide-on-small {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .hide-on-small {
+        display: block;
+    }
+}
+
+/**
+ * NOTE: These all override Rivet itself
+ */
+
+ code {
+     font-size: 1.2rem;
+ }
+
+input[type="search"] {
+    box-sizing: border-box;
+}
+
+.rvt-header--no-border {
+    border-bottom: none;
+}
+
+.rvt-header--no-border .rvt-drawer {
+    top: 70px;
+}
+
+/**
+ * :( I'm stuck in a z-index war of my own making!!!
+ */
+.rvt-drawer {
+    z-index: 3;
+}
+
+.rvt-header__main-nav {
+    margin-right: $lg;
+
+    ul li.is-current {
+        box-shadow: 0 2px 0 $color-text;
+    }
+}
+
+a.button--reverse {
+    background-color: $color-background;
+    color: $color-action;
+    border-color: $color-background;
+}
+
+a.button--secondary {
+    color: $color-action;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a.button--reverse-secondary {
+    border-color: $color-background;
+    color: $color-background;
+
+    &:hover {
+        border-color: $color-background;
+        background-color: $color-background;
+    }
+}
+
+.rvt-drawer-button {
+    width: 71px;
+}
+
+/* End Rivet core overrides */
+
+/**
+ * Combo input NOTE: should add this back to Rivet source. I think there's
+ * an issue open already.
+ */
+
+.rvt-combo-input {
+    display: flex;
+    flex-wrap: nowrap;
+
+    input[type] {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+    }
+
+    button {
+        font-weight: normal;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+/**
+ * These styles are for grid examples in the docs.
+ */
+[class^="rvt-grid__item"] span {
+    display: block;
+    background-color: #006298;
+    color: white;
+    padding: .5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.rvtd-space-example {
+    background-color: #c9d7eb;
+}
+
+.rvtd-space-example-inner {
+    background-color: #006298;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/**
+ * Custom layout stuff
+ */
+
+/**
+ * This is a generic wrapper that adds a decent amount of vertical
+ * spacing to bands/sections of content.
+ */
+.rvtd-section {
+    padding: $xxl 0;
+}
+
+@include mq(bp(md)) {
+    .rvtd-section {
+        padding: $xxl*2 0;
+    }
+
+    .rvtd-section--tall {
+        padding: $xxl*3 0;
+    }
+}
+
+/* Adds a subtle light background */
+.rvtd-section--subtle {
+    background: #f7f7f7;
+}
+
+/* Component status badges */
+ .rvt-badge--prototype {
+     @extend .rvt-badge--error;
+ }
+
+.rvt-badge--alpha {
+    @extend .rvt-badge--warning;
+}
+
+.rvt-badge--beta {
+    background-color: $color-alert-blue;
+}
+
+.rvt-badge--ready {
+    @extend .rvt-badge--success;
+}
+
+
+
+/**
+ * How to use examples
+ */
+
+.rvtd-htu-example {
+    padding-top: $xxl;
+    padding-bottom: $xxl;
+    position: relative;
+    overflow: hidden;
+}
+
+.rvtd-htu-example--mega-top-padding {
+    padding-top: $xxl;
+}
+
+.rvtd-htu-example--mega-bottom-padding {
+    padding-bottom: $xxl;
+}
+
+ @include mq(bp(md)) {
+    .rvtd-htu-example {
+        padding-top: $xxl * 2;
+        padding-bottom: $xxl * 2;
+    }
+
+    .rvtd-htu-example--mega-top-padding {
+        padding-top: $xxl * 4;
+    }
+
+    .rvtd-htu-example--mega-bottom-padding {
+        padding-bottom: $xxl * 4;
+    }
+
+    .rvtd-htu-example--shorter {
+        padding: $xxl * 1.5;
+    }
+ }
+
+.rvtd-htu-example--subtle {
+    background-color: #f7f7f7;
+}
+
+.rvtd-htu-example--border-bottom {
+    border-bottom: 1px solid #eee;
+}
+
+.rvtd-htu-example-info {
+    p {
+        line-height: 1.65;
+    }
+}
+
+.rvtd-htu-example__img-one {
+    max-width: 100px;
+    margin-top: $md;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+@include mq(bp(md)) {
+    .rvtd-htu-example__img-one {
+        margin: 0;
+        left: 10%;
+        right: auto;
+        max-width: 350px;
+    }
+}
+
+@include mq(bp(lg)) {
+    .rvtd-htu-example__img-one {
+        left: 15%;
+    }
+}
+
+.rvtd-htu-example__img-two {
+    max-width: 150px;
+    margin-top: $md;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+
+@include mq(bp(md)) {
+    .rvtd-htu-example__img-two {
+        bottom: 190px;
+        max-width: 500px;
+        margin: 0;
+
+        img {
+            display: block;
+            max-width: auto;
+            width: 100%;
+        }
+    }
+}
+
+
+@include mq(1100px) {
+    .rvtd-htu-example__img-two {
+        bottom: 150px;
+        max-width: 650px;
+    }
+}
+
+@include mq(1500px) {
+    .rvtd-htu-example__img-two {
+        bottom: 50px;
+        max-width: 700px;
+        padding-bottom: $xl;
+    }
+}
+
+.rvtd-homepage-flare {
+    @extend .rvtd-htu-example;
+}
+
+.rvtd-homepage-flare--subtle {
+    background: #f7f7f7;
+}
+
+.rvtd-homepage-flare__figure {
+    border-radius: 4px;
+    box-shadow: 0 3px 2px 0 rgba(231,231,231,0.50), 0 0 50px 0 rgba(0,0,0,0.05);
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.rvtd-homepage-flare__img-one {
+    @extend .rvtd-htu-example__img-one;
+}
+
+.rvtd-check-list {
+    list-style: none;
+
+    li {
+        line-height: 1.6;
+        margin-bottom: $md;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: -$lg;
+            width: 20px;
+            height: 20px;
+            background-color: #22AF7C;
+            background-image: url('../img/checkbox-input-check.svg');
+            background-repeat: no-repeat;
+            background-size: 12px 12px;
+            background-position: 50% 50%;
+            border-radius: 50%;
+        }
+    }
+}
+
+.rvtd-about-issues {
+    display: none;
+}
+
+@include mq(bp(md)) {
+    .rvtd-about-issues {
+        display: block;
+        width: 500px;
+        position: absolute;
+        top: 6.5rem;
+        right: 0;
+    }
+}
+
+@include mq(bp(lg)) {
+    .rvtd-about-issues {
+        top: 5.5rem;
+        width: 700px;
+    }
+}
+
+/**
+ * This is used on in the header to show and hide at
+ * different screen sizes.
+ */
+.rvtd-subtitle {
+    display: none;
+}
+
+@include mq(bp(md)) {
+    .rvtd-subtitle {
+        display: inline-block;
+    }
+}
+
+/**
+ * HACK: I'm not sure why this is happening, but had to add this rule to the
+ * <span> wrapper we are using to hide on mobile.
+ */
+.rvt-header__title a:hover span {
+    text-decoration: underline;
+}

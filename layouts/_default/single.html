@@ -1,7 +1,16 @@
 {{ define "main" }}
-    <section>
-        <h1>{{ .Title }}</h1>
-        <p>{{ .Description }}</p>
-        {{ .Content }}
-    </section>
+    <div class="rvtd-wrap">
+        <div class="rvtd-article-nav" aria-hidden="true">
+            <p>On this page</p>
+            {{.TableOfContents}}
+        </div>
+        {{ partial "sidebar.html" . }}
+        <div class="rvtd-tube">
+            <div class="rvtd-tube__inner rvtd-typeset">
+                <h1>{{ .Title }}</h1>
+                <p class="rvtd-lead">{{ .Description }}</p>
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
 {{ end }}

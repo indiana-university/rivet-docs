@@ -1,0 +1,9 @@
+<div class="rvtd-example">
+    <div class="rvtd-example__demo"{{ with .Get "background" }} style="background-color: {{ . }}"{{ end }}>
+        {{ .Inner }}
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_{{ .Inner | md5 }}" class="language-{{ if .Get "lang" }}{{ .Get "lang" }}{{ else }}html{{ end }}">{{- .Inner | string -}}</code></pre>
+        <button class="rvtd-example__copy button button--small" data-clipboard-target="#code_{{ .Inner | md5 }}" title="Copied">Copy</button>
+    </div>
+</div>

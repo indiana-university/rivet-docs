@@ -1,70 +1,21 @@
-@import "variables";
-@import "tools";
-@import "../../node_modules/normalize.scss/normalize";
+// @import "../rivet-0.2.0/sass/rivet";
+@import "../../node_modules/rivet-uits/sass/rivet";
 
-html {
-    font-size: 100%;
-}
+@import "core/variables";
+@import "core/tools";
+@import "core/base";
 
-html * {
-    box-sizing: border-box;
-}
+@import "libs/tippy";
 
-@include mq(1040px) {
-    html {
-        font-size: 115%;
-    }
-}
+@import "components/rvtd-article-nav";
+@import "components/rvtd-banner";
+@import "components/rvtd-billboard";
+@import "components/rvtd-docs-example";
+@import "components/rvtd-layout";
+@import "components/rvtd-marketing-list";
+@import "components/rvtd-one-iu-search";
+@import "components/rvtd-search";
+@import "components/rvtd-toc";
+@import "components/rvtd-typography";
 
-body {
-    font-family: $font-system;
-    padding: 1rem;
-    line-height: 1.5;
-    background-color: #ffffff;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    width: 100%;
-
-    h1 {
-        margin: 0;
-        line-height: 1;
-    }
-
-    nav {
-        margin-left: auto;
-    }
-
-    nav ul {
-        display: flex;
-        list-style: none;
-
-        li {
-            margin-right: 1rem;
-        }
-    }
-}
-
-.col-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.col-1,
-.col-2 {
-    padding: 1rem;
-    // flex-grow: 1;
-}
-
-.col-1 {
-    min-width: 30%;
-    flex-basis: 30%;
-}
-
-.col-2 {
-    min-width: 50%;
-    flex-basis: 50%;
-}
+@import "shame";

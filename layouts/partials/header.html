@@ -1,10 +1,41 @@
-<header>
-    <h1><a href="/">{{ .Site.Title }}</a></h1>
-    <nav>
-        <ul>
-            {{ range .Site.Sections }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-            {{ end }}
-        </ul>
-    </nav>
+{{ $currentURL := .URL }}
+{{ if or (eq $currentURL "/") (eq $currentURL "/how-to-use/") (eq $currentURL "/about/") }}
+    <header class="rvt-header rvt-header--light rvt-header--no-border" role="banner">
+{{ else }}
+    <header class="rvt-header rvt-header--light" role="banner">
+{{ end }}
+    <a class="rvt-skip-link" href="#main-content">Skip to content</a>
+    <div class="rvt-header__trident">
+        {{ partial "trident.html" . }}
+    </div>
+    <h1 class="rvt-header__title" style="line-height: 1.12;">
+        <a href="/"><strong>{{ .Site.Title }}</strong> <span class="rvtd-subtitle">{{ .Site.Params.tagline }}</span></a>
+    </h1>
+    <div class="rvt-header__controls">
+        <nav class="rvt-header__main-nav" role="navigation">
+            <ul>
+                {{ $currentNav := . }}
+                {{ range .Site.Sections }}
+                    {{/*
+                        This checks for a hideFromNav parameter and shows
+                        the nav item and for unless set to true
+                    */}}
+                    {{ if ne .Params.hideFromNav true }}
+                    <li {{ if eq $currentNav.Section .Section }}class="is-current"{{ end }}>
+                        <a href="{{ .Permalink }}">
+                            {{ if .Params.navTitle }}
+                                {{ .Params.navTitle }}
+                            {{ else }}
+                                {{ .Title }}
+                            {{ end }}
+                        </a>
+                    </li>
+                    {{ end }}
+                {{ end }}
+                <li><a href="/components/#download-rivet" class="button button--secondary button--small">Download</a></li>
+            </ul>
+        </nav>
+        {{ partial "drawer-button.html" . }}
+    </div>
+    {{ partial "drawer.html" . }}
 </header>

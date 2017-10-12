@@ -2,13 +2,17 @@
 <html lang="en">
     {{ partial "head.html" . }}
     <body>
-         {{ block "header" . }}
-            {{ partial "header.html" . }}
-        {{ end}}
-        <main>
-            {{ block "main" . }}
+        <div id="wrapper">
+            {{ block "header" . }}
+                {{ partial "header.html" . }}
+            {{ end}}
+            <main id="main-content">
+                {{ block "main" . }}
 
-            {{ end }}
-        </main>
+                {{ end }}
+            </main>
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "scripts.html" . }}
     </body>
 </html>

@@ -1,0 +1,42 @@
+.rvtd-article-nav {
+    display: none;
+}
+
+@include mq(bp(xl)) {
+    .rvtd-article-nav {
+        display: block;
+        flex: 0 0 280px;
+        order: 3;
+        align-self: flex-start;
+        padding: 0 $md;
+        margin-top: $xl;
+        border-left: 1px solid #eeeeee;
+
+        p {
+            margin-top: 0;
+            font-weight: 700;
+            font-size: $ts-18;
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        ul li a {
+            font-size: $ts-14;
+            line-height: 1.5;
+            margin-bottom: $xs;
+            display: inline-block;
+        }
+    }
+}

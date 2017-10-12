@@ -1,4 +1,12 @@
+.idea
 .DS_Store
+.vscode
 node_modules
-static/css/
 public/
+.npmrc
+tmp/
+static/css/style.css
+static/js/*.js
+static/site-index.json
+
+/vendor/

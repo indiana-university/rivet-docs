@@ -1,0 +1,90 @@
+.rvtd-search {
+    position: relative;
+    padding: $md;
+    background-color: #fafafa;
+    border-bottom: 1px solid #eaeaea;
+
+    &__form {
+        width: calc(100% - 3.5rem);
+        margin-left: auto;
+        position: relative;
+
+        .rvtd-search__cancel {
+            @extend .button--plain;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    &__results {
+        position: absolute;
+        top: 4.5rem;
+        width: 92%;
+        z-index: 2;
+        border: 1px solid #eee;
+        background-color: $color-background;
+        border-radius: 4px;
+        box-shadow: 0 1rem 5rem -2rem rgba(#000000, 0.5);
+
+        .rvtd-search__results-header {
+            @extend .modal__header;
+            display: flex;
+            padding: $sm;
+
+            .rvtd-search__cancel {
+                margin-left: auto;
+            }
+        }
+
+        .rvtd-search__result {
+            margin: 0 $sm $sm;
+            padding-bottom: $sm;
+            border-bottom: 1px solid #ddd;
+
+            &-title {
+                margin-bottom: $xxs;
+                font-size: $ts-16;
+            }
+
+            &-body {
+                margin: 0;
+                white-space: pre-wrap;
+                font-size: $ts-14;
+                line-height: 1.3;
+                color: $color-black--600;
+            }
+        }
+        .rvtd-search__result:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .rvtd-search__results-found {
+            font-size: $ts-14;
+            margin: $sm;
+        }
+
+        .rvtd-search__results-footer {
+            @extend .modal__controls;
+            padding: $sm;
+
+            p {
+                font-size: $ts-14;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@include mq(bp(md)) {
+    .rvtd-search__form {
+        width: auto;
+    }
+
+    .rvtd-search__results,
+    .rvtd-search__no-results {
+        width: 400px;
+    }
+}

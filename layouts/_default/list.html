@@ -1,11 +1,18 @@
 {{ define "main" }}
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-    <ul>
-        {{ range .Data.Pages }}
-            <li>
-                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            </li>
+    <div class="rvtd-wrap">
+        {{ if .Params.sectionNav }}
+        <div class="rvtd-article-nav">
+            <p>On this page</p>
+            {{ .TableOfContents }}
+        </div>
         {{ end }}
-    </ul>
+        {{ partial "sidebar.html" . }}
+        <div class="rvtd-tube">
+            <div class="rvtd-tube__inner rvtd-typeset">
+                <h1>{{ .Title }}</h1>
+                <p class="rvtd-lead">{{ .Description }}</p>
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
 {{ end }}

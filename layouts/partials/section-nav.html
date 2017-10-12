@@ -1,12 +1,17 @@
-<nav>
-    <ul>
-        {{ range .Site.Sections }}
+<!-- Capture the current page here -->
+{{ $currentPage := . }}
+{{ $currentParentSection := .Section }}
+<nav class="rvtd-nav" :aria-hidden="!navIsVisible ? 'true' : 'false'" role="navigation">
+    <ul class="rvtd-toc">
+        {{ range where .Site.Sections "Section" $currentParentSection }}
             {{ range .Sections }}
             <li>
-                <h2>{{ .Title }}</h2>
+                <span class="text-uppercase">{{ .Title }}</span>
                 <ul>
                     {{ range .Pages }}
-                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    <li {{ if eq $currentPage.Permalink .Permalink }}class="is-current"{{ end }}>
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </li>
                     {{ end }}
                 </ul>
             </li>

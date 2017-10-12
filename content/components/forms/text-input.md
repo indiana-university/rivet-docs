@@ -1,27 +1,35 @@
-+++
-title = "Text inputs and textarea"
-description = "Text inputs are the basic building blocks forms. They allow users to enter various types of data into web-based forms."
-weight = 1
-+++
-## Usability notes
+---
+title: "Text inputs"
+description: "Text inputs are the basic building blocks forms. They allow users to enter various types of data into web-based forms."
+status: "Alpha"
+---
 
-### When to use
+## When to use
 Use a text input for information that will only take up one line: a name, phone number, city, etc. Use textareas for information that includes multiple sentences or lines: descriptions, issues, proposals, etc.
 
-### When to consider something else
-Don’t ask the user to describe anything in a text input, which can hide text from view if the line is too long.
+## When to consider something else
+- Don’t ask the user to describe anything in a text input, which can hide text from view if the line is too long.
+- Similarly, don’t ask users to copy large amounts of information from a document and paste it into a textarea. If possible, use a file input, and let them upload those documents instead.
 
-Similarly, don’t ask users to copy large amounts of information from a document and paste it into a textarea. If possible, use a file input, and let them upload those documents instead.
+## Text input example
 
-```html
-<label for="select-demo">Select input:</label>
-<select class="m-bottom-md" id="select-demo">
-    <option value="">Option One</option>
-    <option value="">Option Two</option>
-    <option value="">Option Three</option>
-    <option value="">Option Four</option>
-</select>
-```
+{{< example lang="html" >}}<label for="demo-1">Text Input</label>
+<input type="text" id="demo-1" aria-describedby="demo-1-note">
+<small id="demo-1-note" class="display-block m-bottom-md">This is a note about this field.</small>
+
+<label for="demo-2">Text Input (disabled)</label>
+<input type="text" id="demo-2" disabled>
+{{< /example >}}
+
+## Textarea example
+
+{{< example lang="html" >}}<label for="demo-3">Textarea</label>
+<textarea id="demo-3" class="m-bottom-md"></textarea>
+
+<label for="demo-4">Textarea (disabled)</label>
+<textarea id="demo-4" class="m-bottom-md" disabled></textarea>
+{{< /example >}}
+
 
 ## Microcopy notes
 Keep labels clear and concise―around two to three words and never more than eight. But don’t be afraid to be descriptive or use a human voice. “Describe the problem you’re having” is clearer and kinder than “Problem description.”
