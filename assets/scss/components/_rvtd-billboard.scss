@@ -82,7 +82,7 @@
 
 @include mq(bp(xl)) {
     .rvtd-billboard__intro-img-home {
-        top: $md;
+        top: 0;
         left: -$md;
         max-width: 650px;
     }
