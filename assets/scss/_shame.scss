@@ -434,3 +434,21 @@ a.button--reverse-secondary {
         width: 700px;
     }
 }
+
+.rvtd-subtitle {
+    display: none;
+}
+
+@include mq(bp(md)) {
+    .rvtd-subtitle {
+        display: inline-block;
+    }
+}
+
+/**
+ * HACK: I'm not sure why this is happening, but had to add this rule to the
+ * <span> wrapper we are using to hide on mobile.
+ */
+.rvt-header__title a:hover span {
+    text-decoration: underline;
+}
