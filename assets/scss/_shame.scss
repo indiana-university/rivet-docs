@@ -130,31 +130,6 @@ a.button--reverse-secondary {
     margin-bottom: 1.5rem;
 }
 
-/**
- * This is for demo purposes only
- */
-
-.rvtd-space-example-key {
-    font-size: 0;
-}
-
-.rvtd-space-example-key li {
-    font-size: .875rem;
-    display: inline-block;
-    padding: .25rem .5rem;
-    color: #ffffff;
-}
-
-.rvtd-space-example-key li:first-child {
-    background-color: #006298;
-}
-
-.rvtd-space-example-key li:last-child {
-    background-color: #c9d7eb;
-    color: #006298;
-}
-
-
 .rvtd-space-example {
     background-color: #c9d7eb;
 }
@@ -170,33 +145,6 @@ a.button--reverse-secondary {
  * Home page layout stuff
  */
 
-.rvtd-principles {
-    background-color: #f7f7f7;
-    padding: $xxl 0;
-    border-top: 1px solid $color-black--100;
-    border-bottom: 1px solid $color-black--100;
-}
-
-@include mq(bp(md)) {
-    .rvtd-principles {
-        padding: $xxl*1.5 0;
-    }
-}
-
-.rvtd-blurbs {
-    padding: $xxl 0;
-}
-
-@include mq(bp(md)) {
-    .rvtd-blurbs {
-        padding: $xxl*2 0;
-    }
-}
-
-.rvtd-blurb {
-    margin-bottom: $xxl;
-}
-
 .rvtd-section {
     padding: $xxl 0;
 }
@@ -210,17 +158,6 @@ a.button--reverse-secondary {
 .rvtd-section--subtle {
     background: #f7f7f7;
 }
-
-.rvtd-htu-example-link {
-    text-decoration: none;
-    color: $color-text;
-
-    &:hover {
-        color: $color-text;
-    }
-}
-
-
 
 // Component status badges
 
