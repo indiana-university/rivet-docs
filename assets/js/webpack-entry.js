@@ -23,6 +23,15 @@ new Vue({
     },
     mounted() {
 
+    },
+    watch: {
+        navIsVisible(isVisible) {
+            if(isVisible) {
+                drawer = document.querySelector('.rvt-drawer')
+                // set the drawer height to the height of the page minus 70px for the header
+                drawer.style.height = (document.body.scrollHeight-70)+"px"
+            }
+        }
     }
 })
 
