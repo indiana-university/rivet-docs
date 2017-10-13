@@ -58,5 +58,3 @@ There are 4 webhooks setup for this site (2 for push and delete, and on 2 separa
 `master`: https://rivet.uits.iu.edu
 `develop`: https://rivet.webtest.iu.edu
 any other branch (.e.g `feature/new-stuff`): http://uxo.space
-
-👻
