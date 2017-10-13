@@ -23,5 +23,5 @@ params:
             self: true
         -
             text: "IU Framework for WCMS"
-            url: "/#should-i-use"
+            url: "https://framework.iu.edu/"
             self: true
