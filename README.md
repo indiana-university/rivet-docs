@@ -41,7 +41,7 @@ npm install
 gulp serve
 ```
 
-To watch and build files without running a server, you can run `gulp watch`. To package up the `public/` folder for distribution, run `gulp build:prod`. 
+To watch and build files without running a server, you can run `gulp watch`. To package up the `public/` folder for distribution, run `gulp build:prod`.
 
 ## Automatic deployments
 There are 4 webhooks setup for this site (2 for push and delete, and on 2 separate servers):
@@ -53,7 +53,7 @@ There are 4 webhooks setup for this site (2 for push and delete, and on 2 separa
 
 ### The deploy process
 
-1. Pull the latest code from github on the appropriate branch/server
-2. Run npm install and gulp to compile the assets
-3. Run hugo to generate the site
-4. Clear out the www root directory and move the hugo site to the www root (or if it's a feature branch just move the hugo site to the feature branch folder name)
+`master` and `develop` branches are deployed automatically using github webhooks and server-side build scripts. Branches deploy as follows:
+
+`master`: https://rivet.uits.iu.edu
+`develop`: https://rivet.webtest.iu.edu
