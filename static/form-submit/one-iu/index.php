@@ -6,7 +6,7 @@
     if(!file_exists($autoloader)) {
         // abort if the autoload file is missing (don't forget to `composer install`!)
         http_response_code('500');
-        die('Failed loading autoloader - ensure dependencies are installed!');
+        die('Failed loading autoloader - ensure dependencies are installed');
     }
     require($autoloader);
 
