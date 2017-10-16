@@ -21,9 +21,9 @@ status: "Alpha"
 ## Badge sizing
 The font size of the Rivet badges is set using a percentage value so that they will inherit the font size property of their containers. For example, if you wanted to use a badge inside of an element already using Rivet's type scale utilities, the badge's font size will adjust accordingly.
 
-{{< example lang="html" >}}<h1 class="ts-41">Heading 1 <span class="rvt-badge rvt-badge--success">Badge</span></h1>
-<h2 class="m-top-lg ts-32">Heading 2 <span class="rvt-badge rvt-badge--warning">Badge</span></h2>
-<h3 class="m-top-lg ts-26">Heading 3 <span class="rvt-badge rvt-badge--error">Badge</span></h3>
+{{< example lang="html" >}}<h1 class="rvt-ts-41">Heading 1 <span class="rvt-badge rvt-badge--success">Badge</span></h1>
+<h2 class="rvt-m-top-lg rvt-ts-32">Heading 2 <span class="rvt-badge rvt-badge--warning">Badge</span></h2>
+<h3 class="rvt-m-top-lg rvt-ts-26">Heading 3 <span class="rvt-badge rvt-badge--error">Badge</span></h3>
 {{< /example >}}
 
 

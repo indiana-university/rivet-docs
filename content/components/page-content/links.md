@@ -5,8 +5,8 @@ status: "Alpha"
 ---
 
 ## Inline links
-{{< example lang="html" >}}<p class="m-top-remove">This is a <a href="#0">text link</a> on a light background.</p>
-<p class="bg-midnight p-all-sm">This is a <a href="#0">text link</a> on a dark background.</p>
+{{< example lang="html" >}}<p class="rvt-m-top-remove">This is a <a href="#0">text link</a> on a light background.</p>
+<p class="bg-midnight rvt-p-all-sm">This is a <a href="#0">text link</a> on a dark background.</p>
 {{< /example >}}
 
 ## When to use

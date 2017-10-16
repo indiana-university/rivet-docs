@@ -15,7 +15,7 @@ Use a text input for information that will only take up one line: a name, phone 
 
 {{< example lang="html" >}}<label for="demo-1">Text Input</label>
 <input type="text" id="demo-1" aria-describedby="demo-1-note">
-<small id="demo-1-note" class="display-block m-bottom-md">This is a note about this field.</small>
+<small id="demo-1-note" class="rvt-display-block rvt-m-bottom-md">This is a note about this field.</small>
 
 <label for="demo-2">Text Input (disabled)</label>
 <input type="text" id="demo-2" disabled>
@@ -24,10 +24,10 @@ Use a text input for information that will only take up one line: a name, phone 
 ## Textarea example
 
 {{< example lang="html" >}}<label for="demo-3">Textarea</label>
-<textarea id="demo-3" class="m-bottom-md"></textarea>
+<textarea id="demo-3" class="rvt-m-bottom-md"></textarea>
 
 <label for="demo-4">Textarea (disabled)</label>
-<textarea id="demo-4" class="m-bottom-md" disabled></textarea>
+<textarea id="demo-4" class="rvt-m-bottom-md" disabled></textarea>
 {{< /example >}}
 
 

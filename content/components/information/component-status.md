@@ -5,7 +5,7 @@ type: "status"
 excludeFromStatus: true
 ---
 ## Status descriptions
-<table class="m-top-xl m-bottom-xxl">
+<table class="rvt-m-top-xl m-bottom-xxl">
     <caption class="sr-only">Table example two</caption>
     <thead>
         <th scope="col">Name</th>

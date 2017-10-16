@@ -25,7 +25,7 @@ status: "Alpha"
 ## Plain list
 You can use the helper class `.plain-list` to remove list formatting for display purposes.
 
-{{< example lang="html" >}}<ul class="plain-list">
+{{< example lang="html" >}}<ul class="rvt-plain-list">
     <li>List Item One</li>
     <li>List Item Two</li>
     <li>List Item Three</li>

@@ -46,10 +46,10 @@ The system is currently unavailable.
 See the [content guide section](/content-guide) for additional information.
 
 ## Page-level alerts
-{{< example lang="html" >}}<div class="alert alert--info m-bottom-md" role="alertdialog" aria-labelledby="information-alert-title">
-    <h1 class="alert__title" id="information-alert-title">Scheduled System Maintenance</h1>
-    <p class="alert__message">This system will be unavailable on August 1st due to scheduled system maintenance. Please check back on August 2nd.</p>
-    <button class="alert__dismiss">
+{{< example lang="html" >}}<div class="rvt-alert rvt-alert--info rvt-m-bottom-md" role="alertdialog" aria-labelledby="information-alert-title">
+    <h1 class="rvt-alert__title" id="information-alert-title">Scheduled System Maintenance</h1>
+    <p class="rvt-alert__message">This system will be unavailable on August 1st due to scheduled system maintenance. Please check back on August 2nd.</p>
+    <button class="rvt-alert__dismiss">
         <span class="v-hide">Dismiss this alert</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: #333"/>
@@ -57,10 +57,10 @@ See the [content guide section](/content-guide) for additional information.
     </button>
 </div>
 
-<div class="alert alert--success m-bottom-md" role="alertdialog" aria-labelledby="success-alert-title">
-    <h1 class="alert__title" id="success-alert-title">Thank you!</h1>
-    <p class="alert__message">We have received your application. Check your email in a few weeks to find out if you’ve been admitted.</p>
-    <button class="alert__dismiss">
+<div class="rvt-alert rvt-alert--success rvt-m-bottom-md" role="alertdialog" aria-labelledby="success-alert-title">
+    <h1 class="rvt-alert__title" id="success-alert-title">Thank you!</h1>
+    <p class="rvt-alert__message">We have received your application. Check your email in a few weeks to find out if you’ve been admitted.</p>
+    <button class="rvt-alert__dismiss">
         <span class="v-hide">Dismiss this alert</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: #333"/>
@@ -68,10 +68,10 @@ See the [content guide section](/content-guide) for additional information.
     </button>
 </div>
 
-<div class="alert alert--message m-bottom-md" role="alertdialog" aria-labelledby="warning-alert-title">
-    <h1 class="alert__title" id="warning-alert-title">Unsaved Changes</h1>
-    <p class="alert__message">Your changes have not been saved. To save your changes, click ‘Save my changes’ or click ‘Cancel’ to exit without saving.</p>
-    <button class="alert__dismiss">
+<div class="rvt-alert rvt-alert--message rvt-m-bottom-md" role="alertdialog" aria-labelledby="warning-alert-title">
+    <h1 class="rvt-alert__title" id="warning-alert-title">Unsaved Changes</h1>
+    <p class="rvt-alert__message">Your changes have not been saved. To save your changes, click ‘Save my changes’ or click ‘Cancel’ to exit without saving.</p>
+    <button class="rvt-alert__dismiss">
         <span class="v-hide">Dismiss this alert</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: #333"/>
@@ -79,9 +79,9 @@ See the [content guide section](/content-guide) for additional information.
     </button>
 </div>
 
-<div class="alert alert--error" role="alert" aria-labelledby="error-alert-title">
-    <h1 class="alert__title" id="error-alert-title">Incorrect User ID or Password</h1>
-    <p class="alert__message">The user ID and password you entered do not match. Please check your entries and try again. <a href="#0">Forgot your user ID or password?</a></p>
+<div class="rvt-alert rvt-alert--error" role="alert" aria-labelledby="error-alert-title">
+    <h1 class="rvt-alert__title" id="error-alert-title">Incorrect User ID or Password</h1>
+    <p class="rvt-alert__message">The user ID and password you entered do not match. Please check your entries and try again. <a href="#0">Forgot your user ID or password?</a></p>
 </div>
 {{< /example >}}
 
@@ -94,27 +94,27 @@ See the [content guide section](/content-guide) for additional information.
 ## Alert lists
 Alert lists provide a way to group a set of errors together. For instance, when summarizing a list of errors on a long form.
 
-{{< example lang="html" >}}<ul class="alert-list">
-    <li class="alert-list__item">
-        <div class="alert alert--error" role="alert">
-            <h1 class="alert__title">Please correct the following errors.</h1>
-            <p class="alert__message">Alert lists are useful for summarizing multiple errors on a page.</p>
+{{< example lang="html" >}}<ul class="rvt-alert-list">
+    <li class="rvt-alert-list__item">
+        <div class="rvt-alert rvt-alert--error" role="alert">
+            <h1 class="rvt-alert__title">Please correct the following errors.</h1>
+            <p class="rvt-alert__message">Alert lists are useful for summarizing multiple errors on a page.</p>
         </div>
     </li>
-    <li class="alert-list__item">
-        <div class="alert alert--error" role="alert">
-            <h1 class="alert__title">Errors can have a title only, <a href="#0">with a link</a> to the invalid element.</h1>
+    <li class="rvt-alert-list__item">
+        <div class="rvt-alert rvt-alert--error" role="alert">
+            <h1 class="rvt-alert__title">Errors can have a title only, <a href="#0">with a link</a> to the invalid element.</h1>
         </div>
     </li>
-    <li class="alert-list__item">
-        <div class="alert alert--error" role="alert">
-            <h1 class="alert__title">Error message three is soooo long!</h1>
-            <p class="alert__message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veniam iste, nesciunt aliquam illum quaerat hic expedita ducimus error assumenda explicabo quos harum delectus deserunt, autem corrupti quas doloremque. Veritatis.</p>
+    <li class="rvt-alert-list__item">
+        <div class="rvt-alert rvt-alert--error" role="alert">
+            <h1 class="rvt-alert__title">Error message three is soooo long!</h1>
+            <p class="rvt-alert__message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veniam iste, nesciunt aliquam illum quaerat hic expedita ducimus error assumenda explicabo quos harum delectus deserunt, autem corrupti quas doloremque. Veritatis.</p>
         </div>
     </li>
-    <li class="alert-list__item">
-        <div class="alert alert--error" role="alert">
-            <p class="alert__message">Errors don't always have to have a title. You could just use them for <a href="#0">messages</a>.</p>
+    <li class="rvt-alert-list__item">
+        <div class="rvt-alert rvt-alert--error" role="alert">
+            <p class="rvt-alert__message">Errors don't always have to have a title. You could just use them for <a href="#0">messages</a>.</p>
         </div>
     </li>
 </ul>
