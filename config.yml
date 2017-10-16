@@ -24,4 +24,3 @@ params:
         -
             text: "IU Framework for WCMS"
             url: "https://framework.iu.edu/"
-            self: true
