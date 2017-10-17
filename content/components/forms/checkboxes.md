@@ -1,16 +1,16 @@
 ---
 title: "Checkboxes"
 description: "Checkboxes allow users to select one or more options from a list of choices."
-status: "Alpha"
+status: "Beta"
 ---
 ## Inline checkboxes example
 {{< example lang="html" >}}<form>
     <fieldset>
         <legend class="sr-only">Checkboxes inline</legend>
-        <ul class="inline-list">
+        <ul class="rvt-inline-list">
             <li>
                 <input type="checkbox" name="checkbox-demo" id="checkbox-1">
-                <label for="checkbox-1" class="m-right-sm">Option one</label>
+                <label for="checkbox-1" class="rvt-m-right-sm">Option one</label>
             </li>
             <li>
                 <input type="checkbox" name="checkbox-demo" id="checkbox-2">
@@ -25,10 +25,10 @@ status: "Alpha"
 {{< example lang="html" >}}<form>
     <fieldset>
         <legend class="sr-only">Checkbox list</legend>
-        <ul class="plain-list">
+        <ul class="rvt-plain-list">
             <li>
                 <input type="checkbox" name="checkbox-demo" id="checkbox-3">
-                <label for="checkbox-3" class="m-right-sm">Option one</label>
+                <label for="checkbox-3" class="rvt-m-right-sm">Option one</label>
             </li>
             <li>
                 <input type="checkbox" name="checkbox-demo" id="checkbox-4">

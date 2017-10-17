@@ -2,7 +2,7 @@
 title: "Header"
 description: "The Rivet header has provides consistent branding and flexible navigation layout for your application."
 requiresJs: true
-status: "Alpha"
+status: "Beta"
 ---
 
 ## Base header

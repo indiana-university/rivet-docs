@@ -14,7 +14,10 @@ gulp.task("webpack", function() {
 });
 
 gulp.task('js', function() {
-    gulp.src(['tmp/webpack-built.js'])
+    gulp.src([
+            'tmp/webpack-built.js',
+            'node_modules/rivet-uits/js/rivet.js'
+        ])
         .pipe(concat('rivet-docs.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./static/js'));
