@@ -20,9 +20,9 @@ The base header provides consistent branding in a condensed space. It replaces t
             <polygon points="35.96 18.44 35.96 21.84 38.52 21.84 38.52 40.51 33.41 40.51 33.41 15.9 35.96 15.9 35.96 12.5 24.04 12.5 24.04 15.9 26.58 15.9 26.58 40.51 21.48 40.51 21.48 21.84 24.04 21.84 24.04 18.44 12.09 18.44 12.09 21.84 14.65 21.84 14.65 43.79 18.72 48.15 26.58 48.15 26.58 53.26 24.04 53.26 24.04 57.5 35.96 57.5 35.96 53.26 33.41 53.26 33.41 48.15 40.93 48.15 45.33 43.79 45.33 21.84 47.91 21.84 47.91 18.44 35.96 18.44" fill="#fff"/>
         </svg>
     </div>
-    <h1 class="rvt-header__title">
+    <span class="rvt-header__title">
         <a href="#0">Application Title</a>
-    </h1>
+    </span>
 </header>
 {{< /example >}}
 
@@ -44,9 +44,9 @@ The inclusion of an avatar and username, or only username are both appropriate c
             <polygon points="35.96 18.44 35.96 21.84 38.52 21.84 38.52 40.51 33.41 40.51 33.41 15.9 35.96 15.9 35.96 12.5 24.04 12.5 24.04 15.9 26.58 15.9 26.58 40.51 21.48 40.51 21.48 21.84 24.04 21.84 24.04 18.44 12.09 18.44 12.09 21.84 14.65 21.84 14.65 43.79 18.72 48.15 26.58 48.15 26.58 53.26 24.04 53.26 24.04 57.5 35.96 57.5 35.96 53.26 33.41 53.26 33.41 48.15 40.93 48.15 45.33 43.79 45.33 21.84 47.91 21.84 47.91 18.44 35.96 18.44" fill="#fff"/>
         </svg>
     </div>
-    <h1 class="rvt-header__title">
+    <span class="rvt-header__title">
         <a href="#0">Application Title</a>
-    </h1>
+    </span>
     <div class="rvt-header__controls">
         <div class="rvt-header-id">
             <div href="#0" class="rvt-header-id__profile">
@@ -104,9 +104,9 @@ These lists work best for priority tasks and internal navigation. Consider inclu
         </svg>
     </div>
     <!-- App title -->
-    <h1 class="rvt-header__title">
+    <span class="rvt-header__title">
         <a href="#0">Application Title</a>
-    </h1>
+    </span>
     <!-- Wrapper for header interactive elements -->
     <div class="rvt-header__controls">
         <!-- Main inline nav element -->
