@@ -8,8 +8,8 @@ params:
     googleAnalytics: "UA-100560495-3"
     devGoogleAnalytics: "UA-100560495-4"
     githubRepo: "https://github.iu.edu/UITS/rivet-source"
-    downloadLink: "https://github.iu.edu/UITS/rivet/archive/v0.3.0.zip"
-    axureKit: "https://github.iu.edu/UITS/rivet/releases/download/v0.3.0/rivet-axure-0.3.0.rp"
+    downloadLink: "https://github.iu.edu/UITS/rivet/archive/v0.3.1.zip"
+    axureKit: "https://github.iu.edu/UITS/rivet/releases/download/v0.3.1/rivet-axure-0.3.1.rp"
     resourceLinks:
         -
             text: "User Experience Office"
