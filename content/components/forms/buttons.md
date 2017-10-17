@@ -27,9 +27,9 @@ You can create smaller buttons by adding the `.rvt-button--small` modifier class
 
 {{< example lang="html" >}}<div class="rvt-button-group">
     <button class="rvt-button rvt-button--small">Primary</button>
-    <button class="rvt-button rvt-button--success button--small">Success</button>
-    <button class="rvt-button rvt-button--danger button--small">Danger</button>
-    <button class="rvt-button rvt-button--plain button--small">Plain</button>
+    <button class="rvt-button rvt-button--success rvt-button--small">Success</button>
+    <button class="rvt-button rvt-button--danger rvt-button--small">Danger</button>
+    <button class="rvt-button rvt-button--plain rvt-button--small">Plain</button>
 </div>
 {{< /example >}}
 
