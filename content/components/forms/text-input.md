@@ -1,7 +1,7 @@
 ---
 title: "Text inputs"
 description: "Text inputs are the basic building blocks forms. They allow users to enter various types of data into web-based forms."
-status: "Alpha"
+status: "Beta"
 ---
 
 ## When to use

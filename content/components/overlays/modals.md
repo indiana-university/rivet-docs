@@ -2,7 +2,7 @@
 title: "Modals"
 description: "A modal is a smaller window that is displayed on top of the main application/site window. The main page is still visible but, the background is darkened to direct focus to the content of the modal window."
 requiresJs: true
-status: "Alpha"
+status: "Beta"
 ---
 ## When to use
 - For single specific tasks related to a goal on the main page of the application

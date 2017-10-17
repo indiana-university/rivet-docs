@@ -2,7 +2,7 @@
 title: "Pagination"
 description: "The pagination component is used to break up large sets of data across multiple pages."
 requiresJs: false
-status: "Alpha"
+status: "Beta"
 ---
 ## When to use
 Use when a user's action returns a large data set such as search results, or a large number of rows in a data table to break results into multiple pages to help with load times.

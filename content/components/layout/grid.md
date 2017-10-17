@@ -1,7 +1,7 @@
 ---
 title: "Grid"
 description: "A 12 column responsive grid with support for automatic columns that makes it easy to lay out your application."
-status: "Alpha"
+status: "Beta"
 ---
 
 ## About the grid

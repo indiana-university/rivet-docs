@@ -1,7 +1,7 @@
 ---
 title: "Lists"
 description: "Lists are used to group and organize collections of content."
-status: "Alpha"
+status: "Beta"
 ---
 
 ## Unordered list

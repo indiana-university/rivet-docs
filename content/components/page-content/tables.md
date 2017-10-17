@@ -2,7 +2,7 @@
 title: "Tables"
 description: "Tables are used to display tabular data in rows and columns."
 requiresJs: false
-status: "Alpha"
+status: "Beta"
 ---
 
 ## Default table

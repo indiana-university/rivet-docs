@@ -1,7 +1,7 @@
 ---
 title: Badges
 description: Use badges to call out or label important information in your UI.
-status: "Alpha"
+status: "Beta"
 ---
 ## When to use
 - To label new content on a page
