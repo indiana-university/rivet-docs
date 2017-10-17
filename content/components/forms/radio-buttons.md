@@ -1,16 +1,16 @@
 ---
 title: "Radio buttons"
 description: "Radio buttons allow users to select a single value out of a set number of choices."
-status: "Alpha"
+status: "Beta"
 ---
 ## Inline radios example
 {{< example lang="html" >}}<form>
     <fieldset>
         <legend class="sr-only">Radio inputs inline</legend>
-        <ul class="inline-list">
+        <ul class="rvt-inline-list">
             <li>
                 <input type="radio" name="radio-demo" id="radio-1">
-                <label for="radio-1" class="m-right-md">Option one</label>
+                <label for="radio-1" class="rvt-m-right-md">Option one</label>
             </li>
             <li>
                 <input type="radio" name="radio-demo" id="radio-2">
@@ -25,10 +25,10 @@ status: "Alpha"
 {{< example lang="html" >}}<form>
     <fieldset>
         <legend class="sr-only">Radio list</legend>
-        <ul class="plain-list">
+        <ul class="rvt-plain-list">
             <li>
                 <input type="radio" name="radio-demo-2" id="radio-3">
-                <label for="radio-3" class="m-right-sm">Option one</label>
+                <label for="radio-3" class="rvt-m-right-sm">Option one</label>
             </li>
             <li>
                 <input type="radio" name="radio-demo-2" id="radio-4">
