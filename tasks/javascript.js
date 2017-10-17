@@ -15,8 +15,8 @@ gulp.task("webpack", function() {
 
 gulp.task('js', function() {
     gulp.src([
-            'node_modules/rivet-uits/js/rivet.js'
             'tmp/webpack-built.js',
+            'node_modules/rivet-uits/js/rivet.js'
         ])
         .pipe(concat('rivet-docs.js'))
         .pipe(uglify())
