@@ -54,3 +54,16 @@ const tip = tippy('.rvtd-example__copy', {
         setTimeout(() => { tip.hide(this) }, 1000)
     }
 })
+
+// analytics event tracking
+if(window.telemetrics) {
+    let eventTriggers = document.querySelectorAll('[data-analytics-action]');
+    eventTriggers.forEach(trigger => {
+        let action = trigger.dataset.analyticsAction
+        let category = trigger.dataset.analyticsCategory ? trigger.dataset.analyticsCategory : 'click'
+        let label = trigger.dataset.analyticsLabel ? trigger.dataset.analyticsLabel : trigger.href
+        trigger.addEventListener('click', e => {
+            window.telemetrics(category, action, label)
+        })
+    })
+}
