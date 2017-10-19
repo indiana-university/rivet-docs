@@ -15,7 +15,7 @@ params:
             text: "User Experience Office"
             url: "https://uxo.iu.edu"
         -
-            text: "Accessibility"
+            text: "Accessibility Evaluations"
             url: "https://a11y.iu.edu/"
         -
             text: "Rivet Software Design System"
