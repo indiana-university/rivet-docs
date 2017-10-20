@@ -191,10 +191,12 @@ a.button--reverse-secondary {
 
 .rvt-badge--alpha {
     @extend .rvt-badge--warning;
+    color: #fff;
 }
 
 .rvt-badge--beta {
     background-color: $color-alert-blue;
+    color: #fff;
 }
 
 .rvt-badge--ready {
