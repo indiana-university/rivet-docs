@@ -41,7 +41,7 @@ Default tables in Rivet come with styled headers and bottom borders on row to he
 </table>
 {{< /example >}}
 
-## Stripped table
+## Striped table
 You can use the `.rvt-table-stripes` class to alternate light gray backgrounds on table rows for improved scannability.
 {{< example lang="html" >}}<table class="rvt-table-stripes">
     <caption class="sr-only">Table example two</caption>
