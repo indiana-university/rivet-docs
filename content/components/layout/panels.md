@@ -1,6 +1,6 @@
 ---
 title: "Panels"
-description: "Use panels to help group conent visually or call attention to parts of your application."
+description: "Use panels to help group content visually or call attention to parts of your application."
 requiresJs: false
 status: "Beta"
 ---

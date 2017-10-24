@@ -13,6 +13,7 @@ status: "Beta"
 
 ## Default Badges
 {{< example lang="html" >}}<span class="rvt-badge">Base</span>
+<span class="rvt-badge rvt-badge--action">Action</span>
 <span class="rvt-badge rvt-badge--success">Success</span>
 <span class="rvt-badge rvt-badge--warning">Warning</span>
 <span class="rvt-badge rvt-badge--error">Error</span>

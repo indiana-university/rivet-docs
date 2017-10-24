@@ -27,7 +27,7 @@ The base header provides consistent branding in a condensed space. It replaces t
 {{< /example >}}
 
 ### Accessibility
-**All versions** of the Rivet header should include a [skip link](#skip-navigation-link) that is only visible when in focus and that links via an `id` attribute to the `<main>` element of you application. See the skip link examplefor more details on implementation.
+**All versions** of the Rivet header should include a [skip link](#skip-navigation-link) that is only visible when in focus and that links via an `id` attribute to the `<main>` element of you application. See the skip link example for more details on implementation.
 
 ### Header extensibility
 The base header can be extended to fit the navigation needs of your application by using a handful of smaller sub-components and modifier CSS classes.
