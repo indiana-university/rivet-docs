@@ -40,18 +40,23 @@ index.html
 {{< /code >}}
 
 ## NPM dependency
-Rivet is also available to include in as a dependency in your app via NPM. Once your `.npmrc` config file is configured you can run `npm install rivet-uits --save-dev` in your terminal to use in your project. To use the Rivet as a npm package you'll need to configure an `.npmrc` file using your IU credentials.
+Rivet is also available to include in as a dependency in your app via NPM. To use Rivet as a NPM package you'll need to configure a `.npmrc` file that points to the IU NPM registry. To create a `.npmrc` file that points to the IU registry run this command in your terminal:
 
-{{< button url="https://github.iu.edu/UITS/rivet-source/wiki/Configuring-NPM" variant="small" analytics-category="click" analytics-action="Read NPM instructions">}}Read instructions{{< /button >}}
-
-### Exclude NPM config from version control
-If you use version control, you'll want to **make sure this file isn't included** since it contains an `_auth` to access the npm registry. **Make sure to add your .npmrc file to your .gitignore file**
+{{< code >}}echo "registry=https://npmjs.iu.edu/registry" > .npmrc
+{{< /code >}}
 
 ### Installing via NPM
-Once you have this file in your project you can run:
-```bash
-npm install rivet-uits
-```
+Once you have the `.npmrc` file configured in the root of your project (at the same level as `package.json`) in your project you can run the following command to install Rivet.
+
+{{< code >}}npm install uits-rivet --save-dev
+{{< /code >}}
+
+<h4 class="m-top-lg">Installation troubleshooting <span class="rvt-badge rvt-badge--warning m-right-xs">NOTE</span></h4>
+
+**Before you run the install command**:
+
+- Make sure that you have configured a `.npmrc`
+- Be sure you have installed NPM on your local computer by running `npm --v`
 
 ## Using Sass
 If you are using Sass in your project you can import the Rivet Sass files directly:
