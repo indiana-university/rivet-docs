@@ -2,7 +2,7 @@
 
 This is the source for the Rivet documentation site. It is built with [Hugo](https://gohugo.io/), a static site generator written in Go (no Go experience is necessary to edit this site). Development is designed for macOS, but should be possible in other environments. To get started:
 ```
-git clone git@github.iu.edu:UITS/rivet-docs-source.git
+git clone https://github.iu.edu/UITS/rivet-docs-source.git
 cd rivet-docs-source
 npm install
 gulp
