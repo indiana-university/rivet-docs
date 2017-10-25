@@ -40,13 +40,16 @@ index.html
 {{< /code >}}
 
 ## NPM dependency
-Rivet is also available to include in as a dependency in your app via NPM. To use Rivet as a NPM package you'll need to configure a `.npmrc` file that points to the IU NPM registry. To create a `.npmrc` file that points to the IU registry run this command in your terminal:
+Rivet is also available to include in as a dependency in your app via NPM. To use Rivet as a NPM package you'll need to configure a `.npmrc` file that points to the IU NPM registry. These instructions assume that you are already using NPM in your project. If not, you can [read these instructions](https://docs.npmjs.com/cli/init) on the NPM website about how to start.
 
-{{< code >}}echo "registry=https://npmjs.iu.edu/registry" > .npmrc
+1. Create a file in the root of your project at the same level as your `package.json` called `.npmrc`.
+2. Add the following snippet to your newly created `.npmrc` and save the file.
+
+{{< code >}}registry=https://npmjs.iu.edu/registry
 {{< /code >}}
 
 ### Installing via NPM
-Once you have the `.npmrc` file configured in the root of your project (at the same level as `package.json`) in your project you can run the following command to install Rivet.
+Once you have the `.npmrc` file configured in the root of your project, you can run the following command to install Rivet.
 
 {{< code >}}npm install uits-rivet --save-dev
 {{< /code >}}
