@@ -58,8 +58,8 @@ Once you have the `.npmrc` file configured in the root of your project, you can 
 
 **Before you run the install command**:
 
-- Make sure that you have configured a `.npmrc`
 - Be sure you have installed NPM on your local computer by running `npm --v`
+- Make sure that you have configured a `.npmrc` using the instructions above
 
 ## Using Sass
 If you are using Sass in your project you can import the Rivet Sass files directly:
