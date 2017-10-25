@@ -1,7 +1,7 @@
 ---
 title: "Grid"
 description: "A 12 column responsive grid with support for automatic columns that makes it easy to lay out your application."
-status: "Alpha"
+status: "Beta"
 ---
 
 ## About the grid
@@ -9,7 +9,7 @@ The Rivet grid is a mobile-first grid system based on [flexbox](https://www.w3.o
 
 <h3>The grid and spacing utilities <span class="rvt-badge rvt-badge--warning">Note</span></h3>
 
-Please note that using any horizontal (`m-left-*`, `p-left-*`, `m-right-*`, and `p-right-*`) [spacing utilities]({{< relref "spacing.md" >}}) on the `.rvt-grid__item-*`s will throw off the grid gutters and maybe break your layout.
+Please note that using any horizontal (`rvt-m-left-*`, `rvt-p-left-*`, `rvt-m-right-*`, and `rvt-p-right-*`) [spacing utilities]({{< relref "spacing.md" >}}) on the `.rvt-grid__item-*`s will throw off the grid gutters and maybe break your layout.
 
 ## The container
 The `.rvt-container` is the basic layout unit in Rivet. A basic `.rvt-container` element is fluid by default. It will take up the full width of the viewport with a default of `1.5rem` of padding on the left and right sides.

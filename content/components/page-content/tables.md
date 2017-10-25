@@ -2,7 +2,7 @@
 title: "Tables"
 description: "Tables are used to display tabular data in rows and columns."
 requiresJs: false
-status: "Alpha"
+status: "Beta"
 ---
 
 ## Default table
@@ -41,9 +41,9 @@ Default tables in Rivet come with styled headers and bottom borders on row to he
 </table>
 {{< /example >}}
 
-## Stripped table
-You can use the `.table-stripes` class to alternate light gray backgrounds on table rows for improved scannability.
-{{< example lang="html" >}}<table class="table-stripes">
+## Striped table
+You can use the `.rvt-table-stripes` class to alternate light gray backgrounds on table rows for improved scannability.
+{{< example lang="html" >}}<table class="rvt-table-stripes">
     <caption class="sr-only">Table example two</caption>
     <thead>
         <tr>
@@ -78,8 +78,8 @@ You can use the `.table-stripes` class to alternate light gray backgrounds on ta
 {{< /example >}}
 
 ## Plain table
-The `.table-plain` class will remove all borders and `thead` formatting on a table.
-{{< example lang="html" >}}<table class="table-plain">
+The `.rvt-table-plain` class will remove all borders and `thead` formatting on a table.
+{{< example lang="html" >}}<table class="rvt-table-plain">
     <caption class="sr-only">Table example two</caption>
     <thead>
         <tr>

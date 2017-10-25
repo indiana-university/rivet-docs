@@ -1,6 +1,17 @@
 <div class="rvtd-example">
     <div class="rvtd-example__code rvtd-example__code--only">
         <pre><code id="code_{{ .Inner | md5 }}" class="language-{{ if .Get "lang" }}{{ .Get "lang" }}{{ else }}html{{ end }}">{{- .Inner | string -}}</code></pre>
-        <button class="rvtd-example__copy rvtd-example__copy--code-only button button--small" data-clipboard-target="#code_{{ .Inner | md5 }}" title="Copied">Copy</button>
+        <button
+            class="rvtd-example__copy rvtd-example__copy--code-only button button--small"
+            data-clipboard-target="#code_{{ .Inner | md5 }}"
+            title="Copied"
+            {{ if .Get "analytics-label" }}
+                data-analytics-category="click"
+                data-analytics-action="copy code"
+                data-analytics-label="{{ .Get "analytics-label" }}"
+            {{ end }}
+            >
+            Copy
+        </button>
     </div>
 </div>

@@ -11,7 +11,7 @@ The Rivet components documentation contains examples, code snippets, and guidanc
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
-{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.2.0.zip" variant="secondary" >}}Download Rivet{{< /button >}}
+{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.3.1.zip" variant="secondary" analytics-action="download" analytics-category="click">}}Download Rivet{{< /button >}}
 
 ### Download contents
 The download contains the following files:
@@ -40,18 +40,26 @@ index.html
 {{< /code >}}
 
 ## NPM dependency
-Rivet is also available to include in as a dependency in your app via NPM. Once your `.npmrc` config file is configured you can run `npm install rivet-uits --save-dev` in your terminal to use in your project. To use the Rivet as a npm package you'll need to configure an `.npmrc` file using your IU credentials.
+Rivet is also available to include in as a dependency in your app via NPM. To use Rivet as a NPM package you'll need to configure a `.npmrc` file that points to the IU NPM registry. These instructions assume that you are already using NPM in your project. If not, you can [read these instructions](https://docs.npmjs.com/cli/init) on the NPM website about how to start.
 
-{{< button url="https://github.iu.edu/UITS/rivet-source/wiki/Configuring-NPM" variant="small" >}}Read instructions{{< /button >}}
+1. Create a file in the root of your project at the same level as your `package.json` called `.npmrc`.
+2. Add the following snippet to your newly created `.npmrc` and save the file.
 
-### Exclude NPM config from version control
-If you use version control, you'll want to **make sure this file isn't included** since it contains an `_auth` to access the npm registry. **Make sure to add your .npmrc file to your .gitignore file**
+{{< code >}}registry=https://npmjs.iu.edu/registry
+{{< /code >}}
 
 ### Installing via NPM
-Once you have this file in your project you can run:
-```bash
-npm install rivet-uits
-```
+Once you have the `.npmrc` file configured in the root of your project, you can run the following command to install Rivet.
+
+{{< code >}}npm install uits-rivet --save-dev
+{{< /code >}}
+
+<h4 class="m-top-lg">Installation troubleshooting <span class="rvt-badge rvt-badge--warning m-right-xs">NOTE</span></h4>
+
+**Before you run the install command**:
+
+- Be sure you have installed NPM on your local computer by running `npm --v`
+- Make sure that you have configured a `.npmrc` using the instructions above
 
 ## Using Sass
 If you are using Sass in your project you can import the Rivet Sass files directly:
@@ -62,35 +70,36 @@ If you are using Sass in your project you can import the Rivet Sass files direct
 ## Hosted CSS and JavaScript
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
 
-{{< code lang="html" >}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.2.0/rivet.min.css">{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.3.1/rivet.min.css">{{< /code >}}
 
 Rivet has a minimal amount of JavaScript that is required for some components, like the [header](../components/navigation/header). Copy and paste this link and add to the end of your document, just before the closing `</body>` tag.
 
-{{< code lang="html" >}}<script src="https://assets.uits.iu.edu/javascript/rivet/0.2.0/rivet.min.js"></script>{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/0.3.1/rivet.min.js"></script>{{< /code >}}
 
 ### Starter template
 Here's a basic starter template with the hosted CSS and JavaScript hooked up. Copy and paste into your favorite editor to start using Rivet.
 
-{{< code lang="html" >}}<!DOCTYPE html>
+{{< code lang="html" analytics-label="starter template" >}}<!DOCTYPE html>
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.2.0/rivet.min.css">
+    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.3.1/rivet.min.css">
     <title>Rivet starter file</title>
 </head>
 <body>
     <header class="rvt-header" role="banner">
-        <div class="rvt-header__trident">
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
-                <title id="iu-logo">Indiana University</title>
-                <rect width="60" height="70" fill="#900"/>
-                <polygon points="35.96 18.44 35.96 21.84 38.52 21.84 38.52 40.51 33.41 40.51 33.41 15.9 35.96 15.9 35.96 12.5 24.04 12.5 24.04 15.9 26.58 15.9 26.58 40.51 21.48 40.51 21.48 21.84 24.04 21.84 24.04 18.44 12.09 18.44 12.09 21.84 14.65 21.84 14.65 43.79 18.72 48.15 26.58 48.15 26.58 53.26 24.04 53.26 24.04 57.5 35.96 57.5 35.96 53.26 33.41 53.26 33.41 48.15 40.93 48.15 45.33 43.79 45.33 21.84 47.91 21.84 47.91 18.44 35.96 18.44" fill="#fff"/>
-            </svg>
-        </div>
-        <h1 class="rvt-header__title">
-            <a href="#0">Application Title</a>
-        </h1>
+    <a class="rvt-skip-link" href="#main-content">Skip to content</a>
+    <div class="rvt-header__trident">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
+            <title id="iu-logo">Indiana University</title>
+            <rect width="60" height="70" fill="#900"/>
+            <polygon points="35.96 18.44 35.96 21.84 38.52 21.84 38.52 40.51 33.41 40.51 33.41 15.9 35.96 15.9 35.96 12.5 24.04 12.5 24.04 15.9 26.58 15.9 26.58 40.51 21.48 40.51 21.48 21.84 24.04 21.84 24.04 18.44 12.09 18.44 12.09 21.84 14.65 21.84 14.65 43.79 18.72 48.15 26.58 48.15 26.58 53.26 24.04 53.26 24.04 57.5 35.96 57.5 35.96 53.26 33.41 53.26 33.41 48.15 40.93 48.15 45.33 43.79 45.33 21.84 47.91 21.84 47.91 18.44 35.96 18.44" fill="#fff"/>
+        </svg>
+    </div>
+    <span class="rvt-header__title">
+        <a href="#0">Application Title</a>
+    </span>
     </header>
     <main role="main">
 
@@ -120,7 +129,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
             </li>
         </ul>
     </footer>
-    <script src="https://assets.uits.iu.edu/javascript/rivet/0.2.0/rivet.min.js"></script>
+    <script src="https://assets.uits.iu.edu/javascript/rivet/0.3.1/rivet.min.js"></script>
 </body>
 </html>
 {{< /code >}}
