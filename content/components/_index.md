@@ -45,7 +45,7 @@ Rivet is also available to include in as a dependency in your app via NPM. To us
 1. Create a file in the root of your project at the same level as your `package.json` called `.npmrc`.
 2. Add the following snippet to your newly created `.npmrc` and save the file.
 
-{{< code >}}registry=https://npmjs.iu.edu/registry
+{{< code >}}registry=https://npmjs.iu.edu/public/registry
 {{< /code >}}
 
 ### Installing via NPM
