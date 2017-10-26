@@ -6,13 +6,18 @@ description: Rivet can be integrated with any frontend Javascript framework, inc
 ## Frontend Javascript frameworks
 
 Rivet comes with a vanilla Javascript file to handle opening/closing modals, closing alerts, opening drop-down menus and toggling the drawer. If you are using a frontend Javascript framework in your project, you may need to remove this vanilla Javascript file and rewrite your own Javascript to fit your framework's needs.
-This tutorial will look at the **Alert** component and how it's managed in Rivet and how to rewrite the Javascript for your framework. We will frame the tutorial around the **React** framework but the same rules can be applied to Angular and VueJS. 
+This tutorial will look at the [Alert]("/components/overlays/alerts/") component and how it's managed in Rivet and how to rewrite the Javascript for your framework. We will frame the tutorial around the [React]("https://reactjs.org") framework but the same rules can be applied to Angular and VueJS. 
 
-*NOTE: Rivet's Javascript uses DOM selectors to manipulate elements, where frameworks like React will manage state within components and output a virtual DOM. These are two very different approaches for handling state, but the goal we are trying to accomplish remains the same, adding a class or removing an element from the DOM, for example.*
+*NOTE: Rivet's Javascript uses [DOM selectors]("https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll") to manipulate elements, where frameworks like [React will manage state]("https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class") within components and output a virtual DOM. These are two very different approaches for handling state, but the goal we are trying to accomplish remains the same, adding a class or removing an element from the DOM, for example.*
 
 ### Alert
 
-The alert component contains state to manage whether it's open or closed.
+The alert component can contain a button to close the alert and remove it from the DOM. We will look at how it's done in Rivet's vanilla Javascript. Then we will look at how to take the same rules and apply them to React. First, let's start basic and show an Alert component **without the close button**.
+
+
+
+
+#### Vanilla implementation (default)
 
 #### Properties:
 
