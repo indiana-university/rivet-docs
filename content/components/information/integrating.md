@@ -1,16 +1,14 @@
 ---
-title: Rivet is framework agnostic
-description: Rivet is not tied to any specific frontend Javascript framework. It comes with vanilla Javascript for opening modals, closing alerts, opening dropdowns, and toggling the drawer, but this vanilla Javascript can be built in a frontend Javascript framework of your choosing.
+title: Integrating Rivet
+description: Rivet can be integrated with any frontend Javascript framework, including React, Angular and VueJS.
 ---
 
-## Framework agnostic
-There are a few different frontend Javascript frameworks being used at IU including:
+## Frontend Javascript frameworks
 
- - **React**
- - Angular
- - VueJS
+Rivet comes with a vanilla Javascript file to handle opening/closing modals, closing alerts, opening drop-down menus and toggling the drawer. If you are using a frontend Javascript framework in your project, you may need to remove this vanilla Javascript file and rewrite your own Javascript to fit your framework's needs.
+This tutorial will look at the **Alert** component and how it's managed in Rivet and how to rewrite the Javascript for your framework. We will frame the tutorial around the **React** framework but the same rules can be applied to Angular and VueJS. 
 
-This tutorial will look at the **Alert** component and how to include it into your frontend Javascript framework. We will frame the tutorial around **React** but the same rules can be applied to Angular and VueJS.
+*NOTE: Rivet's Javascript uses DOM selectors to manipulate elements, where frameworks like React will manage state within components and output a virtual DOM. These are two very different approaches for handling state, but the goal we are trying to accomplish remains the same, adding a class or removing an element from the DOM, for example.*
 
 ### Alert
 
