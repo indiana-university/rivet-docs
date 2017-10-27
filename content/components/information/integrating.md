@@ -128,7 +128,7 @@ Next up we'll write a method for our alert component that will update the `isDis
 
 Finally, we'll add an `onClick` attribute to the alert dismiss button that uses the `dismissAlert()` method we created above.
 
-{{< code lang="javascript" >}}<button className="rvt-alert__dismiss" onClick={this.closeAlert}>
+{{< code lang="javascript" >}}<button className="rvt-alert__dismiss" onClick={this.dismissAlert}>
     ...
 </button>
 {{< /code >}}
@@ -159,7 +159,7 @@ export default class Alert extends React.Component {
                  aria-labelledby={id}>
                 <h1 className="rvt-alert__title" id={id}>{ title }</h1>
                 <p className="rvt-alert__message">{ children }</p>
-                <button className="rvt-alert__dismiss" onClick={this.closeAlert}>
+                <button className="rvt-alert__dismiss" onClick={this.dismissAlert}>
                     <span className="v-hide">Dismiss this alert</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                         <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" />
@@ -172,20 +172,16 @@ export default class Alert extends React.Component {
 {{< /code >}}
 
 ## Putting it all together
-The last step we need to add is conditionally showing the alert based on the state of of our `isDismissed` property. To do this we'll use a conditional (ternary) operator inside the `return()` function to check the status of the `isDismissed` variable and render the alert if it is false. Also note that we have wrapped our alert in an extra `<div>` element because React components need a root element to render before any JavaScript expressions are ran.
+The last step we need to add is conditionally showing the alert based on the state of of our `isDismissed` property. To do this we'll use a conditional (ternary) operator with the `return` statement to check the status of the `isDismissed` variable and render the alert if it is false.
 
 {{< code lang="javascript" >}}
-return (
-    <div>
-        { this.state.isDismissed ? null :
-            <div className={`rvt-alert rvt-alert--${ type ? type : 'info' }`}
-                 role="alertdialog"
-                 aria-labelledby={id}>
+return this.state.isDismissed ? null : (
+    <div className={`rvt-alert rvt-alert--${ type ? type : 'info' }`}
+         role="alertdialog"
+         aria-labelledby={id}>
 
-                 ... Alert JSX
+         ... Alert JSX
 
-            </div>
-        } // End of conditional operator
     </div>
 );
 {{< /code >}}
@@ -196,18 +192,21 @@ Now we should have a working Rivet alert component ready to use in your React pr
 Now we can use our alert component in our app like so:
 
 {{< code lang="html" >}}
-<Alert title="Thank you" type="success" id="alert-001">
+<Alert
+    type="success"
+    title="Thank you!"
+    id="001">
     We have received your application. Check your email in a few weeks to find out if you’ve been admitted.
 </Alert>
 {{< /code >}}
 
 Just to recap here's our final React component.
 
-{{< code lang="javascript" >}}export default class Alert extends React.Component {
+{{< code lang="javascript" >}}class Alert extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = { isDismissed: false }
-        this.dismissAlert = this.dismissAlert.bind(this)
+        this.dismissAlert = this.dismissAlert.bind(this);
     }
 
     dismissAlert() {
@@ -219,24 +218,27 @@ Just to recap here's our final React component.
     render() {
         const {children, title, type, id} = this.props;
 
-        return (
-            <div>
-                { this.state.isDismissed ? null :
-                    <div className={`rvt-alert rvt-alert--${ type ? type : 'info' }`}
-                         role="alertdialog"
-                         aria-labelledby={id}>
-                        <h1 className="rvt-alert__title" id={id}>{ title }</h1>
-                        <p className="rvt-alert__message">{ children }</p>
-                        <button className="rvt-alert__dismiss">
-                            <span className="v-hide">Dismiss this alert</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" />
-                            </svg>
-                        </button>
-                    </div>
-                }
+        return this.state.isDismissed ? null : (
+            <div className={`rvt-alert rvt-alert--${ type ? type : 'info' }`}
+                 role="alertdialog"
+                 aria-labelledby={id}>
+                <h1 className="rvt-alert__title" id={id}>{ title }</h1>
+                <p className="rvt-alert__message">{ children }</p>
+                <button className="rvt-alert__dismiss" onClick={this.dismissAlert}>
+                    <span className="v-hide">Dismiss this alert</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" />
+                    </svg>
+                </button>
             </div>
         );
     }
 }
 {{< /code >}}
+
+## Example
+You can have a look at the Alert component we just created on Codepen. Do you have any ideas on how to improve it or make it more flexible? Let us know!
+
+{{< button variant="secondary button--small m-bottom-xxl" url="https://codepen.io/levimcg/pen/rYBEXJ/" >}}
+    Edit on Codepen
+{{< /button >}}
