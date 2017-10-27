@@ -67,59 +67,167 @@ Finally, we loop through all the alert dismiss buttons on the page and attach an
 {{< /code >}}
 
 ## Translating to React
-Rather than selecting an element from the DOM and using that as state, React components manage their own state.
+React takes a different approach where all of a components markup and methods are written together in a single component. Rather than manipulating it directly, React keeps a virtual copy of the DOM and (re)renders it based on some data that get's passed into a component.
 
-```javascript
-constructor(props) {
-    super(props)
-    this.state = { closed: false }
-}
-```
+First we'll look at how to translate regular HTML from Rivet into the syntax used in React called JSX. This example shows the basic structure of how we might start to covert a Rivet alert.
 
-Next we want to define a method for handling when the button is clicked.
-
-```javascript
-closeAlert() {
-    this.setState({
-        closed: true
-    });
-}
-```
-
-Finally we want to bind the click event to the button and call the method for closing the alert.
-
-```html
-<button onClick={this.closeAlert} className="rvt-alert__dismiss">...</button>
-```
-
-You can see similarities with the approach vanilla Javascript and React take to dismiss an alert. The main difference, however, is how you are managing state: with vanilla JS, the DOM is the state, and with React each component has its own state object which the (virtual) DOM updates based on.
-
-## React Alert example
 {{< code >}}import React from 'react'
 
 export default class Alert extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { closed: false }
-        this.closeAlert = this.closeAlert.bind(this)
     }
 
-    closeAlert() {
+    render() {
+        const {children, title, type, id} = this.props;
+
+        return (
+            <div className={`rvt-alert rvt-alert--${ type ? type : 'info' }`}
+                 role="alertdialog"
+                 aria-labelledby={id}>
+                <h1 className="rvt-alert__title" id={id}>{ title }</h1>
+                <p className="rvt-alert__message">{ children }</p>
+                <button className="rvt-alert__dismiss">
+                    <span className="v-hide">Dismiss this alert</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" />
+                    </svg>
+                </button>
+            </div>
+        );
+    }
+}
+{{< /code >}}
+
+In the example above we've done a few things.
+
+1. We added the Rivet alert markup to our component's `return()` function.
+2. Then we converted our HTML to [JSX syntax](https://reactjs.org/docs/introducing-jsx.html). For example we converted any instance of `class` to `className`.
+3. Lastly, we passed in our `title`, `type`, `id`, props along with React's special `children` prop.
+
+### Dismissing the alert
+At this point we have a functional React component, but no way to use the dismiss button. Now we're going to start thinking about managing our alert component's state. To do that we'll need to add a few lines to our component.
+
+First we'll add a `state` object to our `constructor()` function with a property called `isDismissed` and set it's initial value to `false`.
+
+{{< code lang="javascript" >}}constructor(props) {
+    super(props)
+    // This is where we manage state
+    this.state = { isDismissed: false }
+}
+{{< /code >}}
+
+Next up we'll write a method for our alert component that will update the `isDismissed` property using React's `setState()` method. We'll use this later to add dismiss functionality to the dismiss button.
+
+{{< code lang="javascript" >}}dismissAlert() {
+    this.setState({
+        isDismissed: true
+    });
+}
+{{< /code >}}
+
+Finally, we'll add an `onClick` attribute to the alert dismiss button that uses the `dismissAlert()` method we created above.
+
+{{< code lang="javascript" >}}<button className="rvt-alert__dismiss" onClick={this.closeAlert}>
+    ...
+</button>
+{{< /code >}}
+
+Now our component should look something like the example below. We have converted our Rivet markup to JSX, passed in our `props`, added our state object and written a method to handle dismissing our alert. Note, how we have to `bind()` the context of the new `dismissAlert()` method inside our component's `constructor()` function. You can read more about why in the [React docs](https://reactjs.org/docs/hello-world.html).
+
+{{< code >}}import React from 'react'
+
+export default class Alert extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = { isDismissed: false }
+        this.dismissAlert = this.dismissAlert.bind(this)
+    }
+
+    dismissAlert() {
         this.setState({
-            closed: true
+            isDismissed: true
         });
     }
 
     render() {
-        const {children, title, type} = this.props;
+        const {children, title, type, id} = this.props;
+
+        return (
+            <div className={`rvt-alert rvt-alert--${ type ? type : 'info' }`}
+                 role="alertdialog"
+                 aria-labelledby={id}>
+                <h1 className="rvt-alert__title" id={id}>{ title }</h1>
+                <p className="rvt-alert__message">{ children }</p>
+                <button className="rvt-alert__dismiss" onClick={this.closeAlert}>
+                    <span className="v-hide">Dismiss this alert</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" />
+                    </svg>
+                </button>
+            </div>
+        );
+    }
+}
+{{< /code >}}
+
+## Putting it all together
+The last step we need to add is conditionally showing the alert based on the state of of our `isDismissed` property. To do this we'll use a conditional (ternary) operator inside the `return()` function to check the status of the `isDismissed` variable and render the alert if it is false. Also note that we have wrapped our alert in an extra `<div>` element because React components need a root element to render before any JavaScript expressions are ran.
+
+{{< code lang="javascript" >}}
+return (
+    <div>
+        { this.state.isDismissed ? null :
+            <div className={`rvt-alert rvt-alert--${ type ? type : 'info' }`}
+                 role="alertdialog"
+                 aria-labelledby={id}>
+
+                 ... Alert JSX
+
+            </div>
+        } // End of conditional operator
+    </div>
+);
+{{< /code >}}
+
+## Wrapping up
+Now we should have a working Rivet alert component ready to use in your React projects. We've purposefully kept this article simple, but you could get do more interesting that would make this component more flexible like passing in a prop that would make a dismiss button optional.
+
+Now we can use our alert component in our app like so:
+
+{{< code lang="html" >}}
+<Alert title="Thank you" type="success" id="alert-001">
+    We have received your application. Check your email in a few weeks to find out if you’ve been admitted.
+</Alert>
+{{< /code >}}
+
+Just to recap here's our final React component.
+
+{{< code lang="javascript" >}}export default class Alert extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = { isDismissed: false }
+        this.dismissAlert = this.dismissAlert.bind(this)
+    }
+
+    dismissAlert() {
+        this.setState({
+            isDismissed: true
+        });
+    }
+
+    render() {
+        const {children, title, type, id} = this.props;
 
         return (
             <div>
-                { !this.state.closed &&
-                    <div className={`rvt-alert rvt-alert--${ type ? type : 'info' } rvt-m-bottom-md`} role="alertdialog" aria-labelledby={`${btoa(title)}-alert-title`}>
-                        <h1 className="rvt-alert__title" id={`${btoa(title)}-alert-title`}>{ title }</h1>
+                { this.state.isDismissed ? null :
+                    <div className={`rvt-alert rvt-alert--${ type ? type : 'info' }`}
+                         role="alertdialog"
+                         aria-labelledby={id}>
+                        <h1 className="rvt-alert__title" id={id}>{ title }</h1>
                         <p className="rvt-alert__message">{ children }</p>
-                        <button className="rvt-alert__dismiss" onClick={this.closeAlert}>
+                        <button className="rvt-alert__dismiss">
                             <span className="v-hide">Dismiss this alert</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" />
@@ -132,67 +240,3 @@ export default class Alert extends React.Component {
     }
 }
 {{< /code >}}
-
-### React example usage:
-
-{{< code >}}import Alert from "Alert"
-
-<Alert title="Scheduled System Maintenance">This system will be unavailable on August 1st due to scheduled system maintenance. Please check back on August 2nd.</Alert>
-<Alert type="message" title="Unsaved Changes">Your changes have not been saved. To save your changes, click "Save my changes" or click "Cancel" to exit without saving.</Alert>
-<Alert type="success" title="Thank you!">We have received your application. Check your email in a few weeks to find out if you?ve been admitted.</Alert>
-<Alert type="error" title="Incorrect User ID or Password">The user ID and password you entered do not match. Please check your entries and try again. <a href="#0">Forgot your user ID or password?</a></Alert>
-{{< /code >}}
-
-___
-# Below is old stuff that we may or may not use.
-
-#### Properties:
-
-**type**
-
-The Alert component can be passed a property `type` which can be:
-
- - success
- - message
- - error
- - base (default if no type property passed)
-
-_Property usage:_
-
-```
-className={`rvt-alert rvt-alert--${ type ? type : 'info' }`}
-```
-
-**title**
-
-The alert component should be passed a title that appears as an h1 in the alert
-
-_Property usage:_
-
-`<h1 className="rvt-alert__title" id="alert-title">{ title }</h1>`
-
-#### Children
-
-The Alert component can contain children as plain text, which is the message of the alert.
-
-`<p className="rvt-alert__message">{ children }</p>`
-
-#### State:
-
-`{ closed: false }`
-
-_State usage:_
-
-Add `.display-none` class to the `.rvt-alert` div if the closed state becomes true
-
-`{ this.state.closed ? 'display-none' : '' }`
-
-#### Methods:  
-
-`closeAlert() // sets closed to true `
-
-_Method usage:_
-
-`<button className="rvt-alert__dismiss" onClick={this.closeAlert}>`
-
----
