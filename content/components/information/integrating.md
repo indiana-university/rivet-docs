@@ -4,14 +4,21 @@ description: Rivet can be integrated with any frontend Javascript framework, inc
 ---
 
 ## Frontend JavaScript frameworks
+Rivet comes with a vanilla JavaScript file to handle the following:
 
-Rivet comes with a vanilla Javascript file to handle opening/closing modals, dismissing alerts, opening drop-down
-menus and toggling the drawer. If you are using a frontend JavaScript framework, you may need adapt Rivet to suit the needs of your application.
+- opening and closing modals
+- dismissing alerts
+- opening drop-down menus
+- toggling the drawer
 
-In this article we'll look at the [Alert](/components/overlays/alerts/) component and how you might go about translating it's functionality to a frontend JavaScript framework. For our example we'll be using [React](https://reactjs.org), but the same concepts could be applied to [Angular](https://angularjs.org/) and [VueJS](https://vuejs.org/).
+If you’re using a frontend JavaScript framework, you may need adapt Rivet to suit the needs of your application.
+
+In this article we'll look at the [alert](/components/overlays/alerts/) component component and show how you can translate its functionality to a frontend JavaScript framework. We’ll use [React](https://reactjs.org) for our example, but you can apply the same concepts to [Angular](https://angularjs.org/) and [VueJS](https://vuejs.org/).
 
 ## Rivet's included JavaScript
-Rivet's JavaScript takes traditional DOM manipulation approach to interactivity using browser APIs like `querySelectorAll()` to get DOM elements and manipulate their attributes. In frameworks like React, interactivity is managed by binding those attributes to data or [state](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class). These are two different approaches for handling the interactive aspects of a component, but the goal we are trying to accomplish remains the same, adding a class or removing an element from the DOM, for example.
+Rivet's JavaScript takes traditional DOM manipulation approach to interactivity using browser APIs like `querySelectorAll()` to get DOM elements and manipulate their attributes. Frameworks like React manage interactivity by binding those attributes to data or [state](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class).
+
+These are two different approaches for handling the interactive aspects of a component, but we can use either approach to accomplish the same goal. (For example, we could add a class or remove an element from the DOM using either approach.)
 
 ## The Rivet Alert
 Without any JavaScript involved, the base Alert component can still be used to display messages that cannot be dismissed, for example:
@@ -27,7 +34,7 @@ Without any JavaScript involved, the base Alert component can still be used to d
 {{< /example >}}
 
 ### Dismissible alert
-In some cases, it's a better user experience to allow the user to dismiss the alert message. We can add a close button to remove it from the DOM.
+In some cases, it’s a better user experience to allow the user to dismiss the alert message. We can add a close button to remove it from the DOM.
 
 {{< example lang="html" >}}<div class="rvt-alert rvt-alert--success rvt-m-bottom-md m-top-sm" role="alertdialog" aria-labelledby="success-alert-title">
 <h1 class="rvt-alert__title" id="success-alert-title">Thank you!</h1>
@@ -41,15 +48,15 @@ In some cases, it's a better user experience to allow the user to dismiss the al
 </div>
 {{< /example >}}
 
-## Breaking it down
-Let's first look at how the dismiss functionality is implemented in the Rivet JS. Then we will look at how to take the same rules and apply them to React.
+## Breaking down Rivet’s JS
+We’ll first look at how the dismiss functionality is implemented in Rivet’s JS. In the next section, we’ll review how to apply the same rules to React.
 
 In Rivet's JS we use `querySelectorAll()` to get all of the `.rvt-alert__dismiss` buttons on the page.
 
 {{< code lang="javascript" >}}var dismissButtons = document.querySelectorAll('.rvt-alert__dismiss, .alert__dismiss');
 {{< /code >}}
 
-Next, we use a function called `dismissAlert` that will find the parent element of the dismiss button, which is the `.rvt-alert` itself.
+Next, we use a function called `dismissAlert`. This will find the dismiss button’s parent element, which is`.rvt-alert`.
 
 {{< code lang="javascript" >}}var dismissAlert = function(context) {
     var elToDismiss = context.parentNode;
@@ -57,7 +64,7 @@ Next, we use a function called `dismissAlert` that will find the parent element 
 }
 {{< /code >}}
 
-Finally, we loop through all the alert dismiss buttons on the page and attach an event listener that will remove the alert when clicked.
+Finally, we loop through all the alert dismiss buttons on the page and attach an event listener. This event listener will remove the alert when clicked.
 
 {{< code lang="javascript" >}}for (var i = 0; i < els.length; i++) {
     els[i].addEventListener('click', function() {
@@ -67,9 +74,9 @@ Finally, we loop through all the alert dismiss buttons on the page and attach an
 {{< /code >}}
 
 ## Translating to React
-React takes a different approach where all of a components markup and methods are written together in a single component. Rather than manipulating it directly, React keeps a virtual copy of the DOM and (re)renders it based on some data that get's passed into a component.
+React takes a different approach where all of a component’s markup and methods are written together in a single component. Rather than manipulating it directly, React keeps a virtual copy of the DOM and (re)renders it based on some data that gets passed into a component.
 
-First we'll look at how to translate regular HTML from Rivet into the syntax used in React called JSX. This example shows the basic structure of how we might start to covert a Rivet alert.
+This example shows the basic structure of how we might start to covert a Rivet alert.
 
 {{< code >}}import React from 'react'
 
@@ -102,13 +109,13 @@ export default class Alert extends React.Component {
 In the example above we've done a few things.
 
 1. We added the Rivet alert markup to our component's `return()` function.
-2. Then we converted our HTML to [JSX syntax](https://reactjs.org/docs/introducing-jsx.html). For example we converted any instance of `class` to `className`.
-3. Lastly, we passed in our `title`, `type`, `id`, props along with React's special `children` prop.
+2. Then we converted our HTML to [JSX syntax](https://reactjs.org/docs/introducing-jsx.html), the syntax used in React. For example we converted any instance of `class` to `className`.
+3. Lastly, we passed in our `title`, `type`, `id`, `props` along with React's special `children` `prop`.
 
 ### Dismissing the alert
-At this point we have a functional React component, but no way to use the dismiss button. Now we're going to start thinking about managing our alert component's state. To do that we'll need to add a few lines to our component.
+At this point we have a functional React component, but we don’t have a way to use the dismiss button. Now we need to start managing our alert component’s state. To do that, we need to add a few lines of code to our component.
 
-First we'll add a `state` object to our `constructor()` function with a property called `isDismissed` and set it's initial value to `false`.
+First we'll add a `state` object to our `constructor()` function with a property called `isDismissed`. We’ll also set its initial value to `false`.
 
 {{< code lang="javascript" >}}constructor(props) {
     super(props)
@@ -133,7 +140,9 @@ Finally, we'll add an `onClick` attribute to the alert dismiss button that uses 
 </button>
 {{< /code >}}
 
-Now our component should look something like the example below. We have converted our Rivet markup to JSX, passed in our `props`, added our state object and written a method to handle dismissing our alert. Note, how we have to `bind()` the context of the new `dismissAlert()` method inside our component's `constructor()` function. You can read more about why in the [React docs](https://reactjs.org/docs/hello-world.html).
+Now our component should look something like the example below. We have converted our Rivet markup to JSX, passed in our `props`, added our state object, and written a method to dismiss our alert.
+
+Note, how we have to `bind()` the context of the new `dismissAlert()` method inside our component's `constructor()` function. You can read more about why in the [React docs](https://reactjs.org/docs/hello-world.html).
 
 {{< code >}}import React from 'react'
 
@@ -172,10 +181,9 @@ export default class Alert extends React.Component {
 {{< /code >}}
 
 ## Putting it all together
-The last step we need to add is conditionally showing the alert based on the state of of our `isDismissed` property. To do this we'll use a conditional (ternary) operator with the `return` statement to check the status of the `isDismissed` variable and render the alert if it is false.
+The last step we need to add is conditionally showing the alert based on the state of of our `isDismissed` property. To do this we'll use a conditional (ternary) operator with the `return` statement. This will check the status of the  `isDismissed` variable and render the alert if it is false.
 
-{{< code lang="javascript" >}}
-return this.state.isDismissed ? null : (
+{{< code lang="javascript" >}}return this.state.isDismissed ? null : (
     <div className={`rvt-alert rvt-alert--${ type ? type : 'info' }`}
          role="alertdialog"
          aria-labelledby={id}>
@@ -187,7 +195,7 @@ return this.state.isDismissed ? null : (
 {{< /code >}}
 
 ## Wrapping up
-Now we should have a working Rivet alert component ready to use in your React projects. We've purposefully kept this article simple, but you could get do more interesting that would make this component more flexible like passing in a prop that would make a dismiss button optional.
+Now we have a working Rivet alert component ready to use in React projects. We’ve purposefully kept this article simple, but you could do more interesting things that would make this component more flexible, like passing in a `prop` that would make a dismiss button optional.
 
 Now we can use our alert component in our app like so:
 
@@ -200,7 +208,7 @@ Now we can use our alert component in our app like so:
 </Alert>
 {{< /code >}}
 
-Just to recap here's our final React component.
+Just to recap here's the code for our final React component:
 
 {{< code lang="javascript" >}}class Alert extends React.Component {
     constructor(props) {
@@ -237,7 +245,7 @@ Just to recap here's our final React component.
 {{< /code >}}
 
 ## Example
-You can have a look at the Alert component we just created on Codepen. Do you have any ideas on how to improve it or make it more flexible? Let us know!
+You can have a look at the alert component we just created on Codepen. Do you have any ideas on how to improve it or make it more flexible? Let us know!
 
 <p data-height="300" data-theme-id="13463" data-slug-hash="rYBEXJ" data-default-tab="js,result" data-user="levimcg" data-embed-version="2" data-pen-title="Rivet React alert" class="codepen">See the Pen <a href="https://codepen.io/levimcg/pen/rYBEXJ/">Rivet React alert</a> by Levi McGranahan (<a href="https://codepen.io/levimcg">@levimcg</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
