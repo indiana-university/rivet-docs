@@ -6,10 +6,10 @@ description: Rivet can be integrated with any frontend Javascript framework, inc
 ## Frontend JavaScript frameworks
 Rivet comes with a vanilla JavaScript file to handle the following:
 
-- opening and closing modals
-- dismissing alerts
-- opening drop-down menus
-- toggling the drawer
+- opening and closing [modals](/components/overlays/modals)
+- dismissing [alerts](/components/overlays/alerts)
+- opening [drop-down menus in the header](/components/navigation/header#main-navigation-with-dropdowns)
+- toggling the drawer in the [header](/components/navigation/header)
 
 If you’re using a frontend JavaScript framework, you may need to adapt Rivet to suit the needs of your application.
 
