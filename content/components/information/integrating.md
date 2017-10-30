@@ -11,7 +11,7 @@ Rivet comes with a vanilla JavaScript file to handle the following:
 - opening drop-down menus
 - toggling the drawer
 
-If you’re using a frontend JavaScript framework, you may need adapt Rivet to suit the needs of your application.
+If you’re using a frontend JavaScript framework, you may need to adapt Rivet to suit the needs of your application.
 
 In this article we'll look at the [alert](/components/overlays/alerts/) component component and show how you can translate its functionality to a frontend JavaScript framework. We’ll use [React](https://reactjs.org) for our example, but you can apply the same concepts to [Angular](https://angularjs.org/) and [VueJS](https://vuejs.org/).
 
