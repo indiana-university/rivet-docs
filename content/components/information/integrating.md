@@ -239,6 +239,5 @@ Just to recap here's our final React component.
 ## Example
 You can have a look at the Alert component we just created on Codepen. Do you have any ideas on how to improve it or make it more flexible? Let us know!
 
-{{< button variant="secondary button--small m-bottom-xxl" url="https://codepen.io/levimcg/pen/rYBEXJ/" >}}
-    Edit on Codepen
-{{< /button >}}
+<p data-height="300" data-theme-id="13463" data-slug-hash="rYBEXJ" data-default-tab="js,result" data-user="levimcg" data-embed-version="2" data-pen-title="Rivet React alert" class="codepen">See the Pen <a href="https://codepen.io/levimcg/pen/rYBEXJ/">Rivet React alert</a> by Levi McGranahan (<a href="https://codepen.io/levimcg">@levimcg</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
