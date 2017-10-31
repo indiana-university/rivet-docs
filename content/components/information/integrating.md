@@ -199,8 +199,7 @@ Now we have a working Rivet alert component ready to use in React projects. Weâ€
 
 Now we can use our alert component in our app like so:
 
-{{< code lang="html" >}}
-<Alert
+{{< code lang="html" >}}<Alert
     type="success"
     title="Thank you!"
     id="001">
