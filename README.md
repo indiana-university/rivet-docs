@@ -4,7 +4,7 @@ This is the source for the Rivet documentation site. It is built with [Hugo](htt
 ```
 git clone https://github.iu.edu/UITS/rivet-docs-source.git
 cd rivet-docs-source
-npm install
+echo "registry=https://npmjs.iu.edu/public/registry" > .npmrc && npm install
 gulp
 ```
 You should be able to browse a local version of the site at http://localhost:3000
