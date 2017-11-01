@@ -64,7 +64,7 @@ Once you have the `.npmrc` file configured in the root of your project, you can 
 ## Using Sass
 If you are using Sass in your project you can import the Rivet Sass files directly:
 
-{{< code lang="css" >}}@import "./your-path-to-rivet/sass/rivet.scss"
+{{< code lang="css" >}}@import "./node_modules/rivet-uits/sass/rivet.scss"
 {{< /code >}}
 
 ## Hosted CSS and JavaScript
