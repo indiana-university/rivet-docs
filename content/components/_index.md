@@ -8,6 +8,14 @@ sectionNav: true
 ## Get started
 The Rivet components documentation contains examples, code snippets, and guidance on UX best-practices. Visit the [**How to use**](../how-to-use) section to see all the ways you can use Rivet in your project and see some example implementations of Rivet.
 
+### Stay up to date
+Rivet is new and we're constantly adding new components and features as we work toward the official, version 1.0 release. Join the email list to get updates on new features, examples, and how-to guides.
+
+<div class="rvt-button-group">
+{{< button url="https://list.iu.edu/sympa/info/rivet-l" analytics-category="click">}}Subscribe{{< /button >}}
+{{< button url="https://list.iu.edu/sympa/sigrequest/rivet-l" variant="plain" analytics-category="click">}}Manage your settings{{< /button >}}
+</div>
+
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
