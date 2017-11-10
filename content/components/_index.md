@@ -5,6 +5,15 @@ navTitle: "Components"
 weight: 2
 sectionNav: true
 ---
+## Stay up to date
+
+Rivet is new and we're quickly adding components and features as we work toward the official version 1.0 release. Join the email list to get updates on new features, examples, and how-to guides.
+
+<div class="rvt-button-group">
+{{< button url="https://list.iu.edu/sympa/subscribe/rivet-l" analytics-category="click">}}Subscribe{{< /button >}}
+{{< button url="https://list.iu.edu/sympa/sigrequest/rivet-l" variant="plain" analytics-category="click">}}Manage your settings{{< /button >}}
+</div>
+
 ## Get started
 The Rivet components documentation contains examples, code snippets, and guidance on UX best-practices. Visit the [**How to use**](../how-to-use) section to see all the ways you can use Rivet in your project and see some example implementations of Rivet.
 
@@ -64,7 +73,7 @@ Once you have the `.npmrc` file configured in the root of your project, you can 
 ## Using Sass
 If you are using Sass in your project you can import the Rivet Sass files directly:
 
-{{< code lang="css" >}}@import "./your-path-to-rivet/sass/rivet.scss"
+{{< code lang="css" >}}@import "./node_modules/rivet-uits/sass/rivet.scss"
 {{< /code >}}
 
 ## Hosted CSS and JavaScript
