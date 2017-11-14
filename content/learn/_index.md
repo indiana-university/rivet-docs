@@ -29,7 +29,8 @@ A design system strips assets down to their barest essentials. These lightweight
 Bootstrap is just one of many front-end frameworks used in software development. It’s fast and easy to implement. But it’s also full of rarely used extras, leading to bloated code. Teams using Bootstrap often build additional layers of customization above the base code.
 
 <figure class="rvtd-article-figure p-top-xxl p-bottom-xxl">
-    <img src="/img/docs/rvtd-bootstrap-diagram.png" alt=" ">
+    <img src="/img/docs/rvtd-bootstrap-diagram.png" alt="This diagram shows how developers have to layer customization on top of Bootstrap code">
+    <figcaption>Layers of customization</figcaption>
 </figure>
 
 This means design patterns and styles are often different from those of the organization. Further, original designs can be difficult to implement in Bootstrap’s structured environment, particularly within tight timelines.
