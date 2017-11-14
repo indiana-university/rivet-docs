@@ -25,8 +25,14 @@ Software is considered a product, but it doesn’t wear out or get replaced (unl
 
 A design system strips assets down to their barest essentials. These lightweight pieces rely on simplified code - so they are much easier to update or upgrade. Dan Cedarholm, author of _Bulletproof Web Design_, said it best: “Breaking interfaces down into patterns has been immensely helpful in learning and re-evaluating the best possible code to implement.”
 
-## Why not bootstrap
-Bootstrap is just one of many front-end frameworks used in software development. It’s fast and easy to implement. But it’s also full of rarely used extras, leading to bloated code. Teams using Bootstrap often build additional layers of customization above the base code. This means design patterns and styles are often different from those of the organization. Further, original designs can be difficult to implement in Bootstrap’s structured environment, particularly within tight timelines.
+## Why not Bootstrap
+Bootstrap is just one of many front-end frameworks used in software development. It’s fast and easy to implement. But it’s also full of rarely used extras, leading to bloated code. Teams using Bootstrap often build additional layers of customization above the base code.
+
+<figure class="rvtd-article-figure p-top-xxl p-bottom-xxl">
+    <img src="/img/docs/rvtd-bootstrap-diagram.png" alt=" ">
+</figure>
+
+This means design patterns and styles are often different from those of the organization. Further, original designs can be difficult to implement in Bootstrap’s structured environment, particularly within tight timelines.
 
 > “How do we create a consistent visual library and unified patterns across a range of systems?"
 
@@ -39,8 +45,12 @@ While Bootstrap offers developers much in the way of markup and CSS, there are s
 But it’s difficult to ignore Bootstrap’s benefits: It offers a starting place for developers and designers and a consistent visual library, which is why so many teams use it (especially at the enterprise level). So at this point, the question becomes: How do we create something similar that also addresses IU’s needs?
 
 ## Rivet — a sustainable, responsive design system for IU
-With familiarity being a key component of usability, IU needs a toolset of its own for creating web applications. Rivet is a lightweight, intentional, and focused set of front-end components and tools that allow people at IU to have a familiar experience on all IU web applications. By having our own design system we can INCLUDE everyone and address everyone's needs.. When there are accessibility issues, we fix them right away.
+With familiarity being a key component of usability, IU needs a toolset of its own for creating web applications. Rivet is a lightweight, intentional, and focused set of front-end components and tools that allow people at IU to have a familiar experience on all IU web applications. By having our own design system we can _include_ everyone and address everyone's needs.. When there are accessibility issues, we fix them right away.
 
 > “Rivet is not just a set of UI components, it is a place for documenting good UX, accessibility, and design practices. It is a guide of when and how to use certain patterns and implement them in an accessible way."
 
 We want people to reach out to us with requests and suggestions — that way, we’re making decisions about IU software together. By using a system designed by members of the university, university developers can worry less about whether stylings match the IU brand, and focus more on actual product creation.
+
+<div class="rvt-m-top-lg">
+{{< button url="/learn/contributing-to-rivet">}}Contribute to Rivet{{< /button >}}
+</div>
