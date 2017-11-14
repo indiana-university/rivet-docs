@@ -30,7 +30,7 @@ Bootstrap is just one of many front-end frameworks used in software development.
 
 <figure class="rvtd-article-figure p-top-xxl p-bottom-xxl">
     <img src="/img/docs/rvtd-bootstrap-diagram.png" alt="This diagram shows how developers have to layer customization on top of Bootstrap code">
-    <figcaption>Layers of customization</figcaption>
+    <figcaption>Illustration of layers of customization for Bootstrap (left) versus Rivet (right).</figcaption>
 </figure>
 
 This means design patterns and styles are often different from those of the organization. Further, original designs can be difficult to implement in Bootstrap’s structured environment, particularly within tight timelines.
