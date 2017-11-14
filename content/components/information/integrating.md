@@ -1,6 +1,7 @@
 ---
 title: Integrating Rivet
 description: Rivet can be integrated with any frontend Javascript framework, including React, Angular and VueJS.
+draft: true
 ---
 
 ## Frontend JavaScript frameworks
