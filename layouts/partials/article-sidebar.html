@@ -1,0 +1,21 @@
+<aside class="rvtd-article-sidebar rvt-m-top-xxl">
+    <h1 class="rvt-ts-26 rvt-text-bold">Learn about Rivet</h1>
+    <p>Rivet is new and we’re quickly adding components and features as we work toward the official version 1.0 release. You
+        can find updates on new features, tutorials, and news about the latest release here.</p>
+    <div class="rvt-m-top-xxl">
+        <h2 class="rvt-text-uppercase rvt-m-bottom-sm rvt-ts-14">Recent articles</h2>
+        <ol class="rvtd-small-list rvt-plain-list">
+            {{ range where .Site.Sections "Section" "learn" }}
+                {{ range .Pages }}
+                <li>
+                    <h3 class="rvt-ts-21 rvt-text-bold">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h3>
+                    <p>{{ .Description }}</p>
+                    <!-- <time>{{ .Date.Format "Jan 2, 2006" }}</time> -->
+                </li>
+                {{ end }}
+            {{ end }}
+        </ol>
+    </div>
+</aside>
