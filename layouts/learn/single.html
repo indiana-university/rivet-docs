@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="rvtd-article-container rvt-container rvt-container--center rvt-container--junior">
+    <div class="rvt-grid">
+        <div class="rvt-grid__item-8-md-up">
+            <div class="rvtd-typeset rvt-p-right-lg">
+                <h1 class="rvt-text-bold">{{ .Title }}</h1>
+                <p class="rvtd-lead">{{ .Description }}</p>
+                <div class="rvtd-article-main rvtd-typeset">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+        <div class="rvt-grid__item-4-md-up rvt-grid__item--last">
+            {{ partial "article-sidebar.html" . }}
+        </div>
+    </div>
+</div>
+{{ end }}
