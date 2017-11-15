@@ -137,7 +137,7 @@ a.button--reverse-secondary {
 /**
  * These styles are for grid examples in the docs.
  */
-[class^="rvt-grid__item"] span {
+[class^="rvt-grid__item"] > span {
     display: block;
     background-color: #006298;
     color: white;
@@ -419,3 +419,63 @@ a.button--reverse-secondary {
 .rvt-header__title a:hover span {
     text-decoration: underline;
 }
+
+
+/**
+ *  For the new "Learn" section of the site.
+ */
+.rvtd-article-container {
+    margin-top: $xl;
+    margin-bottom: $xxl;
+}
+
+@include mq(bp(md)) {
+    .rvtd-article-container {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
+}
+
+
+.rvtd-article-main {
+    margin-top: $xl;
+
+    p {
+        line-height: 1.6;
+    }
+
+    figcaption {
+        color: #676767;
+        font-style: italic;
+        font-size: $ts-14;
+        margin-top: 1rem;
+    }
+}
+
+.rvtd-small-list {
+    p {
+        color: #676767;
+        margin-bottom: 0;
+    }
+
+    li {
+        line-height: 1.5;
+        padding: 1rem 0;
+        border-top: 1px solid #ddd;
+
+        a {
+            color: $color-action;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+.rvt-flat-line-height {
+    line-height: 1;
+}
+

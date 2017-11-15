@@ -4,6 +4,7 @@ title: "Rivet"
 paginate: 10
 enableEmoji: true
 params:
+    rivetVersion: 0.3.1
     tagline: "Software Design System"
     googleAnalytics: "UA-100560495-3"
     devGoogleAnalytics: "UA-100560495-4"

@@ -22,7 +22,7 @@ function hugo(includeDrafts) {
 
     var cmd = 'hugo --config=' + conf + ' -s ' + src + ' -d ' + dst;
     if (includeDrafts) {
-        cmd += ' --buildDrafts=true --baseUrl="http://localhost:3000/" ';
+        cmd += ' --buildDrafts=false --baseUrl="http://localhost:3000/" ';
     }
 
     var result = exec(cmd, {encoding: 'utf-8'});
