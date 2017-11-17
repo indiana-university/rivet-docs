@@ -9,7 +9,7 @@
 <script>
     hljs.initHighlightingOnLoad();
 </script>
-<script src="{{ "js/rivet-docs.js" | absURL }}"></script>
+<script src="{{ "js/rivet-docs.js" | absURL }}?{{ .Now.Unix }}"></script>
 <script>
 /* this snippet loads an Intercom messenger on the page */
 window.intercomSettings = {app_id: 'jv1pihi0'}; // UXO Intercom account
