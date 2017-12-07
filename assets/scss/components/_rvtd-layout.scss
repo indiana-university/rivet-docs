@@ -11,10 +11,19 @@
 
 .rvtd-nav {
     padding: $md;
+    display: none;
+}
 
-    &[aria-hidden="true"] {
-        display: none;
+.rvtd-nav.is-visible {
+    display: block;
+}
+
+@include mq(bp(md)) {
+    .rvtd-nav {
+        display: block;
     }
+
+
 }
 
 .rvtd-sidebar {
