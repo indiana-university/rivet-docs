@@ -12,7 +12,7 @@
         <a href="/"><strong>{{ .Site.Title }}</strong> <span class="rvtd-subtitle">{{ .Site.Params.tagline }}</span></a>
     </span>
     <div class="rvt-header__controls">
-        <nav class="rvt-header__main-nav" role="navigation">
+        <nav class="rvt-header__main-nav" role="navigation" aria-label="main">
             <ul>
                 {{ $currentNav := . }}
                 {{ range .Site.Sections }}
