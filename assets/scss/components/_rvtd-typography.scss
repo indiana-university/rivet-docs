@@ -42,11 +42,13 @@
     }
 
     blockquote {
-        color: #676767;
-        border-left: 2px solid #ddd;
+        color: $color-black--700;
+        border-left: 2px solid $color-black--200;
         padding-left: $sm;
         margin-top: $lg;
         margin-bottom: $lg;
+        font-size: $ts-18;
+        font-style: italic;
     }
 
     .rvtd-lead {
@@ -57,10 +59,4 @@
         padding-bottom: $xl;
         border-bottom: 1px solid $color-black--200;
     }
-}
-
-.rvtd-typeset blockquote {
-    font-size: $ts-18;
-    font-style: italic;
-    color: $color-black--600;
 }
