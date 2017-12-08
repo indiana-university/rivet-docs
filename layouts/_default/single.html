@@ -1,9 +1,5 @@
 {{ define "main" }}
     <div class="rvtd-wrap">
-        <div class="rvtd-article-nav" aria-hidden="true">
-            <p>On this page</p>
-            {{.TableOfContents}}
-        </div>
         {{ partial "sidebar.html" . }}
         <div class="rvtd-tube">
             <div class="rvtd-tube__inner rvtd-typeset">
@@ -11,6 +7,10 @@
                 <p class="rvtd-lead">{{ .Description }}</p>
                 {{ .Content }}
             </div>
+        </div>
+        <div class="rvtd-article-nav">
+            <p>On this page</p>
+            {{.TableOfContents}}
         </div>
     </div>
 {{ end }}
