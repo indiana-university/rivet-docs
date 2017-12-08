@@ -479,3 +479,18 @@ a.button--reverse-secondary {
     line-height: 1;
 }
 
+/**
+ * TODO: Back this custom button styling for close functionality into Rivet.
+ * We should be using buttons for toggling things not links.
+ */
+.rvt-drawer__bottom-close {
+    background-color: transparent;
+    border: none;
+    color: $color-link;
+    padding: 0;
+
+    &:focus {
+        display: block;
+        padding: .35rem .65rem;
+    }
+}
