@@ -13,19 +13,19 @@ With smaller amounts of data consider displaying the whole dataset in one page t
 {{< example lang="html" >}}<nav role="navigation" aria-label="Default results pages">
     <ul class="rvt-pagination">
         <li class="rvt-pagination__item">
-            <a href="#0" aria-label="Previous set of pages">Previous</a>
+            <a href="#" aria-label="Previous set of pages">Previous</a>
         </li>
         <li class="rvt-pagination__item">
-            <a href="#0" aria-label="Page 4">4</a>
+            <a href="#" aria-label="Page 4">4</a>
         </li>
         <li class="rvt-pagination__item is-active" aria-current="true">
-            <a href="#0" aria-label="Page 5, current page">5</a>
+            <a href="#" aria-label="Page 5, current page">5</a>
         </li>
         <li class="rvt-pagination__item">
-            <a href="#0" aria-label="Page 6">6</a>
+            <a href="#" aria-label="Page 6">6</a>
         </li>
         <li class="rvt-pagination__item">
-            <a href="#0" aria-label="Next set of pages">Next</a>
+            <a href="#" aria-label="Next set of pages">Next</a>
         </li>
     </ul>
 </nav>
@@ -46,22 +46,22 @@ The pagination component is left-aligned by default, but you can easily center o
 {{< example lang="html" >}}<nav role="navigation" aria-label="Right-aligned results pages">
     <ul class="rvt-pagination rvt-pagination--right">
         <li class="rvt-pagination__item is-disabled">
-            <a href="#0" aria-label="Previous pages" tabindex="-1">Previous</a>
+            <a href="#" aria-label="Previous pages" tabindex="-1">Previous</a>
         </li>
         <li class="rvt-pagination__item">
-            <a href="#0" aria-label="Page 1">1</a>
+            <a href="#" aria-label="Page 1">1</a>
         </li>
         <li class="rvt-pagination__item">
-            <a href="#0" aria-label="Page 2">2</a>
+            <a href="#" aria-label="Page 2">2</a>
         </li>
         <li class="rvt-pagination__item">
-            <a href="#0" aria-label="Page 3">3</a>
+            <a href="#" aria-label="Page 3">3</a>
         </li>
         <li class="rvt-pagination__item is-active" aria-current="true">
-            <a href="#0" aria-label="Page 4, current page">4</a>
+            <a href="#" aria-label="Page 4, current page">4</a>
         </li>
         <li class="rvt-pagination__item">
-            <a href="#0" arial-label="Nex set of pages">Next</a>
+            <a href="#" arial-label="Nex set of pages">Next</a>
         </li>
     </ul>
 </nav>
@@ -73,19 +73,19 @@ Add the CSS modifier class `.rvt-pagination--small` if you need to display the p
 {{< example lang="html" >}}<nav role="navigation" aria-label="Small results pages">
     <ul class="rvt-pagination rvt-pagination--small">
         <li class="rvt-pagination__item">
-            <a href="#0" aria-label="Previous set of pages">Previous</a>
+            <a href="#" aria-label="Previous set of pages">Previous</a>
         </li>
         <li class="rvt-pagination__item">
-            <a href="#0" aria-label="Page 4">4</a>
+            <a href="#" aria-label="Page 4">4</a>
         </li>
         <li class="rvt-pagination__item is-active" aria-current="true">
-            <a href="#0" aria-label="Page 5, current page">5</a>
+            <a href="#" aria-label="Page 5, current page">5</a>
         </li>
         <li class="rvt-pagination__item">
-            <a href="#0" aria-label="Page 6">6</a>
+            <a href="#" aria-label="Page 6">6</a>
         </li>
         <li class="rvt-pagination__item">
-            <a href="#0" aria-label="Next set of pages">Next</a>
+            <a href="#" aria-label="Next set of pages">Next</a>
         </li>
     </ul>
 </nav>
