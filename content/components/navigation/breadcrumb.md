@@ -12,8 +12,8 @@ Avoid using the breadcrumb nav when your application only has one level of navig
 ## Default breadcrumb
 {{< example lang="html" >}}<nav role="navigation" aria-label="Breadcrumbs">
     <ol class="rvt-breadcrumbs">
-        <li><a href="#0"> Home </a></li>
-        <li><a href="#0"> Files </a></li>
+        <li><a href="#"> Home </a></li>
+        <li><a href="#"> Files </a></li>
         <li aria-label="Current page">my-file.txt</li>
     </ol>
 </nav>
@@ -27,8 +27,8 @@ There is also a `.rvt-breadcrumbs--call-out` modifier class that adds a small am
 
 {{< example lang="html" >}}<nav role="navigation" aria-label="Breadcrumbs call out">
     <ol class="rvt-breadcrumbs rvt-breadcrumbs--call-out">
-        <li><a href="#0"> Home </a></li>
-        <li><a href="#0"> Files </a></li>
+        <li><a href="#"> Home </a></li>
+        <li><a href="#"> Files </a></li>
         <li aria-label="Current page">my-file.txt</li>
     </ol>
 </nav>
