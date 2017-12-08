@@ -3,7 +3,7 @@
 <div class="rvt-drawer" aria-hidden="true" id="mobile-drawer">
     <one-search></one-search>
     <!-- Drawer nav -->
-    <nav class="rvt-drawer__nav" role="navigation">
+    <nav class="rvt-drawer__nav" role="navigation" aria-label="resources">
         <ul class="hide-on-desktop">
             {{ range .Site.Sections }}
                 {{ if ne .Params.hideFromNav true }}
