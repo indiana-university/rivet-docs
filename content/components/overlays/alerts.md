@@ -81,7 +81,7 @@ See the [content guide section](/content-guide) for additional information.
 
 <div class="rvt-alert rvt-alert--error" role="alert" aria-labelledby="error-alert-title">
     <h1 class="rvt-alert__title" id="error-alert-title">Incorrect User ID or Password</h1>
-    <p class="rvt-alert__message">The user ID and password you entered do not match. Please check your entries and try again. <a href="#0">Forgot your user ID or password?</a></p>
+    <p class="rvt-alert__message">The user ID and password you entered do not match. Please check your entries and try again. <a href="#">Forgot your user ID or password?</a></p>
 </div>
 {{< /example >}}
 
@@ -103,7 +103,7 @@ Alert lists provide a way to group a set of errors together. For instance, when 
     </li>
     <li class="rvt-alert-list__item">
         <div class="rvt-alert rvt-alert--error" role="alert">
-            <h1 class="rvt-alert__title">Errors can have a title only, <a href="#0">with a link</a> to the invalid element.</h1>
+            <h1 class="rvt-alert__title">Errors can have a title only, <a href="#">with a link</a> to the invalid element.</h1>
         </div>
     </li>
     <li class="rvt-alert-list__item">
@@ -114,7 +114,7 @@ Alert lists provide a way to group a set of errors together. For instance, when 
     </li>
     <li class="rvt-alert-list__item">
         <div class="rvt-alert rvt-alert--error" role="alert">
-            <p class="rvt-alert__message">Errors don't always have to have a title. You could just use them for <a href="#0">messages</a>.</p>
+            <p class="rvt-alert__message">Errors don't always have to have a title. You could just use them for <a href="#">messages</a>.</p>
         </div>
     </li>
 </ul>

@@ -23,7 +23,7 @@ The Rivet footer provides space for localized auxiliary links and styling that i
             <!-- You can learn more about privacy policies and generate one
                  for your site here:
                  https://protect.iu.edu/online-safety/tools/privacy-notice/index.html -->
-            <a href="#0">Privacy Policy</a>
+            <a href="#">Privacy Policy</a>
         </li>
         <li class="rvt-footer__aux-item">
             <a href="https://accessibility.iu.edu/">Accessibility help</a>

@@ -107,7 +107,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
         </svg>
     </div>
     <span class="rvt-header__title">
-        <a href="#0">Application Title</a>
+        <a href="#">Application Title</a>
     </span>
     </header>
     <main role="main">
@@ -131,7 +131,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
                 <!-- You can learn more about privacy policies and generate one
                      for your site here:
                      https://protect.iu.edu/online-safety/tools/privacy-notice/index.html -->
-                <a href="#0">Privacy Policy</a>
+                <a href="#">Privacy Policy</a>
             </li>
             <li class="rvt-footer__aux-item">
                 <a href="https://accessibility.iu.edu/">Accessibility help</a>

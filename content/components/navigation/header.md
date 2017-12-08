@@ -21,7 +21,7 @@ The base header provides consistent branding in a condensed space. It replaces t
         </svg>
     </div>
     <span class="rvt-header__title">
-        <a href="#0">Application Title</a>
+        <a href="#">Application Title</a>
     </span>
 </header>
 {{< /example >}}
@@ -45,15 +45,15 @@ The inclusion of an avatar and username, or only username are both appropriate c
         </svg>
     </div>
     <span class="rvt-header__title">
-        <a href="#0">Application Title</a>
+        <a href="#">Application Title</a>
     </span>
     <div class="rvt-header__controls">
         <div class="rvt-header-id">
-            <div href="#0" class="rvt-header-id__profile">
+            <div href="#" class="rvt-header-id__profile">
                 <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
                 <span class="rvt-header-id__user">rswanson</span>
             </div>
-            <a href="#0" class="rvt-header-id__log-out">
+            <a href="#" class="rvt-header-id__log-out">
                 Log out
             </a>
         </div>
@@ -79,12 +79,12 @@ The inclusion of an avatar and username, or only username are both appropriate c
             <div class="rvt-header-id__profile rvt-header-id__profile--drawer p-all-sm">
                 <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
                 <span class="rvt-header-id__user">rswanson</span>
-                <a href="#0" class="rvt-header-id__log-out">
+                <a href="#" class="rvt-header-id__log-out">
                     Log out
                 </a>
             </div>
         </div>
-        <a href="#0" class="rvt-drawer__bottom-close">Close nav</a>
+        <a href="#" class="rvt-drawer__bottom-close">Close nav</a>
     </div>
 </header>
 {{< /example >}}
@@ -105,33 +105,33 @@ These lists work best for priority tasks and internal navigation. Consider inclu
     </div>
     <!-- App title -->
     <span class="rvt-header__title">
-        <a href="#0">Application Title</a>
+        <a href="#">Application Title</a>
     </span>
     <!-- Wrapper for header interactive elements -->
     <div class="rvt-header__controls">
         <!-- Main inline nav element -->
         <nav class="rvt-header__main-nav" role="navigation">
             <ul>
-                <li><a href="#0">Nav one</a></li>
+                <li><a href="#">Nav one</a></li>
                 <li>
                     <div class="dropdown">
-                        <a class="dropdown__trigger" href="#0" data-dropdown-trigger="dropdown-1" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown__trigger" href="#" data-dropdown-trigger="dropdown-1" aria-haspopup="true" aria-expanded="false">
                             Nav two
                         </a>
                         <div class="dropdown__menu" id="dropdown-1" aria-hidden="true">
-                            <a href="#0">Subnav One</a>
-                            <a href="#0">Subnav Two</a>
-                            <a href="#0">Subnav Three</a>
+                            <a href="#">Subnav One</a>
+                            <a href="#">Subnav Two</a>
+                            <a href="#">Subnav Three</a>
                         </div>
                     </div>
                 </li>
-                <li><a href="#0">Nav three</a></li>
+                <li><a href="#">Nav three</a></li>
             </ul>
         </nav>
         <!-- ID menu w/ dropdown -->
         <div class="rvt-header-id">
             <div class="dropdown">
-                <a href="#0" class="rvt-header-id__profile rvt-header-id__profile--has-dropdown dropdown__trigger" data-dropdown-trigger="id-dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#" class="rvt-header-id__profile rvt-header-id__profile--has-dropdown dropdown__trigger" data-dropdown-trigger="id-dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
                     <span class="rvt-header-id__user">rswanson</span>
                 </a>
@@ -173,7 +173,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
         <nav class="rvt-drawer__nav" role="navigation">
             <ul>
                 <li class="has-children">
-                    <a href="#0" class="rvt-header-id__profile rvt-header-id__profile--drawer" data-subnav-trigger="subnav-id" aria-haspopup="true" aria-expanded="false">
+                    <a href="#" class="rvt-header-id__profile rvt-header-id__profile--drawer" data-subnav-trigger="subnav-id" aria-haspopup="true" aria-expanded="false">
                         <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
                         <span class="rvt-header-id__user rvt-header-id__user--has-dropdown">rswanson</span>
                     </a>
@@ -184,26 +184,26 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                         <li><a href="">Log out</a></li>
                     </ul>
                 </li>
-                <li><a href="#0">Nav one</a></li>
+                <li><a href="#">Nav one</a></li>
                 <li class="has-children">
-                    <a href="#0" data-subnav-trigger="subnav-1" aria-haspopup="true" aria-expanded="false">Nav two</a>
+                    <a href="#" data-subnav-trigger="subnav-1" aria-haspopup="true" aria-expanded="false">Nav two</a>
                     <ul id="subnav-1" aria-hidden="true">
-                        <li><a href="#0">Subnav one</a></li>
-                        <li><a href="#0">Subnav two</a></li>
-                        <li><a href="#0">Subnav three</a></li>
+                        <li><a href="#">Subnav one</a></li>
+                        <li><a href="#">Subnav two</a></li>
+                        <li><a href="#">Subnav three</a></li>
                     </ul>
                 </li>
-                <li><a href="#0">Nav three</a></li>
+                <li><a href="#">Nav three</a></li>
                 <li class="has-children">
-                    <a href="#0" data-subnav-trigger="subnav-2" aria-haspopup="true" aria-expanded="false">Nav four</a>
+                    <a href="#" data-subnav-trigger="subnav-2" aria-haspopup="true" aria-expanded="false">Nav four</a>
                     <ul id="subnav-2" aria-hidden="true">
-                        <li><a href="#0">Subnav one</a></li>
-                        <li><a href="#0">Subnav two</a></li>
-                        <li><a href="#0">Subnav three</a></li>
+                        <li><a href="#">Subnav one</a></li>
+                        <li><a href="#">Subnav two</a></li>
+                        <li><a href="#">Subnav three</a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="#0" class="rvt-drawer__bottom-close">Close nav</a>
+            <a href="#" class="rvt-drawer__bottom-close">Close nav</a>
         </nav>
     </div>
 </header>
@@ -221,7 +221,7 @@ When your application has multiple user-specific functions (e.g. "Account settin
 {{< code >}}<!-- ID menu w/ dropdown -->
 <div class="rvt-header-id">
     <div class="dropdown">
-        <a href="#0" class="rvt-header-id__profile rvt-header-id__profile--has-dropdown dropdown__trigger" data-dropdown-trigger="id-dropdown-example" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="rvt-header-id__profile rvt-header-id__profile--has-dropdown dropdown__trigger" data-dropdown-trigger="id-dropdown-example" aria-haspopup="true" aria-expanded="false">
             <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
             <span class="rvt-header-id__user">rswanson</span>
         </a>
