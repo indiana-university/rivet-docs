@@ -8,6 +8,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
 <script>
     hljs.initHighlightingOnLoad();
+    var baseURL = "{{ .Site.BaseURL }}";
 </script>
 <script src="{{ "js/rivet-docs.js" | absURL }}?{{ .Now.Unix }}"></script>
 <script>
