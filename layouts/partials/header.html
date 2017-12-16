@@ -1,5 +1,5 @@
 {{ $currentURL := .URL }}
-{{ if or (eq (print "{{ .Site.BaseURL }}" $currentURL) "{{ .Site.BaseURL }}/") (eq (print "{{ .Site.BaseURL }}" $currentURL) "{{ .Site.BaseURL }}/how-to-use/") (eq (print "{{ .Site.BaseURL }}" $currentURL) "{{ .Site.BaseURL }}/about/") }}
+{{ if or (eq $currentURL "/") (eq $currentURL "/how-to-use/") (eq $currentURL "/about/") }}
     <header class="rvt-header rvt-header--light rvt-header--no-border" role="banner">
 {{ else }}
     <header class="rvt-header rvt-header--light" role="banner">
