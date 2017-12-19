@@ -80,7 +80,7 @@ You can use the `.rvt-table-stripes` class to alternate light gray backgrounds o
 ## Plain table
 The `.rvt-table-plain` class will remove all borders and `thead` formatting on a table.
 {{< example lang="html" >}}<table class="rvt-table-plain">
-    <caption class="sr-only">Table example two</caption>
+    <caption class="sr-only">Table example three</caption>
     <thead>
         <tr>
             <th scope="col">Service</th>
