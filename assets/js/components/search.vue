@@ -3,6 +3,13 @@
     <form @submit.prevent="search" class="rvtd-search__form">
         <label class="sr-only" for="search-input">Search query</label>
         <input v-model="query" type="search" id="search-input" autocomplete="off" placeholder="Search the docs" ref="search-input">
+        <button type="submit">
+            <span class="sr-only">Submit search</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <title>Magnifying glass icon</title>
+                <path fill="currentColor" d="M15.71,14.29,10.89,9.47a6,6,0,1,0-1.42,1.42l4.82,4.82a1,1,0,0,0,1.42,0A1,1,0,0,0,15.71,14.29ZM6,10a4,4,0,1,1,4-4A4,4,0,0,1,6,10Z"/>
+            </svg>
+        </button>
     </form>
     <div v-if="results.length" class="rvtd-search__results">
         <div class="rvtd-search__results-header" v-if="results.length > resultsPerPage">
