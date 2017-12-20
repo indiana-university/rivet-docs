@@ -40,7 +40,7 @@
         </div>
         <div v-for="result in currentPageOfResults" class="rvtd-search__result m-top-sm">
             <h3 class="rvtd-search__result-title">
-                <a :href="result.uri" @click="trackClick(result.uri)">
+                <a :href="baseURL + result.uri" @click="trackClick(baseURL + result.uri)">
                     {{result.title}}
                 </a>
             </h3>
@@ -93,7 +93,8 @@ module.exports = {
             results: [],
             currentPage: 0,
             resultsPerPage: resultsPerPage,
-            debouncedSearch: null
+            debouncedSearch: null,
+            baseURL: baseURL
         }
     },
     filters: {
@@ -147,7 +148,7 @@ module.exports = {
     },
     mounted() {
         this.debouncedSearch = debounce(this.search, 1000)
-        http.get('/site-index.json')
+        http.get(baseURL + '/site-index.json')
             .then((response) => {
                 this.index = lunr(function() {
                     this.ref('uri')
