@@ -1,5 +1,5 @@
 {{ $currentURL := .URL }}
-{{ if or (eq $currentURL "/") (eq $currentURL "/how-to-use/") (eq $currentURL "/about/") }}
+{{ if or (or (eq $currentURL "/") (eq .Title "Launch consistent **products faster**.")) (or (eq $currentURL "/how-to-use/") (eq .Title "How to **use Rivet**")) }}
     <header class="rvt-header rvt-header--light rvt-header--no-border" role="banner">
 {{ else }}
     <header class="rvt-header rvt-header--light" role="banner">
