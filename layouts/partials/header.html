@@ -32,7 +32,7 @@
                     </li>
                     {{ end }}
                 {{ end }}
-                <li><a href="{{ .Site.BaseURL }}/components/#download-rivet" class="button button--secondary button--small">Download</a></li>
+                <li><a href="{{ trim .Site.BaseURL "/" }}/components/#download-rivet" class="button button--secondary button--small">Download</a></li>
             </ul>
         </nav>
         {{ partial "drawer-button.html" . }}
