@@ -20,14 +20,13 @@ The Rivet components documentation contains examples, code snippets, and guidanc
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
-{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.3.1.zip" variant="secondary" analytics-action="download" analytics-category="click">}}Download Rivet{{< /button >}}
+{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.4.0.zip" variant="secondary" analytics-action="download" analytics-category="click">}}Download Rivet{{< /button >}}
 
 ### Download contents
 The download contains the following files:
 
 - Compiled CSS (expanded and minified versions)
 - Compiled JavaScript (expanded and minified versions)
-- Images folder with all required images
 - Sass source files
 - Starter `index.html` file
 
@@ -43,8 +42,6 @@ sass/
   |—— libs/
   |—— utilities/
   |—— rivet.scss
-img/
-  |—— ...
 index.html
 {{< /code >}}
 
@@ -70,6 +67,12 @@ Once you have the `.npmrc` file configured in the root of your project, you can 
 - Be sure you have installed NPM on your local computer by running `npm --v`
 - Make sure that you have configured a `.npmrc` using the instructions above
 
+### Updating the Rivet NPM package
+When there is a new version of Rivet released it will be publish to the NPM registry. You can check for updates by running the `npm outdated` command. To acutally update your NPM dependency you can run the following command at the same level as your project's `package.json`.
+
+{{< code >}}npm install rivet-uits@latest --save-dev
+{{< /code >}}
+
 ## Using Sass
 If you are using Sass in your project you can import the Rivet Sass files directly:
 
@@ -79,13 +82,17 @@ If you are using Sass in your project you can import the Rivet Sass files direct
 ## Hosted CSS and JavaScript
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.3.1/rivet.min.css">{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.0/rivet.min.css">{{< /code >}}
 
 Rivet has a minimal amount of JavaScript that is required for some components, like the [header](../components/navigation/header). Copy and paste this link and add to the end of your document, just before the closing `</body>` tag.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/0.3.1/rivet.min.js"></script>{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/0.4.0/rivet.min.js"></script>{{< /code >}}
 
-### Starter template
+<h3 class="m-top-lg">Production applications <span class="rvt-badge rvt-badge--warning m-right-xs">NOTE</span></h3>
+
+The hosted CSS and JavaScript assets are a good solution for prototyping ideas, early stages of development, and for small apps that don't get heavy traffic. **We recommend managing Rivet as a dependency with NPM** as a long-term solution for production apps.
+
+## Starter template
 Here's a basic starter template with the hosted CSS and JavaScript hooked up. Copy and paste into your favorite editor to start using Rivet.
 
 {{< code lang="html" analytics-label="starter template" >}}<!DOCTYPE html>
@@ -93,7 +100,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.3.1/rivet.min.css">
+    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.0/rivet.min.css">
     <title>Rivet starter file</title>
 </head>
 <body>
@@ -139,7 +146,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
             </li>
         </ul>
     </footer>
-    <script src="https://assets.uits.iu.edu/javascript/rivet/0.3.1/rivet.min.js"></script>
+    <script src="https://assets.uits.iu.edu/javascript/rivet/0.4.0/rivet.min.js"></script>
 </body>
 </html>
 {{< /code >}}
