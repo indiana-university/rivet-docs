@@ -47,6 +47,38 @@ status: "Beta"
 </form>
 {{< /example >}}
 
+## Indeterminate state
+The indterminate state is a checkbox attribute that is accessible by JavaScript only. It can be used to indicate a partially checked state. A typical use case would be nested checkboxes/selections like the following example. [This article](https://css-tricks.com/indeterminate-checkboxes/) explains the indeterminate state in greater detail.
+
+{{< example lang="html" >}}<fieldset>
+    <legend class="rvt-sr-only">Indeterminate state</legend>
+    <ul class="rvt-plain-list">
+        <li>
+            <input type="checkbox" name="checkbox-demo" id="checkbox-indeterminate">
+            <label for="checkbox-indeterminate">Parent option one</label>
+            <ul class="rvt-plain-list rvt-p-left-lg">
+                <li>
+                    <input type="checkbox" name="checkbox-demo" id="checkbox-6-1" checked>
+                    <label for="checkbox-6-1">Child option one</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="checkbox-demo" id="checkbox-6-2">
+                    <label for="checkbox-6-2">Child option two</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <input type="checkbox" name="checkbox-demo" id="checkbox-7">
+            <label for="checkbox-7">Parent option two</label>
+        </li>
+        <li>
+            <input type="checkbox" name="checkbox-demo" id="checkbox-8">
+            <label for="checkbox-8">Parent option three</label>
+        </li>
+    </ul>
+</fieldset>
+{{< /example >}}
+
 ## When to use
 Use checkboxes to allow users to pick zero, one, or many options from a list of values. A checkbox is a good choice when you need to present users a single option that they can turn on or off.
 
@@ -73,3 +105,4 @@ When you need to present users with a list of mutually exclusive options and the
 - [Checkboxes vs. Radio Buttons](https://www.nngroup.com/articles/checkboxes-vs-radio-buttons/)
 - [Mozilla Developer Network Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
 - [MSDN Design Documentation](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742401.aspx)
+- [Indeterminate Checkboxes](https://css-tricks.com/indeterminate-checkboxes/)
