@@ -82,3 +82,7 @@ if(window.telemetrics) {
         })
     })
 }
+
+var currentYear = new Date().getFullYear()
+var year = document.getElementById('year')
+year.innerHTML = currentYear
