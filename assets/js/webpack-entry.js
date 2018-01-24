@@ -83,6 +83,33 @@ if(window.telemetrics) {
     })
 }
 
-var currentYear = new Date().getFullYear()
-var year = document.getElementById('year')
-year.innerHTML = currentYear
+/**
+ * Wrapping this little one-offs in IIFEs to keep them contained
+ */
+
+/**
+ * Dynamic copyright for footer.
+ */
+(function() {
+    var currentYear = new Date().getFullYear();
+
+    var year = document.getElementById('year');
+
+    // The span with 'year' id should be on every page, but just in case...s
+    if (year == null) return;
+
+    year.innerHTML = currentYear;
+})();
+
+
+/**
+ * Interterminate checkbox demo
+ */
+(function() {
+    var indCheck = document.querySelector('#checkbox-indeterminate');
+    // If its not the checkbox docs page bail.
+    if (indCheck == null) return;
+    // Set the demo checkbox.
+    indCheck.indeterminate = true;
+})();
+
