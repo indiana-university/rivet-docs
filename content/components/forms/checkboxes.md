@@ -48,7 +48,7 @@ status: "Beta"
 {{< /example >}}
 
 ## Indeterminate state
-The indterminate state is a checkbox attribute that is accessible by JavaScript only. It can be used to indicate a partially checked state. A typical use case would be nested checkboxes/selections like the following example. [This article](https://css-tricks.com/indeterminate-checkboxes/) explains the indeterminate state in greater detail.
+The indeterminate state is a checkbox attribute that is accessible by JavaScript only. It can be used to indicate a partially checked state. A typical use case would be nested checkboxes/selections like the following example. [This article](https://css-tricks.com/indeterminate-checkboxes/) explains the indeterminate state in greater detail.
 
 {{< example lang="html" >}}<fieldset>
     <legend class="rvt-sr-only">Indeterminate state</legend>
