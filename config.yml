@@ -1,4 +1,4 @@
-baseurl: "/"
+baseurl: ""
 languageCode: "en-us"
 title: "Rivet"
 paginate: 10
