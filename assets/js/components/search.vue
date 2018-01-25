@@ -155,7 +155,7 @@ module.exports = {
     },
     mounted() {
         this.debouncedSearch = debounce(this.search, 1000)
-        http.get(this.baseURL + '/site-index.json')
+        http.get(baseURL + 'site-index.json')
             .then((response) => {
                 this.index = lunr(function() {
                     this.ref('uri')
