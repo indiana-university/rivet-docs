@@ -91,12 +91,12 @@ if(window.telemetrics) {
  * Dynamic copyright for footer.
  */
 (function() {
-    var currentYear = new Date().getFullYear();
-
     var year = document.getElementById('year');
 
     // The span with 'year' id should be on every page, but just in case...s
     if (year == null) return;
+
+    var currentYear = new Date().getFullYear();
 
     year.innerHTML = currentYear;
 })();
