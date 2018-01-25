@@ -47,6 +47,10 @@
 @include mq(bp(md)) {
     .rvtd-sidebar {
         flex: 0 0 296px;
+        /**
+         * Hack to  keep sidebar from ever growing wider than it should.
+         */
+        min-width: 296px;
         border-right: 1px solid #eaeaea;
 
         &__nav-toggle {
