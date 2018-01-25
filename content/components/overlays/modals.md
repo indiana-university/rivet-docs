@@ -4,14 +4,6 @@ description: "A modal is a smaller window that is displayed on top of the main a
 requiresJs: true
 status: "Beta"
 ---
-## When to use
-- For single specific tasks related to a goal on the main page of the application
-- To help users determine information needed in their main workflow e.g. calculating a number, looking up a code
-
-## When to consider something else
-- When you need to display an error message consider using an [alert]({{< relref "alerts.md" >}}) on the page in which the error occurred.
-- When you need to display large amounts of information for multiple tasks consider using a dedicated page instead.
-
 ## Modal example
 {{< example lang="html" >}}<button class="rvt-button" data-modal-trigger="modal-example-basic">Open modal example</button>
 
@@ -26,7 +18,7 @@ status: "Beta"
             <h1 class="rvt-modal__title" id="modal-example-title">Modal title</h1>
         </header>
         <div class="rvt-modal__body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <a href="#0">incididunt ut labore</a> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <a href="#">incididunt ut labore</a> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="rvt-modal__controls">
             <button class="rvt-m-right-sm close-modal">OK</button>
@@ -35,12 +27,21 @@ status: "Beta"
         <button class="rvt-button rvt-button--plain rvt-modal__close" data-modal-close="close">
             <span class="v-hide">Close</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <title>Close Button</title>
                 <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: #333"/>
             </svg>
         </button>
     </div>
 </div>
 {{< /example >}}
+
+## When to use
+- For single specific tasks related to a goal on the main page of the application
+- To help users determine information needed in their main workflow e.g. calculating a number, looking up a code
+
+## When to consider something else
+- When you need to display an error message consider using an [alert]({{< relref "alerts.md" >}}) on the page in which the error occurred.
+- When you need to display large amounts of information for multiple tasks consider using a dedicated page instead.
 
 ## Implementation notes
 The modal component is made up of the following elements:

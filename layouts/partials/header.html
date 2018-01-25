@@ -1,5 +1,5 @@
 {{ $currentURL := .URL }}
-{{ if or (eq $currentURL "/") (eq $currentURL "/how-to-use/") (eq $currentURL "/about/") }}
+{{ if or (or (eq $currentURL "/") (eq .Title "Launch consistent **products faster**.")) (or (eq $currentURL "/how-to-use/") (eq .Title "How to **use Rivet**")) }}
     <header class="rvt-header rvt-header--light rvt-header--no-border" role="banner">
 {{ else }}
     <header class="rvt-header rvt-header--light" role="banner">
@@ -9,10 +9,10 @@
         {{ partial "trident.html" . }}
     </div>
     <span class="rvt-header__title">
-        <a href="/"><strong>{{ .Site.Title }}</strong> <span class="rvtd-subtitle">{{ .Site.Params.tagline }}</span></a>
+        <a href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong> <span class="rvtd-subtitle">{{ .Site.Params.tagline }}</span></a>
     </span>
     <div class="rvt-header__controls">
-        <nav class="rvt-header__main-nav" role="navigation">
+        <nav class="rvt-header__main-nav" role="navigation" aria-label="main">
             <ul>
                 {{ $currentNav := . }}
                 {{ range .Site.Sections }}
@@ -32,7 +32,7 @@
                     </li>
                     {{ end }}
                 {{ end }}
-                <li><a href="/components/#download-rivet" class="button button--secondary button--small">Download</a></li>
+                <li><a href="{{ trim .Site.BaseURL "/" }}/components/#download-rivet" class="button button--secondary button--small">Download</a></li>
             </ul>
         </nav>
         {{ partial "drawer-button.html" . }}

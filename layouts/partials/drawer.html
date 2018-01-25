@@ -3,7 +3,7 @@
 <div class="rvt-drawer" aria-hidden="true" id="mobile-drawer">
     <one-search></one-search>
     <!-- Drawer nav -->
-    <nav class="rvt-drawer__nav" role="navigation">
+    <nav class="rvt-drawer__nav" role="navigation" aria-label="resources">
         <ul class="hide-on-desktop">
             {{ range .Site.Sections }}
                 {{ if ne .Params.hideFromNav true }}
@@ -26,6 +26,6 @@
                 <li><a {{ if ne .self true }}target="_blank"{{ end }} href="{{ .url }}">{{ .text }}</a></li>
             {{ end }}
         </ul>
-        <a href="#0" class="rvt-drawer__bottom-close">Close nav</a>
+        <button class="rvt-drawer__bottom-close">Close nav</button>
     </nav>
 </div>

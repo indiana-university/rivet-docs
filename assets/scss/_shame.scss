@@ -479,3 +479,36 @@ a.button--reverse-secondary {
     line-height: 1;
 }
 
+/**
+ * Highlight.js overrides
+ */
+.hljs {
+    background: #fafafa;
+}
+
+.hljs-meta {
+    color: $color-black--700;
+}
+
+.hljs-comment {
+    color: $color-black--700;
+}
+
+.hljs-tag .hljs-attr {
+    color: #2424b3;
+}
+
+/* TODO: Back this custom button styling for close functionality into Rivet.
+ * We should be using buttons for toggling things not links.
+ */
+.rvt-drawer__bottom-close {
+    background-color: transparent;
+    border: none;
+    color: $color-link;
+    padding: 0;
+
+    &:focus {
+        display: block;
+        padding: .35rem .65rem;
+    }
+}

@@ -82,3 +82,34 @@ if(window.telemetrics) {
         })
     })
 }
+
+/**
+ * Wrapping this little one-offs in IIFEs to keep them contained
+ */
+
+/**
+ * Dynamic copyright for footer.
+ */
+(function() {
+    var year = document.getElementById('year');
+
+    // The span with 'year' id should be on every page, but just in case...s
+    if (year == null) return;
+
+    var currentYear = new Date().getFullYear();
+
+    year.innerHTML = currentYear;
+})();
+
+
+/**
+ * Interterminate checkbox demo
+ */
+(function() {
+    var indCheck = document.querySelector('#checkbox-indeterminate');
+    // If its not the checkbox docs page bail.
+    if (indCheck == null) return;
+    // Set the demo checkbox.
+    indCheck.indeterminate = true;
+})();
+

@@ -5,7 +5,7 @@ navTitle: "Learn"
 weight: 2
 ---
 <figure class="rvtd-article-figure rvt-p-left-xxl rvt-p-right-xxl p-bottom-xxl">
-    <img src="/img/homepage-hero.png" alt=" ">
+    <img src="../img/homepage-hero.png" alt=" ">
 </figure>
 
 From the time students enroll in and graduate from IU, they encounter dozens of apps and software titles that are unique to the university. Often these apps don’t look, feel, or function the same way - so they must relearn how to navigate new systems each time they encounter them.
@@ -29,7 +29,7 @@ A design system strips assets down to their barest essentials. These lightweight
 Bootstrap is just one of many front-end frameworks used in software development. It’s fast and easy to implement. But it’s also full of rarely used extras, leading to bloated code. Teams using Bootstrap often build additional layers of customization above the base code.
 
 <figure class="rvtd-article-figure p-top-xxl p-bottom-xxl">
-    <img src="/img/docs/rvtd-bootstrap-diagram.png" alt="This diagram shows how developers have to layer customization on top of Bootstrap code">
+    <img src="../img/docs/rvtd-bootstrap-diagram.png" alt="This diagram shows how developers have to layer customization on top of Bootstrap code">
     <figcaption>Illustration of layers of customization for Bootstrap (left) versus Rivet (right).</figcaption>
 </figure>
 
@@ -53,5 +53,5 @@ With familiarity being a key component of usability, IU needs a toolset of its o
 We want people to reach out to us with requests and suggestions — that way, we’re making decisions about IU software together. By using a system designed by members of the university, university developers can worry less about whether stylings match the IU brand, and focus more on actual product creation.
 
 <div class="rvt-m-top-lg">
-{{< button url="/learn/contributing-to-rivet">}}Contribute to Rivet{{< /button >}}
+{{< button url="contributing-to-rivet">}}Contribute to Rivet{{< /button >}}
 </div>
