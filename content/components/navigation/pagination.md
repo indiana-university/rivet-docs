@@ -4,12 +4,7 @@ description: "The pagination component is used to break up large sets of data ac
 requiresJs: false
 status: "Beta"
 ---
-## When to use
-Use when a user's action returns a large data set such as search results, or a large number of rows in a data table to break results into multiple pages to help with load times.
-
-## When to consider something else
-With smaller amounts of data consider displaying the whole dataset in one page that users can scroll through instead of breaking it into pages.
-
+## Pagination Example
 {{< example lang="html" >}}<nav role="navigation" aria-label="Default results pages">
     <ul class="rvt-pagination">
         <li class="rvt-pagination__item">
@@ -30,6 +25,12 @@ With smaller amounts of data consider displaying the whole dataset in one page t
     </ul>
 </nav>
 {{< /example >}}
+
+## When to use
+Use when a user's action returns a large data set such as search results, or a large number of rows in a data table to break results into multiple pages to help with load times.
+
+## When to consider something else
+With smaller amounts of data consider displaying the whole dataset in one page that users can scroll through instead of breaking it into pages.
 
 ## Accessibility
 The pagination component is wrapped in a `nav` element so that it is announced to assistive technologies. Use an `aria-label` attribute to describe the purpose of your pagination. This will help assistive technologies distinguish between navigation sections on pages that use more than one `<nav>` element.
@@ -90,7 +91,3 @@ Add the CSS modifier class `.rvt-pagination--small` if you need to display the p
     </ul>
 </nav>
 {{< /example >}}
-
-### HOT TIP!
-The default pagination component is set to the **same height as Rivet's textual inputs and default buttons**. The `--small` modifier will make the pagination display at the same height as the [Rivet's small buttons](/components/forms/buttons/#small-buttons).
-

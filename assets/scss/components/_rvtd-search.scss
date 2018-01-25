@@ -6,7 +6,7 @@
 
     &__form {
         width: calc(100% - 3.5rem);
-        margin-left: auto;
+        margin-left: 3.5rem;
         position: relative;
         display: flex;
         flex-wrap: nowrap;
@@ -22,12 +22,21 @@
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
             border-right: none;
+            /**
+             * Fixes some issues with Firefox not allowing the flex
+             * children to fill up available space.
+             */
+            flex-grow: 1;
+            width: auto;
         }
 
         button {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
             display: flex;
+            padding: 0;
+            width: 3rem;
+            justify-content: center;
         }
     }
 
@@ -95,6 +104,16 @@
 @include mq(bp(md)) {
     .rvtd-search__form {
         width: auto;
+        margin-left: 0;
+
+        input {
+            flex-grow: 1;
+            // flex-shrink: 1;
+        }
+
+        button {
+            // flex-grow: 1;
+        }
     }
 
     .rvtd-search__results,

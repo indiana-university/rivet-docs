@@ -3,15 +3,7 @@ title: "Select element"
 description: "The select element creates a dropdown that allows users to choose one item from a list."
 status: "Beta"
 ---
-
-## When to use
-Use the select element when you need to present users with a list of mutually exclusive options and they can **only select one option**.
-
-## When to consider something else
-When you only need to present a user with three or less options, consider using a group of [radio buttons]({{< ref "components/forms/radio-buttons.md" >}}) instead.
-
-## Example
-
+## Select Example
 {{< example lang="html" >}}<label for="select-demo">Select input:</label>
 <select id="select-demo">
     <option value="">Option One</option>
@@ -20,6 +12,12 @@ When you only need to present a user with three or less options, consider using 
     <option value="">Option Four</option>
 </select>
 {{< /example >}}
+
+## When to use
+Use the select element when you need to present users with a list of mutually exclusive options and they can **only select one option**.
+
+## When to consider something else
+When you only need to present a user with three or less options, consider using a group of [radio buttons]({{< ref "components/forms/radio-buttons.md" >}}) instead.
 
 ## Select labels
 - Write the label as a word or phrase, not as a sentence, and end it with a colon
