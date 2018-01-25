@@ -3,12 +3,6 @@ title: "Breadcrumb"
 description: A navigation component that indicates the user's current location in the nav hierarchy
 status: "Beta"
 ---
-## When to use
-Use breadcrumbs when your application has multiple levels in the navigation hierarchy. Breadcrumbs can help users navigate quickly between these levels.
-
-## When to consider something else
-Avoid using the breadcrumb nav when your application only has one level of navigation.
-
 ## Default breadcrumb
 {{< example lang="html" >}}<nav role="navigation" aria-label="Breadcrumbs">
     <ol class="rvt-breadcrumbs">
@@ -18,6 +12,12 @@ Avoid using the breadcrumb nav when your application only has one level of navig
     </ol>
 </nav>
 {{< /example >}}
+
+## When to use
+Use breadcrumbs when your application has multiple levels in the navigation hierarchy. Breadcrumbs can help users navigate quickly between these levels.
+
+## When to consider something else
+Avoid using the breadcrumb nav when your application only has one level of navigation.
 
 ## Implementation notes
 The default breadcrumb is minimally styled with CSS-generated content (/) used as separators.

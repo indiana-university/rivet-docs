@@ -4,14 +4,6 @@ description: "A modal is a smaller window that is displayed on top of the main a
 requiresJs: true
 status: "Beta"
 ---
-## When to use
-- For single specific tasks related to a goal on the main page of the application
-- To help users determine information needed in their main workflow e.g. calculating a number, looking up a code
-
-## When to consider something else
-- When you need to display an error message consider using an [alert]({{< relref "alerts.md" >}}) on the page in which the error occurred.
-- When you need to display large amounts of information for multiple tasks consider using a dedicated page instead.
-
 ## Modal example
 {{< example lang="html" >}}<button class="rvt-button" data-modal-trigger="modal-example-basic">Open modal example</button>
 
@@ -42,6 +34,14 @@ status: "Beta"
     </div>
 </div>
 {{< /example >}}
+
+## When to use
+- For single specific tasks related to a goal on the main page of the application
+- To help users determine information needed in their main workflow e.g. calculating a number, looking up a code
+
+## When to consider something else
+- When you need to display an error message consider using an [alert]({{< relref "alerts.md" >}}) on the page in which the error occurred.
+- When you need to display large amounts of information for multiple tasks consider using a dedicated page instead.
 
 ## Implementation notes
 The modal component is made up of the following elements:
