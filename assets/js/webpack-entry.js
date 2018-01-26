@@ -10,7 +10,7 @@ const polyfills = require('./polyfills')
  * Initialize polyfils here.
  */
 
-// Plolyfil for using forEach() array method on NodeLists in IE.
+// Plolyfills to add functionality to IE.
 polyfills.forEachPolyfill();
 polyfills.promisePolyfill();
 
