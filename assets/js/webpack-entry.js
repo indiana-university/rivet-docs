@@ -5,8 +5,7 @@
 const Vue = require('vue/dist/vue.min')
 const plugins = require('./plugins')
 const polyfils = require('./polyfils')
-// const Promise = require('promise-polyfill')
-import Promise from 'promise-polyfill';
+const Promise = require('promise-polyfill')
 
 /**
  * Initialize polyfils here.
