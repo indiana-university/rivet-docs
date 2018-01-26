@@ -67,7 +67,7 @@ indexer.prototype.readFile = function(filePath) {
         delims: '---',
         lang: 'yaml'
     });
-    
+
     if (meta.data.draft === true || meta.data.excludeFromIndex === true) {
         return;
     }
@@ -78,7 +78,7 @@ indexer.prototype.readFile = function(filePath) {
         var plainText = striptags(meta.content);
     }
 
-    var uri = '/' + filePath.substring(0, filePath.lastIndexOf('.'));
+    var uri = filePath.substring(0, filePath.lastIndexOf('.'));
     uri = uri.replace(self.baseDir + '/', '');
     uri = uri.replace(/\/_index$/, '')
 
