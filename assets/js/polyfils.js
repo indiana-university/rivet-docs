@@ -1,3 +1,5 @@
+const Promise = require('promise-polyfill')
+
 module.exports = {
     /**
      * forEach polyfill that will allow use to use the forEach method
@@ -13,6 +15,12 @@ module.exports = {
                     callback.call(thisArg, this[i], i, this);
                 }
             };
+        }
+    },
+
+    promisePolyfil() {
+        if (!window.Promise) {
+            window.Promise = Promise;
         }
     }
 }

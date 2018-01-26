@@ -13,6 +13,9 @@ const polyfils = require('./polyfils')
 // Plolyfil for using forEach() array method on NodeLists in IE.
 polyfils.forEachPolyfil();
 
+// Promise polyfill for Axios
+polyfils.promisePolyfil();
+
 /**
  * Main Vue.js Instance.
  */
