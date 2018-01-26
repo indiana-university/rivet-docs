@@ -5,6 +5,8 @@
 const Vue = require('vue/dist/vue.min')
 const plugins = require('./plugins')
 const polyfils = require('./polyfils')
+// const Promise = require('promise-polyfill')
+import Promise from 'promise-polyfill';
 
 /**
  * Initialize polyfils here.
@@ -13,8 +15,9 @@ const polyfils = require('./polyfils')
 // Plolyfil for using forEach() array method on NodeLists in IE.
 polyfils.forEachPolyfil();
 
-// Promise polyfill for Axios
-polyfils.promisePolyfil();
+if (!window.Promise) {
+    window.Promise = Promise;
+}
 
 /**
  * Main Vue.js Instance.
