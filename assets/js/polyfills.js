@@ -1,3 +1,5 @@
+const Promise = require('promise-polyfill')
+
 module.exports = {
     /**
      * forEach polyfill that will allow use to use the forEach method
@@ -5,7 +7,7 @@ module.exports = {
      *
      * https://github.com/imagitama/nodelist-foreach-polyfill/blob/master/index.js
      */
-    forEachPolyfil() {
+    forEachPolyfill() {
         if (window.NodeList && !NodeList.prototype.forEach) {
             NodeList.prototype.forEach = function (callback, thisArg) {
                 thisArg = thisArg || window;
@@ -13,6 +15,13 @@ module.exports = {
                     callback.call(thisArg, this[i], i, this);
                 }
             };
+        }
+    },
+
+    promisePolyfill() {
+        // The Promise polyfill
+        if (!window.Promise) {
+            window.Promise = Promise;
         }
     }
 }
