@@ -150,3 +150,6 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
 </body>
 </html>
 {{< /code >}}
+
+## Using Rivet with other frameworks
+Currently Rivet does not support the use of addiotional CSS frameworks like Bootstrap, Foundation, etc.  If you choose to use one of these frameworks alongside Rivet it is up to you to resolve any conflicts that arise.
