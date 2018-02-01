@@ -215,6 +215,50 @@ The main navigation extension (`.rvt-header__main-nav`) will always need to be u
 ### Main navigation with dropdowns
 To create a nested navigation structure you can use Rivet's standard dropdown menus. Dropdown menus can be nested inside of any of the main navigation `li` elements and implemented using the appropriate data attributes on the dropdown.
 
+### Nested navigation inside drawer
+To create a nested navigation 
+
+{{< code >}}<!-- Drawer with nested nav -->
+<div class="rvt-drawer" aria-hidden="true" id="mobile-drawer">
+    <!-- Drawer nav -->
+    <nav class="rvt-drawer__nav" role="navigation">
+        <ul>
+            <li class="has-children">
+                <a href="#" class="rvt-header-id__profile rvt-header-id__profile--drawer" data-subnav-trigger="subnav-id" aria-haspopup="true" aria-expanded="false">
+                    <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
+                    <span class="rvt-header-id__user rvt-header-id__user--has-dropdown">rswanson</span>
+                </a>
+                <ul id="subnav-id" aria-hidden="true">
+                    <li><a href="#">Account settings</a></li>
+                    <li><a href="#">Admin task one</a></li>
+                    <li><a href="#">Admin task two</a></li>
+                    <li><a href="">Log out</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Nav one</a></li>
+            <li class="has-children">
+                <a href="#" data-subnav-trigger="subnav-1" aria-haspopup="true" aria-expanded="false">Nav two</a>
+                <ul id="subnav-1" aria-hidden="true">
+                    <li><a href="#">Subnav one</a></li>
+                    <li><a href="#">Subnav two</a></li>
+                    <li><a href="#">Subnav three</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Nav three</a></li>
+            <li class="has-children">
+                <a href="#" data-subnav-trigger="subnav-2" aria-haspopup="true" aria-expanded="false">Nav four</a>
+                <ul id="subnav-2" aria-hidden="true">
+                    <li><a href="#">Subnav one</a></li>
+                    <li><a href="#">Subnav two</a></li>
+                    <li><a href="#">Subnav three</a></li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#" class="rvt-drawer__bottom-close">Close nav</a>
+    </nav>
+</div>
+{{< /code >}}
+
 ### Identity menu dropdown
 When your application has multiple user-specific functions (e.g. "Account settings") you can wrap the contents of the `.rvt-header-id` extension in a standard Rivet dropdown component. Note that you'll need to add a `--has-dropdown` modifier class to the `.rvt-header-id__profile` element to remove the default styling.
 
