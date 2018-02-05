@@ -216,7 +216,7 @@ The main navigation extension (`.rvt-header__main-nav`) will always need to be u
 To create a nested navigation structure you can use Rivet's standard dropdown menus. Dropdown menus can be nested inside of any of the main navigation `li` elements and implemented using the appropriate data attributes on the dropdown.
 
 ### Nested navigation inside drawer
-To create a nested navigation 
+To create a nested navigation structure you can use Rivet's dropdown menus along with the rivet drawer nav. Dropdown menus can be nested inside of the rivet drawer navigation `li` and accompanying `ul` elements using the appropriate data attributes on the dropdown. 
 
 {{< code >}}<!-- Drawer with nested nav -->
 <div class="rvt-drawer" aria-hidden="true" id="mobile-drawer">
