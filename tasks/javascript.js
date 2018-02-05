@@ -13,7 +13,7 @@ gulp.task("webpack", function() {
     });
 });
 
-gulp.task('js', function() {
+gulp.task('js', ['webpack'], function() {
     gulp.src([
             'tmp/webpack-built.js',
             'node_modules/rivet-uits/js/rivet.js'
