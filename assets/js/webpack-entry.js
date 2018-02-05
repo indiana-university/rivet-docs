@@ -2,9 +2,21 @@
     swap vue.min out for vue if you need vue devtools
 */
 // const Vue = require('vue/dist/vue');
-const Vue = require('vue/dist/vue.min');
+const Vue = require('vue/dist/vue.min')
+const plugins = require('./plugins')
+const polyfills = require('./polyfills')
 
+/**
+ * Initialize polyfils here.
+ */
 
+// Plolyfills to add functionality to IE.
+polyfills.forEachPolyfill();
+polyfills.promisePolyfill();
+
+/**
+ * Main Vue.js Instance.
+ */
 new Vue({
     el: '#wrapper',
     components: {
@@ -42,74 +54,22 @@ new Vue({
     },
 })
 
-const Clipboard = require('clipboard')
-new Clipboard('.rvtd-example__copy')
-
-
-const tippy = require('tippy.js')
-const tip = tippy('.rvtd-example__copy', {
-    trigger: 'click',
-    animation: 'fade',
-    onShown: function () {
-        setTimeout(() => { tip.hide(this) }, 1000)
-    }
-})
-
 /**
- * forEach polyfill that will allow use to use the forEach method
- * on Arrays without destroying all of our JS in IE 11.
- *
- * https://github.com/imagitama/nodelist-foreach-polyfill/blob/master/index.js
- */
-if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = function (callback, thisArg) {
-        thisArg = thisArg || window;
-        for (var i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-        }
-    };
-}
-
-// analytics event tracking
-if(window.telemetrics) {
-    let eventTriggers = document.querySelectorAll('[data-analytics-action]');
-    eventTriggers.forEach(trigger => {
-        let action = trigger.dataset.analyticsAction
-        let category = trigger.dataset.analyticsCategory ? trigger.dataset.analyticsCategory : 'click'
-        let label = trigger.dataset.analyticsLabel ? trigger.dataset.analyticsLabel : trigger.href
-        trigger.addEventListener('click', e => {
-            window.telemetrics(category, action, label)
-        })
-    })
-}
-
-/**
- * Wrapping this little one-offs in IIFEs to keep them contained
+ * One-off scripts for random sutff. See 'plugins.js'
  */
 
-/**
- * Dynamic copyright for footer.
- */
-(function() {
-    var year = document.getElementById('year');
-
-    // The span with 'year' id should be on every page, but just in case...s
-    if (year == null) return;
-
-    var currentYear = new Date().getFullYear();
-
-    year.innerHTML = currentYear;
-})();
-
+ // Third-party libraries
+plugins.clipboardInit();
+plugins.tippyInit();
 
 /**
- * Interterminate checkbox demo
+ * Site-specific DOM scripting - Any DOM manipulation stuff
+ * MUST come after the main Vue instance is initialized because
+ * of Vue's virtal DOM implementation.
  */
-(function() {
-    var indCheck = document.querySelector('#checkbox-indeterminate');
-    // If its not the checkbox docs page bail.
-    if (indCheck == null) return;
-    // Set the demo checkbox.
-    indCheck.indeterminate = true;
-})();
+plugins.createCopyright('#year');
+plugins.setIndeterminate('#checkbox-indeterminate');
+
+// Custom analytics event tracking
+plugins.analyticsTracking();
 

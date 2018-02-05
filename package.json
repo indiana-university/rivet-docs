@@ -33,6 +33,7 @@
     "normalize.css": "^7.0.0",
     "normalize.scss": "^0.1.0",
     "path": "0.12.7",
+    "promise-polyfill": "^7.0.2",
     "remove-markdown": "0.2.2",
     "require-dir": "0.3.2",
     "rivet-uits": "^0.4.0",
