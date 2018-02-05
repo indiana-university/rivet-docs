@@ -45,16 +45,15 @@ To watch and build files without running a server, you can run `gulp watch`. To 
 
 ## Automatic deployments
 There are 4 webhooks setup for this site (2 for push and delete, and on 2 separate servers):
-* [AWS](http://uxo.space): anytime you push to or delete any branch, it will deploy to AWS
-  * If you create a `feature/<NAME>` branch then it will create a sub-directory the the feature <NAME>. For example, creating a branch called `feature/loading-indicator` will create a folder at http://uxo.space/loading-indicator
-  * If you delete a feature branch it will delete that sub directory. For example, deleting branch `feature/loading-indicator` will delete the folder at http://uxo.space/loading-indicator
-  * A push to develop will clear out the web root and update with the latest code on develop *THIS DELETES ALL FEATURE FOLDERS*
-* [Webtest](https://rivet.webtest.iu.edu): Webtest is in sync with the `develop` branch and will automatically deploy whenever pushing to develop.
+* [Bamboo](https://apps-test.iu.edu/bamboo-snd/browse/UXO-RVT): Bamboo listens to develop and master branches to determine if the site needs to be deployed
+  * feature branches will be deployed by a script on webtest
+  * If you delete a feature branch it will delete that sub directory. For example, deleting branch `feature/loading-indicator` will delete the folder at https://rivet.webtest.iu.edu/loading-indicator
+  * Bamboo will run hugo and move the generated files to either webtest or webserve depending on pushing to develop or master
 
-### The deploy process
+### URLs
 
 `master` and `develop` branches are deployed automatically using github webhooks and server-side build scripts. The following branches deploy to the following URLs:
 
 `master`: https://rivet.uits.iu.edu
-`develop`: https://rivet.webtest.iu.edu
-any other branch (.e.g `feature/new-stuff`): http://uxo.space
+`develop`: https://rivet.webtest.iu.edu/develop
+`feature/*` https://rivet.webtest.iu.edu/* (note `feature/` is removed and just the name of the feature is added)
