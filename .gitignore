@@ -3,7 +3,6 @@
 .vscode
 node_modules
 public/
-.npmrc
 tmp/
 static/css/style.css
 static/js/*.js
