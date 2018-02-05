@@ -2,14 +2,23 @@ const tippy = require('tippy.js')
 const Clipboard = require('clipboard')
 
 module.exports = {
-    // Acccepts an HTML element id attribute
-    createCopyright(elId) {
-        let year = document.getElementById(elId);
+    /**
+     *
+     * @param {String} el
+     * Accepts a CSS selector where date gets injected on the client.
+     */
+    createCopyright(el) {
+        let year = document.querySelector(el);
         if (year == null) return;
         let currentYear = new Date().getFullYear();
         year.innerHTML = currentYear;
     },
 
+    /**
+     *
+     * @param {String} checkEl
+     * Accepts a CSS selector
+     */
     setIndeterminate(checkEl) {
         let indCheck = document.querySelector(checkEl);
         // If its not the checkbox docs page bail.

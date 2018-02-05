@@ -67,7 +67,7 @@ plugins.tippyInit();
  * MUST come after the main Vue instance is initialized because
  * of Vue's virtal DOM implementation.
  */
-plugins.createCopyright('year');
+plugins.createCopyright('#year');
 plugins.setIndeterminate('#checkbox-indeterminate');
 
 // Custom analytics event tracking
