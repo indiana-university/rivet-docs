@@ -11,6 +11,7 @@ params:
     githubRepo: "https://github.iu.edu/UITS/rivet-source"
     downloadLink: "https://github.iu.edu/UITS/rivet/archive/v0.3.1.zip"
     axureKit: "https://github.iu.edu/UITS/rivet/releases/download/v0.3.1/rivet-axure-0.3.1.rp"
+    description: "Use Rivet to create UITS software that is accessible, usable, and consistent."
     resourceLinks:
         -
             text: "User Experience Office"
