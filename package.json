@@ -41,12 +41,12 @@
     "tippy.js": "^1.2.0",
     "vue": "2.4.2",
     "vue-loader": "^12.1.0",
-    "vue-template-compiler": "2.4.2",
-    "webpack": "^2.6.1"
+    "vue-template-compiler": "2.4.2"
   },
   "dependencies": {
     "axios": "0.16.2",
     "clipboard": "^1.7.1",
+    "gulp-webpack": "^1.5.0",
     "lodash": "4.17.4",
     "lunr": "2.1.2",
     "marked": "0.3.6",

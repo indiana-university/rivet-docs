@@ -16,7 +16,8 @@ gulp.task('serve', ['watch'], function() {
         files: [
             'public/**/*',
         ],
-        open: false
+        open: false,
+        logLevel: 'silent'
     });
 });
 
@@ -28,8 +29,7 @@ gulp.task('php', ['watch'], function() {
 })
 
 gulp.task('watch', ['build'], function() {
-    gulp.watch(['assets/js/webpack-entry.js', 'assets/js/**/*.vue'], ['webpack']);
-    gulp.watch(['assets/js/**/*.js', 'tmp/webpack-built.js'], ['js']);
+    gulp.watch(['assets/js/**/*.js', 'assets/js/**/*.vue'], ['js']);
     gulp.watch('assets/scss/**/*.scss', ['sass']);
     gulp.watch(['content/**/*.md'], ['index']);
     gulp.watch(['layouts/**/*', 'content/**/*', 'archetypes/**/*', 'static/**/*'], ['hugo:dev']);
@@ -40,8 +40,8 @@ gulp.task('env:production', function() {
     process.env.HUGO_ENV = 'production';
 });
 
-gulp.task('build', ['webpack', 'js', 'sass', 'index']);
-gulp.task('build:prod', ['env:production', 'sass', 'webpack', 'js', 'index']);
+gulp.task('build', ['js', 'sass', 'index']);
+gulp.task('build:prod', ['env:production', 'sass', 'js', 'index']);
 
 gulp.task('default', function() {
     return tasks.withFilters(null, 'default')();
