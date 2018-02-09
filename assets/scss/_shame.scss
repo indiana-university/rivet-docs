@@ -512,3 +512,12 @@ a.button--reverse-secondary {
         padding: .35rem .65rem;
     }
 }
+
+.dropdown {
+    &__menu {
+        .is-current {
+            border-left: 4px solid $color-action;
+            font-weight: 700;
+        }
+    }
+}
