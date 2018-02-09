@@ -121,7 +121,7 @@ For instance, you might define a limited type scale for you app of:
 {{< /example >}}
 
 ### Responsive type scale
-Each type scale helper class comes with a set of BEM-style modifiers that allow you adjust font-size at different screen sizes. Here's an example.
+Each type scale helper class comes with a set of modifiers that allow you adjust font-size at different screen sizes. Here's an example.
 
 {{< code >}}<h1 class="rvt-ts-20 rvt-ts-32-md-up">Profile page</h1>
 <p class="rvt-ts-14">The profile page is where you can select your personal settings.</p>
