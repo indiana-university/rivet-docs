@@ -25,28 +25,43 @@
             </span>
         </button>
 
-        <div class="rvt-notifications__menu"
-             :aria-hidden="menuVisible ? 'false' : 'true'"
-        >
+        <div class="rvt-notifications__menu" :aria-hidden="menuVisible ? 'false' : 'true'">
             <ol class="rvt-notifications__menu-list" v-if="notifications.length">
                 <!--
-                    This "is-unread" class here needs bound to some sort of
-                    computed property where we store a cookie and check
-                    if the notification is new since the last time they viewed.
+                    There is some duplication here because I'm faking the
+                    "is-unread" prop.
                 -->
-                <li v-for="notification in initialNotifications"
-                    :key="notification.id"
-                    class="is-unread"
-                >
+                <li v-for="notification in fakeUnreadNotifications" :key="notification.id">
                     <a :href="notification.url">
                         <notifications-item
                             :date="notification.createdDate | formatDate"
                             :title="notification.title | capitalize"
                             :description="notification.description"
+                            :is-unread="true"
+                        />
+                    </a>
+                </li>
+                <li v-for="notification in fakeReadNotifications" :key="notification.id">
+                    <a :href="notification.url">
+                        <notifications-item
+                            :date="notification.createdDate | formatDate"
+                            :title="notification.title | capitalize"
+                            :description="notification.description"
+                            :is-unread="false"
                         />
                     </a>
                 </li>
             </ol>
+            <div class="rvt-notifications-empty" v-else>
+                <div class="rvt-notifications-empty__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
+                        <path fill="currentColor" d="M8,16A8,8,0,1,1,10.29.33a1,1,0,0,1-.57,1.92A6,6,0,1,0,14,8a1,1,0,1,1,2,0A8,8,0,0,1,8,16Z"/>
+                        <path fill="currentColor" d="M7.95,11.89a1.26,1.26,0,0,1-.75-.25L3.4,8.8A1,1,0,1,1,4.6,7.2L7.77,9.58,14.18.43a1,1,0,0,1,1.64,1.15L9,11.36a1.25,1.25,0,0,1-.83.52Zm-.62-1.68h0Z"/>
+                    </svg>
+                </div>
+                <p class="rvt-notifications-empty__text">There are no current notifications.</p>
+            </div>
+
             <div class="rvt-notifications__actions">
                 <a class="rvt-button rvt-button--secondary rvt-display-block rvt-text-center rvt-m-bottom-xs" href="/notification-center/">More notifications</a>
                 <a class="rvt-button rvt-notifications__actions-mail" href="#0">
