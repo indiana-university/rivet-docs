@@ -530,8 +530,6 @@ a.button--reverse-secondary {
     }
 }
 
-
-
 .rvt-supplemental-menu {
     display: flex;
     margin-right: $sm * 1.25;
@@ -723,6 +721,25 @@ a.button--reverse-secondary {
                 position: relative;
             }
         }
+    }
+}
+
+.rvt-notifications-empty {
+    padding: $lg;
+    text-align: center;
+    background-color: $color-background-subtle;
+    border-radius: $xxs;
+    margin-bottom: $xs;
+
+    &__icon {
+        margin-right: $sm;
+        color: $color-alert-green;
+    }
+
+    &__text {
+        margin-bottom: 0;
+        line-height: 1;
+        font-weight: 700;
     }
 }
 
