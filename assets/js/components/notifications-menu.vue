@@ -52,7 +52,7 @@
                     </a>
                 </li>
             </ol>
-            <div class="rvt-notifications-empty" v-else>
+            <div v-else class="rvt-notifications-empty">
                 <div class="rvt-notifications-empty__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
                         <path fill="currentColor" d="M8,16A8,8,0,1,1,10.29.33a1,1,0,0,1-.57,1.92A6,6,0,1,0,14,8a1,1,0,1,1,2,0A8,8,0,0,1,8,16Z"/>
@@ -77,7 +77,6 @@
 </template>
 
 <script>
-const moment = require('moment');
 const axios = require('axios');
 
 module.exports = {
@@ -87,12 +86,19 @@ module.exports = {
         notificationsItem: require('./notifications-item.vue')
     },
 
+    props: {
+        notifications: {
+            type: Array
+        },
+        loadingNotifications: {
+            type: Boolean,
+            default: false
+        }
+    },
+
     data: function() {
         return {
-            menuVisible: false,
-            loadingNotifications: false,
-            notifications: [],
-            errors: []
+            menuVisible: false
         }
     },
 
@@ -125,45 +131,6 @@ module.exports = {
             if (event.keyCode == 27 && this.menuVisible) {
                 this.menuVisible = false;
             }
-        },
-
-        fetchNotifications() {
-            /**
-             * This is some placeholder data I created, but the structure
-             * closesly resembles what the notifications API will give back
-             * once it's ready.
-             */
-            let apiURL = 'https://api.myjson.com/bins/kl0dh';
-
-            this.loadingNotifications = true;
-
-            axios.get(apiURL)
-                .then(response => {
-                    this.notifications = response.data;
-
-                    this.loadingNotifications = false;
-                })
-                .catch(e => {
-                    this.errors.push(e);
-
-                    console.log(this.errors);
-                })
-        },
-
-    },
-
-    filters: {
-        formatDate: function(value) {
-            if(value) {
-                value = value.toString();
-                return moment(value, 'YYYYMMDD').fromNow();
-            }
-        },
-
-        capitalize: function (value) {
-            if (!value) return '';
-            value = value.toString();
-            return value.charAt(0).toUpperCase() + value.slice(1);
         }
     },
 
@@ -175,7 +142,7 @@ module.exports = {
          * it on some other event if we decide we need to, but it could
          * also just be moved into her on it's own.
          */
-        this.fetchNotifications();
+        // this.fetchNotifications();
     },
     destroyed() {
         // Clean up the event listener
