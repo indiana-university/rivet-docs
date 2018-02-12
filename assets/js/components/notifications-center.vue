@@ -1,16 +1,61 @@
 <template>
     <div class="rvt-notifications-center">
-        <ol class="rvt-plain-list rvt-notifications-center-feed">
-            <li>
-                <article class="rvt-feed-item">
-                    <div class="rvt-feed-item__body">
-                        <h1>The title</h1>
-                        <p>Similique illum dolores dolorem optio odio. Numquam voluptatum ab ea illo. Aliquam impedit iste odio dolores omnis dolores quam. Aut incidunt sequi qui vel fugiat quas.</p>
+        <div class="rvt-loading" v-if="isLoading">
+            <div class="rvt-loading__fake-heading">&nbsp;</div>
+            <div class="rvt-loading__fake-text">&nbsp;</div>
+            <div class="rvt-loading__fake-text-short">&nbsp;</div>
+            <div class="rvt-loading__fake-heading">&nbsp;</div>
+            <div class="rvt-loading__fake-text">&nbsp;</div>
+            <div class="rvt-loading__fake-text-short">&nbsp;</div>
+            <div class="rvt-loading__fake-heading">&nbsp;</div>
+            <div class="rvt-loading__fake-text">&nbsp;</div>
+            <div class="rvt-loading__fake-text-short">&nbsp;</div>
+            <div class="rvt-loading__fake-heading">&nbsp;</div>
+            <div class="rvt-loading__fake-text">&nbsp;</div>
+            <div class="rvt-loading__fake-text-short">&nbsp;</div>
+            <div class="rvt-loading__fake-heading">&nbsp;</div>
+            <div class="rvt-loading__fake-text">&nbsp;</div>
+            <div class="rvt-loading__fake-text-short">&nbsp;</div>
+            <div class="rvt-loading__fake-heading">&nbsp;</div>
+            <div class="rvt-loading__fake-text">&nbsp;</div>
+            <div class="rvt-loading__fake-text-short">&nbsp;</div>
+        </div>
+        <ol v-else class="rvt-plain-list rvt-notifications-center-feed">
+            <li v-for="notification in fakeUnreadNotifications" :key="notification.id">
+                <article class="rvt-feed-item rvt-feed-item--is-unread">
+                    <div class="rvt-grid">
+                        <div class="rvt-grid__item-2-md-up">
+                            <time :datetime="notification.createdDate" class="rvt-feed-item__meta">{{ notification.createdDate | formatDate }}</time>
+                        </div>
+                        <div class="rvt-grid__item-10-md-up">
+                            <div class="rvt-feed-item__body">
+                                <h1 class="rvt-feed-item__title">
+                                    <a :href="notification.url">{{ notification.title | capitalize }}</a>
+                                </h1>
+                                <p class="rvt-feed-item__desc">{{ notification.description }}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="rvt-feed-item__meta">
-                        <time datetime="" class="rvt-feed-item__meta">
-                            Jan. 15
-                        </time>
+                </article>
+            </li>
+            <!--
+                    There is some duplication here because I'm faking the
+                    is unread state.
+                -->
+            <li v-for="notification in fakeReadNotifications" :key="notification.id">
+                <article class="rvt-feed-item">
+                    <div class="rvt-grid">
+                        <div class="rvt-grid__item-2-md-up">
+                            <time datetime="" class="rvt-feed-item__meta">{{ notification.createdDate | formatDate }}</time>
+                        </div>
+                        <div class="rvt-grid__item-10-md-up">
+                            <div class="rvt-feed-item__body">
+                                <h1 class="rvt-feed-item__title">
+                                    <a :href="notification.url">{{ notification.title | capitalize }}</a>
+                                </h1>
+                                <p class="rvt-feed-item__desc">{{ notification.description }}</p>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </li>
@@ -26,40 +71,22 @@ const axios = require('axios');
 module.exports =  {
     name: 'notifications-center',
 
-    data: function() {
-        return {
-            centerNotifications: [],
-            loadingNotifications: false,
-            errors: []
+    props: {
+        notifications: {
+            type: Array
+        },
+        isLoading: {
+            type: Boolean
         }
     },
 
-    methods: {
-        fetchNotifications() {
-            /**
-             * This is some placeholder data I created, but the structure
-             * closesly resembles what the notifications API will give back
-             * once it's ready.
-             */
-
+    computed: {
+        fakeReadNotifications() {
+            return this.notifications.slice(4, 49);
         },
 
-        created() {
-            let apiURL = 'https://api.myjson.com/bins/kl0dh';
-
-            this.loadingNotifications = true;
-
-            axios.get(apiURL)
-                .then(response => {
-                    this.centerNotifications = response.data;
-
-                    this.loadingNotifications = false;
-                })
-                .catch(e => {
-                    this.errors.push(e);
-
-                    console.log(this.errors);
-                })
+        fakeUnreadNotifications() {
+            return this.notifications.slice(0, 3);
         }
     }
 }
