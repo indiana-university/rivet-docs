@@ -747,6 +747,12 @@ a.button--reverse-secondary {
     padding: $sm $sm * 1.25 $sm;
     position: relative;
 
+    &.is-unread {
+        background-color: $color-background-subtle;
+        border-bottom: none;
+        box-shadow: inset 4px 0 0 0 $color-alert-green;
+    }
+
     &__time {
         font-size: $ts-12;
         font-weight: 700;
@@ -772,6 +778,6 @@ a.button--reverse-secondary {
         position: absolute;
         top: 1.25rem;
         right: 1.25rem;
-        color: $color-black--600;
+        color: $color-black--500;
     }
 }
