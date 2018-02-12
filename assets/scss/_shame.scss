@@ -546,7 +546,7 @@ a.button--reverse-secondary {
 
     &__toggle {
         background-color: $color-black--100;
-        border-color: $color-black--100;
+        border-color: $color-black--200;
         border-radius: 999rem;
         color: $color-text;
         height: $lg;
@@ -563,6 +563,18 @@ a.button--reverse-secondary {
             background-color: $color-action;
             color: $color-background;
             border-color: $color-action;
+        }
+
+        &:active {
+            background-color: $color-action;
+            border-color: $color-background;
+            color: $color-background;
+        }
+
+        &--has-unread:active {
+            background-color: $color-alert-green;
+            color: $color-background;
+            border-color: $color-alert-green;
         }
 
         &--has-unread {
