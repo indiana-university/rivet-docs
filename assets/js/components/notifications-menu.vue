@@ -78,6 +78,7 @@
 
 <script>
 const moment = require('moment');
+const axios = require('axios');
 
 module.exports = {
     name: 'notifications-menu',
@@ -116,22 +117,6 @@ module.exports = {
             this.menuVisible = !this.menuVisible;
         },
 
-        fetchNotifications() {
-            this.loadingNotifications = true;
-
-            fetch('https://api.myjson.com/bins/kl0dh')
-                .then(response => response.json())
-                .then(json => {
-                    this.notifications = json;
-                })
-                .catch(e => {
-                    this.errors.push(e)
-                    console.log(this.errors)
-                })
-
-            this.loadingNotifications = false;
-        },
-
         escapeKeyClose(event) {
             /**
              * Nice way to list for events that bubble up outside the vm
@@ -141,6 +126,30 @@ module.exports = {
                 this.menuVisible = false;
             }
         },
+
+        fetchNotifications() {
+            /**
+             * This is some placeholder data I created, but the structure
+             * closesly resembles what the notifications API will give back
+             * once it's ready.
+             */
+            let apiURL = 'https://api.myjson.com/bins/kl0dh';
+
+            this.loadingNotifications = true;
+
+            axios.get(apiURL)
+                .then(response => {
+                    this.notifications = response.data;
+
+                    this.loadingNotifications = false;
+                })
+                .catch(e => {
+                    this.errors.push(e);
+
+                    console.log(this.errors);
+                })
+        },
+
     },
 
     filters: {
@@ -160,7 +169,12 @@ module.exports = {
 
     created() {
         document.addEventListener('keyup', this.escapeKeyClose);
-        // Go get notifications once component is created
+        /**
+         * Go get notifications once component is created
+         * Separated this out into a separate method so that we could call
+         * it on some other event if we decide we need to, but it could
+         * also just be moved into her on it's own.
+         */
         this.fetchNotifications();
     },
     destroyed() {
