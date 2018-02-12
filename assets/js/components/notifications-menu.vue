@@ -5,13 +5,24 @@
                 :class="{'rvt-notifications__toggle--has-unread' : fakeReadNotifications.length > 0}"
                 class="rvt-notifications__toggle">
             <span class="rvt-sr-only">Show notifications</span>
-            <svg v-if="menuVisible" class="rvt-close-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
-            </svg>
-            <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                <path fill="currentColor" d="M14.57,12.06,13,9.7V6A5,5,0,0,0,3,6V9.7L1.43,12.06a1.25,1.25,0,0,0,1,1.94H6a2,2,0,0,0,4,0h3.53a1.25,1.25,0,0,0,1-1.94ZM8,12H3.87L5,10.3V6a3,3,0,0,1,6,0v4.3L12.13,12Z"/>
-            </svg>
-            <span class="rvt-notifications__toggle-count">2</span>
+            <span class="rvt-notifications__toggle-loading" v-if="loadingNotifications">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g fill="currentColor">
+                        <circle cx="8" cy="8" r="2"/>
+                        <circle cx="14" cy="8" r="2"/>
+                        <circle cx="2" cy="8" r="2"/>
+                    </g>
+                </svg>
+            </span>
+            <span v-else>
+                <svg v-if="menuVisible" class="rvt-close-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
+                </svg>
+                <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path fill="currentColor" d="M14.57,12.06,13,9.7V6A5,5,0,0,0,3,6V9.7L1.43,12.06a1.25,1.25,0,0,0,1,1.94H6a2,2,0,0,0,4,0h3.53a1.25,1.25,0,0,0,1-1.94ZM8,12H3.87L5,10.3V6a3,3,0,0,1,6,0v4.3L12.13,12Z"/>
+                </svg>
+                <span v-if="notifications.length > 0" class="rvt-notifications__toggle-count">{{ fakeUnreadNotifications.length }}</span>
+            </span>
         </button>
 
         <div class="rvt-notifications__menu"
