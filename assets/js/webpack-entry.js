@@ -5,6 +5,8 @@ const Vue = require('vue/dist/vue');
 // const Vue = require('vue/dist/vue.min')
 const plugins = require('./plugins')
 const polyfills = require('./polyfills')
+const axios = require('axios')
+const moment = require('moment');
 
 /**
  * Initialize polyfils here.
@@ -13,6 +15,23 @@ const polyfills = require('./polyfills')
 // Plolyfills to add functionality to IE.
 polyfills.forEachPolyfill();
 polyfills.promisePolyfill();
+
+
+/**
+ * Register global Vue filters
+ */
+Vue.filter('formatDate', (value) => {
+    if (value) {
+        value = value.toString();
+        return moment(value, 'YYYYMMDD').fromNow();
+    }
+});
+
+Vue.filter('capitalize', (value) => {
+    if (!value) return '';
+    value = value.toString();
+    return value.charAt(0).toUpperCase() + value.slice(1);
+});
 
 /**
  * Main Vue.js Instance.
@@ -29,6 +48,9 @@ new Vue({
         // Controls the toggle of the section nav menu on mobile
         navIsVisible: false,
         isDrawerOpen: false,
+        notifications: [],
+        errors: [],
+        loadingNotifications: false
     },
     methods: {
         // Toggles the visibility of the section nav on mobile
@@ -51,8 +73,27 @@ new Vue({
             })
         }
     },
-    mounted() {
+    created() {
+        /**
+         * This is some placeholder data I created, but the structure
+         * closesly resembles what the notifications API will give back
+         * once it's ready.
+         */
+        let apiURL = 'https://api.myjson.com/bins/kl0dh';
 
+        this.loadingNotifications = true;
+
+        axios.get(apiURL)
+            .then(response => {
+                this.notifications = response.data;
+
+                this.loadingNotifications = false;
+            })
+            .catch(e => {
+                this.errors.push(e);
+
+                console.log(this.errors);
+            })
     },
 })
 
