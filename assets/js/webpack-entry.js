@@ -22,7 +22,8 @@ new Vue({
     components: {
         oneSearch: require('./components/one-search.vue'),
         searchForm: require('./components/search.vue'),
-        notificationsMenu: require('./components/notifications-menu.vue')
+        notificationsMenu: require('./components/notifications-menu.vue'),
+        notificationsCenter: require('./components/notifications-center.vue')
     },
     data: {
         // Controls the toggle of the section nav menu on mobile
