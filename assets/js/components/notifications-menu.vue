@@ -96,8 +96,18 @@ module.exports = {
     },
 
     computed: {
-        initialNotifications() {
-            return this.notifications.slice(0, 4);
+        /**
+         * These computed properties simulate read vs. unread notifications.
+         * The logic will obviously be much more complicated, but I'm using
+         * these here to simulate the different states of notifications
+         * and the menu trigger button that shows the unread count.
+        */
+        fakeReadNotifications() {
+            return this.notifications.slice(3, 5);
+        },
+
+        fakeUnreadNotifications() {
+            return this.notifications.slice(0, 2);
         }
     },
 
