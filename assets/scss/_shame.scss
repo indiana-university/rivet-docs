@@ -88,14 +88,6 @@ a.button--reverse {
     border-color: $color-background;
 }
 
-a.rvt-button {
-    color: $color-background;
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
 .rvt-button--small {
     font-size: 1rem;
 }
@@ -440,6 +432,10 @@ a.button--reverse-secondary {
     }
 }
 
+.rvtd-article-container--top-only {
+    margin-bottom: 0;
+}
+
 
 .rvtd-article-main {
     margin-top: $xl;
@@ -535,3 +531,58 @@ a.button--reverse-secondary {
     margin-right: $sm * 1.25;
 }
 
+.rvt-grid--reverse {
+    flex-direction: row-reverse !important;
+}
+
+.rvt-lh-flat {
+    line-height: 1 !important;
+}
+
+/**
+ * Notifications center CTA
+ */
+
+.rvt-callout {
+
+    &__cta {
+        display: inline-flex;
+        align-items: center;
+
+        span {
+            margin-right: $xs;
+        }
+    }
+}
+
+.rvt-loading {
+    &__fake-heading,
+    &__fake-text,
+    &__fake-text-short {
+        display: block;
+        background-color: $color-black--100;
+        border-radius: $xxs;
+    }
+
+    &__fake-heading {
+        height: $lg;
+        margin-top: $xl;
+        width: 65%;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__fake-text {
+        height: $xs;
+        margin-top: $sm;
+        width: 100%;
+    }
+
+    &__fake-text-short {
+        height: $xs;
+        margin-top: $sm;
+        width: 85%;
+    }
+}
