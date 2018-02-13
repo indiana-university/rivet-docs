@@ -1,5 +1,5 @@
 <template>
-    <article class="rvt-notification" :class="{'is-unread' : isUnread}">
+    <article class="rvt-notification" :class="{'rvt-notification--is-unread' : isUnread}">
         <time class="rvt-notification__time">
             {{ date }}
         </time>

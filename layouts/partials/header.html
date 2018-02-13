@@ -41,12 +41,10 @@
         </nav>
 
         <div class="rvt-supplemental-menu">
-
-            <!-- Notification menu here -->
             <notifications-menu :notifications="notifications"
-                                :loading-notifications="loadingNotifications">
+                                :loading-notifications="loadingNotifications"
+            >
             </notifications-menu>
-
             <div class="rvt-hide-lg-down">
                 <a href="{{ trim .Site.BaseURL " / " }}/components/#download-rivet" class="rvt-button rvt-button--small rvt-display-flex">
                     Use Rivet

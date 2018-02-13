@@ -210,7 +210,7 @@
     padding: $sm $sm * 1.25 $sm;
     position: relative;
 
-    &.is-unread {
+    &--is-unread {
         background-color: $color-background-subtle;
         border-bottom: none;
         box-shadow: inset 4px 0 0 0 $color-alert-green;
