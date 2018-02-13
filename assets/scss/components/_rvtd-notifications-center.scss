@@ -60,3 +60,10 @@
         }
     }
 }
+
+.rvt-fade-enter-active, .rvt-fade-leave-active {
+  transition: opacity .3s ease;
+}
+.rvt-fade-enter, .rvt-fade-leave-to {
+  opacity: 0;
+}

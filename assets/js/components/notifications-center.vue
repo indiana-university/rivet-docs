@@ -1,5 +1,6 @@
 <template>
     <div class="rvt-notifications-center">
+        <transition name="rvt-fade">
         <div class="rvt-loading" v-if="isLoading">
             <div class="rvt-loading__fake-heading">&nbsp;</div>
             <div class="rvt-loading__fake-text">&nbsp;</div>
@@ -60,7 +61,7 @@
                 </article>
             </li>
         </ol>
-
+        </transition>
     </div>
 </template>
 
