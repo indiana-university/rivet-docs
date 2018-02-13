@@ -21,7 +21,7 @@
                 <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <path fill="currentColor" d="M14.57,12.06,13,9.7V6A5,5,0,0,0,3,6V9.7L1.43,12.06a1.25,1.25,0,0,0,1,1.94H6a2,2,0,0,0,4,0h3.53a1.25,1.25,0,0,0,1-1.94ZM8,12H3.87L5,10.3V6a3,3,0,0,1,6,0v4.3L12.13,12Z"/>
                 </svg>
-                <span v-if="notifications.length > 0" class="rvt-notifications__toggle-count">{{ fakeUnreadNotifications.length }}</span>
+                <span v-if="fakeUnreadNotifications.length > 0" class="rvt-notifications__toggle-count">{{ fakeUnreadNotifications.length }}</span>
             </span>
         </button>
 
