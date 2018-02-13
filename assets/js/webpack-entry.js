@@ -1,8 +1,8 @@
 /*
     swap vue.min out for vue if you need vue devtools
 */
-const Vue = require('vue/dist/vue');
-// const Vue = require('vue/dist/vue.min')
+// const Vue = require('vue/dist/vue');
+const Vue = require('vue/dist/vue.min')
 const plugins = require('./plugins')
 const polyfills = require('./polyfills')
 const axios = require('axios')
