@@ -17,7 +17,8 @@ gulp.task('serve', ['watch'], function() {
             'public/**/*',
         ],
         open: false,
-        logLevel: 'silent'
+        logLevel: 'silent',
+        notify: false
     });
 });
 

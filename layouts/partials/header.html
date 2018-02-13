@@ -15,27 +15,46 @@
         <nav class="rvt-header__main-nav" role="navigation" aria-label="main">
             <ul>
                 {{ $currentNav := . }}
-                {{ range .Site.Sections }}
-                    {{/*
-                        This checks for a hideFromNav parameter and shows
-                        the nav item and for unless set to true
-                    */}}
-                    {{ if ne .Params.hideFromNav true }}
-                    <li {{ if eq $currentNav.Section .Section }}class="is-current"{{ end }}>
-                        <a href="{{ .Permalink }}">
-                            {{ if .Params.navTitle }}
-                                {{ .Params.navTitle }}
-                            {{ else }}
-                                {{ .Title }}
-                            {{ end }}
+                <li>
+                    <div class="dropdown">
+                        <a class="dropdown__trigger" href="#" data-dropdown-trigger="documentation-dropdown" aria-haspopup="true" aria-expanded="false">
+                            Documentation
                         </a>
-                    </li>
-                    {{ end }}
-                {{ end }}
-                <li><a href="{{ trim .Site.BaseURL "/" }}/components/#download-rivet" class="button button--secondary button--small">Download</a></li>
+                        <div class="dropdown__menu" id="documentation-dropdown" aria-hidden="true">
+                            <a href="{{ trim .Site.BaseURL "/" }}/components" {{ if eq $currentNav.URL "/components/" }}class="is-current"{{ end }}>Components</a>
+                            <a href="{{ trim .Site.BaseURL "/" }}/content-guide" {{ if eq $currentNav.URL "/content-guide/" }}class="is-current"{{ end }}>Content guide</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a class="dropdown__trigger" href="#" data-dropdown-trigger="learn-dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Rivet
+                        </a>
+                        <div class="dropdown__menu" id="learn-dropdown" aria-hidden="true">
+                            <a href="{{ trim .Site.BaseURL "/" }}/how-to-use/" {{ if eq $currentNav.URL "/how-to-use/" }}class="is-current"{{ end }}>How to use</a>
+                            <a href="{{ trim .Site.BaseURL "/" }}/learn/" {{ if eq $currentNav.URL "/learn/" }}class="is-current"{{ end }}>Learn</a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
+
+        <div class="rvt-supplemental-menu">
+            <notifications-menu :notifications="notifications"
+                                :loading-notifications="loadingNotifications"
+            >
+            </notifications-menu>
+            <div class="rvt-hide-lg-down">
+                <a href="{{ trim .Site.BaseURL " / " }}/components/#download-rivet" class="rvt-button rvt-button--small rvt-display-flex">
+                    Use Rivet
+                </a>
+            </div>
+        </div>
         {{ partial "drawer-button.html" . }}
     </div>
     {{ partial "drawer.html" . }}
 </header>
+
+
+

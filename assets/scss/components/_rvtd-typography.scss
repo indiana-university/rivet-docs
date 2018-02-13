@@ -6,8 +6,12 @@
         margin-bottom: $sm;
     }
 
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+    }
+
     h1 {
-        font-size: ts(41);
+        font-size: $ts-36;
         line-height: 1;
         margin-bottom: $sm;
     }
@@ -17,11 +21,11 @@
     }
 
     h2 {
-        font-size: ts(29);
+        font-size: ts(26);
     }
 
     h3 {
-        font-size: ts(23);
+        font-size: ts(20);
     }
 
     p,

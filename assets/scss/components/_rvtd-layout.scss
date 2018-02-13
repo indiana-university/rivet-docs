@@ -77,7 +77,7 @@
 @include mq(bp(md)) {
     .rvtd-tube {
         max-width: calc(100% - 296px);
-        padding: $xl;
+        padding: $lg $xl;
     }
 }
 

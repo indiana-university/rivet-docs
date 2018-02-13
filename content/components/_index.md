@@ -10,7 +10,7 @@ sectionNav: true
 Rivet is new and we're quickly adding components and features as we work toward the official version 1.0 release. Join the email list to get updates on new features, examples, and how-to guides.
 
 <div class="rvt-button-group">
-{{< button url="https://list.iu.edu/sympa/subscribe/rivet-l" analytics-category="click">}}Subscribe{{< /button >}}
+{{< button url="https://list.iu.edu/sympa/subscribe/rivet-l" variant="secondary" analytics-category="click">}}Subscribe{{< /button >}}
 {{< button url="https://list.iu.edu/sympa/sigrequest/rivet-l" variant="plain" analytics-category="click">}}Manage your settings{{< /button >}}
 </div>
 
@@ -20,7 +20,16 @@ The Rivet components documentation contains examples, code snippets, and guidanc
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
-{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.4.0.zip" variant="secondary" analytics-action="download" analytics-category="click">}}Download Rivet{{< /button >}}
+{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.4.0.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
+    <span class="rvt-m-right-xxs">Download Rivet</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <title>Download</title>
+        <g fill="currentColor">
+            <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
+            <path d="M7.29,10.71a1,1,0,0,0,1.41,0l4-4a1,1,0,0,0-1.41-1.41L9,7.59V1A1,1,0,0,0,7,1V7.59L4.71,5.29A1,1,0,0,0,3.29,6.71Z"/>
+        </g>
+    </svg>
+{{< /button >}}
 
 ### Download contents
 The download contains the following files:
