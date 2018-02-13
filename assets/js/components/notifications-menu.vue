@@ -26,7 +26,7 @@
         </button>
 
         <div class="rvt-notifications__menu" ref="menuElement" :aria-hidden="menuVisible ? 'false' : 'true'">
-            <ol class="rvt-notifications__menu-list" v-if="notifications.length">
+            <ol class="rvt-notifications__menu-list" v-if="notifications.length > 0">
                 <!--
                     There is some duplication here because I'm faking the
                     "is-unread" prop.
