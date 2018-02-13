@@ -1,6 +1,6 @@
 <template>
     <div class="rvt-notifications">
-        <button @click="toggleMenu"
+        <button @click.stop="toggleMenu"
                 :aria-expanded="menuVisible ? 'true': 'false'"
                 :class="{'rvt-notifications__toggle--has-unread' : fakeReadNotifications.length > 0}"
                 class="rvt-notifications__toggle">
@@ -25,7 +25,7 @@
             </span>
         </button>
 
-        <div class="rvt-notifications__menu" :aria-hidden="menuVisible ? 'false' : 'true'">
+        <div class="rvt-notifications__menu" ref="menuElement" :aria-hidden="menuVisible ? 'false' : 'true'">
             <ol class="rvt-notifications__menu-list" v-if="notifications.length">
                 <!--
                     There is some duplication here because I'm faking the
@@ -77,7 +77,6 @@
 </template>
 
 <script>
-const axios = require('axios');
 
 module.exports = {
     name: 'notifications-menu',
@@ -131,22 +130,30 @@ module.exports = {
             if (event.keyCode == 27 && this.menuVisible) {
                 this.menuVisible = false;
             }
+        },
+
+        handleClickOutside(event) {
+            /**
+             * Stores a ref to the menu element using Vue's $refs object.
+             * https://vuejs.org/v2/api/#ref
+             */
+            let el =  this.$refs.menuElement;
+            let target = event.target;
+
+            if(el !== target && !el.contains(target)) {
+                this.menuVisible = false;
+            }
         }
     },
 
     created() {
         document.addEventListener('keyup', this.escapeKeyClose);
-        /**
-         * Go get notifications once component is created
-         * Separated this out into a separate method so that we could call
-         * it on some other event if we decide we need to, but it could
-         * also just be moved into her on it's own.
-         */
-        // this.fetchNotifications();
+        document.addEventListener('click', this.handleClickOutside);
     },
     destroyed() {
-        // Clean up the event listener
+        // Clean up the event listeners
         document.removeEventListener('keyup', this.escapeKeyClose);
+        document.removeEventListener('click', this.handleClickOutside);
     }
 }
 </script>
