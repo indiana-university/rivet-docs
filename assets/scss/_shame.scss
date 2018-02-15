@@ -48,6 +48,19 @@ h6 {
 }
 
 /**
+ * sticky footer
+ */
+ .sticky-footer__wrapper {
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+
+     & > footer {
+         margin-top: auto;
+     }
+ }
+
+/**
  * NOTE: These all override Rivet itself
  */
 
