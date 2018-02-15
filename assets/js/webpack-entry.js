@@ -23,7 +23,7 @@ polyfills.promisePolyfill();
 Vue.filter('formatDate', (value) => {
     if (value) {
         value = value.toString();
-        return moment(value, 'YYYYMMDD').fromNow();
+        return moment(value, 'YYYY-MM-DDThh:mm:ss.SSS+Z').fromNow();
     }
 });
 
@@ -58,7 +58,8 @@ new Vue({
         isDrawerOpen: false,
         notifications: [],
         errors: [],
-        loadingNotifications: false
+        loadingNotifications: false,
+        errorLoadingNotifications: false
     },
     methods: {
         // Toggles the visibility of the section nav on mobile
@@ -82,25 +83,26 @@ new Vue({
         }
     },
     created() {
-        /**
-         * This is some placeholder data I created, but the structure
-         * closesly resembles what the notifications API will give back
-         * once it's ready.
-         */
-        let apiURL = 'https://api.myjson.com/bins/kl0dh';
+        const apiURL = 'http://dcd-notifications.apps-test.iu.edu/notifications/search/byTenants?names=Rivet';
 
         this.loadingNotifications = true;
 
         axios.get(apiURL)
             .then(response => {
-                this.notifications = response.data.sort(comparePublishDates);
-                
-                this.loadingNotifications = false;
+                if(response.data._embedded && Array.isArray(response.data._embedded.notifications)) {
+                    this.notifications = response.data._embedded.notifications.sort(comparePublishDates);
+                } else {
+                    this.errorLoadingNotifications = true;
+                    console.log('Error loading notifications - API response must contain an array')
+                }
             })
             .catch(e => {
                 this.errors.push(e);
-
                 console.log(this.errors);
+                this.errorLoadingNotifications = true;
+            })
+            .then(() => {
+                this.loadingNotifications = false;
             })
     },
 })

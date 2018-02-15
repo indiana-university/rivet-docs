@@ -34,7 +34,7 @@
                 <li v-for="notification in visibleNotifications" :key="notification.id">
                     <a :href="notification.url">
                         <notifications-item
-                            :date="notification.publishedDate | formatDate"
+                            :date="notification.lastModifiedAt | formatDate"
                             :title="notification.title | capitalize"
                             :description="notification.description"
                             :is-unread="isUnread(notification)"
@@ -106,14 +106,14 @@ module.exports = {
             return this.unreadCount > 0;
         },
         mostRecentNotificationDate() {
-            return this.notifications[0].publishedDate
+            return this.notifications[0].lastModifiedAt
         },
     },
 
     methods: {
         isUnread(notification) {
             if(moment.isMoment(this.notificationsLastViewedAt)) {
-                return this.notificationsLastViewedAt.isBefore(notification.publishedDate);
+                return this.notificationsLastViewedAt.isBefore(notification.lastModifiedAt);
             }
             return true;
         },
