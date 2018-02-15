@@ -43,6 +43,8 @@
         <div class="rvt-supplemental-menu">
             <notifications-menu :notifications="notifications"
                                 :loading-notifications="loadingNotifications"
+                                :error-loading-notifications="errorLoadingNotifications"
+                                v-on:reload-notifications="loadNotifications"
             >
             </notifications-menu>
             <div class="rvt-hide-lg-down">

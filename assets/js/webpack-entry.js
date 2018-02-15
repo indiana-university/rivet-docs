@@ -80,30 +80,31 @@ new Vue({
                     drawer.style.height = (document.body.scrollHeight-70)+"px"
                 }
             })
+        },
+
+        loadNotifications() {
+            const apiURL = 'http://dcd-notifications.apps-test.iu.edu/notifications/search/byTenants?names=Rivet';
+            this.loadingNotifications = true;
+            axios.get(apiURL)
+                .then(response => {
+                    if(response.data._embedded && Array.isArray(response.data._embedded.notifications)) {
+                        this.notifications = response.data._embedded.notifications.sort(comparePublishDates);
+                    } else {
+                        this.errorLoadingNotifications = true;
+                        console.log('Error loading notifications - API response must contain an array')
+                    }
+                })
+                .catch(e => {
+                    this.errors.push(e);
+                    this.errorLoadingNotifications = true;
+                })
+                .finally(() => {
+                    this.loadingNotifications = false;
+                })
         }
     },
     created() {
-        const apiURL = 'http://dcd-notifications.apps-test.iu.edu/notifications/search/byTenants?names=Rivet';
-
-        this.loadingNotifications = true;
-
-        axios.get(apiURL)
-            .then(response => {
-                if(response.data._embedded && Array.isArray(response.data._embedded.notifications)) {
-                    this.notifications = response.data._embedded.notifications.sort(comparePublishDates);
-                } else {
-                    this.errorLoadingNotifications = true;
-                    console.log('Error loading notifications - API response must contain an array')
-                }
-            })
-            .catch(e => {
-                this.errors.push(e);
-                console.log(this.errors);
-                this.errorLoadingNotifications = true;
-            })
-            .then(() => {
-                this.loadingNotifications = false;
-            })
+        this.loadNotifications();
     },
 })
 

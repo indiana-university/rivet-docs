@@ -206,6 +206,14 @@
     }
 }
 
+.rvt-notifications-error {
+    @extend .rvt-notifications-empty;
+
+    &__icon {
+        color: $color-alert-orange;
+    }
+}
+
 .rvt-notification {
     padding: $sm $sm * 1.25 $sm;
     position: relative;

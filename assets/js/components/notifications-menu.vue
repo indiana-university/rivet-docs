@@ -42,6 +42,22 @@
                     </a>
                 </li>
             </ol>
+            <div v-else-if="loadingNotifications" class="rvt-notifications-error">
+                <p class="rvt-notifications-error__text">Loading notifications</p>
+            </div>
+            <div v-else-if="errorLoadingNotifications" class="rvt-notifications-error">
+                <div class="rvt-notifications-error__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
+                        <g fill="currentColor">
+                            <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"/>
+                            <path d="M8,9A1,1,0,0,1,7,8V5A1,1,0,0,1,9,5V8A1,1,0,0,1,8,9Z"/>
+                            <circle cx="8" cy="11" r="1"/>
+                        </g>
+                    </svg>
+                </div>
+                <p class="rvt-notifications-error__text">There was an error connecting to the notifications service.</p>
+                <p><button class="button--secondary" @click.stop="reload">Reload</button></p>
+            </div>
             <div v-else class="rvt-notifications-empty">
                 <div class="rvt-notifications-empty__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
@@ -53,7 +69,7 @@
             </div>
 
             <div class="rvt-notifications__actions">
-                <a class="rvt-button rvt-button--secondary rvt-display-block rvt-text-center rvt-m-bottom-xs" :href="baseURL + 'notification-center'">More notifications</a>
+                <a v-if="!errorLoadingNotifications" class="rvt-button rvt-button--secondary rvt-display-block rvt-text-center rvt-m-bottom-xs" :href="baseURL + 'notification-center'">More notifications</a>
                 <a class="rvt-button rvt-notifications__actions-mail" href="#0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                         <title>Envelope icon</title>
@@ -82,6 +98,10 @@ module.exports = {
             type: Array
         },
         loadingNotifications: {
+            type: Boolean,
+            default: false
+        },
+        errorLoadingNotifications: {
             type: Boolean,
             default: false
         }
@@ -143,6 +163,10 @@ module.exports = {
             if(el !== target && !el.contains(target)) {
                 this.menuVisible = false;
             }
+        },
+
+        reload() {
+            this.$emit('reload-notifications');
         }
     },
 
