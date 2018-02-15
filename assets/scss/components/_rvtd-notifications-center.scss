@@ -1,5 +1,10 @@
 .rvt-notifications-center {
     margin-bottom: 6rem;
+
+    .rvt-notifications-empty, 
+    .rvt-notifications-error {
+        background: none;
+    }
 }
 
 .rvt-notifications-center-feed {

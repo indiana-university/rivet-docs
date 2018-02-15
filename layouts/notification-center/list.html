@@ -10,7 +10,9 @@
         <div class="rvt-grid__item-8-md-up">
             <notifications-center
                 :notifications="notifications"
-                :is-loading="loadingNotifications"
+                :loading-notifications="loadingNotifications"
+                :error-loading-notifications="errorLoadingNotifications"
+                v-on:reload-notifications="loadNotifications"
             >
             <notifications-center/>
         </div>
