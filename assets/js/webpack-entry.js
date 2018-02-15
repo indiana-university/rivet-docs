@@ -1,8 +1,8 @@
 /*
     swap vue.min out for vue if you need vue devtools
 */
-// const Vue = require('vue/dist/vue');
-const Vue = require('vue/dist/vue.min')
+const Vue = require('vue/dist/vue');
+// const Vue = require('vue/dist/vue.min')
 const plugins = require('./plugins')
 const polyfills = require('./polyfills')
 const axios = require('axios')
@@ -32,6 +32,14 @@ Vue.filter('capitalize', (value) => {
     value = value.toString();
     return value.charAt(0).toUpperCase() + value.slice(1);
 });
+
+const comparePublishDates = (a, b) => {
+    a = moment(a.publishedDate);
+    b = b.publishedDate;
+    return a.isSame(b) 
+            ? 0
+            : a.isBefore(b) ? 1 : -1;
+}
 
 /**
  * Main Vue.js Instance.
@@ -85,8 +93,8 @@ new Vue({
 
         axios.get(apiURL)
             .then(response => {
-                this.notifications = response.data;
-
+                this.notifications = response.data.sort(comparePublishDates);
+                
                 this.loadingNotifications = false;
             })
             .catch(e => {

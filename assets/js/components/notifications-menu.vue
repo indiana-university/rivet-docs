@@ -2,7 +2,7 @@
     <div class="rvt-notifications">
         <button @click.stop="toggleMenu"
                 :aria-expanded="menuVisible ? 'true': 'false'"
-                :class="{'rvt-notifications__toggle--has-unread' : fakeReadNotifications.length > 0}"
+                :class="{'rvt-notifications__toggle--has-unread' : userHasUnreadNotifications}"
                 class="rvt-notifications__toggle">
             <span class="rvt-sr-only">Show notifications</span>
             <span class="rvt-notifications__toggle-loading" v-if="loadingNotifications">
@@ -21,7 +21,7 @@
                 <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <path fill="currentColor" d="M14.57,12.06,13,9.7V6A5,5,0,0,0,3,6V9.7L1.43,12.06a1.25,1.25,0,0,0,1,1.94H6a2,2,0,0,0,4,0h3.53a1.25,1.25,0,0,0,1-1.94ZM8,12H3.87L5,10.3V6a3,3,0,0,1,6,0v4.3L12.13,12Z"/>
                 </svg>
-                <span v-if="fakeUnreadNotifications.length > 0" class="rvt-notifications__toggle-count">{{ fakeUnreadNotifications.length }}</span>
+                <span v-if="unreadCount" class="rvt-notifications__toggle-count">{{ unreadCount }}</span>
             </span>
         </button>
 
@@ -31,23 +31,13 @@
                     There is some duplication here because I'm faking the
                     "is-unread" prop.
                 -->
-                <li v-for="notification in fakeUnreadNotifications" :key="notification.id">
+                <li v-for="notification in visibleNotifications" :key="notification.id">
                     <a :href="notification.url">
                         <notifications-item
-                            :date="notification.createdDate | formatDate"
+                            :date="notification.publishedDate | formatDate"
                             :title="notification.title | capitalize"
                             :description="notification.description"
-                            :is-unread="true"
-                        />
-                    </a>
-                </li>
-                <li v-for="notification in fakeReadNotifications" :key="notification.id">
-                    <a :href="notification.url">
-                        <notifications-item
-                            :date="notification.createdDate | formatDate"
-                            :title="notification.title | capitalize"
-                            :description="notification.description"
-                            :is-unread="false"
+                            :is-unread="isUnread(notification)"
                         />
                     </a>
                 </li>
@@ -77,6 +67,8 @@
 </template>
 
 <script>
+const moment = require('moment');
+const localStorageAvailable = require('../polyfills.js').localStorageAvailable;
 
 module.exports = {
     name: 'notifications-menu',
@@ -98,27 +90,42 @@ module.exports = {
     data: function() {
         return {
             menuVisible: false,
-            baseURL: baseURL
+            baseURL: baseURL,
+            notificationsLastViewedAt: null
         }
     },
 
     computed: {
-        /**
-         * These computed properties simulate read vs. unread notifications.
-         * The logic will obviously be much more complicated, but I'm using
-         * these here to simulate the different states of notifications
-         * and the menu trigger button that shows the unread count.
-        */
-        fakeReadNotifications() {
-            return this.notifications.slice(3, 5);
+        visibleNotifications() {
+            return this.notifications.slice(0, 5);
         },
-
-        fakeUnreadNotifications() {
-            return this.notifications.slice(0, 2);
-        }
+        unreadCount() {
+            return this.visibleNotifications.filter((n) => this.isUnread(n)).length
+        },
+        userHasUnreadNotifications() {
+            return this.unreadCount > 0;
+        },
+        mostRecentNotificationDate() {
+            return this.notifications[0].publishedDate
+        },
     },
 
     methods: {
+        isUnread(notification) {
+            if(moment.isMoment(this.notificationsLastViewedAt)) {
+                return this.notificationsLastViewedAt.isBefore(notification.publishedDate);
+            }
+            return true;
+        },
+
+        hasNotifications() {
+            return this.unreadCount > 0;
+        },
+
+        hasLastViewedAt() {
+            return this.notificationsLastViewedAt !== null;
+        },
+
         toggleMenu() {
             this.menuVisible = !this.menuVisible;
         },
@@ -150,11 +157,47 @@ module.exports = {
     created() {
         document.addEventListener('keyup', this.escapeKeyClose);
         document.addEventListener('click', this.handleClickOutside);
+
+        if(localStorageAvailable()) {
+            const storedDate = moment(localStorage.getItem('notificationsLastViewedAt'));
+            if(storedDate.isValid()) {
+                this.notificationsLastViewedAt = storedDate;
+            }
+        }
+
+        
+        document.addEventListener('keyup', (e) => {
+            switch(e.keyCode) {
+                case 49:
+                    this.notificationsLastViewedAt = null;
+                    break;
+                case 50:
+                    this.notificationsLastViewedAt = moment('2018-02-08');
+                    break;
+                case 51:
+                    this.notificationsLastViewedAt = moment('2018-01-01');
+                    break;
+            }
+        if(localStorageAvailable()) {
+            localStorage.setItem('notificationsLastViewedAt', this.notificationsLastViewedAt.format());
+        }
+        });
     },
     destroyed() {
         // Clean up the event listeners
         document.removeEventListener('keyup', this.escapeKeyClose);
         document.removeEventListener('click', this.handleClickOutside);
+    },
+
+    watch: {
+        menuVisible() {
+            if(!this.menuVisible) {
+                this.notificationsLastViewedAt = moment();
+                if(localStorageAvailable()) {
+                    localStorage.setItem('notificationsLastViewedAt', this.notificationsLastViewedAt.format());
+                }
+            }
+        }
     }
 }
 </script>
