@@ -118,14 +118,6 @@ module.exports = {
             return true;
         },
 
-        hasNotifications() {
-            return this.unreadCount > 0;
-        },
-
-        hasLastViewedAt() {
-            return this.notificationsLastViewedAt !== null;
-        },
-
         toggleMenu() {
             this.menuVisible = !this.menuVisible;
         },
