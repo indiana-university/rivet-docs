@@ -84,7 +84,7 @@ new Vue({
         },
 
         loadNotifications() {
-            const apiURL = 'http://dcd-notifications.apps-test.iu.edu/notifications/search/byTenants?names=Rivet';
+            const apiURL = 'https://dcd-notifications.apps-test.iu.edu/notifications/search/byTenants?names=Rivet';
             this.loadingNotifications = true;
             axios.get(apiURL)
                 .then(response => {
