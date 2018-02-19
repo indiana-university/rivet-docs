@@ -24,6 +24,7 @@
     &__body {
         padding-left: $md;
         box-shadow: inset 4px 0 0 0 $color-black--100;
+        transition: box-shadow .3s;
     }
 
     &__title {
