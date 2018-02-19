@@ -85,6 +85,7 @@
 <script>
 const moment = require('moment');
 const localStorageAvailable = require('../polyfills.js').localStorageAvailable;
+const getLastViewedAt = require('../plugins.js').getLastViewedAt;
 
 module.exports = {
     name: 'notifications-menu',
@@ -174,13 +175,7 @@ module.exports = {
         document.addEventListener('keyup', this.escapeKeyClose);
         document.addEventListener('click', this.handleClickOutside);
 
-        if(localStorageAvailable()) {
-            const storedDate = moment(localStorage.getItem('notificationsLastViewedAt'));
-            if(storedDate.isValid()) {
-                this.notificationsLastViewedAt = storedDate;
-            }
-        }
-
+        this.notificationsLastViewedAt = getLastViewedAt();
         
         document.addEventListener('keyup', (e) => {
             switch(e.keyCode) {
