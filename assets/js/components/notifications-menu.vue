@@ -85,7 +85,6 @@
 <script>
 const moment = require('moment');
 const localStorageAvailable = require('../polyfills.js').localStorageAvailable;
-const getLastViewedAt = require('../plugins.js').getLastViewedAt;
 
 module.exports = {
     name: 'notifications-menu',
@@ -105,14 +104,16 @@ module.exports = {
         errorLoadingNotifications: {
             type: Boolean,
             default: false
+        },
+        notificationsLastViewedAt: {
+            default: null
         }
     },
 
     data: function() {
         return {
             menuVisible: false,
-            baseURL: baseURL,
-            notificationsLastViewedAt: null
+            baseURL: baseURL
         }
     },
 
@@ -174,25 +175,6 @@ module.exports = {
     created() {
         document.addEventListener('keyup', this.escapeKeyClose);
         document.addEventListener('click', this.handleClickOutside);
-
-        this.notificationsLastViewedAt = getLastViewedAt();
-        
-        document.addEventListener('keyup', (e) => {
-            switch(e.keyCode) {
-                case 49:
-                    this.notificationsLastViewedAt = null;
-                    break;
-                case 50:
-                    this.notificationsLastViewedAt = moment('2018-02-08');
-                    break;
-                case 51:
-                    this.notificationsLastViewedAt = moment('2018-01-01');
-                    break;
-            }
-        if(localStorageAvailable()) {
-            localStorage.setItem('notificationsLastViewedAt', this.notificationsLastViewedAt.format());
-        }
-        });
     },
     destroyed() {
         // Clean up the event listeners
@@ -203,10 +185,7 @@ module.exports = {
     watch: {
         menuVisible() {
             if(!this.menuVisible) {
-                this.notificationsLastViewedAt = moment();
-                if(localStorageAvailable()) {
-                    localStorage.setItem('notificationsLastViewedAt', this.notificationsLastViewedAt.format());
-                }
+                this.$emit('clear-notifications');
             }
         }
     }

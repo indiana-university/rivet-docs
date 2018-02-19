@@ -42,9 +42,11 @@
 
         <div class="rvt-supplemental-menu">
             <notifications-menu :notifications="notifications"
+                                :notifications-last-viewed-at="notificationsLastViewedAt"
                                 :loading-notifications="loadingNotifications"
                                 :error-loading-notifications="errorLoadingNotifications"
                                 v-on:reload-notifications="loadNotifications"
+                                v-on:clear-notifications="clearNotifications"
             >
             </notifications-menu>
             <div class="rvt-hide-lg-down">

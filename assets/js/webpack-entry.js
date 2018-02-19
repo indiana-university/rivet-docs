@@ -59,7 +59,8 @@ new Vue({
         notifications: [],
         errors: [],
         loadingNotifications: false,
-        errorLoadingNotifications: false
+        errorLoadingNotifications: false,
+        notificationsLastViewedAt: null
     },
     methods: {
         // Toggles the visibility of the section nav on mobile
@@ -101,10 +102,36 @@ new Vue({
                 .finally(() => {
                     this.loadingNotifications = false;
                 })
+        },
+
+        clearNotifications() {
+            this.notificationsLastViewedAt = moment();
+            if(polyfills.localStorageAvailable()) {
+                localStorage.setItem('notificationsLastViewedAt', this.notificationsLastViewedAt.format());
+            }
         }
     },
     created() {
         this.loadNotifications();
+
+        this.notificationsLastViewedAt = plugins.getLastViewedAt();      
+        
+        document.addEventListener('keyup', (e) => {
+            switch(e.keyCode) {
+                case 49:
+                    this.notificationsLastViewedAt = null;
+                    break;
+                case 50:
+                    this.notificationsLastViewedAt = moment('2018-02-08');
+                    break;
+                case 51:
+                    this.notificationsLastViewedAt = moment('2018-01-01');
+                    break;
+            }
+            if(polyfills.localStorageAvailable()) {
+                localStorage.setItem('notificationsLastViewedAt', this.notificationsLastViewedAt.format());
+            }
+        });
     },
 })
 

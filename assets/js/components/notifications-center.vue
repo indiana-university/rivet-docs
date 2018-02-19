@@ -61,12 +61,6 @@ const localStorageAvailable = require('../polyfills.js').localStorageAvailable;
 module.exports =  {
     name: 'notifications-center',
 
-    data() {
-        return {
-            notificationsLastViewedAt: null
-        }
-    },
-
     methods: {
         isUnread(notification) {
             if(moment.isMoment(this.notificationsLastViewedAt)) {
@@ -77,20 +71,9 @@ module.exports =  {
     },
 
     mounted() {
-        if(localStorageAvailable()) {
-            const storedDate = moment(localStorage.getItem('notificationsLastViewedAt'));
-            if(storedDate.isValid()) {
-                this.notificationsLastViewedAt = storedDate;
-            }
-        }
-
         // set notifications as viewed after 4 seconds
         setTimeout(() => {
             this.$emit('clear-notifications');
-            this.notificationsLastViewedAt = moment();
-            if(localStorageAvailable()) {
-                localStorage.setItem('notificationsLastViewedAt', this.notificationsLastViewedAt.format());
-            }
         }, 2000)
     },
 
@@ -105,6 +88,9 @@ module.exports =  {
         errorLoadingNotifications: {
             type: Boolean,
             default: false
+        },
+        notificationsLastViewedAt: {
+            default: null
         }
     },
 
