@@ -5,7 +5,7 @@
         </time>
         <h1 class="rvt-notification__title">{{ title }}</h1>
         <p class="rvt-notification__teaser">{{ description }}</p>
-        <div class="rvt-notification__icon">
+        <div v-if="isExternalLink" class="rvt-notification__icon">
             <span class="rvt-sr-only">External Link</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <g fill="currentColor">
@@ -20,7 +20,12 @@
 <script>
     module.exports = {
         name: 'notifications-item',
-
+        computed: {
+            isExternalLink() {
+                // TODO check URL for rivet.uits.iu.edu
+                return true
+            }
+        },
         props: {
             date: {
                 type: String

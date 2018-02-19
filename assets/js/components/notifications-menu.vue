@@ -2,7 +2,7 @@
     <div class="rvt-notifications">
         <button @click.stop="toggleMenu"
                 :aria-expanded="menuVisible ? 'true': 'false'"
-                :class="{'rvt-notifications__toggle--has-unread' : fakeReadNotifications.length > 0}"
+                :class="{'rvt-notifications__toggle--has-unread' : userHasUnreadNotifications}"
                 class="rvt-notifications__toggle">
             <span class="rvt-sr-only">Show notifications</span>
             <span class="rvt-notifications__toggle-loading" v-if="loadingNotifications">
@@ -21,7 +21,7 @@
                 <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <path fill="currentColor" d="M14.57,12.06,13,9.7V6A5,5,0,0,0,3,6V9.7L1.43,12.06a1.25,1.25,0,0,0,1,1.94H6a2,2,0,0,0,4,0h3.53a1.25,1.25,0,0,0,1-1.94ZM8,12H3.87L5,10.3V6a3,3,0,0,1,6,0v4.3L12.13,12Z"/>
                 </svg>
-                <span v-if="fakeUnreadNotifications.length > 0" class="rvt-notifications__toggle-count">{{ fakeUnreadNotifications.length }}</span>
+                <span v-if="unreadCount" class="rvt-notifications__toggle-count">{{ unreadCount }}</span>
             </span>
         </button>
 
@@ -31,27 +31,33 @@
                     There is some duplication here because I'm faking the
                     "is-unread" prop.
                 -->
-                <li v-for="notification in fakeUnreadNotifications" :key="notification.id">
+                <li v-for="notification in visibleNotifications" :key="notification.id">
                     <a :href="notification.url">
                         <notifications-item
-                            :date="notification.createdDate | formatDate"
+                            :date="notification.lastModifiedAt | formatDate"
                             :title="notification.title | capitalize"
                             :description="notification.description"
-                            :is-unread="true"
-                        />
-                    </a>
-                </li>
-                <li v-for="notification in fakeReadNotifications" :key="notification.id">
-                    <a :href="notification.url">
-                        <notifications-item
-                            :date="notification.createdDate | formatDate"
-                            :title="notification.title | capitalize"
-                            :description="notification.description"
-                            :is-unread="false"
+                            :is-unread="isUnread(notification)"
                         />
                     </a>
                 </li>
             </ol>
+            <div v-else-if="loadingNotifications" class="rvt-notifications-error">
+                <p class="rvt-notifications-error__text">Loading notifications</p>
+            </div>
+            <div v-else-if="errorLoadingNotifications" class="rvt-notifications-error">
+                <div class="rvt-notifications-error__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
+                        <g fill="currentColor">
+                            <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"/>
+                            <path d="M8,9A1,1,0,0,1,7,8V5A1,1,0,0,1,9,5V8A1,1,0,0,1,8,9Z"/>
+                            <circle cx="8" cy="11" r="1"/>
+                        </g>
+                    </svg>
+                </div>
+                <p class="rvt-notifications-error__text">There was an error connecting to the notifications service.</p>
+                <p><button class="button--secondary" @click.stop="reload">Reload</button></p>
+            </div>
             <div v-else class="rvt-notifications-empty">
                 <div class="rvt-notifications-empty__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
@@ -63,8 +69,8 @@
             </div>
 
             <div class="rvt-notifications__actions">
-                <a class="rvt-button rvt-button--secondary rvt-display-block rvt-text-center rvt-m-bottom-xs" :href="baseURL + 'notification-center'">More notifications</a>
-                <a class="rvt-button rvt-notifications__actions-mail" href="#0">
+                <a v-if="!errorLoadingNotifications" class="rvt-button rvt-button--secondary rvt-display-block rvt-text-center rvt-m-bottom-xs" :href="baseURL + 'notification-center'">More notifications</a>
+                <a class="rvt-button rvt-notifications__actions-mail" href="https://list.iu.edu/sympa/subscribe/rivet-l">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                         <title>Envelope icon</title>
                         <path fill="currentColor" d="M13.5,3H2.5A1.5,1.5,0,0,0,1,4.5v8A1.5,1.5,0,0,0,2.5,14h11A1.5,1.5,0,0,0,15,12.5v-8A1.5,1.5,0,0,0,13.5,3ZM11.41,5,8,7.77,4.59,5ZM3,12V6.29L7.11,9.62l.12.08a1.5,1.5,0,0,0,1.54,0L13,6.29V12Z"/>
@@ -77,6 +83,8 @@
 </template>
 
 <script>
+const moment = require('moment');
+const localStorageAvailable = require('../polyfills.js').localStorageAvailable;
 
 module.exports = {
     name: 'notifications-menu',
@@ -92,6 +100,13 @@ module.exports = {
         loadingNotifications: {
             type: Boolean,
             default: false
+        },
+        errorLoadingNotifications: {
+            type: Boolean,
+            default: false
+        },
+        notificationsLastViewedAt: {
+            default: null
         }
     },
 
@@ -103,22 +118,28 @@ module.exports = {
     },
 
     computed: {
-        /**
-         * These computed properties simulate read vs. unread notifications.
-         * The logic will obviously be much more complicated, but I'm using
-         * these here to simulate the different states of notifications
-         * and the menu trigger button that shows the unread count.
-        */
-        fakeReadNotifications() {
-            return this.notifications.slice(3, 5);
+        visibleNotifications() {
+            return this.notifications.slice(0, 5);
         },
-
-        fakeUnreadNotifications() {
-            return this.notifications.slice(0, 2);
-        }
+        unreadCount() {
+            return this.visibleNotifications.filter((n) => this.isUnread(n)).length
+        },
+        userHasUnreadNotifications() {
+            return this.unreadCount > 0;
+        },
+        mostRecentNotificationDate() {
+            return this.notifications[0].lastModifiedAt
+        },
     },
 
     methods: {
+        isUnread(notification) {
+            if(moment.isMoment(this.notificationsLastViewedAt)) {
+                return this.notificationsLastViewedAt.isBefore(notification.lastModifiedAt);
+            }
+            return true;
+        },
+
         toggleMenu() {
             this.menuVisible = !this.menuVisible;
         },
@@ -144,6 +165,10 @@ module.exports = {
             if(el !== target && !el.contains(target)) {
                 this.menuVisible = false;
             }
+        },
+
+        reload() {
+            this.$emit('reload-notifications');
         }
     },
 
@@ -155,6 +180,14 @@ module.exports = {
         // Clean up the event listeners
         document.removeEventListener('keyup', this.escapeKeyClose);
         document.removeEventListener('click', this.handleClickOutside);
+    },
+
+    watch: {
+        menuVisible() {
+            if(!this.menuVisible) {
+                this.$emit('clear-notifications');
+            }
+        }
     }
 }
 </script>

@@ -1,8 +1,8 @@
 /*
     swap vue.min out for vue if you need vue devtools
 */
-// const Vue = require('vue/dist/vue');
-const Vue = require('vue/dist/vue.min')
+const Vue = require('vue/dist/vue');
+// const Vue = require('vue/dist/vue.min')
 const plugins = require('./plugins')
 const polyfills = require('./polyfills')
 const axios = require('axios')
@@ -23,7 +23,7 @@ polyfills.promisePolyfill();
 Vue.filter('formatDate', (value) => {
     if (value) {
         value = value.toString();
-        return moment(value, 'YYYYMMDD').fromNow();
+        return moment(value, 'YYYY-MM-DDThh:mm:ss.SSS+Z').fromNow();
     }
 });
 
@@ -32,6 +32,14 @@ Vue.filter('capitalize', (value) => {
     value = value.toString();
     return value.charAt(0).toUpperCase() + value.slice(1);
 });
+
+const comparePublishDates = (a, b) => {
+    a = moment(a.publishedDate);
+    b = b.publishedDate;
+    return a.isSame(b) 
+            ? 0
+            : a.isBefore(b) ? 1 : -1;
+}
 
 /**
  * Main Vue.js Instance.
@@ -50,7 +58,9 @@ new Vue({
         isDrawerOpen: false,
         notifications: [],
         errors: [],
-        loadingNotifications: false
+        loadingNotifications: false,
+        errorLoadingNotifications: false,
+        notificationsLastViewedAt: null
     },
     methods: {
         // Toggles the visibility of the section nav on mobile
@@ -71,29 +81,57 @@ new Vue({
                     drawer.style.height = (document.body.scrollHeight-70)+"px"
                 }
             })
+        },
+
+        loadNotifications() {
+            const apiURL = 'http://dcd-notifications.apps-test.iu.edu/notifications/search/byTenants?names=Rivet';
+            this.loadingNotifications = true;
+            axios.get(apiURL)
+                .then(response => {
+                    if(response.data._embedded && Array.isArray(response.data._embedded.notifications)) {
+                        this.notifications = response.data._embedded.notifications.sort(comparePublishDates);
+                    } else {
+                        this.errorLoadingNotifications = true;
+                        console.log('Error loading notifications - API response must contain an array')
+                    }
+                })
+                .catch(e => {
+                    this.errors.push(e);
+                    this.errorLoadingNotifications = true;
+                })
+                .finally(() => {
+                    this.loadingNotifications = false;
+                })
+        },
+
+        clearNotifications() {
+            this.notificationsLastViewedAt = moment();
+            if(polyfills.localStorageAvailable()) {
+                localStorage.setItem('notificationsLastViewedAt', this.notificationsLastViewedAt.format());
+            }
         }
     },
     created() {
-        /**
-         * This is some placeholder data I created, but the structure
-         * closesly resembles what the notifications API will give back
-         * once it's ready.
-         */
-        let apiURL = 'https://api.myjson.com/bins/kl0dh';
+        this.loadNotifications();
 
-        this.loadingNotifications = true;
-
-        axios.get(apiURL)
-            .then(response => {
-                this.notifications = response.data;
-
-                this.loadingNotifications = false;
-            })
-            .catch(e => {
-                this.errors.push(e);
-
-                console.log(this.errors);
-            })
+        this.notificationsLastViewedAt = plugins.getLastViewedAt();      
+        
+        document.addEventListener('keyup', (e) => {
+            switch(e.keyCode) {
+                case 49:
+                    this.notificationsLastViewedAt = null;
+                    break;
+                case 50:
+                    this.notificationsLastViewedAt = moment('2018-02-08');
+                    break;
+                case 51:
+                    this.notificationsLastViewedAt = moment('2018-01-01');
+                    break;
+            }
+            if(polyfills.localStorageAvailable()) {
+                localStorage.setItem('notificationsLastViewedAt', this.notificationsLastViewedAt.format());
+            }
+        });
     },
 })
 

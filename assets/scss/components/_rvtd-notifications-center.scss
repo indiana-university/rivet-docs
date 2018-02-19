@@ -1,5 +1,10 @@
 .rvt-notifications-center {
     margin-bottom: 6rem;
+
+    .rvt-notifications-empty, 
+    .rvt-notifications-error {
+        background: none;
+    }
 }
 
 .rvt-notifications-center-feed {
@@ -19,6 +24,7 @@
     &__body {
         padding-left: $md;
         box-shadow: inset 4px 0 0 0 $color-black--100;
+        transition: box-shadow .3s;
     }
 
     &__title {
