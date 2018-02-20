@@ -11,7 +11,7 @@
                             <div class="rvt-grid__item-10-md-up">
                                 <div class="rvt-feed-item__body">
                                     <h1 class="rvt-feed-item__title">
-                                        <a :href="notification.url">{{ notification.title | capitalize }}</a>
+                                        <a :href="notification.url" :target="linkTarget(notification.url)">{{ notification.title | capitalize }}</a>
                                     </h1>
                                     <p class="rvt-feed-item__desc">{{ notification.description }}</p>
                                 </div>
@@ -57,6 +57,7 @@
 const moment = require('moment');
 const axios = require('axios');
 const localStorageAvailable = require('../polyfills.js').localStorageAvailable;
+const isExternalLink = require('../plugins.js').isExternalLink;
 
 module.exports =  {
     name: 'notifications-center',
@@ -68,6 +69,9 @@ module.exports =  {
             }
             return true;
         },
+        linkTarget(url) {
+            return isExternalLink(url) ? '_blank' : '_self';
+        }
     },
 
     mounted() {

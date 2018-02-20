@@ -32,14 +32,13 @@
                     "is-unread" prop.
                 -->
                 <li v-for="notification in visibleNotifications" :key="notification.id">
-                    <a :href="notification.url">
-                        <notifications-item
-                            :date="notification.lastModifiedAt | formatDate"
-                            :title="notification.title | capitalize"
-                            :description="notification.description"
-                            :is-unread="isUnread(notification)"
-                        />
-                    </a>
+                    <notifications-item
+                        :date="notification.lastModifiedAt | formatDate"
+                        :title="notification.title | capitalize"
+                        :description="notification.description"
+                        :url="notification.url"
+                        :is-unread="isUnread(notification)"
+                    />
                 </li>
             </ol>
             <div v-else-if="loadingNotifications" class="rvt-notifications-error">
