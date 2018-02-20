@@ -23,7 +23,7 @@ polyfills.promisePolyfill();
 Vue.filter('formatDate', (value) => {
     if (value) {
         value = value.toString();
-        return moment(value, 'YYYY-MM-DDThh:mm:ss.SSS+Z').fromNow();
+        return moment(value, 'YYYY-MM-DDThh:mm:ss.SSSZ').fromNow();
     }
 });
 
