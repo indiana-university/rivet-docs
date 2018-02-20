@@ -89,7 +89,7 @@ new Vue({
             axios.get(apiURL)
                 .then(response => {
                     if(response.data._embedded && Array.isArray(response.data._embedded.notifications)) {
-                        this.notifications = response.data._embedded.notifications.sort(comparePublishDates);
+                        this.notifications = response.data._embedded.notifications;
                     } else {
                         this.errorLoadingNotifications = true;
                         console.log('Error loading notifications - API response must contain an array')
