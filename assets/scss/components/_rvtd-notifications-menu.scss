@@ -144,11 +144,11 @@
         &:before {
             display: block;
             position: absolute;
-            top: -.75rem;
+            top: -.72rem;
             right: 3.6rem;
             content: " ";
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 1.4rem;
+            height: 1.4rem;
             background-color: $color-background;
             border-left: 1px solid $color-black--100;
             border-top: 1px solid $color-black--100;
@@ -185,6 +185,10 @@
             }
         }
     }
+}
+
+.rvt-close-icon {
+    margin-top: .2rem;
 }
 
 .rvt-notifications-empty {
