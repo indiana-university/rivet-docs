@@ -115,23 +115,6 @@ new Vue({
         this.loadNotifications();
 
         this.notificationsLastViewedAt = plugins.getLastViewedAt();      
-        
-        document.addEventListener('keyup', (e) => {
-            switch(e.keyCode) {
-                case 49:
-                    this.notificationsLastViewedAt = null;
-                    break;
-                case 50:
-                    this.notificationsLastViewedAt = moment('2018-02-08');
-                    break;
-                case 51:
-                    this.notificationsLastViewedAt = moment('2018-01-01');
-                    break;
-            }
-            if(polyfills.localStorageAvailable()) {
-                localStorage.setItem('notificationsLastViewedAt', this.notificationsLastViewedAt.format());
-            }
-        });
     },
 })
 
