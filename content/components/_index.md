@@ -10,7 +10,7 @@ sectionNav: true
 Rivet is new and we're quickly adding components and features as we work toward the official version 1.0 release. Join the email list to get updates on new features, examples, and how-to guides.
 
 <div class="rvt-button-group">
-{{< button url="https://list.iu.edu/sympa/subscribe/rivet-l" analytics-category="click">}}Subscribe{{< /button >}}
+{{< button url="https://list.iu.edu/sympa/subscribe/rivet-l" variant="secondary" analytics-category="click">}}Subscribe{{< /button >}}
 {{< button url="https://list.iu.edu/sympa/sigrequest/rivet-l" variant="plain" analytics-category="click">}}Manage your settings{{< /button >}}
 </div>
 
@@ -20,7 +20,16 @@ The Rivet components documentation contains examples, code snippets, and guidanc
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
-{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.4.0.zip" variant="secondary" analytics-action="download" analytics-category="click">}}Download Rivet{{< /button >}}
+{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.4.1.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
+    <span class="rvt-m-right-xxs">Download Rivet</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <title>Download</title>
+        <g fill="currentColor">
+            <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
+            <path d="M7.29,10.71a1,1,0,0,0,1.41,0l4-4a1,1,0,0,0-1.41-1.41L9,7.59V1A1,1,0,0,0,7,1V7.59L4.71,5.29A1,1,0,0,0,3.29,6.71Z"/>
+        </g>
+    </svg>
+{{< /button >}}
 
 ### Download contents
 The download contains the following files:
@@ -82,11 +91,11 @@ If you are using Sass in your project you can import the Rivet Sass files direct
 ## Hosted CSS and JavaScript
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.0/rivet.min.css">{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.1/rivet.min.css">{{< /code >}}
 
 Rivet has a minimal amount of JavaScript that is required for some components, like the [header](../components/navigation/header). Copy and paste this link and add to the end of your document, just before the closing `</body>` tag.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/0.4.0/rivet.min.js"></script>{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/0.4.1/rivet.min.js"></script>{{< /code >}}
 
 <h3 class="m-top-lg">Production applications <span class="rvt-badge rvt-badge--warning m-right-xs">NOTE</span></h3>
 
@@ -100,7 +109,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.0/rivet.min.css">
+    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.1/rivet.min.css">
     <title>Rivet starter file</title>
 </head>
 <body>
@@ -146,7 +155,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
             </li>
         </ul>
     </footer>
-    <script src="https://assets.uits.iu.edu/javascript/rivet/0.4.0/rivet.min.js"></script>
+    <script src="https://assets.uits.iu.edu/javascript/rivet/0.4.1/rivet.min.js"></script>
 </body>
 </html>
 {{< /code >}}

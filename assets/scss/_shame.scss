@@ -48,6 +48,19 @@ h6 {
 }
 
 /**
+ * sticky footer
+ */
+ .sticky-footer__wrapper {
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+
+     & > footer {
+         margin-top: auto;
+     }
+ }
+
+/**
  * NOTE: These all override Rivet itself
  */
 
@@ -75,7 +88,7 @@ input[type="search"] {
 }
 
 .rvt-header__main-nav {
-    margin-right: $lg;
+    margin-right: $md;
 
     ul li.is-current {
         box-shadow: 0 2px 0 $color-text;
@@ -88,12 +101,8 @@ a.button--reverse {
     border-color: $color-background;
 }
 
-a.button--secondary {
-    color: $color-action;
-
-    &:hover {
-        text-decoration: none;
-    }
+.rvt-button--small {
+    font-size: 1rem;
 }
 
 a.button--reverse-secondary {
@@ -436,6 +445,10 @@ a.button--reverse-secondary {
     }
 }
 
+.rvtd-article-container--top-only {
+    margin-bottom: 0;
+}
+
 
 .rvtd-article-main {
     margin-top: $xl;
@@ -510,5 +523,79 @@ a.button--reverse-secondary {
     &:focus {
         display: block;
         padding: .35rem .65rem;
+    }
+}
+
+.dropdown {
+    &__menu {
+        .is-current {
+            border-left: 4px solid $color-action;
+            font-weight: 700;
+            /**
+             * Hack to overlap the subtle gray border on dropdowns.
+             */
+            margin-left: -1px;
+        }
+    }
+}
+
+.rvt-supplemental-menu {
+    display: flex;
+    margin-right: $sm * 1.25;
+}
+
+.rvt-grid--reverse {
+    flex-direction: row-reverse !important;
+}
+
+.rvt-lh-flat {
+    line-height: 1 !important;
+}
+
+/**
+ * Notifications center CTA
+ */
+
+.rvt-callout {
+
+    &__cta {
+        display: inline-flex;
+        align-items: center;
+
+        span {
+            margin-right: $xs;
+        }
+    }
+}
+
+.rvt-loading {
+    &__fake-heading,
+    &__fake-text,
+    &__fake-text-short {
+        display: block;
+        background-color: $color-black--100;
+        border-radius: $xxs;
+    }
+
+    &__fake-heading {
+        height: $lg;
+        margin-top: $xl;
+        width: 65%;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__fake-text {
+        height: $xs;
+        margin-top: $sm;
+        width: 100%;
+    }
+
+    &__fake-text-short {
+        height: $xs;
+        margin-top: $sm;
+        width: 85%;
     }
 }
