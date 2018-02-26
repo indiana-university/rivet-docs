@@ -14,7 +14,7 @@ The base header provides consistent branding in a condensed space. It replaces t
 {{< example lang="html" >}}<header class="rvt-header" role="banner">
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <div class="rvt-header__trident">
-        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
             <title id="iu-logo">Indiana University</title>
             <rect width="60" height="70" fill="#900"/>
             <polygon points="35.96 18.44 35.96 21.84 38.52 21.84 38.52 40.51 33.41 40.51 33.41 15.9 35.96 15.9 35.96 12.5 24.04 12.5 24.04 15.9 26.58 15.9 26.58 40.51 21.48 40.51 21.48 21.84 24.04 21.84 24.04 18.44 12.09 18.44 12.09 21.84 14.65 21.84 14.65 43.79 18.72 48.15 26.58 48.15 26.58 53.26 24.04 53.26 24.04 57.5 35.96 57.5 35.96 53.26 33.41 53.26 33.41 48.15 40.93 48.15 45.33 43.79 45.33 21.84 47.91 21.84 47.91 18.44 35.96 18.44" fill="#fff"/>
@@ -38,7 +38,7 @@ The inclusion of an avatar and username, or only username are both appropriate c
 {{< example lang="html" >}}<header class="rvt-header" role="banner">
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <div class="rvt-header__trident">
-        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
             <title id="iu-logo">Indiana University</title>
             <rect width="60" height="70" fill="#900"/>
             <polygon points="35.96 18.44 35.96 21.84 38.52 21.84 38.52 40.51 33.41 40.51 33.41 15.9 35.96 15.9 35.96 12.5 24.04 12.5 24.04 15.9 26.58 15.9 26.58 40.51 21.48 40.51 21.48 21.84 24.04 21.84 24.04 18.44 12.09 18.44 12.09 21.84 14.65 21.84 14.65 43.79 18.72 48.15 26.58 48.15 26.58 53.26 24.04 53.26 24.04 57.5 35.96 57.5 35.96 53.26 33.41 53.26 33.41 48.15 40.93 48.15 45.33 43.79 45.33 21.84 47.91 21.84 47.91 18.44 35.96 18.44" fill="#fff"/>
@@ -59,7 +59,7 @@ The inclusion of an avatar and username, or only username are both appropriate c
         </div>
         <button class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-trigger="mobile-drawer-id">
             <span class="sr-only">Menu</span>
-            <svg class="rvt-drawer-button-open" aria-labelledby="open-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+            <svg role="img" class="rvt-drawer-button-open" aria-labelledby="open-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
                 <title id="open-icon">Open</title>
                 <g>
                     <line x1="24.5" y1="25.38" x2="45.5" y2="25.38" fill="none" stroke="#333" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
@@ -67,7 +67,7 @@ The inclusion of an avatar and username, or only username are both appropriate c
                     <line x1="24.5" y1="44.62" x2="45.5" y2="44.62" fill="none" stroke="#333" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
                 </g>
             </svg>
-            <svg class="rvt-drawer-button-close" aria-labelledby="close-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+            <svg role="img" class="rvt-drawer-button-close" aria-labelledby="close-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
                 <title id="close-icon">Close</title>
                 <line x1="27.58" y1="27.58" x2="42.42" y2="42.42" fill="none" stroke="#333" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
                 <line x1="42.42" y1="27.58" x2="27.58" y2="42.42" fill="none" stroke="#333" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
@@ -97,7 +97,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <!-- Trident -->
     <div class="rvt-header__trident">
-        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
             <title id="iu-logo">Indiana University</title>
             <rect width="60" height="70" fill="#900"/>
             <polygon points="35.96 18.44 35.96 21.84 38.52 21.84 38.52 40.51 33.41 40.51 33.41 15.9 35.96 15.9 35.96 12.5 24.04 12.5 24.04 15.9 26.58 15.9 26.58 40.51 21.48 40.51 21.48 21.84 24.04 21.84 24.04 18.44 12.09 18.44 12.09 21.84 14.65 21.84 14.65 43.79 18.72 48.15 26.58 48.15 26.58 53.26 24.04 53.26 24.04 57.5 35.96 57.5 35.96 53.26 33.41 53.26 33.41 48.15 40.93 48.15 45.33 43.79 45.33 21.84 47.91 21.84 47.91 18.44 35.96 18.44" fill="#fff"/>
@@ -146,7 +146,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
         <!-- Drawer close button - shows on small screens -->
         <button class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-trigger="mobile-drawer">
             <span class="sr-only">Menu</span>
-            <svg class="rvt-drawer-button-open" aria-labelledby="open-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+            <svg role="img" class="rvt-drawer-button-open" aria-labelledby="open-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
                 <title id="open-icon">Open</title>
                 <g>
                     <line x1="24.5" y1="25.38" x2="45.5" y2="25.38" fill="none" stroke="#333" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
@@ -154,7 +154,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                     <line x1="24.5" y1="44.62" x2="45.5" y2="44.62" fill="none" stroke="#333" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
                 </g>
             </svg>
-            <svg class="rvt-drawer-button-close" aria-labelledby="close-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+            <svg role="img" class="rvt-drawer-button-close" aria-labelledby="close-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
                 <title id="close-icon">Close</title>
                 <line x1="27.58" y1="27.58" x2="42.42" y2="42.42" fill="none" stroke="#333" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
                 <line x1="42.42" y1="27.58" x2="27.58" y2="42.42" fill="none" stroke="#333" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
