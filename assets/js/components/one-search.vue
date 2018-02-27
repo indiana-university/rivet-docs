@@ -4,13 +4,13 @@
     <input type="text" name="one-search" id="one-search" value="**QUERY**" autocomplete="off" placeholder="Search One.IU" v-model="query">
     <button class="sr-only" tabindex="-1">Search</button>
     <div class="one-search__logo" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 34 34">
+        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 34 34">
             <title>One Icon</title>
             <path d="M0,0V34H34V0ZM10,29H6V5h4Z" fill="#dc0031"/>
         </svg>
     </div>
     <div class="one-search__search-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 23 23">
+        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 23 23">
             <title>Search icon</title>
             <g>
                 <circle cx="9" cy="9" r="7.55" fill="none" stroke="#b6b4b6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
@@ -21,7 +21,7 @@
     <div v-if="isShowingResults" class="one-search__results">
         <button class="one-search__clear-button button--plain" @click.prevent="clearSearch">
             <span class="v-hide">Clear search</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 16 16">
+            <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 16 16">
                 <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: rgb(51, 51, 51);"></path>
             </svg>
         </button>
