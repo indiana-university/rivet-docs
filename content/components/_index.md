@@ -20,7 +20,7 @@ The Rivet components documentation contains examples, code snippets, and guidanc
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
-{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.4.1.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
+{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.4.2.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
     <span class="rvt-m-right-xxs">Download Rivet</span>
     <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
         <g fill="currentColor">
@@ -90,11 +90,11 @@ If you are using Sass in your project you can import the Rivet Sass files direct
 ## Hosted CSS and JavaScript
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.1/rivet.min.css">{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.2/rivet.min.css">{{< /code >}}
 
 Rivet has a minimal amount of JavaScript that is required for some components, like the [header](../components/navigation/header). Copy and paste this link and add to the end of your document, just before the closing `</body>` tag.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/0.4.1/rivet.min.js"></script>{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/0.4.2/rivet.min.js"></script>{{< /code >}}
 
 <h3 class="m-top-lg">Production applications <span class="rvt-badge rvt-badge--warning m-right-xs">NOTE</span></h3>
 
@@ -108,7 +108,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.1/rivet.min.css">
+    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.2/rivet.min.css">
     <title>Rivet starter file</title>
 </head>
 <body>
@@ -154,7 +154,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
             </li>
         </ul>
     </footer>
-    <script src="https://assets.uits.iu.edu/javascript/rivet/0.4.1/rivet.min.js"></script>
+    <script src="https://assets.uits.iu.edu/javascript/rivet/0.4.2/rivet.min.js"></script>
 </body>
 </html>
 {{< /code >}}
