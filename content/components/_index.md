@@ -20,10 +20,9 @@ The Rivet components documentation contains examples, code snippets, and guidanc
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
-{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.4.1.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
+{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.4.2.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
     <span class="rvt-m-right-xxs">Download Rivet</span>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-        <title>Download</title>
+    <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
         <g fill="currentColor">
             <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
             <path d="M7.29,10.71a1,1,0,0,0,1.41,0l4-4a1,1,0,0,0-1.41-1.41L9,7.59V1A1,1,0,0,0,7,1V7.59L4.71,5.29A1,1,0,0,0,3.29,6.71Z"/>
@@ -91,11 +90,11 @@ If you are using Sass in your project you can import the Rivet Sass files direct
 ## Hosted CSS and JavaScript
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.1/rivet.min.css">{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.2/rivet.min.css">{{< /code >}}
 
 Rivet has a minimal amount of JavaScript that is required for some components, like the [header](../components/navigation/header). Copy and paste this link and add to the end of your document, just before the closing `</body>` tag.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/0.4.1/rivet.min.js"></script>{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/0.4.2/rivet.min.js"></script>{{< /code >}}
 
 <h3 class="m-top-lg">Production applications <span class="rvt-badge rvt-badge--warning m-right-xs">NOTE</span></h3>
 
@@ -109,14 +108,14 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.1/rivet.min.css">
+    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.4.2/rivet.min.css">
     <title>Rivet starter file</title>
 </head>
 <body>
     <header class="rvt-header" role="banner">
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <div class="rvt-header__trident">
-        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="60" height="70" viewBox="0 0 60 70" aria-labelledby="iu-logo">
             <title id="iu-logo">Indiana University</title>
             <rect width="60" height="70" fill="#900"/>
             <polygon points="35.96 18.44 35.96 21.84 38.52 21.84 38.52 40.51 33.41 40.51 33.41 15.9 35.96 15.9 35.96 12.5 24.04 12.5 24.04 15.9 26.58 15.9 26.58 40.51 21.48 40.51 21.48 21.84 24.04 21.84 24.04 18.44 12.09 18.44 12.09 21.84 14.65 21.84 14.65 43.79 18.72 48.15 26.58 48.15 26.58 53.26 24.04 53.26 24.04 57.5 35.96 57.5 35.96 53.26 33.41 53.26 33.41 48.15 40.93 48.15 45.33 43.79 45.33 21.84 47.91 21.84 47.91 18.44 35.96 18.44" fill="#fff"/>
@@ -136,8 +135,8 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
     <footer class="rvt-footer m-top-xxl" role="contentinfo">
         <div class="rvt-footer__copyright-lockup">
             <div class=rvt-footer__trident>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25">
-                    <title>IU Trident Logo</title>
+                <svg role="img" xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" aria-labelledby="footer-trident">
+                    <title id="footer-trident">IU Trident Logo</title>
                     <polygon points="13.33 3.32 13.33 5.21 14.76 5.21 14.76 15.64 11.9 15.64 11.9 1.9 13.33 1.9 13.33 0 6.67 0 6.67 1.9 8.09 1.9 8.09 15.64 5.24 15.64 5.24 5.21 6.67 5.21 6.67 3.32 0 3.32 0 5.21 1.43 5.21 1.43 17.47 3.7 19.91 8.09 19.91 8.09 22.76 6.67 22.76 6.67 25.13 13.33 25.13 13.33 22.76 11.9 22.76 11.9 19.91 16.1 19.91 18.56 17.47 18.56 5.21 20 5.21 20 3.32 13.33 3.32" fill="#900"/>
                 </svg>
             </div>
@@ -155,7 +154,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
             </li>
         </ul>
     </footer>
-    <script src="https://assets.uits.iu.edu/javascript/rivet/0.4.1/rivet.min.js"></script>
+    <script src="https://assets.uits.iu.edu/javascript/rivet/0.4.2/rivet.min.js"></script>
 </body>
 </html>
 {{< /code >}}

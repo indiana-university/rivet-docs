@@ -4,12 +4,12 @@ title: "Rivet"
 paginate: 10
 enableEmoji: true
 params:
-    rivetVersion: 0.4.1
+    rivetVersion: 0.4.2
     tagline: "Software Design System"
     googleAnalytics: "UA-100560495-3"
     devGoogleAnalytics: "UA-100560495-4"
     githubRepo: "https://github.iu.edu/UITS/rivet-source"
-    downloadLink: "https://github.iu.edu/UITS/rivet/archive/v0.4.1.zip"
+    downloadLink: "https://github.iu.edu/UITS/rivet/archive/v0.4.2.zip"
     axureKit: "https://github.iu.edu/UITS/rivet/releases/download/v0.3.1/rivet-axure-0.3.1.rp"
     description: "Use Rivet to create UITS software that is accessible, usable, and consistent."
     resourceLinks:
