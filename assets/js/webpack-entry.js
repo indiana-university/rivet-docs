@@ -94,12 +94,11 @@ new Vue({
                         this.errorLoadingNotifications = true;
                         console.log('Error loading notifications - API response must contain an array')
                     }
+                    this.loadingNotifications = false;
                 })
                 .catch(e => {
                     this.errors.push(e);
                     this.errorLoadingNotifications = true;
-                })
-                .finally(() => {
                     this.loadingNotifications = false;
                 })
         },
