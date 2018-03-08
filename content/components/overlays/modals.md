@@ -160,7 +160,7 @@ Modals will work without the need for any additional JavaScript by using the app
         </tr>
         <tr>
             <td>
-                <code>Modal.close()</code>
+                <code>Modal.close(modal)</code>
             </td>
             <td>
                 The <code>.close()</code> method can be used to close any modal that is currently open. It accepts one argument, the modal that you want to close.
