@@ -115,10 +115,6 @@ a.button--reverse-secondary {
     }
 }
 
-.rvt-drawer-button {
-    width: 71px;
-}
-
 /* End Rivet core overrides */
 
 /**
@@ -204,7 +200,7 @@ a.button--reverse-secondary {
 }
 
 .rvt-badge--beta {
-    background-color: $color-alert-blue;
+    @extend .rvt-badge--action;
     color: #fff;
 }
 
@@ -542,6 +538,7 @@ a.button--reverse-secondary {
 .rvt-supplemental-menu {
     display: flex;
     margin-right: $sm * 1.25;
+    align-items: center;
 }
 
 .rvt-grid--reverse {
