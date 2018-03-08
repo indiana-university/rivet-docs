@@ -21,13 +21,13 @@ status: "Beta"
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <a href="#">incididunt ut labore</a> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="rvt-modal__controls">
-            <button class="rvt-m-right-sm close-modal">OK</button>
+            <button class="rvt-button rvt-m-right-sm">OK</button>
             <button class="rvt-button rvt-button--secondary" data-modal-close="close">Cancel</button>
         </div>
-        <button class="rvt-button rvt-button--plain rvt-modal__close" data-modal-close="close">
+        <button class="rvt-button rvt-modal__close" data-modal-close="close">
             <span class="v-hide">Close</span>
             <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: #333"/>
+                <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
             </svg>
         </button>
     </div>
@@ -102,7 +102,7 @@ A modal dialog is similar to a regular modal except that **it requires the user 
             </ul>
         </div>
         <div class="rvt-modal__controls">
-            <button class="rvt-m-right-sm close-modal">Yes</button>
+            <button class="rvt-button rvt-m-right-sm">Yes</button>
             <button class="rvt-button rvt-button--secondary" data-modal-close="close">No, thanks</button>
         </div>
     </div>
@@ -126,3 +126,64 @@ A modal dialog is similar to a regular modal except that **it requires the user 
 Follow [UX Planet’s recommendations for modal text](https://uxplanet.org/best-practices-for-modals-overlays-dialog-windows-c00c66cddd8c):
 - The button that launches the modal should clearly describe the action (“Submit feedback”)
 - Use the launch button text as the modal title. This reminds the user what to do, within the context of the overall page.
+
+## Modal JavaScript
+Modals will work without the need for any additional JavaScript by using the approprate data attribute/id combination in your markup. There are a handful of methods from the Rivet modal's API available to use should you need to control the modal programmatically.
+
+<table>
+    <caption class="sr-only">Table example one</caption>
+    <thead>
+        <tr>
+            <th scope="col">Method</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td width="250">
+                <code>Modal.init(element)</code>
+            </td>
+            <td>
+                <ul>
+                    <li>Initializes and modals found on the page.</li>
+                    <li>Accepts a DOM element. If no element is provided in the argument it defaults to the <code>document</code> element.</li>
+                    <li><code>.init()</code> function is called on the initial load of <code>rivet.js</code> initializing all modals it finds in the DOM.</li>
+                    <li>Each time a new modal is added to the DOM (without a page releoad) the <code>.init()</code> method function will need to be called again to re-initiallize all the modals.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><code>Modal.open(modal)</code></td>
+            <td>
+                The <code>.open()</code> method can be used to programatically open a modal in your JavaScript. It accepts one argument, the modal you want to open.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>Modal.close()</code>
+            </td>
+            <td>
+                The <code>.close()</code> method can be used to close any modal that is currently open. It accepts one argument, the modal that you want to close.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### Open modal example
+{{< code lang="javascript" >}}// Find the modal you want to open in the DOM
+const modalToOpen = document.querySelector('#my-rivet-modal');
+
+// Open the modal
+Modal.open(modalToOpen);
+{{< /code >}}
+
+### Close modal example
+
+When opening the modal normally via an element (button) in the DOM using the `data-modal-trigger` attribute, the modal script will store a reference to the element that triggered the modal so that it can return focus to that element when the modal is closed. It's important to note that if you are opening the modal programatically based on some other event **it is your responsibility to set foucs to the apporpriate element after the modal is closed.**
+
+{{< code lang="javascript" >}}// Find the modal you want to open in the DOM
+const modalToClose = document.querySelector('#my-rivet-modal');
+
+// Open the modal
+Modal.close(modalToClose);
+{{< /code >}}
