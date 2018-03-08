@@ -4,6 +4,11 @@ description: "The Rivet header has provides consistent branding and flexible nav
 requiresJs: true
 status: "Beta"
 ---
+<div class="rvt-alert rvt-alert--message rvt-m-bottom-md" aria-labelledby="warning-alert-title">
+    <h2 class="rvt-alert__title">Header changes in Rivet 0.5.0</h2>
+    <p class="rvt-alert__message">As of Rivet 0.5.0 there were a few significant markup changes made to the header. This biggest change is that dropdown in the header now use button elements to toggle dropdown instead of anchor elements and we have replaced the background images on dropdown toggles with inline SVGs. We've also updated the data attribute used on dropdown. See the following code example for more information.</p>
+</div>
+
 
 ## Base header
 The base header provides consistent branding in a condensed space. It replaces the common text “Indiana University” with a more useful link to your application’s default view. The base header is the bare minimum version of the header that **must be included in your application**.
