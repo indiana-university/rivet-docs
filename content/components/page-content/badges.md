@@ -19,6 +19,14 @@ status: "Beta"
 <span class="rvt-badge rvt-badge--error">Error</span>
 {{< /example >}}
 
+## Secondary badges
+{{< example lang="html" >}}<span class="rvt-badge rvt-badge--secondary">Base</span>
+<span class="rvt-badge rvt-badge--action-secondary">Action</span>
+<span class="rvt-badge rvt-badge--success-secondary">Success</span>
+<span class="rvt-badge rvt-badge--warning-secondary">Warning</span>
+<span class="rvt-badge rvt-badge--error-secondary">Error</span>
+{{< /example >}}
+
 ## Badge sizing
 The font size of the Rivet badges is set using a percentage value so that they will inherit the font size property of their containers. For example, if you wanted to use a badge inside of an element already using Rivet's type scale utilities, the badge's font size will adjust accordingly.
 
