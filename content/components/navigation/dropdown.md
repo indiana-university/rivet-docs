@@ -61,7 +61,7 @@ The dropdown uses JavaScript to fully implement WAI-ARIA authoring standards for
 While it is possible to use any element as a toggle for the dropdown menu, you should *always* use an HTML `<button>` element. The button element was made for triggering the addition of new content within the current context or preforming in-page actions and it's appearance is completely styleable using CSS (so dropdown toggles do not always need to look like the default Rivet button). Buttons are the best and most accessible choice for toggling the dopdown menu.
 
 ## JavaScript API
-For convieniece the Dropdown JavaScript exposes a couple of methods to use in your own scripts. The `init()` method is called by the main `rivet.js` file the first time the script is loaded. It will initiallize all of the dropdown menus that are in the DOM when the page loads. When dynamically updating the page (via AJAX calls, etc.) you will need to call the `init()` method in your script after each update to the DOM. This will re-initialize all dropdowns on the page, including any new dropdowns that may have been added to the DOM.
+The Dropdown JavaScript exposes a couple of methods to use in your own scripts. The `init()` method is called by the main `rivet.js` file the first time the script is loaded. It will initiallize all of the dropdown menus that are in the DOM when the page loads. When dynamically updating the page (via AJAX calls, etc.) you will need to call the `init()` method in your script after each update to the DOM. This will re-initialize all dropdowns on the page, including any new dropdowns that may have been added to the DOM.
 
 ### Available methods
 Here's a breakdown of the available Dropdown methods you can use in your scripts.
