@@ -596,3 +596,19 @@ a.button--reverse-secondary {
         width: 85%;
     }
 }
+
+
+/**
+ * Used in the learn section to sumarize article content.
+ */
+.rvtd-article-outline {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li a {
+        font-size: $ts-14;
+    }
+}
