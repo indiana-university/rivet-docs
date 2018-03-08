@@ -21,6 +21,13 @@ The custom HTML file input (`<input type="file">`) uses CSS to hide the defuault
 </div>
 {{< /example >}}
 
+## Required elements
+In order for the custom file input component to function and display properly there are few elements that are required in the markup:
+
+- A `.rvt-file` wrapper `<div>` with a `data-upload` attribute that matches the for attribute of the input label
+- A `.rvt-file__preview` `<div>` with a `data-file-preview` attribute that matches both the `for` attribute of the label and the `data-upload` attribute of the wrapper `<div>`.
+- An `aria-describedby` attribute on the file `<input>` that matches an `id` attribute on the `.rvt-file__preview` `<div>`.
+
 ## File input variations
 The custom file input can be used with any of Rivet's [button modifiers]({{< ref "components/forms/buttons.md#contextual-button-modifiers" >}}) to style the input to suit your needs. You can also add the `multiple` attribute to the file input markup to allow users to upload more than one file.
 
@@ -37,11 +44,4 @@ The custom file input can be used with any of Rivet's [button modifiers]({{< ref
     </div>
 </div>
 {{< /example >}}
-
-## Required elements
-In order for the custom file input component to function and display properly there are few elements that are required in the markup:
-
-- A `.rvt-file` wrapper `<div>` with a `data-upload` attribute that matches the for attribute of the input label
-- A `.rvt-file__preview` `<div>` with a `data-file-preview` attribute that matches both the `for` attribute of the label and the `data-upload` attribute of the wrapper `<div>`.
-- An `aria-describedby` attribute on the file `<input>` that matches an `id` attribute on the `.rvt-file__preview` `<div>`.
 
