@@ -23,9 +23,20 @@ status: "Beta"
 {{< /example >}}
 
 ## Plain list
-You can use the helper class `.plain-list` to remove list formatting for display purposes.
+You can use the helper class `.rvt-plain-list` to remove list formatting for display purposes.
 
 {{< example lang="html" >}}<ul class="rvt-plain-list">
+    <li>List Item One</li>
+    <li>List Item Two</li>
+    <li>List Item Three</li>
+    <li>List Item Four</li>
+</ul>
+{{< /example >}}
+
+## Inline list
+You can use the helper class `.rvt-inline-list` to remove list formatting and display list items inline. Inline list items will have some extra right and bottom margin apllied to them for instace where items flow on to more than one line.
+
+{{< example lang="html" >}}<ul class="rvt-inline-list">
     <li>List Item One</li>
     <li>List Item Two</li>
     <li>List Item Three</li>
