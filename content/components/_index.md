@@ -65,7 +65,7 @@ Rivet is also available to include in as a dependency in your app via NPM. To us
 ### Installing via NPM
 Once you have the `.npmrc` file configured in the root of your project, you can run the following command to install Rivet.
 
-{{< code >}}npm install rivet-uits --save-dev
+{{< code >}}npm install rivet-uits@0.4.2 --save-dev
 {{< /code >}}
 
 <h4 class="m-top-lg">Installation troubleshooting <span class="rvt-badge rvt-badge--warning m-right-xs">NOTE</span></h4>
@@ -78,7 +78,7 @@ Once you have the `.npmrc` file configured in the root of your project, you can 
 ### Updating the Rivet NPM package
 When there is a new version of Rivet released it will be publish to the NPM registry. You can check for updates by running the `npm outdated` command. To acutally update your NPM dependency you can run the following command at the same level as your project's `package.json`.
 
-{{< code >}}npm install rivet-uits@latest --save-dev
+{{< code >}}npm install rivet-uits@<version> --save-dev
 {{< /code >}}
 
 ## Using Sass
