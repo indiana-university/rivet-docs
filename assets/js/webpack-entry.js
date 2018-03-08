@@ -36,7 +36,7 @@ Vue.filter('capitalize', (value) => {
 const comparePublishDates = (a, b) => {
     a = moment(a.publishedDate);
     b = b.publishedDate;
-    return a.isSame(b) 
+    return a.isSame(b)
             ? 0
             : a.isBefore(b) ? 1 : -1;
 }
@@ -114,7 +114,7 @@ new Vue({
     created() {
         this.loadNotifications();
 
-        this.notificationsLastViewedAt = plugins.getLastViewedAt();      
+        this.notificationsLastViewedAt = plugins.getLastViewedAt();
     },
 })
 
@@ -137,5 +137,5 @@ plugins.setIndeterminate('#checkbox-indeterminate');
 // Custom analytics event tracking
 plugins.analyticsTracking();
 
-console.log('Rivet 0.4.2 is ready!');
+console.log('Rivet 0.5.0 is ready!');
 
