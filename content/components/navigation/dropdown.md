@@ -1,6 +1,6 @@
 ---
 title: "Dropdown"
-description: "The dropdown component is used to create a list of menu options who’s visibility can be toggle using a button element."
+description: "The dropdown component is used to create a list of menu options whose visibility can be toggled using a button element."
 requiresJs: true
 status: "Beta"
 ---
