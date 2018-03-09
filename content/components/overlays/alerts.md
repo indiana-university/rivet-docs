@@ -11,7 +11,7 @@ status: "Beta"
     <button class="rvt-alert__dismiss">
         <span class="v-hide">Dismiss this alert</span>
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-            <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: #333"/>
+            <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
         </svg>
     </button>
 </div>
@@ -22,7 +22,7 @@ status: "Beta"
     <button class="rvt-alert__dismiss">
         <span class="v-hide">Dismiss this alert</span>
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-            <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: #333"/>
+            <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
         </svg>
     </button>
 </div>
@@ -33,7 +33,7 @@ status: "Beta"
     <button class="rvt-alert__dismiss">
         <span class="v-hide">Dismiss this alert</span>
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-            <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: #333"/>
+            <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
         </svg>
     </button>
 </div>
@@ -73,6 +73,57 @@ Alert lists provide a way to group a set of errors together. For instance, when 
 </ul>
 {{< /example >}}
 
+## Standalone inline alerts
+Inline alerts in Rivet should be used for form validation situations where [the standard inline form input validation]({{< ref "components/forms/text-input.md#inline-validation-states" >}}) error would not make sense. For instance, marking a goup of radio button buttons, or checkboxes will an input error. Adding the `rvt-inline-alert--standalone` modifier class to the standard inline alert element will give the alert a subtle background color and left border to add some visual contrast.
+
+<div class="rvt-alert rvt-alert--info rvt-m-bottom-md">
+    <h2 class="rvt-alert__title">More form validation tips</h2>
+    <p class="rvt-alert__message">
+        For more information on techniques for better from validation UX, <a href="../../forms/text-input/#form-validation-tips">see this list of form validation tips</a>.
+    </p>
+</div>
+
+When using an standalone inline alerts with a group of inputs, make sure add the `aria-describedby` attribute to **each input** (in this case radio buttons) that is invalid. The `aria-describedy` by value should correspond to a matching `id` attribute on the `.rvt-inline-alert__message` element.
+
+
+{{< example lang="html" >}}<form>
+    <fieldset>
+        <legend class="rvt-ts-23 rvt-text-bold rvt-m-bottom-sm">Radio list</legend>
+        <ul class="rvt-plain-list">
+            <li>
+                <input type="radio" name="radio-demo-2" id="radio-3" aria-describedby="radio-list-message">
+                <label for="radio-3">Option one</label>
+            </li>
+            <li>
+                <input type="radio" name="radio-demo-2" id="radio-4" aria-describedby="radio-list-message">
+                <label for="radio-4">Option two</label>
+            </li>
+            <li>
+                <input type="radio" name="radio-demo-2" id="radio-4-disabled" aria-describedby="radio-list-message">
+                <label for="radio-4-disabled">Option three disabled</label>
+            </li>
+            <li>
+                <input type="radio" name="radio-demo-2" id="radio-5" aria-describedby="radio-list-message">
+                <label for="radio-5">Option four checked and disabled</label>
+            </li>
+        </ul>
+        <div class="rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--is-invalid">
+            <span class="rvt-inline-alert__icon">
+                <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g fill="currentColor">
+                        <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z" />
+                        <path d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
+                    </g>
+                </svg>
+            </span>
+            <span class="rvt-inline-alert__message" role="alert" id="radio-list-message">
+                This field is required to continue.
+            </span>
+        </div>
+    </fieldset>
+</form>
+{{< /example >}}
+
 ## When to use
 - To notify users about system status including error, warnings, and updates.
 - To notify users they’ve successfully completed a task
@@ -88,6 +139,9 @@ Alert lists provide a way to group a set of errors together. For instance, when 
 - Alerts that have a dismiss or close button should use the `role="alertdialog"` attribute
 - Use the `aria-labelledby` attribute to link the alert title with the alert element
 - Dynamically rendered alerts are automatically announced by most screen readers, but it’s important to note that screen readers will not inform users of alerts that are present before a page has finished loading.
+
+### Alert list accessibility
+Alert lists can be particularly useful for summarizing multiple errors on a page, and providing links to the invalid fields. These summaries are especially helpful for non-sighted users, who will not receive the visual cue provided by multiple inline alerts appearing on the page when a form is submitted.
 
 ## Microcopy notes
 - Alert title should be clear and concise. “Success!” rather than “Application was submitted successfully!"
@@ -115,9 +169,37 @@ See the [content guide section](/content-guide) for additional information.
 
 ### Implementation
 - Page-level alerts can be used with an optional dismiss button (X icon), however it’s important to avoid allowing users to dismiss alerts that are used to display error messages. Do allow users to dismiss alerts wherever appropriate.
-- It's important to note that the `Alert.init()` function in `rivet.js` has to be called after the alert element in loaded in the DOM. If you are dynamically adding new alerts in the DOM you will need to call the `Alert.init()` function each time a new alert is added.
 - Avoid using error messages that automatically disappear. If a user doesn’t have time to read the error message they may not know how to correct the problem once it has been automatically removed.
 - Write helpful alert messages. For errors, Include a brief description of the problem and how to fix it. Check out the Voice and tone/microcopy section for more information.
 
-### Alert list accessibility
-Alert lists can be particularly useful for summarizing multiple errors on a page, and providing links to the invalid fields. These summaries are especially helpful for non-sighted users, who will not receive the visual cue provided by multiple inline alerts appearing on the page when a form is submitted.
+## JavaScript API
+The Rivet alert component comes with a couple of methods you can use to programmatically control alerts. The `.init()` method is called by default the first `rivet.js` is loaded. You can dismiss alerts using the `.rvt-alert__dismiss` button, or use the `Alert.dismiss()` method in your own script. An event listener is attached to the `document` that listens for clicks on `.rvt-aler__dismiss` buttons after the Alert component is initialized. With that in mind you should be able to dynamically add dismissable alerts to the DOM without having the re-initialize the component.
+
+<table>
+    <caption class="sr-only">Alert javascript methods</caption>
+    <thead>
+        <tr>
+            <th scope="col">Method</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td width="250">
+                <code>Alert.init()</code>
+            </td>
+            <td>
+                Initializes the Alert component.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>Alert.dismiss(alert)</code>
+            </td>
+            <td>
+                Accepts a DOM elemnt (the alert) and removes it from the DOM.
+            </td>
+        </tr>
+    </tbody>
+</table>
+

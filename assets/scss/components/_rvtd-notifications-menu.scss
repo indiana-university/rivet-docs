@@ -7,17 +7,19 @@
 
     &__toggle {
         background-color: $color-black--100;
-        border-color: $color-black--200;
+        border: 2px solid $color-black--200;
         border-radius: 999rem;
         color: $color-text;
         height: $lg;
         padding: 0;
         width: $lg;
         position: relative;
+        line-height: 1;
 
         &:focus {
             box-shadow: 0 0 0 2px $color-background,
                         0 0 0 4px $color-action;
+            outline: none;
         }
 
         &:hover {
@@ -167,6 +169,7 @@
     &__actions {
         .rvt-button--secondary {
             color: $color-action;
+            justify-content: center;
         }
 
         &-mail {
