@@ -48,6 +48,36 @@ To use the dropdown component, add a data attribute of `data-dopdown-toggle` to 
 </div>
 {{< /example >}}
 
+### Elements inside the drodown menu
+The Dropdown menu will work with either links (`<a>` tags) or button (`<button>` tags). The keyboard navigation implementation accounts for any focusable elements, so it will work with form controls like text inputs, textareas, and select elements as well.
+
+We've also included a couple of extra layout element in the dropdown menu for situations where you may need to add some visual heirarchy to you dropdowns. The `.rvt-dropdown__menu-heading` element can be used to provide help label a related group of menu items and the `.rvt-dropdown__menu-divider` is used to help create visual separation between elements.
+
+To mark a dropdown menu item as _selected_ add the class `.rvt-is-selected` to the menu item.
+
+{{< example lang="html" >}}<div class="rvt-dropdown">
+    <button class="rvt-button rvt-button--secondary"
+            data-dropdown-toggle="dropdown-example-two"
+            aria-haspopup="true"
+            aria-expanded="false">
+        <span>Dropown items</span>
+        <svg role="img" alt="" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+        </svg>
+    </button>
+    <!-- The inline relative positioning here is for demo purposes only -->
+    <div class="rvt-dropdown__menu" id="dropdown-example-two" aria-hidden="false" style="position: relative;">
+        <a href="#">Add item</a>
+        <a href="#" class="rvt-is-selected">Reorder items</a>
+        <a href="#">Manage categories</a>
+        <div class="rvt-dropdown__menu-heading">Personal settings</div>
+        <div class="rvt-dropdown__menu-divider"></div>
+        <a href="#">Profile settings</a>
+        <a href="#">Logout</a>
+    </div>
+</div>
+{{< /example >}}
+
 ## When to use
 Use a dropdown menu when you need to give users a list of actions or links to choose from.
 
