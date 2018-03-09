@@ -46,7 +46,7 @@ It _is_ possible to use segmented buttons with anchor tags if the situation call
 [See this article on Links vs. Buttons](https://marcysutton.com/links-vs-buttons-in-modern-web-applications/) in modern web applications for more information.
 
 ## Using segmented buttons with dropdowns
-You can use the the segmented button along with Rivet's dropdown component to create more complex controls like in the example below. Here we are also using some [padding utility classes]({{< ref "components/layout/spacing.md" >}}) to slightly decrease the width of the secondary action dropdown toggle.
+You can use the segmented button along with Rivet's dropdown component to create more complex controls like in the example below. Here we are also using some [padding utility classes]({{< ref "components/layout/spacing.md" >}}) to slightly decrease the width of the secondary action dropdown toggle.
 
 {{< example lang="html" >}}<div class="rvt-dropdown">
     <div class="rvt-button-segmented" role="group" aria-label="Dropdown group">
