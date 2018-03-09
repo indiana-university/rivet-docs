@@ -131,7 +131,7 @@ Follow [UX Planet’s recommendations for modal text](https://uxplanet.org/best-
 Modals will work without the need for any additional JavaScript by using the approprate data attribute/id combination in your markup. There are a handful of methods from the Rivet modal's API available to use should you need to control the modal programmatically.
 
 <table>
-    <caption class="sr-only">Table example one</caption>
+    <caption class="sr-only">Modal JavaScript methods</caption>
     <thead>
         <tr>
             <th scope="col">Method</th>
