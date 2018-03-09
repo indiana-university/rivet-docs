@@ -171,3 +171,35 @@ See the [content guide section](/content-guide) for additional information.
 - Page-level alerts can be used with an optional dismiss button (X icon), however it’s important to avoid allowing users to dismiss alerts that are used to display error messages. Do allow users to dismiss alerts wherever appropriate.
 - Avoid using error messages that automatically disappear. If a user doesn’t have time to read the error message they may not know how to correct the problem once it has been automatically removed.
 - Write helpful alert messages. For errors, Include a brief description of the problem and how to fix it. Check out the Voice and tone/microcopy section for more information.
+
+## JavaScript API
+The Rivet alert component comes with a couple of methods you can use to programmatically control alerts. The `.init()` method is called by default the first `rivet.js` is loaded. You can dismiss alerts using the `.rvt-alert__dismiss` button, or use the `Alert.dismiss()` method in your own script. An event listener is attached to the `document` that listens for clicks on `.rvt-aler__dismiss` buttons after the Alert component is initialized. With that in mind you should be able to dynamically add dismissable alerts to the DOM without having the re-initialize the component.
+
+<table>
+    <caption class="sr-only">Alert javascript methods</caption>
+    <thead>
+        <tr>
+            <th scope="col">Method</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td width="250">
+                <code>Alert.init()</code>
+            </td>
+            <td>
+                Initializes the Alert component.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>Alert.dismiss(alert)</code>
+            </td>
+            <td>
+                Accepts a DOM elemnt (the alert) and removes it from the DOM.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
