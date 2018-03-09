@@ -49,7 +49,12 @@ status: "Beta"
 </div>
 {{< /example >}}
 
+## Accessibility
+The Rivet tabs use JavaScript to fully implement [WAI-ARIA authoring standards](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel) for keyboard navigation. Tabs are controlled using `<button>` elements, and should be focusable using the left and right arrow keys on the keyboard. Pressing the right arrow key on the last tab returns to the first in the set and pressing left arrow key on the first tab should move focus to the last tab. Pressing the Tab key while focused on a tab control should move focus on to the tab panel it controls *not to the next tab in the set*.
+
 ## Fitted version
+Applying the modifier class `.rvt-tabs--fitted` to the main `.rvt-tabs` container will make the tabs take up equal amounts of the space of the tabs container.
+
 {{< example lang="html" >}}<div class="rvt-tabs rvt-tabs--fitted">
     <div class="rvt-tabs__tablist" role="tablist" aria-label="Rivet tabs">
         <button class="rvt-tabs__tab" role="tab" aria-selected="true" aria-controls="tab-1-fitted" id="t-one-fitted">
@@ -85,6 +90,10 @@ status: "Beta"
 {{< /example >}}
 
 ## Vertical Tabs
+The `.rvt-tabs--vertical` modifier creates a set of tabs where the tab controls display in a vertical list on the left with the tab panels on the right.
+
+In order for the vertical tabs to function properly you will need to add the `aria-orientation="vertical"` attribute to the main `.rvt-tabs` container. This let's the script that controls the tabs know that they are vertical and to adjust the keyboard navigation appropriately so that the up and down arrow keys switch focus of the tabs instead of the default left and right arrow keys.
+
 {{< example lang="html" >}}<div class="rvt-tabs rvt-tabs--vertical">
     <div class="rvt-tabs__tablist" role="tablist" aria-orientation="vertical" aria-label="Rivet tabs">
         <button class="rvt-tabs__tab" role="tab" aria-selected="true" aria-controls="tab-1-vertical" id="t-one-vertical">
