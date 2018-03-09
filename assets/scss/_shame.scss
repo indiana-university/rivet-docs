@@ -208,8 +208,6 @@ a.button--reverse-secondary {
     @extend .rvt-badge--success;
 }
 
-
-
 /**
  * How to use examples
  */
@@ -302,7 +300,6 @@ a.button--reverse-secondary {
     bottom: 20px;
 }
 
-
 @include mq(bp(md)) {
     .rvtd-htu-example__img-two {
         bottom: 190px;
@@ -316,7 +313,6 @@ a.button--reverse-secondary {
         }
     }
 }
-
 
 @include mq(1100px) {
     .rvtd-htu-example__img-two {
@@ -425,7 +421,6 @@ a.button--reverse-secondary {
     text-decoration: underline;
 }
 
-
 /**
  *  For the new "Learn" section of the site.
  */
@@ -444,7 +439,6 @@ a.button--reverse-secondary {
 .rvtd-article-container--top-only {
     margin-bottom: 0;
 }
-
 
 .rvtd-article-main {
     margin-top: $xl;
@@ -505,34 +499,6 @@ a.button--reverse-secondary {
 
 .hljs-tag .hljs-attr {
     color: #2424b3;
-}
-
-/* TODO: Back this custom button styling for close functionality into Rivet.
- * We should be using buttons for toggling things not links.
- */
-.rvt-drawer__bottom-close {
-    background-color: transparent;
-    border: none;
-    color: $color-link;
-    padding: 0;
-
-    &:focus {
-        display: block;
-        padding: .35rem .65rem;
-    }
-}
-
-.dropdown {
-    &__menu {
-        .is-current {
-            border-left: 4px solid $color-action;
-            font-weight: 700;
-            /**
-             * Hack to overlap the subtle gray border on dropdowns.
-             */
-            margin-left: -1px;
-        }
-    }
 }
 
 .rvt-supplemental-menu {
@@ -596,7 +562,6 @@ a.button--reverse-secondary {
         width: 85%;
     }
 }
-
 
 /**
  * Used in the learn section to sumarize article content.
