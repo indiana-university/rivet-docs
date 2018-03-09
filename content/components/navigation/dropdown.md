@@ -97,7 +97,7 @@ The Dropdown JavaScript exposes a couple of methods to use in your own scripts. 
 Here's a breakdown of the available Dropdown methods you can use in your scripts.
 
 <table>
-    <caption class="sr-only">API table</caption>
+    <caption class="sr-only">Dropdown JavaScript methods</caption>
     <thead>
         <tr>
             <th scope="col">Method</th>
