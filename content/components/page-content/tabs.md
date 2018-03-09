@@ -92,7 +92,7 @@ Applying the modifier class `.rvt-tabs--fitted` to the main `.rvt-tabs` containe
 ## Vertical Tabs
 The `.rvt-tabs--vertical` modifier creates a set of tabs where the tab controls display in a vertical list on the left with the tab panels on the right.
 
-In order for the vertical tabs to function properly you will need to add the `aria-orientation="vertical"` attribute to the main `.rvt-tabs` container. This let's the script that controls the tabs know that they are vertical and to adjust the keyboard navigation appropriately so that the up and down arrow keys switch focus of the tabs instead of the default left and right arrow keys.
+In order for the vertical tabs to function properly you will need to add the `aria-orientation="vertical"` attribute to the main `.rvt-tabs` container. This lets the script that controls the tabs know that they are vertical and to adjust the keyboard navigation appropriately so that the up and down arrow keys switch focus of the tabs instead of the default left and right arrow keys.
 
 {{< example lang="html" >}}<div class="rvt-tabs rvt-tabs--vertical">
     <div class="rvt-tabs__tablist" role="tablist" aria-orientation="vertical" aria-label="Rivet tabs">
