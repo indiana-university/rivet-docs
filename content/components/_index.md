@@ -81,7 +81,7 @@ When there is a new version of Rivet released it will be publish to the NPM regi
 {{< code >}}npm install rivet-uits@<version> --save-dev
 {{< /code >}}
 
-In this example `<version>` would be the new version of rivet you want to install.
+In this example `<version>` would be the new version of Rivet you want to install.
 
 ## Hosted CSS and JavaScript
 <div class="rvt-alert rvt-alert--message rvt-m-bottom-md rvt-m-top-sm" aria-labelledby="warning-alert-title">
