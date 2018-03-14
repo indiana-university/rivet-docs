@@ -114,7 +114,7 @@ module.exports = {
 
     computed: {
         visibleNotifications() {
-            return this.notifications.slice(0, 5);
+            return this.notifications.slice(0, 3);
         },
         unreadCount() {
             return this.visibleNotifications.filter((n) => this.isUnread(n)).length
