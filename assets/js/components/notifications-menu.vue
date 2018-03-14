@@ -29,7 +29,7 @@
             <ol class="rvt-notifications__menu-list" v-if="notifications.length > 0">
                 <li v-for="notification in visibleNotifications" :key="notification.id">
                     <notifications-item
-                        :date="notification.lastModifiedAt | formatDate"
+                        :date="notification.liveAt | formatDate"
                         :title="notification.title | capitalize"
                         :description="notification.description"
                         :url="notification.url"
@@ -123,14 +123,14 @@ module.exports = {
             return this.unreadCount > 0;
         },
         mostRecentNotificationDate() {
-            return this.notifications[0].lastModifiedAt
+            return this.notifications[0].liveAt;
         },
     },
 
     methods: {
         isUnread(notification) {
             if(moment.isMoment(this.notificationsLastViewedAt)) {
-                return this.notificationsLastViewedAt.isBefore(notification.lastModifiedAt);
+                return this.notificationsLastViewedAt.isBefore(notification.liveAt);
             }
             return true;
         },

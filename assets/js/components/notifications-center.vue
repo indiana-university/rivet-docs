@@ -6,7 +6,7 @@
                     <article class="rvt-feed-item" :class="{'rvt-feed-item--is-unread': isUnread(notification)}">
                         <div class="rvt-grid">
                             <div class="rvt-grid__item-2-md-up">
-                                <time datetime="" class="rvt-feed-item__meta">{{ notification.lastModifiedAt | formatDate }}</time>
+                                <time datetime="" class="rvt-feed-item__meta">{{ notification.liveAt | formatDate }}</time>
                             </div>
                             <div class="rvt-grid__item-10-md-up">
                                 <div class="rvt-feed-item__body">
@@ -65,7 +65,7 @@ module.exports =  {
     methods: {
         isUnread(notification) {
             if(moment.isMoment(this.notificationsLastViewedAt)) {
-                return this.notificationsLastViewedAt.isBefore(notification.lastModifiedAt);
+                return this.notificationsLastViewedAt.isBefore(notification.liveAt);
             }
             return true;
         },
