@@ -45,3 +45,7 @@ The custom file input can be used with any of Rivet's [button modifiers]({{< ref
 </div>
 {{< /example >}}
 
+## File input javascript
+`FileInput.init()` is run once on page load, and initializes each `rvt-file` component that has a `data-upload` attribute.
+
+Please note: if file input components are dynamically added to the page with javascript, you should run `FileInput.init()` after they are inserted.

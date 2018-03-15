@@ -48,6 +48,31 @@ To use the dropdown component, add a data attribute of `data-dopdown-toggle` to 
 </div>
 {{< /example >}}
 
+## Right-align modifier
+To align the dropdown menu with the right side of the dropdown button, add the `.rvt-dropdown__menu--right` class to the `.rvt-dropdown__menu` element.
+
+{{< example lang="html" >}}<div class="rvt-dropdown">
+    <button class="rvt-button"
+            data-dropdown-toggle="dropdown-right"
+            aria-haspopup="true"
+            aria-expanded="false">
+        <span>Primary</span>
+        <svg role="img" alt="" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+        </svg>
+    </button>
+    <div class="rvt-dropdown__menu rvt-dropdown__menu--right" id="dropdown-right" aria-hidden="true">
+        <a href="#">Add item</a>
+        <a href="#" class="rvt-is-selected">Reorder items</a>
+        <a href="#">Manage categories</a>
+        <div class="rvt-dropdown__menu-heading">Personal settings</div>
+        <div class="rvt-dropdown__menu-divider"></div>
+        <a href="#">Profile settings</a>
+        <a href="#">Logout</a>
+    </div>
+</div>
+{{< /example >}}
+
 ### Elements inside the drodown menu
 The dropdown menu will work with either links (`<a>` tags) or buttons (`<button>` tags). The keyboard navigation implementation accounts for any focusable elements, so it will work with form controls like text inputs, textareas, and select elements as well.
  
@@ -113,11 +138,11 @@ Here's a breakdown of the available Dropdown methods you can use in your scripts
         </tr>
         <tr>
             <td><code>Dropdown.toggle(id)</code></td>
-            <td>Toggles a dropdown menu. The `id` argument is a `String` that corresponding value of the dropdown's `data-dropdown-toggle` and `id` attributes. This will update the values of the Dropdown toggle's `aria-expanded` and the value of the menu's `aria-hidden` attributes based on their state when `toggle()` is called.</td>
+            <td>Toggles a dropdown menu. The <code>id</code> argument is a <code>String</code> that corresponding value of the dropdown's <code>data-dropdown-toggle</code> and <code>id</code> attributes. This will update the values of the Dropdown toggle's <code>aria-expanded</code> and the value of the menu's <code>aria-hidden</code> attributes based on their state when <code>toggle()</code> is called.</td>
         </tr>
         <tr>
             <td><code>Dropdown.closeAll()</code></td>
-            <td>Closes all dropdown menus and sets their `aria-hidden` and `aria-expanded` attributes to the appropriate state.</td>
+            <td>Closes all dropdown menus and sets their <code>aria-hidden</code> and <code>aria-expanded</code> attributes to the appropriate state.</td>
         </tr>
     </tbody>
 </table>
