@@ -5,7 +5,7 @@ requiresJs: true
 status: "Beta"
 ---
 ## Custom file input example
-The custom HTML file input (`<input type="file">`) uses CSS to hide the defuault file input button and styles the assosciated `<label>` element to look like a Rivet button.
+The custom HTML file input (`<input type="file">`) uses CSS to hide the default file input button and styles the associated `<label>` element to look like a Rivet button.
 
 {{< example lang="html" >}}<div class="rvt-file" data-upload="my-file-input">
     <input type="file" id="my-file-input">

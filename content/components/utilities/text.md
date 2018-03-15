@@ -14,7 +14,7 @@ You can use the rivet text utilities to change the `font-weight` property of tex
 {{< /example >}}
 
 ## Line height
-In Rivet the `line-height` of the `<body>` element is set to `1.5` globally for better legibility which can sometime make larger (like headings or title) text appear as if the line-height is too tall. For that reason we create a text utility called `.rvt-lh-title` that you can used to give larger text a smaller `line-height`.
+In Rivet the `line-height` of the `<body>` element is set to `1.5` globally for better legibility. This can sometimes make larger text (like headings or titles) appear as if the line-height is too tall. For that reason, we created a text utility called `.rvt-lh-title` that you can use to give larger text a smaller `line-height`.
 
 {{< example lang="html" >}}<h3 class="rvt-ts-36">This large text could sometimes end up in a space that causes it to run on to two lines.</h3>
 {{< /example >}}

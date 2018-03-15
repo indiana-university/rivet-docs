@@ -16,18 +16,21 @@ status: "Beta"
 
 <div class="rvt-alert rvt-alert--info rvt-m-bottom-md rvt-m-top-md" role="alertdialog" aria-labelledby="information-alert-title">
     <h3 class="rvt-alert__title" id="information-alert-title">Validation styles</h3>
-    <p class="rvt-alert__message">All of the Rivet validation CSS classes (.rvt-is-valid, .rvt-is-invalid, .rvt-has-warning, and .rvt-has-info) can be used on any of the HTML5 text input types, <a href="../select-input">select elements</a>, or <a href="#textarea-example">text areas</a>.</p>
+    <p class="rvt-alert__message">You can use all Rivet validation CSS classes (.rvt-is-valid, .rvt-is-invalid, .rvt-has-warning, and .rvt-has-info) on any of the HTML5 text input types, <a href="../select-input">select elements</a>, or <a href="#textarea-example">text areas</a>.</p>
 </div>
 
-In Rivet we provide the markup and styles for various states of inline form validation. These inline validation states should be used in combination with [alerts]({{< ref "components/overlays/alerts.md" >}}) to provide helpful validation error messages to users. Rivet does not make any assumptions about whether you are using server or client side form validation. We only provide the HTML and CSS needed to create the validation states. That said, here are some tips for creating usable form error-handling experiences:
+Rivet provides the markup and styles for various states of inline form validation. These inline validation states should be used in combination with [alerts]({{< ref "components/overlays/alerts.md" >}}) to provide helpful validation error messages to users. 
+ 
+Rivet does not make any assumptions about whether you’re using server- or client-side form validation. We only provide the HTML and CSS needed to create the validation states. That said, here are some tips for creating usable form error-handling experiences:
 
 ### Form validation tips
 
-- Try to only validate after the user submits the form. We recommend **avoiding on-the-fly validation** as the user types. This can cause too many uneeded interruptions for users.
-- If there are multiple input errors, summarize the list of errors using a [Rivet page-level alert]({{< ref "components/overlays/alerts.md" >}}) at the top of the form. Especially on long forms, try to provide links to the invalid fields in the summary of errors. This makes it easier for keyboard users and those using assitive technology to jump directly to the invalid fields.
-- Use the `aria-invalid` attribute set to `true` on invalid fields where appropriate (see the following note about groups of checkboxes and radio buttons). This will convey the invalid state to assistive technologies like screen readers.
-- Make sure to use the `aria-describedby` attribute on the invalid fields with a matching `id` to an element that describes what caused the error.
-- Input errors for groups of inputs like checkboxes and radio buttons need to be handled slightly different than text inputs and select elements. [Read this section on using the standalone inline alert]({{< ref "components/overlays/alerts.md#standalone-inline-alerts" >}}) for handling input errors on groups of checkboxes and radio buttons.
+- **Validate after the user submits the form**. We recommend avoiding on-the-fly validation as the user types. This can cause too many unnecessary interruptions for users.
+- **Summarize multiple errors** using a [Rivet page-level alert]({{< ref "components/overlays/alerts.md" >}}) at the top of the form. Provide links to the invalid fields in this summary. This makes it easier for keyboard and assistive technology users to jump directly to the invalid field (which is especially important on longer forms).
+- **Use the `aria-describedby` attribute** on the invalid fields, and match the id to an element that describes what caused the error.
+- **Use the `aria-invalid` attribute** set to true on invalid fields where appropriate. This will convey the invalid state to assistive technologies like screen readers.
+    - **When not to use the `aria-invalid` attribute**: Input errors for groups of inputs like checkboxes and radio buttons need to be handled slightly differently. [Read this section on using the standalone inline alert]({{< ref "components/overlays/alerts.md#standalone-inline-alerts" >}}) for handling these input errors.
+    
 
 {{< example lang="html" >}}<label for="rvt-success-state">First name</label>
 <input type="text" id="rvt-success-state" class="rvt-is-valid" aria-describedby="first-name-message">
