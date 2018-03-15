@@ -124,11 +124,12 @@ A modal dialog is similar to a regular modal except that **it requires the user 
 
 ## Microcopy notes
 Follow [UX Planet’s recommendations for modal text](https://uxplanet.org/best-practices-for-modals-overlays-dialog-windows-c00c66cddd8c):
+
 - The button that launches the modal should clearly describe the action (“Submit feedback”)
 - Use the launch button text as the modal title. This reminds the user what to do, within the context of the overall page.
 
 ## Modal JavaScript
-Modals will work without the need for any additional JavaScript by using the approprate data attribute/id combination in your markup. There are a handful of methods from the Rivet modal's API available to use should you need to control the modal programmatically.
+If you use the appropriate data attribute/id combination in your markup, modals will work without the need for any additional JavaScript. But if you need to control the modal programmatically, there are a handful of methods from the Rivet modal’s API you can use:
 
 <table>
     <caption class="sr-only">Modal JavaScript methods</caption>
@@ -179,7 +180,9 @@ Modal.open(modalToOpen);
 
 ### Close modal example
 
-When opening the modal normally via an element (button) in the DOM using the `data-modal-trigger` attribute, the modal script will store a reference to the element that triggered the modal so that it can return focus to that element when the modal is closed. It's important to note that if you are opening the modal programatically based on some other event **it is your responsibility to set foucs to the apporpriate element after the modal is closed.**
+When a modal is triggered using the default data attribute method, the modal script will store a reference to the element that triggered it. Then it’ll return focus to that element when the modal is closed.
+ 
+Please note: If you open the modal programmatically using `Modal.open()` based on some other event, it is your responsibility to set focus to the appropriate element after the modal is closed.
 
 {{< code lang="javascript" >}}// Find the modal you want to open in the DOM
 const modalToClose = document.querySelector('#my-rivet-modal');

@@ -40,7 +40,7 @@ The Rivet `rvt-display-*` utilities can be used to easily change the css `displa
 {{< /example >}}
 
 ### Vertically centered flex children
-You can use the `.rvt-vertical-center` along with `.rvt-display-flex` to vertically center child elements. This set the `align-items` property to `center`.
+You can use the `.rvt-vertical-center` along with `.rvt-display-flex` to vertically center child elements. This sets the `align-items` property to `center`.
 {{< example lang="html" >}}<div class="rvt-display-flex rvt-vertical-center" style="height: 200px; background-color: #ddd;">
     <div class="bg-orange rvt-m-right-sm">Flex child</div>
     <div class="bg-orange rvt-m-right-sm">Flex child</div>

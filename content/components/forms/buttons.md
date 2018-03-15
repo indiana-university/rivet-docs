@@ -57,19 +57,23 @@ The available button color modifiers are:
 - `.rvt-button--danger-secondary`
 
 ### Using icons inside buttons
-The Rivet buttons are designed so that it is possible to use icons along with text inside the `<button>` element. There are a couple of things you need to do in order for the button icons to display properly.
-
+You can use icons inside the `<button>` element. (Just make sure to also include text alongside them.) Before the button icons can display properly, you need to do a few things:
+ 
 1. Wrap the button text in a `<span>` element
-2. For best results use an SVG icon that is sized to 16px x 16px
-3. Use Rivet's utility classes to add some space between the button text and the icon.
+2. Use Rivet’s utility classes to add some space between the button text and the icon
+
+For best results, use an SVG icon that is sized to 16px by 16px.
+
 
 <div class="alert alert--message rvt-m-bottom-lg">
     <h4 class="rvt-alert__title" id="warning-alert-title">Experimental Rivet Icon set</h4>
-    <p class="rvt-alert__message">We are currently in the early stages of creating a unified icon set for Rivet. If you would like to help test them <a href="https://github.iu.edu/UITS/rivet-icons" rel="noopener">you can find out more information in this Github repository</a>. These icons are still very much in development and <strong>will most certainly change over time</strong>.</p>
+    <p class="rvt-alert__message">We are currently in the early stages of creating a unified icon set for Rivet. If you would like to help test them, <a href="https://github.iu.edu/UITS/rivet-icons" rel="noopener">you can find out more information in this Github repository</a>. These icons are still very much in development and <strong>will most certainly change over time</strong>.
 </div>
 
 ### Button icons and accessibility
-Note in this example how we add a `role="img"` and an empty `alt=""` attribute to the the SVG elements. This communicates to screen readers that the icons are decorative and that it should not read out the contents. When using icons inside of buttons there should still be button text present that describes the action the button performs. If you want _only_ the icon to be visible inside of a button, for example a close button in a modal window, you should still include some visually-hidden text that describes the button's action.
+In this example, we add a `role="img"` and an empty `alt=""` attribute to the the SVG elements. This communicates to screen readers that the icons are decorative (and reading the content aloud is unnecessary). 
+ 
+When you use icons inside buttons, you should still include button text to describe the action the button performs. If you want only the icon to be visible inside of a button (for example, a close button in a modal window), you should still include some visually-hidden text that describes the button’s action.
 
 See the example below using the `.rvt-sr-only` utility class to visually hide the button text.
 

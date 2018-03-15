@@ -50,7 +50,11 @@ status: "Beta"
 {{< /example >}}
 
 ## Accessibility
-The Rivet tabs use JavaScript to fully implement [WAI-ARIA authoring standards](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel) for keyboard navigation. Tabs are controlled using `<button>` elements, and should be focusable using the left and right arrow keys on the keyboard. Pressing the right arrow key on the last tab returns to the first in the set and pressing left arrow key on the first tab should move focus to the last tab. Pressing the Tab key while focused on a tab control should move focus on to the tab panel it controls *not to the next tab in the set*.
+The Rivet tabs use JavaScript to fully implement [WAI-ARIA authoring standards](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel) for keyboard navigation. Tabs are controlled using `<button>` elements, and they should be focusable using the left and right arrow keys on the keyboard:
+ 
+- Pressing the **right arrow key on the last tab** returns to the first in the set
+- Pressing the **left arrow key on the first tab** should move focus to the last tab
+- Pressing the **tab key while focused on a tab control** should move focus on to the tab panel it controls, not to the next tab in the set.
 
 ## Fitted version
 Applying the modifier class `.rvt-tabs--fitted` to the main `.rvt-tabs` container will make the tabs take up equal amounts of the space of the tabs container.

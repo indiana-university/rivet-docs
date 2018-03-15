@@ -1,6 +1,6 @@
 ---
 title: "Segmented Buttons"
-description: "The segemented button is used to display a group related controls in a single line. They can be combined with the dropdown to create complex menu controls."
+description: "Use the segmented button to display a group of related controls in a single line. Combine them with the dropdown to create complex menu controls."
 requiresJs: false
 status: "Beta"
 weight: 2
@@ -24,11 +24,14 @@ The segmented buttons can be used with any of Rivet's button modifiers.
 {{< /example >}}
 
 ### Accessibility notes
-When using the segmented button it's important to apply the ARIA attribute `role="group"` to the `<div>` container to convey to assistive technologies(AT) that the buttons are related to one another and announce that they are part of a group. In addition to the ARIA group role, use the `aria-label` attribute to provide a more information to AT. This is especially important if you are using more than one set of segmented buttons on a page.
+When using the segmented button, it’s important to apply the ARIA attribute `role="group"` to the `<div>` container. This conveys two things to assistive technologies (AT):  
 
-As an alternative, you could also use an `aria-labeledby` attribute with a value that corresponds to the `id` of some text that labels what the segmented button controls.
-
-[See this article on associating related controls with WAI-ARIA](https://www.w3.org/WAI/tutorials/forms/grouping/#associating-related-controls-with-wai-aria) for more information.
+- the buttons are related to one another 
+- AT should announce that the buttons are part of a group
+ 
+In addition to the ARIA group role, use the `aria-label` attribute to provide more information to AT. This is especially important if you are using more than one set of segmented buttons on a page. 
+ 
+As an alternative, you could also use an `aria-labeledby` attribute. Its value should correspond to the `id` of text that labels what the segmented button controls.[See this article on associating related controls with WAI-ARIA](https://www.w3.org/WAI/tutorials/forms/grouping/#associating-related-controls-with-wai-aria) for more information.
 
 ### Fitted modifier
 Adding the `.rvt-button-segmented--fitted` modifier to the segmented buttons' `<div>` container will make the buttons fill the entire width of their parent container.
@@ -41,7 +44,7 @@ Adding the `.rvt-button-segmented--fitted` modifier to the segmented buttons' `<
 {{< /example >}}
 
 ## Using with anchor tags
-It _is_ possible to use segmented buttons with anchor tags if the situation calls for it, e.g. if you are using them as navigation elements that will take a user to a new URL different from the current one. However for most uses in modern web applications, e.g. triggering new content or toggling the visibility of content, the HTML `<button>` element is the appropriate choice.
+It _is_ possible to use segmented buttons with anchor tags if the situation calls for it (e.g., if you are using them as navigation elements that will take a user to a different URL). However, for most uses in modern web applications (e.g., triggering or toggling the visibility of content), the HTML `<button>` element is the appropriate choice.
 
 [See this article on Links vs. Buttons](https://marcysutton.com/links-vs-buttons-in-modern-web-applications/) in modern web applications for more information.
 
