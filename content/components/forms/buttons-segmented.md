@@ -26,7 +26,7 @@ The segmented buttons can be used with any of Rivet's button modifiers.
 ### Accessibility notes
 When using the segmented button, it’s important to apply the ARIA attribute `role="group"` to the `<div>` container. This conveys two things to assistive technologies (AT):  
 
-- the buttons are related to one another 
+- The buttons are related to one another 
 - AT should announce that the buttons are part of a group
  
 In addition to the ARIA group role, use the `aria-label` attribute to provide more information to AT. This is especially important if you are using more than one set of segmented buttons on a page. 
