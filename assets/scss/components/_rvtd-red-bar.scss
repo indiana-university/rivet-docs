@@ -20,6 +20,15 @@
       text-transform:uppercase;
     }
 
+    .section-bar {
+      display: block;
+      width: 20px;
+      height: 5px;
+      border-radius: 1px;
+      margin-bottom: 10px;
+      background: #941B1E;
+    }
+
     .large-title {
       font-size:10rem;
       font-weight:700;
@@ -62,6 +71,7 @@
     .phone img {
       bottom: -1px;
       position: absolute;
+      max-width: initial;
     }
 
     .phone {

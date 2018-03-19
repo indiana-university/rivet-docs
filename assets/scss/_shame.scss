@@ -72,6 +72,10 @@ input[type="search"] {
     box-sizing: border-box;
 }
 
+.rvt-header--shadow {
+    box-shadow: 0 0 4px rgba(0,0,0,.4);
+}
+
 .rvt-header--no-border {
     border-bottom: none;
 }
