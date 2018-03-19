@@ -1,22 +1,75 @@
 .rvtd-red-bar {
+
+
+  &--dark {
+    background: #701B02;
+    margin-top: 3em;
+    @media only screen and (max-width: 480px) {
+      margin-top: 0;
+    }
+    padding-bottom: 2em;
+    text-align: center;
+    display: none;
+  }
+
+  @media screen and (max-width: 970px) {
+    .button-block {
+      display: none;
+    }
+    &--dark {
+      display: block;
+    }
+  }
+
+
   .rvt-grid {
+    overflow:hidden;
     position:relative;
     width:100%;
+
     height:557px;
+    @media only screen and (max-width: 1080px) {
+      height: 600px;
+    }
+    @media only screen and (max-width: 480px) {
+      height: 500px;
+    }
+
     top:100px;
+    @media only screen and (max-width: 1080px) {
+      top: 50px;
+    }
+    @media only screen and (max-width: 480px) {
+      top: 0px;
+    }
+
     padding:0;
     margin:0;
+
     background: -webkit-gradient(linear, left bottom, left top, from(#941B1E), to(#941B1E)) no-repeat 0 214px;
+
+
     z-index: 0;
 
     .title-block {
       padding:75px 60px 0 140px;
+
+      @media only screen and (max-width: 1080px) {
+        padding-left: 2em;
+        padding-top: 2em;
+      }
     }
 
     .pre-header {
       font-size:.875rem;
       font-weight: bold;
-      margin:-45px 0 25px 10px;;
+      margin:-45px 0 25px 10px;
+      @media only screen and (max-width: 1080px) {
+        margin-top: 0px;
+      }
+      @media only screen and (max-width: 480px) {
+        margin-top: 36px;
+      }
       text-transform:uppercase;
     }
 
@@ -31,6 +84,9 @@
 
     .large-title {
       font-size:10rem;
+      @media only screen and (max-width: 480px) {
+        font-size: 7rem;
+      }
       font-weight:700;
       letter-spacing: 0;
       line-height: 85%;
@@ -38,15 +94,14 @@
 
     .version-title {
       font-size: 7rem;
+      @media only screen and (max-width: 480px) {
+        font-size: 5rem;
+      }
       letter-spacing: 0.1rem;
     }
 
     .tight {
       letter-spacing: -0.4rem; /*---kerning---*/
-    }
-
-    .white-text {
-      color: #fff;
     }
 
     .intro {
@@ -56,18 +111,6 @@
       }
     }
 
-
-
-    .white-fill {
-      background-color: #fff;
-      border-color: #fff;
-      color: #941B1E;
-    }
-
-    .crimson {
-      color: #941B1E;
-    }
-
     .phone img {
       bottom: -1px;
       position: absolute;
@@ -75,9 +118,6 @@
     }
 
     .phone {
-      @media only screen and (max-width: 1080px) {
-        right:-130px;
-      }
       @media only screen and (max-width: 740px) {
         display: none;
       }
@@ -95,4 +135,21 @@
       }
     }
   }
+}
+
+.white-text {
+  color: #fff;
+}
+.white-border {
+  border-color: #fff;
+}
+
+.white-fill {
+  background-color: #fff;
+  border-color: #fff;
+  color: #941B1E;
+}
+
+.crimson {
+  color: #941B1E;
 }
