@@ -44,9 +44,7 @@ gulp serve
 To watch and build files without running a server, you can run `gulp watch`. To package up the `public/` folder for distribution, run `gulp build:prod`.
 
 ## Automatic deployments
-There are 4 webhooks setup for this site (2 for push and delete, and on 2 separate servers):
-* [Bamboo](https://apps-test.iu.edu/bamboo-snd/browse/UXO-RVT): Bamboo listens to develop and master branches to determine if the site needs to be deployed
-  * Bamboo will run hugo and move the generated files to either webtest or webserve depending on pushing to develop or master
+[Bamboo](https://apps-test.iu.edu/bamboo-snd/browse/UXO-RVT) will run Hugo and move the generated files to either webtest or webserve depending on pushing to develop or master
 
 ### URLs
 
