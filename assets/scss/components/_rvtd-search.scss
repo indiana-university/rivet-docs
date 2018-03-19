@@ -37,7 +37,7 @@
         position: absolute;
         top: 4.5rem;
         width: 92%;
-        z-index: $z-index-300;
+        z-index: map-get($z-index, z-300);
         border: 1px solid #eee;
         background-color: $color-background;
         border-radius: 4px;
