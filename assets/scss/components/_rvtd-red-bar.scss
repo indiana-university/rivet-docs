@@ -1,0 +1,88 @@
+.rvtd-red-bar {
+  .rvt-grid {
+    position:relative;
+    width:100%;
+    height:557px;
+    top:100px;
+    padding:0;
+    margin:0;
+    background: -webkit-gradient(linear, left bottom, left top, from(#941B1E), to(#941B1E)) no-repeat 0 214px;
+    z-index: 0;
+
+    .title-block {
+      padding:75px 60px 0 140px;
+    }
+
+    .pre-header {
+      font-size:.875rem;
+      font-weight: bold;
+      margin:-45px 0 25px 10px;;
+      text-transform:uppercase;
+    }
+
+    .large-title {
+      font-size:10rem;
+      font-weight:700;
+      letter-spacing: 0;
+      line-height: 85%;
+    }
+
+    .version-title {
+      font-size: 7rem;
+      letter-spacing: 0.1rem;
+    }
+
+    .tight {
+      letter-spacing: -0.4rem; /*---kerning---*/
+    }
+
+    .white-text {
+      color: #fff;
+    }
+
+    .intro {
+      @media only screen and (min-width: 1080px) {
+        margin-top: -6.5em;
+        margin-left: 11em;
+      }
+    }
+
+
+
+    .white-fill {
+      background-color: #fff;
+      border-color: #fff;
+      color: #941B1E;
+    }
+
+    .crimson {
+      color: #941B1E;
+    }
+
+    .phone img {
+      bottom: -1px;
+      position: absolute;
+    }
+
+    .phone {
+      @media only screen and (max-width: 1080px) {
+        right:-130px;
+      }
+      @media only screen and (max-width: 740px) {
+        display: none;
+      }
+    }
+
+    .laptop1 {
+      @media only screen and (max-width: 1080px) {
+        left:-150px;
+      }
+      @media only screen and (max-width: 900px) {
+        left: -270px;
+      }
+      @media only screen and (max-width: 745px) {
+        display: none;
+      }
+    }
+  }
+}

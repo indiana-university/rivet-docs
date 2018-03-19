@@ -1,19 +1,19 @@
 {{ define "main" }}
-<section class="rvtd-billboard">
-    <div class="rvtd-billboard__bg"></div>
-    <div class="rvt-container rvt-container--center rvt-container--junior" style="position: relative;">
+<section class="rvtd-red-bar">
+    <div class="rvt-container--senior rvt-container--center main-container">
         <div class="rvt-grid">
-            <div class="rvt-grid__item-7-md-up rvt-grid__item-5-lg-up rvt-grid__item--last p-left-xl-md-up">
-                <h1 class="ts-32 ts-41-md-up">{{ .Title | markdownify }}</h1>
-                <p class="ts-20-md-up m-bottom-lg m-bottom-xl-md-up">{{ .Description }}</p>
-                <div class="button-group">
-                    <a href="components" class="rvt-m-right-sm button button--secondary button--reverse-secondary">Read the docs</a>
-                    <a href="#should-i-use" class="button button--reverse">Should I use Rivet?</a>
+            <div class="rvt-grid__item rvt-grid__item-7-md-up title-block">
+                <p class="pre-header"><span class="crimson section-bar"></span>Introducing</p>
+                <h1 class="large-title crimson"><span class="tight">R</span>ivet<br><span class="version-title white-text">1<span class="tight">.0</span></span></h1>
+                <p class="rvt-ts-18 white-text intro">In the early 2018, we will be focusing on the first stable release of Rivet. We'll be adding a few new components, but our main goal is to get Rivet to our official 1.0 release.</p>
+                <div class="rvt-button-group button-block">
+                    <button class="rvt-button white-fill rvt-m-top-lg">Download 1.0</button>
+                    <button class="rvt-button--secondary white-text white-border rvt-m-top-lg rvt-m-left-sm">Is Rivet for you?</button>
                 </div>
             </div>
-        </div>
-        <div class="rvtd-billboard__intro-img-home">
-            <img src="./img/homepage-hero.png" alt="">
+            <div class="rvt-grid__item-4 phone">
+                <img src="./img/docs/rvtd-home-iphone.png" width="394" alt="Rivet on an iPhone" />
+            </div>
         </div>
     </div>
 </section>
