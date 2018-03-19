@@ -1,45 +1,24 @@
 .rvtd-red-bar {
 
-
-  &--dark {
-    background: #701B02;
-    margin-top: 3em;
-    @media only screen and (max-width: 480px) {
-      margin-top: 0;
-    }
-    padding-bottom: 2em;
-    text-align: center;
-    display: none;
-  }
-
-  @media screen and (max-width: 970px) {
-    .button-block {
-      display: none;
-    }
-    &--dark {
-      display: block;
-    }
-  }
-
-
   .rvt-grid {
     overflow:hidden;
     position:relative;
     width:100%;
 
     height:557px;
-    @media only screen and (max-width: 1080px) {
-      height: 600px;
-    }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 739px) {
       height: 500px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      height: 600px;
     }
 
     top:100px;
     @media only screen and (max-width: 1080px) {
       top: 50px;
     }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 600px) {
       top: 0px;
     }
 
@@ -67,7 +46,7 @@
       @media only screen and (max-width: 1080px) {
         margin-top: 0px;
       }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 600px) {
         margin-top: 36px;
       }
       text-transform:uppercase;
@@ -84,7 +63,7 @@
 
     .large-title {
       font-size:10rem;
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 600px) {
         font-size: 7rem;
       }
       font-weight:700;
@@ -94,7 +73,7 @@
 
     .version-title {
       font-size: 7rem;
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 600px) {
         font-size: 5rem;
       }
       letter-spacing: 0.1rem;
@@ -105,7 +84,7 @@
     }
 
     .intro {
-      @media only screen and (min-width: 1080px) {
+      @media only screen and (min-width: 600px) {
         margin-top: -6.5em;
         margin-left: 11em;
       }
