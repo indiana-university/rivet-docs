@@ -1,14 +1,14 @@
 <template>
     <section class="rvtd-changelog">
         <div class="rvt-container--senior rvt-container--center">
-            <h2 class="rvtd-section__title m-bottom-xxl">Changelog</h2>
+            <h1 class="rvtd-section__title m-bottom-xxl">Changelog</h1>
             <transition name="rvt-fade" mode="out-in">
                 <div class="rvtd-changelog__list">
                     <div class="rvt-grid m-top-xxl" v-if="releases.length > 0" v-for="release in releases" :key="release.id">
                         <div class="rvt-grid__item-3-md-up">
                             <div class="rvtd-changelog__version">Rivet {{ version(release.tag_name) }}</div>
                             <div class="rvtd-changelog__date m-bottom-xl">{{ release.liveAt | formatDate }}</div>
-                            <a :href="release.url" class="rvt-button rvt-button--bright-blue rvtd-changelog__download">
+                            <a :href="url(release.tag_name)" class="rvt-button rvt-button--bright-blue rvtd-changelog__download">
                                 <svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                     <title>Download</title>
                                     <g fill="currentColor">
@@ -21,15 +21,17 @@
                         </div>
                         <div class="rvt-grid__item-4-md-up rvtd-changelog__overview">
                             <div class="rvtd-changelog__section-title">Overview</div>
-                            {{ overview(release.body) }}
+                            <div v-html="overview(release.body)"></div>
                         </div>
                         <div class="rvt-grid__item-4-md-up rvtd-changelog__details">
                             <div class="rvtd-changelog__section-title">Details</div>
 
-                            {{ release.details }}
+                            <ul v-for="detail in release.pulls.items">
+                                <li v-if="detail">{{ detail.title }}</li>
+                            </ul>
 
                             <p class="rvtd-changelog__view-all-details">
-                                <a target="_blank" :href="release.details" class="white-text">View All +</a>
+                                <a target="_blank" href="#" class="white-text">View All +</a>
                             </p>
                         </div>
                     </div>
@@ -77,6 +79,7 @@
 <script>
     const moment = require('moment');
     const axios = require('axios');
+    const Remarkable = require('remarkable');
 
     module.exports =  {
         name: 'changelog',
@@ -102,11 +105,6 @@
                     .then(response => {
                         if(response.data && Array.isArray(response.data)) {
                             this.releases = response.data;
-
-                            this.releases.forEach(function(release) {
-                                let version = this.version(release.tag_name);
-                            })
-
                         } else {
                             this.errorLoadingReleases = true;
                             console.log('Error loading releases - API response must contain an array')
@@ -123,7 +121,11 @@
                 return tag.replace('v', '')
             },
             overview(body) {
-                return body.substr(0, body.indexOf('<!-- end-overview -->'));
+                let md = new Remarkable();
+                return md.render(body.substr(0, body.indexOf('<!-- end-overview -->')));
+            },
+            url(version) {
+                return "https://github.iu.edu/UITS/rivet-source/archive/"+version+".zip"
             }
         }
 
