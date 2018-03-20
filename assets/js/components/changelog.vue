@@ -20,10 +20,10 @@
                             </a>
                         </div>
                         <div class="rvt-grid__item-4-md-up rvtd-changelog__overview">
-                            <div class="rvtd-changelog__section-title">Overview</div>
+                            <div class="rvtd-changelog__section-title" v-if="release.body">Overview</div>
                             <div v-html="overview(release.body)"></div>
                         </div>
-                        <div class="rvt-grid__item-4-md-up rvtd-changelog__details">
+                        <div class="rvt-grid__item-4-md-up rvtd-changelog__details" v-if="release.pulls.items.length > 0">
                             <div class="rvtd-changelog__section-title">Details</div>
 
                             <ul v-for="detail in release.pulls.items">
@@ -31,7 +31,7 @@
                             </ul>
 
                             <p class="rvtd-changelog__view-all-details">
-                                <a target="_blank" href="#" class="white-text">View All +</a>
+                                <a target="_blank" :href="'https://github.iu.edu/UITS/rivet-source/pulls?q=label:'+release.tag_name.replace('v','')" class="white-text">View All +</a>
                             </p>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
             },
             overview(body) {
                 let md = new Remarkable();
-                return md.render(body.substr(0, body.indexOf('<!-- end-overview -->')));
+                return md.render(body.substr(0, body.indexOf('<!-- end-overview -->'))) || md.render(body);
             },
             url(version) {
                 return "https://github.iu.edu/UITS/rivet-source/archive/"+version+".zip"
