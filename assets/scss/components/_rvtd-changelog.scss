@@ -19,8 +19,18 @@
     margin-bottom: 2.25em
   }
 
+  &__section-title {
+    font-size: 1.125em;
+  }
+
   h3, h4 {
     font-weight: bold;
+  }
+
+  &__overview {
+    p {
+      margin-bottom: 2em;
+    }
   }
 
   &__details {
@@ -34,6 +44,7 @@
       margin-bottom: 1.5em;
       padding-left: 1em;
       text-indent: -1em;
+      font-size: .9em;
 
       &::before {
         font-size: 1.5em;
@@ -46,6 +57,7 @@
   &__view-all-details a {
     font-weight: bold;
     padding-left: 1em;
+    font-size: .9em;
 
     &:hover, &:active {
       color: $bright-blue;

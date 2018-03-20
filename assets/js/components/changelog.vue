@@ -1,0 +1,132 @@
+<template>
+    <section class="rvtd-changelog">
+        <div class="rvt-container--senior rvt-container--center">
+            <h2 class="rvtd-section__title m-bottom-xxl">Changelog</h2>
+            <transition name="rvt-fade" mode="out-in">
+                <div class="rvtd-changelog__list">
+                    <div class="rvt-grid m-top-xxl" v-if="releases.length > 0" v-for="release in releases" :key="release.id">
+                        <div class="rvt-grid__item-3-md-up">
+                            <div class="rvtd-changelog__version">Rivet {{ version(release.tag_name) }}</div>
+                            <div class="rvtd-changelog__date m-bottom-xl">{{ release.liveAt | formatDate }}</div>
+                            <a :href="release.url" class="rvt-button rvt-button--bright-blue rvtd-changelog__download">
+                                <svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <title>Download</title>
+                                    <g fill="currentColor">
+                                        <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
+                                        <path d="M7.29,10.71a1,1,0,0,0,1.41,0l4-4a1,1,0,0,0-1.41-1.41L9,7.59V1A1,1,0,0,0,7,1V7.59L4.71,5.29A1,1,0,0,0,3.29,6.71Z"/>
+                                    </g>
+                                </svg>
+                                Download {{ version(release.tag_name) }}
+                            </a>
+                        </div>
+                        <div class="rvt-grid__item-4-md-up rvtd-changelog__overview">
+                            <div class="rvtd-changelog__section-title">Overview</div>
+                            {{ overview(release.body) }}
+                        </div>
+                        <div class="rvt-grid__item-4-md-up rvtd-changelog__details">
+                            <div class="rvtd-changelog__section-title">Details</div>
+
+                            {{ release.details }}
+
+                            <p class="rvtd-changelog__view-all-details">
+                                <a target="_blank" :href="release.details" class="white-text">View All +</a>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="rvt-loading" v-else-if="loadingReleases">
+                        <template v-for="n in 6">
+                            <div class="rvt-loading__fake-heading">&nbsp;</div>
+                            <div class="rvt-loading__fake-text">&nbsp;</div>
+                            <div class="rvt-loading__fake-text-short">&nbsp;</div>
+                        </template>
+                    </div>
+                    <div v-else-if="errorLoadingReleases" class="rvt-notifications-error">
+                        <div class="rvt-notifications-error__icon">
+                            <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
+                                <g fill="currentColor">
+                                    <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"/>
+                                    <path d="M8,9A1,1,0,0,1,7,8V5A1,1,0,0,1,9,5V8A1,1,0,0,1,8,9Z"/>
+                                    <circle cx="8" cy="11" r="1"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="rvt-notifications-error__text">There was an error connecting to GitHub.</p>
+                        <p><button class="button--secondary" @click.stop="reload">Reload</button></p>
+                    </div>
+                    <div v-else class="rvt-notifications-empty">
+                        <div class="rvt-notifications-empty__icon">
+                            <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
+                                <path fill="currentColor" d="M8,16A8,8,0,1,1,10.29.33a1,1,0,0,1-.57,1.92A6,6,0,1,0,14,8a1,1,0,1,1,2,0A8,8,0,0,1,8,16Z"/>
+                                <path fill="currentColor" d="M7.95,11.89a1.26,1.26,0,0,1-.75-.25L3.4,8.8A1,1,0,1,1,4.6,7.2L7.77,9.58,14.18.43a1,1,0,0,1,1.64,1.15L9,11.36a1.25,1.25,0,0,1-.83.52Zm-.62-1.68h0Z"/>
+                            </svg>
+                        </div>
+                        <p class="rvt-notifications-empty__text">There are no changes.</p>
+                    </div>
+                </div>
+            </transition>
+        </div>
+    </section>
+</template>
+
+<script>
+    const moment = require('moment');
+    const axios = require('axios');
+
+    module.exports =  {
+        name: 'changelog',
+
+        created() {
+            this.loadReleases();
+        },
+
+        data: function() {
+            return {
+                errors: [],
+                releases: [],
+                loadingReleases: false,
+                errorLoadingReleases: false,
+            }
+        },
+
+        methods: {
+            loadReleases() {
+                const apiURL = 'https://ghapi.webtest.iu.edu/api/uits/rivet-source/releases';
+                this.loadingReleases = true;
+                axios.get(apiURL)
+                    .then(response => {
+                        if(response.data && Array.isArray(response.data)) {
+                            this.releases = response.data;
+
+                            this.releases.forEach(function(release) {
+                                let version = this.version(release.tag_name);
+                            })
+
+                        } else {
+                            this.errorLoadingReleases = true;
+                            console.log('Error loading releases - API response must contain an array')
+                        }
+                        this.loadingReleases = false;
+                    })
+                    .catch(e => {
+                        this.errors.push(e);
+                        this.errorLoadingReleases = true;
+                        this.loadingReleases = false;
+                    })
+            },
+            version(tag) {
+                return tag.replace('v', '')
+            },
+            overview(body) {
+                return body.substr(0, body.indexOf('<!-- end-overview -->'));
+            }
+        }
+
+    }
+
+</script>

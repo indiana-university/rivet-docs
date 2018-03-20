@@ -116,7 +116,7 @@ a.button--reverse {
     }
 
     &:focus {
-        box-shadow: 0 0 0 0.125rem #ffffff, 0 0 0 0.2875rem $bright-blue !important;
+        box-shadow: 0 0 0 0.125rem $dark-blue, 0 0 0 0.2875rem $bright-blue !important;
     }
 }
 
