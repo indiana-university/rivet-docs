@@ -1,0 +1,54 @@
+.rvtd-changelog {
+  background-color: $dark-blue;
+  color: white;
+  padding: 5em 0;
+
+  &__version {
+    font-size: 1.75em;
+    font-weight: bold;
+  }
+
+  &__date {
+    color: $bright-blue;
+    font-weight: bold;
+  }
+
+  h2, &__section-title {
+    color: $bright-blue;
+    font-weight: bold;
+    margin-bottom: 2.25em
+  }
+
+  h3, h4 {
+    font-weight: bold;
+  }
+
+  &__details {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      text-indent: -1em;
+
+      &::before {
+        font-size: 1.5em;
+        content: "• ";
+        color: $bright-blue;
+      }
+    }
+  }
+
+  &__view-all-details a {
+    font-weight: bold;
+    padding-left: 1em;
+
+    &:hover, &:active {
+      color: $bright-blue;
+    }
+  }
+}
