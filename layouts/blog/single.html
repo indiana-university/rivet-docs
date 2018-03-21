@@ -1,0 +1,32 @@
+{{ define "main" }}
+<div class="rvtd-article-container rvt-container rvt-container--center rvt-container--junior">
+    <div class="rvt-grid">
+        <div class="rvt-grid__item-8-md-up">
+            <div class="rvtd-typeset rvt-p-right-lg">
+                <time class="rvt-ts-14 rvt-text-uppercase rvt-display-block rvt-m-bottom-sm">{{ .Date.Format "January 2, 2006" }}</time>
+                <h1 class="rvt-text-bold">{{ .Title }}</h1>
+                <p class="rvtd-lead">{{ .Description }}</p>
+                <div class="rvtd-article-main rvtd-typeset">
+                <div class="rvtd-article-outline">
+                    <div class="rvt-display-flex rvt-vertical-center rvt-m-bottom-md">
+                        <svg class="rvt-m-right-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <g fill="currentColor">
+                                <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z" />
+                                <path d="M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z" />
+                                <circle cx="8" cy="5" r="1" />
+                            </g>
+                        </svg>
+                        <p class="rvt-ts-18 rvt-text-bold rvt-m-all-remove">In this article</p>
+                    </div>
+                    {{.TableOfContents}}
+                </div>
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+        <div class="rvt-grid__item-4-md-up rvt-grid__item--last">
+            {{ partial "article-sidebar.html" . }}
+        </div>
+    </div>
+</div>
+{{ end }}

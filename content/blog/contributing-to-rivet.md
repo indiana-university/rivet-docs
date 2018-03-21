@@ -2,6 +2,8 @@
 title: "Contributing"
 description: "If you have created a component you think would be useful to others or would like to make a suggestion, let us know."
 date: "2017-06-01"
+aliases:
+    - "/learn/contributing-to-rivet/"
 ---
 ## Github issues
 We’ll be using Github issues to keep track of new component submissions, bugs, design feedback, and any other suggestions related to the design system. To help us understand the kind of contribution you want to make, we ask that you first [submit a Github issue on github.iu.edu](https://github.iu.edu/UITS/rivet-source/issues).

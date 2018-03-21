@@ -11,13 +11,6 @@
         display: flex;
         flex-wrap: nowrap;
 
-        .rvtd-search__cancel {
-            @extend .button--plain;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
         input {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
@@ -44,7 +37,7 @@
         position: absolute;
         top: 4.5rem;
         width: 92%;
-        z-index: 2;
+        z-index: map-get($z-index, z-300);
         border: 1px solid #eee;
         background-color: $color-background;
         border-radius: 4px;
@@ -57,6 +50,13 @@
 
             .rvtd-search__cancel {
                 margin-left: auto;
+                color: $color-text;
+                line-height: 1;
+                position: absolute;
+                right: $sm;
+                top: $sm;
+                padding-left: $xxs;
+                padding-right: $xxs;
             }
         }
 

@@ -64,7 +64,7 @@
             </div>
 
             <div class="rvt-notifications__actions">
-                <a v-if="!errorLoadingNotifications" class="rvt-button rvt-button--secondary rvt-display-block rvt-text-center rvt-m-bottom-xs" :href="baseURL + 'notification-center'">More notifications</a>
+                <a v-if="!errorLoadingNotifications" class="rvt-button rvt-button--secondary rvt-display-flex rvt-text-center rvt-m-bottom-xs" :href="baseURL + 'notification-center'">More notifications</a>
                 <a class="rvt-button rvt-notifications__actions-mail" href="https://list.iu.edu/sympa/subscribe/rivet-l">
                     <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                         <title>Envelope icon</title>

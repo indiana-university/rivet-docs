@@ -1,10 +1,10 @@
 .rvtd-typeset > {
-    ul li,
-    ol li {
-        line-height: 1.5;
-        margin-top: $sm;
-        margin-bottom: $sm;
+    p {
+        margin-top: $md;
+        margin-bottom: $md;
     }
+
+
 
     h1, h2, h3, h4, h5, h6 {
         font-weight: 700;
@@ -26,23 +26,6 @@
 
     h3 {
         font-size: ts(20);
-    }
-
-    p,
-    ul li,
-    ol li,
-    td {
-        code {
-            background-color: #f7f7f7;
-            display: inline-block;
-            padding: .05rem .15rem;
-            border-radius: 3px;
-            /**
-             * NOTE: This matches the Highlightjs theme that we are using for
-             * syntax highlighting.
-             */
-            color: #d14;
-        }
     }
 
     blockquote {

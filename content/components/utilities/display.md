@@ -24,6 +24,7 @@ The Rivet `rvt-display-*` utilities can be used to easily change the css `displa
 - `.rvt-display-inline-block`
 - `.rvt-display-block`
 - `.rvt-display-flex`
+    - `.rvt-vertical-center` (only works with `.rvt-display-flex`)
 
 {{< example lang="html" >}}<div class="rvt-display-inline bg-midnight">Display inline</div>
 {{< /example >}}
@@ -32,6 +33,15 @@ The Rivet `rvt-display-*` utilities can be used to easily change the css `displa
 {{< /example >}}
 
 {{< example lang="html" >}}<div class="rvt-display-flex">
+    <div class="bg-orange rvt-m-right-sm">Flex child</div>
+    <div class="bg-orange rvt-m-right-sm">Flex child</div>
+    <div class="bg-orange rvt-m-right-sm">Flex child</div>
+</div>
+{{< /example >}}
+
+### Vertically centered flex children
+You can use the `.rvt-vertical-center` along with `.rvt-display-flex` to vertically center child elements. This sets the `align-items` property to `center`.
+{{< example lang="html" >}}<div class="rvt-display-flex rvt-vertical-center" style="height: 200px; background-color: #ddd;">
     <div class="bg-orange rvt-m-right-sm">Flex child</div>
     <div class="bg-orange rvt-m-right-sm">Flex child</div>
     <div class="bg-orange rvt-m-right-sm">Flex child</div>

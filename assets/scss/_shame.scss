@@ -76,16 +76,10 @@ input[type="search"] {
     border-bottom: none;
 }
 
-.rvt-header--no-border .rvt-drawer {
-    top: 70px;
-}
 
 /**
  * :( I'm stuck in a z-index war of my own making!!!
  */
-.rvt-drawer {
-    z-index: 3;
-}
 
 .rvt-header__main-nav {
     margin-right: $md;
@@ -113,10 +107,6 @@ a.button--reverse-secondary {
         border-color: $color-background;
         background-color: $color-background;
     }
-}
-
-.rvt-drawer-button {
-    width: 71px;
 }
 
 /* End Rivet core overrides */
@@ -204,15 +194,13 @@ a.button--reverse-secondary {
 }
 
 .rvt-badge--beta {
-    background-color: $color-alert-blue;
+    @extend .rvt-badge--action;
     color: #fff;
 }
 
 .rvt-badge--ready {
     @extend .rvt-badge--success;
 }
-
-
 
 /**
  * How to use examples
@@ -306,7 +294,6 @@ a.button--reverse-secondary {
     bottom: 20px;
 }
 
-
 @include mq(bp(md)) {
     .rvtd-htu-example__img-two {
         bottom: 190px;
@@ -320,7 +307,6 @@ a.button--reverse-secondary {
         }
     }
 }
-
 
 @include mq(1100px) {
     .rvtd-htu-example__img-two {
@@ -429,7 +415,6 @@ a.button--reverse-secondary {
     text-decoration: underline;
 }
 
-
 /**
  *  For the new "Learn" section of the site.
  */
@@ -448,7 +433,6 @@ a.button--reverse-secondary {
 .rvtd-article-container--top-only {
     margin-bottom: 0;
 }
-
 
 .rvtd-article-main {
     margin-top: $xl;
@@ -511,37 +495,10 @@ a.button--reverse-secondary {
     color: #2424b3;
 }
 
-/* TODO: Back this custom button styling for close functionality into Rivet.
- * We should be using buttons for toggling things not links.
- */
-.rvt-drawer__bottom-close {
-    background-color: transparent;
-    border: none;
-    color: $color-link;
-    padding: 0;
-
-    &:focus {
-        display: block;
-        padding: .35rem .65rem;
-    }
-}
-
-.dropdown {
-    &__menu {
-        .is-current {
-            border-left: 4px solid $color-action;
-            font-weight: 700;
-            /**
-             * Hack to overlap the subtle gray border on dropdowns.
-             */
-            margin-left: -1px;
-        }
-    }
-}
-
 .rvt-supplemental-menu {
     display: flex;
     margin-right: $sm * 1.25;
+    align-items: center;
 }
 
 .rvt-grid--reverse {
@@ -597,5 +554,20 @@ a.button--reverse-secondary {
         height: $xs;
         margin-top: $sm;
         width: 85%;
+    }
+}
+
+/**
+ * Used in the learn section to sumarize article content.
+ */
+.rvtd-article-outline {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li a {
+        font-size: $ts-14;
     }
 }
