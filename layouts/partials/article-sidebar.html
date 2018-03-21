@@ -17,6 +17,7 @@
                             <a href="{{ .Permalink }}">{{ .Title }}</a>
                         </h3>
                         <p>{{ .Description }}</p>
+                        <time class="rvt-ts-14 rvt-text-uppercase rvt-display-block rvt-m-top-sm">{{ .Date.Format "January 2, 2006" }}</time>
                     </li>
                     {{ end }}
                 {{ end }}
