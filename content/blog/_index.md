@@ -1,8 +1,10 @@
 ---
 title: Why we built Rivet
 description: Some thoughts about why we built Rivet, a new design system for software at IU.
-navTitle: "Learn"
+navTitle: "Blog"
 weight: 2
+aliases:
+    - /learn
 ---
 <figure class="rvtd-article-figure rvt-p-left-xxl rvt-p-right-xxl p-bottom-xxl">
     <img src="../img/homepage-hero.png" alt=" ">
