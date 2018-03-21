@@ -37,50 +37,33 @@
 <section class="rvtd-roadmap">
     <div class="rvt-container--senior rvt-container--center">
 
-        <h2 class="rvtd-section__title color-midnight">Roadmap</h2>
-            <ul>
-                {{ range .Site.Data.roadmap.quarters }}
-                    <li>{{ .title }}
-                        <ul>
-                            {{ range .items }}
-                                <li>{{ .title }}</li>
-                            {{ end }}
-                        </ul>
-                    </li>
-                {{ end }}
-            </ul>
+        <h1 class="rvtd-section__title color-midnight">Roadmap</h1>
 
-            <ol class="rvt-steps">
+        <ol class="rvt-steps m-bottom-xl m-top-xxl">
+            {{ range .Site.Data.roadmap.quarters }}
+            <li :class="{ 'is-current': quarter == '{{ .short_title }}' }">
+                <button @click="quarter='{{ .short_title }}'">
+                    <span class="rvt-steps__label">{{ .short_title }}</span>
+                </button>
+            </li>
+            {{ end }}
+        </ol>
 
-                {{ range .Site.Data.roadmap.quarters }}
-                <li class="is-complete">
-                    <button>
-                        <span class="rvt-sr-only">Completed:</span>
-                        <span class="rvt-steps__label">{{ .short_title }}</span>
-                    </button>
-                </li>
-                {{ end }}
-                <li class="is-current">
-                    <button>
-                        <span class="rvt-steps__label">Q3</span>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <span class="rvt-steps__label">Q4</span>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <span class="rvt-steps__label">Q5</span>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <span class="rvt-steps__label">Q6</span>
-                    </button>
-                </li>
-            </ol>
+
+        {{ range .Site.Data.roadmap.quarters }}
+            <div class="rvtd__quarters" v-if="quarter=='{{ .short_title }}'">
+                <h2 class="ts-26 text-bold">{{ .title }}</h2>
+                <div class="rvt-grid">
+                    {{ range .items }}
+                        <div class="rvt-grid__item-6 m-top-lg">
+                            <h3 class="text-bold rvt-color-midnight">{{ .title }}</h3>
+                            <p>{{ .description }}</p>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+
     </div>
 </section>
 

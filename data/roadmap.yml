@@ -2,6 +2,7 @@ quarters:
     -
         title: "Q1: “Lorem ipsum dolor set”"
         short_title: "Q1"
+        status: "current"
         items:
             -
                 title: "New component"
@@ -18,4 +19,24 @@ quarters:
                 description: "We've had a lot of requests for a Tab interface component. We've taken your feedback and create a new prototype _Tabs_ component  that has detault, fitted, and vertical variations."
             -
                 title: "2 Site updates"
+                description: "Rivet notifications - We're building a notifications menu that we'll use to make announcements about new features and updates to Rivet."
+    -
+        title: "Q3: “Lorem ipsum dolor set”"
+        short_title: "Q3"
+        items:
+            -
+                title: "3 New component"
+                description: "We've had a lot of requests for a Tab interface component. We've taken your feedback and create a new prototype _Tabs_ component  that has detault, fitted, and vertical variations."
+            -
+                title: "3 Site updates"
+                description: "Rivet notifications - We're building a notifications menu that we'll use to make announcements about new features and updates to Rivet."
+    -
+        title: "Q4: “Lorem ipsum dolor set”"
+        short_title: "Q4"
+        items:
+            -
+                title: "4 New component"
+                description: "We've had a lot of requests for a Tab interface component. We've taken your feedback and create a new prototype _Tabs_ component  that has detault, fitted, and vertical variations."
+            -
+                title: "4 Site updates"
                 description: "Rivet notifications - We're building a notifications menu that we'll use to make announcements about new features and updates to Rivet."
