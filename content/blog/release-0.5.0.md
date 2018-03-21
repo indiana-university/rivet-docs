@@ -5,6 +5,8 @@ date: "2018-03-21"
 tags:
     - "release"
     - "new component"
+aliases:
+    - "/learn/release-0.5.0"
 ---
 0.5.0 brings handful of pretty significant changes that will require updating some markup in a few places mainly isolated to the header. We've update the documentation to reflect all of the new additions and created a guide to help you update from any of the pre-0.5.0 versions.
 

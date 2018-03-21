@@ -7,7 +7,7 @@
         <ol class="rvtd-small-list rvt-plain-list">
             {{/* Set context to the current Page */}}
             {{- $currentPage := . -}}
-            {{ range where .Site.Sections "Section" "learn" }}
+            {{ range where .Site.Sections "Section" "blog" }}
                 {{ range .Pages }}
                     {{/* Set context to the current Article */}}
                     {{- $currentArticle := . -}}
