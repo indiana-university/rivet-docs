@@ -1,0 +1,119 @@
+.rvt-steps {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  &__label {
+    margin-top: .5rem;
+    display: inline-block;
+  }
+
+  li {
+    text-align: center;
+    flex-grow: 1;
+    position: relative;
+    z-index: 2;
+
+    &:after {
+      content: " ";
+      display: block;
+      height: .125rem;
+      background-color: #eee;
+      position: relative;
+      /**
+       * NOTE:
+       *
+       * Setting a specific position like this seems fragile.
+       * I wonder if there's a better way to do this?
+       */
+      top: -3.25rem;
+      z-index: 0;
+    }
+
+    &:first-child:after {
+      width: 82%;
+      left: 18%;
+    }
+
+    &:last-child:after {
+      width: 50%;
+    }
+
+    button:focus {
+      outline: none;
+
+      &:before {
+        box-shadow: 0 0 3px 2px rgb(59, 153, 252);
+        border-color: #eeeeee;
+      }
+    }
+
+    button:before {
+      z-index: 999;
+      position: relative;
+      content: " ";
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      line-height: 2;
+      text-align: center;
+      border-radius: 50%;
+      border: 2px solid #aaa;
+      background-color: #eeeeee;
+
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    button {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      background: none;
+      border: none;
+
+      &:hover span, &:focus span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .is-complete {
+    button:before {
+      border-color: #008a28;
+      content: " ";
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiMwMDhhMjgiIGQ9Ik02LjcyLDEzbC0uNDgtLjM2LTMtM0ExLDEsMCwwLDEsNC43MSw4LjI5bDIuMTEsMi4xMiw0LjMzLTYuOTRhMSwxLDAsMCwxLDEuNywxLjA2TDcuNjQsMTIuODdaIi8+Cjwvc3ZnPgo=");
+      background-color: #ddf4ea;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 20px 20px;
+    }
+  }
+
+  .has-error {
+
+    button:before {
+      border-color: #df3603;
+      content: " ";
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDx0aXRsZT5FeGNsYW1hdGlvbiBpY29uPC90aXRsZT4KICAgIDxnIGZpbGw9IiNkZjM2MDMiPgogICAgICAgIDxwYXRoIGQ9Ik04LDExYTEsMSwwLDAsMS0xLTFWM0ExLDEsMCwwLDEsOSwzdjdBMSwxLDAsMCwxLDgsMTFaIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iOCIgY3k9IjEzIiByPSIxIi8+CiAgICA8L2c+Cjwvc3ZnPgo=");
+      background-color: #fdeee8;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 20px 20px;
+    }
+  }
+
+  .is-current {
+    font-weight: 700;
+
+    button:before {
+      background-color: #006298;
+      border-color: #006298;
+      color: #fff;
+    }
+  }
+}

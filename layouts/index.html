@@ -38,7 +38,6 @@
     <div class="rvt-container--senior rvt-container--center">
 
         <h2 class="rvtd-section__title color-midnight">Roadmap</h2>
-        <div class="rvt-grid">
             <ul>
                 {{ range .Site.Data.roadmap.quarters }}
                     <li>{{ .title }}
@@ -50,7 +49,38 @@
                     </li>
                 {{ end }}
             </ul>
-        </div>
+
+            <ol class="rvt-steps">
+
+                {{ range .Site.Data.roadmap.quarters }}
+                <li class="is-complete">
+                    <button>
+                        <span class="rvt-sr-only">Completed:</span>
+                        <span class="rvt-steps__label">{{ .short_title }}</span>
+                    </button>
+                </li>
+                {{ end }}
+                <li class="is-current">
+                    <button>
+                        <span class="rvt-steps__label">Q3</span>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <span class="rvt-steps__label">Q4</span>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <span class="rvt-steps__label">Q5</span>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <span class="rvt-steps__label">Q6</span>
+                    </button>
+                </li>
+            </ol>
     </div>
 </section>
 
