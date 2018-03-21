@@ -4,11 +4,11 @@
             <h1 class="rvtd-section__title m-bottom-xxl">Changelog</h1>
             <transition name="rvt-fade" mode="out-in">
                 <div class="rvtd-changelog__list">
-                    <div class="rvt-grid m-top-xxl" v-if="releases.length > 0" v-for="release in releases" :key="release.id">
+                    <div class="rvt-grid m-top-xxl" v-if="new Date(release.created_at) > new Date('2018-01-01') && releases.length > 0" v-for="(release, index) in releases" :key="release.id">
                         <div class="rvt-grid__item-3-md-up">
-                            <div class="rvtd-changelog__version">Rivet {{ version(release.tag_name) }}</div>
+                            <div class="rvtd-changelog__version" :class="{'ts-23':index>0}">Rivet {{ version(release.tag_name) }}</div>
                             <div class="rvtd-changelog__date m-bottom-xl">{{ release.liveAt | formatDate }}</div>
-                            <a :href="url(release.tag_name)" class="rvt-button rvt-button--bright-blue rvtd-changelog__download">
+                            <a v-if="index==0" :href="url(release.tag_name)" class="rvt-button rvt-button--bright-blue rvtd-changelog__download">
                                 <svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                     <title>Download</title>
                                     <g fill="currentColor">
@@ -26,12 +26,12 @@
                         <div class="rvt-grid__item-4-md-up rvtd-changelog__details" v-if="release.pulls.items.length > 0">
                             <div class="rvtd-changelog__section-title">Details</div>
 
-                            <ul v-for="detail in release.pulls.items">
-                                <li v-if="detail">{{ detail.title }}</li>
+                            <ul v-for="(detail, detailIndex) in release.pulls.items">
+                                <li v-if="showAllDetails[index] || detailIndex<5">{{ detail.title }}</li>
                             </ul>
 
-                            <p class="rvtd-changelog__view-all-details">
-                                <a target="_blank" :href="'https://github.iu.edu/UITS/rivet-source/pulls?q=label:'+release.tag_name.replace('v','')" class="white-text">View All +</a>
+                            <p class="rvtd-changelog__view-all-details" v-if="release.pulls.items.length > 5 && !showAllDetails[index]">
+                                <a href="javascript:void(0)" @click.prevent="showDetails(index)" class="white-text">Show All +</a>
                             </p>
                         </div>
                     </div>
@@ -87,10 +87,14 @@
                 releases: [],
                 loadingReleases: false,
                 errorLoadingReleases: false,
+                showAllDetails: []
             }
         },
 
         methods: {
+            showDetails(index) {
+                this.$set(this.showAllDetails, index, true)
+            },
             loadReleases() {
                 const apiURL = 'https://ghapi.webtest.iu.edu/api/uits/rivet-source/releases';
                 this.loadingReleases = true;

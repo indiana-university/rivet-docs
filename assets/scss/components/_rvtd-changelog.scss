@@ -63,4 +63,9 @@
       color: $bright-blue;
     }
   }
+
+
+  .rvtd-section__title::before {
+    background: $bright-blue;
+  }
 }

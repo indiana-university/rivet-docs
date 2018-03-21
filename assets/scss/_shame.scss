@@ -188,7 +188,7 @@ a.button--reverse-secondary {
     &__title {
         &::before {
             content: " ";
-            background: $bright-blue;
+            background: $color-midnight;
             display: block;
             height: 4px;
             width: 1em;
