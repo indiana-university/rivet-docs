@@ -625,3 +625,7 @@ a.button--reverse-secondary {
         font-size: $ts-14;
     }
 }
+
+[v-cloak] {
+    display: none;
+}

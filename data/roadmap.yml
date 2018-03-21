@@ -2,7 +2,6 @@ quarters:
     -
         title: "Q1: “Lorem ipsum dolor set”"
         short_title: "Q1"
-        status: "current"
         items:
             -
                 title: "New component"

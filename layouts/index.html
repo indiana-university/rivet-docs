@@ -39,7 +39,8 @@
 
         <h1 class="rvtd-section__title color-midnight">Roadmap</h1>
 
-        <ol class="rvt-steps m-bottom-xl m-top-xxl">
+        <!--
+        <ol class="rvt-steps m-top-xxl">
             {{ range .Site.Data.roadmap.quarters }}
             <li :class="{ 'is-current': quarter == '{{ .short_title }}' }">
                 <button @click="quarter='{{ .short_title }}'">
@@ -48,10 +49,11 @@
             </li>
             {{ end }}
         </ol>
+        -->
 
 
         {{ range .Site.Data.roadmap.quarters }}
-            <div class="rvtd__quarters" v-if="quarter=='{{ .short_title }}'">
+            <div v-cloak class="rvtd__quarters m-top-xl" v-if="quarter=='{{ .short_title }}'">
                 <h2 class="ts-26 text-bold">{{ .title }}</h2>
                 <div class="rvt-grid">
                     {{ range .items }}
@@ -71,7 +73,7 @@
 
 <section class="rvtd-htu-example m-top-remove rvtd-htu-example--border-bottom" id="should-i-use">
     <div class="rvt-container rvt-container--center rvt-container--freshman text-center">
-        <h1 class="ts-26 ts-32-md-up m-bottom-md">Should I use Rivet?</h1>
+        <h1 class="ts-26 ts-32-md-up m-bottom-md rvtd-section__title">Should I use Rivet?</h1>
         <p>Whether or not you use Rivet depends on the system you’re building. You may find that the <a href="https://framework.iu.edu/" target="_blank">IU Framework</a> fits your needs better.</p>
     </div>
     <div class="rvt-container rvt-container--sophomore rvt-container--center m-top-xxl">
@@ -105,7 +107,7 @@
         <div class="rvt-grid">
             <div class="rvt-grid__item-5-md-up m-bottom-lg p-top-xxl-lg-up">
                 <div class="rvtd-htu-example-info">
-                    <h1 class="ts-26 ts-32-md-up">Help make Rivet better</h1>
+                    <h1 class="ts-26 ts-32-md-up rvtd-section__title">Help make Rivet better</h1>
                     <p>We use Github issues to keep track of new component submissions, bugs, design feedback, and any other suggestions related to Rivet. If you have created a component you think would be useful to others or would like to make a suggestion, <a href="{{ .Site.Params.githubRepo }}/issues" target="_blank">let us know</a>.</p>
                     <a href="./components/information/contributing/" class="button button--secondary m-top-lg">See how you can help</a><br>
                     <a class="rvt-m-top-sm display-inline-block" href="{{ .Site.Params.githubRepo }}/issues" target="_blank">Or, create an issue on Github</a>
