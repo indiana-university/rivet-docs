@@ -562,7 +562,10 @@ a.button--reverse-secondary {
 .rvt-loading {
     &__fake-heading,
     &__fake-text,
-    &__fake-text-short {
+    &__fake-text-short,
+    &__fake-version,
+    &__fake-overview,
+    &__fake-details {
         display: block;
         background-color: $color-black--100;
         border-radius: $xxs;
@@ -588,6 +591,23 @@ a.button--reverse-secondary {
         height: $xs;
         margin-top: $sm;
         width: 85%;
+    }
+
+    &__fake-version {
+        height: 3em;
+        margin-top: $xl;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__fake-overview {
+        height: 30em;
+    }
+
+    &__fake-details {
+        height: 25em;
     }
 }
 

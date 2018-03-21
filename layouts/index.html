@@ -39,7 +39,17 @@
 
         <h2 class="rvtd-section__title color-midnight">Roadmap</h2>
         <div class="rvt-grid">
-
+            <ul>
+                {{ range .Site.Data.roadmap.quarters }}
+                    <li>{{ .title }}
+                        <ul>
+                            {{ range .items }}
+                                <li>{{ .title }}</li>
+                            {{ end }}
+                        </ul>
+                    </li>
+                {{ end }}
+            </ul>
         </div>
     </div>
 </section>

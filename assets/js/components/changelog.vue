@@ -41,14 +41,16 @@
 
 
 
-                    <div class="rvt-loading" v-else-if="loadingReleases">
+                    <div class="rvt-loading" v-if="loadingReleases">
                         <template v-for="n in 6">
-                            <div class="rvt-loading__fake-heading">&nbsp;</div>
-                            <div class="rvt-loading__fake-text">&nbsp;</div>
-                            <div class="rvt-loading__fake-text-short">&nbsp;</div>
+                            <div class="rvt-grid m-top-xxl">
+                                <div class="rvt-grid__item-3-md-up"><div class="rvt-loading__fake-version">&nbsp;</div></div>
+                                <div class="rvt-grid__item-4-md-up rvtd-changelog__overview"><div class="rvt-loading__fake-overview">&nbsp;</div></div>
+                                <div class="rvt-grid__item-4-md-up rvtd-changelog__details"><div class="rvt-loading__fake-details">&nbsp;</div></div>
+                            </div>
                         </template>
                     </div>
-                    <div v-else-if="errorLoadingReleases" class="rvt-notifications-error">
+                    <div v-else-if="errorLoadingReleases" class="rvt-notifications-error" style="background-color:transparent">
                         <div class="rvt-notifications-error__icon">
                             <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
                                 <g fill="currentColor">
@@ -59,16 +61,7 @@
                             </svg>
                         </div>
                         <p class="rvt-notifications-error__text">There was an error connecting to GitHub.</p>
-                        <p><button class="button--secondary" @click.stop="reload">Reload</button></p>
-                    </div>
-                    <div v-else class="rvt-notifications-empty">
-                        <div class="rvt-notifications-empty__icon">
-                            <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
-                                <path fill="currentColor" d="M8,16A8,8,0,1,1,10.29.33a1,1,0,0,1-.57,1.92A6,6,0,1,0,14,8a1,1,0,1,1,2,0A8,8,0,0,1,8,16Z"/>
-                                <path fill="currentColor" d="M7.95,11.89a1.26,1.26,0,0,1-.75-.25L3.4,8.8A1,1,0,1,1,4.6,7.2L7.77,9.58,14.18.43a1,1,0,0,1,1.64,1.15L9,11.36a1.25,1.25,0,0,1-.83.52Zm-.62-1.68h0Z"/>
-                            </svg>
-                        </div>
-                        <p class="rvt-notifications-empty__text">There are no changes.</p>
+                        <p><a class="button" href=".">Reload</a></p>
                     </div>
                 </div>
             </transition>
