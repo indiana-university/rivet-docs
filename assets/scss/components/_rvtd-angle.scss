@@ -13,10 +13,11 @@
     width: 100%;
     height: 650px;
     overflow: hidden;
-    margin:100px auto;
+    margin: $lg auto;
     z-index: 0;
-    @media only screen and (max-width: 900px) {
-      margin:150px auto;
+
+    @media screen and (max-width: 900px) {
+      margin: 150px auto;
     }
   }
 
@@ -29,7 +30,7 @@
   }
 
   @media only screen and (max-width: 1080px) {
-    left:-150px;
+    left: -150px;
   }
   @media only screen and (max-width: 900px) {
     left: -270px;

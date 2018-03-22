@@ -1,6 +1,6 @@
 <template>
     <section class="rvtd-changelog">
-        <div class="rvt-container rvt-container--senior rvt-container--center">
+        <div class="rvt-container rvt-container--junior rvt-container--center">
             <h1 class="rvtd-section__title m-bottom-xxl">Changelog</h1>
             <transition name="rvt-fade" mode="out-in">
                 <div class="rvtd-changelog__list">
@@ -23,7 +23,7 @@
                             <div class="rvtd-changelog__section-title" v-if="release.body">Overview</div>
                             <div v-html="overview(release.body)"></div>
                         </div>
-                        <div class="rvt-grid__item-4-md-up rvtd-changelog__details" v-if="release.pulls.items.length > 0">
+                        <div class="rvt-grid__item-4-md-up rvt-grid__item--last rvtd-changelog__details" v-if="release.pulls.items.length > 0">
                             <div class="rvtd-changelog__section-title">Details</div>
 
                             <ul>

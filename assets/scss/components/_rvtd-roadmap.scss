@@ -1,5 +1,10 @@
 .rvtd-roadmap {
+    margin-top: $xxl;
+    margin-bottom: 6rem;
+}
 
-  margin: 0 0 15em 0; // remove once content is there
-
+@include mq(bp(md)) {
+    .rvtd-roadmap {
+        margin-top: 0;
+    }
 }

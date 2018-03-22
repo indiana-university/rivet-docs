@@ -17,15 +17,15 @@
         </div>
     </div>
 </section>
-<section class="rvtd-section">
+<section class="rvtd-section rvt-p-bottom-remove">
     <div class="angle-container">
         <div class="angle"></div>
-        <div class="rvt-container--senior rvt-container--center">
+        <div class="rvt-container rvt-container--senior rvt-container--center">
             <div class="rvt-grid">
                 <div class="rvt-grid__item-4 rvt-grid__item-5-lg-up  rvt-m-left-xxl-xl-up rvt-m-right-xxl-md-up laptop">
                     <img src="https://imgur.com/RfBugOK.png" width="780" alt="Rivet screen on a laptop." />
                 </div>
-                <div class="rvt-grid__item rvt-grid__item-5-xl-up rvt-p-all-xxl rvt-m-top-xxl">
+                <div class="rvt-grid__item rvt-grid__item-5-xl-up rvt-p-all-xxl-md-up rvt-m-top-xxl-lg-up">
                     <p class="rvt-ts-23 rvt-m-bottom-lg">Launch consistent products faster. Use Rivet to create UITS software that is accessible, usable, and consistent.</p>
                     <a href="#should-i-use" class="rvt-button">Is Rivet for me?</a>
                 </div>
@@ -35,10 +35,8 @@
 </section>
 
 <section class="rvtd-roadmap">
-    <div class="rvt-container rvt-container--senior rvt-container--center">
-
+    <div class="rvt-container rvt-container--junior rvt-container--center">
         <h1 class="rvtd-section__title color-midnight">Roadmap</h1>
-
         <!--
         <ol class="rvt-steps m-top-xxl">
             {{ range .Site.Data.roadmap.quarters }}
@@ -50,16 +48,16 @@
             {{ end }}
         </ol>
         -->
-
-
         {{ range .Site.Data.roadmap.quarters }}
             <div v-cloak class="rvtd__quarters m-top-xl" v-if="quarter=='{{ .short_title }}'">
-                <h2 class="ts-26 text-bold">{{ .title }}</h2>
+                <h2 class="rvt-ts-26 rvt-text-bold rvt-m-bottom-sm">{{ .title }}</h2>
                 <div class="rvt-grid">
                     {{ range .items }}
-                        <div class="rvt-grid__item-6 m-top-lg">
-                            <h3 class="text-bold rvt-color-midnight">{{ .title }}</h3>
-                            <p>{{ .description }}</p>
+                        <div class="rvt-grid__item-6-md-up m-top-lg">
+                            <div class="rvt-p-right-lg">
+                                <h3 class="text-bold rvt-color-midnight">{{ .title }}</h3>
+                                <p>{{ .description | markdownify }}</p>
+                            </div>
                         </div>
                     {{ end }}
                 </div>
