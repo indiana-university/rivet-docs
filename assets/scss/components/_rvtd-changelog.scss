@@ -17,7 +17,7 @@
 
     &:before {
       content: " ";
-      box-shadow: 0 0 0 .5rem #00314c;
+      box-shadow: 0 0 0 .5rem $dark-blue;
       display: block;
       width: 1rem;
       height: 1rem;
@@ -118,6 +118,12 @@
   .rvtd-section__title::before {
     background: $bright-blue;
   }
+}
+
+@include mq(1380px) {
+    .rvtd-changelog {
+        margin: 0 30px;
+    }
 }
 
 @include mq(bp(lg)) {
