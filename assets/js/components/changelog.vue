@@ -31,7 +31,7 @@
                             </ul>
 
                             <p class="rvtd-changelog__view-all-details" v-if="release.pulls.items.length > 5 && !showAllDetails[index]">
-                                <a href="javascript:void(0)" @click.prevent="showDetails(index)" class="white-text">Show All +</a>
+                                <button class="rvt-button rvt-button--small rvt-button--secondary rvt-button--reverse" @click.prevent="showDetails(index)" >Show All +</button>
                             </p>
                         </div>
                     </div>

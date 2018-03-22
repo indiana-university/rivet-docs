@@ -626,3 +626,14 @@ a.button--reverse-secondary {
 [v-cloak] {
     display: none;
 }
+
+.rvt-button--reverse {
+    border-color: $color-background;
+    color: $color-background;
+
+    &:hover {
+        background-color: $color-background;
+        border-color: $color-background;
+        color: $color-action;
+    }
+}
