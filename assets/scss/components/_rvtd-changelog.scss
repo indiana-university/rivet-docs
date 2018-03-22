@@ -3,9 +3,30 @@
   color: white;
   padding: 5em 0;
 
+  &__list {
+    border-left: 2px solid #067bbb;
+    padding-left: 2em;
+  }
+
   &__version {
     font-size: 1.75em;
     font-weight: bold;
+
+    &:before {
+      content: " ";
+      display: block;
+      width: 1em;
+      height: 1em;
+      background: white;
+      position: absolute;
+      left: -33px;
+      top: 6px;
+      border-radius: 100%;
+    }
+  }
+
+  .rvt-grid:first-child &__version:before {
+    left: -35px;
   }
 
   &__date {

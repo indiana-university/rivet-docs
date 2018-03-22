@@ -26,8 +26,8 @@
                         <div class="rvt-grid__item-4-md-up rvtd-changelog__details" v-if="release.pulls.items.length > 0">
                             <div class="rvtd-changelog__section-title">Details</div>
 
-                            <ul v-for="(detail, detailIndex) in release.pulls.items">
-                                <li v-if="showAllDetails[index] || detailIndex<5">{{ detail.title }}</li>
+                            <ul>
+                                <li v-for="(detail, detailIndex) in release.pulls.items" v-if="showAllDetails[index] || detailIndex<5">{{ detail.title }}</li>
                             </ul>
 
                             <p class="rvtd-changelog__view-all-details" v-if="release.pulls.items.length > 5 && !showAllDetails[index]">
