@@ -36,11 +36,6 @@
                         </div>
                     </div>
 
-
-
-
-
-
                     <div class="rvt-loading" v-if="loadingReleases">
                         <template v-for="n in 6">
                             <div class="rvt-grid m-top-xxl">
@@ -62,6 +57,9 @@
                         </div>
                         <p class="rvt-notifications-error__text">There was an error connecting to GitHub.</p>
                         <p><a class="button" href=".">Reload</a></p>
+                    </div>
+                    <div class="rvtd-changelog__cta">
+                        <a class="rvt-button rvt-button--bright-blue" href="https://github.iu.edu/UITS/rivet-source/releases">View all on Github.IU</a>
                     </div>
                 </div>
             </transition>

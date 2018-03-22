@@ -1,35 +1,42 @@
 .rvtd-changelog {
   background-color: $dark-blue;
   color: white;
-  padding: 5em 0;
+  padding: 5em 0 12rem 0;
+  position: relative;
 
   &__list {
     border-left: 2px solid #067bbb;
     padding-left: 2em;
+    position: relative;
   }
 
   &__version {
     font-size: 1.75em;
     font-weight: bold;
+    line-height: 1;
 
     &:before {
       content: " ";
+      box-shadow: 0 0 0 .5rem #00314c;
       display: block;
-      width: 1em;
-      height: 1em;
+      width: 1rem;
+      height: 1rem;
       background: white;
       position: absolute;
-      left: -33px;
-      top: 6px;
+      left: -29px;
+      top: 0;
       border-radius: 100%;
     }
   }
 
   .rvt-grid:first-child &__version:before {
-    left: -35px;
+    width: 2rem;
+    height: 2rem;
+    left: -2.25rem;
+    top: -.012rem;
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiMwMDMxNGMiIGQ9Ik02LjcyLDEzbC0uNDgtLjM2LTMtM0ExLDEsMCwwLDEsNC43MSw4LjI5bDIuMTEsMi4xMiw0LjMzLTYuOTRhMSwxLDAsMCwxLDEuNywxLjA2TDcuNjQsMTIuODdaIi8+Cjwvc3ZnPgo=");
     background-repeat: no-repeat;
-    background-size: 20px 20px;
+    background-size: 1.5rem 1.5rem;
     background-position: center;
   }
 
@@ -89,8 +96,28 @@
     }
   }
 
+  &__cta {
+      position: absolute;
+      left: -.1rem;
+      border-bottom: 2px solid #067bbb;
+      border-left: 2px solid #067bbb;
+      height: 80px;
+      width: 225px;
+
+      .rvt-button {
+          position: absolute;
+          right: 0;
+          bottom: -1.25rem;
+      }
+  }
 
   .rvtd-section__title::before {
     background: $bright-blue;
   }
+}
+
+@include mq(bp(lg)) {
+    .rvtd-changelog__cta {
+        width: 492px;
+    }
 }
