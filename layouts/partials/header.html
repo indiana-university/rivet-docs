@@ -1,6 +1,6 @@
 {{ $currentURL := .URL }}
-{{ if or (eq $currentURL "/") (eq $currentURL "/learn/") (eq $currentURL "/how-to-use/") }}
-    <header class="rvt-header rvt-header--light" role="banner">
+{{ if or (eq $currentURL "/how-to-use/") }}
+    <header class="rvt-header rvt-header--light rvt-header--no-border" role="banner">
 {{ else }}
     <header class="rvt-header rvt-header--light" role="banner">
 {{ end }}
