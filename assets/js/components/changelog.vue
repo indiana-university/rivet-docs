@@ -1,5 +1,5 @@
 <template>
-    <section class="rvtd-changelog">
+    <section class="rvtd-changelog" id="changelog">
         <div class="rvt-container rvt-container--junior rvt-container--center">
             <h1 class="rvtd-section__title m-bottom-xxl">Changelog</h1>
             <transition name="rvt-fade" mode="out-in">
