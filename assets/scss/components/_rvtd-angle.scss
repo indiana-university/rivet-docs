@@ -1,0 +1,63 @@
+
+.angle {
+  position: absolute;
+  z-index: 0;
+  left: -60px;
+  background: linear-gradient(167deg, #FFF 40%, #FFF6DE 75%, #D9EFFF 95%);
+  height: 500px;
+  width: 130%;
+  transform: rotate(11deg);
+
+  &-container {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    margin: $lg auto;
+    z-index: 0;
+
+    @media screen and (max-width: 900px) {
+      margin: 150px auto;
+    }
+  }
+
+}
+
+.laptop {
+
+  img {
+    max-width: initial;
+  }
+
+  @media only screen and (max-width: 1080px) {
+    left: -150px;
+  }
+  @media only screen and (max-width: 900px) {
+    left: -270px;
+  }
+  @media only screen and (max-width: 745px) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 745px) {
+  .angle {
+    display: none;
+  }
+  .angle-container {
+    margin: 0;
+    height: initial;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .angle-container {
+    height: 800px;
+  }
+}
+
+.angle {
+  @media only screen and (max-width: 745px) {
+    top: -150px;
+  }
+}

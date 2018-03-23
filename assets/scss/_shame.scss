@@ -72,6 +72,10 @@ input[type="search"] {
     box-sizing: border-box;
 }
 
+.rvt-header--shadow {
+    box-shadow: 0 0 4px rgba(0,0,0,.4);
+}
+
 .rvt-header--no-border {
     border-bottom: none;
 }
@@ -97,6 +101,20 @@ a.button--reverse {
 
 .rvt-button--small {
     font-size: 1rem;
+}
+
+.rvt-button--bright-blue {
+    background-color: $bright-blue;
+    border-color: $bright-blue;
+
+    &:hover, &:active {
+        background-color: darken($bright-blue, 10%);
+        border-color: darken($bright-blue, 10%);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 0.125rem $dark-blue, 0 0 0 0.2875rem $bright-blue !important;
+    }
 }
 
 a.button--reverse-secondary {
@@ -166,6 +184,19 @@ a.button--reverse-secondary {
  */
 .rvtd-section {
     padding: $xxl 0;
+
+    &__title {
+        &::before {
+            content: " ";
+            background: $color-midnight;
+            display: block;
+            height: 4px;
+            width: 1em;
+            margin-bottom: .5em;
+        }
+        font-size: 2.25em;
+        font-weight: bold;
+    }
 }
 
 @include mq(bp(md)) {
@@ -528,7 +559,10 @@ a.button--reverse-secondary {
 .rvt-loading {
     &__fake-heading,
     &__fake-text,
-    &__fake-text-short {
+    &__fake-text-short,
+    &__fake-version,
+    &__fake-overview,
+    &__fake-details {
         display: block;
         background-color: $color-black--100;
         border-radius: $xxs;
@@ -555,6 +589,23 @@ a.button--reverse-secondary {
         margin-top: $sm;
         width: 85%;
     }
+
+    &__fake-version {
+        height: 3em;
+        margin-top: $xl;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__fake-overview {
+        height: 30em;
+    }
+
+    &__fake-details {
+        height: 25em;
+    }
 }
 
 /**
@@ -569,5 +620,20 @@ a.button--reverse-secondary {
 
     ul li a {
         font-size: $ts-14;
+    }
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.rvt-button--reverse {
+    border-color: $color-background;
+    color: $color-background;
+
+    &:hover {
+        background-color: $color-background;
+        border-color: $color-background;
+        color: $color-action;
     }
 }

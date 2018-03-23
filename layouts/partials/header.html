@@ -1,6 +1,6 @@
 {{ $currentURL := .URL }}
-{{ if or (or (eq $currentURL "/") (eq .Title "Launch consistent **products faster**.")) (or (eq $currentURL "/how-to-use/") (eq .Title "How to **use Rivet**")) }}
-    <header class="rvt-header rvt-header--light rvt-header--no-border" role="banner">
+{{ if or (eq $currentURL "/") (eq $currentURL "/learn/") (eq $currentURL "/how-to-use/") }}
+    <header class="rvt-header rvt-header--light" role="banner">
 {{ else }}
     <header class="rvt-header rvt-header--light" role="banner">
 {{ end }}
@@ -40,6 +40,7 @@
                         <div class="dropdown__menu" id="learn-dropdown" aria-hidden="true">
                             <a href="{{ trim .Site.BaseURL "/" }}/how-to-use/" {{ if eq $currentNav.URL "/how-to-use/" }}class="rvt-is-selected"{{ end }}>How to use</a>
                             <a href="{{ trim .Site.BaseURL "/" }}/blog/" {{ if eq $currentNav.URL "/blog/" }}class="rvt-is-selected"{{ end }}>Blog</a>
+                            <a href="{{ trim .Site.BaseURL "/" }}/#roadmap">Roadmap</a>
                         </div>
                     </div>
                 </li>
@@ -57,7 +58,7 @@
             </notifications-menu>
             <div class="rvt-hide-lg-down">
                 <a href="{{ trim .Site.BaseURL " / " }}/components/#download-rivet" class="rvt-button rvt-button--small rvt-display-flex">
-                    Use Rivet
+                    Download <span class="rvt-sr-only">Rivet</span>
                 </a>
             </div>
         </div>

@@ -1,0 +1,47 @@
+quarters:
+    -
+        title: "Q1: Rivet 1.0.0 release"
+        short_title: "Q1"
+        items:
+            -
+                title: "Notifications center"
+                description: "We've added notifications menu that we'll be using to make announcements about new features and updates to Rivet."
+            -
+                title: "Inline validation style"
+                description: "We've totally redesigned inline form validation styles and created lots of great documentation to help implement them."
+            -
+                title: "New components"
+                description: "This quarter we've added a significant amount of new components and features including: Tabs, Dropdowns, Input groups, and Segmented buttons."
+            -
+                title: "Improved JavaScript Support"
+                description: "We've rewritten all of Rivet's JavaScript so that it's easier to integrate with your other scripts."
+    -
+        title: "Q2: “Lorem ipsum dolor set”"
+        short_title: "Q2"
+        items:
+            -
+                title: "2 New component"
+                description: "We've had a lot of requests for a Tab interface component. We've taken your feedback and create a new prototype _Tabs_ component  that has detault, fitted, and vertical variations."
+            -
+                title: "2 Site updates"
+                description: "Rivet notifications - We're building a notifications menu that we'll use to make announcements about new features and updates to Rivet."
+    -
+        title: "Q3: “Lorem ipsum dolor set”"
+        short_title: "Q3"
+        items:
+            -
+                title: "3 New component"
+                description: "We've had a lot of requests for a Tab interface component. We've taken your feedback and create a new prototype _Tabs_ component  that has detault, fitted, and vertical variations."
+            -
+                title: "3 Site updates"
+                description: "Rivet notifications - We're building a notifications menu that we'll use to make announcements about new features and updates to Rivet."
+    -
+        title: "Q4: “Lorem ipsum dolor set”"
+        short_title: "Q4"
+        items:
+            -
+                title: "4 New component"
+                description: "We've had a lot of requests for a Tab interface component. We've taken your feedback and create a new prototype _Tabs_ component  that has detault, fitted, and vertical variations."
+            -
+                title: "4 Site updates"
+                description: "Rivet notifications - We're building a notifications menu that we'll use to make announcements about new features and updates to Rivet."

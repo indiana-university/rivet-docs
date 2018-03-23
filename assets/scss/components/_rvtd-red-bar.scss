@@ -1,0 +1,148 @@
+.rvtd-red-bar {
+
+  overflow:hidden;
+  position:relative;
+  top:100px;
+
+  @media only screen and (max-width: 1080px) {
+    top: 50px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    top: 0px;
+  }
+  padding:0;
+  margin: 0;
+  @media only screen and (min-width: 1380px) {
+    margin: 0 30px;
+  }
+  height:557px;
+  @media only screen and (max-width: 739px) {
+    height: 500px;
+  }
+  @media only screen and (max-width: 600px) {
+    height: 600px;
+  }
+  background: -webkit-gradient(linear, left bottom, left top, from(#941B1E), to(#941B1E)) no-repeat 0 214px;
+
+  .rvt-grid {
+    width:100%;
+    position:relative;
+
+
+
+
+    z-index: 0;
+
+    .title-block {
+      padding:75px 60px 0 140px;
+
+      @media only screen and (max-width: 1080px) {
+        padding-left: 2em;
+        padding-top: 2em;
+      }
+    }
+
+    .pre-header {
+      font-size:.875rem;
+      font-weight: bold;
+      margin:-45px 0 25px 10px;
+      @media only screen and (max-width: 1080px) {
+        margin-top: 0px;
+      }
+      @media only screen and (max-width: 600px) {
+        margin-top: 36px;
+      }
+      text-transform:uppercase;
+    }
+
+    .section-bar {
+      display: block;
+      width: 20px;
+      height: 5px;
+      border-radius: 1px;
+      margin-bottom: 10px;
+      background: #941B1E;
+    }
+
+    .large-title {
+      font-size:10rem;
+      @media only screen and (max-width: 600px) {
+        font-size: 7rem;
+      }
+      font-weight:700;
+      letter-spacing: 0;
+      line-height: 85%;
+    }
+
+    .version-title {
+      font-size: 7rem;
+      @media only screen and (max-width: 600px) {
+        font-size: 5rem;
+      }
+      letter-spacing: 0.1rem;
+    }
+
+    .tight {
+      letter-spacing: -0.4rem; /*---kerning---*/
+    }
+
+    .intro {
+      @media only screen and (min-width: 601px) {
+        margin-top: -6.5em;
+        margin-left: 11em;
+      }
+    }
+
+    .phone img {
+      max-width: initial;
+    }
+
+    .phone {
+      @media only screen and (max-width: 740px) {
+        display: none;
+      }
+    }
+
+    .laptop1 {
+      @media only screen and (max-width: 1080px) {
+        left:-150px;
+      }
+      @media only screen and (max-width: 900px) {
+        left: -270px;
+      }
+      @media only screen and (max-width: 745px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.white-text {
+  color: #fff;
+}
+.white-border {
+  border-color: #fff;
+
+  &:hover {
+    background-color: rgba(255,255,255,.15);
+    border-color: #fff;
+    color: #fff;
+  }
+}
+
+.white-fill {
+  background-color: #fff;
+  border-color: #fff;
+  color: #941B1E;
+
+  &:hover {
+    background-color: rgba(255,255,255,0.9);
+    border-color: rgba(255,255,255,0.9);
+    color: #941B1E;
+  }
+}
+
+.crimson {
+  color: #941B1E;
+}
