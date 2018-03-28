@@ -39,7 +39,10 @@
         <h1 class="rvtd-section__title color-midnight">Roadmap</h1>
         <ol class="rvt-steps m-top-xxl">
             {{ range .Site.Data.roadmap.quarters }}
-            <li :class="{ 'is-current': quarter == '{{ .short_title }}' }">
+            <li
+                {{ if .is_complete }} class="is-complete"{{ end }}
+                {{ if .is_current }} class="is-current"{{ end }}
+            >
                 <button @click="quarter='{{ .short_title }}'">
                     <span class="rvt-steps__label">{{ .short_title }}</span>
                 </button>

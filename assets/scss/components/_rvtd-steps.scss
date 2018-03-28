@@ -14,7 +14,7 @@
         width: 99%;
         height: .125rem;
         position: absolute;
-        top: 1.6rem;
+        top: 1.5rem;
     }
 
     &__label {
@@ -35,12 +35,16 @@
             width: 50%;
         }
 
-        button:focus {
+        button:focus,
+        button:hover {
             outline: none;
 
             &:before {
-                box-shadow: 0 0 3px 2px rgb(59, 153, 252);
-                border-color: #eeeeee;
+                background-color: #006298;
+                border-color: #006298;
+                color: #fff;
+                box-shadow: inset 0 0 0 .25rem #ffffff,
+                        0 0 0 .125rem $color-action;
             }
         }
 
@@ -54,11 +58,12 @@
             line-height: 2;
             text-align: center;
             border-radius: 50%;
-            border: 2px solid #aaa;
             background-color: #eeeeee;
             margin-right: auto;
             margin-left: auto;
-            box-shadow: 0 0 0 .35rem #ffffff;
+            transition: all .2s ease;
+            box-shadow: inset 0 0 0 .35rem #ffffff,
+                        0 0 0 .35rem #ffffff;
         }
 
         button {
@@ -74,44 +79,51 @@
                 text-decoration: underline;
             }
         }
+    }
 
-        &:last-child button {
-            // margin-left: auto;
+    .is-complete {
+        button:before {
+            border-color: #008a28;
+            content: " ";
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiMwMDhhMjgiIGQ9Ik02LjcyLDEzbC0uNDgtLjM2LTMtM0ExLDEsMCwwLDEsNC43MSw4LjI5bDIuMTEsMi4xMiw0LjMzLTYuOTRhMSwxLDAsMCwxLDEuNywxLjA2TDcuNjQsMTIuODdaIi8+Cjwvc3ZnPgo=");
+            background-color: #ddf4ea;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 16px 16px;
+            box-shadow: inset 0 0 0 .35rem #ffffff,
+                        0 0 0 .35rem #ffffff;
         }
     }
 
-  .is-complete {
-    button:before {
-      border-color: #008a28;
-      content: " ";
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiMwMDhhMjgiIGQ9Ik02LjcyLDEzbC0uNDgtLjM2LTMtM0ExLDEsMCwwLDEsNC43MSw4LjI5bDIuMTEsMi4xMiw0LjMzLTYuOTRhMSwxLDAsMCwxLDEuNywxLjA2TDcuNjQsMTIuODdaIi8+Cjwvc3ZnPgo=");
-      background-color: #ddf4ea;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: 20px 20px;
+    .has-error {
+        button:before {
+            border-color: #df3603;
+            content: " ";
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDx0aXRsZT5FeGNsYW1hdGlvbiBpY29uPC90aXRsZT4KICAgIDxnIGZpbGw9IiNkZjM2MDMiPgogICAgICAgIDxwYXRoIGQ9Ik04LDExYTEsMSwwLDAsMS0xLTFWM0ExLDEsMCwwLDEsOSwzdjdBMSwxLDAsMCwxLDgsMTFaIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iOCIgY3k9IjEzIiByPSIxIi8+CiAgICA8L2c+Cjwvc3ZnPgo=");
+            background-color: #fdeee8;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 20px 20px;
+        }
     }
-  }
 
-  .has-error {
+    .is-current {
+        font-weight: 700;
 
-    button:before {
-      border-color: #df3603;
-      content: " ";
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDx0aXRsZT5FeGNsYW1hdGlvbiBpY29uPC90aXRsZT4KICAgIDxnIGZpbGw9IiNkZjM2MDMiPgogICAgICAgIDxwYXRoIGQ9Ik04LDExYTEsMSwwLDAsMS0xLTFWM0ExLDEsMCwwLDEsOSwzdjdBMSwxLDAsMCwxLDgsMTFaIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iOCIgY3k9IjEzIiByPSIxIi8+CiAgICA8L2c+Cjwvc3ZnPgo=");
-      background-color: #fdeee8;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: 20px 20px;
+        button:before {
+            background-color: #006298;
+            border-color: #006298;
+            color: #fff;
+            box-shadow: inset 0 0 0 .25rem #ffffff,
+                        0 0 0 .125rem $color-action;
+        }
+
+        button:focus:before {
+            // box-shadow: 0 0 0 .125rem #ffffff,
+            //             0 0 0 .25rem $color-action,
+            //             0 0 0 .45rem $color-midnight--300;
+            box-shadow: inset 0 0 0 .25rem #ffffff,
+                        0 0 0 .125rem $color-action;
+        }
     }
-  }
-
-  .is-current {
-    font-weight: 700;
-
-    button:before {
-      background-color: #006298;
-      border-color: #006298;
-      color: #fff;
-    }
-  }
 }
