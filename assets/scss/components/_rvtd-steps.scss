@@ -41,9 +41,9 @@
 
             &:before {
                 background-color: #006298;
+                background-image: none;
                 border-color: #006298;
                 color: #fff;
-                background-image: none;
                 box-shadow: inset 0 0 0 .25rem #ffffff,
                         0 0 0 .125rem $color-action;
             }
@@ -120,9 +120,6 @@
         }
 
         button:focus:before {
-            // box-shadow: 0 0 0 .125rem #ffffff,
-            //             0 0 0 .25rem $color-action,
-            //             0 0 0 .45rem $color-midnight--300;
             box-shadow: inset 0 0 0 .25rem #ffffff,
                         0 0 0 .125rem $color-action;
         }
