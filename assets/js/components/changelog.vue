@@ -1,5 +1,5 @@
 <template>
-    <section class="rvtd-changelog">
+    <section class="rvtd-changelog" id="changelog">
         <div class="rvt-container rvt-container--junior rvt-container--center">
             <h1 class="rvtd-section__title m-bottom-xxl">Changelog</h1>
             <transition name="rvt-fade" mode="out-in">
@@ -94,7 +94,7 @@
                 this.$set(this.showAllDetails, index, true)
             },
             loadReleases() {
-                const apiURL = 'https://ghapi.webtest.iu.edu/api/uits/rivet-source/releases';
+                const apiURL = 'https://githubapi.iu.edu/api/uits/rivet-source/releases';
                 this.loadingReleases = true;
                 axios.get(apiURL)
                     .then(response => {

@@ -7,7 +7,7 @@
                 <h1 class="large-title crimson"><span class="tight">R</span>ivet<br><span class="version-title white-text">1<span class="tight">.0</span></span></h1>
                 <p class="rvt-ts-18-md-up white-text intro">In the early 2018, we will be focusing on the first stable release of Rivet. We'll be adding a few new components, but our main goal is to get Rivet to our official 1.0 release.</p>
                 <div class="rvt-button-group">
-                    <a href="./#roadmap" class="rvt-button white-fill rvt-m-top-lg"><span class="rvt-hide-md-down">View</span>&nbsp; Roadmap</a>
+                    <a href="./#roadmap" class="rvt-button white-fill rvt-m-top-lg"><span class="rvt-hide-md-down">View&nbsp;</span>Roadmap</a>
                     <a href="./components/#download-rivet" class="rvt-button rvt-button--secondary white-text white-border rvt-m-top-lg rvt-m-left-sm">Documentation</a>
                 </div>
             </div>
@@ -26,8 +26,8 @@
                     <img src="https://imgur.com/RfBugOK.png" width="780" alt="Rivet screen on a laptop." />
                 </div>
                 <div class="rvt-grid__item rvt-grid__item-5-xl-up rvt-p-all-xxl-md-up rvt-m-top-xxl-lg-up">
-                    <p class="rvt-ts-23 rvt-m-bottom-lg">Launch consistent products faster. Use Rivet to create UITS software that is accessible, usable, and consistent.</p>
-                    <a href="#should-i-use" class="rvt-button">Is Rivet for me?</a>
+                    <p class="rvt-ts-23 rvt-m-bottom-lg"><strong>Familiarity</strong> is a key component of usability. We give you the toolset for creating web applications and users get a better experience.</p>
+                    <a href="./blog" class="rvt-button">Why we built Rivet</a>
                 </div>
             </div>
         </div>
@@ -37,20 +37,20 @@
 <section class="rvtd-roadmap" id="roadmap">
     <div class="rvt-container rvt-container--junior rvt-container--center">
         <h1 class="rvtd-section__title color-midnight">Roadmap</h1>
-        <!--
         <ol class="rvt-steps m-top-xxl">
             {{ range .Site.Data.roadmap.quarters }}
-            <li :class="{ 'is-current': quarter == '{{ .short_title }}' }">
+            <li
+                :class="{ 'is-current': (quarter == '{{ .short_title }}' || {{ if .is_current }}quarter == null{{ else }}false{{ end }}), 'is-complete': {{ if .is_complete }}true{{ else }}false{{ end }} }"
+            >
                 <button @click="quarter='{{ .short_title }}'">
                     <span class="rvt-steps__label">{{ .short_title }}</span>
                 </button>
             </li>
             {{ end }}
         </ol>
-        -->
         {{ range .Site.Data.roadmap.quarters }}
-            <div v-cloak class="rvtd__quarters m-top-xl" v-if="quarter=='{{ .short_title }}'">
-                <h2 class="rvt-ts-26 rvt-text-bold rvt-m-bottom-sm">{{ .title }}</h2>
+            <div v-cloak class="rvtd__quarters m-top-xxl" v-if="quarter=='{{ .short_title }}' || (quarter == null && '{{ .is_current }}')">
+                <h2 class="rvt-ts-26 rvt-m-bottom-sm">{{ .short_title }}: <span class="rvt-text-bold">{{ .title }}</span></h2>
                 <div class="rvt-grid">
                     {{ range .items }}
                         <div class="rvt-grid__item-6-md-up m-top-lg">
@@ -69,41 +69,6 @@
 
 <changelog></changelog>
 
-<section class="rvtd-htu-example m-top-remove rvtd-htu-example--border-bottom" id="should-i-use">
-    <div class="rvt-container rvt-container--center rvt-container--junior">
-        <div class="rvt-grid">
-            <div class="rvt-grid__item-5-md-up">
-                <h1 class="ts-26 ts-32-md-up m-bottom-md rvtd-section__title color-midnight">Should I use Rivet?</h1>
-                <p>Whether or not you use Rivet depends on the system you’re building. You may find that the <a href="https://framework.iu.edu/" target="_blank" rel="noopener">IU Framework</a> fits your needs better.</p>
-            </div>
-        </div>
-    </div>
-    <div class="rvt-container rvt-container--junior rvt-container--center m-top-xxl">
-        <div class="rvt-grid">
-            <div class="rvt-grid__item-6-md-up">
-                <div class="rvt-panel m-bottom-md">
-                    <h2 class="ts-26 text-center m-bottom-lg">Yes, <strong>use Rivet</strong></h2>
-                    <ul class="rvtd-check-list">
-                        <li>Internal-facing web applications that consist of dynamic, user-generated content</li>
-                        <li>Enterprise systems that are used by large parts of the IU community and require CAS authentication</li>
-                        <li>Task-focused applications that are technically separate from your department or organization’s website</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rvt-grid__item-6-md-up p-top-md">
-                <h2 class="ts-26 text-center m-bottom-lg">Use the <strong><a href="https://framework.iu.edu/" target="_blank" rel="noopener">IU Framework</a></strong> instead</h2>
-                <ul>
-                    <li>Department and organization websites</li>
-                    <li>Websites that have mostly static text content</li>
-                    <li>External-facing marketing or campaign websites</li>
-                    <li>News websites and blogs</li>
-                    <li>Event sites and registration forms</li>
-                    <li>Contact forms contained in any of the above</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="rvtd-htu-example rvtd-htu-example--mega-bottom-padding">
     <div class="rvt-container rvt-container--junior rvt-container--center">
         <div class="rvt-grid">
