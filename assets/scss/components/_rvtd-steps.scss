@@ -1,86 +1,83 @@
 .rvt-steps {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  position: relative;
-
-  &__label {
-    margin-top: .5rem;
-    display: inline-block;
-  }
-
-  li {
-    text-align: center;
-    flex-grow: 1;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
     position: relative;
-    z-index: 2;
 
-    &:after {
-      content: " ";
-      display: block;
-      height: .125rem;
-      background-color: #eee;
-      position: relative;
-      /**
-       * NOTE:
-       *
-       * Setting a specific position like this seems fragile.
-       * I wonder if there's a better way to do this?
-       */
-      top: -3.25rem;
-      z-index: 0;
+    &:before {
+        content: " ";
+        display: block;
+        background-color: #eee;
+        width: 99%;
+        height: .125rem;
+        position: absolute;
+        top: 1.6rem;
     }
 
-    &:first-child:after {
-      width: 89%;
-      left: 12%;
+    &__label {
+        margin-top: .5rem;
+        display: inline-block;
     }
 
-    &:last-child:after {
-      width: 50%;
+    li {
+        position: relative;
+        z-index: 2;
+
+        &:first-child:after {
+            width: 50%;
+            left: 50%;
+        }
+
+        &:last-child:after {
+            width: 50%;
+        }
+
+        button:focus {
+            outline: none;
+
+            &:before {
+                box-shadow: 0 0 3px 2px rgb(59, 153, 252);
+                border-color: #eeeeee;
+            }
+        }
+
+        button:before {
+            z-index: 999;
+            position: relative;
+            content: " ";
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            line-height: 2;
+            text-align: center;
+            border-radius: 50%;
+            border: 2px solid #aaa;
+            background-color: #eeeeee;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        button {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0 auto;
+
+            &:hover span, &:focus span {
+                text-decoration: underline;
+            }
+        }
+
+        &:last-child button {
+            // margin-left: auto;
+        }
     }
-
-    button:focus {
-      outline: none;
-
-      &:before {
-        box-shadow: 0 0 3px 2px rgb(59, 153, 252);
-        border-color: #eeeeee;
-      }
-    }
-
-    button:before {
-      z-index: 999;
-      position: relative;
-      content: " ";
-      display: block;
-      width: 2rem;
-      height: 2rem;
-      line-height: 2;
-      text-align: center;
-      border-radius: 50%;
-      border: 2px solid #aaa;
-      background-color: #eeeeee;
-
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    button {
-      color: #333;
-      text-decoration: none;
-      display: block;
-      background: none;
-      border: none;
-
-      &:hover span, &:focus span {
-        text-decoration: underline;
-      }
-    }
-  }
 
   .is-complete {
     button:before {
