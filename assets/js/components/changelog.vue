@@ -94,7 +94,7 @@
                 this.$set(this.showAllDetails, index, true)
             },
             loadReleases() {
-                const apiURL = 'https://ghapi.webtest.iu.edu/api/uits/rivet-source/releases';
+                const apiURL = 'https://githubapi.iu.edu/api/uits/rivet-source/releases';
                 this.loadingReleases = true;
                 axios.get(apiURL)
                     .then(response => {
