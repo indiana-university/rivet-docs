@@ -50,9 +50,6 @@
         </ol>
         {{ range .Site.Data.roadmap.quarters }}
             <div v-cloak class="rvtd__quarters m-top-xxl" v-if="quarter=='{{ .short_title }}' || (quarter == null && '{{ .is_current }}')">
-                {{ if .is_complete }}
-                    <span class="rvt-badge rvt-badge--success-secondary rvt-m-bottom-xs">Complete</span>
-                {{ end }}
                 <h2 class="rvt-ts-26 rvt-m-bottom-sm">{{ .short_title }}: <span class="rvt-text-bold">{{ .title }}</span></h2>
                 <div class="rvt-grid">
                     {{ range .items }}
