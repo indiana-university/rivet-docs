@@ -50,7 +50,7 @@
             {{ end }}
         </ol>
         {{ range .Site.Data.roadmap.quarters }}
-            <div v-cloak class="rvtd__quarters m-top-xl" v-if="quarter=='{{ .short_title }}'">
+            <div v-cloak class="rvtd__quarters m-top-xl" v-if="quarter=='{{ .short_title }}' || (quarter == null && '{{ .is_current }}')">
                 <h2 class="rvt-ts-26 rvt-text-bold rvt-m-bottom-sm">{{ .title }}</h2>
                 <div class="rvt-grid">
                     {{ range .items }}

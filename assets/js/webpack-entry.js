@@ -61,7 +61,8 @@ new Vue({
         errors: [],
         loadingNotifications: false,
         errorLoadingNotifications: false,
-        notificationsLastViewedAt: null
+        notificationsLastViewedAt: null,
+        quarter: null
     },
     methods: {
         // Toggles the visibility of the section nav on mobile
