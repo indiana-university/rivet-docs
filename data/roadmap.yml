@@ -5,7 +5,7 @@ quarters:
         items:
             -
                 title: "Notifications center"
-                description: "We have added notifications menu that we will be using to make announcements about new features and updates to Rivet."
+                description: "We have added a notifications menu that we will be using to make announcements about new features and updates to Rivet."
             -
                 title: "Inline validation style"
                 description: "We have totally redesigned inline form validation styles and created lots of great documentation to help implement them."
