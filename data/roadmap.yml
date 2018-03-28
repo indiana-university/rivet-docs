@@ -1,47 +1,62 @@
 quarters:
     -
-        title: "Q1: Rivet 1.0.0 release"
+        title: "Q1: Rivet 1.0 release"
         short_title: "Q1"
         items:
             -
                 title: "Notifications center"
-                description: "We've added notifications menu that we'll be using to make announcements about new features and updates to Rivet."
+                description: "We have added notifications menu that we will be using to make announcements about new features and updates to Rivet."
             -
                 title: "Inline validation style"
-                description: "We've totally redesigned inline form validation styles and created lots of great documentation to help implement them."
+                description: "We have totally redesigned inline form validation styles and created lots of great documentation to help implement them."
             -
                 title: "New components"
-                description: "This quarter we've added a significant amount of new components and features including: Tabs, Dropdowns, Input groups, and Segmented buttons."
+                description: "This quarter we have added a significant amount of new components and features including: Tabs, Dropdowns, Input groups, and Segmented buttons."
             -
                 title: "Improved JavaScript Support"
-                description: "We've rewritten all of Rivet's JavaScript so that it's easier to integrate with your other scripts."
+                description: "We have rewritten all of Rivet's JavaScript so that it is easier to integrate with your other scripts."
     -
-        title: "Q2: “Lorem ipsum dolor set”"
+        title: "Q2"
         short_title: "Q2"
         items:
             -
-                title: "2 New component"
-                description: "We've had a lot of requests for a Tab interface component. We've taken your feedback and create a new prototype _Tabs_ component  that has detault, fitted, and vertical variations."
+                title: "Scaling delivery"
+                description: "We will develop a model for extending Rivet (i.e., through plugins and widgets) so your software can have the same look and feel, no matter where it is delivered."
             -
-                title: "2 Site updates"
-                description: "Rivet notifications - We're building a notifications menu that we'll use to make announcements about new features and updates to Rivet."
+                title: "Design philosophy"
+                description: "We want to build on our design principles (be clear, flexible, and productive) with a design philosophy. This will turn the focus towards a comprehensive view of software, and it will give insight into the why and how of UX."
+            -
+                title: "IU icons"
+                description: "A lot of designers and developers use icons in their software, but it is tough to keep them consistent. We will explore the possibility of an official IU icon set."
+            -
+                title: "Quality assurance"
+                description: "We want to provide guidance for how you can (or should) use Rivet. We will create example patterns, templates, and use cases to help inform your decisions."
     -
-        title: "Q3: “Lorem ipsum dolor set”"
+        title: "Q3"
         short_title: "Q3"
         items:
             -
-                title: "3 New component"
-                description: "We've had a lot of requests for a Tab interface component. We've taken your feedback and create a new prototype _Tabs_ component  that has detault, fitted, and vertical variations."
+                title: "Third-party compliance"
+                description: "A lot of our software is not created in-house, but that does not mean it should not adhere to our standards. We will create a compliance and adoption guide for vendors and third-party applications."
             -
-                title: "3 Site updates"
-                description: "Rivet notifications - We're building a notifications menu that we'll use to make announcements about new features and updates to Rivet."
+                title: "Training resources"
+                description: "In this quarter, we will focus on new training materials and workshops for IU developers and designers."
+            -
+                title: "Migration guides"
+                description: "Interested in using Rivet, but working in another system or library? No problem. We’ll create migration guides to make that transition easier."
     -
-        title: "Q4: “Lorem ipsum dolor set”"
+        title: "For future consideration"
         short_title: "Q4"
         items:
             -
-                title: "4 New component"
-                description: "We've had a lot of requests for a Tab interface component. We've taken your feedback and create a new prototype _Tabs_ component  that has detault, fitted, and vertical variations."
+                title: "Support model"
+                description: "We will create a support model (tier 1, tier 2, escalation, etc.) so that the support center can handle basic questions and escalate more complex ones to the Rivet Team."
             -
-                title: "4 Site updates"
-                description: "Rivet notifications - We're building a notifications menu that we'll use to make announcements about new features and updates to Rivet."
+                title: "Rivet showcase"
+                description: "It is helpful to hear how others use Rivet to solve problems. It is even better to see those solutions in action. We will set up a gallery of published applications using Rivet to inspire and inform."
+            -
+                title: "Blank slate"
+                description: "Applications sold by IU may need to use different branding, styles, or packages. We’ll create \"white label\" options that make it easier for application owners to substitute Rivet styles with their own."
+            -
+                title: "Future blueprint"
+                description: "We need to make sure that Rivet stays relevant, updated, and useful for years into the future, so we will explore sustainable strategies and plans to ensure longevity. "

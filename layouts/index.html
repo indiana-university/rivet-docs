@@ -37,7 +37,6 @@
 <section class="rvtd-roadmap" id="roadmap">
     <div class="rvt-container rvt-container--junior rvt-container--center">
         <h1 class="rvtd-section__title color-midnight">Roadmap</h1>
-        <!--
         <ol class="rvt-steps m-top-xxl">
             {{ range .Site.Data.roadmap.quarters }}
             <li :class="{ 'is-current': quarter == '{{ .short_title }}' }">
@@ -47,7 +46,6 @@
             </li>
             {{ end }}
         </ol>
-        -->
         {{ range .Site.Data.roadmap.quarters }}
             <div v-cloak class="rvtd__quarters m-top-xl" v-if="quarter=='{{ .short_title }}'">
                 <h2 class="rvt-ts-26 rvt-text-bold rvt-m-bottom-sm">{{ .title }}</h2>
