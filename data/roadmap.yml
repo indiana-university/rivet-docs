@@ -16,7 +16,7 @@ quarters:
                 title: "Improved JavaScript Support"
                 description: "We have rewritten all of Rivet's JavaScript so that it is easier to integrate with your other scripts."
     -
-        title: "Q2"
+        title: "Q2: Expansion and QA"
         short_title: "Q2"
         items:
             -
@@ -32,7 +32,7 @@ quarters:
                 title: "Quality assurance"
                 description: "We want to provide guidance for how you can (or should) use Rivet. We will create example patterns, templates, and use cases to help inform your decisions."
     -
-        title: "Q3"
+        title: "Q3: Adoption and training"
         short_title: "Q3"
         items:
             -
@@ -45,7 +45,7 @@ quarters:
                 title: "Migration guides"
                 description: "Interested in using Rivet, but working in another system or library? No problem. We’ll create migration guides to make that transition easier."
     -
-        title: "For future consideration"
+        title: "Q4: Support and strategies"
         short_title: "Q4"
         items:
             -
