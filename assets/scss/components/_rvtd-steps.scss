@@ -18,8 +18,10 @@
     }
 
     &__label {
-        margin-top: .5rem;
+        color: $color-black--600;
+        margin-top: $sm;
         display: inline-block;
+        font-size: $ts-14
     }
 
     li {
@@ -33,6 +35,14 @@
 
         &:last-child:after {
             width: 50%;
+        }
+
+        &:first-child button:before {
+            margin-left: 0;
+        }
+
+        &:last-child button:before {
+            margin-right: 0;
         }
 
         button:focus,
@@ -109,7 +119,9 @@
     }
 
     .is-current {
-        font-weight: 700;
+        .rvt-steps__label {
+            color: $color-text;
+        }
 
         button:before {
             background-color: #006298;
