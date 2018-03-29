@@ -1,8 +1,12 @@
 .rvt-steps {
     list-style: none;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: block;
+
+    @include mq(bp(md)) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     margin: 0;
     padding: 0;
     position: relative;
@@ -11,20 +15,44 @@
         content: " ";
         display: block;
         background-color: #eee;
-        width: 99%;
-        height: .125rem;
+        left: 1em;
+        top: initial;
+        width: .125rem;
+        height: 99%;
         position: absolute;
-        top: 1.5rem;
+
+        @include mq(bp(md)) {
+            left: initial;
+            top: 1.5rem;
+            width: 99%;
+            height: .125rem;
+        }
     }
 
     &__label {
-        margin-top: .5rem;
+        color: $color-black--700;
+        margin-top: $sm;
         display: inline-block;
+        font-size: $ts-14;
+        position: absolute;
+        top: -10px;
+        left: 3em;
+
+        @include mq(bp(md)) {
+            position: relative;
+            top: initial;
+            left: initial;
+        }
     }
 
     li {
         position: relative;
         z-index: 2;
+        margin-bottom: 2em;
+
+        @include mq(bp(md)) {
+            margin-bottom: 0;
+        }
 
         &:first-child:after {
             width: 50%;
@@ -33,6 +61,35 @@
 
         &:last-child:after {
             width: 50%;
+        }
+
+        @include mq(bp(md)) {
+            &:first-child button:before {
+                margin-left: 0;
+            }
+
+            &:last-child button:before {
+                margin-right: 0;
+            }
+        }
+
+        button {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            background: none;
+            border: none;
+            padding: 0;
+            // margin-left: 3em;
+
+            @include mq(bp(md)) {
+                margin: 0 auto;
+            }
+
+
+            &:hover span, &:focus span {
+                text-decoration: underline;
+            }
         }
 
         button:focus,
@@ -66,20 +123,6 @@
             box-shadow: inset 0 0 0 .35rem #ffffff,
                         0 0 0 .35rem #ffffff;
         }
-
-        button {
-            color: #333;
-            text-decoration: none;
-            display: block;
-            background: none;
-            border: none;
-            padding: 0;
-            margin: 0 auto;
-
-            &:hover span, &:focus span {
-                text-decoration: underline;
-            }
-        }
     }
 
     .is-complete {
@@ -109,7 +152,9 @@
     }
 
     .is-current {
-        font-weight: 700;
+        .rvt-steps__label {
+            color: $color-text;
+        }
 
         button:before {
             background-color: #006298;
