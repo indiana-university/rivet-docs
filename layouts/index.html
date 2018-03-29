@@ -37,19 +37,28 @@
 <section class="rvtd-roadmap" id="roadmap">
     <div class="rvt-container rvt-container--junior rvt-container--center">
         <h1 class="rvtd-section__title color-midnight">Roadmap</h1>
-        <ol class="rvt-steps m-top-xxl">
+        <ol class="rvt-steps m-top-xxl" role="tablist" aria-label="Roadmap quarters">
             {{ range .Site.Data.roadmap.quarters }}
             <li
                 :class="{ 'is-current': (quarter == '{{ .short_title }}' || {{ if .is_current }}quarter == null{{ else }}false{{ end }}), 'is-complete': {{ if .is_complete }}true{{ else }}false{{ end }} }"
             >
-                <button @click="quarter='{{ .short_title }}'">
+                <button
+                    @click="quarter='{{ .short_title }}'"
+                    role="tab"
+                    id="{{ .short_title }}"
+                >
                     <span class="rvt-steps__label">{{ .title }}</span>
                 </button>
             </li>
             {{ end }}
         </ol>
         {{ range .Site.Data.roadmap.quarters }}
-            <div v-cloak class="rvtd__quarters m-top-xxl" v-if="quarter=='{{ .short_title }}' || (quarter == null && '{{ .is_current }}')">
+            <div
+                v-cloak class="rvtd__quarters m-top-xxl"
+                v-if="quarter=='{{ .short_title }}' || (quarter == null && '{{ .is_current }}')"
+                aria-role="tabpanel"
+                aria-labelledby="{{ .short_title }}"
+            >
                 <h2 class="rvt-ts-26 rvt-m-bottom-sm">{{ .short_title }}: <span class="rvt-text-bold">{{ .title }}</span></h2>
                 <div class="rvt-grid">
                     {{ range .items }}
