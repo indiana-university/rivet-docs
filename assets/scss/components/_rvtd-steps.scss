@@ -1,8 +1,12 @@
 .rvt-steps {
     list-style: none;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: block;
+
+    @include mq(bp(md)) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     margin: 0;
     padding: 0;
     position: relative;
@@ -11,22 +15,38 @@
         content: " ";
         display: block;
         background-color: #eee;
-        width: 99%;
-        height: .125rem;
+        left: 4em;
+        top: initial;
+        width: .125rem;
+        height: 99%;
+        @include mq(bp(md)) {
+            left: initial;
+            top: 1.5rem;
+            width: 99%;
+            height: .125rem;
+        }
         position: absolute;
-        top: 1.5rem;
     }
 
     &__label {
         color: $color-black--600;
         margin-top: $sm;
         display: inline-block;
-        font-size: $ts-14
+        font-size: $ts-14;
+        position: absolute;
+        top: -10px;
+        left: 7em;
+        @include mq(bp(md)) {
+          position: relative;
+          top: initial;
+          left: initial;
+        }
     }
 
     li {
         position: relative;
         z-index: 2;
+        margin-bottom: 4em;
 
         &:first-child:after {
             width: 50%;
@@ -37,12 +57,14 @@
             width: 50%;
         }
 
-        &:first-child button:before {
-            margin-left: 0;
-        }
+        @include mq(bp(md)) {
+            &:first-child button:before {
+                margin-left: 0;
+            }
 
-        &:last-child button:before {
-            margin-right: 0;
+            &:last-child button:before {
+                margin-right: 0;
+            }
         }
 
         button:focus,
@@ -84,7 +106,12 @@
             background: none;
             border: none;
             padding: 0;
-            margin: 0 auto;
+            margin-left: 3em;
+
+            @include mq(bp(md)) {
+              margin: 0 auto;
+            }
+
 
             &:hover span, &:focus span {
                 text-decoration: underline;
