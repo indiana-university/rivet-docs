@@ -2,7 +2,7 @@ quarters:
     -
         title: "Rivet 1.0 release"
         short_title: "Q1"
-        is_complete: true
+        is_current: true
         items:
             -
                 title: "Notifications center"
@@ -19,7 +19,6 @@ quarters:
     -
         title: "Expansion and QA"
         short_title: "Q2"
-        is_current: true
         items:
             -
                 title: "Scaling delivery"
