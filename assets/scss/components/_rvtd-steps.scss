@@ -15,17 +15,18 @@
         content: " ";
         display: block;
         background-color: #eee;
-        left: 4em;
+        left: 1em;
         top: initial;
         width: .125rem;
         height: 99%;
+        position: absolute;
+
         @include mq(bp(md)) {
             left: initial;
             top: 1.5rem;
             width: 99%;
             height: .125rem;
         }
-        position: absolute;
     }
 
     &__label {
@@ -35,18 +36,23 @@
         font-size: $ts-14;
         position: absolute;
         top: -10px;
-        left: 7em;
+        left: 3em;
+
         @include mq(bp(md)) {
-          position: relative;
-          top: initial;
-          left: initial;
+            position: relative;
+            top: initial;
+            left: initial;
         }
     }
 
     li {
         position: relative;
         z-index: 2;
-        margin-bottom: 4em;
+        margin-bottom: 2em;
+
+        @include mq(bp(md)) {
+            margin-bottom: 0;
+        }
 
         &:first-child:after {
             width: 50%;
@@ -64,6 +70,25 @@
 
             &:last-child button:before {
                 margin-right: 0;
+            }
+        }
+
+        button {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            background: none;
+            border: none;
+            padding: 0;
+            // margin-left: 3em;
+
+            @include mq(bp(md)) {
+                margin: 0 auto;
+            }
+
+
+            &:hover span, &:focus span {
+                text-decoration: underline;
             }
         }
 
@@ -97,25 +122,6 @@
             transition: all .2s ease;
             box-shadow: inset 0 0 0 .35rem #ffffff,
                         0 0 0 .35rem #ffffff;
-        }
-
-        button {
-            color: #333;
-            text-decoration: none;
-            display: block;
-            background: none;
-            border: none;
-            padding: 0;
-            margin-left: 3em;
-
-            @include mq(bp(md)) {
-              margin: 0 auto;
-            }
-
-
-            &:hover span, &:focus span {
-                text-decoration: underline;
-            }
         }
     }
 
