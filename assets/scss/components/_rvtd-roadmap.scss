@@ -1,0 +1,10 @@
+.rvtd-roadmap {
+    margin-top: $xxl;
+    margin-bottom: 6rem;
+}
+
+@include mq(bp(md)) {
+    .rvtd-roadmap {
+        margin-top: 0;
+    }
+}

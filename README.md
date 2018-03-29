@@ -44,16 +44,12 @@ gulp serve
 To watch and build files without running a server, you can run `gulp watch`. To package up the `public/` folder for distribution, run `gulp build:prod`.
 
 ## Automatic deployments
-There are 4 webhooks setup for this site (2 for push and delete, and on 2 separate servers):
-* [Bamboo](https://apps-test.iu.edu/bamboo-snd/browse/UXO-RVT): Bamboo listens to develop and master branches to determine if the site needs to be deployed
-  * feature branches will be deployed by a script on webtest
-  * If you delete a feature branch it will delete that sub directory. For example, deleting branch `feature/loading-indicator` will delete the folder at https://rivet.webtest.iu.edu/loading-indicator
-  * Bamboo will run hugo and move the generated files to either webtest or webserve depending on pushing to develop or master
+[Bamboo](https://apps-test.iu.edu/bamboo-snd/browse/UXO-RVT) will run Hugo and move the generated files to either webtest or webserve depending on pushing to develop or master
 
 ### URLs
 
-`master` and `develop` branches are deployed automatically using github webhooks and server-side build scripts. The following branches deploy to the following URLs:
+`master` and `develop` branches are deployed automatically using Bamboo and Docker to generate the Hugo site. The following branches deploy to the following URLs:
 
 `master`: https://rivet.uits.iu.edu
-`develop`: https://rivet.webtest.iu.edu/develop
-`feature/*` https://rivet.webtest.iu.edu/* (note `feature/` is removed and just the name of the feature is added)
+
+`develop`: https://rivet.webtest.iu.edu

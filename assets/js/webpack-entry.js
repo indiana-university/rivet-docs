@@ -50,7 +50,8 @@ new Vue({
         oneSearch: require('./components/one-search.vue'),
         searchForm: require('./components/search.vue'),
         notificationsMenu: require('./components/notifications-menu.vue'),
-        notificationsCenter: require('./components/notifications-center.vue')
+        notificationsCenter: require('./components/notifications-center.vue'),
+        changelog: require('./components/changelog.vue')
     },
     data: {
         // Controls the toggle of the section nav menu on mobile
@@ -60,7 +61,8 @@ new Vue({
         errors: [],
         loadingNotifications: false,
         errorLoadingNotifications: false,
-        notificationsLastViewedAt: null
+        notificationsLastViewedAt: null,
+        quarter: null
     },
     methods: {
         // Toggles the visibility of the section nav on mobile
@@ -109,6 +111,7 @@ new Vue({
                 localStorage.setItem('notificationsLastViewedAt', this.notificationsLastViewedAt.format());
             }
         }
+
     },
     created() {
         this.loadNotifications();

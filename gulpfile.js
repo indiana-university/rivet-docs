@@ -33,7 +33,7 @@ gulp.task('watch', ['build'], function() {
     gulp.watch(['assets/js/**/*.js', 'assets/js/**/*.vue'], ['js']);
     gulp.watch('assets/scss/**/*.scss', ['sass']);
     gulp.watch(['content/**/*.md'], ['index']);
-    gulp.watch(['layouts/**/*', 'content/**/*', 'archetypes/**/*', 'static/**/*'], ['hugo:dev']);
+    gulp.watch(['layouts/**/*', 'content/**/*', 'archetypes/**/*', 'static/**/*', 'data/**/*'], ['hugo:dev']);
 });
 
 gulp.task('env:production', function() {
