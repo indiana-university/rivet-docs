@@ -47,7 +47,7 @@
                     role="tab"
                     id="{{ .short_title }}"
                 >
-                    <span class="rvt-steps__label">{{ .title }}</span>
+                    <span class="rvt-steps__label">{{ .title }}{{ if .is_complete }}<span class="rvt-sr-only">(completed)</span>{{ end }}</span>
                 </button>
             </li>
             {{ end }}
