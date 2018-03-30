@@ -48,7 +48,9 @@
                     aria-label="{{ .short_title }} tab"
                     id="{{ .short_title }}"
                 >
-                    <span class="rvt-steps__label">{{ .title }}{{ if .is_complete }}<span class="rvt-sr-only">(completed)</span>{{ end }}</span>
+                    <span class="rvt-steps__label">
+                        {{ .short_title }}: {{ .title }}{{ if .is_complete }}<span class="rvt-sr-only">(completed)</span>{{ end }}
+                    </span>
                 </button>
             </li>
             {{ end }}
@@ -60,6 +62,7 @@
                 aria-role="tabpanel"
                 aria-labelledby="{{ .short_title }}"
             >
+                <span class="rvt-ts-14">2018</span>
                 <h2 class="rvt-ts-26 rvt-m-bottom-sm">{{ .short_title }}: <span class="rvt-text-bold">{{ .title }}</span></h2>
                 <div class="rvt-grid">
                     {{ range .items }}
