@@ -14,6 +14,7 @@
     font-size: 1.75em;
     font-weight: bold;
     line-height: 1;
+    -webkit-font-smoothing: antialiased;
 
     &:before {
       content: " ";
@@ -28,6 +29,10 @@
       border-radius: 100%;
     }
   }
+
+    &__download {
+        -webkit-font-smoothing: antialiased;
+    }
 
   .rvt-grid:first-child &__version:before {
     width: 2rem;
@@ -46,12 +51,14 @@
     text-transform: uppercase;
     font-size: $ts-12;
     letter-spacing: .02rem;
+    -webkit-font-smoothing: antialiased;
   }
 
   h1, &__section-title {
     color: $bright-blue;
     font-weight: bold;
-    margin-bottom: 2.25em
+    margin-bottom: 2.25em;
+    -webkit-font-smoothing: antialiased;
   }
 
   &__section-title {
@@ -60,6 +67,7 @@
 
   h2, h3, h4 {
     font-weight: bold;
+    -webkit-font-smoothing: antialiased;
   }
 
   &__overview {
