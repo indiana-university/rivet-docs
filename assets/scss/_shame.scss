@@ -637,3 +637,7 @@ a.button--reverse-secondary {
         color: $color-action;
     }
 }
+
+.rvt-font-smooth {
+    -webkit-font-smoothing: antialiased;
+}
