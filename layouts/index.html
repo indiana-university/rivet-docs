@@ -5,10 +5,10 @@
             <div class="rvt-grid__item rvt-grid__item-9-md-up rvt-grid__item-7-lg-up title-block">
                 <p class="pre-header"><span class="crimson section-bar"></span>Coming in April</p>
                 <h1 class="large-title crimson"><span class="tight">R</span>ivet<br><span class="version-title white-text">1<span class="tight">.0</span></span></h1>
-                <p class="rvt-ts-18-md-up white-text intro">In the early 2018, we will be focusing on the first stable release of Rivet. We'll be adding a few new components, but our main goal is to get Rivet to our official 1.0 release.</p>
+                <p class="rvt-ts-18-md-up white-text intro">Get ready: The official release of Rivet 1.0 is coming soon in early April. We’ve added new components, documentation, and a migration guide to help you prepare.</p>
                 <div class="rvt-button-group">
                     <a href="./#roadmap" class="rvt-button white-fill rvt-m-top-lg"><span class="rvt-hide-md-down">View&nbsp;</span>Roadmap</a>
-                    <a href="./components/#download-rivet" class="rvt-button rvt-button--secondary white-text white-border rvt-m-top-lg rvt-m-left-sm">Documentation</a>
+                    <a href="./blog/release-0.5.0" class="rvt-button rvt-button--secondary white-text white-border rvt-m-top-lg">See what’s new</a>
                 </div>
             </div>
             <div class="rvt-grid__item phone">
@@ -23,11 +23,11 @@
         <div class="rvt-container rvt-container--senior rvt-container--center">
             <div class="rvt-grid">
                 <div class="rvt-grid__item-4 rvt-grid__item-5-lg-up  rvt-m-left-xxl-xl-up rvt-m-right-xxl-md-up laptop">
-                    <img src="https://imgur.com/RfBugOK.png" width="780" alt="Rivet screen on a laptop." />
+                    <img src="./img/docs/rvtd-home-laptop.png" width="780" alt="Rivet screen on a laptop." />
                 </div>
                 <div class="rvt-grid__item rvt-grid__item-5-xl-up rvt-p-all-xxl-md-up rvt-m-top-xxl-lg-up">
-                    <p class="rvt-ts-23 rvt-m-bottom-lg"><strong>Familiarity</strong> is a key component of usability. We give you the toolset for creating web applications and users get a better experience.</p>
-                    <a href="./blog" class="rvt-button">Why we built Rivet</a>
+                    <p class="rvt-ts-23 rvt-m-bottom-lg"><strong>Familiarity</strong> is a key component of usability. With Rivet, you get a toolset for creating familiar web applications to give users a better experience.</p>
+                    <a href="./blog" class="rvt-button">Learn why we built Rivet</a>
                 </div>
             </div>
         </div>
@@ -48,7 +48,9 @@
                     aria-label="{{ .short_title }} tab"
                     id="{{ .short_title }}"
                 >
-                    <span class="rvt-steps__label">{{ .title }}{{ if .is_complete }}<span class="rvt-sr-only">(completed)</span>{{ end }}</span>
+                    <span class="rvt-steps__label">
+                        {{ .short_title }}: {{ .title }}{{ if .is_complete }}<span class="rvt-sr-only">(completed)</span>{{ end }}
+                    </span>
                 </button>
             </li>
             {{ end }}
@@ -60,6 +62,7 @@
                 aria-role="tabpanel"
                 aria-labelledby="{{ .short_title }}"
             >
+                <span class="rvt-ts-14">2018</span>
                 <h2 class="rvt-ts-26 rvt-m-bottom-sm">{{ .short_title }}: <span class="rvt-text-bold">{{ .title }}</span></h2>
                 <div class="rvt-grid">
                     {{ range .items }}
