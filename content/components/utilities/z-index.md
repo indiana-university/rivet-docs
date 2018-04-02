@@ -1,10 +1,10 @@
 ---
 title: "z-index"
-description: "These z-index utility classes let you easily change the z-index of an element."
+description: "These utility classes let you easily change the z-index of an element."
 status: "Beta"
 ---
 ## z-index range
-There are 10 z-index utility classes that set z-index values in increments of 100. We chose increments of 100 so that it's possible to set z-index to custom numbers that fall somewhere between the preset number (0, 100, 200, etc...) if you run into conflicts.
+There are 10 z-index utility classes that set z-index values in increments of 100. We chose these increments so that it’s possible to set z-index to custom numbers that fall somewhere between the preset numbers (0, 100, 200, etc.).
 
 {{< example lang="html" >}}<div style="position: relative; height: 550px; width: 100%; overflow-y: scroll;">
     <div class="rvt-z-1000 z-example">
