@@ -19,18 +19,19 @@ status: "Beta"
     <p class="rvt-alert__message">You can use all Rivet validation CSS classes (.rvt-is-valid, .rvt-is-invalid, .rvt-has-warning, and .rvt-has-info) on any of the HTML5 text input types, <a href="../select-input">select elements</a>, or <a href="#textarea-example">text areas</a>.</p>
 </div>
 
-Rivet provides the markup and styles for various states of inline form validation. These inline validation states should be used in combination with [alerts]({{< ref "components/overlays/alerts.md" >}}) to provide helpful validation error messages to users. 
- 
+Rivet provides the markup and styles for various states of inline form validation. These inline validation states should be used in combination with [alerts]({{< ref "components/overlays/alerts.md" >}}) to provide helpful validation error messages to users.
+
 Rivet does not make any assumptions about whether you’re using server- or client-side form validation. We only provide the HTML and CSS needed to create the validation states. That said, here are some tips for creating usable form error-handling experiences:
 
 ### Form validation tips
 
 - **Validate after the user submits the form**. We recommend avoiding on-the-fly validation as the user types. This can cause too many unnecessary interruptions for users.
 - **Summarize multiple errors** using a [Rivet page-level alert]({{< ref "components/overlays/alerts.md" >}}) at the top of the form. Provide links to the invalid fields in this summary. This makes it easier for keyboard and assistive technology users to jump directly to the invalid field (which is especially important on longer forms).
+- Move focus to the error summary at the top of the form so that the errors will be announced right away to screen readers. **This step is important**. Otherwise, screen reader users would need to navigate all the way back through a page to get to that summary.
 - **Use the `aria-describedby` attribute** on the invalid fields, and match the id to an element that describes what caused the error.
 - **Use the `aria-invalid` attribute** set to true on invalid fields where appropriate. This will convey the invalid state to assistive technologies like screen readers.
     - **When not to use the `aria-invalid` attribute**: Input errors for groups of inputs like checkboxes and radio buttons need to be handled slightly differently. [Read this section on using the standalone inline alert]({{< ref "components/overlays/alerts.md#standalone-inline-alerts" >}}) for handling these input errors.
-    
+
 
 {{< example lang="html" >}}<label for="rvt-success-state">First name</label>
 <input type="text" id="rvt-success-state" class="rvt-is-valid" aria-describedby="first-name-message">
