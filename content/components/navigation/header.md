@@ -129,7 +129,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                         </div>
                     </div>
                 </li>
-                <li><a href="#0">Nav three</a></li>
+                <li><a href="#0" aria-current="page">Nav three</a></li>
                 <li>
                     <div class="rvt-dropdown">
                         <button class="rvt-dropdown__toggle" data-dropdown-toggle="dropdown-2" aria-haspopup="true" aria-expanded="false">
@@ -214,7 +214,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                         <li><a href="#0">Subnav three</a></li>
                     </ul>
                 </li>
-                <li><a href="#0">Nav three</a></li>
+                <li><a href="#0" aria-current="true">Nav three</a></li>
                 <li class="has-children">
                     <button data-subnav-toggle="subnav-2" aria-haspopup="true" aria-expanded="false">Nav four</button>
                     <ul id="subnav-2" aria-hidden="true">
@@ -229,6 +229,20 @@ These lists work best for priority tasks and internal navigation. Consider inclu
     </div>
 </header>
 {{< /example >}}
+
+### Navigation current state
+To indicate the current page in the navigation you can add `aria-current="page"` to the link in the main nav and/or the drawer for that page. Using `aria-current` informs screenreaders that the user is focused on the link to the current page.
+
+{{< code >}}<nav class="rvt-header__main-nav" role="navigation">
+    <ul>
+        <li><a href="#0">Nav one</a></li>
+        <!-- aria-current also applies visual styling -->
+        <li><a href="#0" aria-current="page">Nav two</a></li>
+        <li><a href="#0">Nav three</a></li>
+        <li><a href="#0">Nav four</a></li>
+    </ul>
+</nav>
+{{< /code >}}
 
 ### Implementation notes
 The main navigation extension (`.rvt-header__main-nav`) will always need to be used with the drawer (`.rvt-drawer`) component. To allow for maximum flexibility, the markup in `.rvt-header__main-nav` needs to be duplicated inside of the `.rvt-drawer__nav` inside of the drawer. Starting at medium screen sizes (1080px–740px) and smaller the main nav extension is hidden using `display: none;` and the the `.rvt-drawer__nav` (with duplicate navigation) is shown using `display: block;`.
