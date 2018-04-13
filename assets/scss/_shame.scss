@@ -718,3 +718,9 @@ a.button--reverse-secondary {
     left: 27rem;
     background-color: cornflowerblue;
 }
+
+@include mq(bp(md)) {
+    .rvtd-article-sidebar {
+        padding-left: $md;
+    }
+}
