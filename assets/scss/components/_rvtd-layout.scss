@@ -22,13 +22,11 @@
     .rvtd-nav {
         display: block;
     }
-
-
 }
 
 .rvtd-sidebar {
     position: relative;
-    background-color: #fafafa;
+    background-color: $color-black--50;
 
     &__nav-toggle {
         position: absolute;
@@ -46,11 +44,11 @@
 
 @include mq(bp(md)) {
     .rvtd-sidebar {
-        flex: 0 0 296px;
+        flex: 0 0 18rem;
         /**
          * Hack to  keep sidebar from ever growing wider than it should.
          */
-        min-width: 296px;
+        min-width: 18rem;
         border-right: 1px solid #eaeaea;
 
         &__nav-toggle {
@@ -76,19 +74,13 @@
 
 @include mq(bp(md)) {
     .rvtd-tube {
-        max-width: calc(100% - 296px);
+        max-width: calc(100% - 18rem);
         padding: $lg $xl;
     }
 }
 
 @include mq(bp(xl)) {
     .rvtd-tube {
-        max-width: calc(100% - 280px - 296px);
-    }
-}
-
-@include mq(bp(xl)) {
-    .rvtd-tube__inner {
-
+        max-width: calc(100% - 280px - 18rem);
     }
 }
