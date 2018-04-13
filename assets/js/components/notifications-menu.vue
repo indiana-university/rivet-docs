@@ -3,7 +3,8 @@
         <button @click.stop="toggleMenu"
                 :aria-expanded="menuVisible ? 'true': 'false'"
                 :class="{'rvt-notifications__toggle--has-unread' : userHasUnreadNotifications}"
-                class="rvt-notifications__toggle">
+                class="rvt-notifications__toggle"
+                ref="notificationButton">
             <span class="rvt-sr-only">Show notifications</span>
             <span class="rvt-notifications__toggle-loading" v-if="loadingNotifications">
                 <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -146,6 +147,7 @@ module.exports = {
              */
             if (event.keyCode == 27 && this.menuVisible) {
                 this.menuVisible = false;
+                this.$refs.notificationButton.focus();
             }
         },
 
