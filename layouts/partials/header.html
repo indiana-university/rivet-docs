@@ -23,9 +23,9 @@
                                 <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
                             </svg>
                         </button>
-                        <div class="rvt-dropdown__menu" id="documentation-dropdown" aria-hidden="true">
-                            <a href="{{ trim .Site.BaseURL "/" }}/components" {{ if eq $currentNav.URL "/components/" }}class="rvt-is-selected"{{ end }}>Components</a>
-                            <a href="{{ trim .Site.BaseURL "/" }}/content-guide" {{ if eq $currentNav.URL "/content-guide/" }}class="rvt-is-selected"{{ end }}>Content guide</a>
+                        <div class="rvt-dropdown__menu" id="documentation-dropdown" role="menu" aria-hidden="true">
+                            <a href="{{ trim .Site.BaseURL "/" }}/components" {{ if eq $currentNav.URL "/components/" }}aria-current="page"{{ end }}>Components</a>
+                            <a href="{{ trim .Site.BaseURL "/" }}/content-guide" {{ if eq $currentNav.URL "/content-guide/" }}aria-current="page"{{ end }}>Content guide</a>
                         </div>
                     </div>
                 </li>
@@ -37,9 +37,9 @@
                                 <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
                             </svg>
                         </button>
-                        <div class="dropdown__menu" id="learn-dropdown" aria-hidden="true">
-                            <a href="{{ trim .Site.BaseURL "/" }}/how-to-use/" {{ if eq $currentNav.URL "/how-to-use/" }}class="rvt-is-selected"{{ end }}>How to use</a>
-                            <a href="{{ trim .Site.BaseURL "/" }}/blog/" {{ if eq $currentNav.URL "/blog/" }}class="rvt-is-selected"{{ end }}>Blog</a>
+                        <div class="rvt-dropdown__menu" id="learn-dropdown" role="menu" aria-hidden="true">
+                            <a href="{{ trim .Site.BaseURL "/" }}/blog/" {{ if eq $currentNav.URL "/blog/" }}aria-current="page"{{ end }}>Blog</a>
+
                             <a href="{{ trim .Site.BaseURL "/" }}/#roadmap">Roadmap</a>
                             <a href="{{ trim .Site.BaseURL "/" }}/#changelog">Changelog</a>
                         </div>
@@ -58,7 +58,7 @@
             >
             </notifications-menu>
             <div class="rvt-hide-lg-down">
-                <a href="{{ trim .Site.BaseURL " / " }}/components/#download-rivet" class="rvt-button rvt-button--small rvt-display-flex">
+                <a href="{{ trim .Site.BaseURL " / " }}/components/#download-rivet" class="rvt-button rvt-button--secondary rvt-display-flex">
                     Download <span class="rvt-sr-only">Rivet</span>
                 </a>
             </div>
