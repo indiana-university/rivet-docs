@@ -42,7 +42,7 @@ The inclusion of an avatar and username, or only username are both appropriate c
 {{< example lang="html" >}}<header class="rvt-header" role="banner">
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <div class="rvt-header__trident">
-        <svg role="img" class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo">
+        <svg role="img" alt="" class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo">
             <title id="iu-logo">Indiana University Logo</title>
             <rect width="41" height="48" fill="#900"/>
             <polygon points="24.59 12.64 24.59 14.98 26.34 14.98 26.34 27.78 22.84 27.78 22.84 10.9 24.59 10.9 24.59 8.57 16.41 8.57 16.41 10.9 18.16 10.9 18.16 27.78 14.66 27.78 14.66 14.98 16.41 14.98 16.41 12.64 8.22 12.64 8.22 14.98 9.97 14.98 9.97 30.03 12.77 33.02 18.16 33.02 18.16 36.52 16.41 36.52 16.41 39.43 24.59 39.43 24.59 36.52 22.84 36.52 22.84 33.02 28 33.02 31.01 30.03 31.01 14.98 32.78 14.98 32.78 12.64 24.59 12.64" fill="#fff"/>
@@ -97,7 +97,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <!-- Trident -->
     <div class="rvt-header__trident">
-        <svg role="img" class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo">
+        <svg role="img" alt="" class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo">
             <title id="iu-logo">Indiana University Logo</title>
             <rect width="41" height="48" fill="#900"/>
             <polygon points="24.59 12.64 24.59 14.98 26.34 14.98 26.34 27.78 22.84 27.78 22.84 10.9 24.59 10.9 24.59 8.57 16.41 8.57 16.41 10.9 18.16 10.9 18.16 27.78 14.66 27.78 14.66 14.98 16.41 14.98 16.41 12.64 8.22 12.64 8.22 14.98 9.97 14.98 9.97 30.03 12.77 33.02 18.16 33.02 18.16 36.52 16.41 36.52 16.41 39.43 24.59 39.43 24.59 36.52 22.84 36.52 22.84 33.02 28 33.02 31.01 30.03 31.01 14.98 32.78 14.98 32.78 12.64 24.59 12.64" fill="#fff"/>
@@ -105,44 +105,50 @@ These lists work best for priority tasks and internal navigation. Consider inclu
     </div>
     <!-- App title -->
     <span class="rvt-header__title">
-        <a href="#0">Application Title</a>
+        <a href="#">Application Title</a>
     </span>
     <!-- Wrapper for header interactive elements -->
     <div class="rvt-header__controls">
         <!-- Main inline nav element -->
         <nav class="rvt-header__main-nav" role="navigation">
             <ul>
-                <li><a href="#0">Nav one</a></li>
+                <li>
+                    <a href="#">Nav one</a>
+                </li>
                 <li>
                     <div class="rvt-dropdown">
                         <button class="rvt-dropdown__toggle" data-dropdown-toggle="dropdown-1" aria-haspopup="true" aria-expanded="false">
                             <span class="rvt-dropdown__toggle-text">Nav two</span>
                             <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <title>Dropdown icon</title>
-                                <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+                                <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"
+                                />
                             </svg>
                         </button>
-                        <div class="rvt-dropdown__menu" id="dropdown-1" aria-hidden="true">
-                            <a href="#0">Subnav One</a>
-                            <a href="#0">Subnav Two</a>
-                            <a href="#0">Subnav Three</a>
+                        <div class="rvt-dropdown__menu" id="dropdown-1" role="menu" aria-hidden="true">
+                            <a href="#">Item one</a>
+                            <a href="#">Item two</a>
+                            <a href="#">Item three</a>
+                            <a href="#">Item four</a>
                         </div>
                     </div>
                 </li>
-                <li><a href="#0" aria-current="page">Nav three</a></li>
+                <li>
+                    <a href="#" aria-current="page">Nav three</a>
+                </li>
                 <li>
                     <div class="rvt-dropdown">
                         <button class="rvt-dropdown__toggle" data-dropdown-toggle="dropdown-2" aria-haspopup="true" aria-expanded="false">
                             <span class="rvt-dropdown__toggle-text">Nav four</span>
                             <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                <title>Dropdown icon</title>
                                 <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
                             </svg>
                         </button>
-                        <div class="rvt-dropdown__menu" id="dropdown-2" aria-hidden="true">
-                            <a href="#0">Subnav One</a>
-                            <a href="#0">Subnav Two</a>
-                            <a href="#0">Subnav Three</a>
+                        <div class="rvt-dropdown__menu" id="dropdown-2" role="menu" aria-hidden="true">
+                            <a href="#">Item one</a>
+                            <a href="#">Item two</a>
+                            <a href="#">Item three</a>
+                            <a href="#">Item four</a>
                         </div>
                     </div>
                 </li>
@@ -162,8 +168,9 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                     <a href="#">Account settings</a>
                     <a href="#">Admin task one</a>
                     <a href="#">Admin task two</a>
-                    <div class="rvt-dropdown__menu-divider"></div>
-                    <a href="">Log out</a>
+                    <div role="group" aria-label="User actions">
+                        <a href="">Log out</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -198,30 +205,60 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                         <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
                         <span class="rvt-header-id__user rvt-header-id__user--has-dropdown">rswanson</span>
                     </button>
-                    <ul id="subnav-id" aria-hidden="true">
-                        <li><a href="#">Account settings</a></li>
-                        <li><a href="#">Admin task one</a></li>
-                        <li><a href="#">Admin task two</a></li>
-                        <li><a href="">Log out</a></li>
-                    </ul>
+                    <div id="subnav-id" role="menu" aria-hidden="true">
+                        <ul>
+                            <li>
+                                <a href="#">Account settings</a>
+                            </li>
+                            <li>
+                                <a href="#">Admin task one</a>
+                            </li>
+                            <li>
+                                <a href="#">Admin task two</a>
+                            </li>
+                            <li>
+                                <a href="">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-                <li><a href="#0">Nav one</a></li>
+                <li>
+                    <a href="#">Nav one</a>
+                </li>
                 <li class="has-children">
                     <button data-subnav-toggle="subnav-1" aria-haspopup="true" aria-expanded="false">Nav two</button>
-                    <ul id="subnav-1" aria-hidden="true">
-                        <li><a href="#0">Subnav one</a></li>
-                        <li><a href="#0">Subnav two</a></li>
-                        <li><a href="#0">Subnav three</a></li>
-                    </ul>
+                    <div id="subnav-1" role="menu" aria-hidden="true">
+                        <ul>
+                            <li>
+                                <a href="#">Subnav one</a>
+                            </li>
+                            <li>
+                                <a href="#">Subnav two</a>
+                            </li>
+                            <li>
+                                <a href="#">Subnav three</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-                <li><a href="#0" aria-current="true">Nav three</a></li>
+                <li>
+                    <a href="#" aria-current="page">Nav three</a>
+                </li>
                 <li class="has-children">
                     <button data-subnav-toggle="subnav-2" aria-haspopup="true" aria-expanded="false">Nav four</button>
-                    <ul id="subnav-2" aria-hidden="true">
-                        <li><a href="#0">Subnav one</a></li>
-                        <li><a href="#0">Subnav two</a></li>
-                        <li><a href="#0">Subnav three</a></li>
-                    </ul>
+                    <div id="subnav-2" role="menu" aria-hidden="true">
+                        <ul>
+                            <li>
+                                <a href="#">Subnav one</a>
+                            </li>
+                            <li>
+                                <a href="#">Subnav two</a>
+                            </li>
+                            <li>
+                                <a href="#">Subnav three</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
             <button class="rvt-drawer__bottom-close">Close nav</button>
@@ -248,10 +285,12 @@ To indicate the current page in the navigation you can add `aria-current="page"`
 The main navigation extension (`.rvt-header__main-nav`) will always need to be used with the drawer (`.rvt-drawer`) component. To allow for maximum flexibility, the markup in `.rvt-header__main-nav` needs to be duplicated inside of the `.rvt-drawer__nav` inside of the drawer. Starting at medium screen sizes (1080px–740px) and smaller the main nav extension is hidden using `display: none;` and the the `.rvt-drawer__nav` (with duplicate navigation) is shown using `display: block;`.
 
 ### Main navigation with dropdowns
-To create a nested navigation structure you can use Rivet's standard dropdown menus. Dropdown menus can be nested inside of any of the main navigation `li` elements and implemented using the appropriate data attributes on the dropdown.
+To create a nested navigation structure you can use [Rivet's standard dropdown menus]({{< ref "components/navigation/dropdown.md" >}}). Dropdown menus can be nested inside of any of the main navigation `li` elements and implemented using the appropriate data attributes on the dropdown.
 
 ### Nested navigation inside drawer
-To create a nested navigation structure, you can use Rivet's dropdown menus along with the Rivet drawer nav. Dropdown menus can be nested inside of the Rivet drawer navigation `li` and accompanying `ul` elements using the appropriate data attributes on the dropdown. Set the data attributes using the `data-subnav-toggle` property within the `a` element for the `li` navigation item. Then within each `ul` sub navigation element set the id to the matching `data-subnav-toggle`.  Additionally, any navigation item that will contain sub navigation items needs the `has-children` class for appropriate styling in the dropdown menu. Lastly, each `ul` sub navigation item needs`aria-hidden` set to true to hide the element until the dropdown menu toggle is clicked.
+To create a nested navigation structure, you can use Rivet's dropdown menus along with the Rivet drawer nav. Dropdown menus can be nested inside of the Rivet drawer navigation `li` and accompanying `<div role="menu">` (wrapping a nested `<ul>`) elements using the appropriate data attributes on the dropdown. Set the data attributes using the `data-subnav-toggle` attribute on the `button` element for the `li` navigation item. Then on each `div` sub navigation element set the id to the matching `data-subnav-toggle`.
+
+Additionally, any navigation item that will contain sub navigation items needs the `has-children` class for appropriate styling in the dropdown menu. Lastly, each `<div>` sub navigation item needs`aria-hidden` set to true to hide the element until the dropdown menu toggle is clicked.
 
 {{< code >}}<div class="rvt-drawer" aria-hidden="true" id="mobile-drawer">
     <!-- Drawer nav -->
@@ -262,30 +301,56 @@ To create a nested navigation structure, you can use Rivet's dropdown menus alon
                     <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
                     <span class="rvt-header-id__user rvt-header-id__user--has-dropdown">rswanson</span>
                 </button>
-                <ul id="subnav-id" aria-hidden="true">
-                    <li><a href="#">Account settings</a></li>
-                    <li><a href="#">Admin task one</a></li>
-                    <li><a href="#">Admin task two</a></li>
-                    <li><a href="">Log out</a></li>
-                </ul>
+                <div id="subnav-id" role="menu" aria-hidden="false">
+                    <ul>
+                        <li>
+                            <a href="#">Account settings</a>
+                        </li>
+                        <li>
+                            <a href="#">Admin task one</a>
+                        </li>
+                        <li>
+                            <a href="#">Admin task two</a>
+                        </li>
+                        <li>
+                            <a href="">Log out</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li><a href="#0">Nav one</a></li>
             <li class="has-children">
                 <button data-subnav-toggle="subnav-1" aria-haspopup="true" aria-expanded="false">Nav two</button>
-                <ul id="subnav-1" aria-hidden="true">
-                    <li><a href="#0">Subnav one</a></li>
-                    <li><a href="#0">Subnav two</a></li>
-                    <li><a href="#0">Subnav three</a></li>
-                </ul>
+                <div id="subnav-1" role="menu" aria-hidden="true">
+                    <ul>
+                        <li>
+                            <a href="#">Subnav one</a>
+                        </li>
+                        <li>
+                            <a href="#">Subnav two</a>
+                        </li>
+                        <li>
+                            <a href="#">Subnav three</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li><a href="#0">Nav three</a></li>
             <li class="has-children">
                 <button data-subnav-toggle="subnav-2" aria-haspopup="true" aria-expanded="false">Nav four</button>
-                <ul id="subnav-2" aria-hidden="true">
-                    <li><a href="#0">Subnav one</a></li>
-                    <li><a href="#0">Subnav two</a></li>
-                    <li><a href="#0">Subnav three</a></li>
-                </ul>
+                <div id="subnav-2" role="menu" aria-hidden="true">
+                    <ul>
+                        <li>
+                            <a href="#">Subnav one</a>
+                        </li>
+                        <li>
+                            <a href="#">Subnav two</a>
+                        </li>
+                        <li>
+                            <a href="#">Subnav three</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
         </ul>
         <button class="rvt-drawer__bottom-close">Close nav</button>
@@ -310,8 +375,9 @@ When your application has multiple user-specific functions (e.g. "Account settin
             <a href="#">Account settings</a>
             <a href="#">Admin task one</a>
             <a href="#">Admin task two</a>
-            <div class="rvt-dropdown__menu-divider"></div>
-            <a href="">Log out</a>
+            <div role="group" aria-label="User actions">
+                <a href="">Log out</a>
+            </div>
         </div>
     </div>
 </div>
