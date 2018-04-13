@@ -6,7 +6,6 @@ weight: 2
 sectionNav: true
 ---
 ## Stay up to date
-
 Rivet is new and we're quickly adding components and features as we work toward the official version 1.0 release. Join the email list to get updates on new features, examples, and how-to guides.
 
 <div class="rvt-button-group">
@@ -15,12 +14,12 @@ Rivet is new and we're quickly adding components and features as we work toward 
 </div>
 
 ## Get started
-The Rivet components documentation contains examples, code snippets, and guidance on UX best-practices. Visit the [**How to use**](../how-to-use) section to see all the ways you can use Rivet in your project and see some example implementations of Rivet.
+The Rivet components documentation contains examples, code snippets, and guidance on UX best-practices. There are several ways you can use Rivet in your project. The follwing instructions will help you get started.
 
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
-{{< button url="https://github.iu.edu/UITS/rivet/archive/v0.5.0.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
+{{< button url="https://github.iu.edu/UITS/rivet/archive/v1.0.0.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
     <span class="rvt-m-right-xs">Download Rivet</span>
     <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
         <g fill="currentColor">
@@ -53,6 +52,29 @@ sass/
 index.html
 {{< /code >}}
 
+## Axure UI and Wireframe kit
+<div class="rvt-grid rvt-m-top-xl">
+    <div class="rvt-grid__item-4-md-up">
+        <img src="../img/docs/rvtd-htu-example-axure.png" alt="Rivet components on a screen">
+    </div>
+    <div class="rvt-grid__item-7-md-up rvt-grid__item--last">
+        <p>We've created an Axure wireframe kit with accurate representations of all the Rivet components. Download the Axure
+            kit to help you create prototypes that will transalte to real Rivet components.</p>
+        <a
+            href="https://github.iu.edu/UITS/rivet/releases/download/v0.3.1/rivet-axure-0.3.1.rp"
+            class="rvt-button rvt-button--secondary rvt-m-top-md"
+        >
+            <span class="rvt-m-right-xs">Download Axure kit</span>
+            <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <g fill="currentColor">
+                    <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
+                    <path d="M7.29,10.71a1,1,0,0,0,1.41,0l4-4a1,1,0,0,0-1.41-1.41L9,7.59V1A1,1,0,0,0,7,1V7.59L4.71,5.29A1,1,0,0,0,3.29,6.71Z"/>
+                </g>
+            </svg>
+        </a>
+    </div>
+</div>
+
 ## NPM dependency
 Rivet is also available to include in as a dependency in your app via NPM. To use Rivet as a NPM package you'll need to configure a `.npmrc` file that points to the IU NPM registry. These instructions assume that you are already using NPM in your project. If not, you can [read these instructions](https://docs.npmjs.com/cli/init) on the NPM website about how to start.
 
@@ -65,7 +87,7 @@ Rivet is also available to include in as a dependency in your app via NPM. To us
 ### Installing via NPM
 Once you have the `.npmrc` file configured in the root of your project, you can run the following command to install Rivet.
 
-{{< code >}}npm install rivet-uits@0.5.0 --save-dev
+{{< code >}}npm install rivet-uits@1.0.0 --save-dev
 {{< /code >}}
 
 <h4 class="m-top-lg">Installation troubleshooting <span class="rvt-badge rvt-badge--warning m-right-xs">NOTE</span></h4>
@@ -91,11 +113,11 @@ In this example `<version>` would be the new version of Rivet you want to instal
 
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.5.0/rivet.min.css">{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.0.0/rivet.min.css">{{< /code >}}
 
 Rivet has a minimal amount of JavaScript that is required for some components, like the [header](../components/navigation/header). Copy and paste this link and add to the end of your document, just before the closing `</body>` tag.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/0.5.0/rivet.min.js"></script>{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/1.0.0/rivet.min.js"></script>{{< /code >}}
 
 ## Starter template
 Here's a basic starter template with the hosted CSS and JavaScript hooked up. Copy and paste into your favorite editor to start using Rivet.
@@ -105,7 +127,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/0.5.0/rivet.min.css">
+    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.0.0/rivet.min.css">
     <title>Rivet starter file</title>
 </head>
 <body>
@@ -151,7 +173,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
             </li>
         </ul>
     </footer>
-    <script src="https://assets.uits.iu.edu/javascript/rivet/0.5.0/rivet.min.js"></script>
+    <script src="https://assets.uits.iu.edu/javascript/rivet/1.0.0/rivet.min.js"></script>
 </body>
 </html>
 {{< /code >}}
