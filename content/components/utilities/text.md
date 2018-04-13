@@ -9,8 +9,8 @@ You can use the rivet text utilities to change the `font-weight` property of tex
 - `.rvt-text-regular`
 - `.rvt-text-bold`
 
-{{< example lang="html" >}}<p class="rvt-text-regular">Regular text utilitiy</p>
-<p class="rvt-text-bold">Bold Text utilitiy</p>
+{{< example lang="html" >}}<strong class="rvt-text-regular">Regular text utilitiy</strong>
+<div class="rvt-text-bold">Bold Text utilitiy</div>
 {{< /example >}}
 
 ## Line height
