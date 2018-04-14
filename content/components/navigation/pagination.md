@@ -2,7 +2,7 @@
 title: "Pagination"
 description: "The pagination component is used to break up large sets of data across multiple pages."
 requiresJs: false
-status: "Beta"
+status: "Ready"
 ---
 ## Pagination Example
 {{< example lang="html" >}}<nav role="navigation" aria-label="Default results pages">

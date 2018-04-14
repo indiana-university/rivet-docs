@@ -2,7 +2,7 @@
 title: "Segmented Buttons"
 description: "Use the segmented button to display a group of related controls in a single line. Combine them with the dropdown to create complex menu controls."
 requiresJs: false
-status: "Beta"
+status: "Ready"
 weight: 2
 ---
 

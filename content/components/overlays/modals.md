@@ -2,7 +2,7 @@
 title: "Modals"
 description: "A modal is a smaller window that is displayed on top of the main application/site window. The main page is still visible but, the background is darkened to direct focus to the content of the modal window."
 requiresJs: true
-status: "Beta"
+status: "Ready"
 ---
 ## Modal example
 {{< example lang="html" >}}<button class="rvt-button" data-modal-trigger="modal-example-basic">Open modal example</button>

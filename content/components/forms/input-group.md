@@ -2,7 +2,7 @@
 title: "Input group"
 description: "Use input groups to combine a text input with an action button or dropdown menu."
 requiresJs: false
-status: "Beta"
+status: "Ready"
 ---
 
 ## Input group examples
@@ -19,7 +19,7 @@ status: "Beta"
     <div class="rvt-input-group__prepend">
         <div class="rvt-dropdown">
             <button class="rvt-button rvt-p-right-xs rvt-p-left-xs" data-dropdown-toggle="segmented-prepend-example">
-                <span class="rvt-m-right-xs">All stuff</span>
+                <span class="rvt-m-right-xs">Filter</span>
                 <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
                 </svg>

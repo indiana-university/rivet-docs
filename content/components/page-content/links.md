@@ -1,7 +1,7 @@
 ---
 title: "Links"
 description: "Inline text links are used to navigate between documents (pages)."
-status: "Beta"
+status: "Ready"
 ---
 
 ## Inline links

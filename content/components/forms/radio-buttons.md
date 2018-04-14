@@ -1,7 +1,7 @@
 ---
 title: "Radio buttons"
 description: "Radio buttons allow users to select a single value out of a set number of choices."
-status: "Beta"
+status: "Ready"
 ---
 ## Inline radios example
 {{< example lang="html" >}}<form>
