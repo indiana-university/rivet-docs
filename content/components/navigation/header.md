@@ -2,7 +2,7 @@
 title: "Header"
 description: "The Rivet header has provides consistent branding and flexible navigation layout for your application."
 requiresJs: true
-status: "Beta"
+status: "Ready"
 ---
 <div class="rvt-alert rvt-alert--message rvt-m-bottom-md">
     <h2 class="rvt-alert__title">Header changes in Rivet 0.5.0</h2>

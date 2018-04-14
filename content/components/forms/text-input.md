@@ -1,7 +1,7 @@
 ---
 title: "Text inputs"
 description: "Text inputs are the basic building blocks forms. They allow users to enter various types of data into web-based forms."
-status: "Beta"
+status: "Ready"
 ---
 ## Text input example
 {{< example lang="html" >}}<label for="demo-1">Text Input</label>

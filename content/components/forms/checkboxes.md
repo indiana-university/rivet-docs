@@ -1,7 +1,7 @@
 ---
 title: "Checkboxes"
 description: "Checkboxes allow users to select one or more options from a list of choices."
-status: "Beta"
+status: "Ready"
 ---
 ## Inline checkboxes example
 {{< example lang="html" >}}<form>

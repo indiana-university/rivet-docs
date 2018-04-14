@@ -2,7 +2,7 @@
 title: "Dropdown"
 description: "Use the dropdown component to create a list of menu options that can be toggled with a button element."
 requiresJs: true
-status: "Beta"
+status: "Ready"
 ---
 ## Dropdown example
 {{< example lang="html" >}}<div class="rvt-dropdown">
