@@ -1,8 +1,10 @@
 .rvtd-red-bar {
-
   overflow:hidden;
   position:relative;
   top:100px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#941B1E), to(#941B1E)) no-repeat 0 214px;
+  padding:0;
+  margin: 0;
 
   @media only screen and (max-width: 1080px) {
     top: 50px;
@@ -11,27 +13,23 @@
   @media only screen and (max-width: 600px) {
     top: 0px;
   }
-  padding:0;
-  margin: 0;
-  @media only screen and (min-width: 1380px) {
+
+  @media only screen and (min-width: 1480px) {
     margin: 0 30px;
   }
+
   height:557px;
   @media only screen and (max-width: 739px) {
     height: 500px;
   }
+
   @media only screen and (max-width: 600px) {
     height: 600px;
   }
-  background: -webkit-gradient(linear, left bottom, left top, from(#941B1E), to(#941B1E)) no-repeat 0 214px;
 
   .rvt-grid {
-    width:100%;
-    position:relative;
-
-
-
-
+    width: 100%;
+    position: relative;
     z-index: 0;
 
     .title-block {
