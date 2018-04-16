@@ -724,3 +724,19 @@ a.button--reverse-secondary {
         padding-left: $md;
     }
 }
+
+/**
+ * Overides for CC license
+ */
+
+ .rvt-footer__aux-links {
+     display: flex;
+     align-items: center;
+ }
+
+ .rvt-footer__aux-item--no-divider {
+     margin-right: $sm;
+     &:after {
+         content: none;
+     }
+ }
