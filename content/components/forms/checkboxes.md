@@ -79,6 +79,26 @@ The indeterminate state is a checkbox attribute that is accessible by JavaScript
 </fieldset>
 {{< /example >}}
 
+## Alternate markup with hidden fields
+This example includes a hidden input in the markup, as some frameworks require. It requires that the input and label be wrapped in a `.rvt-checkbox-wrapper`. Here we are using the wrapper class on a `<li>`, but it will also work with generic elements like a `<div>` and `<span>`.
+
+{{< example lang="html" >}}<fieldset>
+    <legend class="rvt-ts-23 rvt-m-bottom-lg">Alternate markup (visually identical)</legend>
+    <ul class="rvt-inline-list">
+        <li class="rvt-checkbox-wrapper">
+            <input type="checkbox" name="checkbox-demo" id="checkbox-9">
+            <input type="hidden">
+            <label for="checkbox-9">Option one</label>
+        </li>
+        <li class="rvt-checkbox-wrapper">
+            <input type="checkbox" name="checkbox-demo" id="checkbox-10">
+            <input type="hidden">
+            <label for="checkbox-10">Option two</label>
+        </li>
+    </ul>
+</fieldset>
+{{< /example >}}
+
 ## When to use
 Use checkboxes to allow users to pick zero, one, or many options from a list of values. A checkbox is a good choice when you need to present users a single option that they can turn on or off.
 
