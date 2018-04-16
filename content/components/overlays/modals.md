@@ -2,7 +2,7 @@
 title: "Modals"
 description: "A modal is a smaller window that is displayed on top of the main application/site window. The main page is still visible but, the background is darkened to direct focus to the content of the modal window."
 requiresJs: true
-status: "Beta"
+status: "Ready"
 ---
 ## Modal example
 {{< example lang="html" >}}<button class="rvt-button" data-modal-trigger="modal-example-basic">Open modal example</button>
@@ -21,7 +21,7 @@ status: "Beta"
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <a href="#">incididunt ut labore</a> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="rvt-modal__controls">
-            <button class="rvt-button rvt-m-right-sm">OK</button>
+            <button class="rvt-button">OK</button>
             <button class="rvt-button rvt-button--secondary" data-modal-close="close">Cancel</button>
         </div>
         <button class="rvt-button rvt-modal__close" data-modal-close="close">
@@ -102,7 +102,7 @@ A modal dialog is similar to a regular modal except that **it requires the user 
             </ul>
         </div>
         <div class="rvt-modal__controls">
-            <button class="rvt-button rvt-m-right-sm">Yes</button>
+            <button class="rvt-button">Yes</button>
             <button class="rvt-button rvt-button--secondary" data-modal-close="close">No, thanks</button>
         </div>
     </div>
@@ -181,7 +181,7 @@ Modal.open(modalToOpen);
 ### Close modal example
 
 When a modal is triggered using the default data attribute method, the modal script will store a reference to the element that triggered it. Then it’ll return focus to that element when the modal is closed.
- 
+
 Please note: If you open the modal programmatically using `Modal.open()` based on some other event, it is your responsibility to set focus to the appropriate element after the modal is closed.
 
 {{< code lang="javascript" >}}// Find the modal you want to open in the DOM

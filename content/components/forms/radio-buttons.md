@@ -1,7 +1,7 @@
 ---
 title: "Radio buttons"
 description: "Radio buttons allow users to select a single value out of a set number of choices."
-status: "Beta"
+status: "Ready"
 ---
 ## Inline radios example
 {{< example lang="html" >}}<form>
@@ -45,6 +45,26 @@ status: "Beta"
         </ul>
     </fieldset>
 </form>
+{{< /example >}}
+
+## Alternate markup with hidden fields
+This example includes a hidden input in the markup, as some frameworks require. It requires that the input and label be wrapped in a `.rvt-radio-wrapper`. Here we are using the wrapper class on a `<li>`, but it will also work with generic elements like a `<div>` and `<span>`.
+
+{{< example lang="html" >}}<fieldset>
+    <legend class="rvt-ts-23 rvt-m-bottom-lg">Radio inputs inline</legend>
+    <ul class="rvt-inline-list">
+        <li class="rvt-radio-wrapper">
+            <input type="radio" name="radio-demo" id="radio-6">
+            <input type="hidden">
+            <label for="radio-6">Option one</label>
+        </li>
+        <li class="rvt-radio-wrapper">
+            <input type="radio" name="radio-demo" id="radio-7">
+            <input type="hidden">
+            <label for="radio-7">Option two</label>
+        </li>
+    </ul>
+</fieldset>
 {{< /example >}}
 
 ## When to use

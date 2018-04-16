@@ -719,3 +719,24 @@ a.button--reverse-secondary {
     background-color: cornflowerblue;
 }
 
+@include mq(bp(md)) {
+    .rvtd-article-sidebar {
+        padding-left: $md;
+    }
+}
+
+/**
+ * Overides for CC license
+ */
+
+ .rvt-footer__aux-links {
+     display: flex;
+     align-items: center;
+ }
+
+ .rvt-footer__aux-item--no-divider {
+     margin-right: $sm;
+     &:after {
+         content: none;
+     }
+ }

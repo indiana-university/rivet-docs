@@ -2,7 +2,7 @@
 title: "Segmented Buttons"
 description: "Use the segmented button to display a group of related controls in a single line. Combine them with the dropdown to create complex menu controls."
 requiresJs: false
-status: "Beta"
+status: "Ready"
 weight: 2
 ---
 
@@ -24,13 +24,13 @@ The segmented buttons can be used with any of Rivet's button modifiers.
 {{< /example >}}
 
 ### Accessibility notes
-When using the segmented button, it’s important to apply the ARIA attribute `role="group"` to the `<div>` container. This conveys two things to assistive technologies (AT):  
+When using the segmented button, it’s important to apply the ARIA attribute `role="group"` to the `<div>` container. This conveys two things to assistive technologies (AT):
 
-- The buttons are related to one another 
+- The buttons are related to one another
 - AT should announce that the buttons are part of a group
- 
-In addition to the ARIA group role, use the `aria-label` attribute to provide more information to AT. This is especially important if you are using more than one set of segmented buttons on a page. 
- 
+
+In addition to the ARIA group role, use the `aria-label` attribute to provide more information to AT. This is especially important if you are using more than one set of segmented buttons on a page.
+
 As an alternative, you could also use an `aria-labeledby` attribute. Its value should correspond to the `id` of text that labels what the segmented button controls.[See this article on associating related controls with WAI-ARIA](https://www.w3.org/WAI/tutorials/forms/grouping/#associating-related-controls-with-wai-aria) for more information.
 
 ### Fitted modifier
@@ -61,11 +61,15 @@ You can use the segmented button along with Rivet's dropdown component to create
             </svg>
         </button>
     </div>
-    <div class="rvt-dropdown__menu" aria-hidden="true" id="segmented-example">
-        <button>Button one</button>
-        <button>Button two</button>
-        <button>Button three</button>
-        <button>Button four</button>
+    <div class="rvt-dropdown__menu" id="segmented-example" role="menu" aria-hidden="true">
+        <button role="menuitemradio">Notify all</button>
+        <button role="menuitemradio" aria-checked="true">Notify admins</button>
+        <button role="menuitemradio">Notify contributors</button>
+        <div class="rvt-dropdown__menu-heading" aria-hidden="true">Personal settings</div>
+        <div role="group" aria-label="Personal settings">
+            <button role="menuitem">Profile Settings</button>
+            <button role="menuitem">Logout</button>
+        </div>
     </div>
 </div>
 {{< /example >}}

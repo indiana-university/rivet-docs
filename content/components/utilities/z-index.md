@@ -1,7 +1,7 @@
 ---
 title: "z-index"
 description: "These utility classes let you easily change the z-index of an element."
-status: "Beta"
+status: "Ready"
 ---
 ## z-index range
 There are 10 z-index utility classes that set z-index values in increments of 100. We chose these increments so that it’s possible to set z-index to custom numbers that fall somewhere between the preset numbers (0, 100, 200, etc.).

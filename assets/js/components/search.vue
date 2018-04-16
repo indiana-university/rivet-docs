@@ -45,7 +45,7 @@
                 </svg>
             </button>
         </div>
-        <div v-for="result in currentPageOfResults" class="rvtd-search__result m-top-sm">
+        <div v-for="result in currentPageOfResults" class="rvtd-search__result rvt-m-top-sm">
             <h3 class="rvtd-search__result-title">
                 <a :href="baseURL + result.uri" @click="trackClick(baseURL + result.uri)">
                     {{result.title}}
@@ -56,12 +56,12 @@
 
         <div class="rvtd-search__results-found">Found {{results.length}} {{results.length|pluralizeResult}} for <strong>{{activeQuery}}</strong></div>
 
-        <div class="rvtd-search__results-footer m-top-sm">
+        <div class="rvtd-search__results-footer rvt-m-top-sm">
             <p>Is something missing? <a :href="'https://github.iu.edu/UITS/rivet-docs-source/issues/new?title='+activeQuery">Open an issue</a> on GitHub (requires an IU account).</p>
         </div>
     </div>
     <div v-if="activeQuery!='' && results.length==0" class="rvtd-search__results rvtd-search__results--none">
-        <div class="rvtd-search__results-found m-top-sm m-bottom-sm">
+        <div class="rvtd-search__results-found rvt-m-top-sm rvt-m-bottom-sm">
             Your search for <strong class="rvtd-search__no-results-term">{{activeQuery}}</strong> returned no results.
         </div>
         <div class="rvtd-search__results-footer">

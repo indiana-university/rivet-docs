@@ -3,7 +3,7 @@ title: "Buttons"
 description: "Buttons are used to signal actions, submit forms, or trigger new content within the current context."
 requiresJs: false
 weight: 1
-status: "Beta"
+status: "Ready"
 ---
 
 ## Button examples
@@ -58,7 +58,7 @@ The available button color modifiers are:
 
 ### Using icons inside buttons
 You can use icons inside the `<button>` element. (Just make sure to also include text alongside them.) Before the button icons can display properly, you need to do a few things:
- 
+
 1. Wrap the button text in a `<span>` element
 2. Use Rivet’s utility classes to add some space between the button text and the icon
 
@@ -71,8 +71,8 @@ For best results, use an SVG icon that is sized to 16px by 16px.
 </div>
 
 ### Button icons and accessibility
-In this example, we add a `role="img"` and an empty `alt=""` attribute to the the SVG elements. This communicates to screen readers that the icons are decorative (and reading the content aloud is unnecessary). 
- 
+In this example, we add a `role="img"` and an empty `alt=""` attribute to the the SVG elements. This communicates to screen readers that the icons are decorative (and reading the content aloud is unnecessary).
+
 When you use icons inside buttons, you should still include button text to describe the action the button performs. If you want only the icon to be visible inside of a button (for example, a close button in a modal window), you should still include some visually-hidden text that describes the button’s action.
 
 See the example below using the `.rvt-sr-only` utility class to visually hide the button text.

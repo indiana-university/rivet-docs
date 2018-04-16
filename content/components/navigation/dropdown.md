@@ -1,28 +1,36 @@
 ---
 title: "Dropdown"
-description: "Use the dropdown component to create a list of menu options that can be toggled with a button element. "
+description: "Use the dropdown component to create a list of menu options that can be toggled with a button element."
 requiresJs: true
-status: "Beta"
+status: "Ready"
 ---
 ## Dropdown example
 {{< example lang="html" >}}<div class="rvt-dropdown">
-    <button class="rvt-button"
-            data-dropdown-toggle="dropdown-1"
-            aria-haspopup="true"
-            aria-expanded="false">
-        <span>Primary</span>
+    <button
+        class="rvt-button"
+        data-dropdown-toggle="dropdown-navigation"
+        aria-haspopup="true"
+        aria-expanded="false"
+    >
+        <span>Navigation menu</span>
         <svg role="img" alt="" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
         </svg>
     </button>
-    <div class="rvt-dropdown__menu" id="dropdown-1" aria-hidden="true">
-        <a href="#">Add item</a>
-        <a href="#" class="rvt-is-selected">Reorder items</a>
-        <a href="#">Manage categories</a>
-        <div class="rvt-dropdown__menu-heading">Personal settings</div>
-        <div class="rvt-dropdown__menu-divider"></div>
-        <a href="#">Profile settings</a>
-        <a href="#">Logout</a>
+    <div
+        class="rvt-dropdown__menu"
+        id="dropdown-navigation"
+        aria-hidden="true"
+        role="menu"
+    >
+        <a href="#">Item one</a>
+        <a href="#">Item two</a>
+        <a href="#" aria-current="page">Item three</a>
+        <a href="#">Item four</a>
+        <div role="group" aria-label="Related">
+            <a href="#">Related item three</a>
+            <a href="#">Related item four</a>
+        </div>
     </div>
 </div>
 {{< /example >}}
@@ -30,78 +38,91 @@ status: "Beta"
 ## Implementation notes
 To use the dropdown component, add a data attribute of `data-dopdown-toggle` to the button element you want to use to show/hide the menu, then add an `id` with a matching value to the `.rvt-dropdown__menu` element.
 
-{{< code lang="html" >}}<div class="rvt-dropdown">
-    <button class="rvt-button"
-            data-dropdown-toggle="dropdown-docs-example"
-            aria-haspopup="true"
-            aria-expanded="false">
-        <span>Primary</span>
-        <svg role="img" alt="" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-            <!-- Icon ... -->
-        </svg>
-    </button>
-    <div class="rvt-dropdown__menu" id="dropdown-docs-example" aria-hidden="true">
-        <a href="#">Add item</a>
-        <a href="#">Reorder items</a>
-        <a href="#">Manage categories</a>
-    </div>
-</div>
-{{< /example >}}
-
-## Right-align modifier
+### Right-align modifier
 To align the dropdown menu with the right side of the dropdown button, add the `.rvt-dropdown__menu--right` class to the `.rvt-dropdown__menu` element.
 
 {{< example lang="html" >}}<div class="rvt-dropdown">
-    <button class="rvt-button"
-            data-dropdown-toggle="dropdown-right"
-            aria-haspopup="true"
-            aria-expanded="false">
-        <span>Primary</span>
+    <button
+        class="rvt-button rvt-button--secondary"
+        data-dropdown-toggle="dropdown-right"
+        aria-haspopup="true"
+        aria-expanded="false"
+    >
+        <span>Right menu</span>
         <svg role="img" alt="" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
         </svg>
     </button>
-    <div class="rvt-dropdown__menu rvt-dropdown__menu--right" id="dropdown-right" aria-hidden="true">
-        <a href="#">Add item</a>
-        <a href="#" class="rvt-is-selected">Reorder items</a>
-        <a href="#">Manage categories</a>
-        <div class="rvt-dropdown__menu-heading">Personal settings</div>
-        <div class="rvt-dropdown__menu-divider"></div>
-        <a href="#">Profile settings</a>
-        <a href="#">Logout</a>
+    <div
+        class="rvt-dropdown__menu rvt-dropdown__menu--right"
+        id="dropdown-right"
+        aria-hidden="true"
+        role="menu"
+    >
+        <a href="#">Item one</a>
+        <a href="#">Item two</a>
+        <a href="#" aria-current="page">Item three</a>
+        <a href="#">Item four</a>
     </div>
 </div>
 {{< /example >}}
 
 ### Elements inside the drodown menu
 The dropdown menu will work with either links (`<a>` tags) or buttons (`<button>` tags). The keyboard navigation implementation accounts for any focusable elements, so it will work with form controls like text inputs, textareas, and select elements as well.
- 
-We’ve also included a couple of extra layout elements here for when you may need to add some visual hierarchy to your dropdowns. You can use the `.rvt-dropdown__menu-heading` element to provide help and to label a related group of menu items. You can also use the `.rvt-dropdown__menu-divider` to create visual separation between elements.
- 
-To mark a dropdown menu item as selected, add the class `.rvt-is-selected` to the menu item.
+
+### Additional dropdown elements
+We’ve also included a couple of extra layout elements here for when you may need to add some visual hierarchy to your dropdowns:
+
+- Use the `.rvt-dropdown__menu-heading` element to provide help and to label a related group of menu items. This should be a generic `<div>` and should have an `aria-hidden="true"` attribute applied to it so that the label for the grouped items will not be announced to screen readers twice. E.g. the `.rvt-dropdown__menu-heading` content and then the value of the `aria-label` applied to the group (see next bullet point).
+- The dropdown heading shold generally be used to group related options. Wrap related options in a `<div>` with a role="group". Using `role="group` will apply a top border to the related optioins. Additionally, you will need to add an `aria-label` attribute with a value that describes the group. This will label will be announced to screen reader users.
+- To mark a dropdown menu item as selected, add the aria attribute `aria-checked="true"` (for js-driven/application menus), or `aria-current="page"` (for navigation/link menus) to the menu item.
+
+The following example shows how to implement these additional dropdown elements.
 
 {{< example lang="html" >}}<div class="rvt-dropdown">
-    <button class="rvt-button rvt-button--secondary"
-            data-dropdown-toggle="dropdown-example-two"
-            aria-haspopup="true"
-            aria-expanded="false">
-        <span>Dropown items</span>
+    <button class="rvt-button" data-dropdown-toggle="dropdown-1" aria-haspopup="true" aria-expanded="false">
+        <span>Application menu</span>
         <svg role="img" alt="" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
         </svg>
     </button>
-    <!-- The inline relative positioning here is for demo purposes only -->
-    <div class="rvt-dropdown__menu" id="dropdown-example-two" aria-hidden="false" style="position: relative;">
-        <a href="#">Add item</a>
-        <a href="#" class="rvt-is-selected">Reorder items</a>
-        <a href="#">Manage categories</a>
-        <div class="rvt-dropdown__menu-heading">Personal settings</div>
-        <div class="rvt-dropdown__menu-divider"></div>
-        <a href="#">Profile settings</a>
-        <a href="#">Logout</a>
+    <div class="rvt-dropdown__menu" id="dropdown-1" role="menu" aria-hidden="true">
+        <button role="menuitemradio">Notify all</button>
+        <button role="menuitemradio" aria-checked="true">Notify admins</button>
+        <button role="menuitemradio">Notify contributors</button>
+        <div class="rvt-dropdown__menu-heading" aria-hidden="true">Personal settings</div>
+        <div role="group" aria-label="Personal settings">
+            <button role="menuitem">Profile Settings</button>
+            <button role="menuitem">Logout</button>
+        </div>
     </div>
 </div>
 {{< /example >}}
+
+## Navigation menus vs. application menus
+The Rivet dropdown is flexible enough to be used with lists of navigation links, or buttons that can be used for in-app JavaScript-driven behaivor. There are some subtle differences in the way these two types of menus should be implemented.
+
+<div class="rvt-p-all-sm rvt-border-all rvt-border-radius">
+    <div class="rvt-grid">
+        <div class="rvt-grid__item-6-md-up">
+            <h3 class="rvt-text-bold rvt-m-bottom-md">Navigation menus</h3>
+            <ul>
+                <li>Navigation menus are a set of links are used to navigate to pages/URLs in an application.</li>
+                <li>Use the <code>aria-current="page"</code> attribute to indicate in the menu, both to screen readers and visually, if the user on the current page.</li>
+                <li>Use a generic <code>div</code> element with the <code>role="group"</code> attribute applied to it to group related links. This will also apply a top border to help visual separate groups of menu items.</li>
+                <li><strong>NOTE</strong>: Do not use the <code>role="menuitem"</code> attribute on links in a navigation menu. It will override the way screen readers announce items as "Links".</li>
+            </ul>
+        </div>
+        <div class="rvt-grid__item-6-md-up">
+            <h3 class="rvt-text-bold rvt-m-bottom-md">Application menus</h3>
+            <ul>
+                <li>Application menus generally contain lists of buttons that are used for JavaScript-driven/in-page behavior.</li>
+                <li>Application menu items (buttons) should use the <code>role="menuitemradio"</code> when they are used to toggle JavaScript-driven fuctionality. Otherwise, buttons should use the <code>role="menuitem"</code> attribute.</li>
+                <li>To indicate the current state of an application menu item, use the <code>aria-checked="tue"</code> attribute.</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 ## When to use
 Use a dropdown menu when you need to give users a list of actions or links to choose from.
@@ -110,8 +131,8 @@ Use a dropdown menu when you need to give users a list of actions or links to ch
 Although similar to a native HTML `<select>` element, the dropdown component should not be used as a replacement inside forms. Use the select element instead when you need to give users a list of mutually exclusive choices while filling out a form.
 
 ## Accessibility notes
-The dropdown uses JavaScript to fully implement WAI-ARIA authoring standards for keyboard navigation within the menu. Dropdowns should be toggled using an HTML `<button>` element. 
- 
+The dropdown uses JavaScript to fully implement WAI-ARIA authoring standards for keyboard navigation within the menu. Dropdowns should be toggled using an HTML `<button>` element.
+
 The dropdown toggle needs an `aria-haspopup` attribute with a value of `true` and an `aria-expanded` attribute set initially to `false`. The `aria-haspopup` indicates to assistive technologies (AT) that the button controls a menu that will be activated. The `aria-expanded` attribute indicates to assistive technology whether or not the menu is currently open. Lastly, the dropdown menu needs an `aria-hidden` attribute initially set to `true`. This will be hidden (visually and from AT) until the menu is toggled via JavaScript.
 
 ### A note about buttons

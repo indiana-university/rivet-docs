@@ -16,6 +16,11 @@
         position: relative;
         line-height: 1;
 
+        @include mq(bp(lg)) {
+            height: $xl;
+            width: $xl;
+        }
+
         &:focus {
             box-shadow: 0 0 0 2px $color-background,
                         0 0 0 4px $color-action;
@@ -69,7 +74,7 @@
 
     @include mq(bp(lg)) {
         &__toggle {
-            margin-right: $lg;
+            margin-right: $md;
         }
     }
 
@@ -95,11 +100,10 @@
         background-color: $color-background;
         position: absolute;
         right: -3.5rem;
-        top: 3.2rem;
+        top: 3.45rem;
         border: 1px solid $color-black--100;
         border-radius: $xxs;
-        // width: 400px;
-        width: 320px;
+        width: 18rem;
         box-shadow: 0 1rem 5rem -2rem rgba(#000000, 0.5);
         padding: $xs;
         z-index: 1000;
@@ -161,8 +165,8 @@
 
     @include mq(bp(lg)) {
         &__menu {
-            right: -1.5rem;
-            width: 400px;
+            right: -1.7rem;
+            width: 25rem;
         }
     }
 
