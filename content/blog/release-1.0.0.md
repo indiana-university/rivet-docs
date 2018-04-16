@@ -1,6 +1,6 @@
 ---
 title: Rivet 1.0.0 release
-description: The official Rivet 1.0.0 is now available!
+description: The official Rivet 1.0.0 release is now available!
 date: "2018-04-16"
 tags:
     - "release"
