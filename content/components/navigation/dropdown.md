@@ -105,7 +105,7 @@ The Rivet dropdown is flexible enough to be used with lists of navigation links,
 <div class="rvt-p-all-sm rvt-border-all rvt-border-radius">
     <div class="rvt-grid">
         <div class="rvt-grid__item-6-md-up">
-            <h3 class="rvt-text-bold rvt-m-bottom-md">Navgation menus</h3>
+            <h3 class="rvt-text-bold rvt-m-bottom-md">Navigation menus</h3>
             <ul>
                 <li>Navigation menus are a set of links are used to navigate to pages/URLs in an application.</li>
                 <li>Use the <code>aria-current="page"</code> attribute to indicate in the menu, both to screen readers and visually, if the user on the current page.</li>
@@ -116,7 +116,7 @@ The Rivet dropdown is flexible enough to be used with lists of navigation links,
         <div class="rvt-grid__item-6-md-up">
             <h3 class="rvt-text-bold rvt-m-bottom-md">Application menus</h3>
             <ul>
-                <li>Application menus generally contian lists of buttons that are used for JavaScript-driven/in-page behaivior.</li>
+                <li>Application menus generally contain lists of buttons that are used for JavaScript-driven/in-page behavior.</li>
                 <li>Application menu items (buttons) should use the <code>role="menuitemradio"</code> when they are used to toggle JavaScript-driven fuctionality. Otherwise, buttons should use the <code>role="menuitem"</code> attribute.</li>
                 <li>To indicate the current state of an application menu item, use the <code>aria-checked="tue"</code> attribute.</li>
             </ul>

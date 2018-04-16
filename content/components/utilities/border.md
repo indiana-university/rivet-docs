@@ -4,7 +4,7 @@ description: "Use Rivet's border utilities to add a border to any or all sides o
 status: "Ready"
 ---
 ## Border utility examples
-Easily add borders to any element using the following utility classes. All borders applied via utititly classes will have the value `1px solid #dddddd`. We've also included an extra border utility class to add the default border-radius (.25rem/4px) to an element.
+Easily add borders to any element using the following utility classes. All borders applied via utility classes will have the value `1px solid #dddddd`. We've also included an extra border utility class to add the default border-radius (.25rem/4px) to an element.
 
 {{< example lang="html" >}}<ul class="rvt-plain-list">
     <li class="rvt-m-top-md">

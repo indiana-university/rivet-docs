@@ -14,7 +14,7 @@ Rivet is new and we're quickly adding components and features as we work toward 
 </div>
 
 ## Get started
-The Rivet components documentation contains examples, code snippets, and guidance on UX best-practices. There are several ways you can use Rivet in your project. The follwing instructions will help you get started.
+The Rivet components documentation contains examples, code snippets, and guidance on UX best-practices. There are several ways you can use Rivet in your project. The following instructions will help you get started.
 
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
@@ -59,7 +59,7 @@ index.html
     </div>
     <div class="rvt-grid__item-7-md-up rvt-grid__item--last">
         <p>We've created an Axure wireframe kit with accurate representations of all the Rivet components. Download the Axure
-            kit to help you create prototypes that will transalte to real Rivet components.</p>
+            kit to help you create prototypes that will translate to Rivet components.</p>
         <a
             href="https://github.iu.edu/UITS/rivet/releases/download/v0.3.1/rivet-axure-0.3.1.rp"
             class="rvt-button rvt-button--secondary rvt-m-top-md"

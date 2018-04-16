@@ -10,7 +10,7 @@ You can use the rivet text utilities to change the `font-weight` property of tex
 - `.rvt-text-bold`
 
 {{< example lang="html" >}}<strong class="rvt-text-regular">Regular text utilitiy</strong>
-<div class="rvt-text-bold">Bold Text utilitiy</div>
+<div class="rvt-text-bold">Bold Text utility</div>
 {{< /example >}}
 
 ## Line height
