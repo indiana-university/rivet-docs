@@ -1,7 +1,7 @@
 ---
 title: "Checkboxes"
 description: "Checkboxes allow users to select one or more options from a list of choices."
-status: "Beta"
+status: "Ready"
 ---
 ## Inline checkboxes example
 {{< example lang="html" >}}<form>
@@ -74,6 +74,26 @@ The indeterminate state is a checkbox attribute that is accessible by JavaScript
         <li>
             <input type="checkbox" name="checkbox-demo" id="checkbox-8">
             <label for="checkbox-8">Parent option three</label>
+        </li>
+    </ul>
+</fieldset>
+{{< /example >}}
+
+## Alternate markup with hidden fields
+This example includes a hidden input in the markup, as some frameworks require. It requires that the input and label be wrapped in a `.rvt-checkbox-wrapper`. Here we are using the wrapper class on a `<li>`, but it will also work with generic elements like a `<div>` and `<span>`.
+
+{{< example lang="html" >}}<fieldset>
+    <legend class="rvt-ts-23 rvt-m-bottom-lg">Alternate markup (visually identical)</legend>
+    <ul class="rvt-inline-list">
+        <li class="rvt-checkbox-wrapper">
+            <input type="checkbox" name="checkbox-demo" id="checkbox-9">
+            <input type="hidden">
+            <label for="checkbox-9">Option one</label>
+        </li>
+        <li class="rvt-checkbox-wrapper">
+            <input type="checkbox" name="checkbox-demo" id="checkbox-10">
+            <input type="hidden">
+            <label for="checkbox-10">Option two</label>
         </li>
     </ul>
 </fieldset>

@@ -1,7 +1,7 @@
 .rvtd-search {
     position: relative;
     padding: $md;
-    background-color: #fafafa;
+    background-color: $color-black--50;
     border-bottom: 1px solid #eaeaea;
 
     &__form {
@@ -63,7 +63,7 @@
         .rvtd-search__result {
             margin: 0 $sm $sm;
             padding-bottom: $sm;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid $color-black--200;
 
             &-title {
                 margin-bottom: $xxs;
@@ -108,11 +108,6 @@
 
         input {
             flex-grow: 1;
-            // flex-shrink: 1;
-        }
-
-        button {
-            // flex-grow: 1;
         }
     }
 

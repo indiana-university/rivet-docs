@@ -2,7 +2,7 @@
 title: "Alerts"
 description: "Alerts are used to display brief important messages to users. They are designed to attract the user’s attention, but not interrupt their work."
 requiresJs: true
-status: "Beta"
+status: "Ready"
 ---
 ## Page-level alerts
 {{< example lang="html" >}}<div class="rvt-alert rvt-alert--info rvt-m-bottom-md" role="alertdialog" aria-labelledby="information-alert-title">

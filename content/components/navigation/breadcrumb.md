@@ -1,7 +1,7 @@
 ---
 title: "Breadcrumb"
 description: A navigation component that indicates the user's current location in the nav hierarchy
-status: "Beta"
+status: "Ready"
 ---
 ## Default breadcrumb
 {{< example lang="html" >}}<nav role="navigation" aria-label="Breadcrumbs">

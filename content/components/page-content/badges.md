@@ -1,7 +1,7 @@
 ---
 title: Badges
 description: Use badges to call out or label important information in your UI.
-status: "Beta"
+status: "Ready"
 ---
 ## Default Badges
 {{< example lang="html" >}}<span class="rvt-badge">Base</span>

@@ -8,7 +8,7 @@
                         <div class="rvt-grid__item-3-md-up">
                             <div class="rvtd-changelog__version" :class="{'ts-23':index>0}">Rivet {{ version(release.tag_name) }}</div>
                             <div class="rvtd-changelog__date rvt-m-bottom-xl rvt-m-top-xs">{{ release.published_at | formatDate }}</div>
-                            <a v-if="index==0" :href="url(release.tag_name)" class="rvt-button rvt-button--bright-blue rvtd-changelog__download">
+                            <a v-if="index==0" href="https://github.iu.edu/UITS/rivet/archive/master.zip" class="rvt-button rvt-button--bright-blue rvtd-changelog__download">
                                 <svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                     <title>Download</title>
                                     <g fill="currentColor">
@@ -27,7 +27,7 @@
                             <div class="rvtd-changelog__section-title">Details</div>
 
                             <ul>
-                                <li v-for="(detail, detailIndex) in release.pulls.items" v-if="showAllDetails[index] || detailIndex<5">{{ detail.title }}</li>
+                                <li v-for="(detail, detailIndex) in release.pulls.items" v-if="showAllDetails[index] || detailIndex<5" :key="detailIndex">{{ detail.title }}</li>
                             </ul>
 
                             <p class="rvtd-changelog__view-all-details" v-if="release.pulls.items.length > 5 && !showAllDetails[index]">
@@ -38,7 +38,7 @@
 
                     <div class="rvt-loading" v-if="loadingReleases">
                         <template v-for="n in 6">
-                            <div class="rvt-grid m-top-xxl">
+                            <div class="rvt-grid m-top-xxl" :key="n">
                                 <div class="rvt-grid__item-3-md-up"><div class="rvt-loading__fake-version">&nbsp;</div></div>
                                 <div class="rvt-grid__item-4-md-up rvtd-changelog__overview"><div class="rvt-loading__fake-overview">&nbsp;</div></div>
                                 <div class="rvt-grid__item-4-md-up rvtd-changelog__details"><div class="rvt-loading__fake-details">&nbsp;</div></div>

@@ -1,7 +1,7 @@
 ---
 title: "Select element"
 description: "The select element creates a dropdown that allows users to choose one item from a list."
-status: "Beta"
+status: "Ready"
 ---
 ## Select Example
 {{< example lang="html" >}}<label for="select-demo">Select input:</label>
