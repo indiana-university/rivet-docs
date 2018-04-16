@@ -27,7 +27,7 @@
                             <div class="rvtd-changelog__section-title">Details</div>
 
                             <ul>
-                                <li v-for="(detail, detailIndex) in release.pulls.items" v-if="showAllDetails[index] || detailIndex<5">{{ detail.title }}</li>
+                                <li v-for="(detail, detailIndex) in release.pulls.items" v-if="showAllDetails[index] || detailIndex<5" :key="detailIndex">{{ detail.title }}</li>
                             </ul>
 
                             <p class="rvtd-changelog__view-all-details" v-if="release.pulls.items.length > 5 && !showAllDetails[index]">
@@ -38,7 +38,7 @@
 
                     <div class="rvt-loading" v-if="loadingReleases">
                         <template v-for="n in 6">
-                            <div class="rvt-grid m-top-xxl">
+                            <div class="rvt-grid m-top-xxl" :key="n">
                                 <div class="rvt-grid__item-3-md-up"><div class="rvt-loading__fake-version">&nbsp;</div></div>
                                 <div class="rvt-grid__item-4-md-up rvtd-changelog__overview"><div class="rvt-loading__fake-overview">&nbsp;</div></div>
                                 <div class="rvt-grid__item-4-md-up rvtd-changelog__details"><div class="rvt-loading__fake-details">&nbsp;</div></div>
