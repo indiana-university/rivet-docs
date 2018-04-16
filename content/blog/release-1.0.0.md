@@ -10,11 +10,11 @@ excludeFromIndex: true
 Rivet 1.0.0 is now available. We've made a few updates since the last release (0.5.0). We'll go over the additons and updates in this post.
 
 ## Migration guide (0.5.0 – 1.0.0)
-The [last pre-release of Rivet]({{< ref "blog/release-0.5.0.md" >}}) was the most significant to date. We made a handful of breaking changes in 0.5.0 that are documented in the 0.5.0 migration guide. [Read the the guide here]({{< ref "blog/0.5.0-migration-guide.md" >}}). If you have already updated to 0.5.0, you can saftely update to 1.0.0 without breaking changes.
+The [last pre-release of Rivet]({{< ref "blog/release-0.5.0.md" >}}) was the most significant to date. We made a handful of breaking changes in 0.5.0 that are documented in the [0.5.0 migration guide]({{< ref "blog/0.5.0-migration-guide.md" >}}). If you have already updated to 0.5.0, you can safely update to 1.0.0 without breaking changes.
 
 <div class="rvt-alert rvt-alert--info rvt-m-bottom-md rvt-m-top-sm">
     <h3 class="rvt-alert__title" id="warning-alert-title">Changes in 1.0.0</h3>
-    <p class="rvt-alert__message">The updates we've made since the last release (0.5.0) we all additive and shouldn't be breaking changes. If you do run into any problems updating, <a href="https://github.iu.edu/UITS/rivet-source/issues">please open an issue on Github.iu</a>.</p>
+    <p class="rvt-alert__message">The updates we've made since the last release (0.5.0) were all additive and shouldn't be breaking changes. If you do run into any problems updating, <a href="https://github.iu.edu/UITS/rivet-source/issues">please open an issue on Github.iu</a>.</p>
 </div>
 
 ## 1.0.0 Additions
