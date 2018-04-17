@@ -8,7 +8,7 @@ status: "Ready"
 The custom HTML file input (`<input type="file">`) uses CSS to hide the default file input button and styles the associated `<label>` element to look like a Rivet button.
 
 {{< example lang="html" >}}<div class="rvt-file" data-upload="my-file-input">
-    <input type="file" id="my-file-input" aria-describedby="file-descrirption">
+    <input type="file" id="my-file-input" aria-describedby="file-description">
     <label for="my-file-input" class="rvt-button">
         <span>Upload a file</span>
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
