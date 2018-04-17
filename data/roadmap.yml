@@ -2,6 +2,7 @@ quarters:
     -
         title: "Rivet 1.0 release"
         short_title: "Q1"
+        is_complete: true
         items:
             -
                 title: "Notifications center"
