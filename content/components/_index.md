@@ -6,7 +6,7 @@ weight: 2
 sectionNav: true
 ---
 ## Stay up to date
-Rivet is new and we're quickly adding components and features as we work toward the official version 1.0 release. Join the email list to get updates on new features, examples, and how-to guides.
+Join the email list to get updates on releases, new features, examples, and how-to guides.
 
 <div class="rvt-button-group">
 {{< button url="https://list.iu.edu/sympa/subscribe/rivet-l" variant="secondary" analytics-category="click">}}Subscribe{{< /button >}}
