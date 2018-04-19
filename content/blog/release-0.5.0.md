@@ -43,7 +43,7 @@ Thanks to some of the folks piloting Rivet we've found a few bugs that have also
 ## Approaching 1.0.0
 As we mentioned above this will be the **last release before we move to 1.0.0**. We'll make any necessary changes based on feedback and testing as well as some documentation improvements, but any updates between now and 1.0.0 should be **additive, non-breaking changes**. The migration guide below outlines all the updates and includes code examples that will help you make the necessary updates.
 
-{{< button url="../0.5.0-migration-guide" variant="secondary" analytics-category="click">}}View the guide{{< /button >}}
+{{< button url="../0.5" variant="secondary" analytics-category="click">}}View the guide{{< /button >}}
 
 ## Feedback & Questions
 We'd appreciate any feedback you have and would be happy to answer any questions. The best way to submit feedback is by creating an issue on Github:

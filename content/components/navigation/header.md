@@ -6,7 +6,7 @@ status: "Ready"
 ---
 <div class="rvt-alert rvt-alert--message rvt-m-bottom-md">
     <h2 class="rvt-alert__title">Header changes in Rivet 0.5.0</h2>
-    <p class="rvt-alert__message">We made some significant markup changes to the header in Rivet’s 0.5.0 release. The biggest change: The dropdown in the header now uses button elements to toggle dropdown. (Previously it used anchor elements.) We also replaced the dropdown toggle’s background images with inline SVGs. Finally, we updated its data attribute. <a href="../../../learn/0.5.0-migration-guide/#header-updates">Learn how to make the necessary changes</a>.</p>
+    <p class="rvt-alert__message">We made some significant markup changes to the header in Rivet’s 0.5.0 release. The biggest change: The dropdown in the header now uses button elements to toggle dropdown. (Previously it used anchor elements.) We also replaced the dropdown toggle’s background images with inline SVGs. Finally, we updated its data attribute. <a href="../../../blog/0.5/#header-updates">Learn how to make the necessary changes</a>.</p>
 </div>
 
 ## Base header
