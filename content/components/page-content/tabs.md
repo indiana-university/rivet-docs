@@ -49,12 +49,34 @@ status: "Ready"
 </div>
 {{< /example >}}
 
+## When to use
+- Displaying a small number (2-5 categories) of closely related, distinct data.
+- Displaying multiple unique views of the same data.
+- Category labels are short and easy to understand.
+- Switching between views is common for your users’ goals.
+- Categories names are unlikely to change very often and number of categories is unlikely to grow.
+
+## When to consider something else
+- Displaying more 6 or more categories (or more than what will easily fit horizontally on your target users screen).
+- Displaying categories that require long labels for clarity.
+- Users will frequently  need to compare data from different tabs/categories.
+- The data for each tab could just as easily function as its own page.
+- If you are tempted to include a ‘More’ tab.
+- If the amount of data that would be shown on each tab is small.
+
 ## Accessibility
 The Rivet tabs use JavaScript to fully implement [WAI-ARIA authoring standards](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel) for keyboard navigation. Tabs are controlled using `<button>` elements, and they should be focusable using the left and right arrow keys on the keyboard:
 
 - Pressing the **right arrow key on the last tab** returns to the first in the set
 - Pressing the **left arrow key on the first tab** should move focus to the last tab
 - Pressing the **tab key while focused on a tab control** should move focus on to the tab panel it controls, not to the next tab in the set.
+
+## Implementation notes
+- Order tabs in a logical manner
+- Default tab (on page load) should be first tab. This should be the most frequently viewed/most important tab.
+- Label tabs with clear concise categories - 1-2 words is ideal
+- Do not use all caps in the tab labels
+- Do not include a ‘More’ tab.
 
 ## Fitted version
 Applying the modifier class `.rvt-tabs--fitted` to the main `.rvt-tabs` container will make the tabs take up equal amounts of the space of the tabs container.
