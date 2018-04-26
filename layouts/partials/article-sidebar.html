@@ -1,7 +1,12 @@
+{{/*
+    Set variable to make the template a little cleaner.
+*/}}
+{{- $sidebarTitle :=  .Site.Params.blogSidebar.title -}}
+{{- $sidebarDescription :=  .Site.Params.blogSidebar.description -}}
+
 <aside class="rvtd-article-sidebar rvt-m-top-xxl">
-    <h1 class="rvt-ts-26 rvt-text-bold rvt-flat-line-height">Learn about Rivet</h1>
-    <p>Rivet is new and we’re quickly adding components and features as we work toward the official version 1.0 release. You
-        can find updates on new features, tutorials, and news about the latest release here.</p>
+    <h1 class="rvt-ts-26 rvt-text-bold rvt-flat-line-height">{{ $sidebarTitle }}</h1>
+    <p>{{ $sidebarDescription }}</p>
     <div class="rvt-m-top-xxl">
         <h2 class="rvt-text-uppercase rvt-m-bottom-sm rvt-ts-14">Recent articles</h2>
         <ol class="rvtd-small-list rvt-plain-list">
