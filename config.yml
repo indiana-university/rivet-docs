@@ -26,3 +26,6 @@ params:
         -
             text: "IU Framework for WCMS"
             url: "https://framework.iu.edu/"
+    blogSidebar:
+        title: Learn about Rivet
+        description: "Updates on new features, tutorials, and news about Rivet releases."
