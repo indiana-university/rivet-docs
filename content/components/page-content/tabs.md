@@ -57,9 +57,9 @@ status: "Ready"
 - Categories names are unlikely to change very often and number of categories is unlikely to grow.
 
 ## When to consider something else
-- Displaying more 6 or more categories (or more than what will easily fit horizontally on your target users screen).
+- Displaying six or more categories (or more than what will easily fit horizontally on your target users' screen).
 - Displaying categories that require long labels for clarity.
-- Users will frequently  need to compare data from different tabs/categories.
+- Users will frequently need to compare data from different tabs/categories.
 - The data for each tab could just as easily function as its own page.
 - If you are tempted to include a ‘More’ tab.
 - If the amount of data that would be shown on each tab is small.
