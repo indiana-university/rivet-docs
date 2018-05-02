@@ -7,6 +7,8 @@ main {
     right: $md;
 
     &__toggle {
+        background-color: #079bed;
+        border-color: #079bed;
         border-radius: 999rem;
         box-shadow: 0 $xxs $sm rgba(#333333, .3);
         height: 3.5rem;
