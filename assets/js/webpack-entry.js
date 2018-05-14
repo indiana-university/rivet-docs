@@ -131,6 +131,7 @@ new Vue({
         },
         resetSupportHandler: function() {
             this.isFormSubmitted = false;
+            this.supportFormFields.description = ""
         },
         supportFormHandler: function() {
             this.$validator.validateAll()
