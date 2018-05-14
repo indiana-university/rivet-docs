@@ -155,7 +155,7 @@ new Vue({
 
                     // send data to UXO
                     var request = new XMLHttpRequest();
-                    request.open('POST', '/form-submit/feedback/index.php');
+                    request.open('POST', '/form-submit/support/index.php');
                     request.send(data);
                 }
             }.bind(this), 200);
