@@ -19,27 +19,40 @@
         <header class="rvt-modal__header">
             <h1 class="rvt-modal__title" id="modal-support">Email support</h1>
         </header>
-        <form action="">
-            <div class="rvt-modal__body">
-                <p class="rvt-m-top-sm rvt-m-bottom-lg "><strong>Have questions about Rivet?</strong> Use this form to submit your questions and we'll get back with you.</p>
-                <div class="rvt-m-top-sm">
-                    <label for="support-name">Name</label>
-                    <input type="text" id="support-name">
+        <transition name="form" mode="out-in">
+            <form v-if="!isFormSubmitted" method="post" @submit.prevent="supportFormHandler" action="/form-submit/support/">
+                <div class="rvt-modal__body">
+                    <p class="rvt-m-top-sm rvt-m-bottom-lg "><strong>Have questions about Rivet?</strong> Use this form to submit your questions and we'll get back with you. <em>All fields are required.</em></p>
+                    <div class="rvt-m-top-sm">
+                        <label for="support-name">Name</label>
+                        <input name="name" v-model='supportFormFields.name' type="text" id="support-name" v-validate="'required'" aria-describedby="name-errors">
+                        <div id="name-errors" v-cloak class="m-top-xs rvt-alert alert-inline hide-for-no-js" role="alert" v-if="errors.has('name')">Please tell us your name.</div>
+                        <div v-else id="name-errors"></div>
+                    </div>
+                    <div class="rvt-m-top-sm">
+                        <label for="support-email">Email</label>
+                        <input name="email" v-model='supportFormFields.email' type="email" id="support-email" v-validate="'required'" aria-describedby="email-errors">
+                        <div id="email-errors" v-cloak class="m-top-xs rvt-alert alert-inline hide-for-no-js" role="alert" v-if="errors.has('email')">Please enter a valid IU email address.</div>
+                        <div v-else id="email-errors"></div>
+                    </div>
+                    <div class="rvt-m-top-sm">
+                        <label for="support-message">Message</label>
+                        <textarea name="description" v-model='supportFormFields.description' id="support-message" v-validate="'required'" aria-describedby="description-errors"></textarea>
+                        <div id="description-errors" v-cloak class="m-top-xs rvt-alert alert-inline hide-for-no-js" role="alert" v-if="errors.has('description')">Please leave a message.</div>
+                        <div v-else id="description-errors"></div>
+                    </div>
                 </div>
-                <div class="rvt-m-top-sm">
-                    <label for="support-email">Email</label>
-                    <input type="text" id="support-email">
+                <div class="rvt-modal__controls">
+                    <button class="rvt-button">Send</button>
+                    <button class="rvt-button rvt-button--secondary" data-modal-close="close">Cancel</button>
                 </div>
-                <div class="rvt-m-top-sm">
-                    <label for="support-message">Message</label>
-                    <textarea id="support-message"></textarea>
-                </div>
+            </form>
+            <div v-if='isFormSubmitted' v-cloak class="form-message rvt-p-all-sm">
+                <img src="/img/success-icon.svg" class="form-message__icon" alt="">
+                <p class="m-bottom-md">Thank you! Your question has been submitted.</p>
+                <p class="m-all-remove"><button class="rvt-button rvt-button--secondary" @click.prevent="resetSupportHandler">Ask another question</button></p>
             </div>
-            <div class="rvt-modal__controls">
-                <button class="rvt-button">Send</button>
-                <button class="rvt-button rvt-button--secondary" data-modal-close="close">Cancel</button>
-            </div>
-        </form>
+        </transition>
         <button class="rvt-button rvt-modal__close" data-modal-close="close">
             <span class="rvt-sr-only">Close</span>
             <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">

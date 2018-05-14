@@ -1,0 +1,16 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #22af7c;
+            stroke-linecap: round;
+            stroke-miterlimit: 10;
+            stroke-width: 4px;
+            }
+        </style>
+    </defs>
+    <title>uxo-iconsArtboard 27</title>
+    <path class="cls-1" d="M17.86,25.81l5.56,5.32a.54.54,0,0,0,.87,0l7.86-12.41"/>
+    <circle class="cls-1" cx="25" cy="25" r="23"/>
+</svg>
