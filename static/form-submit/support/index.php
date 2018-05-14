@@ -12,7 +12,7 @@
     $subject = "Rivet support question";
     $message = $name . " asked a question about Rivet:" . "\n\n" . $_POST['description']. "\n\n";
 
-    $message .= "Submitted from: https://$_SERVER[HTTP_HOST]$_SERVER[HTTP_REFERER]\n\n";
+    $message .= "Submitted from: $_SERVER[HTTP_REFERER]\n\n";
 
     $headers = "From:" . $from;
     mail($to,$subject,$message,$headers);

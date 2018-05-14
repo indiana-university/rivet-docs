@@ -190,5 +190,5 @@ plugins.setIndeterminate('#checkbox-indeterminate');
 // Custom analytics event tracking
 plugins.analyticsTracking();
 
-console.log('Rivet 0.5.0 is ready!');
+console.log('Enjoy using Rivet and let us know if you have any questions!');
 
