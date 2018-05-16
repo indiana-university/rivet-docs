@@ -81,7 +81,7 @@
 
         data: function() {
             return {
-                errors: [],
+                changelogErrors: [],
                 releases: [],
                 loadingReleases: false,
                 errorLoadingReleases: false,
@@ -107,7 +107,7 @@
                         this.loadingReleases = false;
                     })
                     .catch(e => {
-                        this.errors.push(e);
+                        this.changelogErrors.push(e);
                         this.errorLoadingReleases = true;
                         this.loadingReleases = false;
                     })
