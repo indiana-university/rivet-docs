@@ -25,20 +25,65 @@
                     <p class="rvt-m-top-sm rvt-m-bottom-lg "><strong>Have questions about Rivet?</strong> Use this form to submit your questions and we'll get back with you. <em>All fields are required.</em></p>
                     <div class="rvt-m-top-sm">
                         <label for="support-name">Name</label>
-                        <input name="name" v-model='supportFormFields.name' type="text" id="support-name" v-validate="'required'" aria-describedby="name-errors">
-                        <div id="name-errors" v-cloak class="m-top-xs rvt-alert alert-inline hide-for-no-js" role="alert" v-if="errors.has('name')">Please tell us your name.</div>
+                        <input :class="{'rvt-is-invalid': errors.has('name')}" name="name" v-model='supportFormFields.name' type="text" id="support-name" v-validate="'required'" aria-describedby="name-errors">
+                        <div v-cloak class="rvt-inline-alert rvt-inline-alert--is-invalid" v-if="errors.has('name')">
+                          <span class="rvt-inline-alert__icon">
+                            <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                <g fill="currentColor">
+                                    <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"/>
+                                    <path
+                                        d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
+                                </g>
+                            </svg>
+                          </span>
+                          <span class="rvt-inline-alert__message" role="alert" id="name-errors">
+                            Please tell us your name.
+                          </span>
+                        </div>
+
                         <div v-else id="name-errors"></div>
                     </div>
                     <div class="rvt-m-top-sm">
                         <label for="support-email">Email</label>
-                        <input name="email" v-model='supportFormFields.email' type="email" id="support-email" v-validate="'required'" aria-describedby="email-errors">
-                        <div id="email-errors" v-cloak class="m-top-xs rvt-alert alert-inline hide-for-no-js" role="alert" v-if="errors.has('email')">Please enter a valid IU email address.</div>
+                        <input :class="{'rvt-is-invalid': errors.has('email')}" name="email" v-model='supportFormFields.email' type="email" id="support-email" v-validate="'required'" aria-describedby="email-errors">
+
+                        <div v-cloak class="rvt-inline-alert rvt-inline-alert--is-invalid" v-if="errors.has('email')">
+                          <span class="rvt-inline-alert__icon">
+                            <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                <g fill="currentColor">
+                                    <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"/>
+                                    <path
+                                        d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
+                                </g>
+                            </svg>
+                          </span>
+                          <span class="rvt-inline-alert__message" role="alert" id="email-errors">
+                            Please enter your IU email address.
+                          </span>
+                        </div>
+
                         <div v-else id="email-errors"></div>
                     </div>
                     <div class="rvt-m-top-sm">
                         <label for="support-message">Message</label>
-                        <textarea name="description" v-model='supportFormFields.description' id="support-message" v-validate="'required'" aria-describedby="description-errors"></textarea>
-                        <div id="description-errors" v-cloak class="m-top-xs rvt-alert alert-inline hide-for-no-js" role="alert" v-if="errors.has('description')">Please leave a message.</div>
+                        <textarea :class="{'rvt-is-invalid': errors.has('description')}" name="description" v-model='supportFormFields.description' id="support-message" v-validate="'required'" aria-describedby="description-errors"></textarea>
+
+                        <div v-cloak class="rvt-inline-alert rvt-inline-alert--is-invalid" v-if="errors.has('description')">
+                          <span class="rvt-inline-alert__icon">
+                            <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                <g fill="currentColor">
+                                    <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"/>
+                                    <path
+                                        d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
+                                </g>
+                            </svg>
+                          </span>
+                          <span class="rvt-inline-alert__message" role="alert" id="description-errors">
+                            Please leave a message.
+                          </span>
+                        </div>
+
+
                         <div v-else id="description-errors"></div>
                     </div>
                 </div>
