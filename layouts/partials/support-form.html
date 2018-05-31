@@ -62,24 +62,28 @@
 
                         <div v-else id="email-errors"></div>
                     </div>
-                    <div class="rvt-m-top-sm">
-                        <label for="support-message">Message</label>
-                        <textarea data-vv-validate-on="none" :class="{'rvt-is-invalid': errors.has('description')}" name="description" v-model='supportFormFields.description' id="support-message" v-validate="'required'" aria-describedby="description-errors"></textarea>
+                    <div class="rvt-m-top-md">
+                        <fieldset>
+                            <legend class="rvt-ts-18 rvt-text-bold">Leave a message</legend>
+                            <p class="rvt-ts-14 rvt-m-top-xxs">Please include your <strong>site URL</strong> or <strong>application name</strong>, a brief description of the question you have or error you are encountering, and the steps you followed to get to the error or question.</p>
+                            <label for="support-message" class="rvt-sr-only">Message</label>
+                            <textarea data-vv-validate-on="none" :class="{'rvt-is-invalid': errors.has('description')}" name="description" v-model='supportFormFields.description' id="support-message" v-validate="'required'" aria-describedby="description-errors"></textarea>
 
-                        <div v-cloak class="rvt-inline-alert rvt-inline-alert--is-invalid" v-if="errors.has('description')">
-                          <span class="rvt-inline-alert__icon">
-                            <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                <g fill="currentColor">
-                                    <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"/>
-                                    <path d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
-                                </g>
-                            </svg>
-                          </span>
-                          <span class="rvt-inline-alert__message" role="alert" id="description-errors">
-                            Please leave a message.
-                          </span>
-                        </div>
-                        <div v-else id="description-errors"></div>
+                            <div v-cloak class="rvt-inline-alert rvt-inline-alert--is-invalid" v-if="errors.has('description')">
+                            <span class="rvt-inline-alert__icon">
+                                <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <g fill="currentColor">
+                                        <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"/>
+                                        <path d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="rvt-inline-alert__message" role="alert" id="description-errors">
+                                Please leave a message.
+                            </span>
+                            </div>
+                            <div v-else id="description-errors"></div>
+                        </fieldset>
                     </div>
                 </div>
                 <div class="rvt-modal__controls">
