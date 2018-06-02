@@ -12,7 +12,7 @@
 
     h1 {
         font-size: $ts-36;
-        line-height: 1;
+        line-height: 1.2;
         margin-bottom: $sm;
     }
 
@@ -45,5 +45,13 @@
         margin-top: $xxs;
         padding-bottom: $xl;
         border-bottom: 1px solid $color-black--200;
+
+        &--no-border {
+            border-bottom: none;
+        }
     }
+}
+
+.rvtd-typeset--flat-top  h2:first-of-type {
+    margin-top: 0;
 }
