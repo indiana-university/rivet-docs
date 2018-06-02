@@ -3,6 +3,10 @@ languageCode: "en-us"
 title: "Rivet"
 paginate: 10
 enableEmoji: true
+taxonomies:
+    category: categories
+    addOnTag: addOnTags
+    tag: tags
 params:
     rivetVersion: 1.0.0
     tagline: "Software Design System"
