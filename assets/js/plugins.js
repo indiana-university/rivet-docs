@@ -1,4 +1,3 @@
-const tippy = require('tippy.js')
 const Clipboard = require('clipboard')
 const localStorageAvailable = require('./polyfills').localStorageAvailable;
 const moment = require('moment')
@@ -16,9 +15,9 @@ module.exports = {
     },
 
     /**
-     * 
-     * @param {String} url 
-     * Accepts a URL and returns a bool indicating 
+     *
+     * @param {String} url
+     * Accepts a URL and returns a bool indicating
      * whether the URL is external to rivet.uits.iu.edu
      */
     isExternalLink(url) {
@@ -50,24 +49,35 @@ module.exports = {
         indCheck.indeterminate = true;
     },
 
-    tippyInit() {
-        /**
-         * Initialize tooltip library
-         */
-        const tip = tippy('.rvtd-example__copy', {
-            trigger: 'click',
-            animation: 'fade',
-            onShown: function () {
-                setTimeout(() => { tip.hide(this) }, 1000)
-            }
-        })
-    },
-
     clipboardInit() {
         /**
          * Initialize copy to clipboard functionality for code snippets
          */
-        new Clipboard('.rvtd-example__copy')
+        new Clipboard('.rvtd-example__copy');
+        new Clipboard('.rvtd-package-copy');
+    },
+
+    copyButtonConfirm(selector, durration) {
+        document.addEventListener('click', event => {
+            let copyButton = event.target.closest(selector);
+
+            if (!copyButton) return;
+
+            const preCopyText = 'Copy';
+            const postCopyText = 'Coppied!';
+            const successClass = 'rvt-button--success';
+
+            const toggleButtonState = (buttonElement, text) => {
+                buttonElement.innerHTML = text;
+                buttonElement.classList.toggle(successClass);
+            }
+
+            toggleButtonState(copyButton, postCopyText);
+
+            setTimeout(function () {
+                toggleButtonState(copyButton, preCopyText);
+            }, durration);
+        });
     },
 
     analyticsTracking() {
