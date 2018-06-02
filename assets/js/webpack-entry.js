@@ -177,7 +177,6 @@ new Vue({
 
  // Third-party libraries
 plugins.clipboardInit();
-plugins.tippyInit();
 
 /**
  * Site-specific DOM scripting - Any DOM manipulation stuff
@@ -185,6 +184,7 @@ plugins.tippyInit();
  * of Vue's virtal DOM implementation.
  */
 plugins.createCopyright('#year');
+plugins.copyButtonConfirm('[data-clipboard-target]', 1500);
 plugins.setIndeterminate('#checkbox-indeterminate');
 
 // Custom analytics event tracking
