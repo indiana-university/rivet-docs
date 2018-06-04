@@ -755,13 +755,21 @@ a.button--reverse-secondary {
 
 .rvtd-navbar {
     &__list-item {
-        a {
+        button {
             text-decoration: none;
             padding: $sm;
             display: inline-block;
+            background: none;
+            border: none;
+            color: $color-action;
 
-            &[aria-current] {
+            &[aria-selected="true"] {
                 box-shadow: inset 0 -4px 0 0 $color-action;
+            }
+
+            &:focus {
+                outline: 2px dotted $color-action;
+                outline-offset: $xxs/2;
             }
         }
     }
@@ -788,7 +796,7 @@ a.button--reverse-secondary {
         }
 
         &:focus {
-            outline: 2px dashed $color-action;
+            outline: 2px dotted $color-action;
             outline-offset: $xxs;
         }
     }
@@ -800,6 +808,10 @@ a.button--reverse-secondary {
 
     &__description {
         color: $color-black--700;
+    }
+
+    &__meta > *:not(:last-child) {
+        margin-right: $xs;
     }
 }
 
