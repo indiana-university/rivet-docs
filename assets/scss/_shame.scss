@@ -768,7 +768,7 @@ a.button--reverse-secondary {
             }
 
             &:focus {
-                outline: 2px dotted $color-action;
+                outline: 2px solid $color-action;
                 outline-offset: $xxs/2;
             }
         }
@@ -796,7 +796,7 @@ a.button--reverse-secondary {
         }
 
         &:focus {
-            outline: 2px dotted $color-action;
+            outline: 2px solid $color-action;
             outline-offset: $xxs;
         }
     }
