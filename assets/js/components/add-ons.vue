@@ -1,61 +1,60 @@
 <template>
-<div>
-<div class="rvt-container rvt-container--center rvt-container--junior">
-  <nav @keyup="handleKeyup($event)" class="rvtd-navbar" aria-label="Add-ons tags">
-    <ul class="rvtd-navbar__list rvt-plain-list rvt-display-flex" role="tablist">
-      <li
-        v-for="(filter, i) in uniqueTags"
-        :key="i"
-        class="rvtd-navbar__list-item"
-      >
-        <button
-          @click="filterAddOns($event)"
-          ref="navBar"
-          :data-filter="filter"
-          :aria-selected="currentTag === filter ? 'true' : 'false'"
-          role="tab"
-        >
-          {{ filter }}
-        </button>
-      </li>
-    </ul>
-  </nav>
-</div>
-
-<div class="rvtd-subtle-wrapper">
+<div class="rvt-m-top-xl">
   <div class="rvt-container rvt-container--center rvt-container--junior">
-    <h2 class="rvt-ts-23 rvt-text-bold rvt-m-bottom-xl">{{ title }}</h2>
-    <ul class="rvt-grid rvt-plain-list">
-      <li
-        v-for="(addon, i) in filteredTags"
-        :key="i"
-        class="rvt-grid__item-4-md-up rvt-m-bottom-lg"
-      >
-        <a :href="addon.permalink" class="rvtd-card__wrapper-link">
-          <div class="rvtd-card">
-            <figure
-              class="rvtd-thumbnail "
-              :class="addon.tags[1] ? 'rvtd-thumbnail--' +  addon.tags[1].toLowerCase() : ''">
-              <img :src="'../img/add-ons/' + addon.thumbnail" alt="">
-            </figure>
-            <h3 class="rvtd-card__title">{{ addon.title }}</h3>
-            <p class="rvtd-card__description">{{ addon.description }}</p>
-            <div class="rvtd-card__meta">
-                <span
-                  v-for="(tag, i) in addon.tags.slice(1)"
-                  :key="i"
-                  class="rvt-badge rvt-badge--secondary"
-                >
-                  {{ tag }}
-                </span>
-            </div>
-          </div>
-        </a>
-      </li>
-    </ul>
+    <nav @keyup="handleKeyup($event)" class="rvtd-navbar" aria-label="Add-ons tags">
+      <ul class="rvtd-navbar__list rvt-plain-list rvt-display-flex" role="tablist">
+        <li
+          v-for="(filter, i) in uniqueTags"
+          :key="i"
+          class="rvtd-navbar__list-item"
+        >
+          <button
+            @click="filterAddOns($event)"
+            ref="navBar"
+            :data-filter="filter"
+            :aria-selected="currentTag === filter ? 'true' : 'false'"
+            role="tab"
+          >
+            {{ filter }}
+          </button>
+        </li>
+      </ul>
+    </nav>
   </div>
-</div>
 
+  <div class="rvtd-subtle-wrapper">
+    <div class="rvt-container rvt-container--center rvt-container--junior">
+      <h2 class="rvt-ts-23 rvt-text-bold rvt-m-bottom-xl">{{ title }}</h2>
+      <ul class="rvt-grid rvt-plain-list">
+        <li
+          v-for="(addon, i) in filteredTags"
+          :key="i"
+          class="rvt-grid__item-4-md-up rvt-m-bottom-lg"
+        >
+          <a :href="addon.permalink" class="rvtd-card__wrapper-link">
+            <div class="rvtd-card">
+              <figure
+                class="rvtd-thumbnail "
+                :class="addon.tags[1] ? 'rvtd-thumbnail--' +  addon.tags[1].toLowerCase() : ''">
+                <img :src="'../img/add-ons/' + addon.thumbnail" alt="">
+              </figure>
+              <h3 class="rvtd-card__title">{{ addon.title }}</h3>
+              <p class="rvtd-card__description">{{ addon.description }}</p>
+              <div class="rvtd-card__meta">
+                  <span
+                    v-for="(tag, i) in addon.tags.slice(1)"
+                    :key="i"
+                    class="rvt-badge rvt-badge--secondary"
+                  >
+                    {{ tag }}
+                  </span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 </template>
 
@@ -66,7 +65,7 @@ module.exports = {
   name: 'add-ons',
   data: function() {
     return {
-      title: 'All Add-ons',
+      title: '',
       allAddOns: [],
       filteredTags: [],
       currentTag: "All"
@@ -92,6 +91,7 @@ module.exports = {
       })
 
       this.filteredTags = filteredTagsArr;
+      this.title = this.currentTag;
     },
 
     resetFilter: function() {
@@ -162,6 +162,7 @@ module.exports = {
 
   mounted() {
     this.getAddOns();
+    this.title = this.currentTag;
   }
 }
 </script>
