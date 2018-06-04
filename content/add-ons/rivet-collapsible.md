@@ -5,6 +5,7 @@ thumbnail: "collapsible-thumbnail.jpg"
 packageName: rivet-collapsible
 repo: https://github.iu.edu/UITS/rivet-collapsible
 addOnTags:
+  - All
   - Page content
 ---
 ## Getting started

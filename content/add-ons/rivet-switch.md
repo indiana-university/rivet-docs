@@ -5,6 +5,7 @@ thumbnail: "collapsible-thumbnail.jpg"
 packageName: rivet-switch
 repo: https://github.iu.edu/UITS/rivet-switch
 addOnTags:
-  - "Forms"
+  - All
+  - Forms
 ---
 jkalsd;f

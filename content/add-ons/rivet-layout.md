@@ -5,5 +5,6 @@ thumbnail: "collapsible-thumbnail.jpg"
 packageName: rivet-layout
 repo: https://github.iu.edu/UITS/rivet-layout
 addOnTags:
+  - All
   - Layout
 ---
