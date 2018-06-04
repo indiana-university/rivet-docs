@@ -2,7 +2,7 @@
 <div>
 <div class="rvt-container rvt-container--center rvt-container--junior">
   <nav @keyup="handleKeyup($event)" class="rvtd-navbar" aria-label="Add-ons tags">
-    <ul class="rvtd-navbar__list rvt-plain-list rvt-display-flex">
+    <ul class="rvtd-navbar__list rvt-plain-list rvt-display-flex" role="tablist">
       <li
         v-for="(filter, i) in uniqueTags"
         :key="i"
@@ -13,7 +13,7 @@
           ref="navBar"
           :data-filter="filter"
           :aria-selected="currentTag === filter ? 'true' : 'false'"
-          role="button"
+          role="tab"
         >
           {{ filter }}
         </button>
@@ -99,8 +99,33 @@ module.exports = {
       this.currentTag = 'All';
     },
 
-    handleKeyup(event) {
-      console.log(this.$refs.navBar);
+    handleKeyup($event) {
+      let firstFilter = this.$refs.navBar[0];
+      let lastFilter = this.$refs.navBar[this.$refs.navBar.length - 1];
+      let currentFilter = $event.target;
+
+      let nextFilter = this.$refs.navBar.indexOf(currentFilter) + 1;
+      let previousFilter = this.$refs.navBar.indexOf(currentFilter) - 1;
+
+      // Handle moving foucs based on up or down arrow key
+      switch ($event.keyCode) {
+        // Right arrow key
+        case 39:
+
+          if (this.$refs.navBar[nextFilter] === undefined) return;
+
+          this.$refs.navBar[nextFilter].focus();
+
+          break;
+        // Right arrow key
+        case 37:
+
+          if (this.$refs.navBar[previousFilter] === undefined) return;
+
+          this.$refs.navBar[previousFilter].focus();
+
+          break;
+      }
     }
   },
 
