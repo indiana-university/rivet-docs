@@ -4,6 +4,7 @@ description: "An Expand-and-collapse widget for Rivet with accordion-like capbil
 thumbnail: "collapsible-thumbnail.jpg"
 packageName: rivet-collapsible
 repo: https://github.iu.edu/UITS/rivet-collapsible
+demo: https://github.iu.edu/pages/UITS/rivet-collapsible
 addOnTags:
   - All
   - Page content

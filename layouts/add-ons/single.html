@@ -25,7 +25,7 @@
       </div>
       <div class="rvtd-toolbar__secondary">
         <a href="{{ .Params.repo }}/archive/master.zip">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <svg role="img" alt=" " xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <title>Download</title>
             <g fill="currentColor">
               <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
@@ -37,12 +37,23 @@
         <a href="{{ .Params.repo }}" target="_blank" rel="noopener">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
+              <path d="M5,14a1,1,0,0,1-.78-.37l-4-5a1,1,0,0,1,0-1.25l4-5A1,1,0,0,1,5.78,3.63L2.28,8l3.5,4.38A1,1,0,0,1,5,14Z" />
+              <path d="M11,14a1,1,0,0,1-.78-1.62L13.72,8l-3.5-4.37a1,1,0,0,1,1.56-1.25l4,5a1,1,0,0,1,0,1.25l-4,5A1,1,0,0,1,11,14Z" />
+            </g>
+          </svg>
+          <span class="rvt-m-left-xs">Source</span>
+        </a>
+        {{ if .Params.demo }}
+        <a href="{{ .Params.demo }}" target="_blank" rel="noopener">
+          <svg role="img" alt=" " xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <g fill="currentColor">
               <path d="M10.75,15H2.25A1.25,1.25,0,0,1,1,13.75V5.25A1.25,1.25,0,0,1,2.25,4H6A1,1,0,0,1,6,6H3v7h7V10a1,1,0,0,1,2,0v3.75A1.25,1.25,0,0,1,10.75,15Z"/>
               <path d="M14.71,1.29A1,1,0,0,0,13.87,1l-.12,0H9A1,1,0,0,0,9,3h2.59L7.29,7.29A1,1,0,1,0,8.71,8.71L13,4.41V7a1,1,0,0,0,2,0V2.25a1.17,1.17,0,0,0,0-.12A1,1,0,0,0,14.71,1.29Z"/>
             </g>
           </svg>
-          <span class="rvt-m-left-xs">Github</span>
+          <span class="rvt-m-left-xs">Demo</span>
         </a>
+        {{ end }}
       </div>
     </div>
   </div>
@@ -57,7 +68,7 @@
       <div class="rvt-grid__item-4-md-up">
         <aside class="rvtd-docs-sidebar">
           <h2 class="rvt-ts--20 rvt-text-bold rvt-m-bottom-sm">Screenshot</h2>
-          <img class="rvtd-thumbnail rvtd-thumbnail--{{ range first 1 .Params.addOnTags }}{{ . | lower }}{{ end }}" src="../../img/add-ons/{{ .Params.thumbnail }}" alt="">
+          <img class="rvtd-thumbnail rvtd-thumbnail--{{ index .Params.addOnTags  1 | lower }}" src="../../img/add-ons/{{ .Params.thumbnail }}" alt="">
           <h2 class="rvt-ts--20 rvt-text-bold rvt-m-top-xxl rvt-m-bottom-sm">About Rivet Add-ons</h2>
           <p>Addons are additional plugins that are built to work along with the Rivet core components. They provide a way to add new design patterns and functionality to Rivet in a modular way.</p>
         </aside>
