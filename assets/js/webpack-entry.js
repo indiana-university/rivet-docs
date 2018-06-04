@@ -2,7 +2,7 @@
     swap vue.min out for vue if you need vue devtools
 */
 // const Vue = require('vue/dist/vue');
-const Vue = require('vue/dist/vue.min')
+const Vue = require('vue/dist/vue')
 const VeeValidate = require('vee-validate')
 Vue.use(VeeValidate);
 
@@ -54,7 +54,8 @@ new Vue({
         searchForm: require('./components/search.vue'),
         notificationsMenu: require('./components/notifications-menu.vue'),
         notificationsCenter: require('./components/notifications-center.vue'),
-        changelog: require('./components/changelog.vue')
+        changelog: require('./components/changelog.vue'),
+        addOns: require('./components/add-ons.vue')
     },
     data: {
         // Controls the toggle of the section nav menu on mobile
