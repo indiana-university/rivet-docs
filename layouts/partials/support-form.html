@@ -1,5 +1,5 @@
 <div class="rvtd-support">
-    <button class="rvt-button rvtd-support__toggle" data-modal-trigger="modal-support-form">
+    <button class="rvt-button rvtd-support__toggle" type="button" data-modal-trigger="modal-support-form">
         <span class="rvt-sr-only">Get help</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -81,7 +81,7 @@
                         <ul class="rvt-m-bottom-sm rvt-ts-14">
                             <li>URL or application name</li>
                             <li>A brief description of your issue, or question</li>
-                            <li>If its a bug/error, the steps you followed to produce the it</li>
+                            <li>If it's a bug/error, the steps you followed to produce the it</li>
                         </ul>
                         <label for="support-message">Message</label>
                         <textarea data-vv-validate-on="none" :class="{'rvt-is-invalid': errors.has('description')}" name="description" v-model='supportFormFields.description' id="support-message" v-validate="'required'" aria-describedby="description-errors"></textarea>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="rvt-modal__controls">
                     <button class="rvt-button">Send</button>
-                    <button class="rvt-button rvt-button--secondary" data-modal-close="close">Cancel</button>
+                    <button class="rvt-button rvt-button--secondary" type="button" data-modal-close="close">Cancel</button>
                 </div>
             </form>
             <div v-if='isFormSubmitted' v-cloak class="form-message rvt-p-all-lg rvt-text-center">
