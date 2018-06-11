@@ -16,7 +16,7 @@
         margin-bottom: $sm;
     }
 
-    h2, h3 {
+    h2, h3, h4 {
         margin-top: $xl;
     }
 
@@ -36,6 +36,10 @@
         margin-bottom: $lg;
         font-size: $ts-18;
         font-style: italic;
+    }
+
+    table {
+        margin-top: $lg;
     }
 
     .rvtd-lead {
