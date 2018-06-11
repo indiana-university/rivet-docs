@@ -857,10 +857,10 @@ a.button--reverse-secondary {
     &__url {
         display: flex;
         align-items: center;
-        background-color: $color-black--50;
+        background-color: #fafafa;
         margin-right: $sm;
         border-radius: $xxs;
-        border: 1px solid $color-black--100;
+        border: 1px solid $color-black--200;
         line-height: 1;
         padding-left: $sm;
         padding-right: $sm;
