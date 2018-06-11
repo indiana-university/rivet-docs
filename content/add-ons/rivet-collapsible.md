@@ -3,6 +3,7 @@ title: "Collapsible"
 description: "An Expand-and-collapse widget for Rivet with accordion-like capbilities"
 thumbnail: "collapsible-thumbnail.jpg"
 packageName: rivet-collapsible
+npm: true
 repo: https://github.iu.edu/UITS/rivet-collapsible
 demo: https://github.iu.edu/pages/UITS/rivet-collapsible
 addOnTags:
@@ -12,23 +13,18 @@ addOnTags:
 ## Getting started
 The Rivet collapsible add-on requires the use of the core Rivet CSS. You can find out more about how to get started in [the Rivet documentation](https://rivet.iu.edu/components/). Once you are using Rivet, you can download the Rivet collapsible source files and include them in your project.
 
-[Download](https://github.iu.edu/UITS/rivet-collapsible/archive/master.zip)
-
 ### 1. Include the CCS and JavaScript in your page
-```html
+{{< code lang="html" >}}
 <link rel="stylesheet" href="dist/css/rivet-collapsible.min.css">
 <script src="dist/js/rivet-collapsible.min.js"></script>
-```
+{{< /code >}}
 
 ### 2. Add the markup to your HTML
 It is possible to either show or hide the collapsible content by default. To hide the the content by default set the `aria-exapanded` attribute on the `<button>` element inside the `.rvt-collapsible__title` element to `false`, then set the `aria-hidden` attribute on the `.rvt-collapsible__content` element to "true". You can hide the collapsible content by default by doing the opposite and setting `aria-exapnded` to a value of `true` and `aria-hidden` to a value of `false`.
 
 Lastly, you need to make sure to add the `[data-collapsible]` to the button toggle element with a value that matches the `id` attribute of the content that yo uwant to exapand/collapse.
 
-```html
-<!-- Hidden by default -->
-
-<div class="rvt-collapsible">
+{{< code lang="html" >}}<div class="rvt-collapsible">
   <h1 class="rvt-collapsible__title">
     <button data-collapsible="users" aria-expanded="false">
       <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -41,16 +37,15 @@ Lastly, you need to make sure to add the `[data-collapsible]` to the button togg
     <p class="rvt-m-all-remove">Nostrum fugit a natus. Corporis voluptates ut odio omnis nobis voluptas. Est dolor et eum quis deleniti explicabo autem est magnam. Unde expedita ab quia maxime quia. Qui voluptas distinctio ipsa laborum laboriosam.</p>
   </div>
 </div>
-```
+{{< /code >}}
 
 ### 3. Initialize the add-on
 Lastly, you'll need to initialize somewhere right before the closing `</body>` tag of you page.
 
-```html
-<script>
+{{< code lang="html" >}}<script>
   Collapsible.init();
 </script>
-```
+{{< /code >}}
 
 ## Installing with NPM
 (_Coming soon..._)
