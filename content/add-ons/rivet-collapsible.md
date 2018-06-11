@@ -81,14 +81,14 @@ Once installed you can include the collapsible in your project like so:
 {{< code >}}const collapsible = require('rivet-collapsible');
 {{< /code >}}
 
-## Contolling the collapsible in your own scripts
+## JavaScript API
 The Rivet collapsible component exposes a handful of methods you can use to programmatically control the component. The `.init()` method must be called somewhere in your document after the `rivet-collapsible.js` script is included. The `init()` method attaches and event listener to the document that listens for clicks on buttons with the `data-collapsible` attribute. With that in mind you should be able to dynamically add collapsibles to the DOM without having the re-initialize the component.
 
 ### Methods
 
-| Method                               | Description                                                                                                                                                       |
+| Method| Description                                                                                                                                                       |
 |--------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `Collapsible.init()`                   | Initializes the collapsible component                                                                                                                             |
-| `Collapsible.open(collapsibleButton, callback)` | Accepts a collapsible toggle button element `[data-collapsible]` and an optional callback function that is run after the collapsible is toggled opened. |
-| `Collapsible.close(collapsibleButton, callback)` | Accepts a collapsible toggle button element `[data-collapsible]` and an optional callback function that is run after the collapsible is toggled closed. |
-| `Collapsible.destroy()`                | Destroys the current initialization of the collapsible component and removes it's event listener.                                                                 |
+| `Collapsible.init()` | Initializes the collapsible component |
+| `Collapsible.open(button, callback)` | Accepts a collapsible toggle button element `[data-collapsible]` and an optional callback function that is run after the collapsible is toggled opened. |
+| `Collapsible.close(button, callback)` | Accepts a collapsible toggle button element `[data-collapsible]` and an optional callback function that is run after the collapsible is toggled closed. |
+| `Collapsible.destroy()` | Destroys the current initialization of the collapsible component and removes it's event listener.|
