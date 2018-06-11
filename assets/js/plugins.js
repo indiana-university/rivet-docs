@@ -64,7 +64,7 @@ module.exports = {
             if (!copyButton) return;
 
             const preCopyText = 'Copy';
-            const postCopyText = 'Coppied!';
+            const postCopyText = 'Copied!';
             const successClass = 'rvt-button--success';
 
             const toggleButtonState = (buttonElement, text) => {
