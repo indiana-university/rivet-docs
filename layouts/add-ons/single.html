@@ -18,10 +18,12 @@
   <div class="rvt-container rvt-container--junior rvt-container--center">
     <div class="rvtd-toolbar">
       <div class="rvtd-toolbar__primary">
+        {{ if .Params.npm }}
         <div class="rvtd-toolbar__url">
           <span id="package-{{ .Params.packageName | md5 }}">npm install {{ .Params.packageName }}</span>
         </div>
         <button class="rvt-button rvtd-package-copy" role="button" data-clipboard-target="#package-{{ .Params.packageName | md5 }}">Copy</button>
+        {{ end }}
       </div>
       <div class="rvtd-toolbar__secondary">
         <a href="{{ .Params.repo }}/archive/master.zip">
@@ -66,12 +68,12 @@
         </div>
       </div>
       <div class="rvt-grid__item-4-md-up">
-        <aside class="rvtd-docs-sidebar">
+        <div class="rvtd-docs-sidebar">
           <h2 class="rvt-ts--20 rvt-text-bold rvt-m-bottom-sm">Screenshot</h2>
           <img class="rvtd-thumbnail rvtd-thumbnail--{{ index .Params.addOnTags  1 | lower }}" src="../../img/add-ons/{{ .Params.thumbnail }}" alt="">
           <h2 class="rvt-ts--20 rvt-text-bold rvt-m-top-xxl rvt-m-bottom-sm">About Rivet Add-ons</h2>
           <p>Addons are additional plugins that are built to work along with the Rivet core components. They provide a way to add new design patterns and functionality to Rivet in a modular way.</p>
-        </aside>
+        </div>
       </div>
     </div>
   </div>
