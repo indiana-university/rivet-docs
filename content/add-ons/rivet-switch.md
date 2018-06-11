@@ -1,8 +1,9 @@
 ---
 title: "Switch"
 description: An accessible switch component for Rivet
-thumbnail: "collapsible-thumbnail.jpg"
+thumbnail: "switches-thumbnail.png"
 packageName: rivet-switch
+npm: true
 repo: https://github.iu.edu/UITS/rivet-switch
 demo: https://github.iu.edu/pages/UITS/rivet-switch
 addOnTags:
