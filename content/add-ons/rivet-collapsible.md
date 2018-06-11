@@ -4,8 +4,8 @@ description: "An Expand-and-collapse widget for Rivet with accordion-like capbil
 thumbnail: "collapsible-thumbnail.jpg"
 packageName: rivet-collapsible
 npm: true
-repo: https://github.iu.edu/UITS/rivet-collapsible
-demo: https://github.iu.edu/pages/UITS/rivet-collapsible
+repo: https://github.com/indiana-university/rivet-collapsible
+demo: https://indiana-university.github.io/rivet-collapsible/
 addOnTags:
   - All
   - Page content
@@ -47,8 +47,39 @@ Lastly, you'll need to initialize somewhere right before the closing `</body>` t
 </script>
 {{< /code >}}
 
+## Accordion configuration
+It is possible to group two or more collapsibles into an accordion configuration by wrapping them in a containing `div` then adding the following attributes to it:
+
+- `class="rvt-collapsible-accordion"`
+- `data-accordion`
+- `role="group"`
+
+{{< code lang="html" >}}
+<div class="rvt-collapsible-accordion" data-accordion role="group">
+  <div class="rvt-collapsible">
+    <!-- Collapsible 1 markup -->
+  </div>
+  <div class="rvt-collapsible">
+    <!-- Collapsible 2 markup -->
+  </div>
+  <div class="rvt-collapsible">
+    <!-- Collapsible 3 markup -->
+  </div>
+</div>
+{{< /code >}}
+
+The `rvt-collapsible-accordion` class will add a small amount of margin between each collapsible and the `data-accordion` attribute is used as a JavaScript hook to handle keyboard navigation inside the accordion.
+
 ## Installing with NPM
-(_Coming soon..._)
+The collapsible is available to install as a dependency in your project. To install via NPM run the following in your terminal:
+
+{{< code >}}npm install rivet-collapsible --save-dev
+{{< /code >}}
+
+Once installed you can include the collapsible in your project like so:
+
+{{< code >}}const collapsible = require('rivet-collapsible');
+{{< /code >}}
 
 ## Contolling the collapsible in your own scripts
 The Rivet collapsible component exposes a handful of methods you can use to programmatically control the component. The `.init()` method must be called somewhere in your document after the `rivet-collapsible.js` script is included. The `init()` method attaches and event listener to the document that listens for clicks on buttons with the `data-collapsible` attribute. With that in mind you should be able to dynamically add collapsibles to the DOM without having the re-initialize the component.
