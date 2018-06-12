@@ -58,7 +58,7 @@ The switch component emmits custom events when it is toggled on or off. You can 
 {{< code lang="javascript" >}}// Listen for a custom "switchOn" event
 document.addEventListener('switchOn', event => {
   if (event.detail.name() == 'email-switch') {
-    alert('Okay, we\'ll send you some emails! ❤️💌❤️')
+    alert('Okay, we\'ll send you some emails!')
   }
   // Maybe send some data via an AJAX request, etc...
 }, false);
