@@ -24,7 +24,12 @@
               Previous
             </a>
           </li>
-          <li v-for="pageNumber in pages" :class="'rvt-pagination__item ' + (pageNumber-1==currentPage ? 'is-active': '')" :aria-current="(pageNumber-1==currentPage?'true':'')">
+          <li
+            v-for="(pageNumber, i) in pages"
+            :key="i"
+            :class="'rvt-pagination__item ' + (pageNumber-1==currentPage ? 'is-active': '')"
+            :aria-current="(pageNumber-1==currentPage?'true':'')"
+          >
             <a href="javascript:void(0)" :aria-label="'Page '+pageNumber" @click='gotoPage(pageNumber-1)'>{{pageNumber}}</a>
           </li>
           <li :class="'rvt-pagination__item ' + (currentPage==pages-1 ? 'is-disabled' : '')">
@@ -45,7 +50,11 @@
         </svg>
       </button>
     </div>
-    <div v-for="result in currentPageOfResults" class="rvtd-search__result rvt-m-top-sm">
+    <div
+      v-for="(result, i) in currentPageOfResults"
+      :key="i"
+      class="rvtd-search__result rvt-m-top-sm"
+    >
       <h3 class="rvtd-search__result-title">
         <a :href="baseURL + result.uri" @click="trackClick(baseURL + result.uri)">
           {{result.title}}
