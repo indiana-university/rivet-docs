@@ -747,8 +747,11 @@ a.button--reverse-secondary {
   */
 
 .rvtd-pre-header {
-    font-weight: 700;
+    align-items: center;
     color: $color-crimson;
+    display: inline-flex;
+    font-weight: 700;
+    line-height: 1.1;
     text-decoration: none;
 }
 
