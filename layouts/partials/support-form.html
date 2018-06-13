@@ -26,7 +26,7 @@
 
                     <div class="rvt-grid">
 
-                        <div class="rvt-grid__item-7-md-up">
+                        <div class="rvt-grid__item-6-md-up">
                             <label for="support-name">Name</label>
                             <input data-vv-validate-on="none" :class="{'rvt-is-invalid': errors.has('name')}" name="name" v-model='supportFormFields.name' type="text" id="support-name" v-validate="'required'" aria-describedby="name-errors">
                             <div v-cloak class="rvt-inline-alert rvt-inline-alert--is-invalid" v-if="errors.has('name')">
@@ -45,7 +45,7 @@
 
                             <div v-else id="name-errors"></div>
                         </div>
-                        <div class="rvt-grid__item-5-md-up">
+                        <div class="rvt-grid__item-6-md-up">
                             <label for="support-email">Email</label>
                             <input data-vv-validate-on="none" :class="{'rvt-is-invalid': errors.has('email')}" name="email" v-model='supportFormFields.email' type="email" id="support-email" v-validate="'required'" aria-describedby="email-errors">
 
@@ -81,7 +81,7 @@
                         <ul class="rvt-m-bottom-sm rvt-ts-14">
                             <li>URL or application name</li>
                             <li>A brief description of your issue, or question</li>
-                            <li>If it's a bug/error, the steps you followed to produce the it</li>
+                            <li>If it's a bug/error, the steps you followed to produce it</li>
                         </ul>
                         <label for="support-message">Message</label>
                         <textarea data-vv-validate-on="none" :class="{'rvt-is-invalid': errors.has('description')}" name="description" v-model='supportFormFields.description' id="support-message" v-validate="'required'" aria-describedby="description-errors"></textarea>
