@@ -11,7 +11,7 @@ addOnTags:
   - Page content
 ---
 ## Getting started
-The Rivet collapsible add-on requires the use of the core Rivet CSS. You can find out more about how to get started in [the Rivet documentation](https://rivet.iu.edu/components/). Once you are using Rivet, you can download the Rivet collapsible source files and include them in your project.
+The Rivet collapsible add-on requires the use of the core Rivet CSS. You can find out more about how to get started in [the Rivet documentation](../../components). Once you are using Rivet, you can download the Rivet collapsible source files and include them in your project.
 
 ### 1. Include the CCS and JavaScript in your page
 {{< code lang="html" >}}
@@ -21,6 +21,9 @@ The Rivet collapsible add-on requires the use of the core Rivet CSS. You can fin
 
 ### 2. Add the markup to your HTML
 It is possible to either show or hide the collapsible content by default. To hide the the content by default set the `aria-exapanded` attribute on the `<button>` element inside the `.rvt-collapsible__title` element to `false`, then set the `aria-hidden` attribute on the `.rvt-collapsible__content` element to "true". You can hide the collapsible content by default by doing the opposite and setting `aria-exapnded` to a value of `true` and `aria-hidden` to a value of `false`.
+
+#### Using headings
+The button that toggles the collapsible is wrapped in a heading element in the examples that follow. Any heading level can be used based on the heading structure of your app. Or, if a heading element doesn't make sense semantically it can be replaced with a generic `<div>` element.
 
 Lastly, you need to make sure to add the `[data-collapsible]` to the button toggle element with a value that matches the `id` attribute of the content that yo uwant to exapand/collapse.
 
