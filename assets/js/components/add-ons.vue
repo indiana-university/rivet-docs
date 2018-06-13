@@ -34,7 +34,7 @@
           <a :href="addon.permalink" class="rvtd-card__wrapper-link">
             <div class="rvtd-card">
               <figure
-                class="rvtd-thumbnail "
+                class="rvtd-thumbnail"
                 :class="addon.tags[1] ? 'rvtd-thumbnail--' +  addon.tags[1].toLowerCase() : ''">
                 <img :src="'../img/add-ons/' + addon.thumbnail" alt="">
               </figure>
