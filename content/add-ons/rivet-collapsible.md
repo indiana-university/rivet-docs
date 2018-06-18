@@ -1,7 +1,7 @@
 ---
 title: "Collapsible"
 description: "An Expand-and-collapse widget for Rivet with accordion-like capbilities"
-thumbnail: "collapsible-thumbnail.jpg"
+thumbnail: "collapsible-thumbnail.png"
 packageName: rivet-collapsible
 npm: true
 repo: https://github.com/indiana-university/rivet-collapsible
