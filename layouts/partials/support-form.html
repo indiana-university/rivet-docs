@@ -26,7 +26,7 @@
 
                     <div class="rvt-grid">
 
-                        <div class="rvt-grid__item-6-md-up">
+                        <div class="rvt-grid__item-6-md-up rvt-m-bottom-sm">
                             <label for="support-name">Name</label>
                             <input data-vv-validate-on="none" :class="{'rvt-is-invalid': errors.has('name')}" name="name" v-model='supportFormFields.name' type="text" id="support-name" v-validate="'required'" aria-describedby="name-errors">
                             <div v-cloak class="rvt-inline-alert rvt-inline-alert--is-invalid" v-if="errors.has('name')">
@@ -45,7 +45,7 @@
 
                             <div v-else id="name-errors"></div>
                         </div>
-                        <div class="rvt-grid__item-6-md-up">
+                        <div class="rvt-grid__item-6-md-up rvt-m-bottom-sm">
                             <label for="support-email">Email</label>
                             <input data-vv-validate-on="none" :class="{'rvt-is-invalid': errors.has('email')}" name="email" v-model='supportFormFields.email' type="email" id="support-email" v-validate="'required'" aria-describedby="email-errors">
 
@@ -67,7 +67,7 @@
                         </div>
                     </div>
 
-                    <div class="rvt-m-top-xl">
+                    <div class="rvt-m-top-md">
                         <p class="rvt-text-bold rvt-ts-14 rvt-display-flex rvt-vertical-center rvt-m-top-remove rvt-lh-title">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <g fill="currentColor">
