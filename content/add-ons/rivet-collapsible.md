@@ -79,9 +79,12 @@ The collapsible is available to install as a dependency in your project. To inst
 {{< code >}}npm install rivet-collapsible --save-dev
 {{< /code >}}
 
-Once installed you can include the collapsible in your project like so:
+If you are using a module bundler, you can include the collapsible in your project like so:
 
 {{< code >}}const collapsible = require('rivet-collapsible');
+
+// Initialize the plugin
+Collapsible.init();
 {{< /code >}}
 
 ## JavaScript API
