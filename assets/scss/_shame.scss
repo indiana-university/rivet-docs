@@ -935,3 +935,27 @@ a.button--reverse-secondary {
         padding-left: $xs;
     }
 }
+
+/**
+ * These could be some new potential Rivet utility classes.
+ */
+
+.rvt-flex-end {
+    justify-content: flex-end;
+}
+
+.rvt-m-left-auto {
+    margin-left: auto;
+}
+
+.rvt-button--subtle {
+    border-color: $color-black--200;
+    background-color: transparent;
+    color: $color-black;
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-action;
+        border-color: $color-action;
+    }
+}

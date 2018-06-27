@@ -24,7 +24,28 @@
 
   <div class="rvtd-subtle-wrapper">
     <div class="rvt-container rvt-container--center rvt-container--junior">
-      <h2 class="rvt-ts-23 rvt-text-bold rvt-m-bottom-xl">{{ title }}</h2>
+      <div class="rvt-display-flex rvt-vertical-center rvt-m-bottom-xl">
+        <h2 class="rvt-ts-23 rvt-text-bold">{{ title }}</h2>
+        <div class="rvt-display-flex rvt-vertical-center rvt-m-left-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <g fill="currentColor">
+              <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"/>
+              <path d="M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z"/>
+              <circle cx="8" cy="5" r="1"/>
+            </g>
+          </svg>
+          <p class="rvt-m-left-xs rvt-m-top-remove rvt-m-bottom-remove rvt-m-right-sm">Have an idea for an add-on?</p>
+          <a
+            class="rvt-button rvt-button--subtle"
+            href="https://github.com/indiana-university/rivet-add-on-boilerplate"
+            target="_blank"
+            rel="noopener"
+          >
+            Use this boilerplate
+          </a>
+        </div>
+      </div>
+
       <ul class="rvt-grid rvt-plain-list">
         <li
           v-for="(addon, i) in filteredTags"
