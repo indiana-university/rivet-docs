@@ -56,8 +56,10 @@
             <div class="rvtd-card">
               <figure
                 class="rvtd-thumbnail"
-                :class="addon.tags[1] ? 'rvtd-thumbnail--' +  addon.tags[1].toLowerCase() : ''">
-                <img :src="'../img/add-ons/' + addon.thumbnail" alt="">
+                :class="addon.tags[1] ? 'rvtd-thumbnail--' +  addon.tags[1].toLowerCase() : ''"
+              >
+                <img v-if="addon.thumbnail !== '<no value>'" :src="'../img/add-ons/' + addon.thumbnail" alt="">
+                <img v-else :src="'../img/add-ons/add-on-placeholder.jpg'" alt="">
               </figure>
               <h3 class="rvtd-card__title">{{ addon.title }}</h3>
               <p class="rvtd-card__description">{{ addon.description }}</p>

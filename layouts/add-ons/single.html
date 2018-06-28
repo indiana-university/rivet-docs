@@ -72,7 +72,11 @@
       <div class="rvt-grid__item-4-md-up">
         <div class="rvtd-docs-sidebar">
           <h2 class="rvt-ts--20 rvt-text-bold rvt-m-bottom-sm">Screenshot</h2>
+          {{ if .Params.thumbnail }}
           <img class="rvtd-thumbnail rvtd-thumbnail--{{ index .Params.addOnTags  1 | lower }}" src="../../img/add-ons/{{ .Params.thumbnail }}" alt="">
+          {{ else }}
+          <img class="rvtd-thumbnail" src="../../img/add-ons/add-on-placeholder.jpg" alt="">
+          {{ end }}
           <h2 class="rvt-ts--20 rvt-text-bold rvt-m-top-xxl rvt-m-bottom-sm">About Rivet Add-ons</h2>
           <p>Addons are additional plugins that are built to work along with the Rivet core components. They provide a way to add new design patterns and functionality to Rivet in a modular way.</p>
         </div>
