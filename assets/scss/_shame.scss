@@ -969,8 +969,12 @@ a.button--reverse-secondary {
     align-items: center;
 
     &__image {
-        width: 46px;
+        width: 2.875rem;
         margin-left: $xs;
+
+        a {
+            display: block;
+        }
 
         img {
             width: 100%;
