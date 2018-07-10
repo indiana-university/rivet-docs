@@ -959,3 +959,47 @@ a.button--reverse-secondary {
         border-color: $color-action;
     }
 }
+
+/**
+ * New UITS footer logo
+ */
+
+.rvtd-footer-logo {
+    display: flex;
+    align-items: center;
+
+    &__image {
+        width: 46px;
+        margin-left: $xs;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+.rvtd-footer__cc-logo {
+    display: block;
+}
+
+@media screen and (max-width: 1080px) {
+    .rvt-footer {
+        display: block;
+    }
+
+    .rvt-footer__aux-links {
+        display: block;
+        margin-left: 0;
+    }
+
+    .rvt-footer__aux-item {
+        display: block;
+        margin-top: .5rem;
+
+        &:after {
+            content: none;
+        }
+    }
+}
