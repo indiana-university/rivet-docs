@@ -51,6 +51,28 @@ module.exports = {
     indCheck.indeterminate = true;
   },
 
+  stickySupportForm() {
+    // Stores a reference to the support form element
+    var supportToggle = document.querySelector('.rvtd-support');
+
+    // Get the current windown size
+    var windowSize = window.innerHeight;
+
+    const checkPosition = () => {
+      var scrollPosition = window.pageYOffset;
+
+      var bodyHeight = document.body.offsetHeight;
+
+      if (Math.max(bodyHeight - (scrollPosition + windowSize), 0) < 40) {
+        supportToggle.classList.add('rvtd-support--bottom');
+      } else {
+        supportToggle.classList.remove('rvtd-support--bottom');
+      }
+    }
+
+    document.addEventListener('scroll', checkPosition, false);
+  },
+
   clipboardInit() {
     /**
      * Initialize copy to clipboard functionality for code snippets

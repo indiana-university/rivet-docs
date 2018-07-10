@@ -200,6 +200,7 @@ plugins.clipboardInit();
 plugins.createCopyright("#year");
 plugins.copyButtonConfirm("[data-clipboard-target]", 1500);
 plugins.setIndeterminate("#checkbox-indeterminate");
+plugins.stickySupportForm();
 
 // Custom analytics event tracking
 plugins.analyticsTracking();
