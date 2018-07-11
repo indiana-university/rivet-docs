@@ -1,0 +1,63 @@
+/**
+ * Overides for CC license
+ */
+
+.rvt-footer__aux-links {
+    display: flex;
+    align-items: center;
+}
+
+.rvt-footer__aux-item--no-divider {
+    margin-right: $sm;
+    &:after {
+        content: none;
+    }
+}
+
+/**
+ * New UITS footer logo
+ */
+
+.rvtd-footer-logo {
+    display: flex;
+    align-items: center;
+
+    &__image {
+        width: 2.875rem;
+        margin-left: $xs;
+
+        a {
+            display: block;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+.rvtd-footer__cc-logo {
+    display: block;
+}
+
+@media screen and (max-width: 1080px) {
+    .rvt-footer {
+        display: block;
+    }
+
+    .rvt-footer__aux-links {
+        display: block;
+        margin-left: 0;
+    }
+
+    .rvt-footer__aux-item {
+        display: block;
+        margin-top: .5rem;
+
+        &:after {
+            content: none;
+        }
+    }
+}

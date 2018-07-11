@@ -1,0 +1,24 @@
+/**
+ * Navbar currently used to filter the list of Add-ons
+ */
+.rvtd-navbar {
+    &__list-item {
+        button {
+            text-decoration: none;
+            padding: $sm;
+            display: inline-block;
+            background: none;
+            border: none;
+            color: $color-action;
+
+            &[aria-selected="true"] {
+                box-shadow: inset 0 -4px 0 0 $color-action;
+            }
+
+            &:focus {
+                outline: 2px solid $color-action;
+                outline-offset: $xxs/2;
+            }
+        }
+    }
+}
