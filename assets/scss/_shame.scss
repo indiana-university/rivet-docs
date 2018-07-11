@@ -539,22 +539,6 @@ a.button--reverse-secondary {
     line-height: 1 !important;
 }
 
-/**
- * Notifications center CTA
- */
-
-.rvt-callout {
-
-    &__cta {
-        display: inline-flex;
-        align-items: center;
-
-        span {
-            margin-right: $xs;
-        }
-    }
-}
-
 .rvt-loading {
     &__fake-heading,
     &__fake-text,
@@ -1006,4 +990,20 @@ a.button--reverse-secondary {
             content: none;
         }
     }
+}
+
+.rvtd-plain-link {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/**
+ * Overide default Rivet utility class here to make it a little
+ * lighter for now
+ */
+.rvt-border-bottom {
+    border-bottom-color: $color-black--200 !important;
 }
