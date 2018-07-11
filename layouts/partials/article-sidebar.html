@@ -8,12 +8,12 @@
     <h1 class="rvt-ts-26 rvt-text-bold rvt-flat-line-height">{{ $sidebarTitle }}</h1>
     <p>{{ $sidebarDescription }}</p>
     <div class="rvt-m-top-xxl">
-        <h2 class="rvt-text-uppercase rvt-m-bottom-sm rvt-ts-14">Recent articles</h2>
+        <h2 class="rvt-text-uppercase rvt-m-bottom-sm rvt-ts-14">Recent posts</h2>
         <ol class="rvtd-small-list rvt-plain-list">
             {{/* Set context to the current Page */}}
             {{- $currentPage := . -}}
             {{ range where .Site.Sections "Section" "blog" }}
-                {{ range .Pages }}
+                {{ range first 4 .Pages }}
                     {{/* Set context to the current Article */}}
                     {{- $currentArticle := . -}}
                     {{ if ne $currentPage.URL $currentArticle.URL }}
@@ -28,5 +28,6 @@
                 {{ end }}
             {{ end }}
         </ol>
+        <a class="rvt-button rvt-button--secondary rvt-m-top-md" href="../../blog">View all posts</a>
     </div>
 </aside>
