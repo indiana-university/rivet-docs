@@ -25,7 +25,7 @@ excludeFromStatus: true
         </tr>
         <tr>
             <th scope="row">Alpha</th>
-            <td>Use with caution. This component will change. Read more about ALPHA <a href="https://docs.google.com/document/d/1tpmFr8X8FqfZVmKGLR7u_0tbwfiYfBoiHHvv7eeCA7g/edit#heading=h.9g5rkj97omim">status in this doc</a>.</td>
+            <td>Use with caution. This component will most likely change.</td>
             <td><span class="rvt-badge rvt-badge--alpha">Alpha</span></td>
         </tr>
         <tr>
