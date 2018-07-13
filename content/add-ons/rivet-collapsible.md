@@ -6,6 +6,7 @@ packageName: rivet-collapsible
 npm: true
 repo: https://github.com/indiana-university/rivet-collapsible
 demo: https://indiana-university.github.io/rivet-collapsible/
+status: Alpha
 addOnTags:
   - All
   - Page content

@@ -6,6 +6,7 @@ packageName: rivet-icons
 npm: false
 repo: https://github.iu.edu/UITS/rivet-icons
 demo: https://codepen.io/levimcg/pen/zPmYyO
+status: Alpha
 addOnTags:
   - All
   - Page content

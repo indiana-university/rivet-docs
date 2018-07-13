@@ -6,6 +6,7 @@ thumbnail: "shell-thumbnail.png"
 npm: true
 repo: https://github.com/indiana-university/rivet-shell
 demo: https://indiana-university.github.io/rivet-shell/
+status: Alpha
 addOnTags:
   - All
   - Layout
