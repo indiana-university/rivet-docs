@@ -73,7 +73,11 @@
         <div class="rvtd-docs-sidebar">
           <h2 class="rvt-ts--20 rvt-text-bold rvt-m-bottom-sm">Screenshot</h2>
           {{ if .Params.thumbnail }}
-          <img class="rvtd-thumbnail rvtd-thumbnail--{{ index .Params.addOnTags  1 | lower }}" src="../../img/add-ons/{{ .Params.thumbnail }}" alt="">
+          <img
+            class="rvtd-thumbnail rvtd-thumbnail--{{ index .Params.addOnTags  1 | lower }}"
+            src="../../img/add-ons/{{ .Params.thumbnail }}"
+            alt="Screenshot of the {{ .Title }} Add-on displayed in a web browser"
+          >
           {{ else }}
           <img class="rvtd-thumbnail" src="../../img/add-ons/add-on-placeholder.jpg" alt="">
           {{ end }}
