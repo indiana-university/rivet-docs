@@ -8,7 +8,7 @@ excludeFromIndex: true
 ---
 Rivet Add-ons are additional plugins that are built to work along with the [Rivet core components][components-docs]. They provide a way to add new design patterns and functionality to Rivet in a modular way. Unlike new components added to the Rivet core, add-ons can be used alongside Rivet’s core components on an as-needed basis.
 
-## Whay Add-ons?
+## Why Add-ons?
 When we created Rivet we set out to build the simplest system we could. We put our focus on creating the basic building blocks used to create user interfaces and making them as flexible as possible.
 
 We know that as a design system Rivet won't necessarily have a prebuilt solution for every design problem. We know that sometimes teams at IU will need to build their own solution to solve problems specific to their app, **and that's OK**.
