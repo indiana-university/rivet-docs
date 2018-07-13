@@ -4,11 +4,12 @@
       @click.stop="toggleMenu"
       :aria-expanded="menuVisible ? 'true': 'false'"
       :class="{'rvt-notifications__toggle--has-unread' : userHasUnreadNotifications}"
+      role="button"
       class="rvt-notifications__toggle"
       ref="notificationButton"
     >
       <span class="rvt-sr-only">Show notifications</span>
-      <span class="rvt-notifications__toggle-loading" v-if="loadingNotifications">
+      <span aria-hidden="true" class="rvt-notifications__toggle-loading" v-if="loadingNotifications">
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
           <g fill="currentColor">
             <circle cx="8" cy="8" r="2"/>
@@ -17,7 +18,7 @@
           </g>
         </svg>
       </span>
-      <span v-else>
+      <span aria-hidden="true" v-else>
         <svg v-if="menuVisible" class="rvt-close-icon" role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
           <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
         </svg>
