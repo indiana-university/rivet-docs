@@ -1,7 +1,7 @@
 <template>
   <section class="rvtd-changelog" id="changelog">
     <div class="rvt-container rvt-container--junior rvt-container--center">
-      <h1 class="rvtd-section__title m-bottom-xxl">Changelog</h1>
+      <h2 class="rvtd-section__title m-bottom-xxl">Changelog</h2>
       <transition name="rvt-fade" mode="out-in">
         <div class="rvtd-changelog__list">
           <div class="rvt-grid m-top-xxl" v-if="new Date(release.created_at) > new Date('2018-01-01') && releases.length > 0" v-for="(release, index) in releases" :key="release.id">
