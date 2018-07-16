@@ -1,4 +1,4 @@
 ---
 title: Rivet Blog
-description: Some thoughts about why we built Rivet, a new design system for software at IU.
+description: Updates on new features, tutorials, and news about Rivet releases.
 ---
