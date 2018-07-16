@@ -8,7 +8,7 @@ taxonomies:
     addOnTag: addOnTags
     tag: tags
 outputs:
-    section: ["html", "json"] # All players
+    section: ["html", "json"]
 params:
     rivetVersion: 1.0.0
     tagline: "Software Design System"
