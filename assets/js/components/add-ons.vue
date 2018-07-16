@@ -9,7 +9,7 @@
           class="rvtd-navbar__list-item"
         >
           <button
-            @click="filterAddOns($event)"
+            @click.prevent="filterAddOns($event)"
             ref="navBar"
             :data-filter="filter"
             :aria-selected="currentTag === filter ? 'true' : 'false'"
