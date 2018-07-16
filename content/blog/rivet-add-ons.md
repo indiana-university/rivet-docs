@@ -6,34 +6,41 @@ tags:
     - "new component"
 excludeFromIndex: true
 ---
-Rivet Add-ons are additional plugins that are built to work along with the [Rivet core components][components-docs]. They provide a way to add new design patterns and functionality to Rivet in a modular way. Unlike new components added to the Rivet core, add-ons can be used alongside Rivet’s core components on an as-needed basis.
+Rivet Add-ons are components, plugins, and other utilities that can be included in Rivet projects on an as-needed basis.
 
 ## Why Add-ons?
-When we created Rivet we set out to build the simplest system we could. We put our focus on creating the basic building blocks used to create user interfaces and making them as flexible as possible.
+We know that Rivet won't have a ready-made solution for every design problem. Sometimes, you'll need to build your own solution to solve problems specific to your app's use case.
 
-We know that as a design system Rivet won't necessarily have a prebuilt solution for every design problem. We know that sometimes teams at IU will need to build their own solution to solve problems specific to their app, **and that's OK**.
+We've created Add-ons for a few reasons:
 
-We created this new concept of Add-ons for a few reasons:
-
-1. To make it easier to build custom or app-specific components that can then be shared back with others using Rivet
-2. To be able to release components separate from the Rivet core that are _opt-in_. This helps keep the Rivet core CSS and JavaScript small in file sizes and low in complexity.
-3. To help foster a Rivet _ecosystem_ and increase collaboration across teams in UITS.
+1. To make it easier to build use case-specific Rivet components that can be shared with other developers solving similar problems
+2. To release components separate from the Rivet core that are opt-in. This helps make Rivet flexible while keeping its core simple and lightweight.
+3. To foster a Rivet ecosystem and encourage collaboration across teams
 
 ## Using Rivet Add-ons
-We've added a new section to the Rivet documentation where you can find a current list of available Add-ons and how to use them in your project.
+We've added a new section to the Rivet website where you can find a list of available Add-ons, along with instructions on how to use Add-ons in your project.
 
-Each documentation page has links to download code needed to use the Add-on, a link to the Github repository that hosts the source code, and a demo page. If you have questions, want to report a bug, or have a feature request we ask that you create a Gtihub issue on the Add-on source repository to help us track development work.
+Each Add-on page contains: 
+
+- Links to download the code needed to use the Add-on
+- A link to the GitHub repository that hosts the Add-on's source code
+- A demo page showing a working example of the Add-on 
+
+## Creating issues for Rivet Add-ons
+If you have a question, want to report a bug, or have a feature request, create a GitHub issue on the Add-on repository.
 
 To create an issue for a Rivet Add-on:
 
-1. Got to the [Rivet Add-ons page][add-ons-page] and navigate to the documentation page for the Add-on by clicking on it in the list
-2. Click the _Source_ link in the toolbar. This will take you to the Add-ons Github repository
-3. Click the "Issues" tab and create your new issue (this will require a Github.com account)
+1. Create a [github.com](https://github.com/) account if you don't already have one
+2. Go to the [Rivet Add-ons page][add-ons-page]
+3. Open the page for the Add-on by clicking its name or screenshot in the list
+4. Click the `Source` link in the toolbar to open the Add-on's GitHub repository
+5. Click the `Issues` tab and create your new issue
 
 ## Have an idea for an Add-on?
-If you or your team has created a custom solution for an app you are working on that uses Rivet and you think it might be useful to share with other teams, we've created a Rivet [Add-on boilerplate repository][boilerplate] to help you develop your own Add-on in a standard way that will match existing Add-on design and development patterns.
+If you've created a custom Rivet component you think might be useful to other teams, we've created a Rivet [Add-on boilerplate repository][boilerplate] to help you develop your own Add-on in a way that will match the style and structure of other Add-ons.
 
-The Rivet core team is also happy to work with you with visual design, front-end development, and accesibiblity if you need help developing an Add-on. If you have a need for an Add-on you can create an issue in the [Rivet source Github repository][rivet-source] to get a conversation started about your idea.
+If you need help developing your Add-on, the Rivet core team is happy to help with visual design, front-end development, and accesibility.
 
 [components-docs]: ../../components
 [rivet-source]: https://github.iu.edu/UITS/rivet-source/issues
