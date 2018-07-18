@@ -9,6 +9,10 @@ addOnTags:
   - All
   - Tools
 ---
+## About Emmet
+
+Emmet is a text editor plugin that makes it easy to create custom code snippets that help developers improve HTML and CSS workflow. [See a demo of it in action](https://emmet.io/) on the Emmet website.
+
 ## Installing Emmet
 
 Emmet is available as a plugin for most editors, including [Visual Studio Code](https://code.visualstudio.com/docs/editor/emmet), [Atom](https://github.com/emmetio/emmet-atom#readme), and [Sublime Text](https://github.com/sergeche/emmet-sublime#readme).
