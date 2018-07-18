@@ -43,7 +43,7 @@ The Rivet switch component exposes a handful of methods you can use to programma
 
 | Method| Description|
 |--------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `Switch.init()` | Initializes the collapsible component |
+| `Switch.init()` | Initializes the switch component |
 | `Switch.on(button, callback)` | Accepts a switch button element `[data-switch]` and an optional callback function that is run after the switch is toggled on. |
 | `Switch.off(button, callback)` | Accepts a switch button element `[data-switch]` and an optional callback function that is run after the switch is toggled off. |
 
