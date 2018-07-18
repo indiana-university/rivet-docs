@@ -2,6 +2,8 @@
  * Navbar currently used to filter the list of Add-ons
  */
 .rvtd-navbar {
+    overflow-y: scroll;
+
     &__list-item {
         button {
             text-decoration: none;
@@ -10,6 +12,7 @@
             background: none;
             border: none;
             color: $color-action;
+            white-space: nowrap;
 
             &[aria-selected="true"] {
                 box-shadow: inset 0 -4px 0 0 $color-action;

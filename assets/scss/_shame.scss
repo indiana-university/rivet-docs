@@ -634,6 +634,22 @@ a.button--reverse-secondary {
     margin-left: auto;
 }
 
+/**
+ * Add-ons CTA
+ */
+
+.rvtd-add-ons-cta {
+    display: none;
+}
+
+@include mq(bp(md)) {
+    .rvtd-add-ons-cta {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+}
+
 .rvt-button--subtle {
     border-color: $color-black--200;
     background-color: transparent;
