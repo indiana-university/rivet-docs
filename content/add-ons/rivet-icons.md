@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Icons"
 description: Official Rivet SVG icon set
 thumbnail: "icons-thumbnail.png"
