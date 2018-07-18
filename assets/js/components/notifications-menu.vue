@@ -139,6 +139,7 @@ module.exports = {
     },
 
     toggleMenu() {
+      Dropdown.closeAll();
       this.menuVisible = !this.menuVisible;
     },
 
