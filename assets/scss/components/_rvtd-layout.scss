@@ -44,11 +44,11 @@
 
 @include mq(bp(md)) {
     .rvtd-sidebar {
-        flex: 0 0 18rem;
+        flex: 0 0 17.5rem;
         /**
          * Hack to  keep sidebar from ever growing wider than it should.
          */
-        min-width: 18rem;
+        min-width: 17.5rem;
         border-right: 1px solid #eaeaea;
 
         &__nav-toggle {
@@ -74,14 +74,14 @@
 
 @include mq(bp(md)) {
     .rvtd-tube {
-        max-width: calc(100% - 18rem);
+        max-width: calc(100% - 17.5rem);
         padding: $lg $xl;
     }
 }
 
 @include mq(bp(xl)) {
     .rvtd-tube {
-        max-width: calc(100% - 280px - 18rem);
+        max-width: calc(100% - 280px - 17.5rem);
     }
 }
 
