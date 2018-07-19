@@ -4,7 +4,6 @@ description: "A set of Emmet snippets for use with Rivet."
 thumbnail: "emmet-thumbnail.png"
 packageName: rivet-collapsible
 repo: https://github.com/indiana-university/rivet-emmet
-status: Alpha
 addOnTags:
   - All
   - Tools
