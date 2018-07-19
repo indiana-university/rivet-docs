@@ -62,4 +62,7 @@ To offer even more flexibility, the Rivet shell also comes with a sidebar compon
 </div>
 {{< /code >}}
 
+#### Shell sidebar on smaller screens
+The shell sidebar is hidden on screens smaller than 1080 pixels wide. You can use the [Rivet header drawer](../../components/navigation/header/#nested-navigation-inside-drawer) to display the shell sidebar navigation on smaller screens.
+
 [Shell with sidebar demo](https://indiana-university.github.io/rivet-shell/rivet-shell-sidebar/index.html)
