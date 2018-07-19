@@ -1,6 +1,6 @@
 ---
 title: "Switch"
-description: An accessible switch component for Rivet
+description: A switch component for Rivet
 thumbnail: "switch-thumbnail.png"
 packageName: rivet-switch
 npm: true
@@ -12,7 +12,7 @@ addOnTags:
   - Forms
 ---
 ## Getting started
-The Rivet switch add-on requires the use of the core Rivet CSS. You can find out more about how to get started in [the Rivet documentation](https://rivet.iu.edu/components/). Once you are using Rivet, you can download the Rivet switch source files and include them in your project.
+The Rivet switch Add-on requires the use of the core Rivet CSS. You can find out more about how to get started in [the Rivet documentation](https://rivet.iu.edu/components/). Once you are using Rivet, you can download the Rivet switch source files and include them in your project.
 
 ### Note: `closest()` polyfill
 The Rivet Switch uses the `.closest()` JavaScript method which works in all modern web browsers, but requires a small polyfill to add support for Internet Explorer 11. The main Rivet JavaScript file (`rivet.js`) already includes the `closest()` polyfill so if you are using it on your page there is no need to add it.
@@ -53,7 +53,7 @@ The Rivet switch markup uses a HTML `<button>` element. To use the switch add th
 </button>
 {{< /code >}}
 
-### 3. Initialize the add-on
+### 3. Initialize the Add-on
 Lastly, you'll need to initialize somewhere right before the closing `</body>` tag of you page.
 
 {{< code lang="html" >}}<script>

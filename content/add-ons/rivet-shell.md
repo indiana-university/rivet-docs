@@ -1,6 +1,6 @@
 ---
 title: "Shell"
-description: A configurable set of layout components for applications build using Rivet
+description: "A configurable set of layout components designed for applications using Rivet"
 packageName: rivet-shell
 thumbnail: "shell-thumbnail.png"
 npm: true
@@ -12,7 +12,7 @@ addOnTags:
   - Layout
 ---
 ## Getting started
-The Rivet shell add-on requires the use of the core Rivet CSS. You can find out more about how to get started in [the Rivet documentation](https://rivet.iu.edu/components/). Once you are using Rivet, you can download the Rivet shell source files and include them in your project.
+The Rivet shell Add-on requires the use of the core Rivet CSS. You can find out more about how to get started in [the Rivet documentation](https://rivet.iu.edu/components/). Once you are using Rivet, you can download the Rivet shell source files and include them in your project.
 
 ### 1. Include the CCS in your page
 {{< code lang="html" >}}<link rel="stylesheet" href="dist/css/rivet-shell.min.css">

@@ -1,6 +1,6 @@
 ---
 title: "Collapsible"
-description: "An Expand-and-collapse widget for Rivet with accordion-like capabilities"
+description: "An expand-and-collapse widget for Rivet"
 thumbnail: "collapsible-thumbnail.png"
 packageName: rivet-collapsible
 npm: true
@@ -12,7 +12,7 @@ addOnTags:
   - Page content
 ---
 ## Getting started
-The Rivet collapsible add-on requires the use of the core Rivet CSS. You can find out more about how to get started in [the Rivet documentation](../../components). Once you are using Rivet, you can download the Rivet collapsible source files and include them in your project.
+The Rivet collapsible Add-on requires the use of the core Rivet CSS. You can find out more about how to get started in [the Rivet documentation](../../components). Once you are using Rivet, you can download the Rivet collapsible source files and include them in your project.
 
 ### Note: `closest()` polyfill
 The Rivet Collapsible uses the `.closest()` JavaScript method which works in all modern web browsers, but requires a small polyfill to add support for Internet Explorer 11. The main Rivet JavaScript file (`rivet.js`) already includes the `closest()` polyfill so if you are using it on your page there is no need to add it.
@@ -68,7 +68,7 @@ Lastly, you need to make sure to add the `[data-collapsible]` attribute to the b
 </div>
 {{< /code >}}
 
-### 3. Initialize the add-on
+### 3. Initialize the Add-on
 Lastly, you'll need to initialize somewhere right before the closing `</body>` tag of you page.
 
 {{< code lang="html" >}}<script>
