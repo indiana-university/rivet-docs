@@ -70,7 +70,7 @@ module.exports = {
       }
     }
 
-    document.addEventListener('scroll', checkPosition, false);
+    window.addEventListener('scroll', checkPosition, false);
   },
 
   clipboardInit() {
