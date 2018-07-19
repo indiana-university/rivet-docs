@@ -4,17 +4,18 @@
 
     <!-- Drawer nav -->
     <nav class="rvt-drawer__nav" role="navigation" aria-label="resources">
-        <h3 class="ts-14 m-top-sm m-bottom-sm text-uppercase">Navigation</h3>
+        <div class="ts-14 m-top-sm m-bottom-sm text-uppercase">Navigation</div>
         <ul class="hide-on-desktop">
             <li class="has-children">
-                <a href="#" data-subnav-toggle="documentation-subnav" aria-haspopup="true" aria-expanded="false">Documentation</a>
+                <button role="button" role="button" data-subnav-toggle="documentation-subnav" aria-haspopup="true" aria-expanded="false">Documentation</button>
                 <ul id="documentation-subnav" aria-hidden="true">
                     <li><a href="{{ trim .Site.BaseURL "/" }}/components">Components</a></li>
+                    <li><a href="{{ trim .Site.BaseURL "/" }}/add-ons">Add-ons</a></li>
                     <li><a href="{{ trim .Site.BaseURL "/" }}/content-guide">Content guide</a></li>
                 </ul>
             </li>
             <li class="has-children">
-                <a href="#" data-subnav-toggle="about-subnav" aria-haspopup="true" aria-expanded="false">About Rivet</a>
+                <button role="button" data-subnav-toggle="about-subnav" aria-haspopup="true" aria-expanded="false">About Rivet</button>
                 <ul id="about-subnav" aria-hidden="true">
                     <li><a href="{{ trim .Site.BaseURL "/" }}/blog">Blog</a></li>
                     <li><a href="{{ trim .Site.BaseURL "/" }}/#roadmap">Roadmap</a></li>
@@ -23,7 +24,7 @@
             </li>
             <li><a href="/components/">Use Rivet</a></li>
         </ul>
-        <h3 class="ts-14 m-top-sm m-bottom-sm text-uppercase">Resources</h3>
+        <div class="ts-14 m-top-sm m-bottom-sm text-uppercase">Resources</div>
         <ul>
             {{ range .Site.Params.resourceLinks }}
                 <li><a {{ if ne .self true }}target="_blank"{{ end }} href="{{ .url }}">{{ .text }}</a></li>

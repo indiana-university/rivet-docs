@@ -118,7 +118,7 @@ The Rivet dropdown is flexible enough to be used with lists of navigation links,
             <ul>
                 <li>Application menus generally contain lists of buttons that are used for JavaScript-driven/in-page behavior.</li>
                 <li>Application menu items (buttons) should use the <code>role="menuitemradio"</code> when they are used to toggle JavaScript-driven fuctionality. Otherwise, buttons should use the <code>role="menuitem"</code> attribute.</li>
-                <li>To indicate the current state of an application menu item, use the <code>aria-checked="tue"</code> attribute.</li>
+                <li>To indicate the current state of an application menu item, use the <code>aria-checked="true"</code> attribute.</li>
             </ul>
         </div>
     </div>

@@ -11,10 +11,15 @@ Use the `.rvt-sr-only` utility class to visually hide content, but still leave i
 {{< /example >}}
 
 ## Visually hidden labels example
-Another practical example of when to use the the `.rvt-sr-only` utility is when you need to hide a form label from visual users, but still want it to be available to those using assistive technology.
+Another practical example of when to use the the `.rvt-sr-only` utility is when you need to hide a form label from visual users, but still want it to be available to those using assistive technology. This can be helpful when you are implementing patterns like a search bar and need to conserve space.
 
-{{< example lang="html" >}}<label for="hidden-label" class="rvt-sr-only">Hidden label</label>
-<input type="text" id="hidden-label">
+{{< example lang="html" >}}<label for="search" class="rvt-sr-only">Search</label>
+<div class="rvt-input-group">
+    <input class="rvt-input-group__input" type="text" id="search">
+    <div class="rvt-input-group__append">
+        <button class="rvt-button">Search</button>
+    </div>
+</div>
 {{< /example >}}
 
 ## Display property utilities

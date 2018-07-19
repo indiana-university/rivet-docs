@@ -61,7 +61,7 @@ index.html
         <p>We've created an Axure wireframe kit with accurate representations of all the Rivet components. Download the Axure
             kit to help you create prototypes that will translate to Rivet components.</p>
         <a
-            href="https://github.iu.edu/UITS/rivet/releases/download/v0.3.1/rivet-axure-0.3.1.rp"
+            href="https://github.iu.edu/UITS/rivet/releases/download/v1.0.0/rivet-axure-1.0.rp"
             class="rvt-button rvt-button--secondary rvt-m-top-md"
         >
             <span class="rvt-m-right-xs">Download Axure kit</span>

@@ -1,0 +1,26 @@
+main {
+    position: relative;
+}
+
+
+.rvtd-support {
+    position: fixed;
+    bottom: $md;
+    right: $md;
+    z-index: 1001;
+
+    &__toggle {
+        background-color: #079bed;
+        border-color: #079bed;
+        border-radius: 999rem;
+        box-shadow: 0 $xxs $sm rgba(#333333, .3);
+        height: 3.5rem;
+        justify-content: center;
+        padding: 0;
+        width: 3.5rem;
+    }
+}
+
+.rvtd-support--bottom {
+    bottom: $xxl;
+}

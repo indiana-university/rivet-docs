@@ -6,10 +6,10 @@ quarters:
         items:
             -
                 title: "Notifications center"
-                description: "We have added a notifications menu that we will be using to make announcements about new features and updates to Rivet."
+                description: 'We have added a <a href="./notification-center">notifications center</a> that we will be using to make announcements about new features and updates to Rivet.'
             -
                 title: "Inline validation style"
-                description: "We have totally redesigned inline form validation styles and created lots of great documentation to help implement them."
+                description: 'We have totally redesigned <a href="./components/forms/text-input/#inline-validation-states">inline form validation styles</a> and created lots of great documentation to help implement them.'
             -
                 title: "New components"
                 description: "This quarter we have added a significant amount of new components and features including: Tabs, Dropdowns, Input groups, and Segmented buttons."
@@ -19,23 +19,24 @@ quarters:
     -
         title: "Expansion and QA"
         short_title: "Q2"
-        is_current: true
+        is_complete: true
         items:
             -
                 title: "Scaling delivery"
-                description: "We will develop a model for extending Rivet (i.e., through plugins and widgets) so your software can have the same look and feel, no matter where it is delivered."
+                description: 'We will develop <a href="./add-ons">a model for extending Rivet</a> (i.e., through plugins and widgets) so your software can have the same look and feel, no matter where it is delivered.'
             -
                 title: "Design philosophy"
                 description: "We want to build on our design principles (be clear, flexible, and productive) with a design philosophy. This will turn the focus towards a comprehensive view of software, and it will give insight into the why and how of UX."
             -
                 title: "IU icons"
-                description: "A lot of designers and developers use icons in their software, but it is tough to keep them consistent. We will explore the possibility of an official IU icon set."
+                description: 'A lot of designers and developers use icons in their software, but it is tough to keep them consistent. We will explore the possibility of an <a href="https://github.iu.edu/UITS/rivet-icons">official IU icon set</a>.'
             -
                 title: "Quality assurance"
                 description: "We want to provide guidance for how you can (or should) use Rivet. We will create example patterns, templates, and use cases to help inform your decisions."
     -
         title: "Adoption and training"
         short_title: "Q3"
+        is_current: true
         items:
             -
                 title: "Third-party compliance"

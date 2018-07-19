@@ -17,7 +17,7 @@
                 {{ $currentNav := . }}
                 <li>
                     <div class="rvt-dropdown">
-                        <button class="rvt-dropdown__toggle" data-dropdown-toggle="documentation-dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="rvt-dropdown__toggle" data-dropdown-toggle="documentation-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <span class="rvt-dropdown__toggle-text">Documentation</span>
                             <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
@@ -25,13 +25,14 @@
                         </button>
                         <div class="rvt-dropdown__menu" id="documentation-dropdown" role="menu" aria-hidden="true">
                             <a href="{{ trim .Site.BaseURL "/" }}/components" {{ if eq $currentNav.URL "/components/" }}aria-current="page"{{ end }}>Components</a>
+                            <a href="{{ trim .Site.BaseURL "/" }}/add-ons" {{ if eq $currentNav.URL "/add-ons/" }}aria-current="page"{{ end }}>Add-ons</a>
                             <a href="{{ trim .Site.BaseURL "/" }}/content-guide" {{ if eq $currentNav.URL "/content-guide/" }}aria-current="page"{{ end }}>Content guide</a>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="dropdown">
-                        <button class="dropdown__toggle" data-dropdown-toggle="learn-dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="dropdown__toggle" data-dropdown-toggle="learn-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <span class="rvt-dropdown__toggle-text">About Rivet</span>
                             <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
@@ -39,7 +40,6 @@
                         </button>
                         <div class="rvt-dropdown__menu" id="learn-dropdown" role="menu" aria-hidden="true">
                             <a href="{{ trim .Site.BaseURL "/" }}/blog/" {{ if eq $currentNav.URL "/blog/" }}aria-current="page"{{ end }}>Blog</a>
-
                             <a href="{{ trim .Site.BaseURL "/" }}/#roadmap">Roadmap</a>
                             <a href="{{ trim .Site.BaseURL "/" }}/#changelog">Changelog</a>
                         </div>
@@ -61,13 +61,16 @@
                     <button
                         class="rvt-button"
                         data-dropdown-toggle="use-dropdown"
+                        role="button"
                         aria-haspopup="true"
                         aria-expanded="false"
                     >
                         <span>Use Rivet</span>
-                        <svg role="img" alt="" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-                        </svg>
+                        <span aria-hidden="true">
+                            <svg class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+                            </svg>
+                        </span>
                     </button>
                     <div
                         class="rvt-dropdown__menu rvt-dropdown__menu--right"

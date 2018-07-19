@@ -110,12 +110,12 @@ So the class `.rvt-m-top-sm` would add 16px/1rem of margin on all screen sizes t
 
 Each spacing utility class also comes with a set of modifiers that allow you to adjust spacing at different screen sizes. Take the following `div`
 
-{{< code >}}<div class="rvt-p-bottom-sm rvt-p-bottom-lg-md-up">
+{{< code >}}<div class="rvt-p-bottom-sm rvt-p-bottom-lg-up">
     ...
 </div>
 {{< /code >}}
 
-With these spacing classes applied, it would have 16px/1rem of bottom padding at all screen sizes and 32px/2rem of bottom padding on large screens (940px wide) and up.
+With these spacing classes applied, it would have 16px/1rem of bottom padding at all screen sizes and 32px/2rem of bottom padding on large screens (1080px wide) and up.
 
 ### Spacing modifiers
 
