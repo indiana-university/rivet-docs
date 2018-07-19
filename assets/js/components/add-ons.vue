@@ -63,15 +63,6 @@
               </figure>
               <h3 class="rvtd-card__title">{{ addon.title }}</h3>
               <p class="rvtd-card__description">{{ addon.description }}</p>
-              <div class="rvtd-card__meta">
-                  <span
-                    v-for="(tag, i) in addon.tags.slice(1)"
-                    :key="i"
-                    class="rvt-badge rvt-badge--secondary"
-                  >
-                    {{ tag }}
-                  </span>
-              </div>
             </div>
           </a>
         </li>
