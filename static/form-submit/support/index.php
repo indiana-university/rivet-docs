@@ -1,6 +1,6 @@
 <?php
 
-    $to = "lmcgrana@iu.edu";
+    $to = "rivet@iu.edu";
     if(isset($_POST['email']) && $_POST['email'] != "") {
         $from = $_POST['email'];
     } else {

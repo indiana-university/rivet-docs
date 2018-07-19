@@ -4,13 +4,14 @@
 @import "core/tools";
 @import "core/base";
 
-@import "libs/tippy";
-
 @import "components/rvtd-angle";
 @import "components/rvtd-article-nav";
+@import "components/rvtd-card";
 @import "components/rvtd-changelog";
 @import "components/rvtd-docs-example";
+@import "components/rvtd-footer";
 @import "components/rvtd-layout";
+@import "components/rvtd-navbar";
 @import "components/rvtd-notifications-center";
 @import "components/rvtd-notifications-menu";
 @import "components/rvtd-roadmap";
@@ -18,6 +19,7 @@
 @import "components/rvtd-search";
 @import "components/rvtd-steps";
 @import "components/rvtd-support-form";
+@import "components/rvtd-toolbar";
 @import "components/rvtd-toc";
 @import "components/rvtd-typography";
 

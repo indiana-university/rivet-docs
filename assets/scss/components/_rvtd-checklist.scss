@@ -1,0 +1,30 @@
+/**
+ * NOTE: this is not currently used, but saving style in case we need
+ * to reintroduce. We are not currently importing this partial into the
+ * main .scss entry point so it will not get compiled to CSS.
+ */
+.rvtd-check-list {
+    list-style: none;
+
+    li {
+        line-height: 1.6;
+        margin-bottom: $md;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: -$lg;
+            width: 20px;
+            height: 20px;
+            background-color: #22AF7C;
+            background-image: url('../img/checkbox-input-check.svg');
+            background-repeat: no-repeat;
+            background-size: 12px 12px;
+            background-position: 50% 50%;
+            border-radius: 50%;
+        }
+    }
+}

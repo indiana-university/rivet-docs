@@ -1,6 +1,6 @@
 ---
 title: "What is microcopy?"
-description: "Find out what micropcopy is and why it's important."
+description: "Find out what microcopy is and why it's important."
 weight: 1
 ---
 ## Defining microcopy

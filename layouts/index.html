@@ -8,7 +8,7 @@
                 <p class="rvt-ts-18-md-up white-text intro">The official release of Rivet 1.0 is here. We’ve added new components, documentation, and a migration guide to help you prepare.</p>
                 <div class="rvt-button-group">
                     <a href="./#roadmap" class="rvt-button white-fill rvt-m-top-lg"><span class="rvt-hide-md-down">View&nbsp;</span>Roadmap</a>
-                    <a href="./blog/release-1.0/" class="rvt-button rvt-button--secondary white-text white-border rvt-m-top-lg">See what’s new</a>
+                    <a href="./blog/rivet-add-ons/" class="rvt-button rvt-button--secondary white-text white-border rvt-m-top-lg">See what’s new</a>
                 </div>
             </div>
             <div class="rvt-grid__item phone">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="rvt-grid__item rvt-grid__item-5-xl-up rvt-p-all-xxl-md-up rvt-m-top-xxl-lg-up">
                     <p class="rvt-ts-23 rvt-m-bottom-lg"><strong>Familiarity</strong> is a key component of usability. With Rivet, you get a toolset for creating familiar web applications to give users a better experience.</p>
-                    <a href="./blog" class="rvt-button">Learn why we built Rivet</a>
+                    <a href="./blog/why-we-built-rivet/" class="rvt-button">Learn why we built Rivet</a>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
 
 <section class="rvtd-roadmap" id="roadmap">
     <div class="rvt-container rvt-container--junior rvt-container--center">
-        <h1 class="rvtd-section__title color-midnight">Roadmap</h1>
+        <h2 class="rvtd-section__title color-midnight">Roadmap</h2>
         <ol class="rvt-steps m-top-xxl" role="tablist" aria-label="Roadmap quarters">
             {{ range .Site.Data.roadmap.quarters }}
             <li
@@ -63,12 +63,12 @@
                 aria-labelledby="{{ .short_title }}"
             >
                 <span class="rvt-ts-14">2018</span>
-                <h2 class="rvt-ts-26 rvt-m-bottom-sm">{{ .short_title }}: <span class="rvt-text-bold">{{ .title }}</span></h2>
+                <h3 class="rvt-ts-26 rvt-m-bottom-sm">{{ .short_title }}: <span class="rvt-text-bold">{{ .title }}</span></h3>
                 <div class="rvt-grid">
                     {{ range .items }}
                         <div class="rvt-grid__item-6-md-up m-top-lg">
                             <div class="rvt-p-right-lg">
-                                <h3 class="text-bold">{{ .title }}</h3>
+                                <h4 class="text-bold">{{ .title }}</h4>
                                 <p>{{ .description | markdownify }}</p>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
         <div class="rvt-grid">
             <div class="rvt-grid__item-5-md-up m-bottom-lg p-top-xxl-lg-up">
                 <div class="rvtd-htu-example-info">
-                    <h1 class="ts-26 ts-32-md-up rvtd-section__title color-midnight">Help make Rivet better</h1>
+                    <h2 class="ts-26 ts-32-md-up rvtd-section__title color-midnight">Help make Rivet better</h2>
                     <p>We use Github issues to keep track of new component submissions, bugs, design feedback, and any other suggestions related to Rivet. If you have created a component you think would be useful to others or would like to make a suggestion, <a href="{{ .Site.Params.githubRepo }}/issues" target="_blank">let us know</a>.</p>
                     <a href="./components/information/contributing/" class="button button--secondary m-top-lg">See how you can help</a><br>
                     <a class="rvt-m-top-sm display-inline-block" href="{{ .Site.Params.githubRepo }}/issues" target="_blank" rel="noopener">Or, create an issue on Github</a>

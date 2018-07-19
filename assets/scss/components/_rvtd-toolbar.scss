@@ -1,0 +1,59 @@
+.rvtd-toolbar {
+    border-bottom: 1px solid $color-black--100;
+    padding-bottom: $sm;
+
+    &__primary {
+        display: flex;
+    }
+
+    &__url {
+        display: flex;
+        align-items: center;
+        background-color: #fafafa;
+        margin-right: $sm;
+        border-radius: $xxs;
+        border: 1px solid $color-black--200;
+        line-height: 1;
+        padding-left: $sm;
+        padding-right: $sm;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 700;
+        color: $color-black--700;
+    }
+
+    &__secondary {
+        margin-top: $md;
+        display: flex;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+
+            svg {
+                color: $color-midnight--300;
+            }
+
+            &:hover svg {
+                color: $color-action;
+            }
+        }
+
+        a:not(:last-child) {
+            margin-right: $lg;
+        }
+    }
+}
+
+@include mq(bp(md)) {
+    .rvtd-toolbar {
+        display: flex;
+
+        &__secondary {
+            margin-left: auto;
+            margin-top: 0;
+        }
+    }
+}

@@ -44,11 +44,11 @@
 
 @include mq(bp(md)) {
     .rvtd-sidebar {
-        flex: 0 0 18rem;
+        flex: 0 0 17.5rem;
         /**
          * Hack to  keep sidebar from ever growing wider than it should.
          */
-        min-width: 18rem;
+        min-width: 17.5rem;
         border-right: 1px solid #eaeaea;
 
         &__nav-toggle {
@@ -74,13 +74,127 @@
 
 @include mq(bp(md)) {
     .rvtd-tube {
-        max-width: calc(100% - 18rem);
+        max-width: calc(100% - 17.5rem);
         padding: $lg $xl;
     }
 }
 
 @include mq(bp(xl)) {
     .rvtd-tube {
-        max-width: calc(100% - 280px - 18rem);
+        max-width: calc(100% - 280px - 17.5rem);
+    }
+}
+
+.rvtd-subtle-wrapper {
+    padding: $xxl 0;
+    background-color: $color-black--50;
+    border-top: 1px solid $color-black--100;
+}
+
+/**
+ *  For the new "Learn" section of the site.
+ */
+.rvtd-article-container {
+    margin-top: $xl;
+    margin-bottom: $xxl;
+}
+
+/**
+ * Rivet blog article container styles
+ */
+
+@include mq(bp(md)) {
+    .rvtd-article-container {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
+}
+
+.rvtd-article-container--top-only {
+    margin-bottom: 0;
+}
+
+.rvtd-article-main {
+    margin-top: $xl;
+
+    p {
+        line-height: 1.6;
+    }
+
+    figcaption {
+        color: #676767;
+        font-style: italic;
+        font-size: $ts-14;
+        margin-top: 1rem;
+    }
+}
+
+/**
+ * Use on blog post single pages
+ */
+
+@include mq(bp(md)) {
+    .rvtd-article-sidebar {
+        padding-left: $md;
+    }
+}
+
+/**
+ * This is used in the add-ons section separate from the main components
+ * documentation.
+ */
+
+.rvtd-docs-tube {
+    padding-top: $xl;
+    padding-bottom: $xxl;
+}
+
+@include mq(bp(md)) {
+    .rvtd-docs-tube {
+        padding-right: $xl;
+        border-right: 1px solid $color-black--100;
+    }
+}
+
+/**
+ * Same goes for this. This refers to the sidebar in the add-ons
+ * documentation layout.
+ */
+
+.rvtd-docs-sidebar {
+    padding-top: $lg;
+    margin-bottom: $xxl;
+
+    &__screenshot {
+        border-radius: $xxs;
+    }
+}
+
+@include mq(bp(md)) {
+    .rvtd-docs-sidebar {
+        padding-left: $xs;
+    }
+}
+
+/**
+ * Theses styles refer to the the Add-on thumbnail in the sidebar of
+ * the Add-on documentation pages.
+ */
+
+.rvtd-thumbnail {
+    background-color: $bright-blue;
+    border-radius: $xxs;
+    overflow: hidden;
+
+    img {
+        display: block;
+    }
+
+    &--forms {
+        background-color: $color-alert-green;
+    }
+
+    &--layout {
+        background-color: $color-alert-orange;
     }
 }
