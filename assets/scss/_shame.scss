@@ -623,18 +623,6 @@ a.button--reverse-secondary {
 }
 
 /**
- * These could be some new potential Rivet utility classes.
- */
-
-.rvt-flex-end {
-    justify-content: flex-end;
-}
-
-.rvt-m-left-auto {
-    margin-left: auto;
-}
-
-/**
  * Add-ons CTA
  */
 
@@ -647,18 +635,6 @@ a.button--reverse-secondary {
         display: flex;
         align-items: center;
         margin-left: auto;
-    }
-}
-
-.rvt-button--subtle {
-    border-color: $color-black--200;
-    background-color: transparent;
-    color: $color-black;
-
-    &:hover {
-        color: $color-white;
-        background-color: $color-action;
-        border-color: $color-action;
     }
 }
 
