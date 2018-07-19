@@ -62,7 +62,7 @@ Lastly, you'll need to initialize somewhere right before the closing `</body>` t
 {{< /code >}}
 
 ## JavaScript API
-The Rivet switch component exposes a handful of methods you can use to programmatically control the component. The `.init()` method must be called somewhere in your document after the `rivet-switch.js` script is included. The `init()` method attaches and event listener to the document that listens for clicks on buttons with the `data-switch` attribute. With that in mind you should be able to dynamically add switches to the DOM without having the re-initialize the component.
+The Rivet switch component exposes a handful of methods you can use to programmatically control the component. The `.init()` method must be called somewhere in your document after the `rivet-switch.js` script is included. The `init()` method attaches an event listener to the document that listens for clicks on buttons with the `data-switch` attribute. With that in mind you should be able to dynamically add switches to the DOM without having the re-initialize the component.
 
 ### Methods
 
