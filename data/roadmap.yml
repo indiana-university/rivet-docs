@@ -6,10 +6,10 @@ quarters:
         items:
             -
                 title: "Notifications center"
-                description: "We have added a notifications menu that we will be using to make announcements about new features and updates to Rivet."
+                description: 'We have added a <a href="./notification-center">notifications center</a> that we will be using to make announcements about new features and updates to Rivet.'
             -
                 title: "Inline validation style"
-                description: "We have totally redesigned inline form validation styles and created lots of great documentation to help implement them."
+                description: 'We have totally redesigned <a href="./components/forms/text-input/#inline-validation-states">inline form validation styles</a> and created lots of great documentation to help implement them.'
             -
                 title: "New components"
                 description: "This quarter we have added a significant amount of new components and features including: Tabs, Dropdowns, Input groups, and Segmented buttons."
@@ -29,7 +29,7 @@ quarters:
                 description: "We want to build on our design principles (be clear, flexible, and productive) with a design philosophy. This will turn the focus towards a comprehensive view of software, and it will give insight into the why and how of UX."
             -
                 title: "IU icons"
-                description: 'A lot of designers and developers use icons in their software, but it is tough to keep them consistent. We will explore the possibility of an <a href="./add-ons/rivet-icons">official IU icon set</a>.'
+                description: 'A lot of designers and developers use icons in their software, but it is tough to keep them consistent. We will explore the possibility of an <a href="https://github.iu.edu/UITS/rivet-icons">official IU icon set</a>.'
             -
                 title: "Quality assurance"
                 description: "We want to provide guidance for how you can (or should) use Rivet. We will create example patterns, templates, and use cases to help inform your decisions."
