@@ -36,12 +36,12 @@
           </svg>
           <p class="rvt-m-left-xs rvt-m-top-remove rvt-m-bottom-remove rvt-m-right-sm">Have an idea for an add-on?</p>
           <a
-            class="rvt-button rvt-button--subtle"
+            class="rvt-button rvt-button--secondary"
             href="https://github.com/indiana-university/rivet-add-on-boilerplate"
             target="_blank"
             rel="noopener"
           >
-            Use this boilerplate
+            Download the add-on boilerplate
           </a>
         </div>
       </div>
