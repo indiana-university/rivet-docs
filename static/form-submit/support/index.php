@@ -1,5 +1,10 @@
 <?php
 
+    // check if the honeypot field is filled out. If not, send a mail.
+    if(isset($_POST['firstname']) && $_POST['firstname'] != "") {
+        echo "Message sent. Thank you!"; // not really but in case the robot is listening
+        return;
+    }
     $to = "rivet@iu.edu";
     if(isset($_POST['email']) && $_POST['email'] != "") {
         $from = $_POST['email'];

@@ -64,6 +64,7 @@ new Vue({
     notificationsLastViewedAt: null,
     quarter: null,
     isFormSubmitted: false,
+    firstname: '', // honeypot
     supportFormFields: {
       name: "",
       email: "",
@@ -148,6 +149,13 @@ new Vue({
     },
 
     supportFormHandler: function() {
+
+        // check the honeypot
+        if(this.firstname != '') {
+            this.isFormSubmitted = true;
+            return
+        }
+
       this.$validator.validateAll();
       setTimeout(
         function() {
