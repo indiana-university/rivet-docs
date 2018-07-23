@@ -22,6 +22,8 @@
         <transition name="form" mode="out-in">
             <form v-if="!isFormSubmitted" method="post" @submit.prevent="supportFormHandler" action="/form-submit/support/">
                 <div class="rvt-modal__body">
+                    <input v-model='firstname' name="firstname" type="text" id="firstname" class="rvt-display-none" />
+
                     <p class="rvt-m-top-sm rvt-m-bottom-lg "><strong>Have questions about Rivet?</strong> Use this form to submit your questions and we'll get back with you. <em>All fields are required.</em></p>
 
                     <div class="rvt-grid">
