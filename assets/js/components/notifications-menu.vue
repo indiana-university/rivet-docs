@@ -175,11 +175,13 @@ module.exports = {
   created() {
     document.addEventListener("keyup", this.escapeKeyClose);
     document.addEventListener("click", this.handleClickOutside);
+    document.addEventListener("touchend", this.handleClickOutside);
   },
   destroyed() {
     // Clean up the event listeners
     document.removeEventListener("keyup", this.escapeKeyClose);
     document.removeEventListener("click", this.handleClickOutside);
+    document.removeEventListener("touchend", this.handleClickOutside);
   },
 
   watch: {
