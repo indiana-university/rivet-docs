@@ -1,124 +1,116 @@
 .rvtd-billboard {
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006298+0,52b09d+100 */
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006298+0,52b09d+59,52b09d+100 */
-    background: rgb(0,98,152); /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(0,98,152,1) 0%, rgba(82,176,157,1) 59%, rgba(82,176,157,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0,98,152,1) 0%,rgba(82,176,157,1) 59%,rgba(82,176,157,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0,98,152,1) 0%,rgba(82,176,157,1) 59%,rgba(82,176,157,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006298', endColorstr='#52b09d',GradientType=0 ); /* IE6-9 */
-
-    background-attachment: fixed;
-    color: $color-background;
-    padding-top: $xxl;
-    padding-bottom: $xxl;
     position: relative;
-    z-index: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    padding-top: 4rem;
+
+    &:after {
+        background-color: $color-crimson;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        bottom: -2rem;
+        left: 0;
+        z-index: - map-get($z-index, z-1000);
+    }
+
+    &__content {
+        position: relative;
+        max-width: 28rem;
+    }
+
+    &__title {
+        color: $color-crimson;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: .85;
+    }
+
+    &__teaser {
+        margin-top: $xl;
+        -webkit-font-smoothing: antialiased;
+        color: $color-background;
+    }
+
+    &__cta {
+        margin-top: $sm;
+        background-color: $color-background;
+        color: $color-crimson;
+        border-color: $color-background;
+
+        &:hover {
+            background-color: $color-crimson;
+            color: $color-background;
+            border-color: $color-background;
+        }
+    }
+
+    &__image {
+        display: none;
+    }
 }
 
-@include mq(bp(md)) {
+@include mq(400px) {
     .rvtd-billboard {
-        padding-top: $xxl * 2.5;
-        padding-bottom: $xxl * 2.5;
-    }
-}
-
-.rvtd-billboard__intro {
-    text-align: center;
-}
-
-@include mq(bp(md)) {
-    .rvtd-billboard__intro {
-        text-align: center;
-        width: 70%;
-        margin: 0 auto;
-    }
-}
-
-.rvtd-billboard__intro-title {
-    margin: $md 0 $xl;
-    line-height: 1.2;
-}
-
-.rvtd-billboard__bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: url("../img/docs/uxo-hero-overlay.png");
-    background-size: cover;
-    z-index: -1;
-}
-
-.rvtd-billboard__intro-img-home {
-    position: relative;
-    max-width: 400px;
-    margin-right: auto;
-    margin-bottom: -175px;
-    margin-left: auto;
-    margin-top: $xl;
-}
-
-@include mq(bp(md)) {
-    .rvtd-billboard__intro-img-home {
-        position: absolute;
-        top: 4rem;
-        max-width: 350px;
-    }
-}
-
-@include mq(bp(lg)) {
-    .rvtd-billboard__intro-img-home {
-        position: absolute;
-        top: 0;
-        max-width: 600px;
-        margin-top: 0;
-    }
-}
-
-@include mq(bp(xl)) {
-    .rvtd-billboard__intro-img-home {
-        top: 0;
-        left: -$md;
-        max-width: 650px;
-    }
-}
-
-
-.rvtd-billboard__img-htu {
-    max-width: 400px;
-    margin-right: auto;
-    margin-bottom: -150px;
-    margin-left: auto;
-}
-
-@include mq(930px) {
-    .rvtd-billboard__img-htu {
-        position: absolute;
-        max-width: 750px;
-        left: auto;
-        margin-bottom: 0;
-        right: 0;
-        bottom: -252px;
-        z-index: 999;
-
-        img {
-            width: 100%;
+        &:after {
+            height: 190px;
+            bottom: -3rem;
         }
     }
 }
 
-.rvtd-billboard__img-feature {
-    color: $color-text;
+@include mq(bp(md)) {
+    .rvtd-billboard {
+        &__image {
+            display: block;
+            width: 350px;
+            position: absolute;
+            right: 0;
+            top: 4.45rem;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
 }
 
-@include mq(bp(md)) {
-    .rvtd-billboard__img-feature {
-        position: absolute;
-        top: 5rem;
+@include mq(1050px) {
+    .rvtd-billboard {
+        padding-top: 9rem;
+
+        &:after {
+            height: 228px;
+            bottom: -4rem;
+        }
+
+        &__title {
+            font-size: (100rem/16rem) + rem;
+            font-weight: 700;
+            line-height: .85;
+        }
+
+        &__teaser {
+            font-size: $ts-18;
+            margin-top: $xl;
+        }
+
+        &__image {
+            width: 600px;
+            top: -20px;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include mq(1380px) {
+    .rvtd-billboard {
+        margin-left: 30px;
+        margin-right: 30px;
     }
 }
