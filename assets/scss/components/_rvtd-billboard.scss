@@ -59,19 +59,28 @@
     }
 }
 
-@include mq(bp(md)) {
+@include mq(800px) {
     .rvtd-billboard {
         &__image {
             display: block;
-            width: 350px;
+            width: 400px;
             position: absolute;
             right: 0;
-            top: 4.55rem;
+            top: 2.4rem;
 
             img {
                 display: block;
                 width: 100%;
             }
+        }
+    }
+}
+
+@include mq(840px) {
+    .rvtd-billboard {
+        &__image {
+
+            right: 4rem;
         }
     }
 }
@@ -99,6 +108,7 @@
         &__image {
             width: 600px;
             top: -15px;
+            right: 0;
 
             img {
                 display: block;
