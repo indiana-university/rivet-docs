@@ -40,7 +40,7 @@ quarters:
         items:
             -
                 title: "New components"
-                description: "In Q3, we'll be focusing on adding new components and design patterns to Rivet. We've prioritized a list of the most-requested UI components and prioritized them in <a href=\"https://github.iu.edu/UITS/rivet-source/projects/2\">this project</a> so you can follow along."
+                description: "In Q3, we'll be focusing on adding new components and design patterns to Rivet. We've compiled a list of the most-requested UI components and prioritized them in <a href=\"https://github.iu.edu/UITS/rivet-source/projects/2\">this project</a> so you can follow along."
             -
                 title: "Design language"
                 description: "As Rivet becomes more mature, we'll focus less on adding new components and features and spend more time creating Rivet user guides. This quarter, we'll be working on more documentation about good design practices and how they relate to Rivet."
