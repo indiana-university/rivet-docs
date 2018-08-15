@@ -126,6 +126,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.0.0/rivet.min.css">
     <title>Rivet starter file</title>
@@ -153,7 +154,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
     </main>
     <footer class="rvt-footer m-top-xxl" role="contentinfo">
         <div class="rvt-footer__copyright-lockup">
-            <div class=rvt-footer__trident>
+            <div class="rvt-footer__trident">
                 <svg role="img" xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" aria-labelledby="footer-trident">
                     <title id="footer-trident">IU Trident Logo</title>
                     <polygon points="13.33 3.32 13.33 5.21 14.76 5.21 14.76 15.64 11.9 15.64 11.9 1.9 13.33 1.9 13.33 0 6.67 0 6.67 1.9 8.09 1.9 8.09 15.64 5.24 15.64 5.24 5.21 6.67 5.21 6.67 3.32 0 3.32 0 5.21 1.43 5.21 1.43 17.47 3.7 19.91 8.09 19.91 8.09 22.76 6.67 22.76 6.67 25.13 13.33 25.13 13.33 22.76 11.9 22.76 11.9 19.91 16.1 19.91 18.56 17.47 18.56 5.21 20 5.21 20 3.32 13.33 3.32" fill="#900"/>
