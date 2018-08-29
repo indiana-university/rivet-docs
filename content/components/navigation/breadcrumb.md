@@ -8,7 +8,7 @@ status: "Ready"
     <ol class="rvt-breadcrumbs">
         <li><a href="#"> Home </a></li>
         <li><a href="#"> Files </a></li>
-        <li aria-label="Current page">my-file.txt</li>
+        <li aria-current="page">my-file.txt</li>
     </ol>
 </nav>
 {{< /example >}}
@@ -29,7 +29,7 @@ There is also a `.rvt-breadcrumbs--call-out` modifier class that adds a small am
     <ol class="rvt-breadcrumbs rvt-breadcrumbs--call-out">
         <li><a href="#"> Home </a></li>
         <li><a href="#"> Files </a></li>
-        <li aria-label="Current page">my-file.txt</li>
+        <li aria-current="page">my-file.txt</li>
     </ol>
 </nav>
 {{< /example >}}
