@@ -1,14 +1,20 @@
 {{ define "main" }}
 <div class="rvtd-wrap">
     <div class="rvtd-sidebar">
-        <button class="rvtd-sidebar__nav-toggle button button--secondary" aria-expanded="false">
-                <span class="sr-only">Menu</span>
-                <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8">
-                    <polyline points="1 1 7 7 13 1" fill="none" stroke="#006298" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    />
+        <search-form>
+            <button
+                class="rvt-button button button--secondary rvtd-sidebar__nav-toggle"
+                role="button"
+                :aria-expanded="navIsVisible ? 'true' : 'false'"
+                aria-haspopup="true"
+                @click="toggleNav"
+            >
+                <span class="sr-only">Toggle components menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
                 </svg>
             </button>
-        <search-form></search-form>
+        </search-form>
         {{ partial "section-nav.html" .}}
     </div>
     <div class="rvtd-tube">

@@ -27,19 +27,6 @@
 .rvtd-sidebar {
     position: relative;
     background-color: $color-black--50;
-
-    &__nav-toggle {
-        position: absolute;
-        z-index: 1;
-        left: $md;
-        top: $md;
-        background-color: transparent;
-        display: block;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        padding: 0;
-    }
 }
 
 @include mq(bp(md)) {
@@ -52,10 +39,11 @@
          */
         min-width: 17.5rem;
         border-right: 1px solid #eaeaea;
+    }
 
-        &__nav-toggle {
-            display: none;
-        }
+    // HACK: this needs to override the default button display of "flex"
+    .rvtd-sidebar__nav-toggle {
+        display: none !important;
     }
 
     .rvtd-nav {
