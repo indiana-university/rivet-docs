@@ -44,7 +44,9 @@
 
 @include mq(bp(md)) {
     .rvtd-sidebar {
-        flex: 0 0 17.5rem;
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-basis: 17.5rem;
         /**
          * Hack to  keep sidebar from ever growing wider than it should.
          */
