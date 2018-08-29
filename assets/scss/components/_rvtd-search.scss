@@ -1,42 +1,27 @@
 .rvtd-search {
     position: relative;
-    padding: $md;
     background-color: $color-black--50;
     border-bottom: 1px solid #eaeaea;
 
-    &__form {
-        width: calc(100% - 3.5rem);
-        margin-left: 3.5rem;
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
+    input[type="search"] {
+        min-width: 0;
+    }
 
-        input {
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            border-right: none;
-            /**
-             * Fixes some issues with Firefox not allowing the flex
-             * children to fill up available space.
-             */
-            flex-grow: 1;
-            width: auto;
-        }
-
-        button {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            display: flex;
-            padding: 0;
-            width: 3rem;
-            justify-content: center;
-        }
+    /**
+     * HACK: This is to get around the default segmented button styles.
+     * Need to do this here because were hiding one of the buttons on
+     * larger screens.
+     */
+    &__submit {
+        border-top-right-radius: .25rem !important;
+        border-bottom-right-radius: .25rem !important;
     }
 
     &__results {
         position: absolute;
         top: 4.5rem;
-        width: 92%;
+        left: 1.5rem;
+        width: calc(100% - 3rem);
         z-index: map-get($z-index, z-300);
         border: 1px solid #eee;
         background-color: $color-background;
