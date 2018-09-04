@@ -210,6 +210,19 @@ plugins.copyButtonConfirm("[data-clipboard-target]", 1500);
 plugins.setIndeterminate("#checkbox-indeterminate");
 plugins.stickySupportForm();
 
+/**
+ * Adds a custom class to the Accessibility Requirements call out heading
+ * after the Markdown is processed.
+ */
+(function() {
+  const a11yCallout = document.querySelector('.rvtd-a11y');
+
+  if (!a11yCallout) return;
+
+  const a11yHeading =
+    a11yCallout.previousElementSibling.classList.add('rvtd-a11y-heading');
+})();
+
 // Custom analytics event tracking
 plugins.analyticsTracking();
 
