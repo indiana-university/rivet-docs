@@ -212,7 +212,9 @@ plugins.stickySupportForm();
 
 /**
  * Adds a custom class to the Accessibility Requirements call out heading
- * after the Markdown is processed.
+ * after the Markdown is processed. This is a workaround so that the
+ * "Accessibility Requirements" heading still gets generated as part of
+ * the page outline by Hugo.
  */
 (function() {
   const a11yCallout = document.querySelector('.rvtd-a11y');
