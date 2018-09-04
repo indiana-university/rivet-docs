@@ -67,7 +67,7 @@ To align the dropdown menu with the right side of the dropdown button, add the `
 </div>
 {{< /example >}}
 
-### Elements inside the drodown menu
+### Elements inside the dropdown menu
 The dropdown menu will work with either links (`<a>` tags) or buttons (`<button>` tags). The keyboard navigation implementation accounts for any focusable elements, so it will work with form controls like text inputs, textareas, and select elements as well.
 
 ### Additional dropdown elements
@@ -130,10 +130,32 @@ Use a dropdown menu when you need to give users a list of actions or links to ch
 ## When to consider something else
 Although similar to a native HTML `<select>` element, the dropdown component should not be used as a replacement inside forms. Use the select element instead when you need to give users a list of mutually exclusive choices while filling out a form.
 
-## Accessibility notes
+## Accessibility Requirements
+{{% a11y %}}
 The dropdown uses JavaScript to fully implement WAI-ARIA authoring standards for keyboard navigation within the menu. Dropdowns should be toggled using an HTML `<button>` element.
 
-The dropdown toggle needs an `aria-haspopup` attribute with a value of `true` and an `aria-expanded` attribute set initially to `false`. The `aria-haspopup` indicates to assistive technologies (AT) that the button controls a menu that will be activated. The `aria-expanded` attribute indicates to assistive technology whether or not the menu is currently open. Lastly, the dropdown menu needs an `aria-hidden` attribute initially set to `true`. This will be hidden (visually and from AT) until the menu is toggled via JavaScript.
+### Focus
+- Dropdown button and Menu options should have a visible keyboard `:focus` state
+- When escape key <kbd>Escape</kbd> is pressed and the menu is active/open, focus should be returned to the Dropdown Button associated with that menu.
+- (Optional) When focused on the last menu item, the down arrow key <kbd>&darr;</kbd> should move focus to the first menu item.
+- (Optional) When focused on the first menu item, the up arrow key <kbd>&uarr;</kbd> should move focus to the last menu item.
+
+### Labeling
+- Dropdown button has [aria-haspopup](https://w3c.github.io/aria/#aria-haspopup) set to `true`.
+- Menu has role [menu](https://w3c.github.io/aria/#menu).
+- When menu is visible, button has [aria-expanded](https://w3c.github.io/aria/#aria-expanded) set to `true`. When menu is hidden, it is set to `false`.
+- (Optional) Dropdown button has [aria-controls](https://w3c.github.io/aria/#aria-controls) attribute that refers to the Menu
+- Menu visibility should be toggled using the `aria-hidden` attribute.
+- Menu items should use the appropriate roles, states, and properties depending their functionality. [More on that here](https://w3c.github.io/aria-practices/#menu).
+
+### Keyboard navigation
+- <kbd>Enter</kbd> or <kbd>Space</kbd> = Open Menu
+- <kbd>Escape</kbd> = Close Active Menu
+- <kbd>&darr;</kbd> = Open Menu (when button focused)
+- <kbd>&uarr;</kbd><kbd>&darr;</kbd> = Cycles menu option focus
+- <kbd>Home</kbd> (Optional) = Focus first Menu item
+- <kbd>End</kbd> (Optional) = Focus last Menu item
+{{% /a11y %}}
 
 ### A note about buttons
 While it is possible to use any element as a toggle for the dropdown menu, you should always use an HTML `<button>` element. The button element was made for triggering new content within the current context or performing in-page actions. Plus, its appearance is completely styleable using CSS (so dropdown toggles don’t always need to look like the default Rivet button). **Buttons are the best and most accessible choice for toggling the dropdown menu**.
