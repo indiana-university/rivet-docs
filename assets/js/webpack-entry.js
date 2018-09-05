@@ -216,14 +216,14 @@ plugins.stickySupportForm();
  * "Accessibility Requirements" heading still gets generated as part of
  * the page outline by Hugo.
  */
-(function() {
-  const a11yCallout = document.querySelector('.rvtd-a11y');
+// (function() {
+//   const a11yCallout = document.querySelector('.rvtd-a11y');
 
-  if (!a11yCallout) return;
+//   if (!a11yCallout) return;
 
-  const a11yHeading =
-    a11yCallout.previousElementSibling.classList.add('rvtd-a11y-heading');
-})();
+//   const a11yHeading =
+//     a11yCallout.previousElementSibling.classList.add('rvtd-a11y-heading');
+// })();
 
 // Custom analytics event tracking
 plugins.analyticsTracking();

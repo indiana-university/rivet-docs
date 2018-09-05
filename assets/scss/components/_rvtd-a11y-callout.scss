@@ -1,20 +1,12 @@
 /**
  * Accessibility Requirements
  */
-.rvtd-a11y-heading {
-    font-size: $ts-26;
-    font-weight: 700;
-    color: $color-alert-green;
-    padding-bottom: $sm;
-    padding-left: $md;
-    border-left: $xs solid $color-alert-green;
-}
-
 
 .rvtd-a11y {
     border-left: $xs solid $color-alert-green;
     padding-bottom: $sm;
     padding-left: $md;
+    margin-top: $lg;
     margin-bottom: $xl;
 
     p:first-child {
@@ -46,5 +38,11 @@
         box-shadow: 0 $xxs 0 0 $color-black--100;
         border: 1px solid #ddd;
         border-radius: $xxs;
+        margin-right: $xxs;
+        margin-left: $xxs;
+
+        &:first-child {
+          margin-left: 0;
+        }
     }
 }
