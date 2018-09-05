@@ -41,9 +41,9 @@ Use a dropdown menu when you need to give users a list of actions or links to ch
 ## When to consider something else
 Although similar to a native HTML `<select>` element, the dropdown component should not be used as a replacement inside forms. Use the select element instead when you need to give users a list of mutually exclusive choices while filling out a form.
 
-## Accessibility Requirements
+## Accessibility requirements
 {{% a11y %}}
-The dropdown uses JavaScript to fully implement WAI-ARIA authoring standards for keyboard navigation within the menu. Dropdowns should be toggled using an HTML `<button>` element.
+The Rivet Dropdown is built to follow the WAI-ARIA authoring standards. It is marked up with the appropriate ARIA attributes and uses the JavaScript included in `rivet.js` to implement the keyboard navigation and focus management required to meet the [ARIA Authoring Practices](http://w3c.github.io/aria-practices/) standards. If you need to create the Dropdown functionality in another framework/library like React, Angular, etc., please ensure that it meets the following accessibility requirements.
 
 ### Focus
 - Dropdown button and Menu options should have a visible keyboard `:focus` state
