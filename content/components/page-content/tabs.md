@@ -64,12 +64,26 @@ status: "Ready"
 - If you are tempted to include a ‘More’ tab.
 - If the amount of data that would be shown on each tab is small.
 
-## Accessibility
-The Rivet tabs use JavaScript to fully implement [WAI-ARIA authoring standards](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel) for keyboard navigation. Tabs are controlled using `<button>` elements, and they should be focusable using the left and right arrow keys on the keyboard:
+## Accessibility Requirements
+{{% a11y %}}
+The Rivet Tabs are built to follow the WAI-ARIA authoring standards. It is marked up with the appropriate ARIA attributes and uses the JavaScript included in `rivet.js` to implement the keyboard navigation and focus management required to meet the [ARIA Authoring Practices](http://w3c.github.io/aria-practices/) standards. If you need to create the Tabs functionality in another framework/library like React, Angular, etc., please ensure that it meets the following accessibility requirements.
 
-- Pressing the **right arrow key on the last tab** returns to the first in the set
-- Pressing the **left arrow key on the first tab** should move focus to the last tab
-- Pressing the **tab key while focused on a tab control** should move focus on to the tab panel it controls, not to the next tab in the set.
+### Focus
+- Tabs should have a visible `:focus` state
+- Active tabs should have a visible `aria-selected="true"` state
+- Activating a tab should set its associated tab panel's `tabindex` attribute to `-1`. All in active tabs should have their `tabindex` attribute set to `0` so that after the used activates a tab, pressing <kbd>Tab</kbd> will move focus to the active tab's tab panel.
+
+### Labeling
+- Tabs should be wrapped in an element with a role of [tablist](https://www.w3.org/TR/wai-aria-1.1/#tablist).
+- Each tab (button) should have a role of [tab](https://www.w3.org/TR/wai-aria-1.1/#tab).
+- Each tab panel should have a role of [tabpanel](https://www.w3.org/TR/wai-aria-1.1/#tabpanel)
+- The active tab should have the attribute [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) set to `true`. All inactive tabs should have `aria-selected` set to `false`
+- Each `tabpanel` should have an `aria-labelledby` attribute that references its associated tab.
+
+### Keyboard navigation
+- <kbd>Enter</kbd> or <kbd>Space</kbd> = Activate tab (when focused)
+- <kbd>&larr;</kbd><kbd>&rarr;</kbd> = Moves focus to previous/next tab
+{{% /a11y %}}
 
 ## Implementation notes
 - Order tabs in a logical manner

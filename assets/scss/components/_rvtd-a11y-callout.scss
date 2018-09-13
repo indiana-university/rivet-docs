@@ -1,0 +1,48 @@
+/**
+ * Accessibility Requirements
+ */
+
+.rvtd-a11y {
+    border-left: $xs solid $color-alert-green;
+    padding-bottom: $sm;
+    padding-left: $md;
+    margin-top: $lg;
+    margin-bottom: $xl;
+
+    p:first-child {
+        margin-top: 0;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: $ts-14;
+        text-transform: uppercase;
+        letter-spacing: .025rem;
+        font-weight: 700;
+        color: $color-alert-green;
+        border-top: 1px solid #eaeaea;
+        padding-top: $md;
+        margin-top: $md;
+    }
+
+    ul {
+        margin-top: $md;
+        padding-left: $sm + .15rem;
+    }
+
+    kbd {
+        display: inline-block;
+        padding: $xxs/2 $sm;
+        box-shadow: 0 $xxs 0 0 $color-black--100;
+        border: 1px solid #ddd;
+        border-radius: $xxs;
+        margin-right: $xxs;
+        margin-left: $xxs;
+
+        &:first-child {
+          margin-left: 0;
+        }
+    }
+}
