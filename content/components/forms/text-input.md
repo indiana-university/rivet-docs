@@ -34,8 +34,8 @@ Rivet does not make any assumptions about whether you’re using server- or clie
 
 
 {{< example lang="html" >}}<label for="rvt-success-state">First name</label>
-<input type="text" id="rvt-success-state" class="rvt-is-valid" aria-describedby="first-name-message">
-<div class="rvt-inline-alert rvt-inline-alert--is-valid">
+<input type="text" id="rvt-success-state" class="rvt-validation-success" aria-describedby="first-name-message">
+<div class="rvt-inline-alert rvt-inline-alert--success">
     <span class="rvt-inline-alert__icon">
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -50,8 +50,8 @@ Rivet does not make any assumptions about whether you’re using server- or clie
 </div>
 
 <label for="rvt-warning-state" class="rvt-m-top-md">Password</label>
-<input type="text" id="rvt-warning-state" class="rvt-has-warning" aria-describedby="password-message">
-<div class="rvt-inline-alert rvt-inline-alert--has-warning">
+<input type="text" id="rvt-warning-state" class="rvt-validation-warning" aria-describedby="password-message">
+<div class="rvt-inline-alert rvt-inline-alert--warning">
     <span class="rvt-inline-alert__icon">
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -66,8 +66,8 @@ Rivet does not make any assumptions about whether you’re using server- or clie
 </div>
 
 <label for="rvt-error-state" class="rvt-m-top-md">Username</label>
-<input type="text" id="rvt-error-state" class="rvt-is-invalid" aria-describedby="username-message" aria-invalid="true">
-<div class="rvt-inline-alert rvt-inline-alert--is-invalid">
+<input type="text" id="rvt-error-state" class="rvt-validation-danger" aria-describedby="username-message" aria-invalid="true">
+<div class="rvt-inline-alert rvt-inline-alert--danger">
     <span class="rvt-inline-alert__icon">
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -82,8 +82,8 @@ Rivet does not make any assumptions about whether you’re using server- or clie
 </div>
 
 <label for="error-state" class="rvt-m-top-md">Description</label>
-<input type="text" id="error-state" class="rvt-has-info" aria-describedby="description-message">
-<div class="rvt-inline-alert rvt-inline-alert--has-info">
+<input type="text" id="error-state" class="rvt-validation-info" aria-describedby="description-message">
+<div class="rvt-inline-alert rvt-inline-alert--info">
     <span class="rvt-inline-alert__icon">
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -112,8 +112,8 @@ Rivet does not make any assumptions about whether you’re using server- or clie
 ### Textarea inline validation states
 
 {{< example lang="html" >}}<label for="textarea-success-state">Essay</label>
-<textarea type="text" id="textarea-success-state" class="rvt-is-valid" aria-describedby="essay-message"></textarea>
-<div class="rvt-inline-alert rvt-inline-alert--is-valid">
+<textarea type="text" id="textarea-success-state" class="rvt-validation-success" aria-describedby="essay-message"></textarea>
+<div class="rvt-inline-alert rvt-inline-alert--success">
     <span class="rvt-inline-alert__icon">
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -128,8 +128,8 @@ Rivet does not make any assumptions about whether you’re using server- or clie
 </div>
 
 <label for="textarea-warning-state" class="rvt-m-top-md">Response</label>
-<textarea type="text" id="textarea-warning-state" class="rvt-has-warning" aria-describedby="response-message"></textarea>
-<div class="rvt-inline-alert rvt-inline-alert--has-warning">
+<textarea type="text" id="textarea-warning-state" class="rvt-validation-warning" aria-describedby="response-message"></textarea>
+<div class="rvt-inline-alert rvt-inline-alert--warning">
     <span class="rvt-inline-alert__icon">
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -144,8 +144,8 @@ Rivet does not make any assumptions about whether you’re using server- or clie
 </div>
 
 <label for="textarea-error-state" class="rvt-m-top-md">Description</label>
-<textarea type="text" id="textarea-error-state" class="rvt-is-invalid" aria-describedby="description-message" aria-invalid="true"></textarea>
-<div class="rvt-inline-alert rvt-inline-alert--is-invalid">
+<textarea type="text" id="textarea-error-state" class="rvt-validation-danger" aria-describedby="description-message" aria-invalid="true"></textarea>
+<div class="rvt-inline-alert rvt-inline-alert--danger">
     <span class="rvt-inline-alert__icon">
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -161,8 +161,8 @@ Rivet does not make any assumptions about whether you’re using server- or clie
 </div>
 
 <label for="textarea-info-state" class="rvt-m-top-md">Message</label>
-<textarea type="text" id="textarea-info-state" class="rvt-has-info" aria-describedby="message-message"></textarea>
-<div class="rvt-inline-alert rvt-inline-alert--has-info">
+<textarea type="text" id="textarea-info-state" class="rvt-validation-info" aria-describedby="message-message"></textarea>
+<div class="rvt-inline-alert rvt-inline-alert--info">
     <span class="rvt-inline-alert__icon">
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">

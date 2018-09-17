@@ -17,15 +17,39 @@ status: "Ready"
 ### Inline validation examples
 For more info on how to use the Rivet form input validation states [see the examples in the text input section]({{< ref "components/forms/text-input.md#inline-validation-states" >}}).
 
-{{< example lang="html" >}}<label for="valid-state">Type</label>
-<select name="" id="valid-state" class="rvt-is-valid" aria-describedby="type-message">
+{{< example lang="html" >}}<label for="select-info-state">Type</label>
+<select name="" id="select-info-state" class="rvt-validation-info" aria-describedby="state-message-3">
     <option value="Steak">Choose an option...</option>
     <option value="Steak">Steak</option>
     <option value="Chops">Chops</option>
     <option value="Ribs">Ribs</option>
     <option value="Brisket">Brisket</option>
 </select>
-<div class="rvt-inline-alert rvt-inline-alert--is-valid">
+<div class="rvt-inline-alert rvt-inline-alert--info">
+    <span class="rvt-inline-alert__icon">
+        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <g fill="currentColor">
+                <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z" />
+                <path d="M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z" />
+                <circle cx="8" cy="5" r="1" />
+            </g>
+        </svg>
+    </span>
+    <span class="rvt-inline-alert__message" role="alert" id="state-message-3">
+        You must pick a
+        <strong>Type</strong> of meats.
+    </span>
+</div>
+
+<label for="valid-state" class="rvt-m-top-md">Type</label>
+<select name="" id="valid-state" class="rvt-validation-success" aria-describedby="type-message">
+    <option value="Steak">Choose an option...</option>
+    <option value="Steak">Steak</option>
+    <option value="Chops">Chops</option>
+    <option value="Ribs">Ribs</option>
+    <option value="Brisket">Brisket</option>
+</select>
+<div class="rvt-inline-alert rvt-inline-alert--success">
     <span class="rvt-inline-alert__icon">
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -41,14 +65,14 @@ For more info on how to use the Rivet form input validation states [see the exam
 </div>
 
 <label for="select-warning-state" class="rvt-m-top-md">State</label>
-<select name="" id="select-warning-state" class="rvt-has-warning" aria-describedby="type-message-2">
+<select name="" id="select-warning-state" class="rvt-validation-warning" aria-describedby="type-message-2">
     <option value="Steak">Choose an option...</option>
     <option value="Steak">Steak</option>
     <option value="Chops">Chops</option>
     <option value="Ribs">Ribs</option>
     <option value="Brisket">Brisket</option>
 </select>
-<div class="rvt-inline-alert rvt-inline-alert--has-warning">
+<div class="rvt-inline-alert rvt-inline-alert--warning">
     <span class="rvt-inline-alert__icon">
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -63,14 +87,14 @@ For more info on how to use the Rivet form input validation states [see the exam
 </div>
 
 <label for="select-error-state" class="rvt-m-top-md">Type</label>
-<select name="" id="select-error-state" class="rvt-is-invalid" aria-describedby="state-message" aria-invalid="true">
+<select name="" id="select-error-state" class="rvt-validation-danger" aria-describedby="state-message" aria-invalid="true">
     <option value="Steak">Choose an option...</option>
     <option value="Steak">Steak</option>
     <option value="Chops">Chops</option>
     <option value="Ribs">Ribs</option>
     <option value="Brisket">Brisket</option>
 </select>
-<div class="rvt-inline-alert rvt-inline-alert--is-invalid">
+<div class="rvt-inline-alert rvt-inline-alert--danger">
     <span class="rvt-inline-alert__icon">
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -80,30 +104,6 @@ For more info on how to use the Rivet form input validation states [see the exam
         </svg>
     </span>
     <span class="rvt-inline-alert__message" role="alert" id="state-message">
-        You must pick a
-        <strong>Type</strong> of meats.
-    </span>
-</div>
-
-<label for="select-info-state" class="rvt-m-top-md">Type</label>
-<select name="" id="select-info-state" class="rvt-has-info" aria-describedby="state-message-3">
-    <option value="Steak">Choose an option...</option>
-    <option value="Steak">Steak</option>
-    <option value="Chops">Chops</option>
-    <option value="Ribs">Ribs</option>
-    <option value="Brisket">Brisket</option>
-</select>
-<div class="rvt-inline-alert rvt-inline-alert--has-info">
-    <span class="rvt-inline-alert__icon">
-        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-            <g fill="currentColor">
-                <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z" />
-                <path d="M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z" />
-                <circle cx="8" cy="5" r="1" />
-            </g>
-        </svg>
-    </span>
-    <span class="rvt-inline-alert__message" role="alert" id="state-message-3">
         You must pick a
         <strong>Type</strong> of meats.
     </span>
