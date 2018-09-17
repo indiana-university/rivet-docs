@@ -97,6 +97,8 @@ The CSS classes for the spacing system use the following conventions:
 - `rvt` = namespace
 - `m`, `p` = margin, padding
 - `top`, `right`, `bottom`, `left` = the top, right, bottom, left side of the element
+- `tb-` = **Top and bottom** of the element (e.g. `rvt-m-tb-xl`)
+- `lr-` = **Left and right** of the element (e.g. `rvt-p-lr-md`)
 - `xs` = Extra Small (8px/.5rem)
 - `sm` = Small (16px/1rem)
 - `md` = Medium (24px/1.5rem)
