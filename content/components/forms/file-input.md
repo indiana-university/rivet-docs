@@ -15,7 +15,11 @@ methods:
         description: |
             - Destroys any currently initialized file inputs and removes their event listeners.
             - Accepts a optional DOM element. If no element is provided in the argument it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the `FileInput` was initialized.
-
+events:
+    -
+        title: "fileAttached"
+        description: |
+            Emitted after a user clicks on the file input and attaches/uploads a file.
 ---
 ## Custom file input example
 The custom HTML file input (`<input type="file">`) uses CSS to hide the default file input button and styles the associated `<label>` element to look like a Rivet button.
@@ -75,3 +79,7 @@ The custom file input can be used with any of Rivet's [button modifiers]({{< ref
 `FileInput.init()` is run once on page load, and initializes each `rvt-file` component that has a `data-upload` attribute.
 
 {{< apidocs type="methods" >}}{{< /apidocs >}}
+
+### Custom events
+
+{{< apidocs type="events" >}}{{< /apidocs >}}
