@@ -41,11 +41,11 @@ events:
     -
         title: "dropdownOpen"
         description: |
-            Emitted when the Dropdown is opened (using the `Dropdown.open()` method, or the `data-dropdown-toggle` attribute). The value of the modal `data-dropdown-toggle` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
+            Emitted when the Dropdown is opened (using the `Dropdown.open()` method, or the `data-dropdown-toggle` attribute). The value of the Dropdown toggle's `data-dropdown-toggle` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
     -
         title: "dropdownClose"
         description: |
-            Emitted when the Dropdown is closed (using the `Dropdown.close()` method, or the `data-dropdown-toggle` attribute). The value of the modal `data-dropdown-toggle` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
+            Emitted when the Dropdown is closed (using the `Dropdown.close()` method, or the `data-dropdown-toggle` attribute). The value of the Dropdown toggle's `data-dropdown-toggle` attribute is also passed along via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
 ---
 ## Dropdown example
 {{< example lang="html" >}}<div class="rvt-dropdown">
