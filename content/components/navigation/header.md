@@ -3,6 +3,11 @@ title: "Header"
 description: "The Rivet header has provides consistent branding and flexible navigation layout for your application."
 requiresJs: true
 status: "Ready"
+methods:
+    -
+        title: "Drawer.open(id, callback)"
+        description: |
+            - `id` - The unique id of the Drawer. This corresponds to the value `data-drawer-toggle`/`id` attributes of the Drawer you want to **open**.
 ---
 <div class="rvt-alert rvt-alert--message rvt-m-bottom-md">
     <h2 class="rvt-alert__title">Header changes in Rivet 0.5.0</h2>
@@ -395,3 +400,8 @@ If you choose to use a light gray background for your app we recommend a gray no
 
 ## Skip navigation link
 Users that browse website using a keyboard only need a fast way to skip to the main content of an application without having to tab through each navigation item. **All versions** of the Rivet header should include a skip link that is only visible when in focus. The skip link should be the first focusable element in the DOM and link via an `id` attribute to the `<main>` element of you application.
+
+## JavaScript API (Drawer)
+The Rivet header uses JavaScript to toggle the visibility of the "Drawer" that contains navigation on smaller screens. The Rivet `Drawer` JavaScript component exposes a few APIs that you can use in your own scripts.
+
+{{< apidocs type="methods" >}}{{< /apidocs >}}
