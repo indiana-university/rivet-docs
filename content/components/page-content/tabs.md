@@ -205,4 +205,4 @@ In order for the vertical tabs to function properly you will need to add the `ar
 ## JavaScript API
 If you use the appropriate data attribute/id combination in your markup, tabs will work without the need for any additional JavaScript. But if you need to control tabs programmatically, there are a handful of methods from the Rivet tabs API you can use:
 
-{{< apidocs >}}{{< /apidocs >}}
+{{< apidocs type="methods" >}}{{< /apidocs >}}

@@ -18,7 +18,7 @@ methods:
     -
         title: "Modal.open(id, callback)"
         description: |
-            - `id` - The unique id of the modal. This corresponds to the value `data-modal-trigger`/`id` attributes of the modal you want to **open**. **NOTE**: In previous versions of Rivet, the `Modal.open()` method accepted a Modal DOM Element. The `.open()` method will still work if you pass it a DOM element (the modal element itself), but **this functionality will be deprecated in the next major version of Rivet**.
+            - `id` - The unique id of the Modal. This corresponds to the value `data-modal-trigger`/`id` attributes of the modal you want to **open**. **NOTE**: In previous versions of Rivet, the `Modal.open()` method accepted a Modal DOM Element. The `.open()` method will still work if you pass it a DOM element (the modal element itself), but **this functionality will be deprecated in the next major version of Rivet**.
             - `callback` - An optional callback function that is executed after the modal is opened.
     -
         title: "Modal.close(id, callback)"
@@ -34,6 +34,16 @@ methods:
         title: "Modal.focusTrigger(id)"
         description: |
             Moves focus to the trigger (`data-modal-trigger`) that opened the currently active modal, if it exists.
+
+events:
+    -
+        title: "modalOpen"
+        description: |
+            Emitted when the Modal is opened (using the `Modal.open()` method, or the `data-modal-trigger` attribute). The value of the modal `data-modal-trigger` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
+    -
+        title: "modalClose"
+        description: |
+            Emitted when the Modal is closed (using the `Modal.close()` method, or the `data-modal-trigger` attribute). The value of the modal `data-modal-trigger` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
 ---
 ## Modal example
 {{< example lang="html" >}}<button class="rvt-button" data-modal-trigger="modal-example-basic">Open modal example</button>
@@ -162,7 +172,7 @@ Follow [UX Planet’s recommendations for modal text](https://uxplanet.org/best-
 ## JavaScript API
 If you use the appropriate data attribute/id combination in your markup, modals will work without the need for any additional JavaScript. But if you need to control the modal programmatically, there are a handful of methods from the Rivet modal’s API you can use:
 
-{{< apidocs >}}{{< /apidocs >}}
+{{< apidocs type="methods" >}}{{< /apidocs >}}
 
 ### Managing focus
 When a modal is triggered using the default data attribute method via a click event on the modal trigger (`data-modal-trigger`), the modal script will store a reference to the element that triggered it, and return focus to that element when the modal is closed.
@@ -173,3 +183,21 @@ When a modal is triggered using the default data attribute method via a click ev
     Modal.focusTrigger('my-modal-id');
 });
 {{< /code >}}
+
+### Custom Events
+The Rivet Modal also emits various custom events that you can listen for in your own scripts.
+
+{{< apidocs type="events" >}}{{< /apidocs >}}
+
+#### Custom event example
+Note here that the `event.detail.name()` property of the `customEvent` object is a function that returns a String. Read more about custom events on the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent).
+
+{{< code lang="js" >}}// Listen for a custom "modalOpen" event
+document.addEventListener('modalOpen', event => {
+  if (event.detail.name() === 'my-modal') {
+    alert('Hey, you opened the modal!')
+  }
+  // Maybe send some data via an AJAX request, etc...
+}, false);
+{{< /code >}}
+

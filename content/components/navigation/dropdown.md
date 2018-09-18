@@ -198,4 +198,4 @@ The Dropdown JavaScript exposes a couple of methods to use in your own scripts. 
 ### Available methods
 Here's a breakdown of the available Dropdown methods you can use in your scripts.
 
-{{< apidocs >}}{{< /apidocs >}}
+{{< apidocs type="methods" >}}{{< /apidocs >}}

@@ -255,7 +255,3 @@ The Rivet alert component comes with a couple of methods you can use to programm
 
 {{< apidocs type="methods" >}}{{< /apidocs >}}
 
-#### Custom Events
-
-{{< apidocs type="events" >}}{{< /apidocs >}}
-
