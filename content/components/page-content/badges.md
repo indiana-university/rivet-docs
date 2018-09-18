@@ -5,18 +5,18 @@ status: "Ready"
 ---
 ## Default Badges
 {{< example lang="html" >}}<span class="rvt-badge">Base</span>
-<span class="rvt-badge rvt-badge--info">Action</span>
+<span class="rvt-badge rvt-badge--info">Info</span>
 <span class="rvt-badge rvt-badge--success">Success</span>
 <span class="rvt-badge rvt-badge--warning">Warning</span>
-<span class="rvt-badge rvt-badge--danger">Error</span>
+<span class="rvt-badge rvt-badge--danger">Danger</span>
 {{< /example >}}
 
 ## Secondary badges
 {{< example lang="html" >}}<span class="rvt-badge rvt-badge--secondary">Base</span>
-<span class="rvt-badge rvt-badge--info-secondary">Action</span>
+<span class="rvt-badge rvt-badge--info-secondary">Info</span>
 <span class="rvt-badge rvt-badge--success-secondary">Success</span>
 <span class="rvt-badge rvt-badge--warning-secondary">Warning</span>
-<span class="rvt-badge rvt-badge--danger-secondary">Error</span>
+<span class="rvt-badge rvt-badge--danger-secondary">Danger</span>
 {{< /example >}}
 
 ## When to use
