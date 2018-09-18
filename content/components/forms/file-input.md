@@ -3,6 +3,19 @@ title: "File input"
 description: "A custom HTML file input that is styled to look like Rivet buttons"
 requiresJs: true
 status: "Ready"
+methods:
+    -
+        title: "FileInput.init(context)"
+        description: |
+            - Initializes the `FileInput` component
+            - Accepts an optional DOM element (`context`). If no element is provided in the argument it defaults to the `document` element.
+            - NOTE: the `init()` method is called automatically when `rivet.js` is loaded.
+    -
+        title: "FileInput.destroy(context)"
+        description: |
+            - Destroys any currently initialized file inputs and removes their event listeners.
+            - Accepts a optional DOM element. If no element is provided in the argument it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the `FileInput` was initialized.
+
 ---
 ## Custom file input example
 The custom HTML file input (`<input type="file">`) uses CSS to hide the default file input button and styles the associated `<label>` element to look like a Rivet button.
@@ -61,4 +74,4 @@ The custom file input can be used with any of Rivet's [button modifiers]({{< ref
 ## File input javascript
 `FileInput.init()` is run once on page load, and initializes each `rvt-file` component that has a `data-upload` attribute.
 
-Please note: if file input components are dynamically added to the page with javascript, you should run `FileInput.init()` after they are inserted.
+{{< apidocs >}}{{< /apidocs >}}

@@ -3,6 +3,23 @@ title: "Tabs"
 description: "Use tabs to allow users to switch between logical chunks of content without having to leave the current page."
 requiresJs: true
 status: "Ready"
+methods:
+    -
+        title: "Tabs.init(context)"
+        description: |
+            - Initializes the `Tabs` component
+            - Accepts an optional DOM element. If no element is provided in the argument it defaults to the `document` element.
+            - NOTE: the `init()` method is called automatically when `rivet.js` is loaded.
+    -
+        title: "Tabs.destroy(context)"
+        description: |
+            - Destroys any currently initialized tabs and removes their event listeners.
+            - Accepts a optional DOM element. If no element is provided in the argument it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the Tabs were initialized.
+    -
+        title: "Tabs.activateTab(id, callback)"
+        description: |
+            - `id` - The unique id of the tab that you want to active. The value of the `id` argument should be the value of the `data-tab` attribute which corresponds to the `id` attribute of the tab panel it controls.
+            - `callback` - An optional callback that is executed after the tab is activated.
 ---
 ## Default tabs example
 {{< example lang="html" >}}<div class="rvt-tabs">
@@ -184,3 +201,8 @@ In order for the vertical tabs to function properly you will need to add the `ar
     </div>
 </div>
 {{< /example >}}
+
+## JavaScript API
+If you use the appropriate data attribute/id combination in your markup, tabs will work without the need for any additional JavaScript. But if you need to control tabs programmatically, there are a handful of methods from the Rivet tabs API you can use:
+
+{{< apidocs >}}{{< /apidocs >}}

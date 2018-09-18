@@ -3,6 +3,37 @@ title: "Modals"
 description: "A modal is a smaller window that is displayed on top of the main application/site window. The main page is still visible but, the background is darkened to direct focus to the content of the modal window."
 requiresJs: true
 status: "Ready"
+methods:
+    -
+        title: "Modal.init(context)"
+        description: |
+            - Initializes the `Modal` component
+            - Accepts an optional DOM element. If no element is provided in the argument it defaults to the `document` element.
+            - NOTE: the `init()` method is called automatically when `rivet.js` is loaded.
+    -
+        title: "Modal.destroy(context)"
+        description: |
+            - Destroys any currently initialized Modals and removes their event listeners.
+            - Accepts a optional DOM element. If no element is provided in the argument it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the Modal was initialized.
+    -
+        title: "Modal.open(id, callback)"
+        description: |
+            - `id` - The unique id of the modal. This corresponds to the value `data-modal-trigger`/`id` attributes of the modal you want to **open**. **NOTE**: In previous versions of Rivet, the `Modal.open()` method accepted a Modal DOM Element. The `.open()` method will still work if you pass it a DOM element (the modal element itself), but **this functionality will be deprecated in the next major version of Rivet**.
+            - `callback` - An optional callback function that is executed after the modal is opened.
+    -
+        title: "Modal.close(id, callback)"
+        description: |
+            - `id` - The unique id of the modal. This corresponds to the value `data-modal-trigger`/`id` attributes of the modal you want to **close**.
+            - `callback` - An optional callback function that is executed after the modal is opened.
+            - **NOTE**: In previous versions of Rivet, the `Modal.close()` method accepted a Modal DOM Element. The `.close()` method will still work if you pass it a DOM element (the Modal element itself), but **this functionality will be deprecated in the next major version of Rivet**.
+    -
+        title: "Modal.focusModal(id)"
+        description: |
+            Moves focus the currently active/open modal. This is a helper method that can be used to focus modals that have been opened programmatically via the `Modal.open()` method. It takes one argument, the unique id (String) of the modal you wan to move focus to. This method can be used as the callback to the `Modal.open()` method to move focus to the modal after it has been opened via your own scripts.
+    -
+        title: "Modal.focusTrigger(id)"
+        description: |
+            Moves focus to the trigger (`data-modal-trigger`) that opened the currently active modal, if it exists.
 ---
 ## Modal example
 {{< example lang="html" >}}<button class="rvt-button" data-modal-trigger="modal-example-basic">Open modal example</button>
@@ -22,7 +53,7 @@ status: "Ready"
         </div>
         <div class="rvt-modal__controls">
             <button class="rvt-button">OK</button>
-            <button class="rvt-button rvt-button--secondary" data-modal-close="close">Cancel</button>
+            <button class="rvt-button rvt-button--secondary" data-modal-close="modal-example-basic">Cancel</button>
         </div>
         <button class="rvt-button rvt-modal__close" data-modal-close="close">
             <span class="rvt-sr-only">Close</span>
@@ -65,7 +96,7 @@ To use the modal component you'll need to do a few things. First, add the markup
 <div class="rvt-modal" id="my-modal-id">
     modal markup here...
 
-    <button class="rvt-button rvt-button--plain rvt-modal__close" data-modal-close="close">
+    <button class="rvt-button rvt-button--plain rvt-modal__close" data-modal-close="my-modal-id">
         button markup here...
     </button>
 </div>
@@ -73,7 +104,7 @@ To use the modal component you'll need to do a few things. First, add the markup
 
 In the code above, `my-modal-id` should correspond to the `id` attribute on the the `.rvt-modal` container and the `data-modal-trigger` attribute on a `<button>` element that triggers the modal.
 
-The `data-modal-close="close"` attribute is used as a hook to close the modal. You can add the `data-modal-close` attribute to other buttons in the modal like a "**Cancel**" button if you need to allow users other options for closing the modal.
+The `data-modal-close` attribute is used as a hook to close the modal. You can add the `data-modal-close` attribute to other buttons in the modal like a "**Cancel**" button if you need to allow users other options for closing the modal. The value of `data-modal-close` should be the same as the `id` attribute of the modal it closes.
 
 Multiple modals can be placed on the same page, as long as each has a unique `id` and corresponding `data-modal-trigger` element.
 
@@ -103,7 +134,7 @@ A modal dialog is similar to a regular modal except that **it requires the user 
         </div>
         <div class="rvt-modal__controls">
             <button class="rvt-button">Yes</button>
-            <button class="rvt-button rvt-button--secondary" data-modal-close="close">No, thanks</button>
+            <button class="rvt-button rvt-button--secondary" data-modal-close="modal-dialog-example">No, thanks</button>
         </div>
     </div>
 </div>
@@ -128,65 +159,17 @@ Follow [UX Planet’s recommendations for modal text](https://uxplanet.org/best-
 - The button that launches the modal should clearly describe the action (“Submit feedback”)
 - Use the launch button text as the modal title. This reminds the user what to do, within the context of the overall page.
 
-## Modal JavaScript
+## JavaScript API
 If you use the appropriate data attribute/id combination in your markup, modals will work without the need for any additional JavaScript. But if you need to control the modal programmatically, there are a handful of methods from the Rivet modal’s API you can use:
 
-<table>
-    <caption class="sr-only">Modal JavaScript methods</caption>
-    <thead>
-        <tr>
-            <th scope="col">Method</th>
-            <th scope="col">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td width="250">
-                <code>Modal.init(element)</code>
-            </td>
-            <td>
-                <ul>
-                    <li>Initializes and modals found on the page.</li>
-                    <li>Accepts a DOM element. If no element is provided in the argument it defaults to the <code>document</code> element.</li>
-                    <li><code>.init()</code> function is called on the initial load of <code>rivet.js</code> initializing all modals it finds in the DOM.</li>
-                    <li>Each time a new modal is added to the DOM (without a page releoad) the <code>.init()</code> method function will need to be called again to re-initiallize all the modals.</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td><code>Modal.open(modal)</code></td>
-            <td>
-                The <code>.open()</code> method can be used to programatically open a modal in your JavaScript. It accepts one argument, the modal you want to open.
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <code>Modal.close(modal)</code>
-            </td>
-            <td>
-                The <code>.close()</code> method can be used to close any modal that is currently open. It accepts one argument, the modal that you want to close.
-            </td>
-        </tr>
-    </tbody>
-</table>
+{{< apidocs >}}{{< /apidocs >}}
 
-### Open modal example
-{{< code lang="javascript" >}}// Find the modal you want to open in the DOM
-const modalToOpen = document.querySelector('#my-rivet-modal');
+### Managing focus
+When a modal is triggered using the default data attribute method via a click event on the modal trigger (`data-modal-trigger`), the modal script will store a reference to the element that triggered it, and return focus to that element when the modal is closed.
 
-// Open the modal
-Modal.open(modalToOpen);
-{{< /code >}}
+**Please note**: If you open the modal programmatically using `Modal.open()` based on some other event, it is your responsibility to return focus to the appropriate element after the modal is closed. The `.focusTrigger()` method can be combined with the `.close()` method's callback function to accomplish this.
 
-### Close modal example
-
-When a modal is triggered using the default data attribute method, the modal script will store a reference to the element that triggered it. Then it’ll return focus to that element when the modal is closed.
-
-Please note: If you open the modal programmatically using `Modal.open()` based on some other event, it is your responsibility to set focus to the appropriate element after the modal is closed.
-
-{{< code lang="javascript" >}}// Find the modal you want to open in the DOM
-const modalToClose = document.querySelector('#my-rivet-modal');
-
-// Open the modal
-Modal.close(modalToClose);
+{{< code lang="javascript" >}}Modal.close('my-modal-id', function() {
+    Modal.focusTrigger('my-modal-id');
+});
 {{< /code >}}

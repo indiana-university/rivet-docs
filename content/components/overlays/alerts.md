@@ -3,6 +3,28 @@ title: "Alerts"
 description: "Alerts are used to display brief important messages to users. They are designed to attract the user’s attention, but not interrupt their work."
 requiresJs: true
 status: "Ready"
+methods:
+    -
+        title: "Alert.init(context)"
+        description: |
+             - Initializes the `Alert` component
+             - Accepts an optional DOM element. If no element is provided in the argument it defaults to the `document` element.
+             - NOTE: the `init()` method is called automatically when `rivet.js` is loaded.
+    -
+        title: "Alert.destroy(context)"
+        description: |
+            - Destroys any currently initialized Alerts and removes their event listeners.
+            - Accepts a optional DOM element. If no element is provided in the argument it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the Alert was initialized.
+    -
+        title: "Alert.dismiss(id, callback)"
+        description: |
+            - `id` - The unique id (String) of the Alert you want to dismiss.
+            - `callback` - An optional function that gets executed after the alert is dismissed
+            - **NOTE**: In previous versions of Rivet, the `Alert.dismiss()` method accepted a Alert DOM Element. The `.dismiss()` method will still work if you pass it a DOM element (the Alert element itself), but **this functionality will be deprecated in the next major version of Rivet**.
+events:
+    -
+        title: "alertDismissed"
+        description: "A custom event that is emitted after an alert is dismissed"
 ---
 ## Page-level alerts
 {{< example lang="html" >}}<div class="rvt-alert rvt-alert--info rvt-m-bottom-md" role="alertdialog" aria-labelledby="information-alert-title">
@@ -227,33 +249,13 @@ See the [content guide section](/content-guide) for additional information.
 - Write helpful alert messages. For errors, Include a brief description of the problem and how to fix it. Check out the Voice and tone/microcopy section for more information.
 
 ## JavaScript API
-The Rivet alert component comes with a couple of methods you can use to programmatically control alerts. The `.init()` method is called by default the first `rivet.js` is loaded. You can dismiss alerts using the `.rvt-alert__dismiss` button, or use the `Alert.dismiss()` method in your own script. An event listener is attached to the `document` that listens for clicks on `.rvt-aler__dismiss` buttons after the Alert component is initialized. With that in mind you should be able to dynamically add dismissable alerts to the DOM without having the re-initialize the component.
+The Rivet alert component comes with a couple of methods you can use to programmatically control alerts. The `.init()` method is called by default the first `rivet.js` is loaded. You can dismiss alerts using the `.rvt-alert__dismiss` button, or use the `Alert.dismiss()` method in your own script.
 
-<table>
-    <caption class="sr-only">Alert javascript methods</caption>
-    <thead>
-        <tr>
-            <th scope="col">Method</th>
-            <th scope="col">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td width="250">
-                <code>Alert.init()</code>
-            </td>
-            <td>
-                Initializes the Alert component.
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <code>Alert.dismiss(alert)</code>
-            </td>
-            <td>
-                Accepts a DOM elemnt (the alert) and removes it from the DOM.
-            </td>
-        </tr>
-    </tbody>
-</table>
+### Available methods
+
+{{< apidocs type="methods" >}}{{< /apidocs >}}
+
+#### Custom Events
+
+{{< apidocs type="events" >}}{{< /apidocs >}}
 

@@ -3,6 +3,40 @@ title: "Dropdown"
 description: "Use the dropdown component to create a list of menu options that can be toggled with a button element."
 requiresJs: true
 status: "Ready"
+methods:
+    -
+        title: "Dropdown.init(context)"
+        description: |
+            - Initializes the `Dropdown` component
+            - Accepts an optional DOM element. If no element is provided in the argument it defaults to the `document` element.
+            - NOTE: the `init()` method is called automatically when `rivet.js` is loaded.
+    -
+        title: "Dropdown.destroy(context)"
+        description: |
+            - Destroys any currently initialized dropdowns and removes their event listeners.
+            - Accepts a optional DOM element. If no element is provided in the argument it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the Dropdown was initialized.
+    -
+        title: "Dropdown.open(id, callback)"
+        description: |
+            - `id` - The unique id of the dropdown. This corresponds to the value `data-dropdown-toggle`/`id` attributes of the dropdown you want to **open**.
+            - `callback` - An optional callback function that is executed after the dropdown is opened.
+    -
+        title: "Dropdown.close(id, callback)"
+        description: |
+            - `id` - The unique id of the dropdown. This corresponds to the value `data-dropdown-toggle`/`id` attributes of the dropdown you want to **close**.
+            - `callback` - An optional callback function that is executed after the dropdown is closed.
+    -
+        title: "Dropdown.toggle(id, callback)"
+        description: |
+            - Sets the Dropdown to the whatever is the **opposite** of it's current state. For example, if it is open/visible, calling the `Dropdown.toggle(id)` method will close the dropdown it's called on and vice versa.
+            - `id` the unique id of the dropdown you want to toggle
+            - `callback` an optional callback function that is executed after the Dropdown is toggled.
+    -
+        deprecated: true
+        title: "Dropdown.closeAll()"
+        description: |
+            - **NOTE**: This method is deprecated and should be replaced with the newer `Dropdown.open()` and `Dropdown.close()` methods.
+            - Closes **all** open dropdowns.
 ---
 ## Dropdown example
 {{< example lang="html" >}}<div class="rvt-dropdown">
@@ -164,26 +198,4 @@ The Dropdown JavaScript exposes a couple of methods to use in your own scripts. 
 ### Available methods
 Here's a breakdown of the available Dropdown methods you can use in your scripts.
 
-<table>
-    <caption class="sr-only">Dropdown JavaScript methods</caption>
-    <thead>
-        <tr>
-            <th scope="col">Method</th>
-            <th scope="col">Descripton</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>Dropdown.init()</code></td>
-            <td>Initializes all dropdowns in the DOM. Must be called any time new Dropdowns are added to the DOM without a page reload.</td>
-        </tr>
-        <tr>
-            <td><code>Dropdown.toggle(id)</code></td>
-            <td>Toggles a dropdown menu. The <code>id</code> argument is a <code>String</code> that corresponding value of the dropdown's <code>data-dropdown-toggle</code> and <code>id</code> attributes. This will update the values of the Dropdown toggle's <code>aria-expanded</code> and the value of the menu's <code>aria-hidden</code> attributes based on their state when <code>toggle()</code> is called.</td>
-        </tr>
-        <tr>
-            <td><code>Dropdown.closeAll()</code></td>
-            <td>Closes all dropdown menus and sets their <code>aria-hidden</code> and <code>aria-expanded</code> attributes to the appropriate state.</td>
-        </tr>
-    </tbody>
-</table>
+{{< apidocs >}}{{< /apidocs >}}
