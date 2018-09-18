@@ -37,6 +37,15 @@ methods:
         description: |
             - **NOTE**: This method is deprecated and should be replaced with the newer `Dropdown.open()` and `Dropdown.close()` methods.
             - Closes **all** open dropdowns.
+events:
+    -
+        title: "dropdownOpen"
+        description: |
+            Emitted when the Dropdown is opened (using the `Dropdown.open()` method, or the `data-dropdown-toggle` attribute). The value of the modal `data-dropdown-toggle` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
+    -
+        title: "dropdownClose"
+        description: |
+            Emitted when the Dropdown is closed (using the `Dropdown.close()` method, or the `data-dropdown-toggle` attribute). The value of the modal `data-dropdown-toggle` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
 ---
 ## Dropdown example
 {{< example lang="html" >}}<div class="rvt-dropdown">
@@ -199,3 +208,20 @@ The Dropdown JavaScript exposes a couple of methods to use in your own scripts. 
 Here's a breakdown of the available Dropdown methods you can use in your scripts.
 
 {{< apidocs type="methods" >}}{{< /apidocs >}}
+
+### Custom Events
+The Rivet Dropdown also emits various custom events that you can listen for in your own scripts.
+
+{{< apidocs type="events" >}}{{< /apidocs >}}
+
+#### Custom event example
+Note here that the `event.detail.name()` property of the `customEvent` object is a function that returns a String. Read more about custom events on the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent).
+
+{{< code lang="js" >}}// Listen for a custom "dropdownOpen" event
+document.addEventListener('dropdownOpen', event => {
+  if (event.detail.name() === 'my-dropdown') {
+    alert('Hey, you opened the dropdown!')
+  }
+  // Maybe send some data via an AJAX request, etc...
+}, false);
+{{< /code >}}
