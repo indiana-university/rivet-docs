@@ -1,6 +1,6 @@
 ---
 title: Rivet 1.1.0 release
-description: Rivet 1.1.0 is now available. This release fixes a lot of JavaScript-related issues, adds some new utilities, and additional component variations.
+description: Rivet 1.1.0 is now available. This release fixes a lot of JavaScript-related issues, adds several new utility classes, and provides additional variations of the table component.
 date: "2018-09-20"
 tags:
     - "release"
