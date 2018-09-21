@@ -39,7 +39,7 @@
     "promise-polyfill": "^7.0.2",
     "remove-markdown": "0.2.2",
     "require-dir": "0.3.2",
-    "rivet-uits": "^1.0.0",
+    "rivet-uits": "^1.1.0-alpha",
     "striptags": "3.0.1",
     "tippy.js": "^1.2.0",
     "vue-loader": "^12.1.0",
