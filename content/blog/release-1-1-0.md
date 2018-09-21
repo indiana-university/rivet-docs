@@ -66,7 +66,8 @@ In previous versions of Rivet the CSS class names we used to apply color to aler
 
 This mainly affects the CSS class names for [alerts]({{< ref "components/overlays/alerts.md" >}}), [form validation]({{< ref "components/forms/text-input.md#form-validation-tips" >}}), and [buttons]({{< ref "components/forms/buttons.md" >}}), which all use the same names to refer to their respective color variants. For example, the following all produce the danger/error (orange) version of these components:
 
-{{< code lang="css" >}}.rvt-button--danger
+{{< code lang="css" >}}.rvt-badge--danger
+.rvt-button--danger
 .rvt-alert--danger
 .rvt-validation-danger
 {{< /code >}}
