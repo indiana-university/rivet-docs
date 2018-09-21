@@ -14,9 +14,9 @@ status: "Ready"
 
 ## Inline validation states
 
-<div class="rvt-alert rvt-alert--info rvt-m-bottom-md rvt-m-top-md" role="alertdialog" aria-labelledby="information-alert-title">
+<div class="rvt-alert rvt-alert--info rvt-m-bottom-md rvt-m-top-md" aria-labelledby="information-alert-title">
     <h3 class="rvt-alert__title" id="information-alert-title">Validation styles</h3>
-    <p class="rvt-alert__message">You can use all Rivet validation CSS classes (.rvt-is-valid, .rvt-is-invalid, .rvt-has-warning, and .rvt-has-info) on any of the HTML5 text input types, <a href="../select-input">select elements</a>, or <a href="#textarea-example">text areas</a>.</p>
+    <p class="rvt-alert__message">You can use all Rivet validation CSS classes (.rvt-validation-success, .rvt-validation-danger, .rvt-validation-warning, and .rvt-validation-info) on any of the HTML5 text input types, <a href="../select-input">select elements</a>, or <a href="#textarea-example">text areas</a>.</p>
 </div>
 
 Rivet provides the markup and styles for various states of inline form validation. These inline validation states should be used in combination with [alerts]({{< ref "components/overlays/alerts.md" >}}) to provide helpful validation error messages to users.
