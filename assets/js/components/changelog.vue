@@ -27,7 +27,9 @@
                 <div class="rvtd-changelog__section-title">Details</div>
 
                 <ul>
-                  <li v-for="(detail, detailIndex) in release.pulls.items" v-if="showAllDetails[index] || detailIndex<5" :key="detailIndex">{{ detail.title }}</li>
+                  <li v-for="(detail, detailIndex) in release.pulls.items" v-if="showAllDetails[index] || detailIndex<5" :key="detailIndex">
+                    <a class="rvtd-changelog__pr-link" target="_blank" :href="detail.html_url">{{ detail.title }}</a>
+                  </li>
                 </ul>
 
                 <p class="rvtd-changelog__view-all-details" v-if="release.pulls.items.length > 5 && !showAllDetails[index]">

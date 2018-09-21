@@ -10,6 +10,13 @@
         position: relative;
     }
 
+    &__pr-link {
+        color: #fff;
+        &:hover {
+            color: #eeeeee;
+        }
+    }
+
     &__version {
         font-size: 1.75em;
         font-weight: bold;
