@@ -64,7 +64,7 @@ This release adds two new variants of the [table component]({{< ref "components/
 ## More consistent color names
 In previous versions of Rivet the CSS class names we used to apply color to alerts and validation was inconsistent across components. In this release we've tried to standardize the way we refer to color in our CSS, so that developers can consistently reference color names.
 
-This mainly affects the CSS class names for [alerts]({{< ref "components/overlays/alerts.md" >}}), form validation, and buttons, which all use the same names to refer to their respective color variants. For example, the following all produce the danger/error (orange) version of these components:
+This mainly affects the CSS class names for [alerts]({{< ref "components/overlays/alerts.md" >}}), [form validation]({{< ref "components/forms/text-input.md#form-validation-tips" >}}), and [buttons]({{< ref "components/forms/buttons.md" >}}), which all use the same names to refer to their respective color variants. For example, the following all produce the danger/error (orange) version of these components:
 
 {{< code lang="css" >}}.rvt-button--danger
 .rvt-alert--danger
