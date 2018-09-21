@@ -35,7 +35,7 @@ You can create smaller buttons by adding the `.rvt-button--small` modifier class
 {{< /example >}}
 
 ## Full-width buttons
-In some cases it can be helpful for buttons to have a larger click/touch area. If you need a button to take up the full width of it's parent container, you can use the `.rvt-button--full-width` modifier.
+In some cases it can be helpful for buttons to have a larger click/touch area. If you need a button to take up the full width of its parent container, you can use the `.rvt-button--full-width` modifier.
 
 {{< example lang="html" >}}<button class="rvt-button rvt-button--full-width">Full-width button</button>
 {{< /example >}}

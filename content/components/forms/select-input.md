@@ -18,7 +18,7 @@ status: "Ready"
 For more info on how to use the Rivet form input validation states [see the examples in the text input section]({{< ref "components/forms/text-input.md#inline-validation-states" >}}).
 
 {{< example lang="html" >}}<label for="select-info-state">Type</label>
-<select name="" id="select-info-state" class="rvt-validation-info" aria-describedby="state-message-3">
+<select name="" id="select-info-state" class="rvt-validation-info" aria-describedby="meats-select">
     <option value="Steak">Choose an option...</option>
     <option value="Steak">Steak</option>
     <option value="Chops">Chops</option>
@@ -35,7 +35,7 @@ For more info on how to use the Rivet form input validation states [see the exam
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" role="alert" id="state-message-3">
+    <span class="rvt-inline-alert__message" role="alert" id="meats-select">
         You must pick a
         <strong>Type</strong> of meats.
     </span>
@@ -60,11 +60,11 @@ For more info on how to use the Rivet form input validation states [see the exam
     </span>
     <span class="rvt-inline-alert__message" role="alert" id="type-message">
         You must pick a
-        <strong>Type</strong> of meats.
+        <strong>Type</strong> of meat.
     </span>
 </div>
 
-<label for="select-warning-state" class="rvt-m-top-md">State</label>
+<label for="select-warning-state" class="rvt-m-top-md">Type</label>
 <select name="" id="select-warning-state" class="rvt-validation-warning" aria-describedby="type-message-2">
     <option value="Steak">Choose an option...</option>
     <option value="Steak">Steak</option>
@@ -105,7 +105,7 @@ For more info on how to use the Rivet form input validation states [see the exam
     </span>
     <span class="rvt-inline-alert__message" role="alert" id="state-message">
         You must pick a
-        <strong>Type</strong> of meats.
+        <strong>Type</strong> of meat.
     </span>
 </div>
 {{< /example >}}
