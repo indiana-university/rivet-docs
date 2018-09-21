@@ -4,7 +4,7 @@
       <h2 class="rvtd-section__title m-bottom-xxl">Changelog</h2>
       <transition name="rvt-fade" mode="out-in">
         <div class="rvtd-changelog__list">
-          <div class="rvt-grid m-top-xxl" v-if="new Date(release.created_at) > new Date('2018-01-01') && releases.length > 0" v-for="(release, index) in releases" :key="release.id">
+          <div class="rvt-grid m-top-xxl" v-if="!release.prerelease && new Date(release.created_at) > new Date('2018-01-01') && releases.length > 0" v-for="(release, index) in releases" :key="release.id">
             <div class="rvt-grid__item-3-md-up">
               <div class="rvtd-changelog__version" :class="{'ts-23':index>0}">Rivet {{ version(release.tag_name) }}</div>
               <div class="rvtd-changelog__date rvt-m-bottom-xl rvt-m-top-xs">{{ release.published_at | formatDate }}</div>
