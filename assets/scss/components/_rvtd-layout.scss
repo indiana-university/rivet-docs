@@ -26,7 +26,7 @@
 
 .rvtd-sidebar {
     position: relative;
-    background-color: $color-black--050;
+    background-color: $color-black--50;
 }
 
 @include mq(bp(md)) {
@@ -77,7 +77,7 @@
 
 .rvtd-subtle-wrapper {
     padding: $xxl 0;
-    background-color: $color-black--050;
+    background-color: $color-black--50;
     border-top: 1px solid $color-black--100;
 }
 
