@@ -36,3 +36,23 @@ The `.rvt-text-uppercase` utility class sets the `text-transform` CSS property t
 
 {{< example lang="html" >}}<p class="rvt-text-uppercase">Uppercase text utilitiy</p>
 {{< /example >}}
+
+## No break
+If you need to stop text from wrapping, for example next to radio buttons or checkboxes, you can use the `.rvt-text-nobr` utility.
+
+{{< example lang="html" >}}<form>
+    <fieldset>
+        <legend class="sr-only">Checkbox list</legend>
+        <ul class="rvt-plain-list">
+            <li>
+                <input type="checkbox" name="checkbox-demo" id="checkbox-3">
+                <label for="checkbox-3" class="rvt-m-right-sm rvt-text-nobr">The label for this checkbox is quite long, but will not break.</label>
+            </li>
+            <li>
+                <input type="checkbox" name="checkbox-demo" id="checkbox-4">
+                <label for="checkbox-4">Option two</label>
+            </li>
+        </ul>
+    </fieldset>
+</form>
+{{< /example >}}

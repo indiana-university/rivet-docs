@@ -3,17 +3,39 @@ title: "Tabs"
 description: "Use tabs to allow users to switch between logical chunks of content without having to leave the current page."
 requiresJs: true
 status: "Ready"
+methods:
+    -
+        title: "Tabs.init(context)"
+        description: |
+            - Initializes the `Tabs` component
+            - Accepts an optional DOM element. If no element is provided in the argument it defaults to the `document` element.
+            - NOTE: the `init()` method is called automatically when `rivet.js` is loaded.
+    -
+        title: "Tabs.destroy(context)"
+        description: |
+            - Destroys any currently initialized tabs and removes their event listeners.
+            - Accepts a optional DOM element. If no element is provided in the argument it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the Tabs were initialized.
+    -
+        title: "Tabs.activateTab(id, callback)"
+        description: |
+            - `id` - The unique id of the tab that you want to active. The value of the `id` argument should be the value of the `data-tab` attribute which corresponds to the `id` attribute of the tab panel it controls.
+            - `callback` - An optional callback that is executed after the tab is activated.
+events:
+    -
+        title: "tabActivated"
+        description: |
+            Emitted when a Tab is activated (using the `Tabs.activateTab()` method, or via a click on a button with the `data-tab` attribute). The value of the tab `data-tab` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
 ---
 ## Default tabs example
 {{< example lang="html" >}}<div class="rvt-tabs">
     <div class="rvt-tabs__tablist" role="tablist" aria-label="Rivet tabs">
-        <button class="rvt-tabs__tab" role="tab" aria-selected="true" aria-controls="tab-1" id="t-one">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="true" data-tab="tab-1" id="t-one">
             Tab one
         </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-2" id="t-two" tabindex="-1">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="false" data-tab="tab-2" id="t-two" tabindex="-1">
             Tab two
         </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-3" id="t-three" tabindex="-1">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="false" data-tab="tab-3" id="t-three" tabindex="-1">
             Tab three
         </button>
     </div>
@@ -97,13 +119,13 @@ Applying the modifier class `.rvt-tabs--fitted` to the main `.rvt-tabs` containe
 
 {{< example lang="html" >}}<div class="rvt-tabs rvt-tabs--fitted">
     <div class="rvt-tabs__tablist" role="tablist" aria-label="Rivet tabs">
-        <button class="rvt-tabs__tab" role="tab" aria-selected="true" aria-controls="tab-1-fitted" id="t-one-fitted">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="true" data-tab="tab-1-fitted" id="t-one-fitted">
             Tab one
         </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-2-fitted" id="t-two-fitted" tabindex="-1">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="false" data-tab="tab-2-fitted" id="t-two-fitted" tabindex="-1">
             Tab two
         </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-3-fitted" id="t-three-fitted" tabindex="-1">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="false" data-tab="tab-3-fitted" id="t-three-fitted" tabindex="-1">
             Tab three
         </button>
     </div>
@@ -184,3 +206,25 @@ In order for the vertical tabs to function properly you will need to add the `ar
     </div>
 </div>
 {{< /example >}}
+
+## JavaScript API
+If you use the appropriate data attribute/id combination in your markup, tabs will work without the need for any additional JavaScript. But if you need to control tabs programmatically, there are a handful of methods from the Rivet tabs API you can use:
+
+{{< apidocs type="methods" >}}{{< /apidocs >}}
+
+### Custom Events
+The Rivet Tabs also emit a custom event when a tab is activated that you can listen for in your own scripts.
+
+{{< apidocs type="events" >}}{{< /apidocs >}}
+
+#### Custom event example
+Note here that the `event.detail.name()` property of the `customEvent` object is a function that returns a String. Read more about custom events on the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent).
+
+{{< code lang="js" >}}// Listen for a custom "tabActivated" event
+document.addEventListener('tabActivated', event => {
+  if (event.detail.name() === 'my-tab') {
+    alert('Hey, you activated the tab!')
+  }
+  // Maybe send some data via an AJAX request, etc...
+}, false);
+{{< /code >}}

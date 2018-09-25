@@ -19,7 +19,7 @@ The Rivet components documentation contains examples, code snippets, and guidanc
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
-{{< button url="https://github.iu.edu/UITS/rivet/archive/v1.0.0.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
+{{< button url="https://github.iu.edu/UITS/rivet-source/releases/download/v1.1.0-alpha.2/rivet.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
     <span class="rvt-m-right-xs">Download Rivet</span>
     <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
         <g fill="currentColor">
@@ -76,26 +76,17 @@ index.html
 </div>
 
 ## NPM dependency
-Rivet is also available to include in as a dependency in your app via NPM. To use Rivet as a NPM package you'll need to configure a `.npmrc` file that points to the IU NPM registry. These instructions assume that you are already using NPM in your project. If not, you can [read these instructions](https://docs.npmjs.com/cli/init) on the NPM website about how to start.
+Rivet is also available to include in as a dependency in your app via NPM. These instructions assume that you are already using NPM in your project. If not, you can [read these instructions](https://docs.npmjs.com/cli/init) on the NPM website about how to start.
 
-1. Create a file in the root of your project at the same level as your `package.json` called `.npmrc`.
-2. Add the following snippet to your newly created `.npmrc` and save the file.
-
-{{< code >}}registry=https://npmjs.iu.edu/public/registry
-{{< /code >}}
+{{< alert title="About using a .npmrc file" variant="info" heading="h3" >}}
+In previous versions of Rivet a .npmrc file configured to look at IU's public registry was required to install Rivet. As of version 1.1.0 you no longer need a .npmrc file.
+{{< /alert >}}
 
 ### Installing via NPM
-Once you have the `.npmrc` file configured in the root of your project, you can run the following command to install Rivet.
+Once you have a `package.json` file configured in the root of your project, you can run the following command to install Rivet.
 
-{{< code >}}npm install rivet-uits@1.0.0 --save-dev
+{{< code >}}npm install rivet-uits@1.1.0-alpha.2 --save-dev
 {{< /code >}}
-
-<h4 class="m-top-lg">Installation troubleshooting <span class="rvt-badge rvt-badge--warning m-right-xs">NOTE</span></h4>
-
-**Before you run the install command**:
-
-- Be sure you have installed NPM on your local computer by running `npm --v`
-- Make sure that you have configured a `.npmrc` using the instructions above
 
 ### Updating the Rivet NPM package
 When there is a new version of Rivet released it will be publish to the NPM registry. You can check for updates by running the `npm outdated` command. To acutally update your NPM dependency you can run the following command at the same level as your project's `package.json`.

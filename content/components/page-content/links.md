@@ -5,8 +5,8 @@ status: "Ready"
 ---
 
 ## Inline links
-{{< example lang="html" >}}<p class="rvt-m-top-remove">This is a <a href="#">text link</a> on a light background.</p>
-<p class="bg-midnight rvt-p-all-sm">This is a <a href="#">text link</a> on a dark background.</p>
+{{< example lang="html" >}}<p class="rvt-m-top-remove"> <a href="#">This is a text link</a> on a light background.</p>
+<p>This link is <a href="#" class="rvt-link-bold">Bold link</a>.</p>
 {{< /example >}}
 
 ## When to use

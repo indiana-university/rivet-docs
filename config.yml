@@ -10,7 +10,7 @@ taxonomies:
 outputs:
     section: ["html", "json"]
 params:
-    rivetVersion: 1.0.0
+    rivetVersion: 1.1.0-alpha.2
     tagline: "Software Design System"
     googleAnalytics: "UA-100560495-3"
     devGoogleAnalytics: "UA-100560495-4"
