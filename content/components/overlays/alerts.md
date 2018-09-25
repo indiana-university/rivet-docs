@@ -181,18 +181,18 @@ Alert lists provide a way to group a set of errors together. For instance, when 
 
 {{< example lang="html" >}}<ul class="rvt-alert-list">
     <li class="rvt-alert-list__item">
-        <div class="rvt-alert rvt-alert--error" role="alert">
+        <div class="rvt-alert rvt-alert--danger" role="alert">
             <h1 class="rvt-alert__title">Please correct the following errors.</h1>
             <p class="rvt-alert__message">Alert lists are useful for summarizing multiple errors on a page.</p>
         </div>
     </li>
     <li class="rvt-alert-list__item">
-        <div class="rvt-alert rvt-alert--error" role="alert">
+        <div class="rvt-alert rvt-alert--danger" role="alert">
             <h1 class="rvt-alert__title">Errors can have a title only, <a href="#">with a link</a> to the invalid element.</h1>
         </div>
     </li>
     <li class="rvt-alert-list__item">
-        <div class="rvt-alert rvt-alert--error" role="alert">
+        <div class="rvt-alert rvt-alert--danger" role="alert">
             <h1 class="rvt-alert__title">Error message three is soooo long!</h1>
             <p class="rvt-alert__message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veniam iste, nesciunt aliquam illum quaerat hic expedita ducimus error assumenda explicabo quos harum delectus deserunt, autem corrupti quas doloremque. Veritatis.</p>
         </div>
