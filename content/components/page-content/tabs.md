@@ -29,13 +29,13 @@ events:
 ## Default tabs example
 {{< example lang="html" >}}<div class="rvt-tabs">
     <div class="rvt-tabs__tablist" role="tablist" aria-label="Rivet tabs">
-        <button class="rvt-tabs__tab" role="tab" aria-selected="true" aria-controls="tab-1" id="t-one">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="true" data-tab="tab-1" id="t-one">
             Tab one
         </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-2" id="t-two" tabindex="-1">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="false" data-tab="tab-2" id="t-two" tabindex="-1">
             Tab two
         </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-3" id="t-three" tabindex="-1">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="false" data-tab="tab-3" id="t-three" tabindex="-1">
             Tab three
         </button>
     </div>
@@ -119,13 +119,13 @@ Applying the modifier class `.rvt-tabs--fitted` to the main `.rvt-tabs` containe
 
 {{< example lang="html" >}}<div class="rvt-tabs rvt-tabs--fitted">
     <div class="rvt-tabs__tablist" role="tablist" aria-label="Rivet tabs">
-        <button class="rvt-tabs__tab" role="tab" aria-selected="true" aria-controls="tab-1-fitted" id="t-one-fitted">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="true" data-tab="tab-1-fitted" id="t-one-fitted">
             Tab one
         </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-2-fitted" id="t-two-fitted" tabindex="-1">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="false" data-tab="tab-2-fitted" id="t-two-fitted" tabindex="-1">
             Tab two
         </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-3-fitted" id="t-three-fitted" tabindex="-1">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="false" data-tab="tab-3-fitted" id="t-three-fitted" tabindex="-1">
             Tab three
         </button>
     </div>
