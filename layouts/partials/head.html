@@ -9,9 +9,5 @@
     {{ end }}
     <title>{{ .Page.Title | markdownify | plainify }} - {{ .Site.Title }} {{ .Site.Params.tagline }}</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
-
-    <!-- REMOVE THIS AFTER UPDATING -->
-    <link rel="stylesheet" href="https://rivetdev.uits.iu.edu/develop/css/rivet.css">
-
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ now.Unix }}">
 </head>
