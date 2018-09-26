@@ -202,7 +202,7 @@ The Rivet dropdown is flexible enough to be used with lists of navigation links,
 </div>
 
 ## JavaScript API
-The Dropdown JavaScript exposes a couple of methods to use in your own scripts. The `init()` method is called by the main `rivet.js` file the first time the script is loaded. It will initiallize all of the dropdown menus that are in the DOM when the page loads. When dynamically updating the page (via AJAX calls, etc.) you will need to call the `init()` method in your script after each update to the DOM. This will re-initialize all dropdowns on the page, including any new dropdowns that may have been added to the DOM.
+The Dropdown JavaScript exposes a couple of methods to use in your own scripts. The `init()` method is called by the main `rivet.js` file the first time the script is loaded. It will initialize the dropdown component and attach the event listeners that handle interaction.
 
 ### Available methods
 Here's a breakdown of the available Dropdown methods you can use in your scripts.
