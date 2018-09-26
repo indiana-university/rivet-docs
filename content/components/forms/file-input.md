@@ -37,8 +37,8 @@ The custom HTML file input (`<input type="file">`) uses CSS to hide the default 
     </div>
 </div>
 
-<div class="rvt-file rvt-m-top-sm" data-upload="my-file-input">
-    <input type="file" id="my-file-input" aria-describedby="file-description" disabled>
+<div class="rvt-file rvt-m-top-sm" data-upload="my-file-input-2">
+    <input type="file" id="my-file-input-2" aria-describedby="file-description" disabled>
     <label for="my-file-input" class="rvt-button">
         <span>Upload a file</span>
         <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
