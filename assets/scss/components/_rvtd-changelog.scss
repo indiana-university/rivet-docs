@@ -10,6 +10,13 @@
         position: relative;
     }
 
+    &__pr-link {
+        color: #fff;
+        &:hover {
+            color: #eeeeee;
+        }
+    }
+
     &__version {
         font-size: 1.75em;
         font-weight: bold;
@@ -94,6 +101,14 @@
                 font-size: 1.5em;
                 content: "• ";
                 color: $bright-blue;
+            }
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

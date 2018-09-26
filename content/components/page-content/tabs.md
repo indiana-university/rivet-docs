@@ -3,17 +3,39 @@ title: "Tabs"
 description: "Use tabs to allow users to switch between logical chunks of content without having to leave the current page."
 requiresJs: true
 status: "Ready"
+methods:
+    -
+        title: "Tabs.init(context)"
+        description: |
+            - Initializes the `Tabs` component
+            - Accepts an optional DOM element. If no element is provided in the argument it defaults to the `document` element.
+            - NOTE: the `init()` method is called automatically when `rivet.js` is loaded.
+    -
+        title: "Tabs.destroy(context)"
+        description: |
+            - Destroys any currently initialized tabs and removes their event listeners.
+            - Accepts a optional DOM element. If no element is provided in the argument it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the Tabs were initialized.
+    -
+        title: "Tabs.activateTab(id, callback)"
+        description: |
+            - `id` - The unique id of the tab that you want to active. The value of the `id` argument should be the value of the `data-tab` attribute which corresponds to the `id` attribute of the tab panel it controls.
+            - `callback` - An optional callback that is executed after the tab is activated.
+events:
+    -
+        title: "tabActivated"
+        description: |
+            Emitted when a Tab is activated (using the `Tabs.activateTab()` method, or via a click on a button with the `data-tab` attribute). The value of the tab `data-tab` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
 ---
 ## Default tabs example
 {{< example lang="html" >}}<div class="rvt-tabs">
     <div class="rvt-tabs__tablist" role="tablist" aria-label="Rivet tabs">
-        <button class="rvt-tabs__tab" role="tab" aria-selected="true" aria-controls="tab-1" id="t-one">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="true" data-tab="tab-1" id="t-one">
             Tab one
         </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-2" id="t-two" tabindex="-1">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="false" data-tab="tab-2" id="t-two" tabindex="-1">
             Tab two
         </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-3" id="t-three" tabindex="-1">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="false" data-tab="tab-3" id="t-three" tabindex="-1">
             Tab three
         </button>
     </div>
@@ -64,12 +86,26 @@ status: "Ready"
 - If you are tempted to include a ‘More’ tab.
 - If the amount of data that would be shown on each tab is small.
 
-## Accessibility
-The Rivet tabs use JavaScript to fully implement [WAI-ARIA authoring standards](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel) for keyboard navigation. Tabs are controlled using `<button>` elements, and they should be focusable using the left and right arrow keys on the keyboard:
+## Accessibility Requirements
+{{% a11y %}}
+The Rivet Tabs are built to follow the WAI-ARIA authoring standards. It is marked up with the appropriate ARIA attributes and uses the JavaScript included in `rivet.js` to implement the keyboard navigation and focus management required to meet the [ARIA Authoring Practices](http://w3c.github.io/aria-practices/) standards. If you need to create the Tabs functionality in another framework/library like React, Angular, etc., please ensure that it meets the following accessibility requirements.
 
-- Pressing the **right arrow key on the last tab** returns to the first in the set
-- Pressing the **left arrow key on the first tab** should move focus to the last tab
-- Pressing the **tab key while focused on a tab control** should move focus on to the tab panel it controls, not to the next tab in the set.
+### Focus
+- Tabs should have a visible `:focus` state
+- Active tabs should have a visible `aria-selected="true"` state
+- Activating a tab should set its associated tab panel's `tabindex` attribute to `-1`. All in active tabs should have their `tabindex` attribute set to `0` so that after the used activates a tab, pressing <kbd>Tab</kbd> will move focus to the active tab's tab panel.
+
+### Labeling
+- Tabs should be wrapped in an element with a role of [tablist](https://www.w3.org/TR/wai-aria-1.1/#tablist).
+- Each tab (button) should have a role of [tab](https://www.w3.org/TR/wai-aria-1.1/#tab).
+- Each tab panel should have a role of [tabpanel](https://www.w3.org/TR/wai-aria-1.1/#tabpanel)
+- The active tab should have the attribute [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) set to `true`. All inactive tabs should have `aria-selected` set to `false`
+- Each `tabpanel` should have an `aria-labelledby` attribute that references its associated tab.
+
+### Keyboard navigation
+- <kbd>Enter</kbd> or <kbd>Space</kbd> = Activate tab (when focused)
+- <kbd>&larr;</kbd><kbd>&rarr;</kbd> = Moves focus to previous/next tab
+{{% /a11y %}}
 
 ## Implementation notes
 - Order tabs in a logical manner
@@ -83,13 +119,13 @@ Applying the modifier class `.rvt-tabs--fitted` to the main `.rvt-tabs` containe
 
 {{< example lang="html" >}}<div class="rvt-tabs rvt-tabs--fitted">
     <div class="rvt-tabs__tablist" role="tablist" aria-label="Rivet tabs">
-        <button class="rvt-tabs__tab" role="tab" aria-selected="true" aria-controls="tab-1-fitted" id="t-one-fitted">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="true" data-tab="tab-1-fitted" id="t-one-fitted">
             Tab one
         </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-2-fitted" id="t-two-fitted" tabindex="-1">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="false" data-tab="tab-2-fitted" id="t-two-fitted" tabindex="-1">
             Tab two
         </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-3-fitted" id="t-three-fitted" tabindex="-1">
+        <button class="rvt-tabs__tab" role="tab" aria-selected="false" data-tab="tab-3-fitted" id="t-three-fitted" tabindex="-1">
             Tab three
         </button>
     </div>
@@ -170,3 +206,25 @@ In order for the vertical tabs to function properly you will need to add the `ar
     </div>
 </div>
 {{< /example >}}
+
+## JavaScript API
+If you use the appropriate data attribute/id combination in your markup, tabs will work without the need for any additional JavaScript. But if you need to control tabs programmatically, there are a handful of methods from the Rivet tabs API you can use:
+
+{{< apidocs type="methods" >}}{{< /apidocs >}}
+
+### Custom Events
+The Rivet Tabs also emit a custom event when a tab is activated that you can listen for in your own scripts.
+
+{{< apidocs type="events" >}}{{< /apidocs >}}
+
+#### Custom event example
+Note here that the `event.detail.name()` property of the `customEvent` object is a function that returns a String. Read more about custom events on the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent).
+
+{{< code lang="js" >}}// Listen for a custom "tabActivated" event
+document.addEventListener('tabActivated', event => {
+  if (event.detail.name() === 'my-tab') {
+    alert('Hey, you activated the tab!')
+  }
+  // Maybe send some data via an AJAX request, etc...
+}, false);
+{{< /code >}}

@@ -19,7 +19,7 @@ The Rivet components documentation contains examples, code snippets, and guidanc
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
-{{< button url="https://github.iu.edu/UITS/rivet/archive/v1.0.0.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
+{{< button url="https://github.iu.edu/UITS/rivet-source/releases/download/v1.1.0/rivet.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
     <span class="rvt-m-right-xs">Download Rivet</span>
     <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
         <g fill="currentColor">
@@ -76,26 +76,17 @@ index.html
 </div>
 
 ## NPM dependency
-Rivet is also available to include in as a dependency in your app via NPM. To use Rivet as a NPM package you'll need to configure a `.npmrc` file that points to the IU NPM registry. These instructions assume that you are already using NPM in your project. If not, you can [read these instructions](https://docs.npmjs.com/cli/init) on the NPM website about how to start.
+Rivet is also available to include in as a dependency in your app via NPM. These instructions assume that you are already using NPM in your project. If not, you can [read these instructions](https://docs.npmjs.com/cli/init) on the NPM website about how to start.
 
-1. Create a file in the root of your project at the same level as your `package.json` called `.npmrc`.
-2. Add the following snippet to your newly created `.npmrc` and save the file.
-
-{{< code >}}registry=https://npmjs.iu.edu/public/registry
-{{< /code >}}
+{{< alert title="About using a .npmrc file" variant="info" heading="h3" >}}
+In previous versions of Rivet a .npmrc file configured to look at IU's public registry was required to install Rivet. As of version 1.1.0 you no longer need a .npmrc file.
+{{< /alert >}}
 
 ### Installing via NPM
-Once you have the `.npmrc` file configured in the root of your project, you can run the following command to install Rivet.
+Once you have a `package.json` file configured in the root of your project, you can run the following command to install Rivet.
 
-{{< code >}}npm install rivet-uits@1.0.0 --save-dev
+{{< code >}}npm install rivet-uits@1.1.0 --save-dev
 {{< /code >}}
-
-<h4 class="m-top-lg">Installation troubleshooting <span class="rvt-badge rvt-badge--warning m-right-xs">NOTE</span></h4>
-
-**Before you run the install command**:
-
-- Be sure you have installed NPM on your local computer by running `npm --v`
-- Make sure that you have configured a `.npmrc` using the instructions above
 
 ### Updating the Rivet NPM package
 When there is a new version of Rivet released it will be publish to the NPM registry. You can check for updates by running the `npm outdated` command. To acutally update your NPM dependency you can run the following command at the same level as your project's `package.json`.
@@ -113,11 +104,11 @@ In this example `<version>` would be the new version of Rivet you want to instal
 
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.0.0/rivet.min.css">{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.1.0/rivet.min.css">{{< /code >}}
 
 Rivet has a minimal amount of JavaScript that is required for some components, like the [header](../components/navigation/header). Copy and paste this link and add to the end of your document, just before the closing `</body>` tag.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/1.0.0/rivet.min.js"></script>{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/1.1.0/rivet.min.js"></script>{{< /code >}}
 
 ## Starter template
 Here's a basic starter template with the hosted CSS and JavaScript hooked up. Copy and paste into your favorite editor to start using Rivet.
@@ -128,7 +119,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.0.0/rivet.min.css">
+    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.1.0/rivet.min.css">
     <title>Rivet starter file</title>
 </head>
 <body>
@@ -174,7 +165,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
             </li>
         </ul>
     </footer>
-    <script src="https://assets.uits.iu.edu/javascript/rivet/1.0.0/rivet.min.js"></script>
+    <script src="https://assets.uits.iu.edu/javascript/rivet/1.1.0/rivet.min.js"></script>
 </body>
 </html>
 {{< /code >}}
@@ -186,4 +177,4 @@ If you are using Sass in your project you can import the Rivet Sass files direct
 {{< /code >}}
 
 ## Using Rivet with other frameworks
-Currently Rivet does not support the use of addiotional CSS frameworks like Bootstrap, Foundation, etc.  If you choose to use one of these frameworks alongside Rivet it is up to you to resolve any conflicts that arise.
+Currently Rivet does not support the use of additional CSS frameworks like Bootstrap, Foundation, etc.  If you choose to use one of these frameworks alongside Rivet it is up to you to resolve any conflicts that arise.

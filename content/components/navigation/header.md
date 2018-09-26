@@ -3,6 +3,41 @@ title: "Header"
 description: "The Rivet header has provides consistent branding and flexible navigation layout for your application."
 requiresJs: true
 status: "Ready"
+methods:
+    -
+        title: "Drawer.init(context)"
+        description: |
+            - Initializes the `Drawer` component
+            - Accepts an optional DOM element. If no element is provided in the argument it defaults to the `document` element.
+            - NOTE: the `init()` method is called automatically when `rivet.js` is loaded.
+    -
+        title: "Drawer.destroy(context)"
+        description: |
+            - Destroys any currently initialized Drawer and removes it's event listeners.
+            - Accepts a optional DOM element. If no element is provided in the argument it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the Drawer was initialized.
+    -
+        title: "Drawer.open(id, callback)"
+        description: |
+            - `id` - The unique id of the Drawer. This corresponds to the value `data-drawer-toggle`/`id` attributes of the Drawer you want to **open**.
+    -
+        title: "Drawer.close(id, callback)"
+        description: |
+            - `id` - The unique id of the Drawer. This corresponds to the value `data-drawer-toggle`/`id` attributes of the Drawer you want to **close**.
+    -
+        title: "Drawer.toggle(id, callback)"
+        description: |
+            - Sets the Drawer to the whatever is the **opposite** of it's current state. For example, if it is open/visible, calling the `Drawer.toggle(id)` method will close the drawer it's called on and vice versa.
+            - `id` the unique id of the Drawer you want to toggle
+            - `callback` an optional callback function that is executed after the Drawer is toggled.
+events:
+    -
+        title: "drawerOpen"
+        description: |
+            Emitted when the Drawer is opened (using the `Drawer.open()` method, or the `data-drawer-toggle` attribute). The value of the modal `data-drawer-toggle` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
+    -
+        title: "drawerClose"
+        description: |
+            Emitted when the Drawer is closed (using the `Drawer.close()` method, or the `data-drawer-toggle` attribute). The value of the modal `data-drawer-toggle` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
 ---
 <div class="rvt-alert rvt-alert--message rvt-m-bottom-md">
     <h2 class="rvt-alert__title">Header changes in Rivet 0.5.0</h2>
@@ -175,7 +210,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
             </div>
         </div>
         <!-- Drawer close button - shows on small screens -->
-        <button class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="mobile-drawer">
+        <button class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="mobile-drawer-2">
             <span class="sr-only">Toggle menu</span>
             <svg role="img" alt="" class="rvt-drawer-button-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <g fill="currentColor">
@@ -196,7 +231,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
         is probably the best way to handle that kind of flexibility.
         We'll just need to be clear about it in the documentation.
     -->
-    <div class="rvt-drawer" aria-hidden="true" id="mobile-drawer">
+    <div class="rvt-drawer" aria-hidden="true" id="mobile-drawer-2">
         <!-- Drawer nav -->
         <nav class="rvt-drawer__nav" role="navigation">
             <ul>
@@ -292,7 +327,7 @@ To create a nested navigation structure, you can use Rivet's dropdown menus alon
 
 Additionally, any navigation item that will contain sub navigation items needs the `has-children` class for appropriate styling in the dropdown menu. Lastly, each `<div>` sub navigation item needs`aria-hidden` set to true to hide the element until the dropdown menu toggle is clicked.
 
-{{< code >}}<div class="rvt-drawer" aria-hidden="true" id="mobile-drawer">
+{{< code >}}<div class="rvt-drawer" aria-hidden="true" id="mobile-drawer-3">
     <!-- Drawer nav -->
     <nav class="rvt-drawer__nav" role="navigation">
         <ul>
@@ -394,4 +429,25 @@ If you choose to use a light gray background for your app we recommend a gray no
 {{< /code >}}
 
 ## Skip navigation link
-Users that browse website using a keyboard only need a fast way to skip to the main content of an application without having to tab through each navigation item. **All versions** of the Rivet header should include a skip link that is only visible when in focus. The skip link should be the first focusable element in the DOM and link via an `id` attribute to the `<main>` element of you application.
+Users that browse websites using a keyboard only need a fast way to skip to the main content of an application without having to tab through each navigation item. **All versions** of the Rivet header should include a skip link that is only visible when in focus. The skip link should be the first focus-able element in the DOM and link via an `id` attribute to the `<main>` element of you application.
+
+## JavaScript API (Drawer)
+The Rivet header uses JavaScript to toggle the visibility of the "Drawer" that contains navigation on smaller screens. The Rivet `Drawer` JavaScript component exposes a few APIs that you can use in your own scripts.
+
+{{< apidocs type="methods" >}}{{< /apidocs >}}
+
+### Custom events
+
+{{< apidocs type="events" >}}{{< /apidocs >}}
+
+#### Custom event example
+Note here that the `event.detail.name()` property of the `customEvent` object is a function that returns a String. Read more about custom events on the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent).
+
+{{< code lang="js" >}}// Listen for a custom "drawerOpen" event
+document.addEventListener('drawerOpen', event => {
+  if (event.detail.name() === 'my-drawer') {
+    alert('Hey, you opened the drawer!')
+  }
+  // Maybe send some data via an AJAX request, etc...
+}, false);
+{{< /code >}}

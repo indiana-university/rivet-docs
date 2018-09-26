@@ -20,13 +20,13 @@ Typography is the core component of any interface. Rivet uses a defined [Major S
     </thead>
     <tbody>
         <tr>
-            <td><code>.rvt-ts-12</code></td>
+            <td><code>.rvt-ts-12, .rvt-ts-xxs</code></td>
             <td>.75rem</td>
             <td>12px</td>
             <td class="rvt-ts-12">Fulfilling the promise</td>
         </tr>
         <tr>
-            <td><code>.rvt-ts-14</code></td>
+            <td><code>.rvt-ts-14, .rvt-ts-xs</code></td>
             <td>.875rem</td>
             <td>14px</td>
             <td class="rvt-ts-14">Fulfilling the promise</td>
@@ -44,7 +44,7 @@ Typography is the core component of any interface. Rivet uses a defined [Major S
             <td class="rvt-ts-18">Fulfilling the promise</td>
         </tr>
         <tr>
-            <td><code>.rvt-ts-20</code></td>
+            <td><code>.rvt-ts-20, .rvt-ts-sm</code></td>
             <td>1.25rem</td>
             <td>20px</td>
             <td class="rvt-ts-20">Fulfilling the promise</td>
@@ -56,7 +56,7 @@ Typography is the core component of any interface. Rivet uses a defined [Major S
             <td class="rvt-ts-23">Fulfilling the promise</td>
         </tr>
         <tr>
-            <td><code>.rvt-ts-26</code></td>
+            <td><code>.rvt-ts-26, .rvt-ts-md</code></td>
             <td>1.625rem</td>
             <td>26px</td>
             <td class="rvt-ts-26">Fulfilling the promise</td>
@@ -68,7 +68,7 @@ Typography is the core component of any interface. Rivet uses a defined [Major S
             <td class="rvt-ts-29">Fulfilling the promise</td>
         </tr>
         <tr>
-            <td><code>.rvt-ts-32</code></td>
+            <td><code>.rvt-ts-32, .rvt-ts-lg</code></td>
             <td>2rem</td>
             <td>32px</td>
             <td class="rvt-ts-32">Fulfilling the promise</td>
@@ -80,7 +80,7 @@ Typography is the core component of any interface. Rivet uses a defined [Major S
             <td class="rvt-ts-36">Fulfilling the promise</td>
         </tr>
         <tr>
-            <td><code>.rvt-ts-41</code></td>
+            <td><code>.rvt-ts-41, .rvt-ts-xl</code></td>
             <td>2.5625rem</td>
             <td>41px</td>
             <td class="rvt-ts-41">Fulfilling the promise</td>
@@ -92,7 +92,7 @@ Typography is the core component of any interface. Rivet uses a defined [Major S
             <td class="rvt-ts-46">Fulfilling the promise</td>
         </tr>
         <tr>
-            <td><code>.rvt-ts-52</code></td>
+            <td><code>.rvt-ts-52, .rvt-ts-xxl</code></td>
             <td>3.25rem</td>
             <td>52px</td>
             <td class="rvt-ts-52">Fulfilling the promise</td>
@@ -109,15 +109,24 @@ Font weight can be used to emphasize different parts of your interface and help 
 ## Implementation notes
 Try to keep the number of different font sizes you use in your application to a minimum. The size of fonts depends on the design of you application, but picking a handful of font sizes and sticking to them makes it easier to maintain consistency throughout the interface.
 
-For instance, you might define a limited type scale for you app of:
+### Type scale aliases
+To make it easier to keep type sizes to a minimum we have create a few CSS utility classes that follow the same naming convention as the [Rivet spacing utilities](../spacing). These type scale alias utilities are mapped directly to type sizes in the the Rivet type scale [shown in the table above](#type-scale-examples).
 
-- `2rem` (32px) for **main headings**
-- `1.625rem` (26px) for **subheadings**
-- `1.125rem` (18px) for **interface copy**
+- `.rvt-ts-xxs`
+- `.rvt-ts-xs`
+- `.rvt-ts-sm`
+- `.rvt-ts-md`
+- `.rvt-ts-lg`
+- `.rvt-ts-xl`
+- `.rvt-ts-xxl`
 
-{{< example lang="html" >}}<h1 class="rvt-ts-32">Main headings</h1>
-<h2 class="rvt-ts-26">Subheadings</h2>
-<h3 class="rvt-ts-18">Section headings</h3>
+{{< example lang="html" >}}<div class="rvt-ts-xxs">Fulfilling the promise</div>
+<div class="rvt-ts-xs">Fulfilling the promise</div>
+<div class="rvt-ts-sm">Fulfilling the promise</div>
+<div class="rvt-ts-md">Fulfilling the promise</div>
+<div class="rvt-ts-lg">Fulfilling the promise</div>
+<div class="rvt-ts-xl">Fulfilling the promise</div>
+<div class="rvt-ts-xxl">Fulfilling the promise</div>
 {{< /example >}}
 
 ### Responsive type scale

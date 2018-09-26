@@ -8,7 +8,9 @@
             <div class="rvt-grid__item-3-md-up">
               <div class="rvtd-changelog__version" :class="{'ts-23':index>0}">Rivet {{ version(release.tag_name) }}</div>
               <div class="rvtd-changelog__date rvt-m-bottom-xl rvt-m-top-xs">{{ release.published_at | formatDate }}</div>
-              <a v-if="(index===0 && !release.prerelease) || (index===1 && releases[0].prerelease)" href="https://github.iu.edu/UITS/rivet/archive/master.zip" class="rvt-button rvt-button--bright-blue rvtd-changelog__download">
+              <a v-if="(index===0 && !release.prerelease) || (index===1 && releases[0].prerelease)"
+                 :href="`https://github.iu.edu/UITS/rivet-source/releases/download/${release.tag_name}/rivet.zip`"
+                 class="rvt-button rvt-button--bright-blue rvtd-changelog__download">
                 <svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                   <title>Download</title>
                   <g fill="currentColor">
@@ -27,7 +29,9 @@
                 <div class="rvtd-changelog__section-title">Details</div>
 
                 <ul>
-                  <li v-for="(detail, detailIndex) in release.pulls.items" v-if="showAllDetails[index] || detailIndex<5" :key="detailIndex">{{ detail.title }}</li>
+                  <li v-for="(detail, detailIndex) in release.pulls.items" v-if="showAllDetails[index] || detailIndex<5" :key="detailIndex">
+                    <a class="rvtd-changelog__pr-link" target="_blank" rel="noopener" :href="detail.html_url">{{ detail.title }}</a>
+                  </li>
                 </ul>
 
                 <p class="rvtd-changelog__view-all-details" v-if="release.pulls.items.length > 5 && !showAllDetails[index]">
