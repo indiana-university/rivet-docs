@@ -210,7 +210,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
             </div>
         </div>
         <!-- Drawer close button - shows on small screens -->
-        <button class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="mobile-drawer">
+        <button class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="mobile-drawer-2">
             <span class="sr-only">Toggle menu</span>
             <svg role="img" alt="" class="rvt-drawer-button-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <g fill="currentColor">
@@ -231,7 +231,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
         is probably the best way to handle that kind of flexibility.
         We'll just need to be clear about it in the documentation.
     -->
-    <div class="rvt-drawer" aria-hidden="true" id="mobile-drawer">
+    <div class="rvt-drawer" aria-hidden="true" id="mobile-drawer-2">
         <!-- Drawer nav -->
         <nav class="rvt-drawer__nav" role="navigation">
             <ul>
@@ -327,7 +327,7 @@ To create a nested navigation structure, you can use Rivet's dropdown menus alon
 
 Additionally, any navigation item that will contain sub navigation items needs the `has-children` class for appropriate styling in the dropdown menu. Lastly, each `<div>` sub navigation item needs`aria-hidden` set to true to hide the element until the dropdown menu toggle is clicked.
 
-{{< code >}}<div class="rvt-drawer" aria-hidden="true" id="mobile-drawer">
+{{< code >}}<div class="rvt-drawer" aria-hidden="true" id="mobile-drawer-3">
     <!-- Drawer nav -->
     <nav class="rvt-drawer__nav" role="navigation">
         <ul>
