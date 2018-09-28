@@ -10,7 +10,7 @@
       </div>
       <div class="rvt-grid__item-6-md-up rvt-grid__item--last">
         <div class="rvtd-hero__image">
-          <img src="http://www.fillmurray.com/g/600/400" alt="A web browser displaying the Rivet homepage">
+          <img src="{{ .Params.heroImage }}" alt="A web browser displaying the Rivet homepage">
         </div>
       </div>
     </div>
@@ -21,7 +21,7 @@
 
 {{ partial "about-page/should-i-use.html" . }}
 
-<div class="rvt-m-top-xxl rvt-p-tb-xxl" id="why-did-we-build-it">
+<div class="rvt-m-top-xxl rvt-p-tb-xxl" id="{{ (index .Params.sections 0).slug }}">
   <div class="rvt-container rvt-container--junior rvt-container--center">
     <div class="rvt-grid rvt-vertical-center">
       <div class="rvt-grid__item-4-md-up">
@@ -37,7 +37,7 @@
   </div>
 </div>
 
-<div class="rvt-p-tb-xxl" id="who-supports-it">
+<div class="rvt-p-tb-xxl" id="{{ (index .Params.sections 1).slug }}">
   <div class="rvt-container rvt-container--junior rvt-container--center">
     <div class="rvt-grid rvt-vertical-center rvtd-grid-reverse-md-up">
       <div class="rvt-grid__item-4-md-up">
@@ -53,7 +53,7 @@
   </div>
 </div>
 
-<div class="rvt-m-bottom-xxl rvt-p-tb-xxl" id="how-do-we-develop-it">
+<div class="rvt-m-bottom-xxl rvt-p-tb-xxl" id="{{ (index .Params.sections 2).slug }}">
   <div class="rvt-container rvt-container--junior rvt-container--center">
     <div class="rvt-grid rvt-vertical-center">
       <div class="rvt-grid__item-4-md-up">
