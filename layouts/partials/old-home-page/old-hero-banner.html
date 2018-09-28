@@ -1,0 +1,28 @@
+<section class="rvtd-billboard">
+    <div class="rvt-container rvt-container--junior rvt-container--center rvtd-position-relative">
+        <div class="rvtd-billboard__content">
+            <h1 class="rvtd-billboard__title">{{ .Params.hero.title | safeHTML }}</h1>
+            <p class="rvtd-billboard__teaser">{{ .Params.hero.teaser }}</p>
+            <a class="rvtd-billboard__cta rvt-button" href="{{ .Params.hero.link }}">{{ .Params.hero.text }}</a>
+        </div>
+        <div class="rvtd-billboard__image">
+            <img src="./img/add-ons-mockup.png" alt="Rivet Add-ons landing page">
+        </div>
+    </div>
+</section>
+<section class="rvtd-section rvt-p-bottom-remove">
+    <div class="angle-container">
+        <div class="angle"></div>
+        <div class="rvt-container rvt-container--senior rvt-container--center">
+            <div class="rvt-grid">
+                <div class="rvt-grid__item-4 rvt-grid__item-5-lg-up  rvt-m-left-xxl-xl-up rvt-m-right-xxl-md-up laptop">
+                    <img src="./img/docs/rvtd-home-laptop.png" width="780" alt="Rivet screen on a laptop." />
+                </div>
+                <div class="rvt-grid__item rvt-grid__item-5-xl-up rvt-p-all-xxl-md-up rvt-m-top-xxl-lg-up">
+                    <p class="rvt-ts-23 rvt-m-bottom-lg"><strong>Familiarity</strong> is a key component of usability. With Rivet, you get a toolset for creating familiar web applications to give users a better experience.</p>
+                    <a href="./blog/why-we-built-rivet/" class="rvt-button">Learn why we built Rivet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
