@@ -17,8 +17,18 @@
     padding-top: 6rem;
   }
 
-  &--subtle-gradient {
-    background: linear-gradient(180deg, #f7f7f7 0%, #FFFFFF 63.7%);
+  &--grid {
+    background: url('../img/home-page-hero-background.png'),
+                linear-gradient(180deg, #f7f7f7 0%, #FFFFFF 63.7%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__illustration {
+    max-width: 1000px;
+    margin-top: $xl;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
