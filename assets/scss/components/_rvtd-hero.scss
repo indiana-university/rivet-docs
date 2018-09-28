@@ -24,6 +24,10 @@
     background-size: cover;
   }
 
+  &--subtle-gradient {
+    background: linear-gradient(180deg, #f7f7f7 0%, #FFFFFF 63.7%);
+  }
+
   &__illustration {
     max-width: 1000px;
     margin-top: $xl;
