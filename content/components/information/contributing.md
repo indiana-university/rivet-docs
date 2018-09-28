@@ -23,19 +23,19 @@ Here are a few guidelines to follow when creating a new issue:
 If you need more info, [this Knowledge Base article](https://kb.iu.edu/d/bagk) explains IU's Github Enterprise service in a little more detail and has some handy links to Git and GitHub documentation.
 
 ## Review process
-Creating an issue is just a way to start a conversation that is visible to the whole team. Anyone should feel free to create a new issue, but before a new submission moves on to a formal review process we’ll ask that it include Each one include:
+Creating an issue is just a way to start a conversation that is visible to the whole team. Anyone should feel free to create a new issue, but before a new submission moves on to a formal review process we’ll ask that each one includes:
 
 - a fairly short descriptive title
-- What will be gained by adding this design and will be lost if we don't?
-- A description of the design problem this component solves
+- what will be gained by adding this design and will be lost if we don't?
+- a description of the design problem this component solves
 - at least one of the following: screenshots/images of your rendered design, wireframes, design mockups, links to [Codepen](http://codepen.io/), [jsFiddle](https://jsfiddle.net/), etc., Axure mockups, iPhone photo of a napkin sketch.
     - **NOTE**: If applicable, this should include a documented interaction flow, eg. states (hover, focus, click, drag...), error and success messages, etc.
 - any other document, links, research you would like to include
-- If you have a specific use-case for a proposed solution, please provide some context (screenshots, links)
+- context (screenshots, links) if you have a specific use case for a proposed solution
 
 ### Collaboration
 
-If you are a developer and want help with your submission from a designer make sure to mention that when creating your issue and someone from the review team will help pair you up with a designer. Same goes for designers that want help from a developer.
+If you are a developer and want help with your submission from a designer, make sure to mention that when creating your issue and someone from the review team will help pair you up with a designer. Same goes for designers that want help from a developer.
 
 ### Content changes
 If you are proposing a content change, please include a draft of the text content you're focusing on.

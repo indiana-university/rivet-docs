@@ -1,6 +1,6 @@
 ---
 title: "Text"
-description: "The Rivet text utilities make it easy to style text"
+description: "The Rivet text utilities make it easy to style text."
 status: "Ready"
 ---
 ## Font weight

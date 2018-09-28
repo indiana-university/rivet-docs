@@ -24,7 +24,7 @@ status: "Ready"
 - To help users discover important information changes in your UI
 
 ## When to consider something else
-- When there is a critical error that requires the users attention to fix use an page-level alert instead
+- When there is a critical error that requires the users attention to fix, use a page-level alert instead
 - Avoid using lots of badges on one page when possible as it will diminish the affect of calling out important parts of the UI
 
 ## Accessibility

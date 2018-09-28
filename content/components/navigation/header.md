@@ -1,6 +1,6 @@
 ---
 title: "Header"
-description: "The Rivet header has provides consistent branding and flexible navigation layout for your application."
+description: "The Rivet header provides consistent branding and flexible navigation layout for your application."
 requiresJs: true
 status: "Ready"
 methods:

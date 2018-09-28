@@ -113,7 +113,7 @@ When you need to present users with a list of mutually exclusive options and the
 - For a group of checkboxes, use parallel phrasing and try to keep the length about the same for all labels
 - For a group of checkboxes, focus the label text on the differences among the options. If all the options have the same introductory text, move that text to the group label.
 - Use positive phrasing. Don't phrase a label so that selecting a checkbox means not to perform an action.
-  - **Exception: Don't show this again** checkboxes.
+  - **Exception: Don't show this again** checkboxes
 
 ## Checkbox group labels
 - Use the group label to explain the purpose of the group, not how to make the selection. Assume that users know how to use checkboxes. For example, don't say, "Select any of the following choices."
