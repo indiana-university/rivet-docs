@@ -73,7 +73,7 @@ The Rivet switch component exposes a handful of methods you can use to programma
 | `Switch.off(button, callback)` | Accepts a switch button element `[data-switch]` and an optional callback function that is run after the switch is toggled off. |
 
 ### Custom events
-The switch component emmits custom events when it is toggled on or off. You can listen for these events in your own scripts and respond to them as needed.
+The switch component emits custom events when it's toggled on or off. You can listen for these events in your own scripts and respond to them as needed.
 
 |Event|Description|
 |----|------|

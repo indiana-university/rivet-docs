@@ -46,7 +46,7 @@ if (!Element.prototype.closest) {
 {{< /code >}}
 
 ### 2. Add the markup to your HTML
-It is possible to either show or hide the collapsible content by default. To hide the the content by default set the `aria-expanded` attribute on the `<button>` element inside the `.rvt-collapsible__title` element to `false`, then set the `aria-hidden` attribute on the `.rvt-collapsible__content` element to "true". You can hide the collapsible content by default by doing the opposite and setting `aria-exapnded` to a value of `true` and `aria-hidden` to a value of `false`.
+It is possible to either show or hide the collapsible content by default. To hide the content by default set the `aria-expanded` attribute on the `<button>` element inside the `.rvt-collapsible__title` element to `false`, then set the `aria-hidden` attribute on the `.rvt-collapsible__content` element to "true". You can hide the collapsible content by default by doing the opposite and setting `aria-exapnded` to a value of `true` and `aria-hidden` to a value of `false`.
 
 #### Using headings
 The button that toggles the collapsible is wrapped in a heading element in the examples that follow. Any heading level can be used based on the heading structure of your app. Or, if a heading element doesn't make sense semantically it can be replaced with a generic `<div>` element.
@@ -114,7 +114,7 @@ Collapsible.init();
 {{< /code >}}
 
 ## JavaScript API
-The Rivet collapsible component exposes a handful of methods you can use to programmatically control the component. The `.init()` method must be called somewhere in your document after the `rivet-collapsible.js` script is included. The `init()` method attaches and event listener to the document that listens for clicks on buttons with the `data-collapsible` attribute. With that in mind you should be able to dynamically add collapsibles to the DOM without having the re-initialize the component.
+The Rivet collapsible component exposes a handful of methods you can use to programmatically control the component. The `.init()` method must be called somewhere in your document after the `rivet-collapsible.js` script is included. The `init()` method attaches an event listener to the document that listens for clicks on buttons with the `data-collapsible` attribute. With that in mind you should be able to dynamically add collapsibles to the DOM without having the re-initialize the component.
 
 ### Methods
 
@@ -123,4 +123,4 @@ The Rivet collapsible component exposes a handful of methods you can use to prog
 | `Collapsible.init()` | Initializes the collapsible component |
 | `Collapsible.open(button, callback)` | Accepts a collapsible toggle button element `[data-collapsible]` and an optional callback function that is run after the collapsible is toggled opened. |
 | `Collapsible.close(button, callback)` | Accepts a collapsible toggle button element `[data-collapsible]` and an optional callback function that is run after the collapsible is toggled closed. |
-| `Collapsible.destroy()` | Destroys the current initialization of the collapsible component and removes it's event listener.|
+| `Collapsible.destroy()` | Destroys the current initialization of the collapsible component and removes its event listener.|
