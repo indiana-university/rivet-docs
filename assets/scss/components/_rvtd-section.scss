@@ -1,0 +1,35 @@
+/**
+ * Custom layout stuff
+ */
+
+/**
+ * This is a generic wrapper that adds a decent amount of vertical
+ * spacing to bands/sections of content.
+ */
+.rvtd-section {
+  padding: $xxl 0;
+
+  &__title {
+    font-size: 2.25em;
+    font-weight: bold;
+
+    &::before {
+      content: " ";
+      background: $color-midnight;
+      display: block;
+      height: 4px;
+      width: 1em;
+      margin-bottom: .5em;
+    }
+  }
+}
+
+@include mq(bp(md)) {
+  .rvtd-section {
+    padding: $xxl*2 0;
+  }
+
+  .rvtd-section--tall {
+    padding: $xxl*3 0;
+  }
+}

@@ -1,0 +1,24 @@
+.rvtd-hero {
+  padding-top: 8rem;
+  padding-bottom: 0;
+  position: relative;
+
+  &__content {
+    padding-top: $md;
+  }
+
+  &__image {
+    img {
+      display: block;
+    }
+  }
+}
+
+@include mq(bp(md)) {
+  .rvtd-hero {
+    &__content {
+      padding-right: $xxl;
+    }
+  }
+}
+
