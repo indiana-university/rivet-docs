@@ -1,0 +1,46 @@
+.rvtd-hero {
+  padding-top: 8rem;
+  padding-bottom: 0;
+  position: relative;
+
+  &__content {
+    padding-top: $md;
+  }
+
+  &__image {
+    img {
+      display: block;
+    }
+  }
+
+  &--short {
+    padding-top: 6rem;
+  }
+
+  &--grid {
+    background: url('../img/home-page-hero-background.png'),
+                linear-gradient(180deg, #f7f7f7 0%, #FFFFFF 63.7%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--subtle-gradient {
+    background: linear-gradient(180deg, #f7f7f7 0%, #FFFFFF 63.7%);
+  }
+
+  &__illustration {
+    max-width: 1000px;
+    margin-top: $xl;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@include mq(bp(md)) {
+  .rvtd-hero {
+    &__content {
+      padding-right: $xxl;
+    }
+  }
+}
+

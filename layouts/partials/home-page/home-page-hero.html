@@ -1,0 +1,19 @@
+<div class="rvtd-hero rvtd-hero--short rvtd-hero--grid">
+  <div class="rvt-container rvt-container--freshman rvt-container--center">
+    <div class="rvt-text-center">
+      <h1 class="rvt-ts-41 rvt-text-bold">{{ .Params.hero.title }}</h1>
+      <p class="rvt-ts-20">{{ .Params.hero.teaser }}</p>
+      <div class="rvt-button-group rvt-p-tb-md" style="justify-content: center;">
+        <a href="{{ .Params.primaryAction.link }}" class="rvt-button">
+            {{ .Params.primaryAction.text }}
+        </a>
+        <a href="{{ .Params.secondaryAction.link }}" class="rvt-button rvt-button--secondary">
+            {{ .Params.secondaryAction.text }}
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="rvtd-hero__illustration">
+    <img src="./img/home-page-hero.png" alt="">
+  </div>
+</div>
