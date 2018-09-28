@@ -12,6 +12,14 @@
       display: block;
     }
   }
+
+  &--short {
+    padding-top: 6rem;
+  }
+
+  &--subtle-gradient {
+    background: linear-gradient(180deg, #f7f7f7 0%, #FFFFFF 63.7%);
+  }
 }
 
 @include mq(bp(md)) {

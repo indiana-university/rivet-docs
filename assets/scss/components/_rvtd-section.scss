@@ -22,6 +22,11 @@
       margin-bottom: .5em;
     }
   }
+
+  &--crimson {
+    background-color: $color-crimson;
+    color: $color-background;
+  }
 }
 
 @include mq(bp(md)) {
