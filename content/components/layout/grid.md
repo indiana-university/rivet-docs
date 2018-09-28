@@ -160,7 +160,7 @@ It's important to note that the auto grid items will stack at whichever grid bre
 {{< /example >}}
 
 ## Push and pull
-When you need to change the visual order of the grid items you can use `.rvt-grid__item-push-*` and `.rvt-grid__item-pull-*` modifiers.
+When you need to change the visual order of the grid items, you can use `.rvt-grid__item-push-*` and `.rvt-grid__item-pull-*` modifiers.
 
 {{< example lang="html" >}}<div class="rvt-container">
     <div class="rvt-grid">
@@ -175,7 +175,7 @@ When you need to change the visual order of the grid items you can use `.rvt-gri
 {{< /example >}}
 
 ### Right-align last item
-You can right-align the last item in a `.rvt-grid` by adding the `.rvt-grid__item--last` modifier to any grid item. This can be helpful when using set column widths that add up to less than 12 columns. Using the `.rvt-grid__item--last` will push the last `.rvt-grid__item-*` to the right leaving the remaining columns as extra space.
+You can right-align the last item in a `.rvt-grid` by adding the `.rvt-grid__item--last` modifier to any grid item. This can be helpful when using set column widths that add up to less than 12 columns. Using the `.rvt-grid__item--last` will push the last `.rvt-grid__item-*` to the right, leaving the remaining columns as extra space.
 
 {{< example lang="html" >}}<div class="rvt-container">
     <div class="rvt-grid">

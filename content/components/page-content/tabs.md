@@ -72,19 +72,19 @@ events:
 {{< /example >}}
 
 ## When to use
-- Displaying a small number (2-5 categories) of closely related, distinct data.
-- Displaying multiple unique views of the same data.
-- Category labels are short and easy to understand.
-- Switching between views is common for your users’ goals.
-- Categories names are unlikely to change very often and number of categories is unlikely to grow.
+- Displaying a small number (2-5 categories) of closely related, distinct data
+- Displaying multiple unique views of the same data
+- Category labels are short and easy to understand
+- Switching between views is common for your users’ goals
+- Categories names are unlikely to change very often and number of categories is unlikely to grow
 
 ## When to consider something else
-- Displaying six or more categories (or more than what will easily fit horizontally on your target users' screen).
-- Displaying categories that require long labels for clarity.
-- Users will frequently need to compare data from different tabs/categories.
-- The data for each tab could just as easily function as its own page.
-- If you are tempted to include a ‘More’ tab.
-- If the amount of data that would be shown on each tab is small.
+- Displaying six or more categories (or more than what will easily fit horizontally on your target users' screen)
+- Displaying categories that require long labels for clarity
+- Users will frequently need to compare data from different tabs/categories
+- The data for each tab could just as easily function as its own page
+- If you are tempted to include a ‘More’ tab
+- If the amount of data that would be shown on each tab is small
 
 ## Accessibility Requirements
 {{% a11y %}}
@@ -96,11 +96,11 @@ The Rivet Tabs are built to follow the WAI-ARIA authoring standards. It is marke
 - Activating a tab should set its associated tab panel's `tabindex` attribute to `-1`. All in active tabs should have their `tabindex` attribute set to `0` so that after the used activates a tab, pressing <kbd>Tab</kbd> will move focus to the active tab's tab panel.
 
 ### Labeling
-- Tabs should be wrapped in an element with a role of [tablist](https://www.w3.org/TR/wai-aria-1.1/#tablist).
-- Each tab (button) should have a role of [tab](https://www.w3.org/TR/wai-aria-1.1/#tab).
+- Tabs should be wrapped in an element with a role of [tablist](https://www.w3.org/TR/wai-aria-1.1/#tablist)
+- Each tab (button) should have a role of [tab](https://www.w3.org/TR/wai-aria-1.1/#tab)
 - Each tab panel should have a role of [tabpanel](https://www.w3.org/TR/wai-aria-1.1/#tabpanel)
 - The active tab should have the attribute [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) set to `true`. All inactive tabs should have `aria-selected` set to `false`
-- Each `tabpanel` should have an `aria-labelledby` attribute that references its associated tab.
+- Each `tabpanel` should have an `aria-labelledby` attribute that references its associated tab
 
 ### Keyboard navigation
 - <kbd>Enter</kbd> or <kbd>Space</kbd> = Activate tab (when focused)
@@ -109,10 +109,10 @@ The Rivet Tabs are built to follow the WAI-ARIA authoring standards. It is marke
 
 ## Implementation notes
 - Order tabs in a logical manner
-- Default tab (on page load) should be first tab. This should be the most frequently viewed/most important tab.
+- Default tab (on page load) should be first tab. This should be the most frequently viewed/most important tab
 - Label tabs with clear concise categories - 1-2 words is ideal
 - Do not use all caps in the tab labels
-- Do not include a ‘More’ tab.
+- Do not include a ‘More’ tab
 
 ## Fitted version
 Applying the modifier class `.rvt-tabs--fitted` to the main `.rvt-tabs` container will make the tabs take up equal amounts of the space of the tabs container.
