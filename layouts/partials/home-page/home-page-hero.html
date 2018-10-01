@@ -1,19 +1,18 @@
-<div class="rvtd-hero rvtd-hero--short rvtd-hero--grid">
-  <div class="rvt-container rvt-container--freshman rvt-container--center">
-    <div class="rvt-text-center">
-      <h1 class="rvt-ts-41 rvt-text-bold">{{ .Params.hero.title }}</h1>
-      <p class="rvt-ts-20">{{ .Params.hero.teaser }}</p>
-      <div class="rvt-button-group rvt-p-tb-md" style="justify-content: center;">
-        <a href="{{ .Params.primaryAction.link }}" class="rvt-button">
-            {{ .Params.primaryAction.text }}
-        </a>
-        <a href="{{ .Params.secondaryAction.link }}" class="rvt-button rvt-button--secondary">
-            {{ .Params.secondaryAction.text }}
-        </a>
+<div class="rvtd-hero rvtd-hero--short rvtd-hero--illo rvtd-hero--home">
+  <div class="rvt-container rvt-container--junior rvt-container--center">
+    <div class="rvt-grid">
+      <div class="rvt-grid__item-7-md-up">
+        <h1 class="rvt-ts-36 rvt-ts-46-md-up rvt-text-bold rvt-lh-title">{{ .Params.hero.title }}</h1>
+        <p class="rvt-ts-20-md-up">{{ .Params.hero.teaser }}</p>
+        <div class="rvtd-hero__cta rvt-p-tb-md">
+          <a href="{{ .Params.primaryAction.link }}" class="rvt-button">
+              {{ .Params.primaryAction.text }}
+          </a>
+          <a href="{{ .Params.secondaryAction.link }}" class="rvt-button rvt-button--secondary">
+              {{ .Params.secondaryAction.text }}
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="rvtd-hero__illustration">
-    <img src="./img/home-page-hero.png" alt="">
   </div>
 </div>

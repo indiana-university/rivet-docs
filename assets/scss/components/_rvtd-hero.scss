@@ -1,11 +1,7 @@
 .rvtd-hero {
-  padding-top: 8rem;
+  padding-top: 3rem;
   padding-bottom: 0;
   position: relative;
-
-  &__content {
-    padding-top: $md;
-  }
 
   &__image {
     img {
@@ -17,22 +13,62 @@
     padding-top: 6rem;
   }
 
-  &--grid {
-    background: url('../img/home-page-hero-background.png'),
-                linear-gradient(180deg, #f7f7f7 0%, #FFFFFF 63.7%);
+  &--illo {
+    background: linear-gradient(180deg, #f7f7f7 0%, #FFFFFF 63.7%);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: bottom center;
+    background-size: 800px;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  &--home {
+    background-image: url("../img/home-page-hero.jpg");
+  }
+
+  &--about {
+    background-image: url("../img/about-page-hero.jpg");
   }
 
   &--subtle-gradient {
     background: linear-gradient(180deg, #f7f7f7 0%, #FFFFFF 63.7%);
   }
 
-  &__illustration {
-    max-width: 1400px;
-    margin-top: $xl;
-    margin-right: auto;
-    margin-left: auto;
+  &__cta {
+    .rvt-button {
+      width: 100%;
+      justify-content: center;
+
+      &:not(:first-child) {
+        margin-top: $sm;
+      }
+    }
+
+    .rvt-button--secondary {
+      background-color: $color-background;
+
+      &:hover {
+        background-color: #cce0ea;
+      }
+    }
+  }
+}
+
+@include mq(bp(sm)) {
+  .rvtd-hero {
+    padding-top: 8rem;
+
+    &__cta {
+      .rvt-button {
+        width: auto;
+        justify-content: center;
+
+        &:not(:first-child) {
+          margin-top: 0;
+          margin-left: $sm;
+        }
+      }
+    }
   }
 }
 
@@ -40,6 +76,20 @@
   .rvtd-hero {
     &__content {
       padding-right: $xxl;
+    }
+
+    &--illo {
+      background-position: bottom right;
+    }
+  }
+}
+
+@include mq(bp(lg)) {
+  .rvtd-hero {
+    &--illo {
+      padding-top: 8rem;
+      padding-bottom: 10rem;
+      background-size: auto;
     }
   }
 }

@@ -1,16 +1,11 @@
 {{ define "main" }}
-<div class="rvtd-hero rvtd-hero--subtle-gradient">
+<div class="rvtd-hero rvtd-hero--short rvtd-hero--illo rvtd-hero--about">
   <div class="rvt-container rvt-container--center rvt-container--junior">
     <div class="rvt-grid">
       <div class="rvt-grid__item-6-md-up">
         <div class="rvtd-hero__content">
-          <h1 class="rvt-ts-46 rvt-text-bold">{{ .Title }}</h1>
-          <p class="rvt-ts-18">{{ .Description }}</p>
-        </div>
-      </div>
-      <div class="rvt-grid__item-6-md-up rvt-grid__item--last">
-        <div class="rvtd-hero__image">
-          <img src="{{ .Params.heroImage }}" alt="A web browser displaying the Rivet homepage">
+          <h1 class="rvt-ts-36 rvt-ts-46-md-up rvt-text-bold rvt-lh-title">{{ .Title }}</h1>
+          <p class="rvt-ts-20-md-up">{{ .Description }}</p>
         </div>
       </div>
     </div>
@@ -24,10 +19,10 @@
 <div class="rvt-m-top-xxl rvt-p-tb-xxl" id="{{ (index .Params.sections 0).slug }}">
   <div class="rvt-container rvt-container--junior rvt-container--center">
     <div class="rvt-grid rvt-vertical-center">
-      <div class="rvt-grid__item-4-md-up">
+      <div class="rvt-grid__item-6-md-up rvt-m-bottom-xl">
         <img src="{{ (index .Params.sections 0).image }}" alt="">
       </div>
-      <div class="rvt-grid__item-8-md-up">
+      <div class="rvt-grid__item-6-md-up">
         <div class="rvt-p-left-xxl-md-up">
           <h2 class="rvt-ts-lg rvt-text-bold rvt-m-bottom-md">{{ (index .Params.sections 0).title }}</h2>
           <p class="rvtd-lh-generous">{{ (index .Params.sections 0).teaser }}</p>
@@ -38,17 +33,44 @@
 </div>
 
 <div class="rvt-p-tb-xxl" id="{{ (index .Params.sections 1).slug }}">
-  <div class="rvt-container rvt-container--junior rvt-container--center">
-    <div class="rvt-grid rvt-vertical-center rvtd-grid-reverse-md-up">
-      <div class="rvt-grid__item-4-md-up">
-        <img src="{{ (index .Params.sections 1).image }}" alt="">
-      </div>
-      <div class="rvt-grid__item-8-md-up">
+  <div class="rvt-container rvt-container--junior rvt-container--center rvt-p-tb-lg-md-up">
+    <div class="rvt-grid ">
+      <div class="rvt-grid__item-5-md-up">
         <div class="rvt-p-right-xxl-md-up">
           <h2 class="rvt-ts-lg rvt-text-bold rvt-m-bottom-md">{{ (index .Params.sections 1).title }}</h2>
           <p class="rvtd-lh-generous">{{ (index .Params.sections 1).teaser }}</p>
         </div>
       </div>
+      <div class="rvt-grid__item-7-md-up">
+        <div class="rvt-grid">
+          <div class="rvt-grid__item-6-md-up rvt-m-bottom-lg">
+            <h3 class="rvt-ts-sm rvt-text-bold rvt-m-top-sm">Rivet team</h3>
+            {{ range (index .Params.sections 1).members }}
+            <div class="rvtd-person-card rvtd-person-card--compact">
+              <div class="rvtd-person-card__picture">
+                <img alt="{{ .name }}" src="{{ .avatar }}" class="rvtd-person-card__image">
+              </div>
+              <div class="rvtd-person-card__info">
+                <div class="rvtd-person-card__name rvt-text-bold">{{ .name }}</div>
+                <div class="rvtd-person-card__title">{{ .title }}</div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+          <div class="rvt-grid__item-5-md-up rvt-grid__item--last">
+            <h3 class="rvt-ts-sm rvt-text-bold rvt-m-top-sm">Steering committee</h3>
+            <ul class="rvt-plain-list rvt-m-top-md">
+              {{ range (index .Params.sections 1).committee }}
+                <li class="rvt-m-top-sm">
+                  <div class="rvt-text-bold">{{ .name }}</div>
+                  <div class="rvt-ts-14">{{ .title }}</div>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -56,10 +78,10 @@
 <div class="rvt-m-bottom-xxl rvt-p-tb-xxl" id="{{ (index .Params.sections 2).slug }}">
   <div class="rvt-container rvt-container--junior rvt-container--center">
     <div class="rvt-grid rvt-vertical-center">
-      <div class="rvt-grid__item-4-md-up">
-        <img src="{{ (index .Params.sections 2).image }}" alt="">
+      <div class="rvt-grid__item-6-md-up rvt-m-bottom-xl">
+        <img src="{{ (index .Params.sections 2).image }}" alt="Rivet github project board" style="box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);">
       </div>
-      <div class="rvt-grid__item-8-md-up">
+      <div class="rvt-grid__item-6-md-up">
         <div class="rvt-p-left-xxl-md-up">
           <h2 class="rvt-ts-lg rvt-text-bold rvt-m-bottom-md">{{ (index .Params.sections 2).title }}</h2>
           <p class="rvtd-lh-generous">{{ (index .Params.sections 2).teaser }}</p>
