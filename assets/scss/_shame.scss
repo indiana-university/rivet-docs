@@ -632,6 +632,12 @@ a.button--reverse-secondary {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
 }
 
+@include mq(bp(md)) {
+    .rvtd-panel {
+        min-height: 372px;
+    }
+}
+
 // Reverses grid order on medium and larger screens
 @include mq(bp(md)) {
     .rvtd-grid-reverse-md-up {

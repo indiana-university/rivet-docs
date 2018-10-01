@@ -4,23 +4,19 @@
   padding-top: $md;
   padding-bottom: $md;
 
-  &__inner {
-    display: flex;
-    align-items: center;
-  }
-
   &__icon {
     opacity: .5;
   }
 
   &__list-item {
     margin-top: 0;
-    margin-left: $md;
   }
 
   &__list-item a {
     color: $color-background;
     text-decoration: none;
+    display: block;
+    padding: $xs 0;
 
     &:hover {
       text-decoration: underline;
@@ -30,6 +26,24 @@
       box-shadow: none;
       outline: 2px dotted $color-background;
       outline-offset: 2px;
+    }
+  }
+}
+
+@include mq(bp(md)) {
+  .rvtd-page-nav {
+    &__inner {
+      display: flex;
+      align-items: center;
+    }
+
+    &__list {
+      display: flex;
+      margin-left: $md;
+    }
+
+    &__list-item {
+      margin-right: $md;
     }
   }
 }
