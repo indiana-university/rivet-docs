@@ -1,6 +1,6 @@
 ---
 title: "Spacing"
-description: "A robust set of responsive spacing utilites to help fine-tune your layout."
+description: "A robust set of responsive spacing utilities to help fine-tune your layout."
 requiresJs: false
 status: "Ready"
 ---
