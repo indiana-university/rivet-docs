@@ -1,6 +1,6 @@
 ---
 title: "Header"
-description: "The Rivet header has provides consistent branding and flexible navigation layout for your application."
+description: "The Rivet header provides consistent branding and flexible navigation layout for your application."
 requiresJs: true
 status: "Ready"
 methods:
@@ -13,8 +13,8 @@ methods:
     -
         title: "Drawer.destroy(context)"
         description: |
-            - Destroys any currently initialized Drawer and removes it's event listeners.
-            - Accepts a optional DOM element. If no element is provided in the argument it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the Drawer was initialized.
+            - Destroys any currently initialized Drawer and removes its event listeners.
+            - Accepts an optional DOM element. If no element is provided in the argument, it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the Drawer was initialized.
     -
         title: "Drawer.open(id, callback)"
         description: |
@@ -26,7 +26,7 @@ methods:
     -
         title: "Drawer.toggle(id, callback)"
         description: |
-            - Sets the Drawer to the whatever is the **opposite** of it's current state. For example, if it is open/visible, calling the `Drawer.toggle(id)` method will close the drawer it's called on and vice versa.
+            - Sets the Drawer to the **opposite** of its current state. For example, if it is open/visible, calling the `Drawer.toggle(id)` method will close the drawer it's called on and vice versa.
             - `id` the unique id of the Drawer you want to toggle
             - `callback` an optional callback function that is executed after the Drawer is toggled.
 events:
@@ -72,7 +72,7 @@ The base header provides consistent branding in a condensed space. It replaces t
 The base header can be extended to fit the navigation needs of your application by using a handful of smaller sub-components and modifier CSS classes.
 
 ## Header with identity menu
-The inclusion of an avatar and username, or only username are both appropriate choices. When your application has multiple user functions consider including the dropdown menu. When there is only one user function consider replacing the carat with a bar followed by the single function. (example:  username | Log out). On mobile this item collapses into the side menu above all other options.
+The inclusion of an avatar and username, or only username are both appropriate choices. When your application has multiple user functions consider including the dropdown menu. When there is only one user function consider replacing the carat with a bar followed by the single function. (example:  username | Log out). On mobile, this item collapses into the side menu above all other options.
 
 {{< example lang="html" >}}<header class="rvt-header" role="banner">
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>

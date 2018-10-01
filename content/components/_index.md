@@ -89,7 +89,7 @@ Once you have a `package.json` file configured in the root of your project, you 
 {{< /code >}}
 
 ### Updating the Rivet NPM package
-When there is a new version of Rivet released it will be publish to the NPM registry. You can check for updates by running the `npm outdated` command. To acutally update your NPM dependency you can run the following command at the same level as your project's `package.json`.
+When there is a new version of Rivet released it will be publish to the NPM registry. You can check for updates by running the `npm outdated` command. To actually update your NPM dependency you can run the following command at the same level as your project's `package.json`.
 
 {{< code >}}npm install rivet-uits@<version> --save-dev
 {{< /code >}}
