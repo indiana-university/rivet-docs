@@ -20,12 +20,12 @@
   <div class="rvt-container rvt-container--junior rvt-container--center">
     <div class="rvt-grid rvt-vertical-center">
       <div class="rvt-grid__item-6-md-up rvt-m-bottom-xl">
-        <img src="{{ (index .Params.sections 0).image }}" alt="">
+        <img src="{{ (index .Params.sections 0).image }}" alt="Illustration showing five web application screens stacked on top of one another">
       </div>
       <div class="rvt-grid__item-6-md-up">
         <div class="rvt-p-left-xxl-md-up">
           <h2 class="rvt-ts-lg rvt-text-bold rvt-m-bottom-md">{{ (index .Params.sections 0).title }}</h2>
-          <p class="rvtd-lh-generous">{{ (index .Params.sections 0).teaser }}</p>
+          <p class="rvtd-lh-generous">{{ (index .Params.sections 0).teaser | safeHTML }}</p>
         </div>
       </div>
     </div>
@@ -38,7 +38,10 @@
       <div class="rvt-grid__item-5-md-up">
         <div class="rvt-p-right-xxl-md-up">
           <h2 class="rvt-ts-lg rvt-text-bold rvt-m-bottom-md">{{ (index .Params.sections 1).title }}</h2>
-          <p class="rvtd-lh-generous">{{ (index .Params.sections 1).teaser }}</p>
+          <p class="rvtd-lh-generous">{{ (index .Params.sections 1).teaser | safeHTML }}</p>
+          <a class="rvt-button rvt-button--secondary rvt-m-top-md" href="{{ (index .Params.sections 1).ctaLink }}">
+            {{ (index .Params.sections 1).ctaText }}
+          </a>
         </div>
       </div>
       <div class="rvt-grid__item-7-md-up">
@@ -48,7 +51,7 @@
             {{ range (index .Params.sections 1).members }}
             <div class="rvtd-person-card rvtd-person-card--compact">
               <div class="rvtd-person-card__picture">
-                <img alt="{{ .name }}" src="{{ .avatar }}" class="rvtd-person-card__image">
+                <img alt="{{ .name }}" src="{{ .avatar }}" class="rvtd-person-card__image" alt=" ">
               </div>
               <div class="rvtd-person-card__info">
                 <div class="rvtd-person-card__name rvt-text-bold">{{ .name }}</div>
@@ -84,7 +87,10 @@
       <div class="rvt-grid__item-6-md-up">
         <div class="rvt-p-left-xxl-md-up">
           <h2 class="rvt-ts-lg rvt-text-bold rvt-m-bottom-md">{{ (index .Params.sections 2).title }}</h2>
-          <p class="rvtd-lh-generous">{{ (index .Params.sections 2).teaser }}</p>
+          <p class="rvtd-lh-generous">{{ (index .Params.sections 2).teaser | safeHTML }}</p>
+          <a class="rvt-button rvt-button--secondary rvt-m-top-md" href="{{ (index .Params.sections 2).ctaLink }}">
+            {{ (index .Params.sections 2).ctaText }}
+          </a>
         </div>
       </div>
     </div>
