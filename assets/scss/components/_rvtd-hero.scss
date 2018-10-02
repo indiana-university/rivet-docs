@@ -26,10 +26,6 @@
     background-image: url("../img/home-page-hero.jpg");
   }
 
-  &--about {
-    background-image: url("../img/about-page-hero.jpg");
-  }
-
   &--subtle-gradient {
     background: linear-gradient(180deg, #f7f7f7 0%, #FFFFFF 63.7%);
   }
@@ -80,6 +76,10 @@
 
     &--illo {
       background-position: bottom right;
+    }
+
+    &--about {
+      background-image: url("../img/about-page-hero.jpg");
     }
   }
 }
