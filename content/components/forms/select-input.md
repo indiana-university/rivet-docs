@@ -15,7 +15,7 @@ status: "Ready"
 {{< /example >}}
 
 ### Inline validation examples
-For more info on how to use the Rivet form input validation states [see the examples in the text input section]({{< ref "components/forms/text-input.md#inline-validation-states" >}}).
+For more info on how to use the Rivet form input validation states, [see the examples in the text input section]({{< ref "components/forms/text-input.md#inline-validation-states" >}}).
 
 {{< example lang="html" >}}<label for="select-info-state">Type</label>
 <select name="" id="select-info-state" class="rvt-validation-info" aria-describedby="meats-select">

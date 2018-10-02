@@ -1,0 +1,96 @@
+.rvtd-hero {
+  padding-top: 3rem;
+  padding-bottom: 0;
+  position: relative;
+
+  &__image {
+    img {
+      display: block;
+    }
+  }
+
+  &--short {
+    padding-top: 6rem;
+  }
+
+  &--illo {
+    background: linear-gradient(180deg, #f7f7f7 0%, #FFFFFF 63.7%);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 800px;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  &--home {
+    background-image: url("../img/home-page-hero.jpg");
+  }
+
+  &--subtle-gradient {
+    background: linear-gradient(180deg, #f7f7f7 0%, #FFFFFF 63.7%);
+  }
+
+  &__cta {
+    .rvt-button {
+      width: 100%;
+      justify-content: center;
+
+      &:not(:first-child) {
+        margin-top: $sm;
+      }
+    }
+
+    .rvt-button--secondary {
+      background-color: $color-background;
+
+      &:hover {
+        background-color: #cce0ea;
+      }
+    }
+  }
+}
+
+@include mq(bp(sm)) {
+  .rvtd-hero {
+    padding-top: 8rem;
+
+    &__cta {
+      .rvt-button {
+        width: auto;
+        justify-content: center;
+
+        &:not(:first-child) {
+          margin-top: 0;
+          margin-left: $sm;
+        }
+      }
+    }
+  }
+}
+
+@include mq(bp(md)) {
+  .rvtd-hero {
+    &__content {
+      padding-right: $xxl;
+    }
+
+    &--illo {
+      background-position: bottom right;
+    }
+
+    &--about {
+      background-image: url("../img/about-page-hero.jpg");
+    }
+  }
+}
+
+@include mq(bp(lg)) {
+  .rvtd-hero {
+    &--illo {
+      padding-top: 8rem;
+      padding-bottom: 10rem;
+      background-size: auto;
+    }
+  }
+}
+

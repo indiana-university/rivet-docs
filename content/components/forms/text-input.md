@@ -1,6 +1,6 @@
 ---
 title: "Text inputs"
-description: "Text inputs are the basic building blocks forms. They allow users to enter various types of data into web-based forms."
+description: "Text inputs are the basic building blocks of forms. They allow users to enter various types of data into web-based forms."
 status: "Ready"
 ---
 ## Text input example
@@ -156,7 +156,7 @@ Rivet does not make any assumptions about whether you’re using server- or clie
         </svg>
     </span>
     <span class="rvt-inline-alert__message" id="description-message">
-        Your <strong>Description</strong> has special characters that need replaced.
+        Your <strong>Description</strong> has special characters that need to be replaced.
     </span>
 </div>
 

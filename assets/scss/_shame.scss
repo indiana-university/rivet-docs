@@ -158,41 +158,6 @@ a.button--reverse-secondary {
 }
 
 
-/**
- * Custom layout stuff
- */
-
-/**
- * This is a generic wrapper that adds a decent amount of vertical
- * spacing to bands/sections of content.
- */
-.rvtd-section {
-    padding: $xxl 0;
-
-    &__title {
-        &::before {
-            content: " ";
-            background: $color-midnight;
-            display: block;
-            height: 4px;
-            width: 1em;
-            margin-bottom: .5em;
-        }
-        font-size: 2.25em;
-        font-weight: bold;
-    }
-}
-
-@include mq(bp(md)) {
-    .rvtd-section {
-        padding: $xxl*2 0;
-    }
-
-    .rvtd-section--tall {
-        padding: $xxl*3 0;
-    }
-}
-
 /* Adds a subtle light background */
 .rvtd-section--subtle {
     background: #f7f7f7;
@@ -656,4 +621,30 @@ a.button--reverse-secondary {
 
 .rvtd-position-relative {
     position: relative !important;
+}
+
+
+
+.rvtd-panel {
+    background-color: $color-background;
+    border-radius: $xxs;
+    padding: $md;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+}
+
+@include mq(bp(md)) {
+    .rvtd-panel {
+        min-height: 372px;
+    }
+}
+
+// Reverses grid order on medium and larger screens
+@include mq(bp(md)) {
+    .rvtd-grid-reverse-md-up {
+        flex-direction: row-reverse;
+    }
+}
+
+.rvtd-lh-generous {
+    line-height: 1.7;
 }

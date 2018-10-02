@@ -36,7 +36,7 @@ quarters:
     -
         title: "Adoption and training"
         short_title: "Q3"
-        is_current: true
+        is_complete: true
         items:
             -
                 title: "New components"
@@ -50,6 +50,7 @@ quarters:
     -
         title: "Support and strategies"
         short_title: "Q4"
+        is_current: true
         items:
             -
                 title: "Support model"

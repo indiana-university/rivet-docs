@@ -14,13 +14,13 @@ methods:
         title: "Alert.destroy(context)"
         description: |
             - Destroys any currently initialized Alerts and removes their event listeners.
-            - Accepts a optional DOM element. If no element is provided in the argument it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the Alert was initialized.
+            - Accepts an optional DOM element. If no element is provided in the argument it defaults to the `document` element. **NOTE**: the optional `context` argument only needs to be passed into `.destroy()` if a DOM element was passed into the `.init()` method. If so, it must be the DOM element that was passed into `.init()` when the Alert was initialized.
     -
         title: "Alert.dismiss(id, callback)"
         description: |
             - `id` - The unique id (String) of the Alert you want to dismiss.
             - `callback` - An optional function that gets executed after the alert is dismissed
-            - **NOTE**: In previous versions of Rivet, the `Alert.dismiss()` method accepted a Alert DOM Element. The `.dismiss()` method will still work if you pass it a DOM element (the Alert element itself), but **this functionality will be deprecated in the next major version of Rivet**.
+            - **NOTE**: In previous versions of Rivet, the `Alert.dismiss()` method accepted an Alert DOM Element. The `.dismiss()` method will still work if you pass it a DOM element (the Alert element itself), but **this functionality will be deprecated in the next major version of Rivet**.
 events:
     -
         title: "alertDismissed"
@@ -67,7 +67,7 @@ events:
 {{< /example >}}
 
 ## Standalone inline alerts
-Inline alerts in Rivet should be used for form validation situations where [the standard inline form input validation]({{< ref "components/forms/text-input.md#inline-validation-states" >}}) error would not make sense. For instance, marking a goup of radio button buttons, or checkboxes will an input error. Adding the `rvt-inline-alert--standalone` modifier class to the standard inline alert element will give the alert a subtle background color and left border to add some visual contrast.
+Inline alerts in Rivet should be used for form validation situations where [the standard inline form input validation]({{< ref "components/forms/text-input.md#inline-validation-states" >}}) error would not make sense. For instance, marking a group of radio buttons or checkboxes will give an input error. Adding the `rvt-inline-alert--standalone` modifier class to the standard inline alert element will give the alert a subtle background color and left border to add some visual contrast.
 
 {{< example lang="html" >}}
 <div class="rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--info">
@@ -135,7 +135,7 @@ Inline alerts in Rivet should be used for form validation situations where [the 
     </p>
 </div>
 
-When using an standalone inline alerts with a group of inputs, make sure add the `aria-describedby` attribute to **each input** (in this case radio buttons) that is invalid. The `aria-describedy` by value should correspond to a matching `id` attribute on the `.rvt-inline-alert__message` element.
+When using a standalone inline alert with a group of inputs, make sure to add the `aria-describedby` attribute to **each input** (in this case radio buttons) that is invalid. The `aria-describedy` by value should correspond to a matching `id` attribute on the `.rvt-inline-alert__message` element.
 
 
 {{< example lang="html" >}}<form>
@@ -214,7 +214,7 @@ Alert lists provide a way to group a set of errors together. For instance, when 
 - Alerts should use the `role="alert"` attribute
 - Alerts that have a dismiss or close button should use the `role="alertdialog"` attribute
 - Use the `aria-labelledby` attribute to link the alert title with the alert element
-- Dynamically rendered alerts are automatically announced by most screen readers, but it’s important to note that screen readers will not inform users of alerts that are present before a page has finished loading.
+- Dynamically rendered alerts are automatically announced by most screen readers, but it’s important to note that screen readers will not inform users of alerts that are present before a page has finished loading
 
 ### Alert list accessibility
 Alert lists can be particularly useful for summarizing multiple errors on a page, and providing links to the invalid fields. These summaries are especially helpful for non-sighted users, who will not receive the visual cue provided by multiple inline alerts appearing on the page when a form is submitted.

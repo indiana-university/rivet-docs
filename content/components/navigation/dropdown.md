@@ -28,7 +28,7 @@ methods:
     -
         title: "Dropdown.toggle(id, callback)"
         description: |
-            - Sets the Dropdown to the whatever is the **opposite** of it's current state. For example, if it is open/visible, calling the `Dropdown.toggle(id)` method will close the dropdown it's called on and vice versa.
+            - Sets the Dropdown to the **opposite** of its current state. For example, if it is open/visible, calling the `Dropdown.toggle(id)` method will close the dropdown it's called on and vice versa.
             - `id` the unique id of the dropdown you want to toggle
             - `callback` an optional callback function that is executed after the Dropdown is toggled.
     -
@@ -148,7 +148,7 @@ The dropdown menu will work with either links (`<a>` tags) or buttons (`<button>
 We’ve also included a couple of extra layout elements here for when you may need to add some visual hierarchy to your dropdowns:
 
 - Use the `.rvt-dropdown__menu-heading` element to provide help and to label a related group of menu items. This should be a generic `<div>` and should have an `aria-hidden="true"` attribute applied to it so that the label for the grouped items will not be announced to screen readers twice. E.g. the `.rvt-dropdown__menu-heading` content and then the value of the `aria-label` applied to the group (see next bullet point).
-- The dropdown heading shold generally be used to group related options. Wrap related options in a `<div>` with a role="group". Using `role="group` will apply a top border to the related optioins. Additionally, you will need to add an `aria-label` attribute with a value that describes the group. This will label will be announced to screen reader users.
+- The dropdown heading should generally be used to group related options. Wrap related options in a `<div>` with a role="group". Using `role="group` will apply a top border to the related options. Additionally, you will need to add an `aria-label` attribute with a value that describes the group. This label will be announced to screen reader users.
 - To mark a dropdown menu item as selected, add the aria attribute `aria-checked="true"` (for js-driven/application menus), or `aria-current="page"` (for navigation/link menus) to the menu item.
 
 The following example shows how to implement these additional dropdown elements.
@@ -177,16 +177,16 @@ The following example shows how to implement these additional dropdown elements.
 While it is possible to use any element as a toggle for the dropdown menu, you should always use an HTML `<button>` element. The button element was made for triggering new content within the current context or performing in-page actions. Plus, its appearance is completely styleable using CSS (so dropdown toggles don’t always need to look like the default Rivet button). **Buttons are the best and most accessible choice for toggling the dropdown menu**.
 
 ## Navigation menus vs. application menus
-The Rivet dropdown is flexible enough to be used with lists of navigation links, or buttons that can be used for in-app JavaScript-driven behaivor. There are some subtle differences in the way these two types of menus should be implemented.
+The Rivet dropdown is flexible enough to be used with lists of navigation links, or buttons that can be used for in-app JavaScript-driven behavior. There are some subtle differences in the way these two types of menus should be implemented.
 
 <div class="rvt-p-all-sm rvt-border-all rvt-border-radius">
     <div class="rvt-grid">
         <div class="rvt-grid__item-6-md-up">
             <h3 class="rvt-text-bold rvt-m-bottom-md">Navigation menus</h3>
             <ul>
-                <li>Navigation menus are a set of links are used to navigate to pages/URLs in an application.</li>
-                <li>Use the <code>aria-current="page"</code> attribute to indicate in the menu, both to screen readers and visually, if the user on the current page.</li>
-                <li>Use a generic <code>div</code> element with the <code>role="group"</code> attribute applied to it to group related links. This will also apply a top border to help visual separate groups of menu items.</li>
+                <li>Navigation menus are a set of links used to navigate to pages/URLs in an application.</li>
+                <li>Use the <code>aria-current="page"</code> attribute to indicate in the menu, both to screen readers and visually, if the user is on the current page.</li>
+                <li>Use a generic <code>div</code> element with the <code>role="group"</code> attribute applied to it to group related links. This will also apply a top border to help visually separate groups of menu items.</li>
                 <li><strong>NOTE</strong>: Do not use the <code>role="menuitem"</code> attribute on links in a navigation menu. It will override the way screen readers announce items as "Links".</li>
             </ul>
         </div>
@@ -194,7 +194,7 @@ The Rivet dropdown is flexible enough to be used with lists of navigation links,
             <h3 class="rvt-text-bold rvt-m-bottom-md">Application menus</h3>
             <ul>
                 <li>Application menus generally contain lists of buttons that are used for JavaScript-driven/in-page behavior.</li>
-                <li>Application menu items (buttons) should use the <code>role="menuitemradio"</code> when they are used to toggle JavaScript-driven fuctionality. Otherwise, buttons should use the <code>role="menuitem"</code> attribute.</li>
+                <li>Application menu items (buttons) should use the <code>role="menuitemradio"</code> when they are used to toggle JavaScript-driven functionality. Otherwise, buttons should use the <code>role="menuitem"</code> attribute.</li>
                 <li>To indicate the current state of an application menu item, use the <code>aria-checked="true"</code> attribute.</li>
             </ul>
         </div>
