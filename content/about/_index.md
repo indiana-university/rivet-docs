@@ -1,6 +1,6 @@
 ---
 title: Rivet
-description: Rivet is Indiana University’s design system. A collection of code and visual assets used to create patterns across software titles, Rivet makes it easier to build and maintain consistent user interfaces projects.
+description: "Rivet is a focused set of front end UI components, as well as a place for documenting good UX, accessibility, and design practices. It serves as a developer’s guide for when and how to use certain patterns and how to implement them in an accessible way."
 heroImage: "http://www.fillmurray.com/g/600/400"
 sections:
   -
