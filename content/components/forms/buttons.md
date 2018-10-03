@@ -85,7 +85,7 @@ See the example below using the `.rvt-sr-only` utility class to visually hide th
 {{< example lang="html" >}}<div class="rvt-button-group">
     <button class="rvt-button">
         <span class="rvt-m-right-xs">Add item</span>
-        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M14,7H9V2A1,1,0,0,0,7,2V7H2A1,1,0,0,0,2,9H7v5a1,1,0,0,0,2,0V9h5a1,1,0,0,0,0-2Z"/>
         </svg>
     </button>
@@ -109,7 +109,7 @@ See the example below using the `.rvt-sr-only` utility class to visually hide th
     </button>
     <button class="rvt-button rvt-button--secondary">
         <span class="rvt-sr-only">Edit entry</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M14.62,4.19,11.74,1.34a1.1,1.1,0,0,0-1.55,0L0,11.62,0,16l4.45,0L14.64,5.73A1.1,1.1,0,0,0,14.62,4.19ZM3.62,14H2V12.44l6-6L9.58,8ZM11,6.57,9.4,5,11,3.4,12.57,5Z"/>
         </svg>
     </button>
