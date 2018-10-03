@@ -239,9 +239,10 @@
         font-size: $ts-12;
         font-weight: 700;
         color: $color-black--700;
+        display: block;
         text-transform: uppercase;
         letter-spacing: .01rem;
-        line-height: 1;
+        line-height: 1.5;
     }
 
     &__title {
