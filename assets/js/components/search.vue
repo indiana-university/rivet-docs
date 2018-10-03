@@ -51,7 +51,7 @@
       </nav>
       <button v-if="activeQuery!=''" class="rvtd-search__cancel rvt-button rvt-button--small rvt-button--plain" @click.prevent="clearSearch">
         <span class="v-hide">Clear search</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
           <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
         </svg>
       </button>

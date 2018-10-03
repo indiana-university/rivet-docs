@@ -44,7 +44,7 @@ In some cases, it’s a better user experience to allow the user to dismiss the 
 <p class="rvt-alert__message">We have received your application. Check your email in a few weeks to find out if you’ve been admitted.</p>
 <button class="rvt-alert__dismiss">
     <span class="v-hide">Dismiss this alert</span>
-    <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
         <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" style="fill: #333"/>
     </svg>
 </button>
@@ -99,7 +99,7 @@ export default class Alert extends React.Component {
                 <p className="rvt-alert__message">{ children }</p>
                 <button className="rvt-alert__dismiss">
                     <span className="v-hide">Dismiss this alert</span>
-                    <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                         <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" />
                     </svg>
                 </button>
@@ -173,7 +173,7 @@ export default class Alert extends React.Component {
                 <p className="rvt-alert__message">{ children }</p>
                 <button className="rvt-alert__dismiss" onClick={this.dismissAlert}>
                     <span className="v-hide">Dismiss this alert</span>
-                    <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                         <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" />
                     </svg>
                 </button>
@@ -236,7 +236,7 @@ Just to recap, here's the code for our final React component:
                 <p className="rvt-alert__message">{ children }</p>
                 <button className="rvt-alert__dismiss" onClick={this.dismissAlert}>
                     <span className="v-hide">Dismiss this alert</span>
-                    <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                         <path d="M10,8l5.63-5.63a1.39,1.39,0,0,0-2-2L8,6,2.37.41a1.39,1.39,0,0,0-2,2L6,8,.41,13.63a1.39,1.39,0,1,0,2,2L8,10l5.63,5.63a1.39,1.39,0,0,0,2-2Z" />
                     </svg>
                 </button>
