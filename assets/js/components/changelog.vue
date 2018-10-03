@@ -51,7 +51,7 @@
           </div>
           <div v-else-if="errorLoadingReleases" class="rvt-notifications-error" style="background-color:transparent">
             <div class="rvt-notifications-error__icon">
-              <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
+              <svg role="img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
                 <g fill="currentColor">
                   <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"/>
                   <path d="M8,9A1,1,0,0,1,7,8V5A1,1,0,0,1,9,5V8A1,1,0,0,1,8,9Z"/>

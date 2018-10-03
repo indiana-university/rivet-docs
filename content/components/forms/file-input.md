@@ -28,7 +28,7 @@ The custom HTML file input (`<input type="file">`) uses CSS to hide the default 
     <input type="file" id="my-file-input" aria-describedby="file-description">
     <label for="my-file-input" class="rvt-button">
         <span>Upload a file</span>
-        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M10.41,1H3.5A1.3,1.3,0,0,0,2.2,2.3V13.7A1.3,1.3,0,0,0,3.5,15h9a1.3,1.3,0,0,0,1.3-1.3V4.39ZM11.8,5.21V6H9.25V3h.34ZM4.2,13V3h3V6.75A1.25,1.25,0,0,0,8.5,8h3.3v5Z"/>
         </svg>
     </label>
@@ -41,7 +41,7 @@ The custom HTML file input (`<input type="file">`) uses CSS to hide the default 
     <input type="file" id="my-file-input-2" aria-describedby="file-description" disabled>
     <label for="my-file-input" class="rvt-button">
         <span>Upload a file</span>
-        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M10.41,1H3.5A1.3,1.3,0,0,0,2.2,2.3V13.7A1.3,1.3,0,0,0,3.5,15h9a1.3,1.3,0,0,0,1.3-1.3V4.39ZM11.8,5.21V6H9.25V3h.34ZM4.2,13V3h3V6.75A1.25,1.25,0,0,0,8.5,8h3.3v5Z"/>
         </svg>
     </label>
@@ -65,7 +65,7 @@ The custom file input can be used with any of Rivet's [button modifiers]({{< ref
     <input type="file" id="my-file-input-two" aria-describedby="file-descrirption-two" multiple>
     <label for="my-file-input-two" class="rvt-button rvt-button--secondary">
         <span>Upload a file</span>
-        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M10.41,1H3.5A1.3,1.3,0,0,0,2.2,2.3V13.7A1.3,1.3,0,0,0,3.5,15h9a1.3,1.3,0,0,0,1.3-1.3V4.39ZM11.8,5.21V6H9.25V3h.34ZM4.2,13V3h3V6.75A1.25,1.25,0,0,0,8.5,8h3.3v5Z"/>
         </svg>
     </label>

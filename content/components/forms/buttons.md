@@ -85,7 +85,7 @@ See the example below using the `.rvt-sr-only` utility class to visually hide th
 {{< example lang="html" >}}<div class="rvt-button-group">
     <button class="rvt-button">
         <span class="rvt-m-right-xs">Add item</span>
-        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M14,7H9V2A1,1,0,0,0,7,2V7H2A1,1,0,0,0,2,9H7v5a1,1,0,0,0,2,0V9h5a1,1,0,0,0,0-2Z"/>
         </svg>
     </button>
