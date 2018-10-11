@@ -156,60 +156,11 @@ Applying the modifier class `.rvt-tabs--fitted` to the main `.rvt-tabs` containe
 {{< /example >}}
 
 ## Vertical Tabs
-The `.rvt-tabs--vertical` modifier creates a set of tabs where the tab controls display in a vertical list on the left with the tab panels on the right.
+While Rivet supports displaying tabs vertically along the left-hand side of the content area, we've deprecated that feature and will be removing vertical tabs in a future release. 
 
-In order for the vertical tabs to function properly you will need to add the `aria-orientation="vertical"` attribute to the main `.rvt-tabs` container. This lets the script that controls the tabs know that they are vertical and to adjust the keyboard navigation appropriately so that the up and down arrow keys switch focus of the tabs instead of the default left and right arrow keys.
+Tabs work best when displayed horizontally. Displaying tabs vertically along the left-hand side of the content area takes up horizontal screen space, which limits the display area of your tab's content. In addition, vertical tabs cause confusion, as users might mistake the tabs for your application's main navigation. The vertical arrangement may also tempt you to use a larger number of tabs, which is not recommended.
 
-{{< example lang="html" >}}<div class="rvt-tabs rvt-tabs--vertical">
-    <div class="rvt-tabs__tablist" role="tablist" aria-orientation="vertical" aria-label="Rivet tabs">
-        <button class="rvt-tabs__tab" role="tab" aria-selected="true" aria-controls="tab-1-vertical" id="t-one-vertical">
-            Tab one
-        </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-2-vertical" id="t-two-vertical" tabindex="-1">
-            Tab two
-        </button>
-        <button class="rvt-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-3-vertical" id="t-three-vertical" tabindex="-1">
-            Tab three
-        </button>
-    </div>
-    <div class="rvt-tabs__panel" tabindex="0" role="tabpanel" id="tab-1-vertical" aria-labelledby="t-one-vertical">
-        <span class="rvt-ts-26 rvt-text-bold rvt-display-block">Paunch Burger</span>
-        <p>
-            Panel 1: Lorem ipsum dolor sit amet,
-            <a href="#0">consectetur adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-    </div>
-    <div class="rvt-tabs__panel" tabindex="0" role="tabpanel" id="tab-2-vertical" aria-labelledby="t-two-vertical" hidden="">
-        <span class="rvt-ts-26 rvt-text-bold rvt-display-block">JJ’s Diner</span>
-        <p>
-            Panel 2: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-    </div>
-    <div class="rvt-tabs__panel" tabindex="0" role="tabpanel" id="tab-3-vertical" aria-labelledby="t-three-vertical" hidden="">
-        <form action="">
-            <fieldset>
-                <legend class="rvt-sr-only">Sue's Salads Takeout</legend>
-                <label for="name">Name</label>
-                <input type="text" id="name">
-                <label for="salads" class="m-top-md">Salad type</label>
-                <select id="salads">
-                    <option value="">Cobb</option>
-                    <option value="">Ceasar</option>
-                    <option value="">Wedge</option>
-                    <option value="">Big</option>
-                </select>
-                <label for="message" class="m-top-md">Message</label>
-                <textarea name="message" id="message" class="rvt-m-bottom-md"></textarea>
-            </fieldset>
-            <div class="m-top-lg rvt-button-group rvt-button-group--right">
-                <button type="submit" class="rvt-button">Submit</button>
-                <button class="rvt-button rvt-button--plain">Cancel</button>
-            </div>
-        </form>
-    </div>
-</div>
-{{< /example >}}
+If you need help replacing vertical tabs in your interface, [reach out to the Rivet team](mailto:rivet@iu.edu).
 
 ## JavaScript API
 If you use the appropriate data attribute/id combination in your markup, tabs will work without the need for any additional JavaScript. But if you need to control tabs programmatically, there are a handful of methods from the Rivet tabs API you can use:
