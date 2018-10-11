@@ -34,6 +34,22 @@ The deprecated class names will still work in version `1.1.0`. However, they wil
     </thead>
     <tbody>
         <tr>
+            <td><code>.rvt-inline-alert--has-info</code></td>
+            <td><code>.rvt-inline-alert--info</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--is-valid</code></td>
+            <td><code>.rvt-inline-alert--success</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--has-warning</code></td>
+            <td><code>.rvt-inline-alert--warning</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--is-invalid</code></td>
+            <td><code>.rvt-inline-alert--danger</code></td>
+        </tr>
+        <tr>
             <td><code>.rvt-has-info</code></td>
             <td><code>.rvt-validation-info</code></td>
         </tr>
