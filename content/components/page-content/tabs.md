@@ -76,7 +76,7 @@ events:
 - Displaying multiple unique views of the same data
 - Category labels are short and easy to understand
 - Switching between views is common for your users’ goals
-- Categories names are unlikely to change very often and number of categories is unlikely to grow
+- Category names are unlikely to change very often and number of categories is unlikely to grow
 
 ## When to consider something else
 - Displaying six or more categories (or more than what will easily fit horizontally on your target users' screen)
@@ -108,11 +108,15 @@ The Rivet Tabs are built to follow the WAI-ARIA authoring standards. It is marke
 {{% /a11y %}}
 
 ## Implementation notes
+- Do not stack rows of tabs - only use a small set of tabs in a single row
 - Order tabs in a logical manner
-- Default tab (on page load) should be first tab. This should be the most frequently viewed/most important tab
+- Default tab (on page load) should be the first tab. The first tab should be the most frequently viewed or most important tab.
+- Tab order should stay the same as the user moves between tabs
 - Label tabs with clear concise categories - 1-2 words is ideal
-- Do not use all caps in the tab labels
+- Do not use all capital letters in the tab labels
 - Do not include a ‘More’ tab
+- Page should not reload or refresh when the user switches to a different tab
+- Only the content of the tab and tab bar indicating the user's location should change. The rest of the page should remain the same.
 
 ## Fitted version
 Applying the modifier class `.rvt-tabs--fitted` to the main `.rvt-tabs` container will make the tabs take up equal amounts of the space of the tabs container.
