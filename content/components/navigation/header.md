@@ -322,6 +322,9 @@ The main navigation extension (`.rvt-header__main-nav`) will always need to be u
 ### Main navigation with dropdowns
 To create a nested navigation structure you can use [Rivet's standard dropdown menus]({{< ref "components/navigation/dropdown.md" >}}). Dropdown menus can be nested inside of any of the main navigation `li` elements and implemented using the appropriate data attributes on the dropdown.
 
+### Persistent drawer
+To keep the drawer visible at large screen sizes, add the `.rvt-drawer-button--persistent` class to the `.rvt-drawer-button` element.
+
 ### Nested navigation inside drawer
 To create a nested navigation structure, you can use Rivet's dropdown menus along with the Rivet drawer nav. Dropdown menus can be nested inside of the Rivet drawer navigation `li` and accompanying `<div role="menu">` (wrapping a nested `<ul>`) elements using the appropriate data attributes on the dropdown. Set the data attributes using the `data-subnav-toggle` attribute on the `button` element for the `li` navigation item. Then on each `div` sub navigation element set the id to the matching `data-subnav-toggle`.
 
