@@ -66,6 +66,29 @@ events:
 </div>
 {{< /example >}}
 
+### Deprecated page-level alert class names
+Version `1.1.0` of Rivet updated the CSS class names used by page-level alerts to be consistent with class names used by other components. The table below shows the deprecated class names and their replacements.
+
+The deprecated class names will still work in version `1.1.0`. However, they will be removed in a future release.
+
+<table class="rvt-m-top-lg">
+    <caption class="rvt-sr-only">Rivet page-level alert CSS classes: deprecated and new</caption>
+    <thead>
+        <th>Deprecated</th>
+        <th>New in <code>1.1.0</code></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>.rvt-alert--message</code></td>
+            <td><code>.rvt-alert--warning</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-alert--error</code></td>
+            <td><code>.rvt-alert--danger</code></td>
+        </tr>
+    </tbody>
+</table>
+
 ## Standalone inline alerts
 Inline alerts in Rivet should be used for form validation situations where [the standard inline form input validation]({{< ref "components/forms/text-input.md#inline-validation-states" >}}) error would not make sense. For instance, marking a group of radio buttons or checkboxes will give an input error. Adding the `rvt-inline-alert--standalone` modifier class to the standard inline alert element will give the alert a subtle background color and left border to add some visual contrast.
 
@@ -175,6 +198,37 @@ When using a standalone inline alert with a group of inputs, make sure to add th
     </fieldset>
 </form>
 {{< /example >}}
+
+### Deprecated standalone inline alert class names
+Version `1.1.0` of Rivet updated the CSS class names used by standalone inline alerts to be consistent with class names used by other components. The table below shows the deprecated class names and their replacements.
+
+The deprecated class names will still work in version `1.1.0`. However, they will be removed in a future release.
+
+<table class="rvt-m-top-lg">
+    <caption class="rvt-sr-only">Rivet standalone inline alert CSS classes: deprecated and new</caption>
+    <thead>
+        <th>Deprecated</th>
+        <th>New in <code>1.1.0</code></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>.rvt-inline-alert--has-info</code></td>
+            <td><code>.rvt-inline-alert--info</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--is-valid</code></td>
+            <td><code>.rvt-inline-alert--success</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--has-warning</code></td>
+            <td><code>.rvt-inline-alert--warning</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--is-invalid</code></td>
+            <td><code>.rvt-inline-alert--danger</code></td>
+        </tr>
+    </tbody>
+</table>
 
 ## Alert lists
 Alert lists provide a way to group a set of errors together. For instance, when summarizing a list of errors on a long form.

@@ -16,14 +16,61 @@ status: "Ready"
 
 <div class="rvt-alert rvt-alert--info rvt-m-bottom-md rvt-m-top-md" aria-labelledby="information-alert-title">
     <h3 class="rvt-alert__title" id="information-alert-title">Validation styles</h3>
-    <p class="rvt-alert__message">You can use all Rivet validation CSS classes (.rvt-validation-success, .rvt-validation-danger, .rvt-validation-warning, and .rvt-validation-info) on any of the HTML5 text input types, <a href="../select-input">select elements</a>, or <a href="#textarea-example">text areas</a>.</p>
+    <p class="rvt-alert__message">You can use all Rivet validation CSS classes (<code>.rvt-validation-success</code>, <code>.rvt-validation-danger</code>, <code>.rvt-validation-warning</code>, and <code>.rvt-validation-info</code>) on any of the HTML5 text input types, <a href="../select-input">select elements</a>, or <a href="#textarea-example">text areas</a>.</p>
 </div>
 
 Rivet provides the markup and styles for various states of inline form validation. These inline validation states should be used in combination with [alerts]({{< ref "components/overlays/alerts.md" >}}) to provide helpful validation error messages to users.
 
-Rivet does not make any assumptions about whether you’re using server- or client-side form validation. We only provide the HTML and CSS needed to create the validation states. That said, here are some tips for creating usable form error-handling experiences:
+### Deprecated form validation class names
+Version `1.1.0` of Rivet updated the CSS class names for inline form validation to be consistent with class names used by other components. The table below shows the deprecated class names and their replacements.
+
+The deprecated class names will still work in version `1.1.0`. However, they will be removed in a future release.
+
+<table class="rvt-m-top-lg">
+    <caption class="rvt-sr-only">Rivet form validation CSS classes: deprecated and new</caption>
+    <thead>
+        <th>Deprecated</th>
+        <th>New in <code>1.1.0</code></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>.rvt-inline-alert--has-info</code></td>
+            <td><code>.rvt-inline-alert--info</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--is-valid</code></td>
+            <td><code>.rvt-inline-alert--success</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--has-warning</code></td>
+            <td><code>.rvt-inline-alert--warning</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--is-invalid</code></td>
+            <td><code>.rvt-inline-alert--danger</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-has-info</code></td>
+            <td><code>.rvt-validation-info</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-is-valid</code></td>
+            <td><code>.rvt-validation-success</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-has-warning</code></td>
+            <td><code>.rvt-validation-warning</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-is-invalid</code></td>
+            <td><code>.rvt-validation-danger</code></td>
+        </tr>
+    </tbody>
+</table>
 
 ### Form validation tips
+
+Rivet does not make any assumptions about whether you’re using server- or client-side form validation. We only provide the HTML and CSS needed to create the validation states. That said, here are some tips for creating usable form error-handling experiences:
 
 - **Validate after the user submits the form**. We recommend avoiding on-the-fly validation as the user types. This can cause too many unnecessary interruptions for users.
 - **Summarize multiple errors** using a [Rivet page-level alert]({{< ref "components/overlays/alerts.md" >}}) at the top of the form. Provide links to the invalid fields in this summary. This makes it easier for keyboard and assistive technology users to jump directly to the invalid field (which is especially important on longer forms).

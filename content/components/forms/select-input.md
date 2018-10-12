@@ -110,6 +110,53 @@ For more info on how to use the Rivet form input validation states, [see the exa
 </div>
 {{< /example >}}
 
+### Deprecated form validation class names
+Version `1.1.0` of Rivet updated the CSS class names for inline form validation to be consistent with class names used by other components. The table below shows the deprecated class names and their replacements.
+
+The deprecated class names will still work in version `1.1.0`. However, they will be removed in a future release.
+
+<table class="rvt-m-top-lg">
+    <caption class="rvt-sr-only">Rivet form validation CSS classes: deprecated and new</caption>
+    <thead>
+        <th>Deprecated</th>
+        <th>New in <code>1.1.0</code></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>.rvt-inline-alert--has-info</code></td>
+            <td><code>.rvt-inline-alert--info</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--is-valid</code></td>
+            <td><code>.rvt-inline-alert--success</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--has-warning</code></td>
+            <td><code>.rvt-inline-alert--warning</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--is-invalid</code></td>
+            <td><code>.rvt-inline-alert--danger</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-has-info</code></td>
+            <td><code>.rvt-validation-info</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-is-valid</code></td>
+            <td><code>.rvt-validation-success</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-has-warning</code></td>
+            <td><code>.rvt-validation-warning</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-is-invalid</code></td>
+            <td><code>.rvt-validation-danger</code></td>
+        </tr>
+    </tbody>
+</table>
+
 ## When to use
 Use the select element when you need to present users with a list of mutually exclusive options and they can **only select one option**.
 
