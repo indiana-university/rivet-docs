@@ -107,6 +107,8 @@ Benton Sans is an official IU font and is available for free to all IU schools, 
 Font weight can be used to emphasize different parts of your interface and help enforce visual hierarchy. Rivet uses Benton Sans Regular and Benton Sans Bold font weights.
 
 ## Implementation notes
+Type scale classes should only be applied to typographic elements such as headings, paragraphs, and list items containing text. Rivet uses `rem` to express font sizes, so adding type scale classes to block-level container elements may cause unexpected results.
+
 Try to keep the number of different font sizes you use in your application to a minimum. The size of fonts depends on the design of you application, but picking a handful of font sizes and sticking to them makes it easier to maintain consistency throughout the interface.
 
 ### Type scale aliases
@@ -120,13 +122,13 @@ To make it easier to keep type sizes to a minimum we have create a few CSS utili
 - `.rvt-ts-xl`
 - `.rvt-ts-xxl`
 
-{{< example lang="html" >}}<div class="rvt-ts-xxs">Fulfilling the promise</div>
-<div class="rvt-ts-xs">Fulfilling the promise</div>
-<div class="rvt-ts-sm">Fulfilling the promise</div>
-<div class="rvt-ts-md">Fulfilling the promise</div>
-<div class="rvt-ts-lg">Fulfilling the promise</div>
-<div class="rvt-ts-xl">Fulfilling the promise</div>
-<div class="rvt-ts-xxl">Fulfilling the promise</div>
+{{< example lang="html" >}}<h1 class="rvt-ts-xxs">Fulfilling the promise</h1>
+<h1 class="rvt-ts-xs">Fulfilling the promise</h1>
+<h1 class="rvt-ts-sm">Fulfilling the promise</h1>
+<h1 class="rvt-ts-md">Fulfilling the promise</h1>
+<h1 class="rvt-ts-lg">Fulfilling the promise</h1>
+<h1 class="rvt-ts-xl">Fulfilling the promise</h1>
+<h1 class="rvt-ts-xxl">Fulfilling the promise</h1>
 {{< /example >}}
 
 ### Responsive type scale
