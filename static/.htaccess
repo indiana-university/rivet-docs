@@ -1,3 +1,7 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^rivet.uits.iu.edu
+RewriteRule ^(.*)$ https://rivet.iu.edu/$1 [R=permanent,L]
+
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
     ExpiresActive On
