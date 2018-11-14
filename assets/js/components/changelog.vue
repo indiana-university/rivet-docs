@@ -11,7 +11,7 @@
               <a v-if="(index===0 && !release.prerelease) || (index===1 && releases[0].prerelease)"
                  :href="`https://github.iu.edu/UITS/rivet-source/releases/download/${release.tag_name}/rivet.zip`"
                  class="rvt-button rvt-button--bright-blue rvtd-changelog__download">
-                <svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <svg aria-hidden="true" style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                   <title>Download</title>
                   <g fill="currentColor">
                     <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
@@ -51,7 +51,7 @@
           </div>
           <div v-else-if="errorLoadingReleases" class="rvt-notifications-error" style="background-color:transparent">
             <div class="rvt-notifications-error__icon">
-              <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
                 <g fill="currentColor">
                   <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"/>
                   <path d="M8,9A1,1,0,0,1,7,8V5A1,1,0,0,1,9,5V8A1,1,0,0,1,8,9Z"/>

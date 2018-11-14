@@ -53,7 +53,7 @@ The base header provides consistent branding in a condensed space. It replaces t
 {{< example lang="html" >}}<header class="rvt-header" role="banner">
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <div class="rvt-header__trident">
-        <svg role="img" class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo">
+        <svg class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo" aria-hidden="true">
             <title id="iu-logo">Indiana University Logo</title>
             <rect width="41" height="48" fill="#900"/>
             <polygon points="24.59 12.64 24.59 14.98 26.34 14.98 26.34 27.78 22.84 27.78 22.84 10.9 24.59 10.9 24.59 8.57 16.41 8.57 16.41 10.9 18.16 10.9 18.16 27.78 14.66 27.78 14.66 14.98 16.41 14.98 16.41 12.64 8.22 12.64 8.22 14.98 9.97 14.98 9.97 30.03 12.77 33.02 18.16 33.02 18.16 36.52 16.41 36.52 16.41 39.43 24.59 39.43 24.59 36.52 22.84 36.52 22.84 33.02 28 33.02 31.01 30.03 31.01 14.98 32.78 14.98 32.78 12.64 24.59 12.64" fill="#fff"/>
@@ -77,7 +77,7 @@ The inclusion of an avatar and username, or only username are both appropriate c
 {{< example lang="html" >}}<header class="rvt-header" role="banner">
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <div class="rvt-header__trident">
-        <svg role="img" alt="" class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo">
+        <svg class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo" aria-hidden="true">
             <title id="iu-logo">Indiana University Logo</title>
             <rect width="41" height="48" fill="#900"/>
             <polygon points="24.59 12.64 24.59 14.98 26.34 14.98 26.34 27.78 22.84 27.78 22.84 10.9 24.59 10.9 24.59 8.57 16.41 8.57 16.41 10.9 18.16 10.9 18.16 27.78 14.66 27.78 14.66 14.98 16.41 14.98 16.41 12.64 8.22 12.64 8.22 14.98 9.97 14.98 9.97 30.03 12.77 33.02 18.16 33.02 18.16 36.52 16.41 36.52 16.41 39.43 24.59 39.43 24.59 36.52 22.84 36.52 22.84 33.02 28 33.02 31.01 30.03 31.01 14.98 32.78 14.98 32.78 12.64 24.59 12.64" fill="#fff"/>
@@ -98,14 +98,14 @@ The inclusion of an avatar and username, or only username are both appropriate c
         </div>
         <button class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="mobile-drawer">
             <span class="sr-only">Toggle menu</span>
-            <svg role="img" alt="" class="rvt-drawer-button-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <svg aria-hidden="true" class="rvt-drawer-button-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <g fill="currentColor">
                     <path d="M15,3H1A1,1,0,0,1,1,1H15a1,1,0,0,1,0,2Z"/>
                     <path d="M15,9H1A1,1,0,0,1,1,7H15a1,1,0,0,1,0,2Z"/>
                     <path d="M15,15H1a1,1,0,0,1,0-2H15a1,1,0,0,1,0,2Z"/>
                 </g>
             </svg>
-            <svg role="img" alt="" class="rvt-drawer-button-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <svg aria-hidden="true" class="rvt-drawer-button-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
             </svg>
         </button>
@@ -132,7 +132,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
     <a class="rvt-skip-link" href="#main-content">Skip to content</a>
     <!-- Trident -->
     <div class="rvt-header__trident">
-        <svg role="img" alt="" class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo">
+        <svg class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo" aria-hidden="true">
             <title id="iu-logo">Indiana University Logo</title>
             <rect width="41" height="48" fill="#900"/>
             <polygon points="24.59 12.64 24.59 14.98 26.34 14.98 26.34 27.78 22.84 27.78 22.84 10.9 24.59 10.9 24.59 8.57 16.41 8.57 16.41 10.9 18.16 10.9 18.16 27.78 14.66 27.78 14.66 14.98 16.41 14.98 16.41 12.64 8.22 12.64 8.22 14.98 9.97 14.98 9.97 30.03 12.77 33.02 18.16 33.02 18.16 36.52 16.41 36.52 16.41 39.43 24.59 39.43 24.59 36.52 22.84 36.52 22.84 33.02 28 33.02 31.01 30.03 31.01 14.98 32.78 14.98 32.78 12.64 24.59 12.64" fill="#fff"/>
@@ -154,7 +154,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                     <div class="rvt-dropdown">
                         <button class="rvt-dropdown__toggle" data-dropdown-toggle="dropdown-1" aria-haspopup="true" aria-expanded="false">
                             <span class="rvt-dropdown__toggle-text">Nav two</span>
-                            <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <title>Dropdown icon</title>
                                 <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"
                                 />
@@ -175,7 +175,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                     <div class="rvt-dropdown">
                         <button class="rvt-dropdown__toggle" data-dropdown-toggle="dropdown-2" aria-haspopup="true" aria-expanded="false">
                             <span class="rvt-dropdown__toggle-text">Nav four</span>
-                            <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
                             </svg>
                         </button>
@@ -195,7 +195,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                 <button class="rvt-header-id__profile rvt-header-id__profile--has-dropdown rvt-dropdown__toggle" data-dropdown-toggle="id-dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
                     <span class="rvt-header-id__user">rswanson</span>
-                    <svg role="img" alt="" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <svg aria-hidden="true" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                         <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
                     </svg>
                 </button>
@@ -212,14 +212,14 @@ These lists work best for priority tasks and internal navigation. Consider inclu
         <!-- Drawer close button - shows on small screens -->
         <button class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="mobile-drawer-2">
             <span class="sr-only">Toggle menu</span>
-            <svg role="img" alt="" class="rvt-drawer-button-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <svg aria-hidden="true" class="rvt-drawer-button-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <g fill="currentColor">
                     <path d="M15,3H1A1,1,0,0,1,1,1H15a1,1,0,0,1,0,2Z"/>
                     <path d="M15,9H1A1,1,0,0,1,1,7H15a1,1,0,0,1,0,2Z"/>
                     <path d="M15,15H1a1,1,0,0,1,0-2H15a1,1,0,0,1,0,2Z"/>
                 </g>
             </svg>
-            <svg role="img" alt="" class="rvt-drawer-button-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <svg aria-hidden="true" class="rvt-drawer-button-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
             </svg>
         </button>
@@ -322,6 +322,9 @@ The main navigation extension (`.rvt-header__main-nav`) will always need to be u
 ### Main navigation with dropdowns
 To create a nested navigation structure you can use [Rivet's standard dropdown menus]({{< ref "components/navigation/dropdown.md" >}}). Dropdown menus can be nested inside of any of the main navigation `li` elements and implemented using the appropriate data attributes on the dropdown.
 
+### Persistent drawer
+To keep the Rivet drawer nav visible at large screen sizes, add the `.rvt-drawer-button--persistent` class to the `.rvt-drawer-button` element.
+
 ### Nested navigation inside drawer
 To create a nested navigation structure, you can use Rivet's dropdown menus along with the Rivet drawer nav. Dropdown menus can be nested inside of the Rivet drawer navigation `li` and accompanying `<div role="menu">` (wrapping a nested `<ul>`) elements using the appropriate data attributes on the dropdown. Set the data attributes using the `data-subnav-toggle` attribute on the `button` element for the `li` navigation item. Then on each `div` sub navigation element set the id to the matching `data-subnav-toggle`.
 
@@ -402,7 +405,7 @@ When your application has multiple user-specific functions (e.g. "Account settin
         <button class="rvt-header-id__profile rvt-header-id__profile--has-dropdown rvt-dropdown__toggle" data-dropdown-toggle="id-dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
             <span class="rvt-header-id__user">rswanson</span>
-            <svg role="img" alt="" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <svg aria-hidden="true" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
             </svg>
         </button>

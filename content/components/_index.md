@@ -21,7 +21,7 @@ You can download a ZIP file that contains the compiled and minified CSS and Java
 
 {{< button url="https://github.iu.edu/UITS/rivet-source/releases/download/v1.1.0/rivet.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
     <span class="rvt-m-right-xs">Download Rivet</span>
-    <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
         <g fill="currentColor">
             <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
             <path d="M7.29,10.71a1,1,0,0,0,1.41,0l4-4a1,1,0,0,0-1.41-1.41L9,7.59V1A1,1,0,0,0,7,1V7.59L4.71,5.29A1,1,0,0,0,3.29,6.71Z"/>
@@ -65,7 +65,7 @@ index.html
             class="rvt-button rvt-button--secondary rvt-m-top-md"
         >
             <span class="rvt-m-right-xs">Download Axure kit</span>
-            <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <g fill="currentColor">
                     <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
                     <path d="M7.29,10.71a1,1,0,0,0,1.41,0l4-4a1,1,0,0,0-1.41-1.41L9,7.59V1A1,1,0,0,0,7,1V7.59L4.71,5.29A1,1,0,0,0,3.29,6.71Z"/>
@@ -126,7 +126,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
     <header class="rvt-header" role="banner">
         <a class="rvt-skip-link" href="#main-content">Skip to content</a>
         <div class="rvt-header__trident">
-            <svg role="img" class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo">
+            <svg class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo" aria-hidden="true">
                 <title id="iu-logo">Indiana University Logo</title>
                 <rect width="41" height="48" fill="#900"/>
                 <polygon points="24.59 12.64 24.59 14.98 26.34 14.98 26.34 27.78 22.84 27.78 22.84 10.9 24.59 10.9 24.59 8.57 16.41 8.57 16.41 10.9 18.16 10.9 18.16 27.78 14.66 27.78 14.66 14.98 16.41 14.98 16.41 12.64 8.22 12.64 8.22 14.98 9.97 14.98 9.97 30.03 12.77 33.02 18.16 33.02 18.16 36.52 16.41 36.52 16.41 39.43 24.59 39.43 24.59 36.52 22.84 36.52 22.84 33.02 28 33.02 31.01 30.03 31.01 14.98 32.78 14.98 32.78 12.64 24.59 12.64" fill="#fff"/>
@@ -146,7 +146,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
     <footer class="rvt-footer m-top-xxl" role="contentinfo">
         <div class="rvt-footer__copyright-lockup">
             <div class="rvt-footer__trident">
-                <svg role="img" xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" aria-labelledby="footer-trident">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" aria-labelledby="footer-trident" aria-hidden="true">
                     <title id="footer-trident">IU Trident Logo</title>
                     <polygon points="13.33 3.32 13.33 5.21 14.76 5.21 14.76 15.64 11.9 15.64 11.9 1.9 13.33 1.9 13.33 0 6.67 0 6.67 1.9 8.09 1.9 8.09 15.64 5.24 15.64 5.24 5.21 6.67 5.21 6.67 3.32 0 3.32 0 5.21 1.43 5.21 1.43 17.47 3.7 19.91 8.09 19.91 8.09 22.76 6.67 22.76 6.67 25.13 13.33 25.13 13.33 22.76 11.9 22.76 11.9 19.91 16.1 19.91 18.56 17.47 18.56 5.21 20 5.21 20 3.32 13.33 3.32" fill="#900"/>
                 </svg>

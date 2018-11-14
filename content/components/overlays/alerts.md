@@ -66,6 +66,29 @@ events:
 </div>
 {{< /example >}}
 
+### Deprecated page-level alert class names
+Version `1.1.0` of Rivet updated the CSS class names used by page-level alerts to be consistent with class names used by other components. The table below shows the deprecated class names and their replacements.
+
+The deprecated class names will still work in version `1.1.0`. However, they will be removed in a future release.
+
+<table class="rvt-m-top-lg">
+    <caption class="rvt-sr-only">Rivet page-level alert CSS classes: deprecated and new</caption>
+    <thead>
+        <th>Deprecated</th>
+        <th>New in <code>1.1.0</code></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>.rvt-alert--message</code></td>
+            <td><code>.rvt-alert--warning</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-alert--error</code></td>
+            <td><code>.rvt-alert--danger</code></td>
+        </tr>
+    </tbody>
+</table>
+
 ## Standalone inline alerts
 Inline alerts in Rivet should be used for form validation situations where [the standard inline form input validation]({{< ref "components/forms/text-input.md#inline-validation-states" >}}) error would not make sense. For instance, marking a group of radio buttons or checkboxes will give an input error. Adding the `rvt-inline-alert--standalone` modifier class to the standard inline alert element will give the alert a subtle background color and left border to add some visual contrast.
 
@@ -115,7 +138,7 @@ Inline alerts in Rivet should be used for form validation situations where [the 
 
 <div class="rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--danger">
     <span class="rvt-inline-alert__icon">
-        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
                 <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z" />
                 <path d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
@@ -161,7 +184,7 @@ When using a standalone inline alert with a group of inputs, make sure to add th
         </ul>
         <div class="rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--danger">
             <span class="rvt-inline-alert__icon">
-                <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <g fill="currentColor">
                         <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z" />
                         <path d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
@@ -175,6 +198,37 @@ When using a standalone inline alert with a group of inputs, make sure to add th
     </fieldset>
 </form>
 {{< /example >}}
+
+### Deprecated standalone inline alert class names
+Version `1.1.0` of Rivet updated the CSS class names used by standalone inline alerts to be consistent with class names used by other components. The table below shows the deprecated class names and their replacements.
+
+The deprecated class names will still work in version `1.1.0`. However, they will be removed in a future release.
+
+<table class="rvt-m-top-lg">
+    <caption class="rvt-sr-only">Rivet standalone inline alert CSS classes: deprecated and new</caption>
+    <thead>
+        <th>Deprecated</th>
+        <th>New in <code>1.1.0</code></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>.rvt-inline-alert--has-info</code></td>
+            <td><code>.rvt-inline-alert--info</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--is-valid</code></td>
+            <td><code>.rvt-inline-alert--success</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--has-warning</code></td>
+            <td><code>.rvt-inline-alert--warning</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--is-invalid</code></td>
+            <td><code>.rvt-inline-alert--danger</code></td>
+        </tr>
+    </tbody>
+</table>
 
 ## Alert lists
 Alert lists provide a way to group a set of errors together. For instance, when summarizing a list of errors on a long form.

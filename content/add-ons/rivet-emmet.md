@@ -161,7 +161,9 @@ For more information about this component, see the [Rivet documentation on table
 | Table snippets |
 | ------- |
 | `rvt-table` |
+| `rvt-table-compact` |
 | `rvt-table-striped` |
+| `rvt-table-bordered-cells` |
 | `rvt-table-plain` |
 
 #### Tabs
@@ -202,6 +204,7 @@ For more information about this component, see the [Rivet documentation on butto
 | `rvt-button-small-secondary-danger` |
 | `rvt-button-small-secondary-plain` |
 | `rvt-button-modal` |
+| `rvt-button-full-width` |
 
 #### Checkboxes
 

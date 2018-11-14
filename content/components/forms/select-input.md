@@ -27,7 +27,7 @@ For more info on how to use the Rivet form input validation states, [see the exa
 </select>
 <div class="rvt-inline-alert rvt-inline-alert--info">
     <span class="rvt-inline-alert__icon">
-        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
                 <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z" />
                 <path d="M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z" />
@@ -51,7 +51,7 @@ For more info on how to use the Rivet form input validation states, [see the exa
 </select>
 <div class="rvt-inline-alert rvt-inline-alert--success">
     <span class="rvt-inline-alert__icon">
-        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
                 <path d="M10.2,5.4,7.1,9.53,5.67,8.25a1,1,0,1,0-1.34,1.5l2.05,1.82a1.29,1.29,0,0,0,.83.32h.12a1.23,1.23,0,0,0,.88-.49L11.8,6.6a1,1,0,1,0-1.6-1.2Z"/>
                 <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z" />
@@ -74,7 +74,7 @@ For more info on how to use the Rivet form input validation states, [see the exa
 </select>
 <div class="rvt-inline-alert rvt-inline-alert--warning">
     <span class="rvt-inline-alert__icon">
-        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
                 <path d="M11,9H5A1,1,0,0,1,5,7h6a1,1,0,0,1,0,2Z" />
                 <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z" />
@@ -96,7 +96,7 @@ For more info on how to use the Rivet form input validation states, [see the exa
 </select>
 <div class="rvt-inline-alert rvt-inline-alert--danger">
     <span class="rvt-inline-alert__icon">
-        <svg role="img" alt="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
                 <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z" />
                 <path d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
@@ -109,6 +109,53 @@ For more info on how to use the Rivet form input validation states, [see the exa
     </span>
 </div>
 {{< /example >}}
+
+### Deprecated form validation class names
+Version `1.1.0` of Rivet updated the CSS class names for inline form validation to be consistent with class names used by other components. The table below shows the deprecated class names and their replacements.
+
+The deprecated class names will still work in version `1.1.0`. However, they will be removed in a future release.
+
+<table class="rvt-m-top-lg">
+    <caption class="rvt-sr-only">Rivet form validation CSS classes: deprecated and new</caption>
+    <thead>
+        <th>Deprecated</th>
+        <th>New in <code>1.1.0</code></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>.rvt-inline-alert--has-info</code></td>
+            <td><code>.rvt-inline-alert--info</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--is-valid</code></td>
+            <td><code>.rvt-inline-alert--success</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--has-warning</code></td>
+            <td><code>.rvt-inline-alert--warning</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-inline-alert--is-invalid</code></td>
+            <td><code>.rvt-inline-alert--danger</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-has-info</code></td>
+            <td><code>.rvt-validation-info</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-is-valid</code></td>
+            <td><code>.rvt-validation-success</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-has-warning</code></td>
+            <td><code>.rvt-validation-warning</code></td>
+        </tr>
+        <tr>
+            <td><code>.rvt-is-invalid</code></td>
+            <td><code>.rvt-validation-danger</code></td>
+        </tr>
+    </tbody>
+</table>
 
 ## When to use
 Use the select element when you need to present users with a list of mutually exclusive options and they can **only select one option**.
