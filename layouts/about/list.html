@@ -34,8 +34,8 @@
 
 <div class="rvt-p-tb-xxl" id="{{ (index .Params.sections 1).slug }}">
   <div class="rvt-container rvt-container--junior rvt-container--center rvt-p-tb-lg-md-up">
-    <div class="rvt-grid ">
-      <div class="rvt-grid__item-5-md-up">
+    <div class="rvt-grid">
+      <div class="rvt-grid__item-6-md-up">
         <div class="rvt-p-right-xxl-md-up">
           <h2 class="rvt-ts-lg rvt-text-bold rvt-m-bottom-md">{{ (index .Params.sections 1).title }}</h2>
           <p class="rvtd-lh-generous">{{ (index .Params.sections 1).teaser | safeHTML }}</p>
@@ -44,33 +44,20 @@
           </a>
         </div>
       </div>
-      <div class="rvt-grid__item-7-md-up">
-        <div class="rvt-grid">
-          <div class="rvt-grid__item-6-md-up rvt-m-bottom-lg">
-            <h3 class="rvt-ts-sm rvt-text-bold rvt-m-top-sm">Rivet team</h3>
-            {{ range (index .Params.sections 1).members }}
-            <div class="rvtd-person-card rvtd-person-card--compact">
-              <div class="rvtd-person-card__picture">
-                <img alt="{{ .name }}" src="{{ .avatar }}" class="rvtd-person-card__image" alt=" ">
-              </div>
-              <div class="rvtd-person-card__info">
-                <div class="rvtd-person-card__name rvt-text-bold">{{ .name }}</div>
-                <div class="rvtd-person-card__title">{{ .title }}</div>
-              </div>
+      <div class="rvt-grid__item-6-md-up rvt-m-bottom-lg">
+        <div class="rvt-p-left-xxl-md-up">
+          <h3 class="rvt-ts-sm rvt-text-bold rvt-m-top-sm">Rivet team</h3>
+          {{ range (index .Params.sections 1).members }}
+          <div class="rvtd-person-card rvtd-person-card--compact">
+            <div class="rvtd-person-card__picture">
+              <img alt="{{ .name }}" src="{{ .avatar }}" class="rvtd-person-card__image" alt=" ">
             </div>
-            {{ end }}
+            <div class="rvtd-person-card__info">
+              <div class="rvtd-person-card__name rvt-text-bold">{{ .name }}</div>
+              <div class="rvtd-person-card__title">{{ .title | safeHTML }}</div>
+            </div>
           </div>
-          <div class="rvt-grid__item-5-md-up rvt-grid__item--last">
-            <h3 class="rvt-ts-sm rvt-text-bold rvt-m-top-sm">Steering committee</h3>
-            <ul class="rvt-plain-list rvt-m-top-md">
-              {{ range (index .Params.sections 1).committee }}
-                <li class="rvt-m-top-sm">
-                  <div class="rvt-text-bold">{{ .name }}</div>
-                  <div class="rvt-ts-14">{{ .title }}</div>
-                </li>
-              {{ end }}
-            </ul>
-          </div>
+          {{ end }}
         </div>
       </div>
 
