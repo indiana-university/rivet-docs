@@ -6,15 +6,15 @@ applyLink: "./"
 date: "2018-11-28"
 ---
 ## About the User Experience Office
-The User Experience Office (UXO) at Indiana University takes a holistic approach to create simple, inclusive digital experiences. The UXO collaborates with university partners to help apply principles and best practices to their projects.
+The User Experience Office (UXO) at Indiana University takes a holistic approach to creating simple, inclusive digital experiences. UXO collaborates with university partners to help them apply user experience principles and best practices to their projects.
 
-## The Role of the UXO Design system team
+## The Role of the UXO Design System team
 
-The role of the UXO design system team is to:
+The role of the UXO Design System team is to:
 
-- Help create and insure design consistency, quality, accessibility across IU’s digital systems, and services
-- Increase efficiency of design and front-end development by building tools that help designers and developers focus on solving problems instead of implementation details
-- Provide training and resources to help all members of the organization increase their design fluency
+- Help create and ensure design consistency, quality, and accessibility across IU’s digital systems and services
+- Increase the efficiency of design and front-end development by building tools that help designers and developers focus on solving problems instead of implementation details
+- Provide training and resources to help all members of the organization improve their design fluency
 
 ## Requirements
 As a front-end developer on our Design System team you will:
@@ -22,8 +22,8 @@ As a front-end developer on our Design System team you will:
 - Establish front-end patterns and practices that ensure accessible and highly-usable digital systems and services
 - Work closely with designers to help grow our design system and keep it relevant
 - Help refactor the codebase to make it more modular, scalable, and well-documented
-- Help to make decisions about front-end technologies we’ll use to develop and evolve our design system
-- Write clear, concise, and approachable documentation for every skill-level
+- Help make decisions about front-end technologies we’ll use to develop and evolve our design system
+- Write clear, concise, and approachable documentation for every skill level
 
 **We are especially looking for candidates with the following**:
 
@@ -38,4 +38,4 @@ As a front-end developer on our Design System team you will:
 - Pattern libraries or style guides you have created
 - Github repositories with JavaScript, HTML, and CSS/Sass you have written
 - Links to any visual design work you’ve done in the past
-- Samples/links to any writing you may have done including documentation
+- Samples/links to any writing you may have done, including documentation
