@@ -61,6 +61,6 @@ To watch and build files without running a server, you can run `gulp watch`. To 
 
 `master` and `develop` branches are deployed automatically using Bamboo and Docker to generate the Hugo site. The following branches deploy to the following URLs:
 
-`master`: https://rivet.uits.iu.edu
+`master`: https://rivet.iu.edu
 
 `develop`: https://rivet.webtest.iu.edu
