@@ -21,31 +21,17 @@ sections:
         title: "Design System Lead"
         avatar: "https://ux.iu.edu/img/levi-thumbnail.jpg"
       -
+        name: "Madeline Grdina"
+        title: "UX Architect"
+        avatar: "https://ux.iu.edu/img/madeline-thumbnail.jpg"
+      -
         name: "Scott Anthony Murray"
         title: "Developer Advocate"
         avatar: "https://ux.iu.edu/img/scott-thumbnail.jpg"
-    committee:
       -
-        name: "Kate Robinson"
-        title: "IU Communications"
-      -
-        name: "Chris Basham"
-        title: "Enterprise Student Systems"
-      -
-        name: "Mark Fyffe"
-        title: "Enterprise Student Systems"
-      -
-        name: "Tom Clark"
-        title: "Enterprise Infrastructure"
-      -
-        name: "James Bennett"
-        title: "Enterprise Infrastructure"
-      -
-        name: "Dharmendra Patel"
-        title: "Enterprise Applications"
-      -
-        name: "Cody Thompson"
-        title: "User Experience Office"
+        name: "Front-end Developer"
+        title: "Vacant position"
+        avatar: "../img/rvtd-avatar-placeholder.jpg"
   -
     image: "../img/about-dev-process.png"
     title: "What is our development process?"

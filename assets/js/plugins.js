@@ -20,10 +20,10 @@ module.exports = {
    *
    * @param {String} url
    * Accepts a URL and returns a bool indicating
-   * whether the URL is external to rivet.uits.iu.edu
+   * whether the URL is external to rivet.iu.edu
    */
   isExternalLink(url) {
-    return url.indexOf("https://rivet.uits.iu.edu") === -1;
+    return url.indexOf("https://rivet.iu.edu") === -1;
   },
 
   /**

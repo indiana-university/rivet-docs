@@ -648,3 +648,10 @@ a.button--reverse-secondary {
 .rvtd-lh-generous {
     line-height: 1.7;
 }
+
+.form-message {
+    &__icon {
+        max-width: 40px;
+        margin: 0 auto;
+    }
+}

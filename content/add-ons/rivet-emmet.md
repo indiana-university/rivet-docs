@@ -50,7 +50,7 @@ To enable newline formatting for Emmet snippets in Atom:
 
 ## Rivet snippets
 
-Emmet snippets are available for each of [Rivet's core components](https://rivet.uits.iu.edu/components/).
+Emmet snippets are available for each of [Rivet's core components](https://rivet.iu.edu/components/).
 
 ### Starter template
 
@@ -64,7 +64,7 @@ Emmet snippets are available for each of [Rivet's core components](https://rivet
 
 #### Grid
 
-For more information about this component, see the [Rivet documentation on grid layouts](https://rivet.uits.iu.edu/components/layout/grid/).
+For more information about this component, see the [Rivet documentation on grid layouts](https://rivet.iu.edu/components/layout/grid/).
 
 | Grid snippets |
 | ------- |
@@ -77,7 +77,7 @@ For more information about this component, see the [Rivet documentation on grid 
 
 #### Panels
 
-For more information about this component, see the [Rivet documentation on panels](https://rivet.uits.iu.edu/components/layout/panels/).
+For more information about this component, see the [Rivet documentation on panels](https://rivet.iu.edu/components/layout/panels/).
 
 | Panel snippets |
 | ------- |
@@ -88,7 +88,7 @@ For more information about this component, see the [Rivet documentation on panel
 
 #### Breadcrumb
 
-For more information about this component, see the [Rivet documentation on breadcrumb navigation](https://rivet.uits.iu.edu/components/navigation/breadcrumb/).
+For more information about this component, see the [Rivet documentation on breadcrumb navigation](https://rivet.iu.edu/components/navigation/breadcrumb/).
 
 | Breadcrumb snippets |
 | ------- |
@@ -97,7 +97,7 @@ For more information about this component, see the [Rivet documentation on bread
 
 #### Dropdown
 
-For more information about this component, see the [Rivet documentation on dropdown buttons](https://rivet.uits.iu.edu/components/navigation/dropdown/).
+For more information about this component, see the [Rivet documentation on dropdown buttons](https://rivet.iu.edu/components/navigation/dropdown/).
 
 | Dropdown snippets |
 | ------- |
@@ -106,7 +106,7 @@ For more information about this component, see the [Rivet documentation on dropd
 
 #### Header
 
-For more information about this component, see the [Rivet documentation on headers](https://rivet.uits.iu.edu/components/navigation/header/).
+For more information about this component, see the [Rivet documentation on headers](https://rivet.iu.edu/components/navigation/header/).
 
 | Header snippets |
 | ------- |
@@ -118,7 +118,7 @@ For more information about this component, see the [Rivet documentation on heade
 
 #### Footer
 
-For more information about this component, see the [Rivet documentation on footers](https://rivet.uits.iu.edu/components/navigation/footer/).
+For more information about this component, see the [Rivet documentation on footers](https://rivet.iu.edu/components/navigation/footer/).
 
 | Footer snippets |
 | ------- |
@@ -126,7 +126,7 @@ For more information about this component, see the [Rivet documentation on foote
 
 #### Pagination
 
-For more information about this component, see the [Rivet documentation on pagination](https://rivet.uits.iu.edu/components/navigation/pagination/).
+For more information about this component, see the [Rivet documentation on pagination](https://rivet.iu.edu/components/navigation/pagination/).
 
 | Pagination snippets |
 | ------- |
@@ -139,7 +139,7 @@ For more information about this component, see the [Rivet documentation on pagin
 
 #### Badges
 
-For more information about this component, see the [Rivet documentation on badges](https://rivet.uits.iu.edu/components/page-content/badges/).
+For more information about this component, see the [Rivet documentation on badges](https://rivet.iu.edu/components/page-content/badges/).
 
 | Badge snippets |
 | ------- |
@@ -156,7 +156,7 @@ For more information about this component, see the [Rivet documentation on badge
 
 #### Tables
 
-For more information about this component, see the [Rivet documentation on tables](https://rivet.uits.iu.edu/components/page-content/tables/).
+For more information about this component, see the [Rivet documentation on tables](https://rivet.iu.edu/components/page-content/tables/).
 
 | Table snippets |
 | ------- |
@@ -168,7 +168,7 @@ For more information about this component, see the [Rivet documentation on table
 
 #### Tabs
 
-For more information about this component, see the [Rivet documentation on tabs](https://rivet.uits.iu.edu/components/page-content/tabs/).
+For more information about this component, see the [Rivet documentation on tabs](https://rivet.iu.edu/components/page-content/tabs/).
 
 | Tab snippets |
 | ------- |
@@ -181,7 +181,7 @@ For more information about this component, see the [Rivet documentation on tabs]
 
 #### Buttons
 
-For more information about this component, see the [Rivet documentation on buttons](https://rivet.uits.iu.edu/components/forms/buttons/).
+For more information about this component, see the [Rivet documentation on buttons](https://rivet.iu.edu/components/forms/buttons/).
 
 | Button snippets |
 | ------- |
@@ -208,7 +208,7 @@ For more information about this component, see the [Rivet documentation on butto
 
 #### Checkboxes
 
-For more information about this component, see the [Rivet documentation on checkboxes](https://rivet.uits.iu.edu/components/forms/checkboxes/).
+For more information about this component, see the [Rivet documentation on checkboxes](https://rivet.iu.edu/components/forms/checkboxes/).
 
 | Checkbox snippets |
 | ------- |
@@ -216,7 +216,7 @@ For more information about this component, see the [Rivet documentation on check
 
 #### File input
 
-For more information about this component, see the [Rivet documentation on file inputs](https://rivet.uits.iu.edu/components/forms/file-input/).
+For more information about this component, see the [Rivet documentation on file inputs](https://rivet.iu.edu/components/forms/file-input/).
 
 | File input snippets |
 | ------- |
@@ -225,7 +225,7 @@ For more information about this component, see the [Rivet documentation on file 
 
 #### Input group
 
-For more information about this component, see the [Rivet documentation on input groups](https://rivet.uits.iu.edu/components/forms/input-group/).
+For more information about this component, see the [Rivet documentation on input groups](https://rivet.iu.edu/components/forms/input-group/).
 
 | Input group snippets |
 | ------- |
@@ -234,7 +234,7 @@ For more information about this component, see the [Rivet documentation on input
 
 #### Radio buttons
 
-For more information about this component, see the [Rivet documentation on radio buttons](https://rivet.uits.iu.edu/components/forms/radio-buttons/).
+For more information about this component, see the [Rivet documentation on radio buttons](https://rivet.iu.edu/components/forms/radio-buttons/).
 
 | Radio button snippets |
 | ------- |
@@ -242,7 +242,7 @@ For more information about this component, see the [Rivet documentation on radio
 
 #### Select element
 
-For more information about this component, see the [Rivet documentation on select elements](https://rivet.uits.iu.edu/components/forms/select-input/).
+For more information about this component, see the [Rivet documentation on select elements](https://rivet.iu.edu/components/forms/select-input/).
 
 | Select element snippets |
 | ------- |
@@ -250,7 +250,7 @@ For more information about this component, see the [Rivet documentation on selec
 
 #### Text inputs
 
-For more information about this component, see the [Rivet documentation on text inputs](https://rivet.uits.iu.edu/components/forms/text-input/).
+For more information about this component, see the [Rivet documentation on text inputs](https://rivet.iu.edu/components/forms/text-input/).
 
 | Text input snippets |
 | ------- |
@@ -261,7 +261,7 @@ For more information about this component, see the [Rivet documentation on text 
 
 #### Alerts
 
-For more information about this component, see the [Rivet documentation on alerts](https://rivet.uits.iu.edu/components/overlays/alerts/).
+For more information about this component, see the [Rivet documentation on alerts](https://rivet.iu.edu/components/overlays/alerts/).
 
 | Alert snippets |
 | ------- |
@@ -273,7 +273,7 @@ For more information about this component, see the [Rivet documentation on alert
 
 #### Modals
 
-For more information about this component, see the [Rivet documentation on modals](https://rivet.uits.iu.edu/components/overlays/modals/).
+For more information about this component, see the [Rivet documentation on modals](https://rivet.iu.edu/components/overlays/modals/).
 
 | Modal snippets |
 | ------- |
@@ -285,7 +285,7 @@ For more information about this component, see the [Rivet documentation on modal
 
 #### Text
 
-For more information about this utility, see the [Rivet documentation on styling text](https://rivet.uits.iu.edu/components/utilities/text/).
+For more information about this utility, see the [Rivet documentation on styling text](https://rivet.iu.edu/components/utilities/text/).
 
 | Text snippets |
 | ------- |
