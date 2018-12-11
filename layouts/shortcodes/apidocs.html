@@ -27,10 +27,10 @@
     </thead>
     <tbody>
         {{ range $.Page.Params.methods }}
-        <tr {{ if .deprecated }}style="background-color: #fdf7e7; border-left: 4px solid #f5bb17"{{ end }}>
+        <tr {{ if .deprecated }}style="background-color: #ffece5; border-left: 4px solid #df3704"{{ end }}>
             <td width="350" style="vertical-align: top;">
-                {{ if .deprecated }}<span class="rvt-badge rvt-badge--warning">Deprecated</span><br>{{ end }}
                 <code>{{ .title }}</code>
+                {{ if .deprecated }}<span class="rvt-badge rvt-badge--danger">Deprecated</span><br>{{ end }}
             </td>
             <td style="vertical-align: top;">
                 {{ .description | markdownify }}
