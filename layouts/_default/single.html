@@ -3,6 +3,9 @@
         {{ partial "sidebar.html" . }}
         <div class="rvtd-tube">
             <div class="rvtd-tube__inner rvtd-typeset">
+                {{ if .Params.status }}
+                    <span class="rvt-badge rvt-badge--{{ lower .Params.status }} rvt-m-bottom-sm">{{ .Params.status }}</span>
+                {{ end }}
                 <h1>{{ .Title }}</h1>
                 <p class="rvtd-lead">{{ .Description }}</p>
                 {{ .Content }}

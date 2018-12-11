@@ -164,8 +164,8 @@ a.button--reverse-secondary {
 }
 
 /* Component status badges */
- .rvt-badge--prototype {
-     @extend .rvt-badge--error;
+ .rvt-badge--deprecated {
+     @extend .rvt-badge--danger;
  }
 
 .rvt-badge--alpha {
@@ -173,7 +173,7 @@ a.button--reverse-secondary {
 }
 
 .rvt-badge--beta {
-    @extend .rvt-badge--action;
+    @extend .rvt-badge--info;
     color: #fff;
 }
 
