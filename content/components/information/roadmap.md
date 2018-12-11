@@ -4,7 +4,7 @@ description: "Our plans for Rivet in 2019 and beyond"
 excludeFromStatus: true
 weight: 1
 ---
-Our focus is to keep Rivet healthy, growing, and serving the people using it. To help us accomplish that, we've identified 3 areas where we should prioritize our efforts: Infrastructure; production; and documentation, education, and outreach. Although the specific tasks will come and go, the general categories of work will remain the same.
+Our focus is to keep Rivet healthy, growing, and serving the people using it. To help us accomplish that, we've identified 3 areas where we should prioritize our efforts: **Infrastructure**; **production**; and **documentation**, **education**, and **outreach**. Although the specific tasks will come and go, the general categories of work will remain the same.
 
 To that end, our roadmap focuses on higher-level objectives that will help us accomplish our goals.
 
