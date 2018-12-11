@@ -2,7 +2,7 @@
 title: "Panels"
 description: "Use panels to help group content visually or call attention to parts of your application."
 requiresJs: false
-status: "Ready"
+status: "Deprecated"
 ---
 ## Default panel
 The default panel in Rivet has light gray background that can be used to help call out content against the default white stage area.

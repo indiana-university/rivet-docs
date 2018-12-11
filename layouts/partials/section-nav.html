@@ -10,14 +10,16 @@
                 <span class="text-uppercase rvt-m-bottom-sm">{{ .Title }}</span>
                 <ul>
                     {{ range .Pages }}
-                    <li {{ if eq $currentPage.Permalink .Permalink }}class="is-current"{{ end }}>
-                        <a aria-describedby="{{ .Title | urlize }}-js-req" href="{{ .Permalink }}">{{ .Title }}</a>
-                        {{ if .Params.requiresJs }}
-                        <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="{{ .Title | urlize }}-js-req">
-                            <span class="rvt-sr-only">This component requires</span>
-                            <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
-                        </span>
-                        {{ end }}
+                    <li class="{{ lower .Params.status }}{{ if eq $currentPage.Permalink .Permalink }} is-current{{ end }}">
+                        <a aria-describedby="{{ .Title | urlize }}-js-req" href="{{ .Permalink }}">
+                            {{ .Title }}
+                            {{ if .Params.requiresJs }}
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="{{ .Title | urlize }}-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            {{ end }}
+                        </a>
                     </li>
                     {{ end }}
                 </ul>
