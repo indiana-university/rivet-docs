@@ -1,11 +1,10 @@
 <template>
-  <section class="rvtd-changelog" id="changelog">
+  <section class="rvtd-changelog rvtd-changelog--light" id="changelog">
     <div class="rvt-container rvt-container--junior rvt-container--center">
-      <h2 class="rvtd-section__title m-bottom-xxl">Changelog</h2>
       <transition name="rvt-fade" mode="out-in">
         <div class="rvtd-changelog__list">
-          <div class="rvt-grid m-top-xxl" v-if="!release.prerelease && new Date(release.created_at) > new Date('2018-01-01') && releases.length > 0" v-for="(release, index) in releases" :key="release.id">
-            <div class="rvt-grid__item-3-md-up">
+          <div class="rvt-grid rvtd-changelog__entry" v-if="!release.prerelease && new Date(release.created_at) > new Date('2018-01-01') && releases.length > 0" v-for="(release, index) in releases" :key="release.id">
+            <div class="rvt-grid__item-3-lg-up">
               <div class="rvtd-changelog__version" :class="{'ts-23':index>0}">Rivet {{ version(release.tag_name) }}</div>
               <div class="rvtd-changelog__date rvt-m-bottom-xl rvt-m-top-xs">{{ release.published_at | formatDate }}</div>
               <a v-if="(index===0 && !release.prerelease) || (index===1 && releases[0].prerelease)"
@@ -21,11 +20,11 @@
                 Download {{ version(release.tag_name) }}
               </a>
             </div>
-              <div class="rvt-grid__item-4-md-up rvtd-changelog__overview">
+              <div class="rvt-grid__item-4-lg-up rvtd-changelog__overview">
                 <div class="rvtd-changelog__section-title" v-if="release.body">Overview</div>
                 <div v-html="overview(release.body)"></div>
               </div>
-              <div class="rvt-grid__item-4-md-up rvt-grid__item--last rvtd-changelog__details" v-if="release.pulls.items.length > 0">
+              <div class="rvt-grid__item-4-lg-up rvt-grid__item--last rvtd-changelog__details" v-if="release.pulls.items.length > 0">
                 <div class="rvtd-changelog__section-title">Details</div>
 
                 <ul>
@@ -35,7 +34,7 @@
                 </ul>
 
                 <p class="rvtd-changelog__view-all-details" v-if="release.pulls.items.length > 5 && !showAllDetails[index]">
-                  <button class="rvt-button rvt-button--small rvt-button--secondary rvt-button--reverse" @click.prevent="showDetails(index)" >Show All +</button>
+                  <button class="rvt-button rvt-button--small rvt-button--secondary" @click.prevent="showDetails(index)" >Show All +</button>
                 </p>
               </div>
           </div>
