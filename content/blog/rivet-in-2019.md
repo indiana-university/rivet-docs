@@ -4,6 +4,7 @@ description: A a quick year-end update on Rivet.
 date: "2018-12-13"
 excludeFromIndex: true
 ---
+## 2019 Roadmap
 Here’s a quick year-end update on Rivet. First, we have finalized and posted the [Rivet 2019 Roadmap]({{< ref "/components/information/roadmap.md" >}}). Check it out to see what we have planned for the upcoming year.
 
 ## New Rivet team
@@ -13,7 +14,7 @@ The biggest news we have to share is that UX Office has been approved to create 
 We’ve officially worked through the process and approvals for open sourcing Rivet. In early 2019 we’ll be moving the core Rivet codebase to github.com and will  send out more specific information around the move in January.
 
 ## Rivet 1.2.0 and beyond
-We are finalizing the next Rivet release (1.2.0) now, so look for it in early January after the holidays. Starting next year and once the new team in place, we plan to begin regular monthly releases. Our goal is to have the new front-end developer position filled by the end of January 2019 and then begin the monthly release schedule starting in the last week of February.
+We are finalizing the next Rivet release (1.2.0) now, so look for it in early January after the holidays. Once the new team is in place next year, we plan to begin regular monthly releases. Our goal is to have the new front-end developer position filled by the end of January 2019 and then begin the monthly release schedule starting in the last week of February.
 
 In addition to fixes and improvements, here’s a quick summary of the major updates in the next release:
 
@@ -27,7 +28,7 @@ Here are a few links to show what we’ve been working on the last few months. T
 - Rivet datepicker
     - **This is not ready for production yet**, but will be released soon as a Rivet Add-on
     - [Prototype repository](https://github.iu.edu/uxo/rivet-datepicker)
-    - [Datepicker Demo](https://pages.github.iu.edu/uxo/rivet-datepicker/)
+    - [Datepicker demo](https://pages.github.iu.edu/uxo/rivet-datepicker/)
 - [New Tags component prototype](https://codepen.io/levimcg/pen/qQpXeY)
 - [Loading indicator](https://codepen.io/levimcg/pen/pObYwo) (will be in 1.2.0 release)
 
