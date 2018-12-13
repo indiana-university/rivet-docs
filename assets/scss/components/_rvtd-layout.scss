@@ -73,6 +73,10 @@
     .rvtd-tube {
         max-width: calc(100% - 280px - 17.5rem);
     }
+
+    .rvtd-tube--full-width {
+        max-width: 100%;
+    }
 }
 
 .rvtd-subtle-wrapper {
