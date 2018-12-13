@@ -24,10 +24,10 @@ With our proposal to create a dedicated design system team approved, the early p
 ## Q2: Rivet Community Workshops & information architecture overhaul
 In the spring we’re planning the first Rivet Community Workshop. This workshop will be a one-day event where developers and designers can learn about Rivet, contribute to Rivet, and meet other developers using Rivet. We’ll be focusing on creating a workshop format that we can use going forward as we establish a regular (at least one per semester) workshop schedule.
 
-In addition to planning and having our first community workshop, we’ll be reworking the information architecture of the the main Rivet documentation site. As Rivet has grown, it’s become clear that there’s a need for larger, more complex design patterns in addition to the current lower level components. We’re already in the early stages of design and planning for this IA overhaul.  In the second quarter, we’ll build and launch these updates.
+In addition to planning and having our first community workshop, we’ll be reworking the information architecture of the the main Rivet documentation site. As Rivet has grown, it’s become clear that there’s a need for larger, more complex design patterns in addition to the current lower level components. We’re already in the early stages of design and planning for this IA overhaul. In the second quarter, we’ll build and launch these updates.
 
 ### Q2 Goals
-- Create content plan for both tracks (Coding track and Tutorial track) of community workshop. See draft doc for more information.
+- Create content plan for both tracks (Coding track and Tutorial track) of community workshop.
 - Communications and outreach for workshop
 - Restructure Documentation content to move toward high-level categories, e.g. Base styles, Components, Patterns, Templates
 
