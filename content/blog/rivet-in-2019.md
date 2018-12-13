@@ -7,7 +7,7 @@ excludeFromIndex: true
 Here’s a quick year-end update on Rivet. First, we have finalized and posted the [Rivet 2019 Roadmap]({{< ref "/components/information/roadmap.md" >}}). Check it out to see what we have planned for the upcoming year.
 
 ## New Rivet team
-The biggest news we have to share is that UX Office has been approved to create a dedicated Rivet team, which includes hiring a new full-time front-end developer that will be 100% dedicated to building and improving Rivet, as well as the 50% dedication of two current UXO staff members. You can read more about the team on the Rivet website. This is a significant increase in staffing and will allow us to greatly increase the pace of new features, improvements, and releases.
+The biggest news we have to share is that UX Office has been approved to create a dedicated Rivet team, which includes hiring a new full-time front-end developer that will be 100% dedicated to building and improving Rivet, as well as the 50% dedication of two current UXO staff members. You can read more about the team on the [about page]({{< ref "/about/_index.md#who-supports-it" >}}). This is a significant increase in staffing and will allow us to greatly increase the pace of new features, improvements, and releases.
 
 ## Open sourcing Rivet
 We’ve officially worked through the process and approvals for open sourcing Rivet. In early 2019 we’ll be moving the core Rivet codebase to github.com and will  send out more specific information around the move in January.
