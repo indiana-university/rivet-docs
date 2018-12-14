@@ -4,4 +4,6 @@ description: "Detailed information about fixes, additions, and updates in each r
 excludeFromStatus: true
 weight: 2
 type: "changelog"
+aliases:
+  - /changelog/
 ---
