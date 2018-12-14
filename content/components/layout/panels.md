@@ -4,6 +4,10 @@ description: "Use panels to help group content visually or call attention to par
 requiresJs: false
 status: "Deprecated"
 ---
+{{< alert variant="danger" title="The Panel component is deprecated" >}}
+    The <em>Panel</em> component will be removed in the next major version of Rivet in favor of the new Box component coming in the next release. See <a href="https://github.iu.edu/UITS/rivet-source/pull/398">this pull request</a> and <a href="https://codepen.io/levimcg/pen/XyVbeY">this prototype</a> for more information.
+{{< /alert >}}
+
 ## Default panel
 The default panel in Rivet has light gray background that can be used to help call out content against the default white stage area.
 
