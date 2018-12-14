@@ -29,9 +29,9 @@ excludeFromStatus: true
             <td><span class="rvt-badge rvt-badge--alpha">Alpha</span></td>
         </tr>
         <tr>
-            <th scope="row">Prototype</th>
-            <td><strong>Don't use this.</strong> We've got some stuff to work out. Prototypes are concepts that need further development. <strong>New components will default to Prototype status</strong>.</td>
-            <td><span class="rvt-badge rvt-badge--prototype">Prototype</span></td>
+            <th scope="row">Deprecated</th>
+            <td><strong>Don't use this in new projects</strong>. This component will be removed in the next major version of Rivet.</td>
+            <td><span class="rvt-badge rvt-badge--deprecated">Deprecated</span></td>
         </tr>
     </tbody>
 </table>

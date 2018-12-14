@@ -1,13 +1,21 @@
 .rvtd-changelog {
     background-color: $dark-blue;
     color: white;
-    padding: 5em 0 12rem 0;
+    padding: 2em 0 12rem 0;
     position: relative;
 
     &__list {
         border-left: 2px solid #067bbb;
         padding-left: 2em;
         position: relative;
+    }
+
+    &__entry {
+        margin-top: $xxl;
+    }
+
+    &__entry:first-child {
+        margin-top: 0;
     }
 
     &__pr-link {
@@ -142,13 +150,59 @@
     .rvtd-section__title::before {
         background: $bright-blue;
     }
-}
 
-@include mq(1480px) {
-    .rvtd-changelog {
-        margin: 0 30px;
+    &--light {
+        background-color: $color-white;
+        color: $color-black;
+    }
+
+    &--light &__list {
+        border-left: 1px solid $color-black--200;
+    }
+
+    &--light &__pr-link {
+        color: $color-black;
+    }
+
+    &--light &__section-title {
+        color: $color-black;
+    }
+
+    &--light &__version:before {
+        box-shadow: 0 0 0 0.5rem $color-white;
+        background-color: $color-midnight;
+        color: $color-white;
+    }
+
+    &--light &__date {
+        color: $color-black--600;
+    }
+
+    &--light .rvt-grid:first-child &__version:before {
+        background-color: $color-midnight;
+        color: $color-white;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik02LjcyLDEzbC0uNDgtLjM2LTMtM0ExLDEsMCwwLDEsNC43MSw4LjI5bDIuMTEsMi4xMiw0LjMzLTYuOTRhMSwxLDAsMCwxLDEuNywxLjA2TDcuNjQsMTIuODdaIi8+Cjwvc3ZnPgo=")
+    }
+
+    &--light &__details {
+        li {
+            &::before {
+                color: $color-midnight;
+            }
+         }
+    }
+
+    &--light &__cta {
+        border-bottom: 1px solid $color-black--200;
+        border-left: 1px solid $color-black--200;
+        left: -.09rem;
+    }
+
+    &--light &__cta .rvt-button {
+        box-shadow: none;
     }
 }
+
 
 @include mq(bp(lg)) {
     .rvtd-changelog__cta {

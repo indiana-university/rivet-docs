@@ -156,7 +156,10 @@ Applying the modifier class `.rvt-tabs--fitted` to the main `.rvt-tabs` containe
 {{< /example >}}
 
 ## Vertical Tabs
-While Rivet supports displaying tabs vertically along the left-hand side of the content area, we've deprecated that feature and will be removing vertical tabs in a future release. 
+
+{{< alert variant="danger" title="Vertical tabs are deprecated" >}}
+    While Rivet supports displaying tabs vertically along the left-hand side of the content area, we've deprecated that feature and will be removing vertical tabs in a future release.
+{{< /alert >}}
 
 Tabs work best when displayed horizontally. Displaying tabs vertically along the left-hand side of the content area takes up horizontal screen space, which limits the display area of your tab's content. In addition, vertical tabs cause confusion, as users might mistake the tabs for your application's main navigation. The vertical arrangement may also tempt you to use a larger number of tabs, which is not recommended.
 
