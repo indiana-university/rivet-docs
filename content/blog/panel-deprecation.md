@@ -1,7 +1,7 @@
 ---
 title: Deprecating the Rivet Panel Component
 description: The panel component has been deprecated in favor of the upcoming box and media object components.
-date: "2019-01-31"
+date: "2019-01-15"
 excludeFromIndex: true
 ---
 We've deprecated the [Rivet panel component]({{< ref "/components/layouts/panels.md" >}}) and will be removing it in the next major release of Rivet (`2.0.0`) in favor of two new components: the **box** and the **media object**.
