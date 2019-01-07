@@ -30,7 +30,7 @@ sections:
         avatar: "https://ux.iu.edu/img/scott-thumbnail.jpg"
       -
         name: "Front-end Developer"
-        title: "Vacant position"
+        title: 'Vacant position | <a class="rvt-text-bold" href="/jobs/front-end-developer">Apply now</a>'
         avatar: "../img/rvtd-avatar-placeholder.jpg"
   -
     image: "../img/about-dev-process.png"
