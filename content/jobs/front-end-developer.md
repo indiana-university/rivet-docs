@@ -1,8 +1,8 @@
 ---
 title: Front-end Developer, Design Systems
-draft: true
-description: "We are looking a front-end developer to join the User Experience Office Design System team at Indiana University"
-applyLink: "./"
+draft: false
+description: "We are looking for a front-end developer to join the User Experience Office Design System team at Indiana University"
+applyLink: "https://iujobs.peopleadmin.com/postings/70278"
 date: "2018-11-28"
 ---
 ## About the User Experience Office
