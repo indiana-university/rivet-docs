@@ -655,3 +655,26 @@ a.button--reverse-secondary {
         margin: 0 auto;
     }
 }
+
+/**
+ * Media Object Demo only
+ */
+
+.rvt-mo-demo-only .rvt-mo__prepend,
+.rvt-mo-demo-only .rvt-mo__main,
+.rvt-mo-demo-only .rvt-mo__append {
+  padding: $sm;
+}
+.rvt-mo-demo-only .rvt-mo__prepend,
+.rvt-mo-demo-only .rvt-mo__append {
+  width: 5rem;
+}
+.rvt-mo-demo-only .rvt-mo__prepend {
+  background-color: $color-blue--100;
+}
+.rvt-mo-demo-only .rvt-mo__main {
+  background-color: $color-green--100;
+}
+.rvt-mo-demo-only .rvt-mo__append {
+  background-color: $color-orange--100;
+}
