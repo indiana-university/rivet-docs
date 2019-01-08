@@ -203,7 +203,7 @@ plugins.clipboardInit();
 /**
  * Site-specific DOM scripting - Any DOM manipulation stuff
  * MUST come after the main Vue instance is initialized because
- * of Vue's virtal DOM implementation.
+ * of Vue's virtual DOM implementation.
  */
 plugins.createCopyright("#year");
 plugins.copyButtonConfirm("[data-clipboard-target]", 1500);
