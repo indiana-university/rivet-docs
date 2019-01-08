@@ -669,12 +669,18 @@ a.button--reverse-secondary {
 .rvt-mo-demo-only .rvt-mo__append {
   width: 5rem;
 }
+.rvt-mo-demo-only .rvt-mo__prepend,
+.rvt-mo-demo-only .rvt-mo__main,
+.rvt-mo-demo-only .rvt-mo__append {
+    color: $color-white;
+}
+
 .rvt-mo-demo-only .rvt-mo__prepend {
-  background-color: $color-blue--100;
+  background-color: $color-blue;
 }
 .rvt-mo-demo-only .rvt-mo__main {
-  background-color: $color-green--100;
+  background-color: $color-green;
 }
 .rvt-mo-demo-only .rvt-mo__append {
-  background-color: $color-orange--100;
+  background-color: $color-orange;
 }
