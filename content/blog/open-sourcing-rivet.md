@@ -1,6 +1,6 @@
 ---
 title: Open-sourcing Rivet
-description: After some discussions within the UX Office and with folks around UITS, we've decided to open source Rivet.
+description: The Rivet source code will be moved from GitHub@IU to GitHub.com on Thursday, January 17.
 date: "2019-01-08"
 excludeFromIndex: true
 ---
