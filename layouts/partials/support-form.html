@@ -1,125 +1,25 @@
 <div class="rvtd-support">
-    <button class="rvt-button rvtd-support__toggle" type="button" data-modal-trigger="modal-support-form">
-        <span class="rvt-sr-only">Get help</span>
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
-            <g fill="currentColor">
-                <path d="M8,10A1,1,0,0,1,7,9V8.25A1.25,1.25,0,0,1,8.25,7h.64A1.08,1.08,0,0,0,10,6.18,1,1,0,0,0,9,5H7A1,1,0,0,1,7,3H9a3,3,0,0,1,3,3.5A3.08,3.08,0,0,1,9,9H9A1,1,0,0,1,8,10Z"/>
-                <path d="M8,13a1,1,0,0,1-.38-.08,1,1,0,0,1-.33-.21A1,1,0,0,1,7,12a1,1,0,0,1,.08-.38,1,1,0,0,1,.21-.33,1,1,0,0,1,.9-.27.62.62,0,0,1,.19.06.74.74,0,0,1,.18.09l.15.12a.93.93,0,0,1,.21.33,1,1,0,0,1-.21,1.09,1.16,1.16,0,0,1-.33.21A1,1,0,0,1,8,13Z"/>
-            </g>
-        </svg>
+  <div class="rvt-dropdown">
+    <button
+      class="rvt-button rvtd-support__toggle"
+      type="button"
+      data-dropdown="help-dropdown"
+      data-dropdown-toggle="support-menu"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="rvt-sr-only">Get help</span>
+      {{ partial "icons/question-mark-icon.svg" . }}
     </button>
-</div>
-<div class="rvt-modal "
-     id="modal-support-form"
-     role="dialog"
-     aria-labelledby="modal-support"
-     aria-hidden="true"
-     tabindex="-1">
-     <div class="rvt-modal__inner">
-        <header class="rvt-modal__header">
-            <h1 class="rvt-modal__title" id="modal-support">Email support</h1>
-        </header>
-        <transition name="form" mode="out-in">
-            <form v-if="!isFormSubmitted" method="post" @submit.prevent="supportFormHandler" action="/form-submit/support/">
-                <div class="rvt-modal__body">
-                    <input v-model='firstname' name="firstname" type="text" id="firstname" class="rvt-display-none" />
-
-                    <p class="rvt-m-top-sm rvt-m-bottom-lg "><strong>Have questions about Rivet?</strong> Use this form to submit your questions and we'll get back with you. <em>All fields are required.</em></p>
-
-                    <div class="rvt-grid">
-
-                        <div class="rvt-grid__item-6-md-up rvt-m-bottom-sm">
-                            <label for="support-name">Name</label>
-                            <input data-vv-validate-on="none" :class="{'rvt-is-invalid': errors.has('name')}" name="name" v-model='supportFormFields.name' type="text" id="support-name" v-validate="'required'" aria-describedby="name-errors">
-                            <div v-cloak class="rvt-inline-alert rvt-inline-alert--is-invalid" v-if="errors.has('name')">
-                              <span class="rvt-inline-alert__icon">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                    <g fill="currentColor">
-                                        <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"/>
-                                        <path d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
-                                    </g>
-                                </svg>
-                              </span>
-                              <span class="rvt-inline-alert__message" role="alert" id="name-errors">
-                                Please tell us your name.
-                              </span>
-                            </div>
-
-                            <div v-else id="name-errors"></div>
-                        </div>
-                        <div class="rvt-grid__item-6-md-up rvt-m-bottom-sm">
-                            <label for="support-email">Email</label>
-                            <input data-vv-validate-on="none" :class="{'rvt-is-invalid': errors.has('email')}" name="email" v-model='supportFormFields.email' type="email" id="support-email" v-validate="'required'" aria-describedby="email-errors">
-
-                            <div v-cloak class="rvt-inline-alert rvt-inline-alert--is-invalid" v-if="errors.has('email')">
-                              <span class="rvt-inline-alert__icon">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                    <g fill="currentColor">
-                                        <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"/>
-                                        <path d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
-                                    </g>
-                                </svg>
-                              </span>
-                              <span class="rvt-inline-alert__message" role="alert" id="email-errors">
-                                Please enter your IU email address.
-                              </span>
-                            </div>
-
-                            <div v-else id="email-errors"></div>
-                        </div>
-                    </div>
-
-                    <div class="rvt-m-top-md">
-                        <p class="rvt-text-bold rvt-ts-14 rvt-display-flex rvt-vertical-center rvt-m-top-remove rvt-lh-title">
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                <g fill="currentColor">
-                                    <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z" />
-                                    <path d="M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z" />
-                                    <circle cx="8" cy="5" r="1" />
-                                </g>
-                            </svg>
-                            <span class="rvt-m-left-xs">Please include the following in your message:</span>
-                        </p>
-                        <ul class="rvt-m-bottom-sm rvt-ts-14">
-                            <li>URL or application name</li>
-                            <li>A brief description of your issue, or question</li>
-                            <li>If it's a bug/error, the steps you followed to produce it</li>
-                        </ul>
-                        <label for="support-message">Message</label>
-                        <textarea data-vv-validate-on="none" :class="{'rvt-is-invalid': errors.has('description')}" name="description" v-model='supportFormFields.description' id="support-message" v-validate="'required'" aria-describedby="description-errors"></textarea>
-
-                        <div v-cloak class="rvt-inline-alert rvt-inline-alert--is-invalid" v-if="errors.has('description')">
-                        <span class="rvt-inline-alert__icon">
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                <g fill="currentColor">
-                                    <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"/>
-                                    <path d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
-                                </g>
-                            </svg>
-                        </span>
-                        <span class="rvt-inline-alert__message" role="alert" id="description-errors">
-                            Please leave a message.
-                        </span>
-                        </div>
-                        <div v-else id="description-errors"></div>
-                    </div>
-                </div>
-                <div class="rvt-modal__controls">
-                    <button class="rvt-button">Send</button>
-                    <button class="rvt-button rvt-button--secondary" type="button" data-modal-close="close">Cancel</button>
-                </div>
-            </form>
-            <div v-if='isFormSubmitted' v-cloak class="form-message rvt-p-all-lg rvt-text-center">
-                <img src="/img/success-icon.svg" class="form-message__icon" alt="">
-                <p class="m-bottom-md">Thank you! Your question has been submitted.</p>
-                <p class="m-all-remove"><button class="rvt-button rvt-button--secondary" @click.prevent="resetSupportHandler">Ask another question</button></p>
-            </div>
-        </transition>
-        <button class="rvt-button rvt-modal__close" data-modal-close="close">
-            <span class="rvt-sr-only">Close</span>
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
-            </svg>
-        </button>
+    <div class="rvtd-support__menu rvt-box rvt-box--card" id="support-menu" aria-hidden="true" role="menu">
+      <div class="rvt-box__body">
+        <div class="rvt-ts-18 rvt-text-bold">
+          Have a question about Rivet?
+        </div>
+        <p>We're happy to help! If you've found a bug, typo, or have a request, the best way
+        to get in touch is to <a href="{{ .Site.Params.githubRepo}}/issues">create an issue on Github</a>.</p>
+        <p>For all other questions please feel free to email us at <a href="mailto:rivet@iu.edu">rivet@iu.edu</a></p>
+      </div>
     </div>
+  </div>
 </div>
