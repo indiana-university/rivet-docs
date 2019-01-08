@@ -1,10 +1,7 @@
 /*
     swap vue.min out for vue if you need vue devtools
 */
-// const Vue = require('vue/dist/vue');
 const Vue = require("vue/dist/vue.min");
-const VeeValidate = require("vee-validate");
-Vue.use(VeeValidate);
 
 const plugins = require("./plugins");
 const polyfills = require("./polyfills");
@@ -62,14 +59,7 @@ new Vue({
     loadingNotifications: false,
     errorLoadingNotifications: false,
     notificationsLastViewedAt: null,
-    quarter: null,
-    isFormSubmitted: false,
-    firstname: '', // honeypot
-    supportFormFields: {
-      name: "",
-      email: "",
-      description: ""
-    }
+    quarter: null
   },
   methods: {
     // Toggles the visibility of the section nav on mobile
@@ -128,62 +118,6 @@ new Vue({
         );
       }
     },
-
-    focusFirstInvalidInput: function() {
-      var fields = Object.values(this.errors.items);
-      var firstField = fields[0];
-      if (!firstField) {
-        return false;
-      }
-      var input = document.querySelector(
-        "body [name=" + firstField.field + "]"
-      );
-      if (input) {
-        input.focus();
-      }
-    },
-
-    resetSupportHandler: function() {
-      this.isFormSubmitted = false;
-      this.supportFormFields.description = "";
-    },
-
-    supportFormHandler: function() {
-
-        // check the honeypot
-        if(this.firstname != '') {
-            this.isFormSubmitted = true;
-            return
-        }
-
-      this.$validator.validateAll();
-      setTimeout(
-        function() {
-          if (this.errors.any()) {
-            this.focusFirstInvalidInput();
-            this.checkErrors = true;
-            return false;
-          } else {
-            if (!this["supportFormFields"]) {
-              return false;
-            }
-
-            this.isFormSubmitted = true;
-            var request = new XMLHttpRequest();
-            var data = new FormData();
-            for (var key in this["supportFormFields"]) {
-              data.append(key, this["supportFormFields"][key]);
-            }
-
-            // send data to UXO
-            var request = new XMLHttpRequest();
-            request.open("POST", "/form-submit/support/index.php");
-            request.send(data);
-          }
-        }.bind(this),
-        200
-      );
-    }
   },
 
   created() {
