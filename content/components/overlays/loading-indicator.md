@@ -1,6 +1,6 @@
 ---
 title: "Loading indicator"
-description: "The Rivet loading indicator helps notify users when their action is being processed."
+description: "The Rivet loading indicator helps notify users when their action is being processed"
 status: "Alpha"
 ---
 ## Default
@@ -25,7 +25,7 @@ While the button is in the loading state, the `aria-busy="true"` and `disabled` 
 When using the loading indicator inside buttons, the visible button text should be wrapped in a `.rvt-button__text` class (see above example). This class visually hides the button text when the loading indicator is visible while maintaining the display width of the button.
 
 ## Loading indicator sizes
-The loading indicator comes in multiple sizes that follow the standard Rivet size naming conventions.
+The loading indicator comes in multiple sizes that follow the standard Rivet size naming conventions used for [spacing]({{< relref "../layout/spacing.md" >}}) and [typography]({{< relref "../layout/typography.md" >}}).
 
 - `rvt-loader--xxs`
 - `rvt-loader--xs` - The default size. Same as `rvt-loader` with no modifier. **NOTE**: This is the **only** size usable inside a button.
