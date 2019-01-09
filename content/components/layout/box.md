@@ -3,10 +3,10 @@ title: "Box"
 description: "The box component can be used to help visually group related content"
 status: "Alpha"
 ---
-## Default Box
-The most basic version of the Box component includes a subtle border, a border radius, and a white background.
-Padding and margins should be applied with utility classes and additional layouts variants of the Box can be created
-using the Box elements described in the following sections.
+## Default box
+The most basic version of the box component includes a subtle rounded border and a white background. Padding and margins should be applied with utility classes. 
+
+Additional variants of the box component can be created using the elements described in the following sections.
 
 {{< example lang="html" spacious="true" >}}<div class="rvt-box">
   This is basic box
@@ -14,7 +14,7 @@ using the Box elements described in the following sections.
 {{< /example >}}
 
 ## Box body
-Nesting the `.rvt-box__body` element inside the Box will add equal amounts of padding to all sides.
+Nesting an element with the `.rvt-box__body` class inside the box will add equal amounts of padding to each side of the box.
 
 {{< example lang="html" spacious="true" >}}<div class="rvt-box">
   <div class="rvt-box__body">
@@ -24,7 +24,7 @@ Nesting the `.rvt-box__body` element inside the Box will add equal amounts of pa
 {{< /example >}}
 
 ## Box header and footer
-The optional header and footer elements can be nested inside the box to create more complex layouts.
+Optional header and footer elements can be nested inside the box to create more complex layouts.
 
 In this example, we are using the `.rvt-box__header`, `.rvt-box__body`, and `.rvt-box__footer` elements to visually group content.
 
@@ -33,7 +33,7 @@ In this example, we are using the `.rvt-box__header`, `.rvt-box__body`, and `.rv
     Header text
   </div>
   <div class="rvt-box__body">
-    <p class="rvt-m-all-remove">This is a Box with a header, footer, and and some content with <a href="#">a
+    <p class="rvt-m-all-remove">This is a box with a header, a footer, and some content with <a href="#">a
         link</a>.</p>
   </div>
   <div class="rvt-box__footer rvt-text-right">
@@ -42,15 +42,15 @@ In this example, we are using the `.rvt-box__header`, `.rvt-box__body`, and `.rv
 </div>
 {{< /example >}}
 
-## Box light variant
-By default, the box header and footer have a subtle gray background, but you can remove the subtle header and footer shading by using the `.rvt-box--light` variant. This can be helpful in reducing visual weight when using multiple box components on the same page.
+## Light box variant
+You can remove the subtle gray header and footer background by using the `.rvt-box--light` variant. This can be helpful in reducing visual clutter when using multiple box components on the same page.
 
 {{< example lang="html" spacious="true" >}}<div class="rvt-box rvt-box--light">
   <div class="rvt-box__header">
     Header text
   </div>
   <div class="rvt-box__body">
-    <p class="rvt-m-all-remove">This is a Box with a header, footer, and and some content with <a href="#">a
+    <p class="rvt-m-all-remove">This is a box with a header, a footer, and some content with <a href="#">a
         link</a>.</p>
   </div>
   <div class="rvt-box__footer rvt-text-right">
@@ -60,15 +60,12 @@ By default, the box header and footer have a subtle gray background, but you can
 {{< /example >}}
 
 ## Box rows
-The Box Row element adds a small amount of padding and a subtle top border to all elements it is applied to. The `.rvt-box__row` element works particularly well for displaying lists of content within a Box.
+The `.rvt-box__row` class adds a small amount of padding and a subtle top border. This works particularly well for displaying lists of content within a Box.
 
 ### Box rows with a list
-In the following example we're using Rivet's plain list utility class along with the `.rvt-box__row` class to style the list items, however the `.rvt-box__row` class can be used on regular `div` elements as well.
+In the following example, we're using Rivet's plain list utility class along with the `.rvt-box__row` class to style the list items.
 
 {{< example lang="html" spacious="true" >}}<div class="rvt-box">
-  <!--
-    Box rows must be wrapped in a parent element for styling purposes.
-  -->
   <ul class="rvt-plain-list">
     <li class="rvt-box__row">
       <a href="#" class="rvt-link-bold">A link in a row</a>
@@ -83,18 +80,11 @@ In the following example we're using Rivet's plain list utility class along with
 </div>
 {{< /example >}}
 
-## Box rows with generic elements
-It is not required to create box rows using lists. Box rows can also be created using regular `div` elements if lists do not make sense semantically.
-
-{{< alert variant="warning" title="Box rows must be wrapped in a parent element" >}}
-For styling purposes box rows must be wrapped in a parent element. Here we are using a generic div to wrap the box rows.
-{{< /alert >}}
+### Box rows with generic elements
+Box rows can also be created using `div` elements if lists do not make sense semantically.
 
 {{< example lang="html" spacious="true" >}}
 <div class="rvt-box">
-  <!--
-    Box rows must be wrapped in a parent element for styling purposes.
-  -->
   <div>
     <div class="rvt-box__row">
       Plain box row one
@@ -109,36 +99,41 @@ For styling purposes box rows must be wrapped in a parent element. Here we are u
 </div>
 {{< /example >}}
 
+{{< alert variant="warning" title="Box rows must be wrapped in a parent element" >}}
+For styling purposes, box rows must be wrapped in a parent element, such as a `div` with the `.rvt-box` class applied.
+{{< /alert >}}
+
 ## Card variant
-The Card variant of the Box component can be used along with Rivet's type scale and spacing utilities to create basic card layouts. Adding the `.rvt-box--card` modifier adds a subtle box-shadow to help visually separate the the Box content from the background.
+The card variant of the box component can be used along with Rivet's type scale and spacing utilities to create basic card layouts. Adding the `.rvt-box--card` modifier adds a subtle shadow to help visually separate the the box content from the background.
 
 {{< example lang="html" spacious="true" >}}<div class="rvt-box rvt-box--card">
   <div class="rvt-box__body">
-    This is the Card variant of a Box with a body element
+    This is the card variant of a box with a body element
   </div>
 </div>
 {{< /example >}}
 
-## Card image element
-The card variant also includes and options Image element that can be used when you need to display an image as a part of you card layout. Wrapping and image in the `.rvt-box__image` class will apply the proper border-radius and hide the image overflow.
+### Card image
+The card variant can include an optional image. Nesting an `img` inside an element with the `.rvt-box__image` class will apply the proper sizing, cropping, and border radius.
 
-**NOTE**: The Image element should be the first child of the Box element when using so that it sets flush with the sides of the box. It should not be used inside of the Body or Row elements.
-
-{{< example lang="html" spacious="true">}}<div class="rvt-box rvt-box--card" style="max-width: 300px;">
+{{< example lang="html" spacious="true">}}<div class="rvt-box rvt-box--card">
   <div class="rvt-box__image">
     <img src="http://www.fillmurray.com/g/800/450" alt="">
   </div>
   <div class="rvt-box__body">
     <h2 class="rvt-ts-20 rvt-text-bold">Card title</h2>
-    <p class="rvt-m-top-xxs">This is the Card variant of a Box with a body element</p>
+    <p class="rvt-m-top-xxs">This is the card variant of a box with a body element</p>
     <a href="#" class="rvt-link-bold">Card link</a>
   </div>
 </div>
 {{< /example >}}
 
-## Compact Box
-The compact version of the Box component reduces the amount of padding on the various Box elements. This variant can be
-useful in situations where you are displaying large amounts of data and need to conserve vertical space.
+{{< alert variant="warning" title="Card images must be the first child" >}}
+The element with the `.rvt-box__image` class must be the first child of `.rvt-box` so that the image sits flush with the sides of the box (see above example). It should not be used inside elements with the `rvt-box__body` or `.rvt-box__row` classes.
+{{< /alert >}}
+
+## Compact box variant
+The compact variant of the box component reduces the amount of padding applied to a box's header, footer, and content. This variant can be useful in situations where you are displaying large amounts of data and need to conserve vertical space.
 
 {{< example lang="html" spacious="true">}}<div class="rvt-box rvt-box--compact">
   <div class="rvt-box__header">
@@ -158,11 +153,10 @@ useful in situations where you are displaying large amounts of data and need to 
 </div>
 {{< /example >}}
 
-## Box Variants
-The Box component also supports colored variants based on Rivet's alert color naming conventions.
+## Colored box variant
+The box component also supports colored variants based on Rivet's alert color naming conventions.
 
-### Box variant usage
-The colored Box variants should be used sparingly and **only to indicate some sort of state** (error, warning, success, etc.) or call out important information in your application.
+The colored box variants should be used sparingly and only to indicate some sort of state (error, warning, success, etc.) or call out important information in your application.
 
 There are four colored box variants that follow Rivet's alert color naming convention:
 
@@ -189,17 +183,15 @@ There are four colored box variants that follow Rivet's alert color naming conve
 </div>
 {{< /example >}}
 
-## Box Row Variants
-The Box Row element also supports colored variants that can be used to call out state changes or important information on individual rows.
-
-The Box Row variants follow the same naming conventions:
+### Colored box row variants
+Colors can also be applied to individual rows to call out state changes or important information:
 
 - `.rvt-box__row--info`
 - `.rvt-box__row--success`
 - `.rvt-box__row--warning`
 - `.rvt-box__row--danger`
 
-The row variant modifier classes add a subtle background color and 4px left border (box-shadow) that matches each of Rivet's alert styles.
+The row variant modifier classes add a subtle background color and left border that matches each of Rivet's alert styles.
 
 {{< example lang="html" spacious="true">}}<div class="rvt-box">
   <div class="rvt-box__header">
