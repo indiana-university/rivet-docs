@@ -33,7 +33,7 @@ Each of the three media object areas (`.rvt-mo__prepend`, `.rvt-mo__main`, `.rvt
 ## Basic media object
 The simplest media object configuration consists of a wrapper element with the `.rvt-mo` class, a child element with the `.rvt-mo__prepend` class, and a second child element with the `.rvt-mo__main` class.
 
-In this example, we've created a simple avatar to place inside the element with the `.rvt-mo__prepend` class. Some [Rivet spacing utility classes]({{< relref "../layout/spacing.md" >}}) are used to add small amounts of padding between each area of the media object.
+In this example, we've created a simple avatar to place inside the element with the `.rvt-mo__prepend` class. Some [Rivet spacing utility classes]({{< ref "/components/layout/spacing.md" >}}) are used to add small amounts of padding between each area of the media object.
 
 {{< example lang="html" spacious="true" >}}<div class="rvt-mo">
   <div class="rvt-mo__prepend">

@@ -4,7 +4,7 @@ description: "The box component can be used to help visually group related conte
 status: "Alpha"
 ---
 ## Default box
-The most basic version of the box component includes a subtle rounded border and a white background. Padding and margins should be applied with [Rivet's spacing utility classes]({{< relref "spacing.md" >}}). 
+The most basic version of the box component includes a subtle rounded border and a white background. Padding and margins should be applied with [Rivet's spacing utility classes]({{< ref "/components/layout/spacing.md" >}}).
 
 Additional variants of the box component can be created using the elements described in the following sections.
 
@@ -104,7 +104,7 @@ For styling purposes, box rows must be wrapped in a parent element, such as a `d
 {{< /alert >}}
 
 ## Card variant
-The card variant of the box component can be used along with Rivet's [type scale utilities]({{< relref "typography.md" >}}) and [spacing utilities]({{< relref "spacing.md" >}}) to create basic card layouts. Adding the `.rvt-box--card` modifier class adds a subtle shadow to help visually separate the the box content from the background.
+The card variant of the box component can be used along with Rivet's [type scale utilities]({{< ref "/components/layout/typography.md" >}}) and [spacing utilities]({{< ref "/components/layout/spacing.md" >}}) to create basic card layouts. Adding the `.rvt-box--card` modifier class adds a subtle shadow to help visually separate the the box content from the background.
 
 {{< example lang="html" spacious="true" >}}<div class="rvt-box rvt-box--card">
   <div class="rvt-box__body">
@@ -154,7 +154,7 @@ The compact variant of the box component reduces the amount of padding applied t
 {{< /example >}}
 
 ## Colored box variant
-The box component also supports colored variants based on [Rivet's alert color naming conventions]({{< relref "../overlays/alerts.md" >}}).
+The box component also supports colored variants based on [Rivet's alert color naming conventions]({{< ref "/components/overlays/alerts.md" >}}).
 
 The colored box variants should be used sparingly and only to indicate some sort of state (error, warning, success, etc.) or call out important information in your application.
 
