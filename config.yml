@@ -35,3 +35,4 @@ params:
   blogSidebar:
     title: Learn about Rivet
     description: "Updates on new features, tutorials, and news about Rivet releases."
+refLinksErrorLevel: WARNING
