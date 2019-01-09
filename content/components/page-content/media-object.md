@@ -11,17 +11,17 @@ The media object component is made up of three content areas nested inside a mai
 - `.rvt-mo__append` (3)
 
 {{< example lang="html" spacious="true" >}}<!--
-  This "rvt-mo-demo-only" is used to for demonstration purposes only.
-  Do not include in in your code.
+  These background-color utility classes are used for
+   demo purposes only here.
 -->
-<div class="rvt-mo rvt-mo-demo-only">
-  <div class="rvt-mo__prepend">
+<div class="rvt-mo">
+  <div class="rvt-mo__prepend rvt-bg-blue rvt-p-all-md">
     1
   </div>
-  <div class="rvt-mo__main">
+  <div class="rvt-mo__main rvt-bg-green rvt-p-all-md">
     2
   </div>
-  <div class="rvt-mo__append">
+  <div class="rvt-mo__append rvt-bg-orange rvt-p-all-md">
     3
   </div>
 </div>
