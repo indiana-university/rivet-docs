@@ -10,7 +10,11 @@ The media object component is made up of three content areas nested inside a mai
 - `.rvt-mo__main` (2)
 - `.rvt-mo__append` (3)
 
-{{< example lang="html" spacious="true" >}}<div class="rvt-mo">
+{{< example lang="html" spacious="true" >}}<!--
+  This "rvt-mo-demo-only" is used to for demonstration purposes only.
+  Do not include in in your code.
+-->
+<div class="rvt-mo rvt-mo-demo-only">
   <div class="rvt-mo__prepend">
     1
   </div>
@@ -27,12 +31,13 @@ The media object component is made up of three content areas nested inside a mai
 Each of the three media object areas (`.rvt-mo__prepend`, `.rvt-mo__main`, `.rvt-mo__append`) will expand to fit the content you put inside of them, but you should try to maintain an approximate ratio where the the main content area (`.rvt-mo__main`) takes up the majority of the width of the row, and the two supplemental areas (`.rvt-mo__prepend` and `.rvt-mo__append`) fill the remaining space.
 
 ## Basic media object
-The simplest media object configuration consists of a wrapper element with the `.rvt-mo` class, a child element with the `.rvt-mo__prepend` class, and a second child element with the `.rvt-mo__main` class. 
+The simplest media object configuration consists of a wrapper element with the `.rvt-mo` class, a child element with the `.rvt-mo__prepend` class, and a second child element with the `.rvt-mo__main` class.
 
 In this example, we've created a simple avatar to place inside the element with the `.rvt-mo__prepend` class. Some [Rivet spacing utility classes]({{< relref "../layout/spacing.md" >}}) are used to add small amounts of padding between each area of the media object.
 
 {{< example lang="html" spacious="true" >}}<div class="rvt-mo">
   <div class="rvt-mo__prepend">
+    <!-- Inline styles are for demo purposes only -->
     <div style="width: 2rem; height: 2rem; border-radius: 999rem; overflow: hidden;" class="rvt-m-right-sm">
       <img src="https://www.fillmurray.com/g/200/200" alt="">
     </div>
