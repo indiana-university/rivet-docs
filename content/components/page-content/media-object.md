@@ -3,14 +3,14 @@ title: "Media Object"
 description: "The media object is a simple layout component that can generally be used to display items in a list of content."
 status: "Alpha"
 ---
-## The Media Object component
-The media object is made up of three content areas nested inside the main `.rvt-mo` wrapper:
+## The media object component
+The media object component is made up of three content areas nested inside a main `.rvt-mo` wrapper:
 
 - `.rvt-mo__prepend` (1)
 - `.rvt-mo__main` (2)
 - `.rvt-mo__append` (3)
 
-{{< example lang="html" spacious="true" >}}<div class="rvt-mo rvt-mo-demo-only">
+{{< example lang="html" spacious="true" >}}<div class="rvt-mo">
   <div class="rvt-mo__prepend">
     1
   </div>
@@ -26,10 +26,10 @@ The media object is made up of three content areas nested inside the main `.rvt-
 ## Media object content areas
 Each of the three media object areas (`.rvt-mo__prepend`, `.rvt-mo__main`, `.rvt-mo__append`) will expand to fit the content you put inside of them, but you should try to maintain an approximate ratio where the the main content area (`.rvt-mo__main`) takes up the majority of the width of the row, and the two supplemental areas (`.rvt-mo__prepend` and `.rvt-mo__append`) fill the remaining space.
 
-## Basic Media Object
-The simplest Media Object configuration consists of a wrapper and the `.rvt-mo__prepend` element. In this example we've created a simple avatar to place inside the `.rvt-mo__prepend` element.
+## Basic media object
+The simplest media object configuration consists of a wrapper element with the `.rvt-mo` class, a child element with the `.rvt-mo__prepend` class, and a second child element with the `.rvt-mo__main` class. 
 
-In the example above we are using spacing utility classes to add small amounts of padding between each area of the Media Object.
+In this example, we've created a simple avatar to place inside the element with the `.rvt-mo__prepend` class. Some [Rivet spacing utility classes]({{< relref "../layout/spacing.md" >}}) are used to add small amounts of padding between each area of the media object.
 
 {{< example lang="html" spacious="true" >}}<div class="rvt-mo">
   <div class="rvt-mo__prepend">
@@ -44,8 +44,10 @@ In the example above we are using spacing utility classes to add small amounts o
 </div>
 {{< /example >}}
 
-## Complex objects
-You can also build more complex objects using the `.rvt-mo__prepend` element to add a control for selecting rows, and the `.rvt-mo__append` element for adding additional info/controls.
+## Using media objects to represent records
+You can add buttons and form elements to a media object, allowing you to represent an entry in a list of [CRUD application](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) records that a user can interact with.
+
+The example below features a [checkbox]({{< ref "/components/forms/checkboxes.md" >}}) in the `.rvt-mo__prepend` area (for record selection) and a [dropdown]({{< ref "/components/navigation/dropdown.md" >}}) in the `.rvt-mo__append` area (for record actions or configuration):
 
 {{< example lang="html" spacious="true" >}}<div class="rvt-mo">
   <div class="rvt-mo__prepend">
@@ -84,9 +86,8 @@ You can also build more complex objects using the `.rvt-mo__prepend` element to 
 </div>
 {{< /example >}}
 
-## Combined with the Rivet Box Component
-Combining the Media Object component with the [Box component]({{< ref "/components/layout/box.md" >}}), you can create some fairly complex list views. This combination can be used in place of tables when displaying lists of records that are not tabular data.
-
+### Combining media object and box components
+You can combine the media object component with the [box component]({{< ref "/components/layout/box.md" >}}) to create list views for complex content. This combination can be used in place of tables when displaying lists of records that are not tabular data.
 
 {{< example lang="html" spacious="true" >}}<div class="rvt-box">
   <div class="rvt-box__header">
