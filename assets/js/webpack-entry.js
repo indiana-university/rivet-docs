@@ -148,3 +148,61 @@ plugins.stickySupportForm();
 plugins.analyticsTracking();
 
 console.log("Enjoy using Rivet and let us know if you have any questions!");
+
+/**
+ * Notifications
+ */
+
+(function() {
+  const notificationsApi =
+    "https://dcd-notifications.apps.iu.edu/notifications/search/byTenants?names=Rivet";
+
+  const notificationsContainer =
+    document.getElementById('notifications-center');
+
+  if (!notificationsContainer) return;
+
+  function formatDate(value) {
+    const date = new Date(value);
+
+    return date.toLocaleString('en-us', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    });
+  }
+
+  function displayNotifications(data) {
+    return data.map(item => {
+      return `
+        <li class="rvtd-notification">
+          <time class="rvtd-notification__meta rvt-text-uppercase rvt-text-bold rvt-ts-12 rvt-m-bottom-xs">
+            ${formatDate(item.liveAt)}
+          </time>
+          <div class="rvtd-notification__body">
+            <h2 class="rvt-ts-18">
+              <a href="${item.url}">${item.title}</a>
+            </h2>
+            <p>${item.description}</p>
+          </div>
+        </li>
+      `;
+    })
+    .join('');
+  }
+
+  axios.get(notificationsApi)
+    .then(response => {
+      const allNotifications =
+        response.data._embedded.notifications;
+
+      const notificationsList = document.createElement('ol');
+
+      notificationsList.classList.add('rvt-plain-list');
+
+      notificationsList.innerHTML =
+        displayNotifications(allNotifications);
+
+      notificationsContainer.appendChild(notificationsList);
+    });
+})();

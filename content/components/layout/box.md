@@ -65,8 +65,7 @@ The Box Row element adds a small amount of padding and a subtle top border to al
 ### Box rows with a list
 In the following example we're using Rivet's plain list utility class along with the `.rvt-box__row` class to style the list items, however the `.rvt-box__row` class can be used on regular `div` elements as well.
 
-{{< example lang="html" spacious="true" >}}
-<div class="rvt-box">
+{{< example lang="html" spacious="true" >}}<div class="rvt-box">
   <!--
     Box rows must be wrapped in a parent element for styling purposes.
   -->
