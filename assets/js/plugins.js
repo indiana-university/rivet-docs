@@ -81,7 +81,7 @@ module.exports = {
     new Clipboard(".rvtd-package-copy");
   },
 
-  copyButtonConfirm(selector, durration) {
+  copyButtonConfirm(selector, duration) {
     document.addEventListener("click", event => {
       let copyButton = event.target.closest(selector);
 
@@ -100,7 +100,7 @@ module.exports = {
 
       setTimeout(function() {
         toggleButtonState(copyButton, preCopyText);
-      }, durration);
+      }, duration);
     });
   },
 

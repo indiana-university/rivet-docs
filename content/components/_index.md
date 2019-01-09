@@ -85,7 +85,7 @@ In previous versions of Rivet a .npmrc file configured to look at IU's public re
 ### Installing via NPM
 Once you have a `package.json` file configured in the root of your project, you can run the following command to install Rivet.
 
-{{< code >}}npm install rivet-uits@1.1.0 --save-dev
+{{< code >}}npm install rivet-uits@1.2.0 --save-dev
 {{< /code >}}
 
 ### Updating the Rivet NPM package
@@ -104,11 +104,11 @@ In this example `<version>` would be the new version of Rivet you want to instal
 
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.1.0/rivet.min.css">{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.2.0/rivet.min.css">{{< /code >}}
 
 Rivet has a minimal amount of JavaScript that is required for some components, like the [header](../components/navigation/header). Copy and paste this link and add to the end of your document, just before the closing `</body>` tag.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/1.1.0/rivet.min.js"></script>{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/1.2.0/rivet.min.js"></script>{{< /code >}}
 
 ## Starter template
 Here's a basic starter template with the hosted CSS and JavaScript hooked up. Copy and paste into your favorite editor to start using Rivet.
@@ -119,7 +119,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.1.0/rivet.min.css">
+    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.2.0/rivet.min.css">
     <title>Rivet starter file</title>
 </head>
 <body>
@@ -165,7 +165,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
             </li>
         </ul>
     </footer>
-    <script src="https://assets.uits.iu.edu/javascript/rivet/1.1.0/rivet.min.js"></script>
+    <script src="https://assets.uits.iu.edu/javascript/rivet/1.2.0/rivet.min.js"></script>
 </body>
 </html>
 {{< /code >}}

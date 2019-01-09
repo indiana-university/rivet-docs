@@ -5,7 +5,7 @@ requiresJs: false
 status: "Deprecated"
 ---
 {{< alert variant="danger" title="The Panel component is deprecated" >}}
-    The <em>Panel</em> component will be removed in the next major version of Rivet in favor of the new Box component coming in the next release. See <a href="https://github.iu.edu/UITS/rivet-source/pull/398">this pull request</a> and <a href="https://codepen.io/levimcg/pen/XyVbeY">this prototype</a> for more information.
+    The <em>panel</em> component will be removed in the next major version of Rivet in favor of the new box component. See <a href="/components/layout/box">the Box documentation</a> for more information.
 {{< /alert >}}
 
 ## Default panel

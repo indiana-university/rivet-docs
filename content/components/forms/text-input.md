@@ -186,7 +186,7 @@ Rivet does not make any assumptions about whether you’re using server- or clie
         </svg>
     </span>
     <span class="rvt-inline-alert__message" id="response-message">
-        Your <strong>Response</strong> has some mispellings!
+        Your <strong>Response</strong> has some misspellings!
     </span>
 </div>
 

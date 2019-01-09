@@ -20,13 +20,6 @@ gulp.task("serve", ["watch"], function() {
   });
 });
 
-gulp.task("php", ["watch"], function() {
-  connect.server({
-    port: 3000,
-    base: "public"
-  });
-});
-
 gulp.task("watch", ["build"], function() {
   gulp.watch(["assets/js/**/*.js", "assets/js/**/*.vue"], ["js"]);
   gulp.watch("assets/scss/**/*.scss", ["sass"]);

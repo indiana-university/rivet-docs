@@ -8,6 +8,10 @@
         padding: $sm;
     }
 
+    &__demo--spacious {
+        padding: $md;
+    }
+
     &__code {
         border: 1px solid $color-black--200;
         border-top: none;
