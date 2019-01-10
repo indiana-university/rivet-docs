@@ -11,7 +11,7 @@
                 <ul>
                     {{ range .Pages }}
                     <li class="{{ lower .Params.status }}{{ if eq $currentPage.Permalink .Permalink }} is-current{{ end }}">
-                        <a aria-describedby="{{ .Title | urlize }}-js-req" href="{{ .Permalink }}">
+                        <a {{ if .Params.requiresJs }}aria-describedby="{{ .Title | urlize }}-js-req" {{ end }}href="{{ .Permalink }}">
                             {{ .Title }}
                             {{ if .Params.requiresJs }}
                             <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="{{ .Title | urlize }}-js-req">

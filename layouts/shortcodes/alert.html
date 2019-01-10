@@ -1,4 +1,4 @@
-<div class="rvtd-alert-shortcode rvt-alert{{ with .Get "variant" }} rvt-alert--{{ . }}{{ end }} rvt-m-tb-md" aria-labelledby="information-alert-title">
+<div class="rvtd-alert-shortcode rvt-alert{{ with .Get "variant" }} rvt-alert--{{ . }}{{ end }} rvt-m-tb-md" aria-labelledby="{{ .Get "title" | urlize }}">
     <div class="rvt-alert__title" id="{{ .Get "title" | urlize }}">{{ .Get "title" }}</div>
     <p class="rvt-alert__message">{{ .Inner | markdownify }}</p>
 </div>
