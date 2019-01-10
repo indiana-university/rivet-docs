@@ -25,7 +25,7 @@ A loading indicator can also be placed inside a button to show that a form submi
 
 ## Improved consistency of Sass color variables
 
-We did a lot of work to standardize the use of color in Rivet. This includes creating a set of standard color variant Sass variables for each color used in Rivet: (blue, green, orange, yellow, and black).
+We did a lot of work to standardize the use of color in Rivet. This includes creating a set of standard color variant Sass variables for each color used in Rivet (blue, green, orange, yellow, and black).
 
 <div class="rvt-alert rvt-alert--info rvt-m-bottom-md rvt-m-top-sm">
     <p class="rvt-alert__message">You might notice a subtle difference in this release's alert colors compared to those in previous releases.</p>
