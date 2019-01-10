@@ -3,6 +3,10 @@ title: "Loading indicator"
 description: "The Rivet loading indicator helps notify users when their action is being processed"
 status: "Alpha"
 ---
+{{< alert variant="info" title="New in Rivet 1.2.0" >}}
+The loading indicator is new as of 1.2.0. If you need help updating Rivet you can [find instructions here]({{< ref "/components#updating-the-rivet-npm-package" >}}).
+{{< /alert >}}
+
 ## Default
 {{< example lang="html" >}}<div class="rvt-loader" aria-label="Content loading"></div>
 {{< /example >}}

@@ -3,6 +3,10 @@ title: "Media Object"
 description: "The media object is a simple layout component that can generally be used to display items in a list of content."
 status: "Alpha"
 ---
+{{< alert variant="info" title="New in Rivet 1.2.0" >}}
+The media object is new as of 1.2.0. If you need help updating Rivet you can [find instructions here]({{< ref "/components#updating-the-rivet-npm-package" >}}).
+{{< /alert >}}
+
 ## The media object component
 The media object component is made up of three content areas nested inside a main `.rvt-mo` wrapper:
 
