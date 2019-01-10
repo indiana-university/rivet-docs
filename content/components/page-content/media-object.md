@@ -4,7 +4,7 @@ description: "The media object is a simple layout component that can generally b
 status: "Alpha"
 ---
 {{< alert variant="info" title="New in Rivet 1.2.0" >}}
-The media object is new as of 1.2.0. If you need help updating Rivet you can [find instructions here]({{< ref "/components#updating-the-rivet-npm-package" >}}).
+The media object is new as of 1.2.0. If you need help moving to 1.2.0, see our [instructions for updating Rivet]({{< ref "/components#updating-the-rivet-npm-package" >}}).
 {{< /alert >}}
 
 ## The media object component
