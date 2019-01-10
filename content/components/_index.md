@@ -98,7 +98,7 @@ In this example `<version>` would be the new version of Rivet you want to instal
 
 ## Hosted CSS and JavaScript
 {{< alert variant="warning" title="Production applications" >}}
-The hosted CSS and JavaScript assets are a good solution for prototyping ideas, early stages of development, and for small apps that don't get heavy traffic. **We recommend managing Rivet as a dependency with NPM** as a long-term solution for production apps.
+The hosted CSS and JavaScript assets are a good solution for prototyping ideas, early stages of development, and small apps that don't get heavy traffic. **We recommend managing Rivet as a dependency with NPM** as a long-term solution for production apps with a large number of regular users.
 {{< /alert >}}
 
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
