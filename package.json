@@ -1,6 +1,6 @@
 {
-  "name": "rivet-doc-site",
-  "version": "1.8.0",
+  "name": "rivet-docs",
+  "version": "1.9.0",
   "description": "",
   "main": "index.html",
   "scripts": {
