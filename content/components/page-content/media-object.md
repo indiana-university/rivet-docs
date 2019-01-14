@@ -3,6 +3,10 @@ title: "Media Object"
 description: "The media object is a simple layout component that can generally be used to display items in a list of content."
 status: "Alpha"
 ---
+{{< alert variant="info" title="New in Rivet 1.2.0" >}}
+The media object is new as of 1.2.0. If you need help moving to 1.2.0, see our [instructions for updating Rivet]({{< ref "/components#updating-the-rivet-npm-package" >}}).
+{{< /alert >}}
+
 ## The media object component
 The media object component is made up of three content areas nested inside a main `.rvt-mo` wrapper:
 
@@ -29,6 +33,9 @@ The media object component is made up of three content areas nested inside a mai
 
 ## Media object content areas
 Each of the three media object areas (`.rvt-mo__prepend`, `.rvt-mo__main`, `.rvt-mo__append`) will expand to fit the content you put inside of them, but you should try to maintain an approximate ratio where the the main content area (`.rvt-mo__main`) takes up the majority of the width of the row, and the two supplemental areas (`.rvt-mo__prepend` and `.rvt-mo__append`) fill the remaining space.
+
+### Media objects and the grid
+The media object is meant to be a simple layout device used on items that have similar display content in a list. You should not use [the Rivet grid]({{< ref "components/layout/grid.md" >}}) inside any of the media object content areas shown in [the previous example](#the-media-object-component).
 
 ## Basic media object
 The simplest media object configuration consists of a wrapper element with the `.rvt-mo` class, a child element with the `.rvt-mo__prepend` class, and a second child element with the `.rvt-mo__main` class.

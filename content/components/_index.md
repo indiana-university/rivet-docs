@@ -19,7 +19,7 @@ The Rivet components documentation contains examples, code snippets, and guidanc
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
-{{< button url="https://github.iu.edu/UITS/rivet-source/releases/download/v1.1.0/rivet.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
+{{< button url="https://github.iu.edu/UITS/rivet-source/releases/download/v1.2.0/rivet.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
     <span class="rvt-m-right-xs">Download Rivet</span>
     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
         <g fill="currentColor">
@@ -78,7 +78,7 @@ index.html
 ## NPM dependency
 Rivet is also available to include in as a dependency in your app via NPM. These instructions assume that you are already using NPM in your project. If not, you can [read these instructions](https://docs.npmjs.com/cli/init) on the NPM website about how to start.
 
-{{< alert title="About using a .npmrc file" variant="info" heading="h3" >}}
+{{< alert title="About using a .npmrc file" variant="info" >}}
 In previous versions of Rivet a .npmrc file configured to look at IU's public registry was required to install Rivet. As of version 1.1.0 you no longer need a .npmrc file.
 {{< /alert >}}
 
@@ -97,10 +97,9 @@ When there is a new version of Rivet released it will be publish to the NPM regi
 In this example `<version>` would be the new version of Rivet you want to install.
 
 ## Hosted CSS and JavaScript
-<div class="rvt-alert rvt-alert--message rvt-m-bottom-md rvt-m-top-sm" aria-labelledby="warning-alert-title">
-    <h3 class="rvt-alert__title" id="warning-alert-title">Production applications </h3>
-    <p class="rvt-alert__message">The hosted CSS and JavaScript assets are a good solution for prototyping ideas, early stages of development, and for small apps that don't get heavy traffic. <strong>We recommend managing Rivet as a dependency with NPM</strong> as a long-term solution for production apps.</p>
-</div>
+{{< alert variant="warning" title="Production applications" >}}
+The hosted CSS and JavaScript assets are a good solution for prototyping ideas, early stages of development, and small apps that don't get heavy traffic. **We recommend managing Rivet as a dependency with NPM** as a long-term solution for production apps with a large number of regular users.
+{{< /alert >}}
 
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
 

@@ -3,6 +3,10 @@ title: "Box"
 description: "The box component can be used to help visually group related content"
 status: "Alpha"
 ---
+{{< alert variant="info" title="New in Rivet 1.2.0" >}}
+The box is new as of 1.2.0. If you need help moving to 1.2.0, see our [instructions for updating Rivet]({{< ref "/components#updating-the-rivet-npm-package" >}}).
+{{< /alert >}}
+
 ## Default box
 The most basic version of the box component includes a subtle rounded border and a white background. Padding and margins should be applied with [Rivet's spacing utility classes]({{< ref "/components/layout/spacing.md" >}}).
 
