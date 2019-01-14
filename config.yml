@@ -4,34 +4,35 @@ title: "Rivet"
 paginate: 10
 enableEmoji: true
 taxonomies:
-    category: categories
-    addOnTag: addOnTags
-    tag: tags
+  category: categories
+  addOnTag: addOnTags
+  tag: tags
 outputs:
-    section: ["html", "json"]
+  section: ["html", "json"]
 params:
-    rivetVersion: 1.1.0
-    tagline: "Software Design System"
-    googleAnalytics: "UA-100560495-3"
-    devGoogleAnalytics: "UA-100560495-4"
-    githubRepo: "https://github.iu.edu/UITS/rivet-source"
-    downloadLink: "https://github.iu.edu/UITS/rivet/archive/v1.0.0.zip"
-    axureKit: "https://github.iu.edu/UITS/rivet/releases/download/v1.0.0/rivet-axure-1.0.rp"
-    description: "Use Rivet to create UITS software that is accessible, usable, and consistent."
-    resourceLinks:
-        -
-            text: "User Experience Office"
-            url: "https://uxo.iu.edu"
-        -
-            text: "Accessibility Evaluations"
-            url: "https://a11y.iu.edu/"
-        -
-            text: "Rivet Software Design System"
-            url: "/"
-            self: true
-        -
-            text: "IU Framework for WCMS"
-            url: "https://framework.iu.edu/"
-    blogSidebar:
-        title: Learn about Rivet
-        description: "Updates on new features, tutorials, and news about Rivet releases."
+  rivetVersion: 1.2.0
+  tagline: "Software Design System"
+  googleAnalytics: "UA-100560495-3"
+  devGoogleAnalytics: "UA-100560495-4"
+  githubRepo: "https://github.iu.edu/UITS/rivet-source"
+  downloadLink: "https://github.iu.edu/UITS/rivet/archive/v1.2.0.zip"
+  axureKit: "https://github.iu.edu/UITS/rivet/releases/download/v1.0.0/rivet-axure-1.0.rp"
+  description: "Use Rivet to create UITS software that is accessible, usable, and consistent."
+  resourceLinks:
+    -
+      text: "User Experience Office"
+      url: "https://uxo.iu.edu"
+    -
+      text: "Accessibility Evaluations"
+      url: "https://a11y.iu.edu/"
+    -
+      text: "Rivet Software Design System"
+      url: "/"
+      self: true
+    -
+      text: "IU Framework for WCMS"
+      url: "https://framework.iu.edu/"
+  blogSidebar:
+    title: Learn about Rivet
+    description: "Updates on new features, tutorials, and news about Rivet releases."
+refLinksErrorLevel: WARNING

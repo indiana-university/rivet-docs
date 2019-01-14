@@ -1,10 +1,7 @@
 /*
     swap vue.min out for vue if you need vue devtools
 */
-// const Vue = require('vue/dist/vue');
 const Vue = require("vue/dist/vue.min");
-const VeeValidate = require("vee-validate");
-Vue.use(VeeValidate);
 
 const plugins = require("./plugins");
 const polyfills = require("./polyfills");
@@ -62,14 +59,7 @@ new Vue({
     loadingNotifications: false,
     errorLoadingNotifications: false,
     notificationsLastViewedAt: null,
-    quarter: null,
-    isFormSubmitted: false,
-    firstname: '', // honeypot
-    supportFormFields: {
-      name: "",
-      email: "",
-      description: ""
-    }
+    quarter: null
   },
   methods: {
     // Toggles the visibility of the section nav on mobile
@@ -128,62 +118,6 @@ new Vue({
         );
       }
     },
-
-    focusFirstInvalidInput: function() {
-      var fields = Object.values(this.errors.items);
-      var firstField = fields[0];
-      if (!firstField) {
-        return false;
-      }
-      var input = document.querySelector(
-        "body [name=" + firstField.field + "]"
-      );
-      if (input) {
-        input.focus();
-      }
-    },
-
-    resetSupportHandler: function() {
-      this.isFormSubmitted = false;
-      this.supportFormFields.description = "";
-    },
-
-    supportFormHandler: function() {
-
-        // check the honeypot
-        if(this.firstname != '') {
-            this.isFormSubmitted = true;
-            return
-        }
-
-      this.$validator.validateAll();
-      setTimeout(
-        function() {
-          if (this.errors.any()) {
-            this.focusFirstInvalidInput();
-            this.checkErrors = true;
-            return false;
-          } else {
-            if (!this["supportFormFields"]) {
-              return false;
-            }
-
-            this.isFormSubmitted = true;
-            var request = new XMLHttpRequest();
-            var data = new FormData();
-            for (var key in this["supportFormFields"]) {
-              data.append(key, this["supportFormFields"][key]);
-            }
-
-            // send data to UXO
-            var request = new XMLHttpRequest();
-            request.open("POST", "/form-submit/support/index.php");
-            request.send(data);
-          }
-        }.bind(this),
-        200
-      );
-    }
   },
 
   created() {
@@ -203,29 +137,72 @@ plugins.clipboardInit();
 /**
  * Site-specific DOM scripting - Any DOM manipulation stuff
  * MUST come after the main Vue instance is initialized because
- * of Vue's virtal DOM implementation.
+ * of Vue's virtual DOM implementation.
  */
 plugins.createCopyright("#year");
 plugins.copyButtonConfirm("[data-clipboard-target]", 1500);
 plugins.setIndeterminate("#checkbox-indeterminate");
 plugins.stickySupportForm();
 
-/**
- * Adds a custom class to the Accessibility Requirements call out heading
- * after the Markdown is processed. This is a workaround so that the
- * "Accessibility Requirements" heading still gets generated as part of
- * the page outline by Hugo.
- */
-// (function() {
-//   const a11yCallout = document.querySelector('.rvtd-a11y');
-
-//   if (!a11yCallout) return;
-
-//   const a11yHeading =
-//     a11yCallout.previousElementSibling.classList.add('rvtd-a11y-heading');
-// })();
-
 // Custom analytics event tracking
 plugins.analyticsTracking();
 
 console.log("Enjoy using Rivet and let us know if you have any questions!");
+
+/**
+ * Notifications
+ */
+
+(function() {
+  const notificationsApi =
+    "https://dcd-notifications.apps.iu.edu/notifications/search/byTenants?names=Rivet";
+
+  const notificationsContainer =
+    document.getElementById('notifications-center');
+
+  if (!notificationsContainer) return;
+
+  function formatDate(value) {
+    const date = new Date(value);
+
+    return date.toLocaleString('en-us', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    });
+  }
+
+  function displayNotifications(data) {
+    return data.map(item => {
+      return `
+        <li class="rvtd-notification">
+          <time class="rvtd-notification__meta rvt-text-uppercase rvt-text-bold rvt-ts-12 rvt-m-bottom-xs">
+            ${formatDate(item.liveAt)}
+          </time>
+          <div class="rvtd-notification__body">
+            <h2 class="rvt-ts-18">
+              <a href="${item.url}">${item.title}</a>
+            </h2>
+            <p>${item.description}</p>
+          </div>
+        </li>
+      `;
+    })
+    .join('');
+  }
+
+  axios.get(notificationsApi)
+    .then(response => {
+      const allNotifications =
+        response.data._embedded.notifications;
+
+      const notificationsList = document.createElement('ol');
+
+      notificationsList.classList.add('rvt-plain-list');
+
+      notificationsList.innerHTML =
+        displayNotifications(allNotifications);
+
+      notificationsContainer.appendChild(notificationsList);
+    });
+})();

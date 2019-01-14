@@ -18,12 +18,12 @@ status: "Ready"
 For more info on how to use the Rivet form input validation states, [see the examples in the text input section]({{< ref "components/forms/text-input.md#inline-validation-states" >}}).
 
 {{< example lang="html" >}}<label for="select-info-state">Type</label>
-<select name="" id="select-info-state" class="rvt-validation-info" aria-describedby="meats-select">
-    <option value="Steak">Choose an option...</option>
-    <option value="Steak">Steak</option>
-    <option value="Chops">Chops</option>
-    <option value="Ribs">Ribs</option>
-    <option value="Brisket">Brisket</option>
+<select name="" id="select-info-state" class="rvt-validation-info" aria-describedby="inline-select">
+    <option>Choose an option...</option>
+    <option value="Option One">Option One</option>
+    <option value="Option One">Option Two</option>
+    <option value="Option One">Option Three</option>
+    <option value="Option One">Option Four</option>
 </select>
 <div class="rvt-inline-alert rvt-inline-alert--info">
     <span class="rvt-inline-alert__icon">
@@ -35,19 +35,18 @@ For more info on how to use the Rivet form input validation states, [see the exa
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" role="alert" id="meats-select">
-        You must pick a
-        <strong>Type</strong> of meats.
+    <span class="rvt-inline-alert__message" role="alert" id="inline-select">
+        You must choose an option.
     </span>
 </div>
 
 <label for="valid-state" class="rvt-m-top-md">Type</label>
 <select name="" id="valid-state" class="rvt-validation-success" aria-describedby="type-message">
-    <option value="Steak">Choose an option...</option>
-    <option value="Steak">Steak</option>
-    <option value="Chops">Chops</option>
-    <option value="Ribs">Ribs</option>
-    <option value="Brisket">Brisket</option>
+    <option>Choose an option...</option>
+    <option value="Option One">Option One</option>
+    <option value="Option One">Option Two</option>
+    <option value="Option One">Option Three</option>
+    <option value="Option One">Option Four</option>
 </select>
 <div class="rvt-inline-alert rvt-inline-alert--success">
     <span class="rvt-inline-alert__icon">
@@ -59,18 +58,17 @@ For more info on how to use the Rivet form input validation states, [see the exa
         </svg>
     </span>
     <span class="rvt-inline-alert__message" role="alert" id="type-message">
-        You must pick a
-        <strong>Type</strong> of meat.
+        You must choose an option.
     </span>
 </div>
 
 <label for="select-warning-state" class="rvt-m-top-md">Type</label>
 <select name="" id="select-warning-state" class="rvt-validation-warning" aria-describedby="type-message-2">
-    <option value="Steak">Choose an option...</option>
-    <option value="Steak">Steak</option>
-    <option value="Chops">Chops</option>
-    <option value="Ribs">Ribs</option>
-    <option value="Brisket">Brisket</option>
+    <option>Choose an option...</option>
+    <option value="Option One">Option One</option>
+    <option value="Option One">Option Two</option>
+    <option value="Option One">Option Three</option>
+    <option value="Option One">Option Four</option>
 </select>
 <div class="rvt-inline-alert rvt-inline-alert--warning">
     <span class="rvt-inline-alert__icon">
@@ -82,17 +80,17 @@ For more info on how to use the Rivet form input validation states, [see the exa
         </svg>
     </span>
     <span class="rvt-inline-alert__message" role="alert" id="type-message-2">
-        You must pick a <strong>Type</strong> of meats.
+        You must choose an option.
     </span>
 </div>
 
 <label for="select-error-state" class="rvt-m-top-md">Type</label>
 <select name="" id="select-error-state" class="rvt-validation-danger" aria-describedby="state-message" aria-invalid="true">
-    <option value="Steak">Choose an option...</option>
-    <option value="Steak">Steak</option>
-    <option value="Chops">Chops</option>
-    <option value="Ribs">Ribs</option>
-    <option value="Brisket">Brisket</option>
+    <option>Choose an option...</option>
+    <option value="Option One">Option One</option>
+    <option value="Option One">Option Two</option>
+    <option value="Option One">Option Three</option>
+    <option value="Option One">Option Four</option>
 </select>
 <div class="rvt-inline-alert rvt-inline-alert--danger">
     <span class="rvt-inline-alert__icon">
@@ -104,8 +102,7 @@ For more info on how to use the Rivet form input validation states, [see the exa
         </svg>
     </span>
     <span class="rvt-inline-alert__message" role="alert" id="state-message">
-        You must pick a
-        <strong>Type</strong> of meat.
+        You must choose an option.
     </span>
 </div>
 {{< /example >}}
@@ -173,6 +170,3 @@ When you only need to present a user with three or less options, consider using 
 - Use parallel phrasing, and try to keep the length about the same for all options
 - Sort options in a logical order — names in alphabetical order, numbers in numeric order, and dates in chronological order. Lists with 12 or more items should be sorted alphabetically to make items easier to find.
   - **Exception:** One or more common items may be placed at the beginning of an otherwise sorted set of options, such as placing "United States" at the top of a country select. When placing items out of order, always place a non-selectable separator (---) between the unsorted and sorted items.
-
-## Resources
-- [MSDN Design Documentation](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742404.aspx)

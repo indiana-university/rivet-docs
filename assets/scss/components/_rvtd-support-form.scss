@@ -10,14 +10,35 @@ main {
     z-index: 1001;
 
     &__toggle {
-        background-color: #079bed;
-        border-color: #079bed;
         border-radius: 999rem;
         box-shadow: 0 $xxs $sm rgba(#333333, .3);
         height: 3.5rem;
         justify-content: center;
         padding: 0;
         width: 3.5rem;
+    }
+
+    &__menu {
+        top: -16.5rem;
+        right: $xxs;
+        width: 20rem;
+        position: absolute;
+
+        a {
+            display: inline;
+            padding: 0;
+            text-decoration: underline;
+            color: $color-blue;
+        }
+
+        a:hover {
+            background-color: transparent;
+            color: $color-black;
+        }
+    }
+
+    &__menu[aria-hidden="true"] {
+        display: none;
     }
 }
 

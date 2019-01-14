@@ -6,8 +6,10 @@
 
 <aside class="rvtd-article-sidebar rvt-m-top-xxl">
     {{ partial "about-rivet-callout.html" . }}
-    <div class="rvt-m-top-xxl">
-        <h2 class="rvt-text-uppercase rvt-m-bottom-sm rvt-ts-14">Recent posts</h2>
+    <div class="rvt-box rvt-box--light">
+        <div class="rvt-box__header">
+            <h2 class="rvt-ts-base rvt-text-bold">Recent posts</h2>
+        </div>
         <ol class="rvtd-small-list rvt-plain-list">
             {{/* Set context to the current Page */}}
             {{- $currentPage := . -}}
@@ -16,7 +18,7 @@
                     {{/* Set context to the current Article */}}
                     {{- $currentArticle := . -}}
                     {{ if ne $currentPage.URL $currentArticle.URL }}
-                    <li>
+                    <li class="rvt-box__row">
                         <h3 class="rvt-ts-21 rvt-text-bold">
                             <a href="{{ .Permalink }}">{{ .Title }}</a>
                         </h3>
@@ -27,6 +29,6 @@
                 {{ end }}
             {{ end }}
         </ol>
-        <a class="rvt-button rvt-button--secondary rvt-m-top-md" href="../../blog">View all posts</a>
     </div>
+    <a class="rvt-button rvt-button--secondary rvt-m-top-md" href="../../blog">View all posts</a>
 </aside>

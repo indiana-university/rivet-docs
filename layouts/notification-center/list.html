@@ -1,14 +1,18 @@
 {{ define "main" }}
 <div class="rvtd-article-container rvtd-article-container--top-only rvt-container rvt-container--center rvt-container--junior">
-    <div class="rvtd-typeset">
-        <h1 class="rvt-text-bold">{{ .Title }}</h1>
-        <p class="rvtd-lead">{{ .Description }}</p>
+    <div class="rvt-grid">
+        <div class="rvt-grid__item-8-md-up">
+            <div class="rvtd-typeset">
+                <h1 class="rvt-text-bold">{{ .Title }}</h1>
+                <p class="rvtd-lead rvt-m-bottom-remove">{{ .Description }}</p>
+            </div>
+        </div>
     </div>
 </div>
 <div class="rvt-container rvt-container--center rvt-container--junior rvt-m-top-xl">
     <div class="rvt-grid">
-        <div class="rvt-grid__item-8-md-up">
-            <notifications-center
+        <div class="rvt-grid__item-8-md-up rvt-m-bottom-xl" id="notifications-center">
+            <!-- <notifications-center
                 :notifications="notifications"
                 :notifications-last-viewed-at="notificationsLastViewedAt"
                 :loading-notifications="loadingNotifications"
@@ -16,10 +20,12 @@
                 v-on:reload-notifications="loadNotifications"
                 v-on:clear-notifications="clearNotifications"
             >
-            <notifications-center/>
+            <notifications-center/> -->
         </div>
-        <div class="rvt-grid__item-3-md-up rvt-grid__item--last">
-            {{ partial "email-callout-sidebar.html" . }}
+        <div class="rvt-grid__item-4-md-up">
+            <div class="rvt-p-left-md-md-up">
+                {{ partial "email-callout-sidebar.html" . }}
+            </div>
         </div>
     </div>
 
