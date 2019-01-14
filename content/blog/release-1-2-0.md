@@ -43,4 +43,4 @@ For more, see our [blog post about the migration to GitHub.com]({{< ref "blog/op
 
 ## Complete list of updates
 
-For a complete breakdown of the 1.2.0 updates, see the [changelog on the Rivet home page](../../#changelog).
+For a complete breakdown of the 1.2.0 updates, see the [Rivet changelog](https://rivet.iu.edu/components/information/changelog/).
