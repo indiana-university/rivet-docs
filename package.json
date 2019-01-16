@@ -1,14 +1,17 @@
 {
   "name": "rivet-docs",
   "version": "1.9.0",
-  "description": "",
+  "description": "Rivet design system documentation website",
   "main": "index.html",
-  "scripts": {
-    "start": "gulp serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "Indiana University",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indiana-university/rivet-docs"
   },
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "start": "gulp serve"
+  },
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",

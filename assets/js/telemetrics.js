@@ -1,3 +1,8 @@
+/**
+ * Copyright (C) 2018 The Trustees of Indiana University
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 if (window.telemetrics === undefined) {
   window.telemetrics = (category, action, label, value) => {
     if (label === undefined) {

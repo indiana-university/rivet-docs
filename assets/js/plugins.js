@@ -1,3 +1,8 @@
+/**
+ * Copyright (C) 2018 The Trustees of Indiana University
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 const Clipboard = require("clipboard");
 const localStorageAvailable = require("./polyfills").localStorageAvailable;
 const moment = require("moment");

@@ -1,4 +1,8 @@
 <template>
+<!--
+ * Copyright (C) 2018 The Trustees of Indiana University
+ * SPDX-License-Identifier: BSD-3-Clause
+-->
 <div class="rvt-m-top-xl">
   <div class="rvt-container rvt-container--center rvt-container--junior">
     <nav @keyup="handleKeyup($event)" class="rvtd-navbar" aria-label="Add-ons tags">
