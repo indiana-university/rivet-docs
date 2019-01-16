@@ -1,4 +1,8 @@
 <template>
+<!--
+ * Copyright (C) 2018 The Trustees of Indiana University
+ * SPDX-License-Identifier: BSD-3-Clause
+-->
 <div class="rvtd-search">
   <form @submit.prevent="search">
     <label for="search-input" class="rvt-sr-only">Search</label>

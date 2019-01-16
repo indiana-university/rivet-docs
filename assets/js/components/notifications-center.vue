@@ -1,4 +1,8 @@
 <template>
+<!--
+ * Copyright (C) 2018 The Trustees of Indiana University
+ * SPDX-License-Identifier: BSD-3-Clause
+-->
   <div class="rvt-notifications-center">
     <transition name="rvt-fade" mode="out-in">
       <ol v-if="notifications.length > 0" class="rvt-plain-list rvt-notifications-center-feed">

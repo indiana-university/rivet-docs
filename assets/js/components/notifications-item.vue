@@ -1,4 +1,8 @@
 <template>
+<!--
+ * Copyright (C) 2018 The Trustees of Indiana University
+ * SPDX-License-Identifier: BSD-3-Clause
+-->
   <a :href="url" :target="linkTarget">
     <article class="rvt-notification" :class="{'rvt-notification--is-unread' : isUnread}">
       <time class="rvt-notification__time">

@@ -1,4 +1,8 @@
 <template>
+<!--
+ * Copyright (C) 2018 The Trustees of Indiana University
+ * SPDX-License-Identifier: BSD-3-Clause
+-->
   <section class="rvtd-changelog rvtd-changelog--light" id="changelog">
     <div class="rvt-container rvt-container--junior rvt-container--center">
       <transition name="rvt-fade" mode="out-in">
