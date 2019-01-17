@@ -20,11 +20,11 @@ We've created Add-ons for a few reasons:
 ## Using Rivet Add-ons
 We've added a new section to the Rivet website where you can find a list of available Add-ons, along with instructions on how to use Add-ons in your project.
 
-Each Add-on page contains: 
+Each Add-on page contains:
 
 - Links to download the code needed to use the Add-on
 - A link to the GitHub repository that hosts the Add-on's source code
-- A demo page showing a working example of the Add-on 
+- A demo page showing a working example of the Add-on
 
 ## Creating issues for Rivet Add-ons
 If you have a question, want to report a bug, or have a feature request, create a GitHub issue on the Add-on repository.
@@ -43,6 +43,6 @@ If you've created a custom Rivet component you think might be useful to other te
 If you need help developing your Add-on, the Rivet core team is happy to help with visual design, front-end development, and accesibility.
 
 [components-docs]: ../../components
-[rivet-source]: https://github.iu.edu/UITS/rivet-source/issues
+[rivet-source]: https://github.com/indiana-university/rivet-source/issues
 [add-ons-page]: ../../add-ons
 [boilerplate]: https://github.com/indiana-university/rivet-add-on-boilerplate

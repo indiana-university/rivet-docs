@@ -2,18 +2,18 @@
 
 This is the source for the Rivet documentation site. It is built with [Hugo](https://gohugo.io/), a static site generator written in Go (no Go experience is necessary to edit this site). Development is designed for macOS, but should be possible in other environments. To get started:
 ```
-git clone https://github.iu.edu/UITS/rivet-docs-source.git
-cd rivet-docs-source
-echo "registry=https://npmjs.iu.edu/public/registry" > .npmrc && npm install
+git clone https://github.com/indiana-university/rivet-docs.git
+cd rivet-docs
+npm install
 gulp serve
 ```
 You should be able to browse a local version of the site at http://localhost:3000
 
 ## Pull Requests
-We use the [Git Flow](https://danielkummer.github.io/git-flow-cheatsheet/) branching model and naming conventions to develop new features, and do releases from this repo. Although not required to contribute, we encourage you to follow these confentions when contributing code and opening pull requests.
+We use the [Git Flow](https://danielkummer.github.io/git-flow-cheatsheet/) branching model and naming conventions to develop new features, and do releases from this repo. Although not required to contribute, we encourage you to follow these conventions when contributing code and opening pull requests.
 
 ### Submitting a pull request
-1. Fork the main `rivet-docs-source` repository and then clone your fork locally. Follow [these instructions on syncing your local fork](https://help.github.com/articles/fork-a-repo/#keep-your-fork-synced). Set your new `upstream` remote to point to https://github.iu.edu/UITS/rivet-docs-source.git.
+1. Fork the main `rivet-docs` repository and then clone your fork locally. Follow [these instructions on syncing your local fork](https://help.github.com/articles/fork-a-repo/#keep-your-fork-synced). Set your new `upstream` remote to point to https://github.com/indiana-university/rivet-docs.git.
 2. Create a new feature branch off of `develop` (Ideally using [Git Flow](https://danielkummer.github.io/git-flow-cheatsheet/)) with the prefix `feature/your-feature` e.g. `feature/modal`.
 3. Commit your changes. Be sure to keep your commits narrow in scope and avoid committing changes not related to your feature.
 4. Locally merge any upstream changes into your feature branch: `git pull upstream develop`.
@@ -53,14 +53,3 @@ gulp serve
 ```
 
 To watch and build files without running a server, you can run `gulp watch`. To package up the `public/` folder for distribution, run `gulp build:prod`.
-
-## Automatic deployments
-[Bamboo](https://apps-test.iu.edu/bamboo-snd/browse/UXO-RVT) will run Hugo and move the generated files to either webtest or webserve depending on pushing to develop or master
-
-### URLs
-
-`master` and `develop` branches are deployed automatically using Bamboo and Docker to generate the Hugo site. The following branches deploy to the following URLs:
-
-`master`: https://rivet.iu.edu
-
-`develop`: https://rivet.webtest.iu.edu

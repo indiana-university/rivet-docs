@@ -38,5 +38,5 @@ sections:
     teaser: "A design system is always evolving, and we welcome collaboration with designers and developers to make Rivet even better. Proposals for content or design changes can be submitted as Github issues, then reviewed based on usability, flexibility, accessibility, visual design, and content."
     slug: "how-do-we-develop-it"
     ctaText: "See our backlog"
-    ctaLink: "https://github.iu.edu/UITS/rivet-source/projects/2"
+    ctaLink: "https://github.com/indiana-university/rivet-source/projects/1"
 ---
