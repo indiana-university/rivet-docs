@@ -16,7 +16,7 @@ The UX Office will be moving the Rivet source code from IU's Enterprise GitHub i
 Closed issues and pull requests can’t be transferred to GitHub.com—however, you’ll still be able to view them on the archived Rivet repos on github.iu.edu.
 
 <div class="rvt-alert rvt-alert--info rvt-m-bottom-md rvt-m-top-sm">
-    <p class="rvt-alert__message">Make sure to <strong>unwatch</strong> the <code>rivet-source</code> and <code>rivet-docs-source</code> repos before the migration date. Otherwise, you may get a lot of notifications in your inbox.</p>
+    <p class="rvt-alert__message">Make sure to <strong>unwatch</strong> the <code>rivet-source</code> and <code>rivet-docs</code> repos before the migration date. Otherwise, you may get a lot of notifications in your inbox.</p>
 </div>
 
 ## Getting started with GitHub.com
@@ -27,7 +27,7 @@ If you would like to contribute to Rivet's development, you'll need to create a 
 1. Enter the email address you’d like associated with your account, such as your IU email address
 1. Click “Sign up for GitHub”
 
-Once you have an account, you’ll be able to create and comment on issues, fork repositories, and open pull requests on any of the Rivet repositories. 
+Once you have an account, you’ll be able to create and comment on issues, fork repositories, and open pull requests on any of the Rivet repositories.
 
 If you were watching any of the Rivet repositories or any issues, you’ll need to visit the newly-migrated Rivet repos and re-watch them.
 

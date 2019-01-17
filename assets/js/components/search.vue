@@ -76,7 +76,7 @@
     <div class="rvtd-search__results-found">Found {{results.length}} {{results.length|pluralizeResult}} for <strong>{{activeQuery}}</strong></div>
 
     <div class="rvtd-search__results-footer rvt-m-top-sm">
-      <p>Is something missing? <a :href="'https://github.iu.edu/UITS/rivet-docs-source/issues/new?title='+activeQuery">Open an issue</a> on GitHub (requires an IU account).</p>
+      <p>Is something missing? <a :href="'https://github.com/indiana-university/rivet-docs/issues/new?title='+activeQuery">Open an issue</a> on GitHub (requires an IU account).</p>
     </div>
   </div>
   <div v-if="activeQuery!='' && results.length==0" class="rvtd-search__results rvtd-search__results--none">
@@ -84,7 +84,7 @@
       Your search for <strong class="rvtd-search__no-results-term">{{activeQuery}}</strong> returned no results.
     </div>
     <div class="rvtd-search__results-footer">
-      <p>Is something missing? <a :href="'https://github.iu.edu/UITS/rivet-docs-source/issues/new?title='+activeQuery">Open an issue</a> on GitHub (requires an IU account).</p>
+      <p>Is something missing? <a :href="'https://github.com/indiana-university/rivet-docs/issues/new?title='+activeQuery">Open an issue</a> on GitHub (requires an IU account).</p>
     </div>
   </div>
 </div>
