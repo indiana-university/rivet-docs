@@ -72,7 +72,7 @@ For best results, use an SVG icon that is sized to 16px by 16px.
 
 <div class="alert alert--message rvt-m-bottom-lg">
     <h4 class="rvt-alert__title" id="warning-alert-title">Experimental Rivet Icon set</h4>
-    <p class="rvt-alert__message">We are currently in the early stages of creating a unified icon set for Rivet. If you would like to help test them, <a href="https://github.iu.edu/UITS/rivet-icons" rel="noopener">you can find out more information in this Github repository</a>. These icons are still very much in development and <strong>will most certainly change over time</strong>.
+    <p class="rvt-alert__message">We are currently in the early stages of creating a unified icon set for Rivet. If you would like to help test them, <a href="https://github.com/indiana-university/rivet-icons" target="_blank" rel="noopener">you can find out more information in this Github repository</a>. These icons are still very much in development and <strong>will most certainly change over time</strong>.
 </div>
 
 ### Button icons and accessibility
