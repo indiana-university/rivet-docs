@@ -107,35 +107,6 @@ Box rows can also be created using `div` elements if lists do not make sense sem
 For styling purposes, box rows must be wrapped in a parent element, such as a `div` with the `.rvt-box` class applied.
 {{< /alert >}}
 
-## Card variant
-The card variant of the box component can be used along with Rivet's [type scale utilities]({{< ref "/components/layout/typography.md" >}}) and [spacing utilities]({{< ref "/components/layout/spacing.md" >}}) to create basic card layouts. Adding the `.rvt-box--card` modifier class adds a subtle shadow to help visually separate the the box content from the background.
-
-{{< example lang="html" spacious="true" >}}<div class="rvt-box rvt-box--card">
-  <div class="rvt-box__body">
-    This is the card variant of a box with a body element
-  </div>
-</div>
-{{< /example >}}
-
-### Card image
-The card variant can include an optional image. Nesting an `img` inside an element with the `.rvt-box__image` class will apply the proper sizing, cropping, and border radius.
-
-{{< example lang="html" spacious="true">}}<div class="rvt-box rvt-box--card">
-  <div class="rvt-box__image">
-    <img src="http://www.fillmurray.com/g/800/450" alt="">
-  </div>
-  <div class="rvt-box__body">
-    <h2 class="rvt-ts-20 rvt-text-bold">Card title</h2>
-    <p class="rvt-m-top-xxs">This is the card variant of a box with a body element</p>
-    <a href="#" class="rvt-link-bold">Card link</a>
-  </div>
-</div>
-{{< /example >}}
-
-{{< alert variant="warning" title="Card images must be the first child" >}}
-The element with the `.rvt-box__image` class must be the first child of `.rvt-box` so that the image sits flush with the sides of the box (see above example). It should not be used inside elements with the `rvt-box__body` or `.rvt-box__row` classes.
-{{< /alert >}}
-
 ## Compact box variant
 The compact variant of the box component reduces the amount of padding applied to a box's header, footer, and content. This variant can be useful in situations where you are displaying large amounts of data and need to conserve vertical space.
 
@@ -220,3 +191,32 @@ The row variant modifier classes add a subtle background color and left border t
   </div>
 </div>
 {{< /example >}}
+
+## Card variant
+The card variant of the box component can be used along with Rivet's [type scale utilities]({{< ref "/components/layout/typography.md" >}}) and [spacing utilities]({{< ref "/components/layout/spacing.md" >}}) to create basic card layouts. Adding the `.rvt-box--card` modifier class adds a subtle shadow to help visually separate the the box content from the background.
+
+{{< example lang="html" spacious="true" >}}<div class="rvt-box rvt-box--card">
+  <div class="rvt-box__body">
+    This is the card variant of a box with a body element
+  </div>
+</div>
+{{< /example >}}
+
+### Card image
+The card variant can include an optional image. Nesting an `img` inside an element with the `.rvt-box__image` class will apply the proper sizing, cropping, and border radius.
+
+{{< example lang="html" spacious="true">}}<div class="rvt-box rvt-box--card">
+  <div class="rvt-box__image">
+    <img src="http://www.fillmurray.com/g/800/450" alt="">
+  </div>
+  <div class="rvt-box__body">
+    <h2 class="rvt-ts-20 rvt-text-bold">Card title</h2>
+    <p class="rvt-m-top-xxs">This is the card variant of a box with a body element</p>
+    <a href="#" class="rvt-link-bold">Card link</a>
+  </div>
+</div>
+{{< /example >}}
+
+{{< alert variant="warning" title="Card images must be the first child" >}}
+The element with the `.rvt-box__image` class must be the first child of `.rvt-box` so that the image sits flush with the sides of the box (see above example). It should not be used inside elements with the `rvt-box__body` or `.rvt-box__row` classes.
+{{< /alert >}}
