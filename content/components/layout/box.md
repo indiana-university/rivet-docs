@@ -104,7 +104,7 @@ Box rows can also be created using `div` elements if lists do not make sense sem
 {{< /example >}}
 
 {{< alert variant="warning" title="Box rows must be wrapped in a parent element" >}}
-For styling purposes, box rows must be wrapped in a parent element, such as a `div` with the `.rvt-box` class applied.
+To ensure correct styling, a series of box rows must be wrapped in a parent element, such as a `ul` or `div`. Do not wrap box rows in an element with the `.rvt-box__body` class applied, as the extra padding will prevent the rows from filling the full width of the box.
 {{< /alert >}}
 
 ## Compact box variant
