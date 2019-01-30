@@ -1,5 +1,5 @@
 ---
-title: Deprecating the Rivet Panel Component
+title: Deprecating the Rivet panel component
 description: The panel component has been deprecated in favor of the new box and media object components.
 date: "2019-01-30"
 draft: false
