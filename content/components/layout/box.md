@@ -218,5 +218,5 @@ The card variant can include an optional image. Nesting an `img` inside an eleme
 {{< /example >}}
 
 {{< alert variant="warning" title="Card images must be the first child" >}}
-The element with the `.rvt-box__image` class must be the first child of `.rvt-box` so that the image sits flush with the sides of the box (see above example). It should not be used inside elements with the `rvt-box__body` or `.rvt-box__row` classes.
+The element with the `.rvt-box__image` class must be the first child of `.rvt-box` so that the image sits flush with the sides of the box (see above example). It should not be used inside elements with the `.rvt-box__body` or `.rvt-box__row` classes.
 {{< /alert >}}
