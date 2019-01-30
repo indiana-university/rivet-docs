@@ -7,7 +7,7 @@ excludeFromIndex: true
 ---
 We've deprecated the [Rivet panel component]({{< ref "/components/layout/panels.md" >}}) and will be removing it in the next major release of Rivet (`2.0.0`) in favor of two new components: the **box** and **media object**.
 
-These new components give developers more flexibility when grouping content, and they make it easier to build layouts they previously had to assemble from panels, grids, and spacing utility classes
+These new components give developers more flexibility when grouping content and make it easier to build layouts they previously had to assemble from panels, grids, and spacing utility classes.
 
 ## Box component
 Rivet `1.2.0` introduces the [box component]({{< ref "/components/layout/box.md" >}}), which you can use to visually group related pieces of content. This new component has several display, sizing, and color variations, including a `.rvt-box--card` variant you can use as a drop-in replacement for panels.
