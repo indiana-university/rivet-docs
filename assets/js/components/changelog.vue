@@ -12,7 +12,7 @@
               <div class="rvtd-changelog__version" :class="{'ts-23':index>0}">Rivet {{ version(release.tag_name) }}</div>
               <div class="rvtd-changelog__date rvt-m-bottom-xl rvt-m-top-xs">{{ release.published_at | formatDate }}</div>
               <a v-if="(index===0 && !release.prerelease) || (index===1 && releases[0].prerelease)"
-                 :href="`https://github.iu.edu/UITS/rivet-source/releases/download/${release.tag_name}/rivet.zip`"
+                 :href="`https://github.com/indiana-university/rivet-source/releases/download/${release.tag_name}/rivet.zip`"
                  class="rvt-button rvtd-changelog__download">
                 <svg aria-hidden="true" style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                   <title>Download</title>
@@ -66,7 +66,7 @@
             <p><a class="button" href=".">Reload</a></p>
           </div>
           <div class="rvtd-changelog__cta">
-            <a class="rvt-button" href="https://github.iu.edu/UITS/rivet-source/releases">View all on Github.IU</a>
+            <a class="rvt-button" href="https://github.com/indiana-university/rivet-source/releases">View all on Github</a>
           </div>
         </div>
       </transition>
@@ -101,7 +101,7 @@ module.exports = {
       this.$set(this.showAllDetails, index, true);
     },
     loadReleases() {
-      const apiURL = "https://githubapi.iu.edu/api/uits/rivet-source/releases";
+      const apiURL = "/changelog.json";
       this.loadingReleases = true;
       axios
         .get(apiURL)

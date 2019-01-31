@@ -39,11 +39,11 @@ events:
     -
         title: "modalOpen"
         description: |
-            Emitted when the Modal is opened (using the `Modal.open()` method, or the `data-modal-trigger` attribute). The value of the modal `data-modal-trigger` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
+            Emitted when the Modal is opened (using the `Modal.open()` method, or the `data-modal-trigger` attribute). The value of the modal `id` attribute is also passed along via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
     -
         title: "modalClose"
         description: |
-            Emitted when the Modal is closed (using the `Modal.close()` method, or the `data-modal-trigger` attribute). The value of the modal `data-modal-trigger` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
+            Emitted when the Modal is closed (using the `Modal.close()` method, or the `data-modal-trigger` attribute). The value of the modal `id` attribute is also passed along via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
 ---
 ## Modal example
 {{< example lang="html" >}}<button class="rvt-button" data-modal-trigger="modal-example-basic">Open modal example</button>
