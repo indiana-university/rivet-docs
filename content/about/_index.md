@@ -9,12 +9,11 @@ sections:
     teaser: 'We recognized that the lack of standard design patterns in software development <a href="../blog/why-we-built-rivet/">led to disjointed user experiences</a>. A design system contains assets developers can use to create patterns across software titles. It also gathers input from designers and developers university-wide to solve problems and suggest solutions. Rivet’s single source of assets makes it easier to work on and maintain projects.'
     slug: "why-did-we-build-it"
   -
-    image: "http://www.fillmurray.com/g/400/400"
     title: "Who supports Rivet?"
     teaser: 'IU’s User Experience office is home to Rivet’s support team. They’re working to respond and quickly adapt Rivet as the IT landscape evolves. The Rivet team knows developers need guidance and support, and they’re making sure to meet those needs.'
     slug: "who-supports-it"
     ctaText: "See our roadmap"
-    ctaLink: "../#roadmap"
+    ctaLink: "../roadmap"
     members:
       -
         name: "Levi McGranahan"
