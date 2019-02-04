@@ -1,0 +1,28 @@
+---
+title: "Rivet Community Workshop"
+description: "A two-track event where IU developers of all skill levels can learn about, help contribute to, and meet others using Rivet."
+date: "2019-04-18"
+time: "1-5 PM"
+projects:
+  - title: "Backlog: Good first issues"
+    description: "Before the workshop, we'll tag issues in the Rivet project backlog as good first issues for people who want a gentle on-ramp "
+  - title: "Rivet subheader"
+    description: ""
+  - title: "Rivet progress bar"
+    description: ""
+  - title: "Rivet textarea word counter"
+    description: ""
+tutorials:
+  - title: "Introduction to Rivet"
+    time: "1-1:30 PM"
+    description: "An introduction to the Rivet design system, including why we built it, who it's intended for, and how to start using it in your web application projects."
+  - title: "Bug reports, contributions, and feature requests"
+    time: "1:45-2:15 PM"
+    description: "An introduction to the Rivet public backlog, plus a tutorial on how to file bug reports, contribute to the Rivet codebase, and suggest new components that can be voted on by the community."
+  - title: "Creating Rivet add-ons"
+    time: "2:30-3:00 PM"
+    description: "An introduction to Rivet add-ons and a tutorial on creating your own components using the Rivet Add-on Boilerplate."
+  - title: "Learning by example: What others have made with Rivet"
+    time: "3:15-3:45 PM"
+    description: "For a lot of people, the easiest way to get going with Rivet is to see what others have already done with it. This session will showcase screenshots of apps and websites built using Rivet and discuss the patterns used to address common use cases."
+---
