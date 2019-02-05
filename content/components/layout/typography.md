@@ -12,7 +12,7 @@ Typography is the core component of any interface. Rivet uses a defined [Major S
 {{< typescale data="tokens" >}}{{< /typescale >}}
 
 ## Type scale Sass variables
-If you are using [Rivet's Sass][type-variables] files you can directly access any value in the Rivet type scale by it's variable name. All of the type scale values are stored in a [Sass map][sass-maps] that we use to iterate over and produce the type [scale utility classes](./#type-scale-examples) including the [aliases listed in the following documentation](./#type-scale-aliases).
+If you are using [Rivet's Sass][type-variables] files you can directly access any value in the Rivet type scale by its variable name. All of the type scale values are stored in a [Sass map][sass-maps] that we use to produce the type [scale utility classes](./#type-scale-examples), including the [aliases listed in the following documentation](./#type-scale-aliases).
 
 {{< code >}}// Main Sass map
 
@@ -41,7 +41,7 @@ $type-sizes: (
 )
 {{< /code >}}
 
-From the main Sass map we then create short-cut variables for each type size as well as a set of memorable alias variables e.g. `-xxs`, `-xs`, `-sm`, `-md`, `-lg`, `-xl`, `-xxl`.
+From the main Sass map we then create shortcut variables for each type size, as well as a set of memorable alias variables e.g. `-xxs`, `-xs`, `-sm`, `-md`, `-lg`, `-xl`, `-xxl`.
 
 {{< code >}}// Type Size variables
 
@@ -72,7 +72,7 @@ $ts-xxl: $ts-52;
 {{< /code >}}
 
 ### Using typography Sass variables
-Here's and example of how you could use the type scale Sass variables when customizing Rivet:
+Here's an example of how you might use the type scale Sass variables when customizing Rivet:
 
 {{< code >}}.custom-heading {
   font-size: $ts-26; // Font size = 26px/1.625rem
