@@ -133,30 +133,30 @@ From the main Sass map we then create short-cut variables for each type size as 
 
 {{< code >}}// Type Size variables
 
-$ts-12: map-get($type-sizes, 12) !default;
-$ts-14: map-get($type-sizes, 14) !default;
-$ts-16: map-get($type-sizes, 16) !default;
-$ts-18: map-get($type-sizes, 18) !default;
-$ts-20: map-get($type-sizes, 20) !default;
-$ts-23: map-get($type-sizes, 23) !default;
-$ts-26: map-get($type-sizes, 26) !default;
-$ts-29: map-get($type-sizes, 29) !default;
-$ts-32: map-get($type-sizes, 32) !default;
-$ts-36: map-get($type-sizes, 36) !default;
-$ts-41: map-get($type-sizes, 41) !default;
-$ts-46: map-get($type-sizes, 46) !default;
-$ts-52: map-get($type-sizes, 52) !default;
+$ts-12: map-get($type-sizes, 12);
+$ts-14: map-get($type-sizes, 14);
+$ts-16: map-get($type-sizes, 16);
+$ts-18: map-get($type-sizes, 18);
+$ts-20: map-get($type-sizes, 20);
+$ts-23: map-get($type-sizes, 23);
+$ts-26: map-get($type-sizes, 26);
+$ts-29: map-get($type-sizes, 29);
+$ts-32: map-get($type-sizes, 32);
+$ts-36: map-get($type-sizes, 36);
+$ts-41: map-get($type-sizes, 41);
+$ts-46: map-get($type-sizes, 46);
+$ts-52: map-get($type-sizes, 52);
 
 // Type scale aliases
 
-$ts-xxs: $ts-12 !default;
-$ts-xs: $ts-14 !default;
-$ts-base: $ts-16 !default;
-$ts-sm: $ts-20 !default;
-$ts-md: $ts-26 !default;
-$ts-lg: $ts-32 !default;
-$ts-xl: $ts-41 !default;
-$ts-xxl: $ts-52 !default;
+$ts-xxs: $ts-12;
+$ts-xs: $ts-14;
+$ts-base: $ts-16;
+$ts-sm: $ts-20;
+$ts-md: $ts-26;
+$ts-lg: $ts-32;
+$ts-xl: $ts-41;
+$ts-xxl: $ts-52;
 {{< /code >}}
 
 ### Using typography Sass variables
