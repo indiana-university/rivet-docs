@@ -11,8 +11,6 @@ Typography is the core component of any interface. Rivet uses a defined [Major S
 ## Type scale examples
 {{< typescale data="tokens" >}}{{< /typescale >}}
 
-
-
 ## Type scale Sass variables
 If you are using [Rivet's Sass][type-variables] files you can directly access any value in the Rivet type scale by it's variable name. All of the type scale values are stored in a [Sass map][sass-maps] that we use to iterate over and produce the type [scale utility classes](./#type-scale-examples) including the [aliases listed in the following documentation](./#type-scale-aliases).
 
