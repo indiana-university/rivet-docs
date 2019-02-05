@@ -100,7 +100,7 @@ Typography is the core component of any interface. Rivet uses a defined [Major S
 </table>
 
 ## Type scale Sass variables
-If you are using [Rivet's Sass source][type-variables] files you can directly access any value in the Rivet type scale by it's variable name. All of the type scale values are stored in a [Sass map][sass-maps] that we use to iterate over and produce the type [scale utility classes](./#type-scale-examples) including the [aliases listed in the following documentation](./#type-scale-aliases).
+If you are using [Rivet's Sass][type-variables] files you can directly access any value in the Rivet type scale by it's variable name. All of the type scale values are stored in a [Sass map][sass-maps] that we use to iterate over and produce the type [scale utility classes](./#type-scale-examples) including the [aliases listed in the following documentation](./#type-scale-aliases).
 
 {{< code >}}// Main Sass map
 
@@ -129,7 +129,7 @@ $type-sizes: (
 )
 {{< /code >}}
 
-From the main Sass map we then create short variables for each type size as well as a set of memorable alias variables e.g. `-xxs`, `-xs`, `-sm`, `-md`, `-lg`, `-xl`, `-xxl`.
+From the main Sass map we then create short-cut variables for each type size as well as a set of memorable alias variables e.g. `-xxs`, `-xs`, `-sm`, `-md`, `-lg`, `-xl`, `-xxl`.
 
 {{< code >}}// Type Size variables
 
@@ -202,9 +202,9 @@ To make it easier to keep type sizes to a minimum we have create a few CSS utili
 ### Responsive type scale
 Each type scale helper class comes with a set of modifiers that allow you to adjust font-size at different screen sizes. Here's an example.
 
-{{< code >}}<h1 class="rvt-ts-20 rvt-ts-32-md-up">Profile page</h1>
+{{< example lang="html" >}}<h1 class="rvt-ts-20 rvt-ts-32-md-up">Profile page</h1>
 <p class="rvt-ts-14">The profile page is where you can select your personal settings.</p>
-{{< /code >}}
+{{< /example >}}
 
 Given the markup above, the `h1` would have a font size of 1.25rem/20px on all screens small and larger, and 2.25rem/36px on medium screens(740px wide) and larger.
 
