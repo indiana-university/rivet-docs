@@ -9,95 +9,9 @@ status: "Ready"
 Typography is the core component of any interface. Rivet uses a defined [Major Second](http://type-scale.com/?size=16&scale=1.125&text=A%20Visual%20Type%20Scale&webfont=Libre+Baskerville&font-family=%27Libre%20Baskerville%27,%20serif&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=#333) type scale that has been rounded to the nearest whole pixel value. Using sizes from this scale will help create a hierarchy and consistency throughout your application.
 
 ## Type scale examples
-<table class="rvt-m-top-lg">
-  <caption class="rvt-sr-only">Rivet type scale</caption>
-  <thead>
-    <th>CSS lass</th>
-    <th>rem</th>
-    <th>px</th>
-    <th>Actual size</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>.rvt-ts-12, .rvt-ts-xxs</code></td>
-      <td>.75rem</td>
-      <td>12px</td>
-      <td class="rvt-ts-12">Fulfilling the promise</td>
-    </tr>
-    <tr>
-      <td><code>.rvt-ts-14, .rvt-ts-xs</code></td>
-      <td>.875rem</td>
-      <td>14px</td>
-      <td class="rvt-ts-14">Fulfilling the promise</td>
-    </tr>
-    <tr>
-      <td><code>.rvt-ts-base, .rvt-ts-16</code></td>
-      <td>1rem</td>
-      <td>16px</td>
-      <td class="rvt-ts-base">Fulfilling the promise</td>
-    </tr>
-    <tr>
-      <td><code>.rvt-ts-18</code></td>
-      <td>1.125rem</td>
-      <td>18px</td>
-      <td class="rvt-ts-18">Fulfilling the promise</td>
-    </tr>
-    <tr>
-      <td><code>.rvt-ts-20, .rvt-ts-sm</code></td>
-      <td>1.25rem</td>
-      <td>20px</td>
-      <td class="rvt-ts-20">Fulfilling the promise</td>
-    </tr>
-    <tr>
-      <td><code>.rvt-ts-23</code></td>
-      <td>1.4375rem</td>
-      <td>23px</td>
-      <td class="rvt-ts-23">Fulfilling the promise</td>
-    </tr>
-    <tr>
-      <td><code>.rvt-ts-26, .rvt-ts-md</code></td>
-      <td>1.625rem</td>
-      <td>26px</td>
-      <td class="rvt-ts-26">Fulfilling the promise</td>
-    </tr>
-    <tr>
-      <td><code>.rvt-ts-29</code></td>
-      <td>1.8125rem</td>
-      <td>29px</td>
-      <td class="rvt-ts-29">Fulfilling the promise</td>
-    </tr>
-    <tr>
-      <td><code>.rvt-ts-32, .rvt-ts-lg</code></td>
-      <td>2rem</td>
-      <td>32px</td>
-      <td class="rvt-ts-32">Fulfilling the promise</td>
-    </tr>
-    <tr>
-      <td><code>.rvt-ts-36</code></td>
-      <td>2.25rem</td>
-      <td>36px</td>
-      <td class="rvt-ts-36">Fulfilling the promise</td>
-    </tr>
-    <tr>
-      <td><code>.rvt-ts-41, .rvt-ts-xl</code></td>
-      <td>2.5625rem</td>
-      <td>41px</td>
-      <td class="rvt-ts-41">Fulfilling the promise</td>
-    </tr>
-    <tr>
-      <td><code>.rvt-ts-46</code></td>
-      <td>2.875rem</td>
-      <td>46px</td>
-      <td class="rvt-ts-46">Fulfilling the promise</td>
-    </tr>
-    <tr>
-      <td><code>.rvt-ts-52, .rvt-ts-xxl</code></td>
-      <td>3.25rem</td>
-      <td>52px</td>
-      <td class="rvt-ts-52">Fulfilling the promise</td>
-    </tr>
-  </tbody>
-</table>
+{{< typescale data="tokens" >}}{{< /typescale >}}
+
+
 
 ## Type scale Sass variables
 If you are using [Rivet's Sass][type-variables] files you can directly access any value in the Rivet type scale by it's variable name. All of the type scale values are stored in a [Sass map][sass-maps] that we use to iterate over and produce the type [scale utility classes](./#type-scale-examples) including the [aliases listed in the following documentation](./#type-scale-aliases).
