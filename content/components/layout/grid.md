@@ -5,9 +5,11 @@ status: "Ready"
 ---
 
 ## About the grid
-The Rivet grid is a mobile-first grid system based on [flexbox](https://www.w3.org/TR/css-flexbox-1/). It is based on five screen sizes and uses CSS classes to specify how many columns the grid should have at each of the following breakpoints. See the [_Setting column widths_](#setting-column-widths) section for instructions on how to apply column widths at the different breakpoint sizes.
+The Rivet grid is a mobile-first grid system built with [flexbox](https://www.w3.org/TR/css-flexbox-1/). It is based on five screen sizes and uses CSS classes to specify how many columns the grid should have at each of the breakpoints listed in the following documentation. 
 
 ### Grid breakpoints
+See the [_Setting column widths_](#setting-column-widths) section for instructions on how to apply column widths at the different breakpoint sizes.
+
 {{< breakpoints >}}{{< /breakpoints >}}
 
 {{< alert variant="warning" title="Grid and spacing utilities" >}}
