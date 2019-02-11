@@ -15,23 +15,19 @@
 */}}
 {{ $TokensData := $.Site.Data.tokens }}
 
-<table class="rvt-m-top-lg rvt-table-compact">
-  <caption class="rvt-sr-only">Rivet type scale</caption>
+<table class="rvt-m-top-lg rvt-table-stripes rvt-table-compact">
+  <caption class="rvt-sr-only">Rivet breakpoints</caption>
   <thead>
-    <th>CSS class</th>
     <th>Sass variable</th>
-    <th>rem</th>
-    <th>px</th>
-    <th>Actual size</th>
+    <th>Viewport width (px)</th>
+    <th>Viewport width (rem)</th>
   </thead>
   <tbody>
-    {{- range $.Site.Data.tokens.typography -}}
+    {{- range $.Site.Data.tokens.breakpoints -}}
       <tr>
-        <td width="150"><code>.rvt-ts-{{ .size }}{{ if .alias }},<br> .rvt-ts-{{ .alias }}{{ end }}</code></td>
-        <td><code>$ts-{{ .size }}</code></td>
-        <td>{{ trim (div (.size) ($TokensData.baseFontSize)) "0" }}rem</td>
+        <td><code>$breakpoint-{{ .alias }}</code></td>
         <td>{{ .size }}px</td>
-        <td class="rvt-ts-{{ .size }}">Fulfilling the promise</td>
+        <td>{{ trim (div (.size) ($TokensData.baseFontSize)) "0" }}rem</td>
       </tr>
     {{- end -}}
   </tbody>

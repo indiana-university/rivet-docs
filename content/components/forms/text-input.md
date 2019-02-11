@@ -91,7 +91,7 @@ Rivet does not make any assumptions about whether you’re using server- or clie
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" role="alert" id="first-name-message">
+    <span class="rvt-inline-alert__message" id="first-name-message">
         <strong>First name</strong> is valid!
     </span>
 </div>
@@ -107,7 +107,7 @@ Rivet does not make any assumptions about whether you’re using server- or clie
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" role="alert" id="password-message">
+    <span class="rvt-inline-alert__message" id="password-message">
         Your <strong>Password</strong> is weak.
     </span>
 </div>
@@ -123,7 +123,7 @@ Rivet does not make any assumptions about whether you’re using server- or clie
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" role="alert" id="username-message">
+    <span class="rvt-inline-alert__message" id="username-message">
         The <strong>Username</strong> you entered is taken.
     </span>
 </div>
@@ -140,7 +140,7 @@ Rivet does not make any assumptions about whether you’re using server- or clie
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" role="alert" id="description-message">
+    <span class="rvt-inline-alert__message" id="description-message">
         The
         <strong>Description</strong> tells users more about this stuff.
     </span>

@@ -16,22 +16,26 @@
 {{ $TokensData := $.Site.Data.tokens }}
 
 <table class="rvt-m-top-lg rvt-table-compact">
-  <caption class="rvt-sr-only">Rivet type scale</caption>
+  <caption class="rvt-sr-only">Rivet spacing units</caption>
   <thead>
-    <th>CSS class</th>
+    <th>CSS suffix</th>
     <th>Sass variable</th>
     <th>rem</th>
     <th>px</th>
-    <th>Actual size</th>
+    <th>Example</th>
   </thead>
   <tbody>
-    {{- range $.Site.Data.tokens.typography -}}
+    {{- range $.Site.Data.tokens.spacing -}}
       <tr>
-        <td width="150"><code>.rvt-ts-{{ .size }}{{ if .alias }},<br> .rvt-ts-{{ .alias }}{{ end }}</code></td>
-        <td><code>$ts-{{ .size }}</code></td>
+        <td><code>-{{ .alias }}</code></td>
+        <td><code>${{ .alias }}</code></td>
         <td>{{ trim (div (.size) ($TokensData.baseFontSize)) "0" }}rem</td>
         <td>{{ .size }}px</td>
-        <td class="rvt-ts-{{ .size }}">Fulfilling the promise</td>
+        <td>
+          <div class="rvtd-space-example p-all-{{ .alias }}">
+            <p class="rvtd-space-example-inner m-all-remove p-all-xs">{{ .alias }}</p>
+          </div>
+        </td>
       </tr>
     {{- end -}}
   </tbody>

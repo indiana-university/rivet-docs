@@ -5,11 +5,16 @@ status: "Ready"
 ---
 
 ## About the grid
-The Rivet grid is a mobile-first grid system based on [flexbox](https://www.w3.org/TR/css-flexbox-1/). It is based on five screen sizes and uses CSS classes to specify how many columns the grid should have at each of these screen sizes.
+The Rivet grid is a mobile-first grid system built with [flexbox](https://www.w3.org/TR/css-flexbox-1/). It is based on five screen sizes and uses CSS classes to specify how many columns the grid should have at each of the breakpoints listed in the following documentation. 
 
-<h3>The grid and spacing utilities <span class="rvt-badge rvt-badge--warning">Note</span></h3>
+### Grid breakpoints
+See the [_Setting column widths_](#setting-column-widths) section for instructions on how to apply column widths at the different breakpoint sizes.
 
-Please note that using any horizontal (`rvt-m-left-*`, `rvt-p-left-*`, `rvt-m-right-*`, and `rvt-p-right-*`) [spacing utilities]({{< relref "spacing.md" >}}) on the `.rvt-grid__item-*`s will throw off the grid gutters and maybe break your layout.
+{{< breakpoints >}}{{< /breakpoints >}}
+
+{{< alert variant="warning" title="Grid and spacing utilities" >}}
+Please note that using any horizontal (`rvt-m-left-*`, `rvt-p-left-*`, `rvt-m-right-*`, and `rvt-p-right-*`) [spacing utilities](../spacing) on the `.rvt-grid__item-*`s will throw off the grid gutters and maybe break your layout.
+{{< /alert >}}
 
 ## The container
 The `.rvt-container` is the basic layout unit in Rivet. A basic `.rvt-container` element is fluid by default. It will take up the full width of the viewport with a default of `1.5rem` of padding on the left and right sides.
