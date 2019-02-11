@@ -25,7 +25,7 @@ In addition to fixes and improvements, here’s a quick summary of the major upd
 ## Other highlights
 Here are a few links to show what we’ve been working on the last few months. These should also give you an idea about what’s on the horizon for future Rivet releases.
 
-- [Rivet backlog project board](https://github.com/indiana-university/rivet-source/projects/1)
+- [Rivet backlog project board](https://github.com/orgs/indiana-university/projects/2)
     - This is the project board we currently use to track to dos, in-progress tasks, and completed features, fixes, etc. **NOTE: This link will change when we move to github.com**.
 - Rivet datepicker
     - **This is not ready for production yet**, but will be released soon as a Rivet Add-on
