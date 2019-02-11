@@ -9,7 +9,7 @@ status: "Ready"
 Typography is the core component of any interface. Rivet uses a defined [Major Second](http://type-scale.com/?size=16&scale=1.125&text=A%20Visual%20Type%20Scale&webfont=Libre+Baskerville&font-family=%27Libre%20Baskerville%27,%20serif&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=#333) type scale that has been rounded to the nearest whole pixel value. Using sizes from this scale will help create a hierarchy and consistency throughout your application.
 
 ## Type scale examples
-{{< typescale data="tokens" >}}{{< /typescale >}}
+{{< typescale >}}{{< /typescale >}}
 
 ## Type scale Sass variables
 If you are using [Rivet's Sass][type-variables] files you can directly access any value in the Rivet type scale by its variable name. All of the type scale values are stored in a [Sass map][sass-maps] that we use to produce the type [scale utility classes](./#type-scale-examples), including the [aliases listed in the following documentation](./#type-scale-aliases).

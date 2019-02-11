@@ -8,87 +8,23 @@ status: "Ready"
 To maintain consistent spacing between components and to help create a sense of vertical rhythm, we have created a spacing system based on `.5rem` (8px) unit. Margins and padding can be applied using a set of CSS utility classes to add or remove margin and padding from any element.
 
 ### Spacing examples
-<table class="rvt-m-top-lg">
-    <caption class="sr-only">Rivet spacing utilities</caption>
-    <thead>
-        <th>CSS suffix</th>
-        <th>rem</th>
-        <th>px</th>
-        <th>Example</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>-xxs</code></td>
-            <td>.25rem</td>
-            <td>4px</td>
-            <td>
-                <div class="rvtd-space-example p-all-xxs">
-                    <p class="rvtd-space-example-inner m-all-remove p-all-xs">Extra extra small</p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><code>-xs</code></td>
-            <td>.5rem</td>
-            <td>8px</td>
-            <td>
-                <div class="rvtd-space-example p-all-xs">
-                    <p class="rvtd-space-example-inner m-all-remove p-all-xs">Extra small</p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><code>-sm</code></td>
-            <td>1rem</td>
-            <td>16px</td>
-            <td>
-                <div class="rvtd-space-example p-all-sm">
-                    <p class="rvtd-space-example-inner m-all-remove p-all-xs">Small</p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><code>-md</code></td>
-            <td>1.5rem</td>
-            <td>24px</td>
-            <td>
-                <div class="rvtd-space-example p-all-md">
-                    <p class="rvtd-space-example-inner m-all-remove p-all-xs">Medium</p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><code>-lg</code></td>
-            <td>2rem</td>
-            <td>32px</td>
-            <td>
-                <div class="rvtd-space-example p-all-lg">
-                    <p class="rvtd-space-example-inner m-all-remove p-all-xs">Large</p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><code>-xl</code></td>
-            <td>2.5rem</td>
-            <td>40px</td>
-            <td>
-                <div class="rvtd-space-example p-all-xl">
-                    <p class="rvtd-space-example-inner m-all-remove p-all-xs">Extra large</p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><code>-xxl</code></td>
-            <td>3rem</td>
-            <td>48px</td>
-            <td>
-                <div class="rvtd-space-example p-all-xxl">
-                    <p class="rvtd-space-example-inner m-all-remove p-all-xs">Extra extra large</p>
-                </div>
-            </td>
-        </tr>
-    </tbody>
-</table>
+{{< spacing >}}{{< /spacing >}}
+
+## Spacing Sass variables
+If you are using [Rivet's Sass](https://github.com/indiana-university/rivet-source/blob/develop/src/sass/core/_variables.scss#L325) files you can directly access any spacing unit by its variable name. The spacing unit variables follow the same naming conventions as all of Rivet's spacing utility classes.
+
+{{< code >}}// Global spacing units
+
+$spacing-unit: .5rem;        // 8px
+
+$xxs: $spacing-unit/2;       // 4px
+$xs: $spacing-unit;          // 8px
+$sm: $spacing-unit * 2;      // 16px Base
+$md: $spacing-unit * 3;      // 24px
+$lg: $spacing-unit * 4;      // 32px
+$xl: $spacing-unit * 5;      // 40px
+$xxl: $spacing-unit * 8;     // 64px
+{{</ code >}}
 
 ## Implementation
 
