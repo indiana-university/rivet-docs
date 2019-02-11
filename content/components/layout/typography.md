@@ -128,5 +128,9 @@ The responsive type scale CSS classes use the following conventions:
 - `-xl-up` - screens **1260–1400px** and wider
 - `-xxl-up` - screens **1400px** and wider
 
+{{< alert variant="info" title="Rivet breakpoints" >}}
+See the documentation about Rivet's global breakpoints in [the grid documentation](../grid/#grid-breakpoints).
+{{< /alert >}}
+
 [type-variables]: https://github.com/indiana-university/rivet-source/blob/develop/src/sass/core/_variables.scss
 [sass-maps]: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
