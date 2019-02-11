@@ -27,7 +27,6 @@ $xxl: $spacing-unit * 8;     // 64px
 {{</ code >}}
 
 ## Implementation
-
 The CSS classes for the spacing system use the following conventions:
 
 - `rvt` = namespace
@@ -45,7 +44,6 @@ The CSS classes for the spacing system use the following conventions:
 So the class `.rvt-m-top-sm` would add 16px/1rem of margin on all screen sizes to the top of the element it was applied to.
 
 ### Responsive spacing
-
 Each spacing utility class also comes with a set of modifiers that allow you to adjust spacing at different screen sizes. Take the following `div`
 
 {{< code >}}<div class="rvt-p-bottom-sm rvt-p-bottom-lg-lg-up">
@@ -56,7 +54,6 @@ Each spacing utility class also comes with a set of modifiers that allow you to 
 With these spacing classes applied, it would have 16px/1rem of bottom padding at all screen sizes and 32px/2rem of bottom padding on large screens (1080px wide) and up.
 
 ### Spacing modifiers
-
 All spacing utilities described above have the following responsive modifiers available to them:
 
 - `-sm-up` - screens **480–740px** and wider
@@ -65,8 +62,12 @@ All spacing utilities described above have the following responsive modifiers av
 - `-xl-up` - screens **1260–1400px** and wider
 - `-xxl-up` - screens **1400px** and wider
 
+{{< alert variant="info" title="Rivet breakpoints" >}}
+See the documentation about Rivet's global breakpoints in [the grid documentation](../grid/#grid-breakpoints).
+{{< /alert >}}
+
 ### All spacing
 Using the size conventions above you could apply the class `.rvt-p-all-xl` to add an Extra large amount (40px/2.5rem) to both the top and bottom of an element.
 
 ### No spacing
-If you want to get crazy and remove all margin or padding from and element you could use the class `.rvt-m-all-remove`, or `.rvt-p-all-remove`.
+If you want to remove all margin or padding from and element you could use the class `.rvt-m-all-remove`, or `.rvt-p-all-remove`.
