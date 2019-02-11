@@ -19,6 +19,7 @@
   <caption class="rvt-sr-only">Rivet type scale</caption>
   <thead>
     <th>CSS class</th>
+    <th>Sass variable</th>
     <th>rem</th>
     <th>px</th>
     <th>Actual size</th>
@@ -26,7 +27,8 @@
   <tbody>
     {{- range $.Site.Data.tokens.typography -}}
       <tr>
-        <td><code>.rvt-ts-{{ .size }}{{ if .alias }}, .rvt-ts-{{ .alias }}{{ end }}</code></td>
+        <td><code>.rvt-ts-{{ .size }}{{ if .alias }},<br> .rvt-ts-{{ .alias }}{{ end }}</code></td>
+        <td><code>$ts-{{ .size }}</code></td>
         <td>{{ trim (div (.size) ($TokensData.baseFontSize)) "0" }}rem</td>
         <td>{{ .size }}px</td>
         <td class="rvt-ts-{{ .size }}">Fulfilling the promise</td>
