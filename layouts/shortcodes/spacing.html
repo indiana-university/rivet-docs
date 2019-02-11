@@ -1,0 +1,42 @@
+{{/*
+  This shortcode is used to generate the type scale table based on the
+  main "tokens.json" data file: ../../data/tokens.json
+*/}}
+
+{{/*
+  You have to call .Inner for shortcodes to work even if you're not putting
+  content inside the tags.
+  */}}
+{{ .Inner }}
+
+{{/*
+  Stores a reference to the main "tokens" object, so we can get at other
+  values inside the loop below.
+*/}}
+{{ $TokensData := $.Site.Data.tokens }}
+
+<table class="rvt-m-top-lg rvt-table-compact">
+  <caption class="rvt-sr-only">Rivet spacing units</caption>
+  <thead>
+    <th>CSS suffix</th>
+    <th>Sass variable</th>
+    <th>rem</th>
+    <th>px</th>
+    <th>Example</th>
+  </thead>
+  <tbody>
+    {{- range $.Site.Data.tokens.spacing -}}
+      <tr>
+        <td><code>-{{ .alias }}</code></td>
+        <td><code>${{ .alias }}</code></td>
+        <td>{{ trim (div (.size) ($TokensData.baseFontSize)) "0" }}rem</td>
+        <td>{{ .size }}px</td>
+        <td>
+          <div class="rvtd-space-example p-all-{{ .alias }}">
+            <p class="rvtd-space-example-inner m-all-remove p-all-xs">{{ .alias }}</p>
+          </div>
+        </td>
+      </tr>
+    {{- end -}}
+  </tbody>
+</table>
