@@ -27,7 +27,7 @@
   <tbody>
     {{- range $.Site.Data.tokens.typography -}}
       <tr>
-        <td><code>.rvt-ts-{{ .size }}{{ if .alias }},<br> .rvt-ts-{{ .alias }}{{ end }}</code></td>
+        <td width="150"><code>.rvt-ts-{{ .size }}{{ if .alias }},<br> .rvt-ts-{{ .alias }}{{ end }}</code></td>
         <td><code>$ts-{{ .size }}</code></td>
         <td>{{ trim (div (.size) ($TokensData.baseFontSize)) "0" }}rem</td>
         <td>{{ .size }}px</td>
