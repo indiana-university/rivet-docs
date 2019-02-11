@@ -1,0 +1,34 @@
+{{/*
+  This shortcode is used to generate the type scale table based on the
+  main "tokens.json" data file: ../../data/tokens.json
+*/}}
+
+{{/*
+  You have to call .Inner for shortcodes to work even if you're not putting
+  content inside the tags.
+  */}}
+{{ .Inner }}
+
+{{/*
+  Stores a reference to the main "tokens" object, so we can get at other
+  values inside the loop below.
+*/}}
+{{ $TokensData := $.Site.Data.tokens }}
+
+<table class="rvt-m-top-lg rvt-table-stripes rvt-table-compact">
+  <caption class="rvt-sr-only">Rivet breakpoints</caption>
+  <thead>
+    <th>Sass variable</th>
+    <th>Viewport width (px)</th>
+    <th>Viewport width (rem)</th>
+  </thead>
+  <tbody>
+    {{- range $.Site.Data.tokens.breakpoints -}}
+      <tr>
+        <td><code>$breakpoint-{{ .alias }}</code></td>
+        <td>{{ .size }}px</td>
+        <td>{{ trim (div (.size) ($TokensData.baseFontSize)) "0" }}rem</td>
+      </tr>
+    {{- end -}}
+  </tbody>
+</table>
