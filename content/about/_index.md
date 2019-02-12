@@ -28,14 +28,14 @@ sections:
         title: "Developer Advocate"
         avatar: "https://ux.iu.edu/img/scott-thumbnail.jpg"
       -
-        name: "Front-end Developer"
-        title: 'Vacant position | <a class="rvt-text-bold" href="/jobs/front-end-developer">Apply now</a>'
-        avatar: "../img/rvtd-avatar-placeholder.jpg"
+        name: "Rachel O'Connor"
+        title: "Front-end Developer"
+        avatar: "https://ux.iu.edu/img/rachel-thumbnail.jpg"
   -
     image: "../img/about-dev-process.png"
     title: "What is our development process?"
     teaser: "A design system is always evolving, and we welcome collaboration with designers and developers to make Rivet even better. Proposals for content or design changes can be submitted as Github issues, then reviewed based on usability, flexibility, accessibility, visual design, and content."
     slug: "how-do-we-develop-it"
     ctaText: "See our backlog"
-    ctaLink: "https://github.com/indiana-university/rivet-source/projects/1"
+    ctaLink: "https://github.com/orgs/indiana-university/projects/2"
 ---

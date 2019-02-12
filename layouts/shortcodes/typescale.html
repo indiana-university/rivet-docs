@@ -1,0 +1,38 @@
+{{/*
+  This shortcode is used to generate the type scale table based on the
+  main "tokens.json" data file: ../../data/tokens.json
+*/}}
+
+{{/*
+  You have to call .Inner for shortcodes to work even if you're not putting
+  content inside the tags.
+  */}}
+{{ .Inner }}
+
+{{/*
+  Stores a reference to the main "tokens" object, so we can get at other
+  values inside the loop below.
+*/}}
+{{ $TokensData := $.Site.Data.tokens }}
+
+<table class="rvt-m-top-lg rvt-table-compact">
+  <caption class="rvt-sr-only">Rivet type scale</caption>
+  <thead>
+    <th>CSS class</th>
+    <th>Sass variable</th>
+    <th>rem</th>
+    <th>px</th>
+    <th>Actual size</th>
+  </thead>
+  <tbody>
+    {{- range $.Site.Data.tokens.typography -}}
+      <tr>
+        <td width="150"><code>.rvt-ts-{{ .size }}{{ if .alias }},<br> .rvt-ts-{{ .alias }}{{ end }}</code></td>
+        <td><code>$ts-{{ .size }}</code></td>
+        <td>{{ trim (div (.size) ($TokensData.baseFontSize)) "0" }}rem</td>
+        <td>{{ .size }}px</td>
+        <td class="rvt-ts-{{ .size }}">Fulfilling the promise</td>
+      </tr>
+    {{- end -}}
+  </tbody>
+</table>

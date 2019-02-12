@@ -103,7 +103,7 @@ Inline alerts in Rivet should be used for form validation situations where [the 
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" role="alert" id="radio-list-message">
+    <span class="rvt-inline-alert__message" id="radio-list-message">
         This field is required to continue.
     </span>
 </div>
@@ -117,7 +117,7 @@ Inline alerts in Rivet should be used for form validation situations where [the 
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" role="alert" id="radio-list-message">
+    <span class="rvt-inline-alert__message" id="radio-list-message">
         This field is required to continue.
     </span>
 </div>
@@ -131,7 +131,7 @@ Inline alerts in Rivet should be used for form validation situations where [the 
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" role="alert" id="radio-list-message">
+    <span class="rvt-inline-alert__message" id="radio-list-message">
         This field is required to continue.
     </span>
 </div>
@@ -145,18 +145,15 @@ Inline alerts in Rivet should be used for form validation situations where [the 
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" role="alert" id="radio-list-message">
+    <span class="rvt-inline-alert__message" id="radio-list-message">
         This field is required to continue.
     </span>
 </div>
 {{< /example >}}
 
-<div class="rvt-alert rvt-alert--info rvt-m-bottom-md rvt-m-top-xl">
-    <h2 class="rvt-alert__title">More form validation tips</h2>
-    <p class="rvt-alert__message">
-        For more information on techniques for better from validation UX, <a href="../../forms/text-input/#form-validation-tips">see this list of form validation tips</a>.
-    </p>
-</div>
+{{< alert variant="info" title="More form validation tips" >}}
+For more information on techniques for better form validation UX, [see this list of form validation tips](../../forms/text-input/#form-validation-tips).
+{{< /alert >}}
 
 When using a standalone inline alert with a group of inputs, make sure to add the `aria-describedby` attribute to **each input** (in this case radio buttons) that is invalid. The `aria-describedy` by value should correspond to a matching `id` attribute on the `.rvt-inline-alert__message` element.
 
@@ -191,7 +188,7 @@ When using a standalone inline alert with a group of inputs, make sure to add th
                     </g>
                 </svg>
             </span>
-            <span class="rvt-inline-alert__message" role="alert" id="radio-list-message">
+            <span class="rvt-inline-alert__message" id="radio-list-message">
                 This field is required to continue.
             </span>
         </div>
