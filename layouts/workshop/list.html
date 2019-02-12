@@ -1,3 +1,89 @@
 {{ define "main" }}
-    <h1>Hello</h1>>
+<div class="rvtd-event-banner-container" style="position:relative; z-index:-1">
+    <img src="/img/collab-header.jpg" alt="">
+</div>
+<div class="rvtd-article-container rvt-container rvt-container--center rvt-container--sophomore rvt-p-all-xxl" style="background-color: #ffffff; margin-top:-9rem; border-radius:.25rem">
+    <div class="rvtd-typeset rvt-p-right-lg">
+        <div class="rvt-grid">
+            <div class="rvt-grid__item rvt-grid__item-8-lg-up rvt-p-right-xl">
+                <h1 class="rvt-text-bold rvt-ts-xl" style="color:#333333">{{ .Title }}</h1>
+                <p class="rvt-ts-sm" style="color:#666666">{{ .Description }}</p>
+            </div>
+            <div class="rvt-grid__item rvt-grid__item-4-lg-up">
+                <div class="rvt-box rvt-box--card" style="border-top: 5px #006298 solid">
+                    <div class="rvt-box__body rvt-p-lr-md">
+                        <p class="rvt-text-center rvt-text-bold rvt-ts-md rvt-m-bottom-remove">April 18, 2019</p>
+                        <p class="rvt-text-center rvt-ts-xs rvt-m-top-remove rvt-p-bottom-xs">1:00-5:00 PM<br>Cyberinfrastructure Building</p>
+                        <a class="rvt-button rvt-button--full-width rvt-ts-16 rvt-m-top-md" href="#">Register</a>
+                        <p class="rvt-text-center rvt-ts-12" style="color:#666666"><strong>50</strong> spots left</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rvtd-article-main rvtd-typeset">
+            <h2 class="rvt-text-bold">About the workshop</h2>
+            <p>The Rivet Community Workshop is a no-cost learning, collaboration, and networking event for people using the Rivet software design system. The event combines beginner-friendly lessons, curated tutorial projects, a showcase of example Rivet apps, and a catered social hour.</p>
+            <div class="rvt-alert rvt-alert--info rvt-m-tb-xl">
+                <p class="rvt-alert__message">Registration is limited to <strong>50 people</strong>. Registration will close after the first 50 people have registered.</p>
+            </div>
+            <div class="rvt-box">
+                <div class="rvt-box__header">
+                    Workshop schedule
+                </div>
+                <ul class="rvt-plain-list">
+                    <li class="rvt-box__row">
+                        <h3 class="rvt-text-bold"><a class="rvt-link--bold" href="#tutorial-track">Tutorial track</a></h3>
+                        <p class="rvt-ts-xs"><span class="rvt-badge rvt-badge--secondary rvt-m-right-xs">1:00-3:00 PM</span><span class="rvt-badge rvt-badge--info">Multipurpose Room B</span></p>
+                        <p class="rvt-m-bottom-remove">A series of 25-minute lessons geared towards developers and designers new to Rivet. You can come and go between the tutorial track and the coding track whenever you like.</p>
+                    </li>
+                    <li class="rvt-box__row">
+                        <h3 class="rvt-text-bold"><a class="rvt-link--bold" href="#coding-track">Coding track</a></h3>
+                        <p class="rvt-ts-xs"><span class="rvt-badge rvt-badge--secondary rvt-m-right-xs">1:00-3:30 PM</span><span class="rvt-badge rvt-badge--info">Wrubel Lobby</span></p>
+                        <p class="rvt-m-bottom-remove">Work individually or in small groups on beginner-friendly Rivet issues, example Rivet add-ons curated by the Rivet team, or other projects of your own choosing. You can come and go between the coding track and the tutorial track whenever you like.</p>
+                    </li>
+                    <li class="rvt-box__row">
+                        <h3 class="rvt-text-bold">Project share</h3>
+                        <p class="rvt-ts-xs"><span class="rvt-badge rvt-badge--secondary rvt-m-right-xs">3:30-4:00 PM</span><span class="rvt-badge rvt-badge--info">Wrubel Lobby</span></p>
+                        <p class="rvt-m-bottom-remove">A series of brief presentations by teams using Rivet in their projects. Each team will discuss the processes, patterns, and customizations they used to adapt Rivet to their specific use case.</p>
+                    </li>
+                    <li class="rvt-box__row">
+                        <h3 class="rvt-text-bold">Social hour</h3>
+                        <p class="rvt-ts-xs"><span class="rvt-badge rvt-badge--secondary rvt-m-right-xs">4:00-5:00 PM</span><span class="rvt-badge rvt-badge--info">Wrubel Lobby</span></p>
+                        <p class="rvt-m-bottom-remove">Wind down the afternoon with free pizza and an open bar. Open to attendees only.</p>
+                    </li>
+                </ul>
+            </div>
+            <h2 id="tutorial-track" class="rvt-text-bold">Tutorial track</h2>
+            <p>The tutorial track is a series of 25-minute lessons geared towards developers and designers new to Rivet. These lessons include an introduction to the design system itself, instructions and recommendations for contributing, and methods for customizing Rivet's built-in styles.</p> 
+            <p>Each lesson will be held in <strong>Multipurpose Room B</strong> and will be led by Scott Murray, developer advocate and member of the Rivet core team. Multipurpose Room B can seat 16 people per lesson—seats will be assigned on a <strong>first-come, first-served basis</strong>.</p>
+            <div class="rvt-box" style="border-top: 5px #006298 solid">
+                <ul class="rvt-plain-list">
+                    {{ range .Params.tutorials }}
+                        <li class="rvt-box__row">
+                            <h3 class="rvt-text-bold">{{ .title }}</h3>
+                            <p class="rvt-ts-xs"><span class="rvt-badge rvt-badge--secondary rvt-m-right-xs">{{ .time }}</span><span class="rvt-badge rvt-badge--success">{{ .seatsLeft }} seats open</span></p>
+                            <p class="rvt-m-bottom-remove">{{ .description }}</p>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+            <h2 id="tutorial-track" class="rvt-text-bold">Coding track</h2>
+            <p>The coding track will be a place for people to work individually or in small groups on Rivet projects. Don't worry about creating something complete or perfect—the goal of the coding track is to help people get familiar with Rivet development and encourage them to think about issues like responsive design and accessbility.</p>
+            <p>The coding track will take place from 1:00-3:30 PM in the <strong>Wrubel Lobby</strong>. Levi McGranahan, design system lead, will be available to help people as they work through their projects.</p>
+            <div class="rvt-alert rvt-alert--warning rvt-m-top-md rvt-m-bottom-xl">
+                <p class="rvt-alert__message">We ask that you <strong>don't bring issues or bug reports to the workshop</strong>. If you're running into problems with your Rivet project, please <a href="https://github.com/indiana-university/rivet-source/issues">file an issue on GitHub</a> instead.</p>
+            </div>
+            <div class="rvt-box" style="border-top: 5px #006298 solid">
+                <ul class="rvt-plain-list">
+                    {{ range .Params.projects }}
+                        <li class="rvt-box__row">
+                            <h3 class="rvt-text-bold">{{ .title }}</h3>
+                            <p class="rvt-m-bottom-remove">{{ .description }}</p>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 {{ end }}
