@@ -685,3 +685,30 @@ a.button--reverse-secondary {
     }
   }
 }
+
+/* Event page */
+
+@media screen and (min-width: 1024px) {
+  // Pushes the event content container up into the cover image on wide screens.
+  .rvtd-event-container {
+    background-color: #ffffff; 
+    margin-top: -9rem; 
+    border-radius: .25rem
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  // Removes extra top margin since there's a cover image above this element.
+  .rvtd-event-container {
+    margin-top: 0;
+  }
+}
+
+.rvtd-event-banner-container {
+  position:relative; 
+  z-index:-1;
+}
+
+.callout-top-border {
+  border-top: 5px #006298 solid;
+}
