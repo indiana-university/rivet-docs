@@ -6,7 +6,7 @@ projects:
   - title: "Backlog: Good first issues"
     description: "Before the workshop, we'll tag issues in the Rivet project backlog as good first issues for people who want a gentle on-ramp to contributing."
   - title: "Tutorial add-ons"
-    description: "Example add-on projects specially-chosen for this event by the Rivet team. These tutorial add-ons include a configurable subheader, a progress bar, and a textarea word counter."
+    description: "Example add-on projects specially chosen for this event by the Rivet team. These tutorial add-ons include a configurable subheader, a progress bar, and a textarea word counter."
   - title: "Personal projects"
     description: "Got something else Rivet-related you want to work on? Feel free to work on it in our collaborative space and get feedback from members of the Rivet team."
 tutorials:
