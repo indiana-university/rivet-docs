@@ -4,6 +4,9 @@ description: Some thoughts about why we built Rivet, a new design system for sof
 date: "2017-08-01"
 aliases:
     - /learn
+author:
+  email: "lmcgrana@iu.edu"
+  name: "Levi"
 ---
 <figure class="rvtd-article-figure rvt-m-top-xxl rvt-p-left-xxl rvt-p-right-xxl p-bottom-xxl">
     <img src="../../img/homepage-hero.png" alt="A Rivet web application on mobile, tablet, and desktop devices">

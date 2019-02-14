@@ -712,3 +712,10 @@ a.button--reverse-secondary {
 .callout-top-border {
   border-top: 5px #006298 solid;
 }
+
+.rvtd-post-avatar {
+  border-radius: 999rem;
+  height: $xl;
+  width: $xl;
+  overflow: hidden;
+}

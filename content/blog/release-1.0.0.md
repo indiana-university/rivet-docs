@@ -6,6 +6,9 @@ tags:
     - "release"
     - "new component"
 excludeFromIndex: true
+author:
+  email: "lmcgrana@iu.edu"
+  name: "Levi"
 ---
 Rivet 1.0.0 is now available. We've made a few updates since the last release (0.5.0). We'll go over the additons and updates in this post.
 

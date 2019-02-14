@@ -5,6 +5,9 @@ date: "2018-07-06"
 tags:
     - "new component"
 excludeFromIndex: true
+author:
+  email: "lmcgrana@iu.edu"
+  name: "Levi"
 ---
 Rivet Add-ons are components, plugins, and other utilities that can be included in Rivet projects on an as-needed basis.
 
