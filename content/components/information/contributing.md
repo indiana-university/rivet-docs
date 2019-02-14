@@ -13,7 +13,7 @@ Here are a few guidelines to follow when creating a new issue:
 
 1. Go to the Rivet source repository on [GitHub](https://github.com/indiana-university/rivet-source/issues/new/choose).
 2. Choose the type of issue you would like to create.
-3. Fill out the provided issue template to the best of your ability. If you are submitting a design concept for a new or existing component please attach a screenshot, a link to a mockup, or feel free to link to example HTML/CSS/JavaScript (a link to a pen on Codepen would be great!). We’re looking for anything that will demonstrate your concept here. Don’t worry if it’s un-styled or lacks visual design.
+3. Fill out the provided issue template to the best of your ability. If you are submitting a design concept for a new or existing component please attach a screenshot, a link to a mockup, or feel free to link to example HTML/CSS/JavaScript (a link to a pen on Codepen would be great!). We’re looking for anything that will demonstrate your concept here. Don’t worry if it’s unstyled or lacks visual design.
 4. After you have filled out the issue template click the Submit new issue button to create your new issue.
 5. Once the issue is created it will move on to the review process.
 
