@@ -8,7 +8,7 @@ tags:
 excludeFromIndex: true
 author:
   email: "lmcgrana@iu.edu"
-  name: "Levi McGranahan"
+  name: "Levi"
 ---
 Rivet 1.2.0 is now available! This release adds the box, media object, and loading indicator components, along with some improvements to the consistency of Sass color variables.
 

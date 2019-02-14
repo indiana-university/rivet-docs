@@ -14,19 +14,19 @@
         <div class="rvt-grid__item-8-md-up">
             <ol class="rvt-plain-list">
                 {{ range .Data.Pages }}
-                <li class="rvt-p-top-lg rvt-p-bottom-lg rvt-m-top-remove">
+                <li class="rvt-p-tb-xl rvt-m-top-remove">
                     <h3 class="rvt-ts-sm rvt-text-bold">
                         <a class="rvtd-plain-link" href="{{ .Permalink }}">{{ .Title }}</a>
                     </h3>
                     <p class="rvt-m-top-sm rvt-m-bottom-remove">{{ .Description }}</p>
                     {{ if .Params.author.email }}
-                    <div class="rvt-display-flex rvt-vertical-center rvt-m-top-lg"> 
+                    <div class="rvt-display-flex rvt-vertical-center rvt-m-top-md"> 
                         <div class="rvtd-post-avatar">
                             <img src="https://www.gravatar.com/avatar/{{ .Params.author.email | md5 }}" alt="">
                         </div>
-                        <div class="rvt-m-left-sm rvt-lh-title">
+                        <div class="rvt-m-left-sm">
                             <div class="rvt-ts-14">{{ .Params.author.name }}</div>
-                            <time class="rvt-ts-12" style="color: #777;">{{ .Date.Format "January 2, 2006" }}</time>
+                            <time class="rvt-ts-14">{{ .Date.Format "January 2, 2006" }}</time>
                         </div>
                     </div>
                     {{ end }}

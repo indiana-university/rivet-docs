@@ -715,7 +715,11 @@ a.button--reverse-secondary {
 
 .rvtd-post-avatar {
   border-radius: 999rem;
-  height: $xl;
-  width: $xl;
+  height: $lg * 1.25;
+  width: $lg * 1.25;
   overflow: hidden;
+}
+
+.rvtd-post-date {
+  color: $color-black--600;
 }
