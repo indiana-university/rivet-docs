@@ -247,7 +247,7 @@ Just to recap, here's the code for our final React component:
 {{< /code >}}
 
 ## Example
-You can have a look at the alert component we just created on Codepen. Do you have any ideas on how to improve it or make it more flexible? <a href="mailto:uxo@iu.edu?subject=Rivet React components">Let us know</a> or <a href="https://github.com/indiana-university/rivet-source/issues/new">open an issue on Rivet</a>!
+You can have a look at the alert component we just created on Codepen. Do you have any ideas on how to improve it or make it more flexible? <a href="mailto:uxo@iu.edu?subject=Rivet React components">Let us know</a> or <a href="https://github.com/indiana-university/rivet-source/issues/new/choose/new">open an issue on Rivet</a>!
 
 <p data-height="300" data-theme-id="13463" data-slug-hash="rYBEXJ" data-default-tab="js,result" data-user="levimcg" data-embed-version="2" data-pen-title="Rivet React alert" class="codepen">See the Pen <a href="https://codepen.io/levimcg/pen/rYBEXJ/">Rivet React alert</a> by Levi McGranahan (<a href="https://codepen.io/levimcg">@levimcg</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>

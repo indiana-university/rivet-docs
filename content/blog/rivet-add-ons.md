@@ -43,6 +43,6 @@ If you've created a custom Rivet component you think might be useful to other te
 If you need help developing your Add-on, the Rivet core team is happy to help with visual design, front-end development, and accesibility.
 
 [components-docs]: ../../components
-[rivet-source]: https://github.com/indiana-university/rivet-source/issues
+[rivet-source]: https://github.com/indiana-university/rivet-source/issues/new/choose
 [add-ons-page]: ../../add-ons
 [boilerplate]: https://github.com/indiana-university/rivet-add-on-boilerplate
