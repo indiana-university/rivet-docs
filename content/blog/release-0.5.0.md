@@ -48,6 +48,6 @@ As we mentioned above this will be the **last release before we move to 1.0.0**.
 ## Feedback & Questions
 We'd appreciate any feedback you have and would be happy to answer any questions. The best way to submit feedback is by creating an issue on Github:
 
-https://github.com/indiana-university/rivet-source/issues
+https://github.com/indiana-university/rivet-source/issues/new/choose
 
 Thanks!

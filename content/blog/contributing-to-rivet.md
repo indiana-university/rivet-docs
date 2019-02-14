@@ -6,14 +6,14 @@ aliases:
     - "/learn/contributing-to-rivet/"
 ---
 ## Github issues
-We’ll be using Github issues to keep track of new component submissions, bugs, design feedback, and any other suggestions related to the design system. To help us understand the kind of contribution you want to make, we ask that you first [submit a Github](https://github.com/indiana-university/rivet-source/issues).
+We’ll be using Github issues to keep track of new component submissions, bugs, design feedback, and any other suggestions related to the design system. To help us understand the kind of contribution you want to make, we ask that you first [submit a Github](https://github.com/indiana-university/rivet-source/issues/new/choose).
 
-{{< button url="https://github.com/indiana-university/rivet-source/issues" >}}Create an issue{{< /button >}}
+{{< button url="https://github.com/indiana-university/rivet-source/issues/new/choose" >}}Create an issue{{< /button >}}
 
 ## Guidelines
 Here are a few guidelines to follow when creating a new issue:
 
-1. Go to the Rivet source repository on [GitHub](https://github.com/indiana-university/rivet-source/issues).
+1. Go to the Rivet source repository on [GitHub](https://github.com/indiana-university/rivet-source/issues/new/choose).
 2. Click the "New Issue" button.
 3. Fill out the provided issue template to the best of your ability. If you are submitting a design concept for a new or existing component please attach a screenshot, a link to an Axure mockup, or feel free to link to example HTML/CSS/JavaScript (a link to a pen on Codepen would be great!). We’re looking for anything that will demonstrate your concept here. Don’t worry if it’s unstyled or lacks visual design.
 4. After you have filled out the issue template click the Submit new issue button to create your new issue.
