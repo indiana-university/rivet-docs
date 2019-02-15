@@ -3,7 +3,7 @@ title: "Rivet Community Workshop"
 description: "An event where developers of all skill levels can learn about Rivet, help contribute to its codebase, and meet others using it in their projects."
 datetime: "April 18, 2019 — 1-5 PM"
 registrationUrl: "https://iu.co1.qualtrics.com/jfe/form/SV_8CDJZp9ved7ISqN"
-seatsLeft: 50
+seatsLeft: 48
 projects:
   - title: "Backlog: Good first issues"
     description: "Before the workshop, we'll tag issues in the Rivet project backlog as good first issues for people who want a gentle on-ramp to contributing."
@@ -22,7 +22,7 @@ tutorials:
     description: "An introduction to the Rivet public backlog, plus a tutorial on how to file bug reports, contribute to the Rivet codebase, and suggest new components that can be voted on by the community."
   - title: "Creating Rivet add-ons"
     time: "2:00-2:25 PM"
-    seatsLeft: 16
+    seatsLeft: 15
     description: "An introduction to Rivet add-ons and a tutorial on creating your own components using the Rivet Add-on Boilerplate."
   - title: "Customizing and extending Rivet styles"
     time: "2:30-2:55 PM"
