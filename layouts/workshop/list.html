@@ -16,7 +16,11 @@
                     <div class="rvt-box__body rvt-p-lr-md">
                         <p class="rvt-text-center rvt-text-bold rvt-ts-md rvt-m-bottom-remove">April 18, 2019</p>
                         <p class="rvt-text-center rvt-ts-xs rvt-m-top-remove rvt-p-bottom-xs">1:00-5:00 PM<br>Cyberinfrastructure Building</p>
-                        <a class="rvt-button rvt-button--full-width rvt-ts-16 rvt-m-top-md" href="{{ .Params.registrationUrl }}" target="_blank">Register</a>
+                        {{ if eq .Params.seatsLeft 0 }}
+                            <button class="rvt-button rvt-button--full-width rvt-button--disabled rvt-ts-16 rvt-m-top-md" disabled>Registration closed</button>
+                        {{ else }}
+                            <a class="rvt-button rvt-button--full-width rvt-ts-16 rvt-m-top-md" href="{{ .Params.registrationUrl }}" target="_blank">Register</a>
+                        {{ end }}
                         <p class="rvt-text-center rvt-ts-12"><strong>{{ .Params.seatsLeft }}</strong> spots left</p>
                     </div>
                 </div>
@@ -64,7 +68,18 @@
                     {{ range .Params.tutorials }}
                         <li class="rvt-box__row">
                             <h3 class="rvt-text-bold">{{ .title }}</h3>
-                            <p class="rvt-ts-xs"><span class="rvt-badge rvt-badge--secondary rvt-m-right-xs">{{ .time }}</span><span class="rvt-badge rvt-badge--success">{{ .seatsLeft }} seats open</span></p>
+                            <p class="rvt-ts-xs">
+                                <span class="rvt-badge rvt-badge--secondary rvt-m-right-xs">{{ .time }}</span>
+                                {{ if ge .seatsLeft 5 }}
+                                    <span class="rvt-badge rvt-badge--success">{{ .seatsLeft }} seats open</span>
+                                {{ else if (and (le .seatsLeft 4) (ge .seatsLeft 2)) }}
+                                    <span class="rvt-badge rvt-badge--warning">{{ .seatsLeft }} seats left</span>
+                                {{ else if eq .seatsLeft 1 }}
+                                    <span class="rvt-badge rvt-badge--warning">1 seat left</span>
+                                {{ else }}
+                                    <span class="rvt-badge rvt-badge--danger">Full</span>
+                                {{ end }}
+                            </p>
                             <p class="rvt-m-bottom-remove">{{ .description }}</p>
                         </li>
                     {{ end }}
