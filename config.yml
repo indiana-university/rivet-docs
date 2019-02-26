@@ -10,12 +10,12 @@ taxonomies:
 outputs:
   section: ["html", "json"]
 params:
-  rivetVersion: 1.2.1
+  rivetVersion: 1.3.0
   tagline: "Software Design System"
   googleAnalytics: "UA-100560495-3"
   devGoogleAnalytics: "UA-100560495-4"
   githubRepo: "https://github.com/indiana-university/rivet-source"
-  downloadLink: "https://github.com/indiana-university/rivet-source/releases/download/v1.2.1/rivet.zip"
+  downloadLink: "https://github.com/indiana-university/rivet-source/releases/download/v1.3.0/rivet.zip"
   axureKit: "https://github.iu.edu/UITS/rivet/releases/download/v1.0.0/rivet-axure-1.0.rp"
   description: "Use Rivet to create UITS software that is accessible, usable, and consistent."
   resourceLinks:
