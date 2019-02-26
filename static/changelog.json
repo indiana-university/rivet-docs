@@ -1,5 +1,39 @@
 [
   {
+    "tag_name": "v1.3.0",
+    "created_at": "2019-02-25T16:47:18Z",
+    "published_at": "2019-02-25T17:23:27Z",
+    "body": "This release includes a handful of bug fixes as well as new set of responsive flexbox utility classes.<!-- end-overview -->",
+    "pulls": {
+      "items": [
+        {
+          "title": "Replaced all static numbers for font weight to use variables",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/62"
+        },
+        {
+          "title": "Added horizontal and vertical responsive remove utilities",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/63"
+        },
+        {
+          "title": "Fixed bug where Dropdown close method broke when dropdown no longer existed",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/65"
+        },
+        {
+          "title": "Fixed bug where Drawer javascript was interfering keyboard functionality of some types of form inputs",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/66"
+        },
+        {
+          "title": "Fixed bug where generic aria-controls selector could potentially interfere with other scripts",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/67"
+        },
+        {
+          "title": "Added new flexbox utility classes",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/75"
+        }
+      ]
+    }
+  },
+  {
     "tag_name": "v1.2.1",
     "created_at": "2019-01-31T19:09:35Z",
     "published_at": "2019-01-31T19:15:36Z",
