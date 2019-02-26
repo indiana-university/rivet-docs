@@ -3,7 +3,7 @@ title: "Flex"
 description: "This set of responsive flexbox utilities can help you fine-tune layouts based on different screen sizes."
 requiresJs: false
 status: "Alpha"
-asOf: 1.3.0
+newIn: 1.3.0
 ---
 ## Flex utilities example
 The Rivet flexbox utilities provide a robust set of CSS classes you can use to layout items in a container. They should be used to layout items at the component level, **not for page layout**. You should use [the Rivet grid system]({{< ref "components/layout/grid.md" >}}) for page layout.
