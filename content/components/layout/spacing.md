@@ -67,7 +67,7 @@ All spacing utilities described above have the following responsive modifiers av
 See the documentation about Rivet's global breakpoints in [the grid documentation](../grid/#grid-breakpoints).
 {{< /alert >}}
 
-#### Response removal of spacing
+#### Responsive removal of spacing
 Sometimes you may need to totally remove the margin or padding of an element at different screen sizes. The margin/padding removal utility classes use the following pattern:
 
 `.rvt-*1-none-*2-up`
