@@ -18,7 +18,7 @@ The Rivet flexbox utilities provide a robust set of CSS classes you can use to l
 {{< /example >}}
 
 ## Available flex utilities
-The flex utilities come with CSS classes for most flex properties, but not all. We have intentionally left out flex properties that deal with specific numbers of items (e.g. `order`) in a flex container and properties that deal with setting default widths of flex children (e.g. `flex-basis`).
+The flex utilities come with CSS classes for most flex properties, but not all. We have intentionally left out flex properties that deal with specific numbers of items (e.g. `order`) in a flex container, and properties that set widths of flex children (e.g. `flex-basis`).
 
 ### Responsive flex utilities
 All of the flex utilities have responsive variants that correspond to [Rivet's standard breakpoints]({{< ref "components/utilities/flex.md##grid-breakpoints" >}}). Adding the breakpoint suffix `-<breakpoint name>-up`, will cause the flex utility to start working at that breakpoint screen size and larger, similar to how Rivet's [spacing]({{< ref "components/layout/spacing.md" >}}) and [typography]({{< ref "components/layout/typography.md" >}}) classes work.
@@ -29,6 +29,10 @@ All of the flex utilities have responsive variants that correspond to [Rivet's s
   <div class="rvt-bg-blue rvt-m-right-sm-md-up">Item three</div>
 </div>
 {{< /example >}}
+
+{{< alert variant="info" title="Help with flexbox" >}}
+The specifics of how the various flexbox properties work is out of the scope of this documentation. If you need help with flexbox we recommend checking out this ["Complete Guide to Flexbox" article on CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+{{< /alert >}}
 
 ### Flex container utilities
 A flex container is the generally the parent element to which you would apply the `display: flex;` property. The flex utilities have CSS classes for most of the flex container properties available in the flexbox model.
