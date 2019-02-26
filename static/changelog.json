@@ -11,8 +11,8 @@
           "html_url": "https://github.com/indiana-university/rivet-source/pull/62"
         },
         {
-          "title": "Added horizontal and vertical responsive remove utilities",
-          "html_url": "https://github.com/indiana-university/rivet-source/pull/63"
+          "title": "Added none alias to spacing classes",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/55"
         },
         {
           "title": "Fixed bug where Dropdown close method broke when dropdown no longer existed",
