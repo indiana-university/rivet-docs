@@ -3,7 +3,7 @@ title: "Rivet Community Workshop"
 description: "An event where developers of all skill levels can learn about Rivet, help contribute to its codebase, and meet others using it in their projects."
 datetime: "April 18, 2019 — 1-5 PM"
 registrationUrl: "https://iu.co1.qualtrics.com/jfe/form/SV_8CDJZp9ved7ISqN"
-seatsLeft: 8
+seatsLeft: 5
 projects:
   - title: "Backlog: Good first issues"
     description: "Before the workshop, we'll tag issues in the Rivet project backlog as good first issues for people who want a gentle on-ramp to contributing."
