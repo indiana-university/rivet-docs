@@ -41,6 +41,7 @@ The following flex **container** CSS utility classes are available:
 
 #### flex, flex-direction, and flex-wrap
 - `.rvt-flex`
+- `.rvt-inline-flex`
 - `.rvt-row`
 - `.rvt-row-reverse`
 - `.rvt-column`
