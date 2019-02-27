@@ -35,7 +35,7 @@ The specifics of how the various flexbox properties work is out of the scope of 
 {{< /alert >}}
 
 ### Flex container utilities
-A flex container is the generally the parent element to which you would apply the `display: flex;` property. The flex utilities have CSS classes for most of the flex container properties available in the flexbox model.
+A flex container is generally the parent element to which you would apply the `display: flex;` property. The flex utilities have CSS classes for most of the flex container properties available in the flexbox model.
 
 The following flex **container** CSS utility classes are available:
 
