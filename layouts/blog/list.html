@@ -20,7 +20,7 @@
                     </h3>
                     <p class="rvt-m-top-sm rvt-m-bottom-remove">{{ .Description }}</p>
                     {{ if .Params.author.email }}
-                    <div class="rvt-display-flex rvt-vertical-center rvt-m-top-md"> 
+                    <div class="rvt-flex rvt-items-center rvt-m-top-md"> 
                         <div class="rvtd-post-avatar">
                             <img src="https://www.gravatar.com/avatar/{{ .Params.author.email | md5 }}" alt="">
                         </div>

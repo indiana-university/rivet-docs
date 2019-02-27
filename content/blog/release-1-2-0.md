@@ -7,8 +7,8 @@ tags:
     - "new component"
 excludeFromIndex: true
 author:
-  email: "lmcgrana@iu.edu"
-  name: "Levi"
+  email: "scanmurr@indiana.edu"
+  name: "Scott Anthony Murray"
 ---
 Rivet 1.2.0 is now available! This release adds the box, media object, and loading indicator components, along with some improvements to the consistency of Sass color variables.
 

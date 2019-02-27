@@ -6,7 +6,7 @@ aliases:
     - "/learn/contributing-to-rivet/"
 author:
   email: "lmcgrana@iu.edu"
-  name: "Levi"
+  name: "Levi McGranahan"
 ---
 ## Github issues
 We’ll be using Github issues to keep track of new component submissions, bugs, design feedback, and any other suggestions related to the design system. To help us understand the kind of contribution you want to make, we ask that you first [submit a Github](https://github.com/indiana-university/rivet-source/issues/new/choose).

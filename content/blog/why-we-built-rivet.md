@@ -6,7 +6,7 @@ aliases:
     - /learn
 author:
   email: "lmcgrana@iu.edu"
-  name: "Levi"
+  name: "Levi McGranahan"
 ---
 <figure class="rvtd-article-figure rvt-m-top-xxl rvt-p-left-xxl rvt-p-right-xxl p-bottom-xxl">
     <img src="../../img/homepage-hero.png" alt="A Rivet web application on mobile, tablet, and desktop devices">

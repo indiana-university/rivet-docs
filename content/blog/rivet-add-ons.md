@@ -7,7 +7,7 @@ tags:
 excludeFromIndex: true
 author:
   email: "lmcgrana@iu.edu"
-  name: "Levi"
+  name: "Levi McGranahan"
 ---
 Rivet Add-ons are components, plugins, and other utilities that can be included in Rivet projects on an as-needed basis.
 

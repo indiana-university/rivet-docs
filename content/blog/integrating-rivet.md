@@ -6,7 +6,7 @@ aliases:
     - "/learn/integrating-rivet"
 author:
   email: "lmcgrana@iu.edu"
-  name: "Levi"
+  name: "Levi McGranahan"
 ---
 
 ## Frontend JavaScript frameworks

@@ -6,6 +6,9 @@ tags:
     - "release"
     - "new component"
 excludeFromIndex: true
+author:
+  email: "scanmurr@indiana.edu"
+  name: "Scott Anthony Murray"
 ---
 Rivet 1.3.0 is now available! This release adds new responsive spacing utility classes and a new set of flexbox utility classes for fine-tuning component layouts.
 
