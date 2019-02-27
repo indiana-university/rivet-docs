@@ -14,7 +14,7 @@ Rivet 1.1.0 is now available! This release fixes a lot of JavaScript-related iss
 
 <div class="rvt-alert rvt-alert--info rvt-m-bottom-md rvt-m-top-sm">
     <h3 class="rvt-alert__title" id="warning-alert-title">Changes in 1.1.0</h3>
-    <p class="rvt-alert__message">This release makes significant changes to the underlying structure of Rivet's JavaScript. If you run into any problems updating to 1.1.0, please <a href="https://github.com/indiana-university/rivet-source/issues">file an issue on GitHub</a>.</p>
+    <p class="rvt-alert__message">This release makes significant changes to the underlying structure of Rivet's JavaScript. If you run into any problems updating to 1.1.0, please <a href="https://github.com/indiana-university/rivet-source/issues/new/choose">file an issue on GitHub</a>.</p>
 </div>
 
 ## JavaScript updates

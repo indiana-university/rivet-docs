@@ -16,8 +16,12 @@
                     <div class="rvt-box__body rvt-p-lr-md">
                         <p class="rvt-text-center rvt-text-bold rvt-ts-md rvt-m-bottom-remove">April 18, 2019</p>
                         <p class="rvt-text-center rvt-ts-xs rvt-m-top-remove rvt-p-bottom-xs">1:00-5:00 PM<br>Cyberinfrastructure Building</p>
-                        <a class="rvt-button rvt-button--full-width rvt-ts-16 rvt-m-top-md" href="{{ .Params.registrationUrl }}" target="_blank">Register</a>
-                        <p class="rvt-text-center rvt-ts-12"><strong>50</strong> spots left</p>
+                        {{ if eq .Params.seatsLeft 0 }}
+                            <button class="rvt-button rvt-button--full-width rvt-button--disabled rvt-ts-16 rvt-m-top-md" disabled>Registration closed</button>
+                        {{ else }}
+                            <a class="rvt-button rvt-button--full-width rvt-ts-16 rvt-m-top-md" href="{{ .Params.registrationUrl }}" target="_blank">Register</a>
+                        {{ end }}
+                        <p class="rvt-text-center rvt-ts-12"><strong>{{ .Params.seatsLeft }}</strong> spots left</p>
                     </div>
                 </div>
             </div>
@@ -36,7 +40,8 @@
                     <li class="rvt-box__row">
                         <h3 class="rvt-text-bold"><a class="rvt-link--bold" href="#tutorial-track">Tutorial track</a></h3>
                         <p class="rvt-ts-xs"><span class="rvt-badge rvt-badge--secondary rvt-m-right-xs">1:00-3:00 PM</span><span class="rvt-badge rvt-badge--info">Multipurpose Room B</span></p>
-                        <p class="rvt-m-bottom-remove">A series of 25-minute lessons geared toward developers and designers new to Rivet. You can come and go between the tutorial track and the coding track whenever you like.</p>
+                        <p class="rvt-m-bottom-remove">A series of 25-minute lessons geared toward developers and designers new to Rivet. You can come and go between the tutorial track and the 
+                            track whenever you like.</p>
                     </li>
                     <li class="rvt-box__row">
                         <h3 class="rvt-text-bold"><a class="rvt-link--bold" href="#coding-track">Coding track</a></h3>
@@ -63,17 +68,28 @@
                     {{ range .Params.tutorials }}
                         <li class="rvt-box__row">
                             <h3 class="rvt-text-bold">{{ .title }}</h3>
-                            <p class="rvt-ts-xs"><span class="rvt-badge rvt-badge--secondary rvt-m-right-xs">{{ .time }}</span><span class="rvt-badge rvt-badge--success">{{ .seatsLeft }} seats open</span></p>
+                            <p class="rvt-ts-xs">
+                                <span class="rvt-badge rvt-badge--secondary rvt-m-right-xs">{{ .time }}</span>
+                                {{ if ge .seatsLeft 5 }}
+                                    <span class="rvt-badge rvt-badge--success">{{ .seatsLeft }} seats open</span>
+                                {{ else if (and (le .seatsLeft 4) (ge .seatsLeft 2)) }}
+                                    <span class="rvt-badge rvt-badge--warning">{{ .seatsLeft }} seats left</span>
+                                {{ else if eq .seatsLeft 1 }}
+                                    <span class="rvt-badge rvt-badge--warning">1 seat left</span>
+                                {{ else }}
+                                    <span class="rvt-badge rvt-badge--danger">Full</span>
+                                {{ end }}
+                            </p>
                             <p class="rvt-m-bottom-remove">{{ .description }}</p>
                         </li>
                     {{ end }}
                 </ul>
             </div>
-            <h2 id="tutorial-track" class="rvt-text-bold">Coding track</h2>
+            <h2 id="coding-track" class="rvt-text-bold">Coding track</h2>
             <p>The coding track will be a place for people to work individually or in small groups on Rivet projects. Don't worry about creating something complete or perfect—the goal of the coding track is to help people become familiar with Rivet development and encourage them to think about issues like responsive design and accessbility.</p>
             <p>The coding track will take place from 1:00-3:30 PM in the <strong>Wrubel Lobby</strong>. Members of the Rivet team will be available to help people as they work through their projects.</p>
             <div class="rvt-alert rvt-alert--warning rvt-m-top-md rvt-m-bottom-xl">
-                <p class="rvt-alert__message">We ask that you <strong>don't bring issues or bug reports to the workshop</strong>. If you're running into problems with your Rivet project, please <a href="https://github.com/indiana-university/rivet-source/issues">file an issue on GitHub</a> instead.</p>
+                <p class="rvt-alert__message">We ask that you <strong>don't bring issues or bug reports to the workshop</strong>. If you're running into problems with your Rivet project, please <a href="https://github.com/indiana-university/rivet-source/issues/new/choose">file an issue on GitHub</a> instead.</p>
             </div>
             <div class="rvt-box callout-top-border">
                 <ul class="rvt-plain-list">

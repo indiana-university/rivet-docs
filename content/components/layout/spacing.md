@@ -32,14 +32,15 @@ The CSS classes for the spacing system use the following conventions:
 - `rvt` = namespace
 - `m`, `p` = margin, padding
 - `top`, `right`, `bottom`, `left` = the top, right, bottom, left side of the element
-- `tb-` = **Top and bottom** of the element (e.g. `rvt-m-tb-xl`)
-- `lr-` = **Left and right** of the element (e.g. `rvt-p-lr-md`)
+- `tb` = **Top and bottom** of the element (e.g. `rvt-m-tb-xl`)
+- `lr` = **Left and right** of the element (e.g. `rvt-p-lr-md`)
 - `xs` = Extra Small (8px/.5rem)
 - `sm` = Small (16px/1rem)
 - `md` = Medium (24px/1.5rem)
 - `lg` = Large (32px/2rem)
 - `xl` = Extra large (40px/2.5rem)
 - `xxl` = Extra extra large (48px/3rem)
+- `none` = Remove margin/padding from any of the previous combinations
 
 So the class `.rvt-m-top-sm` would add 16px/1rem of margin on all screen sizes to the top of the element it was applied to.
 
@@ -47,7 +48,7 @@ So the class `.rvt-m-top-sm` would add 16px/1rem of margin on all screen sizes t
 Each spacing utility class also comes with a set of modifiers that allow you to adjust spacing at different screen sizes. Take the following `div`
 
 {{< code >}}<div class="rvt-p-bottom-sm rvt-p-bottom-lg-lg-up">
-    ...
+    <!-- markup -->
 </div>
 {{< /code >}}
 
@@ -66,8 +67,23 @@ All spacing utilities described above have the following responsive modifiers av
 See the documentation about Rivet's global breakpoints in [the grid documentation](../grid/#grid-breakpoints).
 {{< /alert >}}
 
-### All spacing
-Using the size conventions above you could apply the class `.rvt-p-all-xl` to add an Extra large amount (40px/2.5rem) to both the top and bottom of an element.
+#### Responsive removal of spacing
+Sometimes you may need to totally remove the margin or padding of an element at different screen sizes. The margin/padding removal utility classes use the following pattern:
 
-### No spacing
-If you want to remove all margin or padding from and element you could use the class `.rvt-m-all-remove`, or `.rvt-p-all-remove`.
+`.rvt-*1-none-*2-up`
+
+- `*1` = `m` (margin) or `p` (padding)
+- `*2` = one of the following breakpoints `sm`, `md`, `lg`, `xl`, `xxl`
+
+#### Responsive spacing example
+{{< example >}}<div class="rvt-m-top-xxl rvt-m-top-none-lg-up">
+  <div class="rvt-box">
+    <div class="rvt-box__body">
+      <p>This box will have xxl top margin on small screens and no margin on md screens and up.</p>
+    </div>
+  </div>
+</div>
+{{< /example >}}
+
+### Add spacing to all sides
+Using the size conventions above you could apply the class `.rvt-p-all-xl` to add an Extra large amount (40px/2.5rem) to both the top and bottom of an element.

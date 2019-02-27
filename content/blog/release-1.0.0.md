@@ -17,7 +17,7 @@ The [last pre-release of Rivet]({{< ref "blog/release-0.5.0.md" >}}) was the mos
 
 <div class="rvt-alert rvt-alert--info rvt-m-bottom-md rvt-m-top-sm">
     <h3 class="rvt-alert__title" id="warning-alert-title">Changes in 1.0.0</h3>
-    <p class="rvt-alert__message">The updates we've made since the last release (0.5.0) were all additive and shouldn't be breaking changes. If you do run into any problems updating, <a href="https://github.com/indiana-university/rivet-source/issues">please open an issue on Github.iu</a>.</p>
+    <p class="rvt-alert__message">The updates we've made since the last release (0.5.0) were all additive and shouldn't be breaking changes. If you do run into any problems updating, <a href="https://github.com/indiana-university/rivet-source/issues/new/choose">please open an issue on Github.iu</a>.</p>
 </div>
 
 ## 1.0.0 Additions
@@ -36,6 +36,6 @@ This quarter we'll be working on more documentation and training around using Ri
 
 We would appreciate any feedback you have and be happy to answer any questions. The best way to submit feedback is by creating an issue on Github.IU, or email uxo@iu.edu:
 
-https://github.com/indiana-university/rivet-source/issues
+https://github.com/indiana-university/rivet-source/issues/new/choose
 
 Thanks!
