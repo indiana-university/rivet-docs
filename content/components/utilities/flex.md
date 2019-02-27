@@ -43,7 +43,9 @@ A flex container is generally the parent element to which you would apply the `d
 
 The following flex **container** CSS utility classes are available:
 
-#### [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex), [flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction), and [flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
+#### flex, flex-direction, and flex-wrap
+Please see the docs on [MDN][1] more information about the [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex), [flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction), and [flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) properties.
+
 - `.rvt-flex`
 - `.rvt-inline-flex`
 - `.rvt-row`
@@ -54,7 +56,9 @@ The following flex **container** CSS utility classes are available:
 - `.rvt-no-wrap`
 - `.rvt-wrap-reverse`
 
-#### [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+#### justify-content
+Please see the docs on [MDN][1] more information about the [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) property.
+
 - `.rvt-justify-start`
 - `.rvt-justify-end`
 - `.rvt-justify-center`
@@ -62,14 +66,18 @@ The following flex **container** CSS utility classes are available:
 - `.rvt-justify-space-around`
 - `.rvt-justify-space-evenly`
 
-#### [align-content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
+#### align-content
+Please see the docs on [MDN][1] more information about the [align-content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) property.
+
 - `.rvt-content-start`
 - `.rvt-content-end`
 - `.rvt-content-center`
 - `.rvt-content-stretch`
 - `.rvt-content-baseline`
 
-#### [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+#### align-items
+Please see the docs on [MDN][1] more information about the [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) property.
+
 - `.rvt-items-start`
 - `.rvt-items-end`
 - `.rvt-items-center`
@@ -81,15 +89,21 @@ A flex item is generally the direct child of any flex container. The flex utilit
 
 The following flex **item** CSS utility classes are available:
 
-#### [flex-shrink](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink) and [flex-grow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
+#### flex-shrink and flex-grow
+Please see the docs on [MDN][1] more information about the [flex-shrink](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink) and [flex-grow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow) properties.
+
 - `.rvt-shrink-1`
 - `.rvt-shrink-0`
 - `.rvt-grow-1`
 - `.rvt-grow-0`
 
-#### [align-self](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
+#### align-self
+Please see the docs on [MDN][1] more information about the [align-self](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self) property.
+
 - `.rvt-self-start`
 - `.rvt-self-end`
 - `.rvt-center-end`
 - `.rvt-stretch-end`
 - `.rvt-baseline-end`
+
+[1]: https://developer.mozilla.org/en-US/docs/Web
