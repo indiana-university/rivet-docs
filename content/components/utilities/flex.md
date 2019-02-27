@@ -22,7 +22,7 @@ The flex utilities **are not intended for page layout**. You should use the [Riv
 ## Available flex utilities
 The flex utilities come with CSS classes for most [flex properties](https://developer.mozilla.org/en-US/docs/Web/CSS/flex), but not all.
 
-Because we have designed these utilities to be generic, we have intentionally left out flex properties that require specific knowledge of how many items live in a given flex container (e.g. `order`), as we'd be unable to create utility classes that would cover every likely combination. We've left out properties that set widths of flex children (e.g. `flex-basis`) for similar reasons.
+Because we have designed these utilities to be generic, we have intentionally left out flex properties that require specific knowledge of how many items live in a given flex container (e.g. `order`), as we'd be unable to create utility classes that would cover every likely combination. We've left out properties that set the widths of flex children (e.g. `flex-basis`) for similar reasons.
 
 {{< alert variant="info" title="Help with flexbox" >}}
 The specifics of how the various flexbox properties work is beyond the scope of this documentation. If you need help with flexbox, we recommend checking out this [Complete Guide to Flexbox on CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
@@ -44,7 +44,7 @@ A flex container is generally the parent element to which you would apply the `d
 The following flex **container** CSS utility classes are available:
 
 #### flex, flex-direction, and flex-wrap
-Please see the docs on [MDN][1] more information about the [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex), [flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction), and [flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) properties.
+See the documentation on the [Mozilla Developer Network (MDN)][1] for more information about the [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex), [flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction), and [flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) properties.
 
 - `.rvt-flex`
 - `.rvt-inline-flex`
@@ -57,7 +57,7 @@ Please see the docs on [MDN][1] more information about the [flex](https://develo
 - `.rvt-wrap-reverse`
 
 #### justify-content
-Please see the docs on [MDN][1] more information about the [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) property.
+See the documentation on [MDN][1] for more information about the [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) property.
 
 - `.rvt-justify-start`
 - `.rvt-justify-end`
@@ -67,7 +67,7 @@ Please see the docs on [MDN][1] more information about the [justify-content](htt
 - `.rvt-justify-space-evenly`
 
 #### align-content
-Please see the docs on [MDN][1] more information about the [align-content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) property.
+See the documentation on [MDN][1] for more information about the [align-content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) property.
 
 - `.rvt-content-start`
 - `.rvt-content-end`
@@ -76,7 +76,7 @@ Please see the docs on [MDN][1] more information about the [align-content](https
 - `.rvt-content-baseline`
 
 #### align-items
-Please see the docs on [MDN][1] more information about the [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) property.
+See the documentation on [MDN][1] for more information about the [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) property.
 
 - `.rvt-items-start`
 - `.rvt-items-end`
@@ -90,7 +90,7 @@ A flex item is generally the direct child of any flex container. The flex utilit
 The following flex **item** CSS utility classes are available:
 
 #### flex-shrink and flex-grow
-Please see the docs on [MDN][1] more information about the [flex-shrink](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink) and [flex-grow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow) properties.
+See the documentation on [MDN][1] for more information about the [flex-shrink](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink) and [flex-grow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow) properties.
 
 - `.rvt-shrink-1`
 - `.rvt-shrink-0`
@@ -98,7 +98,7 @@ Please see the docs on [MDN][1] more information about the [flex-shrink](https:/
 - `.rvt-grow-0`
 
 #### align-self
-Please see the docs on [MDN][1] more information about the [align-self](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self) property.
+See the documentation on [MDN][1] for more information about the [align-self](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self) property.
 
 - `.rvt-self-start`
 - `.rvt-self-end`
