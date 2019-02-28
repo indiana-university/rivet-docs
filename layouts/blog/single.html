@@ -30,6 +30,25 @@
                 {{.TableOfContents}}
             </div>
             {{ .Content }}
+            
+            <nav class="rvtd-post-nav rvt-p-top-sm rvt-border-top">
+                {{ if .PrevInSection }}
+                <a class="rvtd-post-nav__prev" href="{{ .PrevInSection.Permalink }}">
+                    <span class="rvt-m-right-xs">
+                        <span class="rvt-display-block rvt-text-uppercase">Previous:</span>
+                        {{ .PrevInSection.Title }}
+                    </span>
+                </a>
+                {{ end }}
+                {{ if .NextInSection }}
+                <a class="rvtd-post-nav__next" href="{{ .NextInSection.Permalink }}">
+                    <span class="rvt-m-right-xs">
+                        <span class="rvt-display-block rvt-text-uppercase">Next:</span>
+                        {{ .NextInSection.Title}}
+                    </span>
+                </a>
+                {{ end }}
+            </nav>
         </div>
     </div>
     <!-- {{ partial "article-sidebar.html" . }} -->

@@ -723,3 +723,46 @@ a.button--reverse-secondary {
 .rvtd-post-date {
   color: $color-black--600;
 }
+
+.rvtd-mark {
+  &:before {
+    content: "";
+    display: block;
+    width: $lg;
+    height: $xs;
+    background-color: $color-crimson;
+    margin-bottom: $lg;
+    margin-top: -$xxs;
+  }
+}
+
+.rvtd-post-nav {
+  &__prev,
+  &__next {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__next {
+    margin-top: $sm;
+  }
+}
+
+@include mq($breakpoint-md) {
+  .rvtd-post-nav {
+    display: flex;
+    margin-top: $xl;
+    
+    &__prev,
+    &__next {
+      flex-grow: 1;
+      padding: $sm $xxs;
+    }
+    
+    &__next {
+      justify-content: flex-end; 
+      margin-top: 0;
+    }
+  }
+}

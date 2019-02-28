@@ -3,14 +3,14 @@
     <div class="rvt-grid">
         <div class="rvt-grid__item-8-md-up">
             <div class="rvtd-typeset">
-                <h1 class="rvt-text-bold">{{ .Title }}</h1>
-                <p class="rvtd-lead rvt-m-bottom-remove">{{ .Description }}</p>
+                <h1 class="rvt-text-bold">{{ .Description }}</h1>
+                <!-- <p class="rvtd-lead rvt-m-bottom-remove"></p> -->
             </div>
         </div>
     </div>
 </div>
 <div class="rvt-container rvt-container--center rvt-container--junior rvt-m-bottom-xxl">
-    <div class="rvt-grid">
+    <div class="rvt-grid rvt-m-top-xxl">
         <div class="rvt-grid__item-8-md-up">
             <ol class="rvt-plain-list">
                 {{ range .Data.Pages }}
@@ -34,9 +34,12 @@
                 {{ end }}
             </ol>
         </div>
-        <div class="rvt-grid__item-4-md-up rvt-m-top-lg">
-            <div class="rvt-p-left-md-md-up">
-                {{ partial "email-callout-sidebar.html" . }}
+        <div class="rvt-grid__item-3-md-up rvt-grid__item--last">
+            <div class="rvt-m-top-xxl">
+                <h2 class="rvt-ts-16 rvt-text-bold rvtd-mark">About Rivet</h2>
+                <p class="rvt-m-bottom-none">
+                    Rivet is a university-wide initiative, overseen by the <a href="https://ux.iu.edu">UX Office</a>.
+                </p>
             </div>
         </div>
     </div>
