@@ -14,11 +14,10 @@
 
 .rvtd-nav {
     padding: $md;
-    display: none;
 }
 
-.rvtd-nav.is-visible {
-    display: block;
+.rvtd-nav[aria-hidden="true"] {
+    display: none;
 }
 
 @include mq(bp(md)) {

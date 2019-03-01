@@ -1,7 +1,7 @@
 <!-- Capture the current page here -->
 {{ $currentPage := . }}
 {{ $currentParentSection := .Section }}
-<nav class="rvtd-nav" :class="{ 'is-visible' : navIsVisible }" role="navigation" aria-label="section">
+<nav class="rvtd-nav" role="navigation" aria-label="section" aria-hidden="true" id="main-nav">
     <span class="rvt-m-bottom-md rvt-display-block">Version <span class="rvt-text-bold">{{ .Site.Params.rivetVersion }}</span></span>
     <ul class="rvtd-toc">
         {{ range where .Site.Sections "Section" $currentParentSection }}

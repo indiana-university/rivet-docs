@@ -1,9 +1,4 @@
 <div class="rvtd-sidebar">
-  <form role="search">
-    <div class="rvt-p-all-md rvt-border-bottom">
-      <label for="docs-search" class="rvt-sr-only">Search the docs</label>
-      <input type="text" id="docs-search" placeholder="Search the docs">
-    </div>
-  </form>
+  {{ partial "search-form" . }}
   {{ partial "section-nav.html" . }}
 </div>
