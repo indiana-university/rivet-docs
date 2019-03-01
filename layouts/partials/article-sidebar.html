@@ -1,7 +1,3 @@
-{{ $base := "https://api.github.com/users/" }}
-{{ $ghUsername := .Params.author.ghUsername }}
-{{ $newURL := print $base $ghUsername }}
-
 <div class="rvtd-mark">
     {{ if .Params.author.email }}
     <div class="rvt-flex rvt-items-center rvt-m-top-md">
