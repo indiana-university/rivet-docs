@@ -5,7 +5,7 @@ date: "2019-01-30"
 draft: false
 excludeFromIndex: true
 author:
-  email: "scanmurr@indiana.edu"
+  email: "scanmurr@iu.edu"
   name: "Scott Anthony Murray"
 ---
 We've deprecated the [Rivet panel component]({{< ref "/components/layout/panels.md" >}}) and will be removing it in the next major release of Rivet (`2.0.0`) in favor of two new components: the **box** and **media object**.

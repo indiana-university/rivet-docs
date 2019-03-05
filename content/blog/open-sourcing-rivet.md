@@ -4,7 +4,7 @@ description: The Rivet source code will be moved from GitHub@IU to GitHub.com on
 date: "2019-01-08"
 excludeFromIndex: true
 author:
-  email: "scanmurr@indiana.edu"
+  email: "scanmurr@iu.edu"
   name: "Scott Anthony Murray"
 ---
 After some discussions within the UX Office and with folks around UITS, we've decided to open source Rivet.
