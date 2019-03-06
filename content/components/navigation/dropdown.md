@@ -50,6 +50,7 @@ events:
 ## Dropdown example
 {{< example lang="html" >}}<div class="rvt-dropdown">
     <button
+         type="button"
         class="rvt-button"
         data-dropdown-toggle="dropdown-navigation"
         aria-haspopup="true"
@@ -117,6 +118,7 @@ To align the dropdown menu with the right side of the dropdown button, add the `
 
 {{< example lang="html" >}}<div class="rvt-dropdown">
     <button
+        type="button"
         class="rvt-button rvt-button--secondary"
         data-dropdown-toggle="dropdown-right"
         aria-haspopup="true"
@@ -154,20 +156,20 @@ We’ve also included a couple of extra layout elements here for when you may ne
 The following example shows how to implement these additional dropdown elements.
 
 {{< example lang="html" >}}<div class="rvt-dropdown">
-    <button class="rvt-button" data-dropdown-toggle="dropdown-1" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="rvt-button" data-dropdown-toggle="dropdown-1" aria-haspopup="true" aria-expanded="false">
         <span>Application menu</span>
         <svg aria-hidden="true" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
         </svg>
     </button>
     <div class="rvt-dropdown__menu" id="dropdown-1" role="menu" aria-hidden="true">
-        <button role="menuitemradio">Notify all</button>
-        <button role="menuitemradio" aria-checked="true">Notify admins</button>
-        <button role="menuitemradio">Notify contributors</button>
+        <button type="button" role="menuitemradio">Notify all</button>
+        <button type="button" role="menuitemradio" aria-checked="true">Notify admins</button>
+        <button type="button" role="menuitemradio">Notify contributors</button>
         <div class="rvt-dropdown__menu-heading" aria-hidden="true">Personal settings</div>
         <div role="group" aria-label="Personal settings">
-            <button role="menuitem">Profile Settings</button>
-            <button role="menuitem">Logout</button>
+            <button type="button" role="menuitem">Profile Settings</button>
+            <button type="button" role="menuitem">Logout</button>
         </div>
     </div>
 </div>

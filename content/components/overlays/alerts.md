@@ -30,7 +30,7 @@ events:
 {{< example lang="html" >}}<div class="rvt-alert rvt-alert--info rvt-m-bottom-md" role="alertdialog" aria-labelledby="information-alert-title">
     <h1 class="rvt-alert__title" id="information-alert-title">Scheduled System Maintenance</h1>
     <p class="rvt-alert__message">This system will be unavailable on August 1st due to scheduled system maintenance. Please check back on August 2nd.</p>
-    <button class="rvt-alert__dismiss">
+    <button type="button" class="rvt-alert__dismiss">
         <span class="v-hide">Dismiss this alert</span>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
@@ -41,7 +41,7 @@ events:
 <div class="rvt-alert rvt-alert--success rvt-m-bottom-md" role="alertdialog" aria-labelledby="success-alert-title">
     <h1 class="rvt-alert__title" id="success-alert-title">Thank you!</h1>
     <p class="rvt-alert__message">We have received your application. Check your email in a few weeks to find out if you’ve been admitted.</p>
-    <button class="rvt-alert__dismiss">
+    <button type="button" class="rvt-alert__dismiss">
         <span class="v-hide">Dismiss this alert</span>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
@@ -52,7 +52,7 @@ events:
 <div class="rvt-alert rvt-alert--warning rvt-m-bottom-md" role="alertdialog" aria-labelledby="warning-alert-title">
     <h1 class="rvt-alert__title" id="warning-alert-title">Unsaved Changes</h1>
     <p class="rvt-alert__message">Your changes have not been saved. To save your changes, click ‘Save my changes’ or click ‘Cancel’ to exit without saving.</p>
-    <button class="rvt-alert__dismiss">
+    <button type="button" class="rvt-alert__dismiss">
         <span class="v-hide">Dismiss this alert</span>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
@@ -305,4 +305,3 @@ The Rivet alert component comes with a couple of methods you can use to programm
 ### Available methods
 
 {{< apidocs type="methods" >}}{{< /apidocs >}}
-

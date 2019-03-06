@@ -89,9 +89,9 @@ The example below features a [checkbox]({{< ref "/components/forms/checkboxes.md
         </svg>
       </button>
       <div class="rvt-dropdown__menu rvt-dropdown__menu--right" id="dropdown-1" role="menu" aria-hidden="true">
-        <button role="menuitemradio">Notify all</button>
-        <button role="menuitemradio" aria-checked="true">Notify admins</button>
-        <button role="menuitemradio">Notify contributors</button>
+        <button type="button" role="menuitemradio">Notify all</button>
+        <button type="button" role="menuitemradio" aria-checked="true">Notify admins</button>
+        <button type="button" role="menuitemradio">Notify contributors</button>
       </div>
     </div>
   </div>

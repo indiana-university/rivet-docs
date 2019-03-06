@@ -23,6 +23,10 @@ status: "Ready"
 </div>
 {{< /example >}}
 
+{{< alert variant="warning" title="Button types" >}}
+Be aware that when using buttons, unless they have the `type="button"` attribute, they will automatically submit nearby forms on the page.
+{{< /alert >}}
+
 ### Small buttons
 You can create smaller buttons by adding the `.rvt-button--small` modifier class. The small button modifier can be used together with the other button modifier classes to make any variation of small buttons.
 
@@ -83,13 +87,13 @@ When you use icons inside buttons, you should still include button text to descr
 See the example below using the `.rvt-sr-only` utility class to visually hide the button text.
 
 {{< example lang="html" >}}<div class="rvt-button-group">
-    <button class="rvt-button">
+    <button type="button" class="rvt-button">
         <span class="rvt-m-right-xs">Add item</span>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M14,7H9V2A1,1,0,0,0,7,2V7H2A1,1,0,0,0,2,9H7v5a1,1,0,0,0,2,0V9h5a1,1,0,0,0,0-2Z"/>
         </svg>
     </button>
-    <button class="rvt-button">
+    <button type="button" class="rvt-button">
         <span class="rvt-m-right-xs">Copy</span>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -98,7 +102,7 @@ See the example below using the `.rvt-sr-only` utility class to visually hide th
             </g>
         </svg>
     </button>
-    <button class="rvt-button rvt-button--danger">
+    <button type="button" class="rvt-button rvt-button--danger">
         <span class="rvt-m-right-xs">Delete</span>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <g fill="currentColor">
@@ -107,7 +111,7 @@ See the example below using the `.rvt-sr-only` utility class to visually hide th
             </g>
         </svg>
     </button>
-    <button class="rvt-button rvt-button--secondary">
+    <button type="button" class="rvt-button rvt-button--secondary">
         <span class="rvt-sr-only">Edit entry</span>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M14.62,4.19,11.74,1.34a1.1,1.1,0,0,0-1.55,0L0,11.62,0,16l4.45,0L14.64,5.73A1.1,1.1,0,0,0,14.62,4.19ZM3.62,14H2V12.44l6-6L9.58,8ZM11,6.57,9.4,5,11,3.4,12.57,5Z"/>
@@ -123,16 +127,16 @@ The `.rvt-button rvt-button--*` classes are meant to be used on the `<button>` e
 When you need to display a group of buttons you can wrap them in a `div` with the class `.rvt-button-group` applied to it. The `.rvt-button-group` class will add an equal amount of margin to the right side of every button in the group except the last one.
 
 {{< example lang="html" >}}<div class="rvt-button-group">
-    <button class="rvt-button">Ok</button>
-    <button class="rvt-button rvt-button--secondary">Cancel</button>
+    <button type="button" class="rvt-button">Ok</button>
+    <button type="button" class="rvt-button rvt-button--secondary">Cancel</button>
 </div>
 {{< /example >}}
 
 If you need to right align your buttons, you can add the `.rvt-button-group--right` modifier class to the `.rvt-button-group` div.
 
 {{< example lang="html" >}}<div class="rvt-button-group rvt-button-group--right">
-    <button class="rvt-button">Ok</button>
-    <button class="rvt-button rvt-button--secondary">Cancel</button>
+    <button type="button" class="rvt-button">Ok</button>
+    <button type="button" class="rvt-button rvt-button--secondary">Cancel</button>
 </div>
 {{< /example >}}
 

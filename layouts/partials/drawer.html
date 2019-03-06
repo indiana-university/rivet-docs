@@ -7,7 +7,7 @@
         <div class="ts-14 m-top-sm m-bottom-sm text-uppercase">Navigation</div>
         <ul class="hide-on-desktop">
             <li class="has-children">
-                <button role="button" role="button" data-subnav-toggle="documentation-subnav" aria-haspopup="true" aria-expanded="false">Documentation</button>
+                <button type="button" role="button" data-subnav-toggle="documentation-subnav" aria-haspopup="true" aria-expanded="false">Documentation</button>
                 <ul id="documentation-subnav" aria-hidden="true">
                     <li><a href="{{ trim .Site.BaseURL "/" }}/components">Components</a></li>
                     <li><a href="{{ trim .Site.BaseURL "/" }}/add-ons">Add-ons</a></li>
@@ -15,7 +15,7 @@
                 </ul>
             </li>
             <li class="has-children">
-                <button role="button" data-subnav-toggle="about-subnav" aria-haspopup="true" aria-expanded="false">About Rivet</button>
+                <button type="button" role="button" data-subnav-toggle="about-subnav" aria-haspopup="true" aria-expanded="false">About Rivet</button>
                 <ul id="about-subnav" aria-hidden="true">
                     <li><a href="{{ trim .Site.BaseURL "/" }}/about">What is Rivet?</a></li>
                     <li><a href="{{ trim .Site.BaseURL "/" }}/blog">Blog</a></li>
@@ -32,6 +32,6 @@
                 <li><a {{ if ne .self true }}target="_blank"{{ end }} href="{{ .url }}">{{ .text }}</a></li>
             {{ end }}
         </ul>
-        <button class="rvt-drawer__bottom-close">Close nav</button>
+        <button type="button" class="rvt-drawer__bottom-close">Close nav</button>
     </nav>
 </div>
