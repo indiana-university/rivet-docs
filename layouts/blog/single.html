@@ -20,15 +20,15 @@
                                     <circle cx="8" cy="5" r="1" />
                                 </g>
                             </svg>
-                            <p class="rvt-ts-18 rvt-text-bold rvt-m-all-remove">In this article</p>
+                            <p class="rvt-text-bold rvt-m-all-remove rvt-lh-title">In this article</p>
                         </div>
                         {{.TableOfContents}}
                     </div>
                     {{ .Content }}
                     
-                    <nav class="rvt-p-top-md rvt-m-top-xxl rvt-border-top rvt-flex-md-up rvt-justify-space-between">
+                    <nav class="rvtd-article-nav rvt-p-top-md rvt-m-top-xxl rvt-border-top rvt-flex-md-up rvt-justify-space-between" aria-label="Article navigation">
                         {{ if .PrevInSection }}
-                        <a class="rvtd-plain-link rvt-grow-1-md-up rvt-shrink-0" href="{{ .PrevInSection.Permalink }}" >
+                        <a class="rvtd-plain-link rvt-grow-1-md-up rvt-p-right-lg-md-up" href="{{ .PrevInSection.Permalink }}" >
                             <span>
                                 <span class="rvt-display-block rvt-text-uppercase rvt-ts-14">Previous:</span>
                                 <span class="rvt-text-bold">{{ .PrevInSection.Title }}</span>
@@ -36,7 +36,7 @@
                         </a>
                         {{ end }}
                         {{ if .NextInSection }}
-                        <a class="rvt-display-block rvtd-plain-link rvt-m-top-sm rvt-m-top-none-md-up rvt-grow-1-md-up rvt-shrink-0 rvt-justify-content-end" href="{{ .NextInSection.Permalink }}">
+                        <a class="rvt-display-block rvtd-plain-link rvt-m-top-sm rvt-m-top-none-md-up rvt-grow-1-md-up rvt-justify-content-end" href="{{ .NextInSection.Permalink }}">
                             <span>
                                 <span class="rvt-display-block rvt-text-uppercase rvt-ts-14">Next:</span>
                                 <span class="rvt-text-bold">{{ .NextInSection.Title}}</span>
