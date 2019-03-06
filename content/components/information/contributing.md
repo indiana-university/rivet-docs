@@ -6,7 +6,7 @@ excludeFromStatus: true
 ## Github issues
 We’ll be using Github issues to keep track of new component submissions, bugs, design feedback, and any other suggestions related to the design system. To help us understand the kind of contribution you want to make, we ask that you first [submit an issue on GitHub](https://github.com/indiana-university/rivet-source/issues/new/choose).
 
-{{<button  type="button" url="https://github.com/indiana-university/rivet-source/issues/new/choose" >}}Create an issue{{< /button >}}
+{{<button url="https://github.com/indiana-university/rivet-source/issues/new/choose" >}}Create an issue{{< /button >}}
 
 ## Guidelines
 Here are a few guidelines to follow when creating a new issue:
