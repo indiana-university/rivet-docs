@@ -96,7 +96,7 @@ The inclusion of an avatar and username, or only username are both appropriate c
                 Log out
             </a>
         </div>
-        <button class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="mobile-drawer">
+        <button type="button" class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="mobile-drawer">
             <span class="sr-only">Toggle menu</span>
             <svg aria-hidden="true" class="rvt-drawer-button-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <g fill="currentColor">
@@ -120,7 +120,7 @@ The inclusion of an avatar and username, or only username are both appropriate c
                 </a>
             </div>
         </div>
-        <button class="rvt-drawer__bottom-close">Close nav</button>
+        <button type="button" class="rvt-drawer__bottom-close">Close nav</button>
     </div>
 </header>
 {{< /example >}}
@@ -152,7 +152,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                 </li>
                 <li>
                     <div class="rvt-dropdown">
-                        <button class="rvt-dropdown__toggle" data-dropdown-toggle="dropdown-1" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="rvt-dropdown__toggle" data-dropdown-toggle="dropdown-1" aria-haspopup="true" aria-expanded="false">
                             <span class="rvt-dropdown__toggle-text">Nav two</span>
                             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <title>Dropdown icon</title>
@@ -173,7 +173,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                 </li>
                 <li>
                     <div class="rvt-dropdown">
-                        <button class="rvt-dropdown__toggle" data-dropdown-toggle="dropdown-2" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="rvt-dropdown__toggle" data-dropdown-toggle="dropdown-2" aria-haspopup="true" aria-expanded="false">
                             <span class="rvt-dropdown__toggle-text">Nav four</span>
                             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
@@ -192,7 +192,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
         <!-- ID menu w/ dropdown -->
         <div class="rvt-header-id">
             <div class="rvt-dropdown">
-                <button class="rvt-header-id__profile rvt-header-id__profile--has-dropdown rvt-dropdown__toggle" data-dropdown-toggle="id-dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="rvt-header-id__profile rvt-header-id__profile--has-dropdown rvt-dropdown__toggle" data-dropdown-toggle="id-dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
                     <span class="rvt-header-id__user">rswanson</span>
                     <svg aria-hidden="true" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -210,7 +210,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
             </div>
         </div>
         <!-- Drawer close button - shows on small screens -->
-        <button class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="mobile-drawer-2">
+        <button type="button" class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="mobile-drawer-2">
             <span class="sr-only">Toggle menu</span>
             <svg aria-hidden="true" class="rvt-drawer-button-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <g fill="currentColor">
@@ -236,7 +236,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
         <nav class="rvt-drawer__nav" role="navigation">
             <ul>
                 <li class="has-children">
-                    <button class="rvt-header-id__profile rvt-header-id__profile--drawer" data-subnav-toggle="subnav-id" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="rvt-header-id__profile rvt-header-id__profile--drawer" data-subnav-toggle="subnav-id" aria-haspopup="true" aria-expanded="false">
                         <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
                         <span class="rvt-header-id__user rvt-header-id__user--has-dropdown">rswanson</span>
                     </button>
@@ -261,7 +261,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                     <a href="#">Nav one</a>
                 </li>
                 <li class="has-children">
-                    <button data-subnav-toggle="subnav-1" aria-haspopup="true" aria-expanded="false">Nav two</button>
+                    <button type="button" data-subnav-toggle="subnav-1" aria-haspopup="true" aria-expanded="false">Nav two</button>
                     <div id="subnav-1" role="menu" aria-hidden="true">
                         <ul>
                             <li>
@@ -280,7 +280,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                     <a href="#" aria-current="page">Nav three</a>
                 </li>
                 <li class="has-children">
-                    <button data-subnav-toggle="subnav-2" aria-haspopup="true" aria-expanded="false">Nav four</button>
+                    <button type="button" data-subnav-toggle="subnav-2" aria-haspopup="true" aria-expanded="false">Nav four</button>
                     <div id="subnav-2" role="menu" aria-hidden="true">
                         <ul>
                             <li>
@@ -296,7 +296,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                     </div>
                 </li>
             </ul>
-            <button class="rvt-drawer__bottom-close">Close nav</button>
+            <button type="button" class="rvt-drawer__bottom-close">Close nav</button>
         </nav>
     </div>
 </header>
@@ -335,7 +335,7 @@ Additionally, any navigation item that will contain sub navigation items needs t
     <nav class="rvt-drawer__nav" role="navigation">
         <ul>
             <li class="has-children">
-                <button class="rvt-header-id__profile rvt-header-id__profile--drawer" data-subnav-toggle="subnav-id" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="rvt-header-id__profile rvt-header-id__profile--drawer" data-subnav-toggle="subnav-id" aria-haspopup="true" aria-expanded="false">
                     <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
                     <span class="rvt-header-id__user rvt-header-id__user--has-dropdown">rswanson</span>
                 </button>
@@ -358,7 +358,7 @@ Additionally, any navigation item that will contain sub navigation items needs t
             </li>
             <li><a href="#0">Nav one</a></li>
             <li class="has-children">
-                <button data-subnav-toggle="subnav-1" aria-haspopup="true" aria-expanded="false">Nav two</button>
+                <button type="button" data-subnav-toggle="subnav-1" aria-haspopup="true" aria-expanded="false">Nav two</button>
                 <div id="subnav-1" role="menu" aria-hidden="true">
                     <ul>
                         <li>
@@ -375,7 +375,7 @@ Additionally, any navigation item that will contain sub navigation items needs t
             </li>
             <li><a href="#0">Nav three</a></li>
             <li class="has-children">
-                <button data-subnav-toggle="subnav-2" aria-haspopup="true" aria-expanded="false">Nav four</button>
+                <button type="button" data-subnav-toggle="subnav-2" aria-haspopup="true" aria-expanded="false">Nav four</button>
                 <div id="subnav-2" role="menu" aria-hidden="true">
                     <ul>
                         <li>
@@ -391,7 +391,7 @@ Additionally, any navigation item that will contain sub navigation items needs t
                 </div>
             </li>
         </ul>
-        <button class="rvt-drawer__bottom-close">Close nav</button>
+        <button type="button" class="rvt-drawer__bottom-close">Close nav</button>
     </nav>
 </div>
 {{< /code >}}
@@ -402,7 +402,7 @@ When your application has multiple user-specific functions (e.g. "Account settin
 {{< code >}}<!-- ID menu w/ dropdown -->
 <div class="rvt-header-id">
     <div class="rvt-dropdown">
-        <button class="rvt-header-id__profile rvt-header-id__profile--has-dropdown rvt-dropdown__toggle" data-dropdown-toggle="id-dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="rvt-header-id__profile rvt-header-id__profile--has-dropdown rvt-dropdown__toggle" data-dropdown-toggle="id-dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
             <span class="rvt-header-id__user">rswanson</span>
             <svg aria-hidden="true" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">

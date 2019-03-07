@@ -1,21 +1,8 @@
 {{ define "main" }}
 <div class="rvtd-wrap">
     <div class="rvtd-sidebar">
-        <search-form>
-            <button
-                class="rvt-button button button--secondary rvtd-sidebar__nav-toggle"
-                role="button"
-                :aria-expanded="navIsVisible ? 'true' : 'false'"
-                aria-haspopup="true"
-                @click="toggleNav"
-            >
-                <span class="sr-only">Toggle components menu</span>
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                    <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-                </svg>
-            </button>
-        </search-form>
-        {{ partial "section-nav.html" .}}
+        {{ partial "search-form" . }}
+        {{ partial "section-nav.html" . }}
     </div>
     <div class="rvtd-tube">
         <div class="rvtd-tube__inner rvtd-typeset">
