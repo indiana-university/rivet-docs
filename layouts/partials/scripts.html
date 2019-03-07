@@ -6,20 +6,8 @@
 {{ end }}
 <script src="{{ "js/telemetrics.js" | absURL }}"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-
 <script>
     hljs.initHighlightingOnLoad();
     var baseURL = "{{ .Site.BaseURL }}";
-</script>
-
-<script>
-    docsearch({
-        apiKey: '21932cb0064dada05e60ee0e7cbf98fa',
-        indexName: 'rivet_iu',
-        inputSelector: '#docs-search',
-        debug: true // Set debug to true if you want to inspect the dropdown
-    });
 </script>
 <script src="{{ "js/rivet-docs.js" | absURL }}?{{ now.Unix }}"></script>
