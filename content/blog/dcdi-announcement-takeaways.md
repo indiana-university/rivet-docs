@@ -7,7 +7,7 @@ excludeFromIndex: true
 
 At the beginning of February, Karen Fuson, IU's Chief Marketing Officer, asked Brian Hawkins to take the lead on forming a **Digital Campus Design & Infrastructure** group.
 
-This new group combines the UX Office, IU Communications’ web and UX teams, and UITS’s Content Systems team into a single unit in an effort to create more accessible, consistent, and effective experiences across all our digital products.
+This new group will look for ways to combine the UX Office, IU Communications’ web and UX teams, and UITS’s Content Systems team into a single unit in an effort to create more accessible, consistent, and effective experiences across all our digital products.
 
 You can read Brian's full announcement on the [Web Community of Practice Slack channel](https://iuwebcommunity.slack.com/archives/C0D9ZNKRR/p1551371506001400) or the [Enterprise Systems Slack channel](https://iu-uits-es.slack.com/archives/C7B0L07S8/p1551378899000300).
 
@@ -37,7 +37,7 @@ We intend to build the new design system in a way that makes it as straightforwa
 
 A big motivator for Rivet’s development was the recognition that web applications have unique needs when it comes to design, and new IU-branded assets were needed to better accomodate software in ways the existing marketing-focused assets weren't able to.
 
-While the new unified design system must work for both software and websites, application developers will have an equal seat at the table with marketers. Decisions about what goes into the design system will consider the needs of people building applications at IU, whether it's a new component, a suite of templates, or set of branding guidelines to be followed by everyone.
+While the new unified design system must work for both software and websites, application developers will have an equal seat at the table with marketers. Decisions about what goes into the design system will consider the needs of people building applications at IU, whether it's a new component, a suite of templates, or a set of branding guidelines to be followed by everyone.
 
 The design system team is also working toward a modular approach that would allow a developer to pull down only what they need for their application, rather than having to take the entire package with all the marketing and media bits.
 
