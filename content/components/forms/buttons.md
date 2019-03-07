@@ -24,7 +24,7 @@ status: "Ready"
 {{< /example >}}
 
 {{< alert variant="warning" title="Button types" >}}
-Be aware that when using buttons, unless they have the `type="button"` attribute, they will automatically submit nearby forms on the page.
+Be aware that buttons will automatically submit nearby forms on the page unless they have the `type="button"` attribute.
 {{< /alert >}}
 
 ### Small buttons
