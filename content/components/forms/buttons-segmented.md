@@ -8,18 +8,18 @@ weight: 2
 
 ## Segmented button examples
 {{< example lang="html" >}}<div class="rvt-button-segmented" role="group" aria-label="Primary controls">
-    <button class="rvt-button">Primary one</button>
-    <button class="rvt-button">Primary two</button>
-    <button class="rvt-button">Primary three</button>
+    <button type="button" class="rvt-button">Primary one</button>
+    <button type="button" class="rvt-button">Primary two</button>
+    <button type="button" class="rvt-button">Primary three</button>
 </div>
 {{< /example >}}
 
 ### Secondary modifier
 The segmented buttons can be used with any of Rivet's button modifiers.
 {{< example lang="html" >}}<div class="rvt-button-segmented" role="group" aria-label="Secondary controls">
-    <button class="rvt-button rvt-button--secondary">Secondary one</button>
-    <button class="rvt-button rvt-button--secondary">Secondary two</button>
-    <button class="rvt-button rvt-button--secondary">Secondary three</button>
+    <button type="button" class="rvt-button rvt-button--secondary">Secondary one</button>
+    <button type="button" class="rvt-button rvt-button--secondary">Secondary two</button>
+    <button type="button" class="rvt-button rvt-button--secondary">Secondary three</button>
 </div>
 {{< /example >}}
 
@@ -37,9 +37,9 @@ As an alternative, you could also use an `aria-labelledby` attribute. Its value 
 Adding the `.rvt-button-segmented--fitted` modifier to the segmented buttons' `<div>` container will make the buttons fill the entire width of their parent container.
 
 {{< example lang="html" >}}<div class="rvt-button-segmented rvt-button-segmented--fitted" role="group" aria-label="Fitted group">
-    <button class="rvt-button rvt-button--secondary">Left</button>
-    <button class="rvt-button rvt-button--secondary">Middle</button>
-    <button class="rvt-button rvt-button--secondary">Right</button>
+    <button type="button" class="rvt-button rvt-button--secondary">Left</button>
+    <button type="button" class="rvt-button rvt-button--secondary">Middle</button>
+    <button type="button" class="rvt-button rvt-button--secondary">Right</button>
 </div>
 {{< /example >}}
 
@@ -52,22 +52,22 @@ It _is_ possible to use segmented buttons with anchor tags if the situation call
 You can use the segmented button along with Rivet's dropdown component to create more complex controls like in the example below. Here we are also using some [padding utility classes]({{< ref "components/layout/spacing.md" >}}) to slightly decrease the width of the secondary action dropdown toggle.
 
 {{< example lang="html" >}}<div class="rvt-button-segmented" role="group" aria-label="Dropdown group">
-    <button class="rvt-button">Primary action</button>
+    <button type="button" class="rvt-button">Primary action</button>
     <div class="rvt-dropdown">
-        <button class="rvt-button rvt-p-right-xs rvt-p-left-xs" data-dropdown-toggle="segmented-example">
+        <button type="button" class="rvt-button rvt-p-right-xs rvt-p-left-xs" data-dropdown-toggle="segmented-example">
             <span class="rvt-sr-only">Toggle options menu</span>
             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
             </svg>
         </button>
         <div class="rvt-dropdown__menu" id="segmented-example" role="menu" aria-hidden="true">
-            <button role="menuitemradio">Notify all</button>
-            <button role="menuitemradio" aria-checked="true">Notify admins</button>
-            <button role="menuitemradio">Notify contributors</button>
+            <button type="button" role="menuitemradio">Notify all</button>
+            <button type="button" role="menuitemradio" aria-checked="true">Notify admins</button>
+            <button type="button" role="menuitemradio">Notify contributors</button>
             <div class="rvt-dropdown__menu-heading" aria-hidden="true">Personal settings</div>
             <div role="group" aria-label="Personal settings">
-                <button role="menuitem">Profile Settings</button>
-                <button role="menuitem">Logout</button>
+                <button type="button" role="menuitem">Profile Settings</button>
+                <button type="button" role="menuitem">Logout</button>
             </div>
         </div>
     </div>

@@ -24,7 +24,7 @@
         <div class="rvtd-toolbar__url">
           <span id="package-{{ .Params.packageName | md5 }}">npm install {{ .Params.packageName }}</span>
         </div>
-        <button class="rvt-button rvtd-package-copy" role="button" data-clipboard-target="#package-{{ .Params.packageName | md5 }}">Copy</button>
+        <button type="button" class="rvt-button rvtd-package-copy" role="button" data-clipboard-target="#package-{{ .Params.packageName | md5 }}">Copy</button>
         {{ end }}
       </div>
       <div class="rvtd-toolbar__secondary">
