@@ -18,16 +18,16 @@ status: "Ready"
 <div class="rvt-input-group rvt-m-top-xl">
     <div class="rvt-input-group__prepend">
         <div class="rvt-dropdown">
-            <button class="rvt-button rvt-p-right-xs rvt-p-left-xs" data-dropdown-toggle="segmented-prepend-example">
+            <button type="button" class="rvt-button rvt-p-right-xs rvt-p-left-xs" data-dropdown-toggle="segmented-prepend-example">
                 <span class="rvt-m-right-xs">Filter</span>
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
                 </svg>
             </button>
             <div class="rvt-dropdown__menu" role="menu" aria-hidden="true" id="segmented-prepend-example">
-                <button role="menuitemradio">My Stuff</button>
-                <button role="menuitemradio" aria-checked="true">All stuff</button>
-                <button role="menuitemradio">Archives</button>
+                <button type="button" role="menuitemradio">My Stuff</button>
+                <button type="button" role="menuitemradio" aria-checked="true">All stuff</button>
+                <button type="button" role="menuitemradio">Archives</button>
             </div>
         </div>
     </div>

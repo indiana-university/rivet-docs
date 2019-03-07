@@ -46,7 +46,7 @@ events:
             Emitted when the Modal is closed (using the `Modal.close()` method, or the `data-modal-trigger` attribute). The value of the modal `id` attribute is also passed along via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
 ---
 ## Modal example
-{{< example lang="html" >}}<button class="rvt-button" data-modal-trigger="modal-example-basic">Open modal example</button>
+{{< example lang="html" >}}<button type="button" class="rvt-button" data-modal-trigger="modal-example-basic">Open modal example</button>
 
 <div class="rvt-modal"
      id="modal-example-basic"
@@ -62,10 +62,10 @@ events:
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <a href="#">incididunt ut labore</a> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="rvt-modal__controls">
-            <button class="rvt-button">OK</button>
-            <button class="rvt-button rvt-button--secondary" data-modal-close="modal-example-basic">Cancel</button>
+            <button type="button" class="rvt-button">OK</button>
+            <button type="button" class="rvt-button rvt-button--secondary" data-modal-close="modal-example-basic">Cancel</button>
         </div>
-        <button class="rvt-button rvt-modal__close" data-modal-close="modal-example-basic">
+        <button type="button" class="rvt-button rvt-modal__close" data-modal-close="modal-example-basic">
             <span class="rvt-sr-only">Close</span>
             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
@@ -101,12 +101,12 @@ The `.rvt-modal__controls` element provides a space to add additional controls l
 ### Modal set up
 To use the modal component you'll need to do a few things. First, add the markup to your document.
 
-{{< code lang="html" >}}<button class="rvt-button" data-modal-trigger="my-modal-id">Open the modal</button>
+{{< code lang="html" >}}<button type="button" class="rvt-button" data-modal-trigger="my-modal-id">Open the modal</button>
 
 <div class="rvt-modal" id="my-modal-id">
     modal markup here...
 
-    <button class="rvt-button rvt-button--plain rvt-modal__close" data-modal-close="my-modal-id">
+    <button type="button" class="rvt-button rvt-button--plain rvt-modal__close" data-modal-close="my-modal-id">
         button markup here...
     </button>
 </div>
@@ -123,7 +123,7 @@ We use the generic term "Modal" to mean any smaller window that is displayed on 
 
 A modal dialog is similar to a regular modal except that **it requires the user to interact with it** before continuing any interaction with the main application. The user must select from the available actions in the dialog—they cannot disregard and simply close the window.
 
-{{< example lang="html" >}}<button class="rvt-button" data-modal-trigger="modal-dialog-example">Open modal dialog</button>
+{{< example lang="html" >}}<button type="button" class="rvt-button" data-modal-trigger="modal-dialog-example">Open modal dialog</button>
 <div class="rvt-modal"
      id="modal-dialog-example"
      role="dialog"
@@ -143,8 +143,8 @@ A modal dialog is similar to a regular modal except that **it requires the user 
             </ul>
         </div>
         <div class="rvt-modal__controls">
-            <button class="rvt-button">Yes</button>
-            <button class="rvt-button rvt-button--secondary" data-modal-close="modal-dialog-example">No, thanks</button>
+            <button type="button" class="rvt-button">Yes</button>
+            <button type="button" class="rvt-button rvt-button--secondary" data-modal-close="modal-dialog-example">No, thanks</button>
         </div>
     </div>
 </div>
@@ -200,4 +200,3 @@ document.addEventListener('modalOpen', event => {
   // Maybe send some data via an AJAX request, etc...
 }, false);
 {{< /code >}}
-
