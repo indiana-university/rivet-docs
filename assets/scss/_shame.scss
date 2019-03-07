@@ -737,7 +737,10 @@ a.button--reverse-secondary {
     background-color: $color-crimson;
     margin-bottom: $lg;
     margin-top: -$xxs;
-// DocSearch
+  }
+}
+
+// DocSearch styles
 
 .algolia-autocomplete {
     display: block !important;
