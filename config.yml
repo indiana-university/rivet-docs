@@ -8,7 +8,7 @@ taxonomies:
   addOnTag: addOnTags
   tag: tags
 outputs:
-  section: ["html", "json"]
+  section: ["html"]
 params:
   rivetVersion: 1.3.0
   tagline: "Design System"
