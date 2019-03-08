@@ -1,0 +1,48 @@
+{{ $ChangelogData := $.Site.Data.changelog }}
+
+<section class="rvtd-changelog rvtd-changelog--light" id="changelog">
+  <div class="rvt-container rvt-container--junior rvt-container--center">
+    <div class="rvtd-changelog__list">
+      {{ range first 5 $ChangelogData }}
+        <div class="rvt-grid rvtd-changelog__entry">
+          <div class="rvt-grid__item-3-lg-up">
+            <div class="rvtd-changelog__version{{ if eq (index $ChangelogData 0) . }} rvt-ts-29{{ end }}">Rivet {{ replace .tag_name "v" "" }}</div>
+            <div class="rvtd-changelog__date rvt-m-bottom-xl rvt-m-top-xs">{{ dateFormat "January 2, 2006" .published_at }}</div>
+            {{/*
+            Check if current item in loop is the first item in the array
+            */}}
+            {{ if eq (index $ChangelogData 0) . }}
+              <a class="rvt-button rvtd-changelog__download" href="https://github.com/indiana-university/rivet-source/releases/download/{{.tag_name}}/rivet.zip">
+                <svg aria-hidden="true" style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                  <title>Download</title>
+                  <g fill="currentColor">
+                    <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
+                    <path d="M7.29,10.71a1,1,0,0,0,1.41,0l4-4a1,1,0,0,0-1.41-1.41L9,7.59V1A1,1,0,0,0,7,1V7.59L4.71,5.29A1,1,0,0,0,3.29,6.71Z"/>
+                  </g>
+                </svg>
+                Download {{ replace .tag_name "v" "" }}
+              </a>
+            {{ end }}
+          </div>
+          <div class="rvt-grid__item-4-lg-up rvtd-changelog__overview">
+            <div class="rvtd-changelog__section-title">Overview</div>
+            <div>{{ .body | markdownify }}</div>
+          </div>
+          <div class="rvt-grid__item-4-lg-up rvt-grid__item--last rvtd-changelog__details">
+            <div class="rvtd-changelog__section-title">Details</div>
+            <ul>
+              {{ range .pulls.items }}
+                <li>
+                  <a class="rvtd-changelog__pr-link" target="_blank" rel="noopener" href="{{ .html_url }}">{{ .title }}</a>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      {{ end }}
+      <div class="rvtd-changelog__cta">
+        <a class="rvt-button" href="https://github.com/indiana-university/rivet-source/releases">View all on Github</a>
+      </div>
+    </div>
+  </div>
+</section>
