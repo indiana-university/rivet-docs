@@ -16,10 +16,19 @@
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
-    docsearch({
-        apiKey: '21932cb0064dada05e60ee0e7cbf98fa',
-        indexName: 'rivet_iu',
-        inputSelector: '#docs-search',
-        debug: true // Set debug to true if you want to inspect the dropdown
-    });
+(function() {
+  // Find the search input
+  var searchInput = document.querySelector('#docs-search');
+  
+  // If we're on a page without the search input, then bail.
+  if (!searchInput) return;
+  
+  // Initialize docssearch
+  docsearch({
+    apiKey: '21932cb0064dada05e60ee0e7cbf98fa',
+    indexName: 'rivet_iu',
+    inputSelector: '#docs-search',
+    debug: true // Set debug to true if you want to inspect the dropdown
+  });
+})();
 </script>
