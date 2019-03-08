@@ -38,22 +38,22 @@
       </div>
 
       <ul class="rvt-grid rvt-plain-list">
-          {{ range .Data.Pages }}
-        <li class="rvt-grid__item-4-md-up rvt-m-bottom-lg">
-          <a href="{{ .Permalink }}" class="rvtd-card__wrapper-link">
-            <div class="rvtd-card">
-              <figure class="rvtd-thumbnail">
-                {{ if (isset .Params "thumbnail") }}
-                  <img src="../img/add-ons/{{.Params.thumbnail}}" alt="">
-                {{ else }}
-                  <img src="../img/add-ons/add-on-placeholder.jpg" alt="">
-                {{ end }}
-              </figure>
-              <h3 class="rvtd-card__title">{{ .Title }}</h3>
-              <p class="rvtd-card__description">{{ .Description }}</p>
-            </div>
-          </a>
-        </li>
+        {{ range .Data.Pages }}
+          <li class="rvt-grid__item-4-md-up rvt-m-bottom-lg">
+            <a href="{{ .Permalink }}" class="rvtd-card__wrapper-link">
+              <div class="rvtd-card">
+                <figure class="rvtd-thumbnail">
+                  {{ if (isset .Params "thumbnail") }}
+                    <img src="../img/add-ons/{{.Params.thumbnail}}" alt="">
+                  {{ else }}
+                    <img src="../img/add-ons/add-on-placeholder.jpg" alt="">
+                  {{ end }}
+                </figure>
+                <h3 class="rvtd-card__title">{{ .Title }}</h3>
+                <p class="rvtd-card__description">{{ .Description }}</p>
+              </div>
+            </a>
+          </li>
         {{ end }}
       </ul>
     </div>
