@@ -1,31 +1,56 @@
 {{ define "main" }}
 <div class="rvtd-article-container rvt-container rvt-container--center rvt-container--junior">
-    <div class="rvt-grid">
+    <div class="rvt-grid rvt-m-top-xxl">
         <div class="rvt-grid__item-8-md-up">
-            <div class="rvtd-typeset rvt-p-right-lg">
+            <div class="rvtd-typeset">
+                <a href="../" class="rvtd-pre-header rvt-text-uppercase">
+                    <span><span class="rvt-sr-only">Go back to the </span>Blog</span>
+                </a>
                 <h1 class="rvt-text-bold">{{ .Title }}</h1>
-                <time class="rvt-ts-14 rvt-display-block rvt-m-top-sm">{{ .Date.Format "January 2, 2006" }}</time>
-                <p class="rvtd-lead rvt-m-top-md">{{ .Description }}</p>
+                <p class="rvtd-lead rvt-m-top-xl">{{ .Description }}</p>
+                
                 <div class="rvtd-article-main rvtd-typeset">
-                <div class="rvtd-article-outline">
-                    <div class="rvt-display-flex rvt-vertical-center rvt-m-bottom-md">
-                        <svg aria-hidden="true" class="rvt-m-right-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <g fill="currentColor">
-                                <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z" />
-                                <path d="M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z" />
-                                <circle cx="8" cy="5" r="1" />
-                            </g>
-                        </svg>
-                        <p class="rvt-ts-18 rvt-text-bold rvt-m-all-remove">In this article</p>
+                    <div class="rvtd-article-outline">
+                        <div class="rvt-flex rvt-items-center rvt-m-bottom-md">
+                            <svg aria-hidden="true" class="rvt-m-right-xs rvtd-article-outline__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 16 16">
+                                <g fill="currentColor">
+                                    <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z" />
+                                    <path d="M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z" />
+                                    <circle cx="8" cy="5" r="1" />
+                                </g>
+                            </svg>
+                            <p class="rvt-text-bold rvt-m-all-remove rvt-lh-title">In this article</p>
+                        </div>
+                        {{.TableOfContents}}
                     </div>
-                    {{.TableOfContents}}
-                </div>
                     {{ .Content }}
+                    
+                    <nav class="rvt-p-top-md rvt-m-top-xxl rvt-border-top rvt-flex-md-up rvt-justify-space-between" aria-label="Article navigation">
+                        {{ if .PrevInSection }}
+                        <a class="rvtd-plain-link rvt-grow-1-md-up rvt-p-right-lg-md-up" href="{{ .PrevInSection.Permalink }}" >
+                            <span>
+                                <span class="rvt-display-block rvt-text-uppercase rvt-ts-14">Previous:</span>
+                                <span class="rvt-text-bold">{{ .PrevInSection.Title }}</span>
+                            </span>
+                        </a>
+                        {{ end }}
+                        {{ if .NextInSection }}
+                        <a class="rvt-display-block rvtd-plain-link rvt-m-top-sm rvt-m-top-none-md-up rvt-grow-1-md-up rvt-justify-content-end" href="{{ .NextInSection.Permalink }}">
+                            <span>
+                                <span class="rvt-display-block rvt-text-uppercase rvt-ts-14">Next:</span>
+                                <span class="rvt-text-bold">{{ .NextInSection.Title}}</span>
+                            </span>
+                        </a>
+                        {{ end }}
+                    </nav>
                 </div>
             </div>
         </div>
-        <div class="rvt-grid__item-4-md-up rvt-grid__item--last">
-            {{ partial "article-sidebar.html" . }}
+        <div class="rvt-grid__item-3-md-up rvt-grid__item--last">
+            <div class="rvt-m-top-xl">
+                {{ partial "article-sidebar" . }}
+            </div>
         </div>
     </div>
 </div>

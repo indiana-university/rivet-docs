@@ -8,6 +8,9 @@ tags:
 aliases:
     - "/learn/release-0.5.0"
 excludeFromIndex: true
+author:
+  email: "lmcgrana@iu.edu"
+  name: "Levi McGranahan"
 ---
 0.5.0 brings a handful of pretty significant changes that will require updating some markup in a few places mainly isolated to the header. We've update the documentation to reflect all of the new additions and created a guide to help you update from any of the pre-0.5.0 versions.
 

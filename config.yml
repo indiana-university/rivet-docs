@@ -11,7 +11,7 @@ outputs:
   section: ["html", "json"]
 params:
   rivetVersion: 1.3.0
-  tagline: "Software Design System"
+  tagline: "Design System"
   googleAnalytics: "UA-100560495-3"
   devGoogleAnalytics: "UA-100560495-4"
   githubRepo: "https://github.com/indiana-university/rivet-source"

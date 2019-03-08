@@ -465,6 +465,10 @@ a.button--reverse-secondary {
  * Used in the learn section to sumarize article content.
  */
 .rvtd-article-outline {
+  &__icon {
+    color: $color-black--500;
+  }
+  
   ul {
     list-style: none;
     margin: 0;
@@ -713,7 +717,30 @@ a.button--reverse-secondary {
   border-top: 5px #006298 solid;
 }
 
-// DocSearch
+.rvtd-post-avatar {
+  border-radius: 999rem;
+  height: $lg * 1.25;
+  width: $lg * 1.25;
+  overflow: hidden;
+}
+
+.rvtd-post-date {
+  color: $color-black--600;
+}
+
+.rvtd-mark {
+  &:before {
+    content: "";
+    display: block;
+    width: $lg;
+    height: $xs;
+    background-color: $color-crimson;
+    margin-bottom: $lg;
+    margin-top: -$xxs;
+  }
+}
+
+// DocSearch styles
 
 .algolia-autocomplete {
     display: block !important;

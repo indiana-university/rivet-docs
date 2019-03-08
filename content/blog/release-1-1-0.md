@@ -6,6 +6,9 @@ tags:
     - "release"
     - "new component"
 excludeFromIndex: true
+author:
+  email: "lmcgrana@iu.edu"
+  name: "Levi McGranahan"
 ---
 Rivet 1.1.0 is now available! This release fixes a lot of JavaScript-related issues, adds several new utility classes, and provides additional variations of the [table component]({{< ref "components/page-content/tables.md" >}}).
 
