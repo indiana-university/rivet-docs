@@ -67,3 +67,9 @@
 .rvtd-typeset--flat-top  h2:first-of-type {
     margin-top: 0;
 }
+
+.rvtd-typeset--measure {
+    max-width: 760/16 * 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}

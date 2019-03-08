@@ -3,30 +3,41 @@
     <div class="rvt-grid">
         <div class="rvt-grid__item-8-md-up">
             <div class="rvtd-typeset">
-                <h1 class="rvt-text-bold">{{ .Title }}</h1>
-                <p class="rvtd-lead rvt-m-bottom-remove">{{ .Description }}</p>
+                <span class="rvtd-pre-header rvt-text-uppercase">Blog</span>
+                <h1 class="rvt-text-bold">{{ .Description }}</h1>
+                <!-- <p class="rvtd-lead rvt-m-bottom-remove"></p> -->
             </div>
         </div>
     </div>
 </div>
 <div class="rvt-container rvt-container--center rvt-container--junior rvt-m-bottom-xxl">
-    <div class="rvt-grid">
-        <div class="rvt-grid__item-8-md-up">
+    <div class="rvt-grid rvt-m-top-xxl">
+        <div class="rvt-grid__item-7-md-up">
             <ol class="rvt-plain-list">
                 {{ range .Data.Pages }}
-                <li class="rvt-p-top-lg rvt-p-bottom-lg rvt-m-top-remove rvt-border-bottom">
-                    <time class="rvt-ts-14 rvt-text-uppercase rvt-display-block rvt-m-bottom-sm">{{ .Date.Format "January 2, 2006" }}</time>
-                    <h3 class="rvt-ts-23 rvt-text-bold">
+                <li class="rvt-p-tb-xl rvt-m-top-remove">
+                    <h3 class="rvt-ts-sm rvt-text-bold">
                         <a class="rvtd-plain-link" href="{{ .Permalink }}">{{ .Title }}</a>
                     </h3>
-                    <p class="rvt-m-top-xs rvt-m-bottom-remove rvt-ts-18">{{ .Description }}</p>
+                    <p class="rvt-m-top-sm rvt-m-bottom-remove">{{ .Description }}</p>
+                    {{ if .Params.author.email }}
+                    <div class="rvt-flex rvt-items-center rvt-m-top-md"> 
+                        <div class="rvtd-post-avatar">
+                            <img src="https://www.gravatar.com/avatar/{{ .Params.author.email | md5 }}" alt="">
+                        </div>
+                        <div class="rvt-m-left-sm">
+                            <div class="rvt-ts-14">{{ .Params.author.name }}</div>
+                            <time class="rvt-ts-14">{{ .Date.Format "January 2, 2006" }}</time>
+                        </div>
+                    </div>
+                    {{ end }}
                 </li>
                 {{ end }}
             </ol>
         </div>
-        <div class="rvt-grid__item-4-md-up rvt-m-top-lg">
-            <div class="rvt-p-left-md-md-up">
-                {{ partial "email-callout-sidebar.html" . }}
+        <div class="rvt-grid__item-3-md-up rvt-grid__item--last">
+            <div class="rvt-m-top-xl">
+                {{ partial "article-sidebar" . }}
             </div>
         </div>
     </div>

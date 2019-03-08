@@ -4,6 +4,9 @@ description: Rivet can be integrated with any frontend Javascript framework, inc
 date: "2017-11-01"
 aliases:
     - "/learn/integrating-rivet"
+author:
+  email: "lmcgrana@iu.edu"
+  name: "Levi McGranahan"
 ---
 
 ## Frontend JavaScript frameworks

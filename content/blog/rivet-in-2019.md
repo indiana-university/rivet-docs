@@ -3,6 +3,9 @@ title: Rivet in 2019
 description: A a quick year-end update on Rivet.
 date: "2018-12-13"
 excludeFromIndex: true
+author:
+  email: "lmcgrana@iu.edu"
+  name: "Levi McGranahan"
 ---
 Here’s a quick year-end update on Rivet, including details about our 2019 Roadmap, the new Rivet team, and moving Rivet to GitHub.com.
 

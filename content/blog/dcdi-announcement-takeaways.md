@@ -3,6 +3,9 @@ title: Key takeaways from the Digital Campus Design and Infrastructure announcem
 description: Here are the most important things for developers to take away from last week's announcement.
 date: "2019-03-05"
 excludeFromIndex: true
+author:
+  email: "scanmurr@iu.edu"
+  name: "Scott Anthony Murray"
 ---
 
 At the beginning of February, Karen Fuson, IU's Chief Marketing Officer, asked Brian Hawkins to take the lead on forming a **Digital Campus Design & Infrastructure** group.
