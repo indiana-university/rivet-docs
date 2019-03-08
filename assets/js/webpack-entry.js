@@ -49,10 +49,8 @@ const comparePublishDates = (a, b) => {
 new Vue({
   el: "#wrapper",
   components: {
-    searchForm: require("./components/search.vue"),
     notificationsMenu: require("./components/notifications-menu.vue"),
     notificationsCenter: require("./components/notifications-center.vue"),
-    changelog: require("./components/changelog.vue"),
     addOns: require("./components/add-ons.vue")
   },
   data: {
