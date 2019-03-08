@@ -50,8 +50,7 @@ new Vue({
   el: "#wrapper",
   components: {
     notificationsMenu: require("./components/notifications-menu.vue"),
-    notificationsCenter: require("./components/notifications-center.vue"),
-    addOns: require("./components/add-ons.vue")
+    notificationsCenter: require("./components/notifications-center.vue")
   },
   data: {
     // Controls the toggle of the section nav menu on mobile
