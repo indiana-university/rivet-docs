@@ -8,7 +8,7 @@
         <div class="rvtd-tube__inner rvtd-typeset">
             <h1>{{ .Title }}</h1>
             <p class="rvtd-lead">{{ .Description }}</p>
-            <changelog></changelog>
+            {{ partial "changelog" . }}
         </div>
     </div>
 </div>
