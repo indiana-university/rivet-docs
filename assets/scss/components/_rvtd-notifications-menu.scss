@@ -239,9 +239,6 @@
 .rvt-notification {
     padding: $sm $sm * 1.25 $sm;
     position: relative;
-    background-color: $color-background-subtle;
-    border-bottom: none;
-    box-shadow: inset 4px 0 0 0 $color-alert-green;
 
     &__time {
         font-size: $ts-12;
