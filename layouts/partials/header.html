@@ -66,10 +66,10 @@
         <ol class="rvt-notifications__menu-list">
           {{ range first 3 (where .Site.Pages "Section" "blog") }}
             <li>
-              {{ if (isset .Params "external_url") }}
-                <a href="{{.Params.external_url}}">
+              {{ if .Params.externalURL }}
+                <a href="{{ .Params.externalURL }}">
               {{ else }}
-                <a href="{{.URL}}">
+                <a href="{{ .URL }}">
               {{ end }}
                 <article class="rvt-notification">
                   <time class="rvt-notification__time">
