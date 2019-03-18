@@ -4,33 +4,8 @@
  */
 
 const Clipboard = require("clipboard");
-const localStorageAvailable = require("./polyfills").localStorageAvailable;
-const moment = require("moment");
 
 module.exports = {
-  getLastViewedAt() {
-    if (localStorageAvailable()) {
-      const storedDate = moment(
-        localStorage.getItem("notificationsLastViewedAt")
-      );
-      if (storedDate.isValid()) {
-        return storedDate;
-      }
-    }
-
-    return null;
-  },
-
-  /**
-   *
-   * @param {String} url
-   * Accepts a URL and returns a bool indicating
-   * whether the URL is external to rivet.iu.edu
-   */
-  isExternalLink(url) {
-    return url.indexOf("https://rivet.iu.edu") === -1;
-  },
-
   /**
    *
    * @param {String} el
