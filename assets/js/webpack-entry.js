@@ -13,6 +13,11 @@ const polyfills = require("./polyfills");
  * Initialize polyfils here.
  */
 
+ /**
+  * Polyfills to add functionality to IE.
+  */
+polyfills.forEachPolyfill();
+
 /**
  * One-off scripts for random sutff. See 'plugins.js'
  */
