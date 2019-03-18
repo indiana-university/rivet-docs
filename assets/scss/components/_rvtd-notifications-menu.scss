@@ -65,15 +65,15 @@
             }
         }
 
-        &[aria-expanded="true"]>span>svg.rvt-closed-icon {
+        &[aria-expanded="true"] > span > svg.rvt-closed-icon {
             display: none;
         }
 
-        &[aria-expanded="true"]>span>svg.rvt-open-icon {
+        &[aria-expanded="true"] > span > svg.rvt-open-icon {
             margin-top: .2rem;
         }
 
-        &[aria-expanded="false"]>span>svg.rvt-open-icon {
+        &[aria-expanded="false"] > span > svg.rvt-open-icon {
             display: none;
         }
     }
