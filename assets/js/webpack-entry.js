@@ -3,9 +3,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-/*
-    swap vue.min out for vue if you need vue devtools
-*/
 const plugins = require("./plugins");
 const polyfills = require("./polyfills");
 
@@ -25,11 +22,6 @@ polyfills.forEachPolyfill();
 // Third-party libraries
 plugins.clipboardInit();
 
-/**
- * Site-specific DOM scripting - Any DOM manipulation stuff
- * MUST come after the main Vue instance is initialized because
- * of Vue's virtual DOM implementation.
- */
 plugins.createCopyright("#year");
 plugins.copyButtonConfirm("[data-clipboard-target]", 1500);
 plugins.setIndeterminate("#checkbox-indeterminate");
