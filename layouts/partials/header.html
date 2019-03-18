@@ -64,7 +64,7 @@
       </button>
       <div id="notification-list" class="rvt-notifications__menu" ref="menuElement" aria-hidden="true">
         <ol class="rvt-notifications__menu-list">
-          {{ range first 3 (where .Pages "Section" "blog") }}
+          {{ range first 3 (where .Site.Pages "Section" "blog") }}
             <li>
               {{ if (isset .Params "external_url") }}
                 <a href="{{.Params.external_url}}">
