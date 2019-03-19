@@ -29,7 +29,6 @@ yarn-error.log*
 _demo/
 
 # rivet-docs specific
-.idea
 .vscode
 public/
 tmp/
