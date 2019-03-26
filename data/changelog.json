@@ -1,5 +1,34 @@
 [
   {
+    "tag_name": "v1.4.0",
+    "published_at": "2019-03-27T17:23:27Z",
+    "body": "This release makes some updates to the Rivet footer and deprecates classes related to alerts and the loading indicator.<!-- end-overview -->",
+    "pulls": {
+      "items": [
+        {
+          "title": "Added optional alert dismissal data selector",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/94"
+        },
+        {
+          "title": "Deprecated variable color-subtle-gray",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/93"
+        },
+        {
+          "title": "Deprecated footer copyright markup element",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/89"
+        },
+        {
+          "title": "Updated footer to reflect new IU standards for link order and text",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/88"
+        },
+        {
+          "title": "Updated button loading indicator markup to be clear that it works with text and icons",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/86"
+        }
+      ]
+    }
+  },
+  {
     "tag_name": "v1.3.0",
     "created_at": "2019-02-25T16:47:18Z",
     "published_at": "2019-02-25T17:23:27Z",
