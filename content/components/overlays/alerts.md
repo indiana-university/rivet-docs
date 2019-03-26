@@ -300,12 +300,12 @@ See the [content guide section](/content-guide) for additional information.
 - Write helpful alert messages. For errors, Include a brief description of the problem and how to fix it. Check out the Voice and tone/microcopy section for more information.
 
 ## JavaScript API
-The Rivet alert component comes with a couple of methods you can use to programmatically control alerts. The `.init()` method is called by default the first `rivet.js` is loaded. Alerts are dismissed when clicking a `button` element within the alert with the `data-alert-close` attribute. You can also dismiss an alert by calling the `Alert.dismiss()` method in your own script.
+The Rivet alert component comes with a couple of methods you can use to programmatically control alerts. The `init()` method is called by default when `rivet.js` is loaded. Alerts are dismissed when clicking a `button` element within the alert with the `data-alert-close` attribute. You can also dismiss an alert by calling the `Alert.dismiss()` method in your own script.
 
 {{< alert variant="warning" title="Alert dismissal class deprecation" >}}
-In previous versions of Rivet, alerts were dismissed by adding the `.rvt-alert__dismiss` class to a `button` element within the alert itself. 
+In previous versions of Rivet, alerts were dismissed by clicking a `button` element within the alert with the `.rvt-alert__dismiss` class. 
 
-In an effort to [decouple CSS classes from JavaScript behavior](https://github.com/indiana-university/rivet-source/issues/85), this approach has been deprecated in favor of adding the `data-alert-close` attribute to the dismiss button. The examples on this page have been updated to reflect this new approach. 
+In an effort to [decouple CSS classes from JavaScript behavior](https://github.com/indiana-university/rivet-source/issues/85), the `.rvt-alert__dismiss` class has been deprecated in favor of the `data-alert-close` attribute. The examples on this page have been updated to reflect this new approach. 
 
 We recommend updating your application to use the latest version of the alert.
 {{< /alert >}}
