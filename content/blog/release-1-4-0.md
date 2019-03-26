@@ -30,7 +30,7 @@ The examples in the [alert component documentation]({{< ref "components/overlays
 
 This release deprecates the `.rvt-button__text` class used by the [loading indicator component]({{< ref "components/overlays/loading-indicator.md" >}}) in favor of the `.rvt-button__content` class.
 
-It wasn't clear to developers that [button icons](https://github.com/indiana-university/rivet-icons) should be included in the element with the `.rvt-button__text` class, so the loading indicator wasn't hiding these icons when busy.
+We realized it wasn't clear to developers that [button icons](https://github.com/indiana-university/rivet-icons) should be included in the element with the `.rvt-button__text` class, so the loading indicator wasn't hiding these icons when busy.
 
 The `.rvt-button__content` class more clearly communicates that both text and icons should be included so that they'll be hidden properly when the loading indicator appears.
 
