@@ -36,7 +36,7 @@ The `.rvt-button__content` class more clearly communicates that both text and ic
 
 ## Complete list of updates
 
-For a complete breakdown of the `1.4.0` updates, see the [Rivet changelog](https://rivet.iu.edu/components/information/changelog/).
+For a complete breakdown of the `1.4.0` updates, see the [Rivet changelog]({{< ref "components/information/changelog.md" >}}).
 
 ## Getting help
 
