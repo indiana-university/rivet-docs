@@ -37,6 +37,12 @@ The Rivet `rvt-display-*` utilities can be used to easily change the css `displa
 {{< example lang="html" >}}<span class="rvt-display-block bg-green">Display block</span>
 {{< /example >}}
 
+{{< alert variant="warning" title="Class deprecation" >}}
+In previous versions of Rivet, we used the `.rvt-display-flex` and `.rvt-vertical-center` classes to lay out items in a container. These classes are now deprecated in favor of the new [Rivet flex utility classes](https://rivet.iu.edu/components/utilities/flex/). 
+
+If you are using `.rvt-display-flex` or `.rvt-vertical-center`, please update your application to use the new flex utility classes.
+{{< /alert >}}
+
 {{< example lang="html" >}}<div class="rvt-display-flex">
     <div class="bg-orange rvt-m-right-sm">Flex child</div>
     <div class="bg-orange rvt-m-right-sm">Flex child</div>

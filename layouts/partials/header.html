@@ -1,92 +1,73 @@
 {{ $currentURL := .URL }}
 {{ if or (eq $currentURL "/how-to-use/") }}
-    <header class="rvt-header rvt-header--light rvt-header--no-border" role="banner">
+  <header class="rvt-header rvt-header--light rvt-header--no-border" role="banner">
 {{ else }}
-    <header class="rvt-header rvt-header--light" role="banner">
+  <header class="rvt-header rvt-header--light" role="banner">
 {{ end }}
-    <a class="rvt-skip-link" href="#main-content">Skip to content</a>
-    <div class="rvt-header__trident">
-        {{ partial "trident.html" . }}
-    </div>
-    <span class="rvt-header__title">
-        <a href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong> <span class="rvtd-subtitle">{{ .Site.Params.tagline }}</span></a>
-    </span>
-    <div class="rvt-header__controls">
-        <nav class="rvt-header__main-nav" role="navigation" aria-label="main">
-            <ul>
-                {{ $currentNav := . }}
-                <li>
-                    <div class="rvt-dropdown">
-                        <button type="button" class="rvt-dropdown__toggle" data-dropdown-toggle="documentation-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="rvt-dropdown__toggle-text">Documentation</span>
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-                            </svg>
-                        </button>
-                        <div class="rvt-dropdown__menu" id="documentation-dropdown" role="menu" aria-hidden="true">
-                            <a href="{{ trim .Site.BaseURL "/" }}/components" {{ if eq $currentNav.URL "/components/" }}aria-current="page"{{ end }}>Components</a>
-                            <a href="{{ trim .Site.BaseURL "/" }}/add-ons" {{ if eq $currentNav.URL "/add-ons/" }}aria-current="page"{{ end }}>Add-ons</a>
-                            <a href="{{ trim .Site.BaseURL "/" }}/content-guide" {{ if eq $currentNav.URL "/content-guide/" }}aria-current="page"{{ end }}>Content guide</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="dropdown">
-                        <button type="button" class="dropdown__toggle" data-dropdown-toggle="learn-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="rvt-dropdown__toggle-text">About Rivet</span>
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-                            </svg>
-                        </button>
-                        <div class="rvt-dropdown__menu" id="learn-dropdown" role="menu" aria-hidden="true">
-                            <a href="{{ trim .Site.BaseURL "/" }}/about/" {{ if eq $currentNav.URL "/about/" }}aria-current="page"{{ end }}>What is Rivet?</a>
-                            <a href="{{ trim .Site.BaseURL "/" }}/blog/" {{ if eq $currentNav.URL "/blog/" }}aria-current="page"{{ end }}>Blog</a>
-                            <a href="{{ trim .Site.BaseURL "/" }}/components/information/roadmap/" {{ if eq $currentNav.URL "/components/information/roadmap/" }}aria-current="page"{{ end }}>Roadmap</a>
-                            <a href="{{ trim .Site.BaseURL "/" }}/components/information/changelog/" {{ if eq $currentNav.URL "/components/information/changelog/" }}aria-current="page"{{ end }}>Changelog</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="/workshop">Community Workshop</a></li>
-            </ul>
-        </nav>
-        <div class="rvt-supplemental-menu">
-            <notifications-menu :notifications="notifications"
-                                :notifications-last-viewed-at="notificationsLastViewedAt"
-                                :loading-notifications="loadingNotifications"
-                                :error-loading-notifications="errorLoadingNotifications"
-                                v-on:reload-notifications="loadNotifications"
-                                v-on:clear-notifications="clearNotifications"
-            >
-            </notifications-menu>
-            <div class="rvt-hide-lg-down">
-                <div class="rvt-dropdown">
-                    <button
-                        type="button"
-                        class="rvt-button"
-                        data-dropdown-toggle="use-dropdown"
-                        role="button"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                    >
-                        <span>Use Rivet</span>
-                        <svg aria-hidden="true" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-                        </svg>
-                    </button>
-                    <div
-                        class="rvt-dropdown__menu rvt-dropdown__menu--right"
-                        id="use-dropdown"
-                        aria-hidden="true"
-                        role="menu"
-                    >
-                        <a href="{{ trim .Site.BaseURL " / " }}/components/#npm-dependency">Install via NPM</a>
-                        <a href="{{ trim .Site.BaseURL " / " }}/components/#download-rivet">Download CSS &amp; JS</a>
-                        <a href="{{ trim .Site.BaseURL " / " }}/components/#hosted-css-and-javascript">Hosted assets</a>
-                    </div>
-                </div>
-            </div>
+<a class="rvt-skip-link" href="#main-content">Skip to content</a>
+<div class="rvt-header__trident">
+  {{ partial "trident.html" . }}
+</div>
+<span class="rvt-header__title">
+  <a href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong> <span class="rvtd-subtitle">{{ .Site.Params.tagline }}</span></a>
+</span>
+<div class="rvt-header__controls">
+  <nav class="rvt-header__main-nav" role="navigation" aria-label="main">
+    <ul>
+      {{ $currentNav := . }}
+      <li>
+        <div class="rvt-dropdown">
+          <button type="button" class="rvt-dropdown__toggle" data-dropdown-toggle="documentation-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="rvt-dropdown__toggle-text">Documentation</span>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+              <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+            </svg>
+          </button>
+          <div class="rvt-dropdown__menu" id="documentation-dropdown" role="menu" aria-hidden="true">
+            <a href="{{ trim .Site.BaseURL "/" }}/components" {{ if eq $currentNav.URL "/components/" }}aria-current="page"{{ end }}>Components</a>
+            <a href="{{ trim .Site.BaseURL "/" }}/add-ons" {{ if eq $currentNav.URL "/add-ons/" }}aria-current="page"{{ end }}>Add-ons</a>
+            <a href="{{ trim .Site.BaseURL "/" }}/content-guide" {{ if eq $currentNav.URL "/content-guide/" }}aria-current="page"{{ end }}>Content guide</a>
+          </div>
         </div>
-        {{ partial "drawer-button.html" . }}
+      </li>
+      <li>
+        <div class="dropdown">
+          <button type="button" class="dropdown__toggle" data-dropdown-toggle="learn-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="rvt-dropdown__toggle-text">About Rivet</span>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+              <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+            </svg>
+          </button>
+          <div class="rvt-dropdown__menu" id="learn-dropdown" role="menu" aria-hidden="true">
+            <a href="{{ trim .Site.BaseURL "/" }}/about/" {{ if eq $currentNav.URL "/about/" }}aria-current="page"{{ end }}>What is Rivet?</a>
+            <a href="{{ trim .Site.BaseURL "/" }}/blog/" {{ if eq $currentNav.URL "/blog/" }}aria-current="page"{{ end }}>Blog</a>
+            <a href="{{ trim .Site.BaseURL "/" }}/components/information/roadmap/" {{ if eq $currentNav.URL "/components/information/roadmap/" }}aria-current="page"{{ end }}>Roadmap</a>
+            <a href="{{ trim .Site.BaseURL "/" }}/components/information/changelog/" {{ if eq $currentNav.URL "/components/information/changelog/" }}aria-current="page"{{ end }}>Changelog</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/workshop">Community Workshop</a></li>
+    </ul>
+  </nav>
+  <div class="rvt-supplemental-menu">
+    {{ partial "notifications-menu" . }}
+    <div class="rvt-hide-lg-down">
+      <div class="rvt-dropdown">
+        <button type="button" class="rvt-button" data-dropdown-toggle="use-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <span>Use Rivet</span>
+          <svg aria-hidden="true" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+          </svg>
+        </button>
+        <div class="rvt-dropdown__menu rvt-dropdown__menu--right" id="use-dropdown" aria-hidden="true" role="menu">
+          <a href="{{ trim .Site.BaseURL " / " }}/components/#npm-dependency">Install via NPM</a>
+          <a href="{{ trim .Site.BaseURL " / " }}/components/#download-rivet">Download CSS &amp; JS</a>
+          <a href="{{ trim .Site.BaseURL " / " }}/components/#hosted-css-and-javascript">Hosted assets</a>
+        </div>
+      </div>
     </div>
-    {{ partial "drawer.html" . }}
+  </div>
+  {{ partial "drawer-button.html" . }}
+</div>
+{{ partial "drawer.html" . }}
 </header>

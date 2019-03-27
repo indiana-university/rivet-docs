@@ -30,7 +30,7 @@ events:
 {{< example lang="html" >}}<div class="rvt-alert rvt-alert--info rvt-m-bottom-md" role="alertdialog" aria-labelledby="information-alert-title">
     <h1 class="rvt-alert__title" id="information-alert-title">Scheduled System Maintenance</h1>
     <p class="rvt-alert__message">This system will be unavailable on August 1st due to scheduled system maintenance. Please check back on August 2nd.</p>
-    <button type="button" class="rvt-alert__dismiss">
+    <button type="button" class="rvt-alert__dismiss" data-alert-close>
         <span class="v-hide">Dismiss this alert</span>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
@@ -41,7 +41,7 @@ events:
 <div class="rvt-alert rvt-alert--success rvt-m-bottom-md" role="alertdialog" aria-labelledby="success-alert-title">
     <h1 class="rvt-alert__title" id="success-alert-title">Thank you!</h1>
     <p class="rvt-alert__message">We have received your application. Check your email in a few weeks to find out if you’ve been admitted.</p>
-    <button type="button" class="rvt-alert__dismiss">
+    <button type="button" class="rvt-alert__dismiss" data-alert-close>
         <span class="v-hide">Dismiss this alert</span>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
@@ -52,7 +52,7 @@ events:
 <div class="rvt-alert rvt-alert--warning rvt-m-bottom-md" role="alertdialog" aria-labelledby="warning-alert-title">
     <h1 class="rvt-alert__title" id="warning-alert-title">Unsaved Changes</h1>
     <p class="rvt-alert__message">Your changes have not been saved. To save your changes, click ‘Save my changes’ or click ‘Cancel’ to exit without saving.</p>
-    <button type="button" class="rvt-alert__dismiss">
+    <button type="button" class="rvt-alert__dismiss" data-alert-close>
         <span class="v-hide">Dismiss this alert</span>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
@@ -300,7 +300,15 @@ See the [content guide section](/content-guide) for additional information.
 - Write helpful alert messages. For errors, Include a brief description of the problem and how to fix it. Check out the Voice and tone/microcopy section for more information.
 
 ## JavaScript API
-The Rivet alert component comes with a couple of methods you can use to programmatically control alerts. The `.init()` method is called by default the first `rivet.js` is loaded. You can dismiss alerts using the `.rvt-alert__dismiss` button, or use the `Alert.dismiss()` method in your own script.
+The Rivet alert component comes with a couple of methods you can use to programmatically control alerts. The `init()` method is called by default when `rivet.js` is loaded. Alerts are dismissed when clicking a `button` element within the alert with the `data-alert-close` attribute. You can also dismiss an alert by calling the `Alert.dismiss()` method in your own script.
+
+{{< alert variant="warning" title="Alert dismissal class deprecation" >}}
+In previous versions of Rivet, alerts were dismissed by clicking a `button` element within the alert with the `.rvt-alert__dismiss` class. 
+
+In an effort to [decouple CSS classes from JavaScript behavior](https://github.com/indiana-university/rivet-source/issues/85), the `.rvt-alert__dismiss` class has been deprecated in favor of the `data-alert-close` attribute. The examples on this page have been updated to reflect this new approach. 
+
+We recommend updating your application to use the latest version of the alert.
+{{< /alert >}}
 
 ### Available methods
 

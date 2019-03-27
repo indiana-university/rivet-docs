@@ -64,6 +64,18 @@
                             0 0 0 4px $color-alert-green;
             }
         }
+
+        &[aria-expanded="true"] > span > svg.rvt-closed-icon {
+            display: none;
+        }
+
+        &[aria-expanded="true"] > span > svg.rvt-open-icon {
+            margin-top: .2rem;
+        }
+
+        &[aria-expanded="false"] > span > svg.rvt-open-icon {
+            display: none;
+        }
     }
 
     /**
@@ -197,10 +209,6 @@
     }
 }
 
-.rvt-close-icon {
-    margin-top: .2rem;
-}
-
 .rvt-notifications-empty {
     padding: $lg;
     text-align: center;
@@ -231,12 +239,6 @@
 .rvt-notification {
     padding: $sm $sm * 1.25 $sm;
     position: relative;
-
-    &--is-unread {
-        background-color: $color-background-subtle;
-        border-bottom: none;
-        box-shadow: inset 4px 0 0 0 $color-alert-green;
-    }
 
     &__time {
         font-size: $ts-12;
