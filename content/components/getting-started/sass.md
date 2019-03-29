@@ -92,16 +92,17 @@ $xxl: $spacing-unit * 8;     // 64px
 
 ## Color
 
-{{< code lang="scss" >}}$color-black--050: #fafafa;
+{{< code lang="scss" >}}// Black variants
+
+$color-black: #333333 !default;
+
+// NOTE: black is a bit of an outlier in that the base black color
+// does not correspond to one of the following black variants like the rest
+// of the colors that follow. We will update the colors to follow a totally
+// standard convention in the next major version of Rivet.
+
+$color-black--050: #fafafa;
 $color-black--100: #eeeeee;
-
-// NOTE: This black variant is an outlier. We don't include a "--150"
-// variant with the other colors, but this color has worked really well
-// for border colors on components like the header, etc.
-// We could revisit and see if it makes sense to remove and replace any
-// references moving forward.
-
-$color-black--150: #eaeaea;
 $color-black--200: #dddddd;
 $color-black--300: #cccccc;
 $color-black--400: #aaaaaa;
@@ -111,8 +112,9 @@ $color-black--700: #666666;
 $color-black--800: #555555;
 $color-black--900: #444444;
 
-// Use this when you need a default (darkest) black.
-$color-black--rich: #000000;
+// Blue variants
+
+$color-blue: #006298;
 
 $color-blue--050: #edf1f6;
 $color-blue--100: #dce3ee;
