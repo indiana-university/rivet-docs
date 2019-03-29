@@ -2,21 +2,22 @@
 title: "Rivet Sass"
 description: "Use Rivet's Sass source files in your project"
 url: "/getting-started/sass/"
+excludeFromStatus: true
 ---
 ## Using Sass
 The Rivet CSS is built using the Sass (SCSS) CSS preprocessor. Both the Rivet `.zip` download and [the npm package]({{< relref "npm.md" >}}) include the SCSS source files that you can use in your app.
 
 If you are using the Rivet npm package and have a build process in place for Sass already, you can import Rivet into your project directly:
 
-{{< code lang="css" >}}@import "node_modules/rivet-uits/sass/rivet.scss"
+{{< code lang="scss" >}}@import "node_modules/rivet-uits/sass/rivet.scss"
 {{< /code >}}
 
 Once you have imported the `rivet.scss` into your project you will then have access to all the same Sass variables to use in your project.
 
 ## Typography
-{{< code >}}// Main type sizes map.
+{{< code lang="scss" >}}// Main type sizes map.
 
-// $key = pixel size, $value = relational units
+$key = pixel size, $value = relational units
 
 $type-sizes: (
   12: .75rem,
@@ -44,7 +45,7 @@ $type-sizes: (
 
 // Type Size variables
 
-$ts-12: map-get($type-sizes, 12);
+$ts-12: map-get($type-sizes, 12); // .75rem (12px)
 $ts-14: map-get($type-sizes, 14);
 $ts-16: map-get($type-sizes, 16);
 $ts-18: map-get($type-sizes, 18);
@@ -78,7 +79,7 @@ $font-weight-regular: 400;
 
 ## Spacing
 
-{{< code >}}$spacing-unit: .5rem      // 8px
+{{< code lang="scss" >}}$spacing-unit: .5rem      // 8px
 
 $xxs: $spacing-unit/2;       // 4px
 $xs: $spacing-unit;          // 8px
@@ -91,7 +92,7 @@ $xxl: $spacing-unit * 8;     // 64px
 
 ## Color
 
-{{< code >}}$color-black--050: #fafafa;
+{{< code lang="scss" >}}$color-black--050: #fafafa;
 $color-black--100: #eeeeee;
 
 // NOTE: This black variant is an outlier. We don't include a "--150"
@@ -172,7 +173,7 @@ $color-orange--900: #2f1407;
 
 ## Breakpoints
 
-{{< code >}}// Global breakpoints
+{{< code lang="scss" >}}// Global breakpoints
 
 $breakpoints: (
   sm: (480em/16),
@@ -191,7 +192,7 @@ $breakpoint-xxl: map-get($breakpoints, 'xxl');
 
 ## Shadows
 
-{{< code >}}// Standard shadow(s)
+{{< code lang="scss" >}}// Standard shadow(s)
 
 $shadow-base: 0 1px 3px 2px rgba(0, 0, 0, .07);
 {{< /code >}}
