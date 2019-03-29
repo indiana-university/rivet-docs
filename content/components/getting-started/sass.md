@@ -4,10 +4,14 @@ description: "Use Rivet's Sass source files in your project"
 url: "/getting-started/sass/"
 ---
 ## Using Sass
-If you are using Sass in your project you can import the Rivet Sass files directly:
+The Rivet CSS is built using the Sass (SCSS) CSS preprocessor. Both the Rivet `.zip` download and [the npm package]({{< relref "npm.md" >}}) include the SCSS source files that you can use in your app.
 
-{{< code lang="css" >}}@import "./node_modules/rivet-uits/sass/rivet.scss"
+If you are using the Rivet npm package and have a build process in place for Sass already, you can import Rivet into your project directly:
+
+{{< code lang="css" >}}@import "node_modules/rivet-uits/sass/rivet.scss"
 {{< /code >}}
+
+Once you have imported the `rivet.scss` into your project you will then have access to all the same Sass variables to use in your project.
 
 ## Typography
 {{< code >}}// Main type sizes map.
@@ -70,6 +74,19 @@ $ts-xxl: $ts-52;
 
 $font-weight-bold: 700;
 $font-weight-regular: 400;
+{{< /code >}}
+
+## Spacing
+
+{{< code >}}$spacing-unit: .5rem      // 8px
+
+$xxs: $spacing-unit/2;       // 4px
+$xs: $spacing-unit;          // 8px
+$sm: $spacing-unit * 2;      // 16px Base
+$md: $spacing-unit * 3;      // 24px
+$lg: $spacing-unit * 4;      // 32px
+$xl: $spacing-unit * 5;      // 40px
+$xxl: $spacing-unit * 8;     // 64px
 {{< /code >}}
 
 ## Color
@@ -151,19 +168,6 @@ $color-orange--600: #b02f0a;
 $color-orange--700: #82270d;
 $color-orange--800: #571e0c;
 $color-orange--900: #2f1407;
-{{< /code >}}
-
-## Spacing
-
-{{< code >}}$spacing-unit: .5rem      // 8px
-
-$xxs: $spacing-unit/2;       // 4px
-$xs: $spacing-unit;          // 8px
-$sm: $spacing-unit * 2;      // 16px Base
-$md: $spacing-unit * 3;      // 24px
-$lg: $spacing-unit * 4;      // 32px
-$xl: $spacing-unit * 5;      // 40px
-$xxl: $spacing-unit * 8;     // 64px
 {{< /code >}}
 
 ## Breakpoints
