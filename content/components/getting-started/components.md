@@ -2,6 +2,7 @@
 title: "Components"
 description: "The Rivet components are a well-documented set of HTML, CSS, and JavaScript assets."
 url: "components"
+excludeFromStatus: true
 ---
 ## Stay up to date
 Join the email list to get updates on releases, new features, examples, and how-to guides.

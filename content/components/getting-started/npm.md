@@ -2,6 +2,7 @@
 title: "Install with npm"
 description: "Rivet is also available to include in as a dependency in your app via NPM."
 url: "/getting-started/npm/"
+excludeFromStatus: true
 ---
 ## NPM dependency
 These instructions assume that you are already using NPM in your project. If not, you can [read these instructions](https://docs.npmjs.com/cli/init) on the NPM website about how to start.
