@@ -906,3 +906,10 @@ a.button--reverse-secondary {
     display: none;
   }
 }
+
+.rvtd-color-swatch {
+  width: $xl;
+  height: $xl;
+  display: block;
+  border-radius: 999rem;
+}
