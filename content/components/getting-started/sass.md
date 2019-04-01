@@ -7,7 +7,7 @@ excludeFromStatus: true
 ## Using Sass
 Rivet's CSS is built using the [Sass (SCSS) CSS preprocessor](https://sass-lang.com/).
 
-Both the Rivet `.zip` download and [the NPM package]({{< relref "npm.md" >}}) include the `.scss` source files that you can use in your Rivet project.
+Both the Rivet `.zip` download and [the NPM package]({{< ref "components/getting-started/npm.md" >}}) include the `.scss` source files that you can use in your Rivet project.
 
 If you are using the Rivet npm package and have a build process in place for Sass already, you can import Rivet into your project directly:
 
@@ -17,12 +17,12 @@ If you are using the Rivet npm package and have a build process in place for Sas
 Once you have imported `rivet.scss` into your project, you will be able to use the variables listed on this page in your own Sass stylesheets.
 
 ## Typography
-See the layout documentation to learn more about [Rivet's responsive type scale CSS classes]({{< relref "../layout/typography.md" >}}).
+See the layout documentation to learn more about [Rivet's responsive type scale CSS classes]({{< ref "components/layout/typography.md" >}}).
 
 {{< sassdocs collection="typography" >}}
 
 ## Spacing
-See the layout documentation to learn more about [Rivet's responsive spacing CSS classes]({{< relref "../layout/spacing.md" >}}).
+See the layout documentation to learn more about [Rivet's responsive spacing CSS classes]({{< ref "components/layout/spacing.md" >}}).
 
 {{< sassdocs collection="spacing" >}}
 
