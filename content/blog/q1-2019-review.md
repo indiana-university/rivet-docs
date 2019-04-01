@@ -12,7 +12,7 @@ author:
       type="audio-video"
       title="Watch or listen to the quarterly review"
       subtitle="Kaltura video"
-      url="https://iu.mediaspace.kaltura.com/media/Rivet+Quarterly+Review+-+Q1+2019" >}}
+      url="https://iu.mediaspace.kaltura.com/media/Rivet+Quarterly+Review+-+Q1+2019/1_7btvoo82" >}}
 
 {{< blog-media-object
       type="slides"
