@@ -183,6 +183,20 @@ a.button--reverse-secondary {
   @extend .rvt-badge--success;
 }
 
+/* Media object icon "avatars" */
+.rvt-mo__icon {
+  align-items: center;
+  background-color: $color-black--100;
+  border-radius: 999rem;
+  color: $color-black--500;
+  display: flex;
+  height: $xl;
+  justify-content: center;
+  margin-right: $md;
+  overflow: hidden;
+  width: $xl;
+}
+
 /**
  * How to use examples
  *
