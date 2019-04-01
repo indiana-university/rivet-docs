@@ -19,7 +19,7 @@
 {{ $Collection := .Get "collection" }}
 
 {{ if eq $Collection "typography" }}
-<table class="rvt-m-top-lg rvt-table-compact rvt-table-cells">
+<table class="rvt-m-top-lg rvt-table-compact">
   <caption class="rvt-sr-only">Rivet type scale Sass variables</caption>
   <thead>
     <th width="200">Variable</th>
@@ -39,7 +39,7 @@
 {{ end }}
 
 {{ if eq $Collection "spacing" }}
-<table class="rvt-m-top-lg rvt-table-compact rvt-table-cells">
+<table class="rvt-m-top-lg rvt-table-compact">
   <caption class="rvt-sr-only">Rivet spacing Sass variables</caption>
   <thead>
     <th width="200">Variable</th>
@@ -59,7 +59,7 @@
 {{ end }}
 
 {{ if eq $Collection "breakpoints" }}
-<table class="rvt-m-top-lg rvt-table-compact rvt-table-cells">
+<table class="rvt-m-top-lg rvt-table-compact">
   <caption class="rvt-sr-only">Rivet breakpoint Sass variables</caption>
   <thead>
     <th width="200">Variable</th>
@@ -82,7 +82,7 @@
   {{ range $.Site.Data.tokens.colors }}
     <h3>{{ title .base }}</h3>
     
-    <table class="rvt-m-top-lg rvt-table-compact rvt-table-cells">
+    <table class="rvt-m-top-lg rvt-table-compact">
       <caption class="rvt-sr-only">Rivet color variables</caption>
       <thead>
         <th width="200">Variable</th>
