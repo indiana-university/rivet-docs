@@ -30,4 +30,7 @@ gulp.task("js", ["webpack"], function() {
     .pipe(concat("telemetrics.js"))
     .pipe(uglify())
     .pipe(gulp.dest("./static/js"));
+    
+  gulp.src('assets/js/highlight.pack.js')
+    .pipe(gulp.dest('./static/js'));
 });

@@ -1,9 +1,8 @@
 ---
 title: "Components"
 description: "The Rivet components are a well-documented set of HTML, CSS, and JavaScript assets."
-navTitle: "Components"
-weight: 2
 sectionNav: true
+excludeFromStatus: true
 ---
 ## Stay up to date
 Join the email list to get updates on releases, new features, examples, and how-to guides.
@@ -20,13 +19,13 @@ The Rivet components documentation contains examples, code snippets, and guidanc
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
 {{< button url="https://github.com/indiana-university/rivet-source/releases/download/v1.4.0/rivet.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
-    <span class="rvt-m-right-xs">Download Rivet</span>
     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-        <g fill="currentColor">
-            <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
-            <path d="M7.29,10.71a1,1,0,0,0,1.41,0l4-4a1,1,0,0,0-1.41-1.41L9,7.59V1A1,1,0,0,0,7,1V7.59L4.71,5.29A1,1,0,0,0,3.29,6.71Z"/>
-        </g>
+      <g fill="currentColor">
+        <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
+        <path d="M7.29,10.71a1,1,0,0,0,1.41,0l4-4a1,1,0,0,0-1.41-1.41L9,7.59V1A1,1,0,0,0,7,1V7.59L4.71,5.29A1,1,0,0,0,3.29,6.71Z"/>
+      </g>
     </svg>
+    <span class="rvt-m-left-xs">Download Rivet</span>
 {{< /button >}}
 
 ### Download contents
@@ -64,37 +63,16 @@ index.html
             href="https://github.iu.edu/UITS/rivet/releases/download/v1.0.0/rivet-axure-1.0.rp"
             class="rvt-button rvt-button--secondary rvt-m-top-md"
         >
-            <span class="rvt-m-right-xs">Download Axure kit</span>
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                <g fill="currentColor">
-                    <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
-                    <path d="M7.29,10.71a1,1,0,0,0,1.41,0l4-4a1,1,0,0,0-1.41-1.41L9,7.59V1A1,1,0,0,0,7,1V7.59L4.71,5.29A1,1,0,0,0,3.29,6.71Z"/>
-                </g>
-            </svg>
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <g fill="currentColor">
+              <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
+              <path d="M7.29,10.71a1,1,0,0,0,1.41,0l4-4a1,1,0,0,0-1.41-1.41L9,7.59V1A1,1,0,0,0,7,1V7.59L4.71,5.29A1,1,0,0,0,3.29,6.71Z"/>
+            </g>
+          </svg>
+          <span class="rvt-m-left-xs">Download Axure kit</span>
         </a>
     </div>
 </div>
-
-## NPM dependency
-Rivet is also available to include in as a dependency in your app via NPM. These instructions assume that you are already using NPM in your project. If not, you can [read these instructions](https://docs.npmjs.com/cli/init) on the NPM website about how to start.
-
-{{< alert title="About using a .npmrc file" variant="info" >}}
-In previous versions of Rivet a .npmrc file configured to look at IU's public registry was required to install Rivet. As of version 1.1.0 you no longer need a .npmrc file.
-{{< /alert >}}
-
-### Installing via NPM
-Once you have a `package.json` file configured in the root of your project, you can run the following command to install Rivet.
-
-{{< code >}}npm install rivet-uits@1.4.0 --save-dev
-{{< /code >}}
-
-### Updating the Rivet NPM package
-When there is a new version of Rivet released it will be publish to the NPM registry. You can check for updates by running the `npm outdated` command. To actually update your NPM dependency you can run the following command at the same level as your project's `package.json`.
-
-{{< code >}}npm install rivet-uits@<version> --save-dev
-{{< /code >}}
-
-In this example `<version>` would be the new version of Rivet you want to install.
 
 ## Hosted CSS and JavaScript
 {{< alert variant="warning" title="Production applications" >}}
@@ -166,12 +144,6 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
     <script src="https://assets.uits.iu.edu/javascript/rivet/1.4.0/rivet.min.js"></script>
 </body>
 </html>
-{{< /code >}}
-
-## Using Sass
-If you are using Sass in your project you can import the Rivet Sass files directly:
-
-{{< code lang="css" >}}@import "./node_modules/rivet-uits/sass/rivet.scss"
 {{< /code >}}
 
 ## Using Rivet with other frameworks

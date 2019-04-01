@@ -1,0 +1,92 @@
+{{/*
+  Stores a reference to the main "tokens" object, so we can get at other
+  values inside the loop below.
+*/}}
+{{ $TokensData := $.Site.Data.tokens }}
+
+{{/*  Short variable for the collection shortcode parameter  */}}
+{{ $Collection := .Get "collection" }}
+
+{{ if eq $Collection "typography" }}
+<table class="rvt-m-top-lg rvt-table-compact">
+  <caption class="rvt-sr-only">Rivet type scale Sass variables</caption>
+  <thead>
+    <th width="200">Variable</th>
+    <th width="200">rem</th>
+    <th width="200">px</th>
+  </thead>
+  <tbody>
+    {{- range $.Site.Data.tokens.typography -}}
+    <tr>
+      <td width="200"><code>$ts-{{ .size }}</code></td>
+      <td width="200">{{ trim (div (.size) ($TokensData.baseFontSize)) "0" }}rem</td>
+      <td width="200">{{ .size }}px</td>
+    </tr>
+    {{- end -}}
+  </tbody>
+</table>
+{{ end }}
+
+{{ if eq $Collection "spacing" }}
+<table class="rvt-m-top-lg rvt-table-compact">
+  <caption class="rvt-sr-only">Rivet spacing Sass variables</caption>
+  <thead>
+    <th width="200">Variable</th>
+    <th width="200">rem</th>
+    <th width="200">px</th>
+  </thead>
+  <tbody>
+    {{- range $.Site.Data.tokens.spacing -}}
+    <tr>
+      <td width="200"><code>${{ .alias }}</code></td>
+      <td width="200">{{ trim (div (.size) ($TokensData.baseFontSize)) "0" }}rem</td>
+      <td width="200">{{ .size }}px</td>
+    </tr>
+    {{- end -}}
+  </tbody>
+</table>
+{{ end }}
+
+{{ if eq $Collection "breakpoints" }}
+<table class="rvt-m-top-lg rvt-table-compact">
+  <caption class="rvt-sr-only">Rivet breakpoint Sass variables</caption>
+  <thead>
+    <th width="200">Variable</th>
+    <th width="200">rem</th>
+    <th width="200">px</th>
+  </thead>
+  <tbody>
+    {{- range $.Site.Data.tokens.breakpoints -}}
+    <tr>
+      <td width="200"><code>$breakpoint-{{ .alias }}</code></td>
+      <td width="200">{{ trim (div (.size) ($TokensData.baseFontSize)) "0" }}rem</td>
+      <td width="200">{{ .size }}px</td>
+    </tr>
+    {{- end -}}
+  </tbody>
+</table>
+{{ end }}
+
+{{ if eq $Collection "colors" }}
+  {{ range $.Site.Data.tokens.colors }}
+    <h3>{{ title .base }}</h3>
+    
+    <table class="rvt-m-top-lg rvt-table-compact">
+      <caption class="rvt-sr-only">Rivet color variables</caption>
+      <thead>
+        <th width="200">Variable</th>
+        <th width="200">Hex</th>
+        <th width="200">Sample</th>
+      </thead>
+      <tbody>
+        {{- range .values -}}
+        <tr>
+          <td width="200"><code>${{ .alias }}</td>
+          <td width="200">{{ .value }}</td>
+          <td width="200"><span class="rvtd-color-swatch" style="background-color: {{ .value }};"></span></td>
+        </tr>
+        {{- end -}}
+      </tbody>
+    </table>
+  {{ end }}
+{{ end }}

@@ -24,12 +24,14 @@
 
     .is-current {
         background-color: $color-black--100;
+        padding-left: $xs;
+        margin-left: -$xs;
     }
 
-    .ready:before,
-    .alpha:before,
-    .beta:before,
-    .deprecated:before {
+    .ready:after,
+    .alpha:after,
+    .beta:after,
+    .deprecated:after {
         content: "";
         display: inline-block;
         width: $xs;
@@ -40,29 +42,30 @@
          * Magic number to achieve optical centering
          */
         top: $sm * .7;
-        left: $xs * .5;
+        right: $xs * .5;
     }
 
-    .ready:before {
+    .ready:after {
         background-color: $color-alert-green;
     }
 
-    .alpha:before {
+    .alpha:after {
         background-color: $color-alert-yellow;
     }
 
-    .beta:before {
+    .beta:after {
         background-color: $color-alert-blue;
     }
 
-    .deprecated:before {
+    .deprecated:after {
         background-color: $color-alert-orange;
     }
 
     li a {
         text-decoration: none;
         display: block;
-        padding: $xxs * 1.5 $sm * 1.25;
+        padding-top: $xxs * 1.5;
+        padding-bottom: $xxs * 1.5;
 
         &:hover {
             text-decoration: underline;
