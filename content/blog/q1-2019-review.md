@@ -48,7 +48,7 @@ A new part of our process this year is [soliticting upvotes from the community o
 ## Goal: Establish and document a QA process
 **Status**: <span class="rvt-badge rvt-badge--warning">Ongoing</span>
 
-On the back of [Rivet's migration to GitHub.com]({{< ref "content/blog/open-sourcing-rivet.md" >}}) and Rachel's hiring, we've been exploring ways we can leverage continuous integration (CI) tools to run automated tests on any code pushed to Rivet repos. 
+On the back of [Rivet's migration to GitHub.com]({{< ref "blog/open-sourcing-rivet.md" >}}) and Rachel's hiring, we've been exploring ways we can leverage continuous integration (CI) tools to run automated tests on any code pushed to Rivet repos. 
 
 We're currently testing a repeatable CI process with Rivet add-on repos like [Rivet collapsible](https://github.com/indiana-university/rivet-collapsible/wiki/About-the-CircleCI-Setup).
 
