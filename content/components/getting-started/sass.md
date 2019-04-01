@@ -17,12 +17,12 @@ If you are using the Rivet npm package and have a build process in place for Sas
 Once you have imported `rivet.scss` into your project, you will be able to use the variables listed on this page in your own Sass stylesheets.
 
 ## Typography
-Read the [documentation on typography]({{< relref "../layout/typography.md" >}}) to learn more about Rivet's responsive type scale CSS classes.
+See the layout documentation to learn more about [Rivet's responsive type scale CSS classes]({{< relref "../layout/typography.md" >}}).
 
 {{< sassdocs collection="typography" >}}{{< /sassdocs >}}
 
 ## Spacing
-Read the [documentation on spacing]({{< relref "../layout/spacing.md" >}}) to learn more about Rivet's responsive spacing CSS classes.
+See the layout documentation to learn more about [Rivet's responsive spacing CSS classes]({{< relref "../layout/spacing.md" >}}).
 
 {{< sassdocs collection="spacing" >}}{{< /sassdocs >}}
 
