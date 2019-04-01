@@ -19,12 +19,12 @@ Once you have imported `rivet.scss` into your project, you will be able to use t
 ## Typography
 Read the [documentation on typography]({{< relref "../layout/typography.md" >}}) to learn more about Rivet's responsive type scale CSS classes.
 
-{{< sassdocs collection="typography" >}}{{< /sassdocs >}}
+{{< sassdocs collection="typography" >}}
 
 ## Spacing
 Read the [documentation on spacing]({{< relref "../layout/spacing.md" >}}) to learn more about Rivet's responsive spacing CSS classes.
 
-{{< sassdocs collection="spacing" >}}{{< /sassdocs >}}
+{{< sassdocs collection="spacing" >}}
 
 ## Color
 We encourage you to modify Rivet to fit your needs, and sometimes that means adjusting the colors. We’ve included tints in Rivet to make it easier to adjust colors in a way that's consistent with other Rivet applications and with IU's brand guidelines.
@@ -35,10 +35,10 @@ Tints are colors mixed with different degrees of white. They offer flexibility a
 - **Do** use tints sparingly
 - **Don’t** use tints to replace colors of existing components
 
-{{< sassdocs collection="colors" >}}{{< /sassdocs >}}
+{{< sassdocs collection="colors" >}}
 
 ## Breakpoints
-{{< sassdocs collection="breakpoints" >}}{{< /sassdocs >}}
+{{< sassdocs collection="breakpoints" >}}
 
 ## Shadows
 {{< code lang="scss" >}}// Standard shadow(s)
