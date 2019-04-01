@@ -32,7 +32,7 @@ We encourage you to modify Rivet to fit your needs, and sometimes that means adj
 Tints are colors mixed with different degrees of white. They offer flexibility and a greater range of color to draw attention to or indicate actions. (You’ll notice that we tint our secondary buttons to indicate a hover state, for example.) 
 
 - **Do** use tints as accents in your custom components
-- **Do** make sure that color combinations meet **WCAG 2.0 standards** for color contrast. [Use this tool](https://webaim.org/resources/contrastchecker/) to check combinations for compliance.
+- **Do** make sure that color combinations meet **WCAG 2.0 standards** for contrast ratio. [Use this tool](https://webaim.org/resources/contrastchecker/) to check combinations for compliance.
 - **Do** use tints sparingly
 - **Don’t** use tints to replace colors of existing components
 
