@@ -6,7 +6,6 @@
 const gulp = require("gulp");
 const requireDir = require("require-dir");
 const browserSync = require("browser-sync");
-const connect = require("gulp-connect-php");
 const tasks = require("gulp-task-listing");
 
 // Include tasks from .js files in the tasks folder
@@ -26,9 +25,9 @@ gulp.task("serve", ["watch"], function() {
 });
 
 gulp.task("watch", ["build"], function() {
-  gulp.watch(["assets/js/**/*.js", "assets/js/**/*.vue"], ["js"]);
+  gulp.watch(["assets/js/**/*.js"], ["js"]);
   gulp.watch("assets/scss/**/*.scss", ["sass"]);
-  gulp.watch(["content/**/*.md"], ["index"]);
+  gulp.watch(["content/**/*.md"]);
   gulp.watch(
     [
       "layouts/**/*",
@@ -46,8 +45,8 @@ gulp.task("env:production", function() {
   process.env.HUGO_ENV = "production";
 });
 
-gulp.task("build", ["js", "sass", "index"]);
-gulp.task("build:prod", ["env:production", "sass", "js", "index"]);
+gulp.task("build", ["js", "sass"]);
+gulp.task("build:prod", ["env:production", "sass", "js"]);
 
 gulp.task("default", function() {
   return tasks.withFilters(null, "default")();
