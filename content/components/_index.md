@@ -75,7 +75,7 @@ index.html
 </div>
 
 ## Install via NPM
-Rivet is available as an NPM package. See the documenation on getting started with Rivet to [learn more about installing Rivet using NPM]({{< relref "npm.md" >}}).
+Rivet is available as an NPM package. See the documentation on getting started with Rivet to [learn more about installing Rivet using NPM]({{< ref "components/getting-started/npm.md" >}}).
 
 ## Hosted CSS and JavaScript
 {{< alert variant="warning" title="Production applications" >}}
