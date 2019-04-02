@@ -13,7 +13,9 @@ To maintain consistent spacing between components and to help create a sense of 
 ## Spacing Sass variables
 If you are using [Rivet's Sass](https://github.com/indiana-university/rivet-source/blob/develop/src/sass/core/_variables.scss#L325) files you can directly access any spacing unit by its variable name. The spacing unit variables follow the same naming conventions as all of Rivet's spacing utility classes.
 
-{{< code >}}// Global spacing units
+See the documentation on getting started with Rivet for a [complete list of Rivet's Sass variables]({{< relref "sass.md" >}}).
+
+{{< code lang="scss" >}}// Global spacing units
 
 $spacing-unit: .5rem;        // 8px
 

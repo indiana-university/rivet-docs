@@ -60,7 +60,8 @@ h6 {
  */
 
 code {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-family: "SFMono-Regular", Consolas, Menlo, Courier, monospace;
 }
 
 input[type='search'] {
@@ -919,4 +920,11 @@ a.button--reverse-secondary {
   .rvtd-nav-toggle {
     display: none;
   }
+}
+
+.rvtd-color-swatch {
+  width: $xl;
+  height: $xl;
+  display: block;
+  border-radius: 999rem;
 }
