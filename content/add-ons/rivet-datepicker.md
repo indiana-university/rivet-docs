@@ -88,8 +88,7 @@ It's important to note that if you are using a calendar date picker, make sure t
 
 For example, if your page contains the following input:
 
-{{< code lang="html" >}}
-<div class="rvt-date-picker">
+{{< code lang="html" >}}<div class="rvt-date-picker">
   <label for="start">Start date</label>
   <div class="rvt-date-picker__input">
     <input type="text" id="start-date" aria-describedby="start-format">
@@ -177,59 +176,4 @@ The Rivet calendar datepicker does not support a time picker option.
 
 If you are asking users to input date and time, we recommend using separate inputs to capture the time value and concatenating the date and time on the client or server.
 
-The example below uses an `<input type="time">` element. In [browsers that support time inputs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time#Handling_browser_support), users will see a field specially-formatted for entering a time.
-
-### 2. Add the markup to your HTML
-The Rivet switch markup uses a HTML `<button>` element. To use the switch add the following markup to your page.
-
-{{< code lang="html" >}}<button class="rvt-switch" data-switch="email-switch" role="switch" aria-checked="false">
-  <span class="rvt-switch__on">On</span>
-  <span class="rvt-switch__off">Off</span>
-</button>
-{{< /code >}}
-
-{{< code lang="html" >}}<div class="rvt-m-top-md rvt-p-all-md rvt-border-all rvt-border-radius">
-    <fieldset aria-describedby="maintenance-window-hint">
-      <legend class="rvt-ts-18 rvt-text-bold">Schedule maintenance period</legend>
-      <span class="rvt-ts-14" id="maintenance-window-hint">Type dates in the format: mm-dd-yyyy using dashes</span>
-      <div class="rvt-grid rvt-m-top-xl">
-        <div class="rvt-grid__item-3-md-up">
-          <div class="rvt-datepicker">
-            <label for="time-demo-start-day">Start day</label>
-            <div class="rvt-datepicker__input">
-              <input autocomplete="off" type="text" id="time-demo-start-day" aria-describedby="maintenance-window-hint">
-              <div class="rvt-datepicker__icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                  <path fill="currentColor" d="M12.29,2H12V1a1,1,0,0,0-2,0V2H6V1A1,1,0,0,0,4,1V2H3.71A2.78,2.78,0,0,0,1,4.83v7.33A2.78,2.78,0,0,0,3.71,15h8.57A2.78,2.78,0,0,0,15,12.17V4.83A2.78,2.78,0,0,0,12.29,2ZM3.71,4H4V5H6V4h4V5h2V4h.29a.78.78,0,0,1,.71.83V7H3V4.83A.78.78,0,0,1,3.71,4Zm8.57,9H3.71A.78.78,0,0,1,3,12.17V9H13v3.17A.78.78,0,0,1,12.29,13Z"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="rvt-grid__item-3-md-up">
-          <label for="start-time">Start time</label>
-          <input type="time" id="start-time">
-        </div>
-      </div>
-      <div class="rvt-grid rvt-m-top-sm">
-        <div class="rvt-grid__item-3-md-up">
-          <div class="rvt-datepicker">
-            <label for="time-demo-end-day">End day</label>
-            <div class="rvt-datepicker__input">
-              <input autocomplete="off" type="text" id="time-demo-end-day" aria-describedby="maintenance-window-hint">
-              <div class="rvt-datepicker__icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                  <path fill="currentColor" d="M12.29,2H12V1a1,1,0,0,0-2,0V2H6V1A1,1,0,0,0,4,1V2H3.71A2.78,2.78,0,0,0,1,4.83v7.33A2.78,2.78,0,0,0,3.71,15h8.57A2.78,2.78,0,0,0,15,12.17V4.83A2.78,2.78,0,0,0,12.29,2ZM3.71,4H4V5H6V4h4V5h2V4h.29a.78.78,0,0,1,.71.83V7H3V4.83A.78.78,0,0,1,3.71,4Zm8.57,9H3.71A.78.78,0,0,1,3,12.17V9H13v3.17A.78.78,0,0,1,12.29,13Z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="rvt-grid__item-3-md-up">
-          <label for="end-time">End time</label>
-          <input type="time" id="end-time">
-        </div>
-      </div>
-    </fieldset>
-</div>
-{{< /code >}}
+The demo includes an [example input for capturing time values](https://indiana-university.github.io/rivet-datepicker/#date-time-input). In [browsers that support time inputs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time#Handling_browser_support), users will see a field specially-formatted for entering a time.
