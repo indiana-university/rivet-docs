@@ -11,12 +11,6 @@ addOnTags:
   - All
   - Forms
 ---
-## Introduction
-The Rivet datepicker add-on provides three patterns for getting date and time information from users:
-1. [Basic date input](https://indiana-university.github.io/rivet-datepicker/#basic-date-input)
-2. [Calendar datepicker](https://indiana-university.github.io/rivet-datepicker/#calendar-datepicker)
-3. [Date and time input](https://indiana-university.github.io/rivet-datepicker/#date-time-input)
-
 ## Basic date input
 Using three inputs inputs is the quickest, most reliable way for users to enter dates into forms.
 
