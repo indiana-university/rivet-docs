@@ -103,8 +103,7 @@ For example, if your page contains the following input:
 
 You would initialize the calendar datepicker widget by passing the `id` of the text input to the `RivetDatepicker` constructor as an option called `field`:
 
-{{< code lang="js" >}}
-const startDate = new RivetDatepicker({
+{{< code lang="js" >}}const startDate = new RivetDatepicker({
   field: document.getElementById('start-date'),
 });
 {{< /code >}}
@@ -125,8 +124,7 @@ While it's possible to overwrite these defaults when you create a new datepicker
 ## Advanced options
 You can pass any of the other [available Pikaday options](https://github.com/Pikaday/Pikaday#configuration) to the `RivetDatepicker` instance.
 
-{{< code lang="js" >}}
-const startDate = new RivetDatepicker({
+{{< code lang="js" >}}const startDate = new RivetDatepicker({
   field: document.getElementById('start-date'),
   disableWeekends: true
 });
@@ -134,8 +132,7 @@ const startDate = new RivetDatepicker({
 
 In addition, all [Pikaday methods](https://github.com/Pikaday/Pikaday#methods) are available on the `RivetDatepicker.picker` property:
 
-{{< code lang="js" >}}
-const startDate = new RivetDatepicker(options);
+{{< code lang="js" >}}const startDate = new RivetDatepicker(options);
 
 // Destroys the "startDate" instance and removes all event listeners
 startDate.picker.destroy();
@@ -144,8 +141,7 @@ startDate.picker.destroy();
 ## Date formatting options
 Pikaday has a number of options you can use to format dates. The Pikaday `toString` option can be passed a function that accepts the `Date` object and returns a String in the format you'd like. In the examples on this page, we are using a function called `formatRivetDate`:
 
-{{< code lang="js" >}}
-function formatRivetDate(date) {
+{{< code lang="js" >}}function formatRivetDate(date) {
   const day = date.getDate();
   const month = date.getMonth() + 1;
   const year = date.getFullYear();
@@ -155,8 +151,7 @@ function formatRivetDate(date) {
 
 You can then pass your custom date format function to the `toString` options:
 
-{{< code lang="js" >}}
-const startDate = new RivetDatepicker({
+{{< code lang="js" >}}const startDate = new RivetDatepicker({
   field: document.getElementById('start-date'),
   toString: function(date, format) {
     return formatRivetDate(date);
