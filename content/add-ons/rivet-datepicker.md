@@ -1,7 +1,7 @@
 ---
 title: "Datepicker"
 description: Date entry patterns for Rivet including a calendar datepicker
-thumbnail: "switch-thumbnail.png"
+thumbnail: "datepicker-thumbnail.png"
 packageName: rivet-datepicker
 npm: true
 repo: https://github.com/indiana-university/rivet-datepicker
