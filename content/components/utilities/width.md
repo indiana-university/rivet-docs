@@ -83,7 +83,7 @@ See the documentation about Rivet's global breakpoints in the [grid documentatio
 {{< /alert >}}
 
 ## Combining width and flex utilities
-The width utility classes can be combined with [Rivet's flex utilities]({{< ref "/components/utilities/flex.md" >}}) to sit elements next to one another.
+The width utility classes can be combined with [Rivet's flex utilities]({{< ref "/components/utilities/flex.md" >}}) to position elements next to one another horizontally.
 
 {{< example lang="html" >}}<div class="rvt-display-flex">
   <div class="rvt-width-xl rvt-m-right-md">
