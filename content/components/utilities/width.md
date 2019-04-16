@@ -82,6 +82,22 @@ All width utility classes have the following responsive modifiers available to t
 See the documentation about Rivet's global breakpoints in the [grid documentation](../grid/#grid-breakpoints).
 {{< /alert >}}
 
+## Combining width and flex utilities
+The Rivet width utility classes can be combined with [flex utilities]({{< ref "/components/utilities/flex.md" >}}) to sit elements next to one another.
+
+{{< example lang="html" >}}<div class="rvt-display-flex">
+  <div class="rvt-width-xl rvt-m-right-md">
+    <label for="input-8">Flex inputs</label>
+    <input type="text" id="input-8">
+  </div>
+  
+  <div class="rvt-width-sm">
+    <label for="input-9">Flex inputs</label>
+    <input type="text" id="input-9">
+  </div>
+</div>
+{{< /example >}}
+
 ## Width Sass variables
 If you are using [Rivet's Sass](https://github.com/indiana-university/rivet-source/blob/develop/src/sass/core/_variables.scss#L325) files you can directly access any width unit by its variable name. The width unit variables follow the same naming conventions as all of Rivet's spacing utility classes.
 
