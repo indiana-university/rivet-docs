@@ -10,19 +10,19 @@ The width utilities were introduced in Rivet 1.5.0. If you need help updating to
 {{< /alert >}}
 
 ## Width utility CSS classes
-You can constrain the width of an element by applying one of the classes listed below:
+You can constrain the width of a block-level element by applying one of the classes listed below.
 
 {{< widths >}}{{< /widths >}}
-
-## Width utility examples
-
-You can apply a width utility class to any block-level element.
-
-Width utility classes are especially useful for form inputs, which should [have their widths constrained to match the expected length of the information](https://www.nngroup.com/articles/web-form-design/) you're asking someone to give you. For example, a form field asking someone for their ZIP code should be much smaller than one asking for their street address.
 
 {{< alert variant="warning" title="Not intended for layout" >}}
 The width utility classes are intended for use when fine-tuning the appearance of individual elements on a page and should not be used for high-level page layout. To lay out pages, use the [Rivet grid]({{< ref "/components/layout/grid.md" >}}) instead.
 {{< /alert >}}
+
+## Width utility examples
+
+Width utility classes are especially useful for form inputs, which should [have their widths constrained to match the expected length of the information](https://www.nngroup.com/articles/web-form-design/) you're asking someone to give you.
+
+For example, a form field asking someone for their ZIP code should be much smaller than one asking for their street address.
 
 {{< example lang="html" >}}<div class="rvt-width-xxs">
   <label for="input-1">xxs</label>
@@ -61,7 +61,7 @@ The width utility classes are intended for use when fine-tuning the appearance o
 {{< /example >}}
 
 ### Responsive widths
-Each width utility class also comes with a set of modifiers that allow you to specify the screen size at which the width constraint should take effect.
+Each width utility class comes with a set of modifiers that allow you to specify the screen size at which the constrained width should take effect.
 
 {{< code >}}<div class="rvt-width-sm-lg-up">
     <!-- markup -->
@@ -83,7 +83,7 @@ See the documentation about Rivet's global breakpoints in the [grid documentatio
 {{< /alert >}}
 
 ## Combining width and flex utilities
-The Rivet width utility classes can be combined with [flex utilities]({{< ref "/components/utilities/flex.md" >}}) to sit elements next to one another.
+The width utility classes can be combined with [Rivet's flex utilities]({{< ref "/components/utilities/flex.md" >}}) to sit elements next to one another.
 
 {{< example lang="html" >}}<div class="rvt-display-flex">
   <div class="rvt-width-xl rvt-m-right-md">
@@ -99,7 +99,7 @@ The Rivet width utility classes can be combined with [flex utilities]({{< ref "/
 {{< /example >}}
 
 ## Width Sass variables
-If you are using [Rivet's Sass](https://github.com/indiana-university/rivet-source/blob/develop/src/sass/core/_variables.scss#L325) files you can directly access any width unit by its variable name. The width unit variables follow the same naming conventions as all of Rivet's spacing utility classes.
+If you are using [Rivet's Sass](https://github.com/indiana-university/rivet-source/blob/develop/src/sass/core/_variables.scss#L325) files, you can directly access any width unit by its variable name.
 
 See the documentation on getting started with Rivet for a [complete list of Rivet's Sass variables]({{< relref "sass.md" >}}).
 
