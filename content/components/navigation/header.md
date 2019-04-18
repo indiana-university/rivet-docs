@@ -1,5 +1,6 @@
 ---
 title: "Header"
+asOf: 1.0.0
 description: "The Rivet header provides consistent branding and flexible navigation layout for your application."
 requiresJs: true
 status: "Ready"

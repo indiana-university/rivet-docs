@@ -7,6 +7,9 @@
                     <span class="rvt-badge rvt-badge--{{ lower .Params.status }} rvt-m-bottom-sm">{{ .Params.status }}</span>
                 {{ end }}
                 <h1>{{ .Title }}</h1>
+                {{ if .Params.asOf }}
+                    <span>Added in {{ .Params.asOf }}</span>
+                {{ end }}
                 <p class="rvtd-lead">{{ .Description }}</p>
                 {{ .Content }}
             </div>

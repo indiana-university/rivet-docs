@@ -1,5 +1,6 @@
 ---
 title: "Media Object"
+asOf: 1.2.0
 description: "The media object is a simple layout component that can generally be used to display items in a list of content."
 status: "Alpha"
 ---

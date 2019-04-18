@@ -1,5 +1,6 @@
 ---
 title: "Links"
+asOf: 1.0.0
 description: "Inline text links are used to navigate between documents (pages)."
 status: "Ready"
 ---

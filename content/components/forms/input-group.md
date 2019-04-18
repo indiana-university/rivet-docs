@@ -1,5 +1,6 @@
 ---
 title: "Input group"
+asOf: 1.0.0
 description: "Use input groups to combine a text input with an action button or dropdown menu."
 requiresJs: false
 status: "Ready"

@@ -1,5 +1,6 @@
 ---
 title: "Loading indicator"
+asOf: 1.2.0
 description: "The Rivet loading indicator helps notify users when their action is being processed"
 status: "Alpha"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Footer"
+asOf: 1.0.0
 description: "The base footer provides consistent branding in a condensed space below all of your application content."
 requiresJs: false
 status: "Ready"

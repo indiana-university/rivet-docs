@@ -1,5 +1,6 @@
 ---
 title: "Text inputs"
+asOf: 1.0.0
 description: "Text inputs are the basic building blocks of forms. They allow users to enter various types of data into web-based forms."
 status: "Ready"
 ---
