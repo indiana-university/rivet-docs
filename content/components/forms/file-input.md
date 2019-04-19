@@ -1,5 +1,6 @@
 ---
 title: "File input"
+asOf: 1.0.0
 description: "A custom HTML file input that is styled to look like Rivet buttons"
 requiresJs: true
 status: "Ready"

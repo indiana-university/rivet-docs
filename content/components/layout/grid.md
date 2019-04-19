@@ -1,5 +1,6 @@
 ---
 title: "Grid"
+asOf: 1.0.0
 description: "A 12 column responsive grid with support for automatic columns that makes it easy to lay out your application."
 status: "Ready"
 ---

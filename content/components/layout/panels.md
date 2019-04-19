@@ -1,5 +1,6 @@
 ---
 title: "Panels"
+asOf: 1.0.0
 description: "Use panels to help group content visually or call attention to parts of your application."
 requiresJs: false
 status: "Deprecated"

@@ -1,5 +1,6 @@
 ---
 title: "Tabs"
+asOf: 1.0.0
 description: "Use tabs to allow users to switch between logical chunks of content without having to leave the current page."
 requiresJs: true
 status: "Ready"

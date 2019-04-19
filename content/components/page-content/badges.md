@@ -1,5 +1,6 @@
 ---
 title: Badges
+asOf: 1.0.0
 description: Use badges to call out or label important information in your UI.
 status: "Ready"
 ---

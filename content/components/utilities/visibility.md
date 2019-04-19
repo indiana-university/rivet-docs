@@ -1,5 +1,6 @@
 ---
 title: "Visibility"
+asOf: 1.0.0
 description: "These utilities make it easy to show and hide content depending on screen sizes."
 status: "Ready"
 ---

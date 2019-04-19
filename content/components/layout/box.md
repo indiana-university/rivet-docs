@@ -1,5 +1,6 @@
 ---
 title: "Box"
+asOf: 1.2.0
 description: "The box component can be used to help visually group related content"
 status: "Alpha"
 ---
