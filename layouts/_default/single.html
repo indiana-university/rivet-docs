@@ -3,13 +3,17 @@
         {{ partial "sidebar.html" . }}
         <div class="rvtd-tube">
             <div class="rvtd-tube__inner rvtd-typeset">
-                {{ if .Params.status }}
-                    <span class="rvt-badge rvt-badge--{{ lower .Params.status }} rvt-m-bottom-sm">{{ .Params.status }}</span>
-                {{ end }}
+                <div class="rvt-flex rvt-items-center rvt-justify-end-md-up rvt-m-bottom-sm">
+                    {{ if .Params.status }}
+                        <span class="rvt-badge rvt-badge--{{ lower .Params.status }}">{{ .Params.status }}</span>
+                    {{ end }}
+                    {{ if .Params.asOf }}
+                        <span class="rvt-ts-14 rvt-m-left-xs">
+                            Added in <span class="rvt-text-bold">{{ .Params.asOf }}</span>
+                        </span>
+                    {{ end }}
+                </div>
                 <h1>{{ .Title }}</h1>
-                {{ if .Params.asOf }}
-                    <span>Added in {{ .Params.asOf }}</span>
-                {{ end }}
                 <p class="rvtd-lead">{{ .Description }}</p>
                 {{ .Content }}
             </div>
