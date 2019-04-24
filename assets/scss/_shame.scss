@@ -184,6 +184,11 @@ a.button--reverse-secondary {
   @extend .rvt-badge--success;
 }
 
+/* Collapse spacing between multiple media objects in blog posts */
+.rvtd-article-container .rvt-box + .rvt-box {
+  margin-top: $sm !important;
+}
+
 /* Media object icon "avatars" */
 .rvt-mo__icon {
   align-items: center;
