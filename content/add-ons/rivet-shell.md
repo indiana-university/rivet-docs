@@ -10,43 +10,100 @@ addOnTags:
   - All
   - Layout
 ---
-## Shell markup changes
 {{< alert title="New in 1.0.0" variant="warning" >}}
-  The root `.rvt-shell` class should be applied to the `<main>` element of your document as of version `1.0.0`. 
+  The `.rvt-shell` class should be applied to the `<main>` element of your document as of version `1.0.0`.
 {{< /alert >}}
 
-See the following code examples for more information on how to structure your markup to include the Rivet header and footer directly before and after the `<main class="rvt-shell">` element.
-
 ## Getting started
-The Rivet shell Add-on requires the use of the core Rivet CSS. You can find out more about how to get started in [the Rivet documentation](https://rivet.iu.edu/components/). Once you are using Rivet, you can download the Rivet shell source files and include them in your project.
+Before you can start using the Rivet shell, you'll need to include the shell CSS in your project.
 
-### 1. Include the CCS in your page
+### Using downloaded CSS
+You can [download the Rivet shell CSS](https://github.com/indiana-university/rivet-shell/archive/master.zip) and include it in your project the same way you'd include any other CSS file:
+
 {{< code lang="html" >}}<link rel="stylesheet" href="dist/css/rivet-shell.min.css">
 {{< /code >}}
 
-### Using Sass
-If you are already using [Rivet's Sass](https://rivet.iu.edu/getting-started/sass/), you can also use the shell by importing it:
+Make sure you include the Rivet shell CSS *after* the Rivet core CSS.
 
-{{< code lang="scss" >}}@import "< your-path-to-node_modules >/rivet-shell/sass/rivet-shell.scss";
+### Using NPM and Sass
+If you are using NPM and [Rivet's Sass](https://rivet.iu.edu/getting-started/sass/), you can use the shell by importing it from your `node_modules` folder:
+
+{{< code lang="scss" >}}@import "/node_modules/rivet-shell/sass/rivet-shell.scss";
 {{< /code >}}
 
-## Basic shell configuration
-The default Rivet layout shell comes ready to use with any of the Rivet header variations and the Rivet footer. The _stage_ area will fill up the remaining vertical space and push the footer to the bottom of the browser window.
+## Basic shell
+Apply the `.rvt-shell` class to a `main` element that sits between a [Rivet header]({{< ref "/components/navigation/header.md" >}}) and a [Rivet footer]({{< ref "/components/navigation/footer.md" >}}).
 
-Inside the stage are we include a _page header_ component that is used for page/view-specific content. The page header includes:
+The `.rvt-shell__stage` container will fill the remaining vertical space between the header and footer, with the footer pushed to the bottom of the browser window.
 
-- A title block
-- Breadcrumb navigation
-- A dedicated toolbar-like space for actions and links
+{{< alert title="Stage padding" variant="info" >}}
+  The shell stage does not have any padding by default. To add padding to the entire stage, use one of the [Rivet spacing utility classes]({{< ref "/components/layout/spacing.md" >}}).
+{{< /alert >}}
 
 {{< code lang="html" >}}<header class="rvt-header">
   <!-- Rivet header markup -->
 </header>
 
 <main class="rvt-shell">
-  <div class="rvt-shell__stage">
-    <div class="rivet-page-header">
-      <!-- Page header content -->
+  <div class="rvt-shell__stage rvt-p-all-md">
+    <!-- Your app's main content -->
+  </div>
+</main>
+
+<footer class="rvt-footer">
+  <!-- Rivet footer markup -->
+</footer>
+{{< /code >}}
+
+[Basic shell demo](https://indiana-university.github.io/rivet-shell/rivet-shell-empty)
+
+### Gray stage background
+You can give the stage a subtle gray background with the `.rvt-shell__stage--subtle` class.
+
+{{< code lang="html" >}}<main class="rvt-shell">
+  <div class="rvt-shell__stage rvt-shell__stage--subtle rvt-p-all-md">
+    <!-- Your app's main content -->
+  </div>
+</main>
+{{< /code >}}
+
+[Shell with gray stage demo](https://indiana-university.github.io/rivet-shell/rivet-shell-sidebar-header-reversed-bg/)
+
+## Shell with page header
+You can add a page-specific header to your shell layout by adding an element with the `.rvt-page-header` class inside your `.rvt-shell__stage` container. 
+
+This page-specific header can include a title, [breadcrumb navigation]({{< ref "/components/navigation/breadcrumb.md" >}}), and [action buttons]({{< ref "/components/forms/buttons.md" >}}) (see example below).
+
+{{< code lang="html" >}}<header class="rvt-header">
+  <!-- Rivet header markup -->
+</header>
+
+<main class="rvt-shell">
+  <div class="rvt-shell__stage rvt-p-all-md">
+
+    <!-- Page header -->
+    <div class="rvt-page-header rvt-page-header--padded rvt-page-header--border">
+      <div class="rvt-page-header__title-block">
+        
+        <!-- Page title -->
+        <h1 class="rvt-page-header__title">Page title</h1>
+        
+        <!-- Breadcrumb navigation -->
+        <nav role="navigation" aria-label="Breadcrumbs">
+          <ol class="rvt-breadcrumbs rvt-m-bottom-xs">
+            <li><a href="#">Top level</a></li>
+            <li><a href="#">Second level</a></li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="rvt-page-header__actions">
+        <div class="rvt-button-group">
+          <button class="rvt-button">Primary action</button>
+          <button class="rvt-button rvt-button--plain">Secondary action</button>
+        </div>
+      </div>
     </div>
     
     <!-- Rest of your app's main content -->
@@ -58,18 +115,111 @@ Inside the stage are we include a _page header_ component that is used for page/
 </footer>
 {{< /code >}}
 
-[Shell base demo](https://indiana-university.github.io/rivet-shell/rivet-shell-empty)
+[Shell with page header demo](https://indiana-university.github.io/rivet-shell/rivet-shell-empty)
+
+### Extra padding
+You can add extra padding to the page header by applying the `.rvt-page-header--padded` class. The example above uses this modifier class.
+
+### Bottom border
+You can also add a border along the bottom of the page header by applying the `.rvt-page-header--border` class. The example above uses this modifier class.
 
 ## Shell sidebar
-To offer even more flexibility, the Rivet shell also comes with a sidebar component that can be used to help layout out navigation and content.
+You can include a sidebar in your shell layout by adding an element with the `.rvt-shell__sidebar` class as the first child of `main`.
+
+{{< code lang="html" >}}<main class="rvt-shell">
+  <div class="rvt-shell__sidebar">
+    <nav role="navigation">
+      <ul class="rvt-list-nav">
+        <li>Nav item one</li>
+        <!-- Rest of sidebar navigation -->
+      </ul>
+    </nav>
+  </div>
+
+  <div class="rvt-shell__stage rvt-p-all-md">
+    <!-- Your app's main content -->
+  </div>
+</main>
+{{< /code >}}
 
 [Shell with sidebar demo](https://indiana-university.github.io/rivet-shell/rivet-shell-sidebar/index.html)
 
-### Shell layout on smaller screens
-In earlier versions of the shell, we hid the shell sidebar on smaller screens with the idea that developers could duplicate any navigation from the sidebar in the rivet drawer on smaller screens, similar to [how the main Rivet header works](https://rivet.iu.edu/components/navigation/header/#implementation-notes).
+### Right-aligned sidebar
+You can apply the `.rvt-shell--reverse` class to the `main` element (not the element with the `.rvt-shell__sidebar` class) to snap the sidebar to the right side of the browser window instead of the left.
 
-As of version 1.0.0 we have removed this functionality and instead the shell sidebar will default to stacking on top of the `rvt-shell__stage` element. Due to the unknown nature of the amount of content that could be placed in the shell sidebar we felt it was better to let the developer have control over how the sidebar content should be handled on smaller screens. For instance if you want to restore the old functionality you could add the following custom CSS:
+{{< code lang="html" >}}<main class="rvt-shell rvt-shell--reverse">
+  <!-- Shell content -->
+</main>
+{{< /code >}}
 
+[Shell with right-aligned sidebar demo](https://indiana-university.github.io/rivet-shell/rivet-shell-right-sidebar-header/)
+
+### Light sidebar
+You can use the `.rvt-shell__sidebar--light` class to change the background color of the sidebar to white.
+
+{{< code lang="html" >}}<main class="rvt-shell">
+  <div class="rvt-shell__sidebar rvt-shell__sidebar--light">
+    <!-- Sidebar content -->
+  </div>
+
+  <div class="rvt-shell__stage rvt-p-all-md">
+    <!-- Your app's main content -->
+  </div>
+</main>
+{{< /code >}}
+
+### Compact sidebar
+If you have a large number of navigation items in the sidebar, you can use the `.rvt-list-nav--compact` class to reduce the amount of space between sidebar navigation items.
+
+{{< code lang="html" >}}<main class="rvt-shell">
+  <div class="rvt-shell__sidebar">
+    <nav role="navigation">
+      <ul class="rvt-list-nav rvt-list-nav--compact">
+        <li>Nav item one</li>
+        <!-- Rest of navigation -->
+      </ul>
+    </nav>
+  </div>
+  <div class="rvt-shell__stage">
+    <!-- Main content "Stage" -->
+  </div>
+</main>
+{{< /code >}}
+
+### Combining the sidebar with a page header
+You can combine the shell sidebar and page header in a single layout.
+
+{{< code lang="html" >}}<main class="rvt-shell">
+  <div class="rvt-shell__sidebar">
+    <nav role="navigation">
+      <ul class="rvt-list-nav">
+        <li>Nav item one</li>
+        <!-- Rest of navigation -->
+      </ul>
+    </nav>
+  </div>
+
+  <div class="rvt-shell__stage rvt-p-all-md">
+    <div class="rvt-page-header">
+      <!-- Page header content -->
+    </div>
+    <div class="rvt-p-all">
+      <!-- Your app's main content -->
+    </div>
+  </div>
+</main>
+{{< /code >}}
+
+[Shell with sidebar and page header demo](https://indiana-university.github.io/rivet-shell/rivet-shell-sidebar-and-header/index.html)
+
+## Shell layout on smaller screens
+In previous versions of the shell, we hid the sidebar on smaller screens, assuming developers would duplicate any navigation from the sidebar in the Rivet drawer, similar to [how the main Rivet header works](https://rivet.iu.edu/components/navigation/header/#implementation-notes).
+
+We removed this functionality in version `1.0.0`. Instead, the shell sidebar will stack on top of the element with the `.rvt-shell__stage` class.
+
+Since we can't predict how much content might be placed in the sidebar, we felt it was better to let developers have control over how sidebar content should be displayed on smaller screens.
+
+If you want to restore the old functionality, you could add the following custom CSS:
 
 {{< code lang="scss" >}}.rvt-shell__sidebar {
   display: none;
@@ -86,83 +236,6 @@ As of version 1.0.0 we have removed this functionality and instead the shell sid
 }
 {{< /code >}}
 
-### Let us know how you are handling sidebar navigation
-If you've used the shell and have a responsive solution for showing and hiding the shell sidebar content, please let us know by creating an [issue on the Rivet shell repository](https://github.com/indiana-university/rivet-shell/issues/new).
-
-## Sidebar and page header layout
-For more complex layouts and navigation structure the shell sidebar and page header can be used together. Building on the _Shell sidebar_ example above, you can place the `rvt-page-header` component included with the shell inside the stage area to make a more complex layout.
-
-{{< code lang="html" >}}<main class="rvt-shell">
-  <div class="rvt-shell__sidebar">
-    <nav role="navigation">
-      <ul class="rvt-list-nav">
-        <li>Nav item one</li>
-        <!-- Rest of navigation -->
-      </ul>
-    </nav>
-  </div>
-  <div class="rvt-shell__stage rvt-p-all-md">
-    <div class="rvt-page-header">
-      <!-- Page header content -->
-    </div>
-    <div class="rvt-p-all">
-      <!-- Main content "Stage" -->
-    </div>
-  </div>
-</main>
-{{< /code >}}
-
-In the example above we've used a Rivet spacing utility class to add a bit of padding to the stage content area underneath the page header. We intentionally do not build in padding to the stage so that users have more control over how the content is laid our in the stage area. For example when using the page header.
-
-[Sidebar and header demo](https://indiana-university.github.io/rivet-shell/rivet-shell-sidebar-and-header/index.html)
-
-## Shell modifiers
-There are a couple of different modifiers you can use to modify the shell layout and appearance.
-
-### Reverse modifier
-If you are using the shell sidebar, the `rvt-shell--reverse` modifier will move the sidebar to the right side of the shell layout. 
-
-{{< code lang="html" >}}<main class="rvt-shell rvt-shell--reverse">
-  <!-- Shell content -->
-</main>
-{{< /code >}}
-
-[View the reversed layout](https://indiana-university.github.io/rivet-shell/rivet-shell-right-sidebar-header/)
-
-### Sidebar and stage modifiers
-You can use the `rvt-shell__sidebar--light` modifier to changes the background color of the sidebar to white. This works really will with the `rvt-shell__stage--subtle` modifier which will apply a subtle gray background to the stage, effectively swapping the default colors.
-
-{{< code lang="html" >}}<main class="rvt-shell">
-  <div class="rvt-shell__sidebar rvt-shell__sidebar--light">
-    <nav role="navigation">
-      <ul class="rvt-list-nav">
-        <li>Nav item one</li>
-        <!-- Rest of navigation -->
-      </ul>
-    </nav>
-  </div>
-  <div class="rvt-shell__stage rvt-shell__stage--subtle">
-    <!-- Main content "Stage" -->
-  </div>
-</main>
-{{< /code >}}
-
-[View the stage and sidebar modifiers](https://indiana-university.github.io/rivet-shell/rivet-shell-sidebar-header-reversed-bg/)
-
-### Compact sidebar list nav modifier
-If you have a large amount of navigation in the shell sidebar, you can used the list nav compact modifier to reduce the amount of space between the sidebar nav items.
-
-{{< code lang="html" >}}<main class="rvt-shell">
-  <div class="rvt-shell__sidebar">
-    <nav role="navigation">
-      <ul class="rvt-list-nav rvt-list-nav--compact">
-        <li>Nav item one</li>
-        <!-- Rest of navigation -->
-      </ul>
-    </nav>
-  </div>
-  <div class="rvt-shell__stage">
-    <!-- Main content "Stage" -->
-  </div>
-</main>
-{{< /code >}}
+{{< alert title="Let us know how you're handling sidebar navigation" variant="info" >}}
+  If you're using shell and have a responsive solution for showing and hiding sidebar content, let us know by creating an [issue on the Rivet shell repository](https://github.com/indiana-university/rivet-shell/issues/new).
+{{< /alert >}}
