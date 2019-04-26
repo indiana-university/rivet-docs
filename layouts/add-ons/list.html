@@ -11,7 +11,6 @@
 </div>
 
 <div class="rvt-m-top-xxl">
-
   <div class="rvtd-subtle-wrapper">
     <div class="rvt-container rvt-container--center rvt-container--junior">
 
@@ -40,17 +39,19 @@
       <ul class="rvt-grid rvt-plain-list">
         {{ range .Data.Pages }}
           <li class="rvt-grid__item-4-md-up rvt-m-bottom-lg">
-            <a href="{{ .Permalink }}" class="rvtd-card__wrapper-link">
-              <div class="rvtd-card">
-                <figure class="rvtd-thumbnail">
+            <a href="{{ .Permalink }}" class="rvtd-card-wrapper-link">
+              <div class="rvt-box rvt-box--card rvtd-card">
+                <figure class="rvt-box__image rvt-bg-crimson">
                   {{ if (isset .Params "thumbnail") }}
                     <img src="../img/add-ons/{{.Params.thumbnail}}" alt="">
                   {{ else }}
                     <img src="../img/add-ons/add-on-placeholder.jpg" alt="">
                   {{ end }}
                 </figure>
-                <h3 class="rvtd-card__title">{{ .Title }}</h3>
-                <p class="rvtd-card__description">{{ .Description }}</p>
+                <div class="rvt-box__body">
+                  <h3 class="rvt-ts-18 rvt-text-bold">{{ .Title }}</h3>
+                  <p class="rvt-m-bottom-none">{{ .Description }}</p>
+                </div>
               </div>
             </a>
           </li>
