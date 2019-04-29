@@ -12,5 +12,3 @@ addOnTags:
   - All
   - Page content
 ---
-## Getting started
-Rivet icons are currently offered as SVGs that can be used inline in your HTML markup.
