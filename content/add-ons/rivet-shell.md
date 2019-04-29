@@ -245,5 +245,5 @@ If you want to restore the old functionality, you could add the following custom
 {{< /code >}}
 
 {{< alert title="Let us know how you're handling sidebar navigation" variant="info" >}}
-  If you're using shell and have a responsive solution for showing and hiding sidebar content, let us know by [creating an issue on the Rivet shell repository](https://github.com/indiana-university/rivet-shell/issues/new).
+  If you're using the shell and have a responsive solution for showing and hiding sidebar content, let us know by [creating an issue on the Rivet shell repository](https://github.com/indiana-university/rivet-shell/issues/new).
 {{< /alert >}}
