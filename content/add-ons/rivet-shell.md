@@ -61,7 +61,7 @@ The `.rvt-shell__stage` container will fill the remaining vertical space between
 You can give the stage a subtle gray background with the `.rvt-shell__stage--gray` class.
 
 {{< alert title="Class deprecation" variant="warning" >}}
-  The `.rvt-shell__stage--subtle` class is deprecated as of version `1.0.0` in favor of the `.rvt-shell__stage--gray` class.
+  The `.rvt-shell__stage--subtle` class is deprecated as of version `1.0.0` in favor of the `.rvt-shell__stage--gray` class. The deprecated class will be removed in a future version of the shell add-on.
 {{< /alert >}}
 
 {{< code lang="html" >}}<main class="rvt-shell">
@@ -152,7 +152,7 @@ You can include a sidebar in your shell layout by adding an element with the `.r
 You can apply the `.rvt-shell--sidebar-right` class to the `main` element (not the element with the `.rvt-shell__sidebar` class) to snap the sidebar to the right side of the browser window instead of the left.
 
 {{< alert title="Class deprecation" variant="warning" >}}
-  The `.rvt-shell--reverse` class is deprecated as of version `1.0.0` in favor of the `.rvt-shell--sidebar-right` class.
+  The `.rvt-shell--reverse` class is deprecated as of version `1.0.0` in favor of the `.rvt-shell--sidebar-right` class. The deprecated class will be removed in a future version of the shell add-on.
 {{< /alert >}}
 
 {{< code lang="html" >}}<main class="rvt-shell rvt-shell--sidebar-right">
