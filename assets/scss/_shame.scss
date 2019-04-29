@@ -630,6 +630,14 @@ a.button--reverse-secondary {
 }
 
 /**
+ * Constrain the size of the CircleCI badge on embedded add-on docs.
+ */
+
+img[alt=CircleCI] {
+  max-width: 128px;
+}
+
+/**
  * Overide default Rivet utility class here to make it a little
  * lighter for now
  */
