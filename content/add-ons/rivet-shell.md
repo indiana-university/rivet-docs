@@ -149,9 +149,13 @@ You can include a sidebar in your shell layout by adding an element with the `.r
 [Shell with sidebar demo](https://indiana-university.github.io/rivet-shell/rivet-shell-sidebar/index.html)
 
 ### Right-aligned sidebar
-You can apply the `.rvt-shell--reverse` class to the `main` element (not the element with the `.rvt-shell__sidebar` class) to snap the sidebar to the right side of the browser window instead of the left.
+You can apply the `.rvt-shell--sidebar-right` class to the `main` element (not the element with the `.rvt-shell__sidebar` class) to snap the sidebar to the right side of the browser window instead of the left.
 
-{{< code lang="html" >}}<main class="rvt-shell rvt-shell--reverse">
+{{< alert title="Class deprecation" variant="warning" >}}
+  The `.rvt-shell--reverse` class is deprecated as of version `1.0.0` in favor of the `.rvt-shell--sidebar-right` class.
+{{< /alert >}}
+
+{{< code lang="html" >}}<main class="rvt-shell rvt-shell--sidebar-right">
   <!-- Shell content -->
 </main>
 {{< /code >}}
