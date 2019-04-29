@@ -58,10 +58,14 @@ The `.rvt-shell__stage` container will fill the remaining vertical space between
 [Basic shell demo](https://indiana-university.github.io/rivet-shell/rivet-shell-empty)
 
 ### Gray stage background
-You can give the stage a subtle gray background with the `.rvt-shell__stage--subtle` class.
+You can give the stage a subtle gray background with the `.rvt-shell__stage--gray` class.
+
+{{< alert title="Class deprecation" variant="warning" >}}
+  The `.rvt-shell__stage--subtle` class is deprecated as of version `1.0.0` in favor of the `.rvt-shell__stage--gray` class.
+{{< /alert >}}
 
 {{< code lang="html" >}}<main class="rvt-shell">
-  <div class="rvt-shell__stage rvt-shell__stage--subtle rvt-p-all-md">
+  <div class="rvt-shell__stage rvt-shell__stage--gray rvt-p-all-md">
     <!-- Your app's main content -->
   </div>
 </main>
