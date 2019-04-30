@@ -1,5 +1,30 @@
 [
   {
+    "tag_name": "v1.5.0",
+    "published_at": "2019-04-30T17:23:27Z",
+    "body": "This release introduces responsive width utility classes, squashes a few bugs, and updates our build process.<!-- end-overview -->",
+    "pulls": {
+      "items": [
+        {
+          "title": "Added responsive width utility classes",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/107"
+        },
+        {
+          "title": "Incorporated Circle CI into build process",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/105"
+        },
+        {
+          "title": "Fixed breakpoints for new footer lockup",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/104"
+        },
+        {
+          "title": "Fixed active state background color for small secondary button",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/103"
+        }
+      ]
+    }
+  },
+  {
     "tag_name": "v1.4.0",
     "published_at": "2019-03-27T17:23:27Z",
     "body": "This release makes some updates to the Rivet footer and deprecates classes related to alerts and the loading indicator.<!-- end-overview -->",
