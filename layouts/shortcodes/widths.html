@@ -25,7 +25,7 @@
   <tbody>
     {{- range $.Site.Data.tokens.widths -}}
       <tr>
-        <td><code>.width-{{ .alias }}</code></td>
+        <td><code>.rvt-width-{{ .alias }}</code></td>
         <td>{{ div (.size) ($TokensData.baseFontSize) }}rem</td>
         <td>{{ .size }}px</td>
       </tr>
