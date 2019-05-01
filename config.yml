@@ -9,6 +9,10 @@ taxonomies:
   tag: tags
 outputs:
   section: ["html"]
+caches:
+  getjson:
+    maxAge: "10h"
+    dir: ":cacheDir/:project"
 params:
   rivetVersion: 1.4.0
   tagline: "Design System"
