@@ -1,47 +1,22 @@
-// Copyright (C) 2018 The Trustees of Indiana University
-// SPDX-License-Identifier: BSD-3-Clause
-
-.rvtd-card {
-    position: relative;
-
-    &__wrapper-link {
-        text-decoration: none;
-        color: inherit;
-        transition: all .2s ease;
-        display: block;
-
-        &:hover {
-            color: inherit;
-            transform: translateY(-$xxs);
-        }
-
-        &:focus {
-            outline: 2px solid $color-action;
-            outline-offset: $xxs;
-        }
-    }
-
-    &__title {
-        margin-top: $sm;
-        font-size: $ts-20;
-    }
-
-    &__description {
-        color: $color-black--700;
-    }
-
-    &__meta > *:not(:last-child) {
-        margin-right: $xs;
-    }
+@include mq($breakpoint-md) {
+  .rvtd-card {
+    height: 320px;
+  }
 }
 
-@include mq(bp(md)) {
-    .rvtd-card {
-        min-height: 320px;
+.rvtd-card-wrapper-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  display: block;
 
-        &__meta {
-            position: absolute;
-            bottom: 0;
-        }
-    }
+  &:hover {
+    color: inherit;
+    transform: translateY(-$xxs);
+  }
+
+  &:focus {
+    outline: 2px solid $color-action;
+    outline-offset: $xxs;
+  }
 }

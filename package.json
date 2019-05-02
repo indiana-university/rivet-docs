@@ -41,7 +41,7 @@
     "path": "0.12.7",
     "remove-markdown": "0.2.2",
     "require-dir": "0.3.2",
-    "rivet-uits": "^1.4.0",
+    "rivet-uits": "^1.5.0",
     "striptags": "3.0.1",
     "tippy.js": "^1.2.0",
     "webpack": "^3.10.0"

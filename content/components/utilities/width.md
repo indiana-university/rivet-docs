@@ -3,7 +3,7 @@ title: "Width"
 description: "Use Rivet's width utilities to constrain the width of interface elements, particularly form fields."
 requiresJs: false
 status: "Alpha"
-newIn: 1.5.0
+asOf: 1.5.0
 ---
 {{< alert variant="info" title="New in Rivet 1.5.0" >}}
 The width utilities were introduced in Rivet 1.5.0. If you need help updating to 1.5.0, see our [instructions for updating Rivet](/components/#updating-the-rivet-npm-package").

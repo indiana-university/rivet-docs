@@ -6,7 +6,7 @@ packageName: rivet-switch
 npm: true
 repo: https://github.com/indiana-university/rivet-switch
 demo: https://indiana-university.github.io/rivet-switch/
-status: Alpha
+status: Ready
 addOnTags:
   - All
   - Forms
