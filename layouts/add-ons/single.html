@@ -73,7 +73,11 @@
               </p>
             </div>
           {{ end }}
-          {{ .Content }}
+          
+          {{ $apiBaseUrl := replace .Params.repo "https://github.com" "https://api.github.com/repos" }}
+          {{ $readmeJson := getJSON $apiBaseUrl "/readme" }}
+          {{ markdownify (base64Decode $readmeJson.content) }}
+
         </div>
       </div>
       <div class="rvt-grid__item-4-md-up">
