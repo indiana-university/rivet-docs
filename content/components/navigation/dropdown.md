@@ -1,5 +1,6 @@
 ---
 title: "Dropdown"
+asOf: 1.0.0
 description: "Use the dropdown component to create a list of menu options that can be toggled with a button element."
 requiresJs: true
 status: "Ready"

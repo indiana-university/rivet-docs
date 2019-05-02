@@ -66,14 +66,18 @@
     <div class="rvt-grid">
       <div class="rvt-grid__item-8-md-up">
         <div class="rvtd-docs-tube rvtd-typeset rvtd-typeset--flat-top">
-          {{ if .Params.status }}
+          {{ if eq .Params.status "Alpha" }}
             <div class="rvt-alert rvt-alert--message rvt-m-bottom-md">
               <p class="rvt-alert__message">
                 This Add-on is in the {{ .Params.status }} stage of development. You can find out more about the different stages <a href="../../components/information/component-status">on this page</a>.
               </p>
             </div>
           {{ end }}
-          {{ .Content }}
+          
+          {{ $apiBaseUrl := replace .Params.repo "https://github.com" "https://api.github.com/repos" }}
+          {{ $readmeJson := getJSON $apiBaseUrl "/readme" }}
+          {{ markdownify (base64Decode $readmeJson.content) }}
+
         </div>
       </div>
       <div class="rvt-grid__item-4-md-up">
@@ -82,7 +86,7 @@
           {{ if .Params.thumbnail }}
           <a href="../../img/add-ons/{{ .Params.thumbnail }}">
             <img
-              class="rvtd-thumbnail rvtd-thumbnail--{{ index .Params.addOnTags  1 | lower }}"
+              class="rvtd-thumbnail rvtd-thumbnail--{{ index .Params.addOnTags 1 | lower }}"
               src="../../img/add-ons/{{ .Params.thumbnail }}"
               alt="Screenshot of the {{ .Title }} Add-on displayed in a web browser"
             >

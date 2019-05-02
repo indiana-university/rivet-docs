@@ -1,5 +1,6 @@
 ---
 title: "Text"
+asOf: 1.0.0
 description: "The Rivet text utilities make it easy to style text."
 status: "Ready"
 ---

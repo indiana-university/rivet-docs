@@ -1,5 +1,6 @@
 ---
 title: "Checkboxes"
+asOf: 1.0.0
 description: "Checkboxes allow users to select one or more options from a list of choices."
 status: "Ready"
 ---

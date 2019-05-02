@@ -1,5 +1,6 @@
 ---
 title: "z-index"
+asOf: 1.0.0
 description: "These utility classes let you easily change the z-index of an element."
 status: "Ready"
 ---
@@ -42,4 +43,3 @@ There are 10 z-index utility classes that set z-index values in increments of 10
     </div>
 </div>
 {{< /example >}}
-

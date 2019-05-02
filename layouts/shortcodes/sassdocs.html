@@ -47,6 +47,26 @@
 </table>
 {{ end }}
 
+{{ if eq $Collection "widths" }}
+<table class="rvt-m-top-lg rvt-table-compact">
+  <caption class="rvt-sr-only">Rivet width Sass variables</caption>
+  <thead>
+    <th width="200">Variable</th>
+    <th width="200">rem</th>
+    <th width="200">px</th>
+  </thead>
+  <tbody>
+    {{- range $.Site.Data.tokens.widths -}}
+    <tr>
+      <td width="200"><code>$width-{{ .alias }}</code></td>
+      <td width="200">{{ div (.size) ($TokensData.baseFontSize) }}rem</td>
+      <td width="200">{{ .size }}px</td>
+    </tr>
+    {{- end -}}
+  </tbody>
+</table>
+{{ end }}
+
 {{ if eq $Collection "breakpoints" }}
 <table class="rvt-m-top-lg rvt-table-compact">
   <caption class="rvt-sr-only">Rivet breakpoint Sass variables</caption>

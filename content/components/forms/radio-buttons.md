@@ -1,5 +1,6 @@
 ---
 title: "Radio buttons"
+asOf: 1.0.0
 description: "Radio buttons allow users to select a single value out of a set number of choices."
 status: "Ready"
 ---

@@ -635,6 +635,39 @@ a.button--reverse-secondary {
 }
 
 /**
+ * Constrain the size of the CircleCI badge on embedded add-on docs.
+ */
+
+.rvtd-docs-tube img[alt=CircleCI] {
+  max-width: 128px;
+}
+
+/**
+ * Turns Markdown blockquotes into Rivet callout boxes when displaying
+ * in embedded add-on docs.
+ */
+
+.rvtd-docs-tube blockquote {
+  background-color: $color-yellow--050;
+  border-left-color: $color-yellow--200;
+  color: $color-yellow--700;
+  font-size: $ts-14;
+  font-style: normal;
+  margin-left: 0;
+  margin-right: 0;
+  padding: $sm;
+  position: relative;
+
+  p {
+    margin: 0;
+
+    code {
+      font-size: $ts-14;
+    }
+  }
+}
+
+/**
  * Overide default Rivet utility class here to make it a little
  * lighter for now
  */

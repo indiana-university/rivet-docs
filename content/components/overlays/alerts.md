@@ -1,5 +1,6 @@
 ---
 title: "Alerts"
+asOf: 1.0.0
 description: "Alerts are used to display brief important messages to users. They are designed to attract the user’s attention, but not interrupt their work."
 requiresJs: true
 status: "Ready"

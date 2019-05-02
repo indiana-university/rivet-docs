@@ -1,5 +1,6 @@
 ---
 title: "Tables"
+asOf: 1.1.0
 description: "Tables are used to display tabular data in rows and columns."
 requiresJs: false
 status: "Ready"

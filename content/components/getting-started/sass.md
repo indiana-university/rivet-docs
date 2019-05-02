@@ -26,6 +26,11 @@ See the layout documentation to learn more about [Rivet's responsive spacing CSS
 
 {{< sassdocs collection="spacing" >}}
 
+## Width
+See the utilities documentation to learn more about [Rivet's responsive width CSS classes]({{< ref "components/utilities/width.md" >}}).
+
+{{< sassdocs collection="widths" >}}
+
 ## Color
 We encourage you to modify Rivet to fit your needs, and sometimes that means adjusting the colors. We’ve included tints in Rivet to make it easier to adjust colors in a way that's consistent with other Rivet applications and with IU's brand guidelines.
 

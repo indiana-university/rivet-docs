@@ -1,5 +1,6 @@
 ---
 title: "Select element"
+asOf: 1.0.0
 description: "The select element creates a dropdown that allows users to choose one item from a list."
 status: "Ready"
 ---

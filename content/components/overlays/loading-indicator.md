@@ -1,7 +1,8 @@
 ---
 title: "Loading indicator"
+asOf: 1.2.0
 description: "The Rivet loading indicator helps notify users when their action is being processed"
-status: "Alpha"
+status: "Beta"
 ---
 {{< alert variant="info" title="New in Rivet 1.2.0" >}}
 The loading indicator is new as of 1.2.0. If you need help moving to 1.2.0, see our [instructions for updating Rivet](/components/#updating-the-rivet-npm-package").

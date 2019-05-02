@@ -1,5 +1,6 @@
 ---
 title: "Typography"
+asOf: 1.0.0
 description: "Use the Rivet type scale to apply consistent typographic design to your application."
 requiresJs: false
 status: "Ready"

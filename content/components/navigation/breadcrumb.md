@@ -1,5 +1,6 @@
 ---
 title: "Breadcrumb"
+asOf: 1.0.0
 description: A navigation component that indicates the user's current location in the nav hierarchy
 status: "Ready"
 ---

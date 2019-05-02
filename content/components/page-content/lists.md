@@ -1,5 +1,6 @@
 ---
 title: "Lists"
+asOf: 1.0.0
 description: "Lists are used to group and organize collections of content."
 status: "Ready"
 ---
