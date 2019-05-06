@@ -3,30 +3,39 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const gulp = require("gulp");
-const webpack = require("gulp-webpack");
+const babel = require('rollup-plugin-babel');
+const babelGulp = require("gulp-babel");
+const commonJS = require('rollup-plugin-commonjs');
 const concat = require("gulp-concat");
+const gulp = require("gulp");
 const gutil = require("gulp-util");
-const babel = require("gulp-babel");
+const resolve = require('rollup-plugin-node-resolve');
+const rollup = require('rollup');
 const uglify = require("gulp-uglify");
 
-gulp.task("webpack", function() {
-  return gulp
-    .src("assets/js/webpack-entry.js")
-    .pipe(babel())
-    .pipe(gulp.dest("tmp/"));
+gulp.task('transpileJS', () => {
+  return rollup.rollup({
+    input: 'assets/js/rollup-entry.js',
+    plugins: [resolve(), commonJS(), babel({ runtimeHelpers: true })]
+  }).then(bundle => {
+    return bundle.write({
+      file: 'tmp/rollup-entry.js',
+      format: 'umd',
+      name: 'RivetDocs'
+    });
+  });
 });
 
-gulp.task("js", ["webpack"], function() {
+gulp.task("js", ["transpileJS"], function() {
   gulp
-    .src(["tmp/webpack-entry.js", "node_modules/rivet-uits/js/rivet.js"])
+    .src(["tmp/rollup-entry.js", "node_modules/rivet-uits/js/rivet.js"])
     .pipe(concat("rivet-docs.js"))
     .pipe(uglify())
     .pipe(gulp.dest("./static/js"));
 
   gulp
     .src(["assets/js/telemetrics.js"])
-    .pipe(babel())
+    .pipe(babelGulp())
     .pipe(concat("telemetrics.js"))
     .pipe(uglify())
     .pipe(gulp.dest("./static/js"));

@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const plugins = require("./plugins");
-const polyfills = require("./polyfills");
+const plugins = require('./plugins');
+const polyfills = require('./polyfills');
 
 /**
  * Initialize polyfils here.

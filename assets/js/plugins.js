@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const Clipboard = require("clipboard");
+const Clipboard = require('clipboard');
 
 module.exports = {
   /**
