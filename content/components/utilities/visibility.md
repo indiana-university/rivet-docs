@@ -4,6 +4,28 @@ asOf: 1.0.0
 description: "These utilities make it easy to show and hide content depending on screen sizes."
 status: "Ready"
 ---
+## Screen reader only
+Use the `.rvt-sr-only` utility class to visually hide content, but still leave it accessible to screen readers.
+
+{{< example lang="html" >}}<h1 class="rvt-ts-32">This text is visible <span class="rvt-sr-only">but, this text is visually hidden and still accessible to screen readers.</span></h1>
+{{< /example >}}
+
+### Visually hidden labels example
+Another practical example of when to use the the `.rvt-sr-only` utility is when you need to hide a form label from visual users, but still want it to be available to those using assistive technology. This can be helpful when you are implementing patterns like a search bar and need to conserve space.
+
+{{< example lang="html" >}}<label for="search" class="rvt-sr-only">Search</label>
+<div class="rvt-input-group">
+    <input class="rvt-input-group__input" type="text" id="search">
+    <div class="rvt-input-group__append">
+        <button class="rvt-button">Search</button>
+    </div>
+</div>
+{{< /example >}}
+
+{{< alert variant="info" title="Other ways to hide content" >}}
+Visit the User Experience Office website to learn more about [other ways to hide page content](https://ux.iu.edu/accessibility/hiding-content/) beyond those described on this page.
+{{< /alert >}}
+
 ## Hide down responsive utilities
 The `rvt-hide-*-down`responsive display utilities start out visible on any screen size above the largest breakpoint (1400px) and will **hide content as the screen size becomes smaller**.
 

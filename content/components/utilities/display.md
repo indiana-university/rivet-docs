@@ -4,29 +4,6 @@ asOf: 1.0.0
 description: "The Rivet display utility classes make it easy to control how elements display on screen and how they are presented to assistive technologies like screen readers."
 status: "Ready"
 ---
-
-## Screen reader only
-Use the `.rvt-sr-only` utility class to visually hide content, but still leave it accessible to screen readers.
-
-{{< example lang="html" >}}<h1 class="rvt-ts-32">This text is visible <span class="rvt-sr-only">but, this text is visually hidden and still accessible to screen readers.</span></h1>
-{{< /example >}}
-
-## Visually hidden labels example
-Another practical example of when to use the the `.rvt-sr-only` utility is when you need to hide a form label from visual users, but still want it to be available to those using assistive technology. This can be helpful when you are implementing patterns like a search bar and need to conserve space.
-
-{{< example lang="html" >}}<label for="search" class="rvt-sr-only">Search</label>
-<div class="rvt-input-group">
-    <input class="rvt-input-group__input" type="text" id="search">
-    <div class="rvt-input-group__append">
-        <button class="rvt-button">Search</button>
-    </div>
-</div>
-{{< /example >}}
-
-{{< alert variant="info" title="Other ways to hide content" >}}
-Visit the User Experience Office website to learn more about [other ways to hide page content](https://ux.iu.edu/accessibility/hiding-content/) beyond those described on this page.
-{{< /alert >}}
-
 ## Display property utilities
 The Rivet `rvt-display-*` utilities can be used to easily change the css `display:` property. The display utilities included in Rivet are:
 
