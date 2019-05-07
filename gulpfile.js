@@ -3,51 +3,67 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const gulp = require("gulp");
-const requireDir = require("require-dir");
-const browserSync = require("browser-sync");
-const tasks = require("gulp-task-listing");
+const { dest, series, src, watch } = require('gulp');
+const requireDir = require('require-dir');
+const browserSync = require('browser-sync').create();
+const hugo = require('./tasks/hugo');
+const js = require('./tasks/javascript');
+const sass = require('./tasks/css').sass;
+const tasks = require('gulp-task-listing');
 
 // Include tasks from .js files in the tasks folder
-requireDir("./tasks");
+requireDir('./tasks');
 
-gulp.task("serve", ["watch"], function() {
-  browserSync({
+function watchFiles(callback) {
+  browserSync.init({
     port: 3000,
     server: {
-      baseDir: "./public/"
+      baseDir: './public/'
     },
-    files: ["public/**/*"],
+    files: ['public/**/*'],
     open: false,
-    logLevel: "silent",
+    logLevel: 'silent',
     notify: false
   });
-});
 
-gulp.task("watch", ["build"], function() {
-  gulp.watch(["assets/js/**/*.js"], ["js"]);
-  gulp.watch("assets/scss/**/*.scss", ["sass"]);
-  gulp.watch(["content/**/*.md"]);
-  gulp.watch(
+  watch('assets/js/**/*.js', { ignoreInitial: false }, series(js.transpileJS, js.concatJS));
+  watch('assets/scss/**/*.scss', { ignoreInitial: false }, sass);
+  watch('content/**/*.md');
+  watch(
     [
-      "layouts/**/*",
-      "content/**/*",
-      "archetypes/**/*",
-      "static/**/*",
-      "data/**/*"
+      'layouts/**/*',
+      'content/**/*',
+      'archetypes/**/*',
+      'static/**/*',
+      'data/**/*'
     ],
-    ["hugo:dev"]
+    hugoDev
   );
-});
 
-gulp.task("env:production", function() {
-  process.env.NODE_ENV = "production";
-  process.env.HUGO_ENV = "production";
-});
+  callback();
+}
 
-gulp.task("build", ["js", "sass"]);
-gulp.task("build:prod", ["env:production", "sass", "js"]);
+function defaultScripts() {
+  return tasks.withFilters(null, 'default');
+}
 
-gulp.task("default", function() {
-  return tasks.withFilters(null, "default")();
-});
+function envProd() {
+  process.env.NODE_ENV = 'production';
+  process.env.HUGO_ENV = 'production';
+  hugoProd();
+}
+
+function hugoDev(callback) {
+  hugo.hugo(true);
+  callback();
+}
+
+function hugoProd() {
+  hugo.hugo(false);
+}
+
+exports.build = series(envProd, sass, js.transpileJS, js.concatJS);
+
+exports.serve = series(hugoDev, watchFiles);
+
+exports.default = defaultScripts;

@@ -3,12 +3,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const gulp = require("gulp");
-const sass = require("gulp-sass");
+const { dest, src } = require("gulp");
+const scss = require("gulp-sass");
 
-gulp.task("sass", function() {
-  return gulp
-    .src("assets/scss/**/*.scss")
-    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-    .pipe(gulp.dest("static/css/"));
-});
+module.exports = {
+  sass() {
+    return src("assets/scss/**/*.scss")
+    .pipe(scss({ outputStyle: "compressed" }).on("error", scss.logError))
+    .pipe(dest("static/css/"));
+  }
+}
