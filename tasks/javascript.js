@@ -16,11 +16,11 @@ module.exports = {
 
   transpileJS() {
     return rollup.rollup({
-      input: 'assets/js/rollup-entry.js',
+      input: 'assets/js/rivet-docs.js',
       plugins: [resolve(), commonJS(), babel({ runtimeHelpers: true })]
     }).then(bundle => {
       return bundle.write({
-        file: 'tmp/rollup-entry.js',
+        file: 'tmp/bundle.js',
         format: 'umd',
         name: 'RivetDocs'
       });
@@ -28,14 +28,9 @@ module.exports = {
   },
   
   concatJS(callback) {
-    src(["tmp/rollup-entry.js", "node_modules/rivet-uits/js/rivet.js"])
-      .pipe(concat("rivet-docs.js"))
-      .pipe(uglify())
-      .pipe(dest("./static/js"));
-  
-    src(["assets/js/telemetrics.js"])
+    src(["tmp/bundle.js", "node_modules/rivet-uits/js/rivet.js", "assets/js/telemetrics.js"])
       .pipe(babelGulp())
-      .pipe(concat("telemetrics.js"))
+      .pipe(concat("rivet-docs.js"))
       .pipe(uglify())
       .pipe(dest("./static/js"));
       

@@ -4,7 +4,6 @@
  */
 
 const { dest, series, src, watch } = require('gulp');
-const requireDir = require('require-dir');
 const browserSync = require('browser-sync').create();
 const hugo = require('./tasks/hugo').hugo;
 const js = require('./tasks/javascript');
