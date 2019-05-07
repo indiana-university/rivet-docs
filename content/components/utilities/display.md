@@ -23,6 +23,10 @@ Another practical example of when to use the the `.rvt-sr-only` utility is when 
 </div>
 {{< /example >}}
 
+{{< alert variant="info" title="Other ways to hide content" >}}
+Visit the User Experience Office website to learn more about [other ways to hide page content](https://ux.iu.edu/accessibility/hiding-content/) beyond those described on this page.
+{{< /alert >}}
+
 ## Display property utilities
 The Rivet `rvt-display-*` utilities can be used to easily change the css `display:` property. The display utilities included in Rivet are:
 
