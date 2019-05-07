@@ -1,7 +1,7 @@
 ---
 title: "Visibility"
 asOf: 1.0.0
-description: "These utilities make it easy to show and hide content depending on screen sizes."
+description: "Use Rivet's visibility utilities to hide content in a responsive and accessible way."
 status: "Ready"
 ---
 ## Screen reader only
