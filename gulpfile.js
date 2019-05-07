@@ -6,13 +6,9 @@
 const { dest, series, src, watch } = require('gulp');
 const requireDir = require('require-dir');
 const browserSync = require('browser-sync').create();
-const hugo = require('./tasks/hugo');
+const hugo = require('./tasks/hugo').hugo;
 const js = require('./tasks/javascript');
 const sass = require('./tasks/css').sass;
-const tasks = require('gulp-task-listing');
-
-// Include tasks from .js files in the tasks folder
-requireDir('./tasks');
 
 function watchFiles(callback) {
   browserSync.init({
@@ -43,27 +39,22 @@ function watchFiles(callback) {
   callback();
 }
 
-function defaultScripts() {
-  return tasks.withFilters(null, 'default');
-}
-
-function envProd() {
+function envProd(callback) {
   process.env.NODE_ENV = 'production';
   process.env.HUGO_ENV = 'production';
   hugoProd();
+  callback();
 }
 
 function hugoDev(callback) {
-  hugo.hugo(true);
+  hugo(true);
   callback();
 }
 
 function hugoProd() {
-  hugo.hugo(false);
+  hugo(false);
 }
 
 exports.build = series(envProd, sass, js.transpileJS, js.concatJS);
 
 exports.serve = series(hugoDev, watchFiles);
-
-exports.default = defaultScripts;

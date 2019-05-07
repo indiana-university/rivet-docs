@@ -29,7 +29,6 @@
     "gulp-concat": "2.6.1",
     "gulp-connect-php": "1.0.1",
     "gulp-sass": "^4.0.2",
-    "gulp-task-listing": "1.0.1",
     "gulp-uglify": "3.0.0",
     "gulp-util": "3.0.8",
     "hugo-lunr": "0.0.4",
