@@ -1,7 +1,7 @@
 ---
 title: "Display"
 asOf: 1.0.0
-description: "The Rivet display utility classes make it easy to control how elements display on screen and how they are presented to assistive technologies like screen readers."
+description: "Use Rivet's display utilities to make content containers behave like block or inline elements."
 status: "Ready"
 ---
 ## Display property utilities
