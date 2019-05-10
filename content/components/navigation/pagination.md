@@ -5,25 +5,125 @@ description: "The pagination component is used to break up large sets of data ac
 requiresJs: false
 status: "Ready"
 ---
-## Pagination Example
-{{< example lang="html" >}}<nav role="navigation" aria-label="Default results pages">
-    <ul class="rvt-pagination">
-        <li class="rvt-pagination__item">
-            <a href="#" aria-label="Previous set of pages">Previous</a>
-        </li>
-        <li class="rvt-pagination__item">
-            <a href="#" aria-label="Page 4">4</a>
-        </li>
-        <li class="rvt-pagination__item is-active" aria-current="true">
-            <a href="#" aria-label="Page 5, current page">5</a>
-        </li>
-        <li class="rvt-pagination__item">
-            <a href="#" aria-label="Page 6">6</a>
-        </li>
-        <li class="rvt-pagination__item">
-            <a href="#" aria-label="Next set of pages">Next</a>
-        </li>
-    </ul>
+## Basic pagination example
+A basic pagination component uses an unordered list wrapped in a `nav` element to let users move between pages in a set of data. Use basic pagination like the following example when you will only ever have five or fewer pages of data to show.
+
+{{< example lang="html" spacious="true" >}}<nav role="navigation" aria-label="Pagination">
+  <ul class="rvt-pagination">
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 1">1</a>
+    </li>
+    <li class="rvt-pagination__item is-active">
+      <a href="#" aria-current="true" aria-label="Page 2, current page">2</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 3">3</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 4">4</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 5">5</a>
+    </li>
+  </ul>
+</nav>
+{{< /example >}}
+
+## Large data sets
+When you need to paginate large sets of data over many pages, use a modified pagination component shown in the following example.
+
+- Use the ellipsis icons to help visually indicate that there are more sets of pages before and/or after the currently displayed set. Note in this example we use `tabindex` `aria-hidden` attributes to remove the ellipsis from the tab order and hide the content from screen readers
+- Make the first and last page in the set available so that users can navigate to those pages no matter when group of pages are currently shown.
+- Make the first item a link with the text _Previous_ that navigates to the page directly **before** the current page once a user has navigated through the first set of visible pages
+- Make the last item a link with the text _Next_ that navigates to the page directly **after** the current page once a user has navigated through the first set of visible pages
+
+### Default state for large data sets
+In the default state, the pagination shows the first four pages with a link to the last page. We use an ellipsis icon to visually indicate that the list of pages is truncated and that there are more pages available.
+
+{{< example lang="html" spacious="true" >}}<nav role="navigation" aria-label="Large pagination">
+  <ul class="rvt-pagination rvt-pagination">
+    <li class="rvt-pagination__item is-active">
+      <a href="#" aria-current="page" aria-label="Page 1, current page">1</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 2">2</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 3">3</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 4">4</a>
+    </li>
+    <li class="rvt-pagination__item is-disabled">
+      <a href="#" class="rvt-flex" tabindex="-1" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <g fill="currentColor">
+            <circle cx="8" cy="8" r="2"></circle>
+            <circle cx="14" cy="8" r="2"></circle>
+            <circle cx="2" cy="8" r="2"></circle>
+          </g>
+        </svg>
+      </a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 20, last page">20</a>
+    </li>
+  </ul>
+</nav>
+{{< /example >}}
+
+### Advanced state
+This examples shows the pagination component once a user has navigated to a set of pages where the first, last, previous, and next page links are available.
+
+{{< example lang="html" spacious="true" >}}<nav role="navigation" aria-label="Advanced pagination">
+  <ul class="rvt-pagination">
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Previous page">Previous</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 1">1</a>
+    </li>
+    <li class="rvt-pagination__item is-disabled">
+      <a href="#" class="rvt-flex" tabindex="-1" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <g fill="currentColor">
+            <circle cx="8" cy="8" r="2"></circle>
+            <circle cx="14" cy="8" r="2"></circle>
+            <circle cx="2" cy="8" r="2"></circle>
+          </g>
+        </svg>
+      </a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 6">6</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 6">7</a>
+    </li>
+    <li class="rvt-pagination__item is-active" aria-current="true">
+      <a href="#" aria-label="Page 8, current page">8</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 9">9</a>
+    </li>
+    <li class="rvt-pagination__item is-disabled">
+      <a href="#" class="rvt-flex" tabindex="-1" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <g fill="currentColor">
+            <circle cx="8" cy="8" r="2"></circle>
+            <circle cx="14" cy="8" r="2"></circle>
+            <circle cx="2" cy="8" r="2"></circle>
+          </g>
+        </svg>
+      </a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 20, last page">20</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Next set of pages">Next</a>
+    </li>
+  </ul>
 </nav>
 {{< /example >}}
 
@@ -45,50 +145,69 @@ When using the `.is-disabled` classes to create pagination links that appear to 
 ### Positioning
 The pagination component is left-aligned by default, but you can easily center or right-align it using the `rvt-pagination--center` or `rvt-pagination--right` modifier classes.
 
-{{< example lang="html" >}}<nav role="navigation" aria-label="Right-aligned results pages">
-    <ul class="rvt-pagination rvt-pagination--right">
-        <li class="rvt-pagination__item is-disabled">
-            <a href="#" aria-label="Previous pages" tabindex="-1">Previous</a>
-        </li>
-        <li class="rvt-pagination__item">
-            <a href="#" aria-label="Page 1">1</a>
-        </li>
-        <li class="rvt-pagination__item">
-            <a href="#" aria-label="Page 2">2</a>
-        </li>
-        <li class="rvt-pagination__item">
-            <a href="#" aria-label="Page 3">3</a>
-        </li>
-        <li class="rvt-pagination__item is-active" aria-current="true">
-            <a href="#" aria-label="Page 4, current page">4</a>
-        </li>
-        <li class="rvt-pagination__item">
-            <a href="#" arial-label="Nex set of pages">Next</a>
-        </li>
-    </ul>
+{{< example lang="html" spacious="true" >}}<nav role="navigation" aria-label="Right-aligned pagination">
+  <ul class="rvt-pagination rvt-pagination--right">
+    <li class="rvt-pagination__item is-active">
+      <a href="#" aria-current="page" aria-label="Page 1, current page">1</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 2">2</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 3">3</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 4">4</a>
+    </li>
+    <li class="rvt-pagination__item is-disabled">
+      <a href="#" class="rvt-flex" tabindex="-1" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <g fill="currentColor">
+            <circle cx="8" cy="8" r="2"></circle>
+            <circle cx="14" cy="8" r="2"></circle>
+            <circle cx="2" cy="8" r="2"></circle>
+          </g>
+        </svg>
+      </a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 20, last page">20</a>
+    </li>
+  </ul>
 </nav>
 {{< /example >}}
 
 ### Small pagination
 Add the CSS modifier class `.rvt-pagination--small` if you need to display the pagination component at a smaller size.
 
-{{< example lang="html" >}}<nav role="navigation" aria-label="Small results pages">
-    <ul class="rvt-pagination rvt-pagination--small">
-        <li class="rvt-pagination__item">
-            <a href="#" aria-label="Previous set of pages">Previous</a>
-        </li>
-        <li class="rvt-pagination__item">
-            <a href="#" aria-label="Page 4">4</a>
-        </li>
-        <li class="rvt-pagination__item is-active" aria-current="true">
-            <a href="#" aria-label="Page 5, current page">5</a>
-        </li>
-        <li class="rvt-pagination__item">
-            <a href="#" aria-label="Page 6">6</a>
-        </li>
-        <li class="rvt-pagination__item">
-            <a href="#" aria-label="Next set of pages">Next</a>
-        </li>
-    </ul>
+{{< example lang="html" spacious="true" >}}<nav role="navigation" aria-label="Small pagination">
+  <ul class="rvt-pagination rvt-pagination--small">
+    <li class="rvt-pagination__item is-active">
+      <a href="#" aria-current="page" aria-label="Page 1, current page">1</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 2">2</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 3">3</a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 4">4</a>
+    </li>
+    <li class="rvt-pagination__item is-disabled">
+      <a href="#" class="rvt-flex" tabindex="-1" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <g fill="currentColor">
+            <circle cx="8" cy="8" r="2"></circle>
+            <circle cx="14" cy="8" r="2"></circle>
+            <circle cx="2" cy="8" r="2"></circle>
+          </g>
+        </svg>
+      </a>
+    </li>
+    <li class="rvt-pagination__item">
+      <a href="#" aria-label="Page 20, last page">20</a>
+    </li>
+  </ul>
 </nav>
 {{< /example >}}
