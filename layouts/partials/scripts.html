@@ -4,7 +4,6 @@
 {{ if ne (getenv "HUGO_ENV") "production" }}
     {{ partial "analytics.html" .Site.Params.devGoogleAnalytics }}
 {{ end }}
-<script src="{{ "js/telemetrics.js" | absURL }}"></script>
 <script src="{{ "js/highlight.pack.js" | absURL }}"></script>
 
 <script>
@@ -15,7 +14,14 @@
 <script src="{{ "js/rivet-docs.js" | absURL }}?{{ now.Unix }}"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
 <script>
+  /**
+  * Initialize copy to clipboard functionality for code snippets
+  */
+  new ClipboardJS('.rvtd-example__copy');
+  new ClipboardJS('.rvtd-package-copy');
+
   (function() {
     // Find the search input
     var searchInput = document.querySelector('#docs-search');
