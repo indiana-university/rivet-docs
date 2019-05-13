@@ -41,7 +41,6 @@ function watchFiles(callback) {
 function envProd(callback) {
   process.env.NODE_ENV = 'production';
   process.env.HUGO_ENV = 'production';
-  hugoProd();
   callback();
 }
 
