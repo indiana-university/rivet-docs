@@ -6,10 +6,8 @@
 import { createCopyright, setIndeterminate, stickySupportForm, copyButtonConfirm, analyticsTracking } from './plugins';
 
 /**
- * One-off scripts for random sutff. See 'plugins.js'
+ * One-off scripts for random stuff. See 'plugins.js'
  */
-
-// Third-party libraries
 
 
 createCopyright("#year");
