@@ -178,5 +178,5 @@ Put text hidden by the `.rvt-sr-only` class inside the `.rvt-steps__indicator` e
 ## Accessibility notes
 - A step marker must always have a `.rvt-steps__label` element that contains plain text, regardless of the contents of the `.rvt-steps__indicator` element
 - Add the `aria-current="step"` attribute to a `.rvt-steps__item-content` element to indicate the current step
-- Use `aria-hidden` to hide `.rvt_steps__indicator` elements from screen readers if the `.rvt_steps__label` element already has the number of step in it
+- Use the `aria-hidden="true"` attribute to hide `.rvt_steps__indicator` elements from screen readers if the `.rvt_steps__label` element already has the number of step in it, like "Step 3"
 - Put text hidden by the `.rvt-sr-only` class inside the `.rvt-steps__indicator` element to communicate a step's status to users of assistive technologies
