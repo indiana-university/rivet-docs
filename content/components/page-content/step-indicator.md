@@ -9,6 +9,8 @@ status: "Beta"
 The step indicator is new as of `1.6.0`. If you need help updating to `1.6.0`, see our [instructions for updating Rivet](/components/#updating-the-rivet-npm-package").
 {{< /alert >}}
 
+Use the step indicator component to help users keep track of their progress in a multi-step process, such as an application form.
+
 ## Basic step indicator
 
 {{< example lang="html" >}}<ol class="rvt-steps">
@@ -70,3 +72,9 @@ Add the `.rvt-steps--vertical` class to display the steps as a column rather tha
   </li>
 </ol>
 {{< /example >}}
+
+## When to use
+- To break up a long form or interaction into three or more steps
+- To communicate how many total steps there are in a process
+- To reassure the user they're making progress in a long process
+- To communicate the success or failure of each step in a process
