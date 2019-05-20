@@ -121,11 +121,14 @@ To help communicate to the user the status of each step in the process, you can 
 - `.rvt-steps__indicator--warning`
 - `.rvt-steps__indicator--danger`
 
+Put text hidden by the `.rvt-sr-only` class inside the `.rvt-steps__indicator` element to communicate a step's status to users of assistive technologies who may not be able to see the color cue.
+
 {{< example lang="html" >}}<ol class="rvt-steps">
   <li class="rvt-steps__item">
     <a href="#" class="rvt-steps__item-content">
       <span class="rvt-steps__label">Personal information</span>
       <span class="rvt-steps__indicator rvt-steps__indicator--success">
+        <span class="rvt-sr-only">Step completed</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
           <path fill="currentColor" d="M6.72,13l-.48-.36-3-3A1,1,0,0,1,4.71,8.29l2.11,2.12,4.33-6.94a1,1,0,0,1,1.7,1.06L7.64,12.87Z"/>
         </svg>
@@ -133,9 +136,10 @@ To help communicate to the user the status of each step in the process, you can 
     </a>
   </li>
   <li class="rvt-steps__item">
-    <span class="rvt-steps__item-content" aria-current="step">
+    <span class="rvt-steps__item-content">
       <span class="rvt-steps__label">Records &amp; transcripts</span>
       <span class="rvt-steps__indicator rvt-steps__indicator--warning">
+        <span class="rvt-sr-only">Step has errors that need to be corrected</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
           <path fill="currentColor" d="M14.62,4.19,11.74,1.34a1.1,1.1,0,0,0-1.55,0L0,11.62,0,16l4.45,0L14.64,5.73A1.1,1.1,0,0,0,14.62,4.19ZM3.62,14H2V12.44l6-6L9.58,8ZM11,6.57,9.4,5,11,3.4,12.57,5Z"/>
         </svg>
@@ -143,9 +147,9 @@ To help communicate to the user the status of each step in the process, you can 
     </span>
   </li>
   <li class="rvt-steps__item">
-    <span class="rvt-steps__item-content">
+    <span class="rvt-steps__item-content" aria-current="step">
       <span class="rvt-steps__label">Confirmation</span>
-      <span class="rvt-steps__indicator rvt-steps__indicator--danger">
+      <span class="rvt-steps__indicator">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
           <path fill="currentColor" d="M13.5,3H2.5A1.5,1.5,0,0,0,1,4.5v8A1.5,1.5,0,0,0,2.5,14h11A1.5,1.5,0,0,0,15,12.5v-8A1.5,1.5,0,0,0,13.5,3ZM11.41,5,8,7.77,4.59,5ZM3,12V6.29L7.11,9.62l.12.08a1.5,1.5,0,0,0,1.54,0L13,6.29V12Z"/>
         </svg>
@@ -175,3 +179,4 @@ To help communicate to the user the status of each step in the process, you can 
 - A step marker must always have a `.rvt-steps__label` element that contains plain text, regardless of the contents of the `.rvt-steps__indicator` element
 - Add the `aria-current="step"` attribute to a `.rvt-steps__item-content` element to indicate the current step
 - Use `aria-hidden` to hide `.rvt_steps__indicator` elements from screen readers if the `.rvt_steps__label` element already has the number of step in it
+- Put text hidden by the `.rvt-sr-only` class inside the `.rvt-steps__indicator` element to communicate a step's status to users of assistive technologies
