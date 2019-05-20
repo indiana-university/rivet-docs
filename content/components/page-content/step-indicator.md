@@ -78,3 +78,15 @@ Add the `.rvt-steps--vertical` class to display the steps as a column rather tha
 - To communicate how many total steps there are in a process
 - To reassure the user they're making progress in a long process
 - To communicate the success or failure of each step in a process
+
+## When to consider something else
+- Navigation for situations when users do not need to complete all steps of a process
+- For general page-to-page navigation, use components like the [header]({{< ref "/components/navigation/header.md" >}}) or [breadcrumb navigation]({{< ref "/components/navigation/breadcrumb.md">}})
+- For normal lists, use [ordered or unordered lists]({{< ref "/components/page-content/lists.md" >}})
+
+## Implementation notes
+- Use `aria-hidden` to hide `.rvt_steps__indicator` elements from screen readers if the `.rvt_steps__label` element already has the number of step in it
+- Add the `aria-current="step"` attribute to a `.rvt-steps__item-content` element to indicate the current step
+- Keep labels short (1-2 words)
+- Step markers for completed steps should function as links to those completed steps
+- Avoid providing users with links to future steps before they have completed the current step
