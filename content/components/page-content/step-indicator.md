@@ -5,6 +5,10 @@ description: "Show the user the current step in a multi-step process"
 status: "Beta"
 ---
 
+{{< alert variant="info" title="New in Rivet 1.6.0" >}}
+The step indicator is new as of `1.6.0`. If you need help updating to `1.6.0`, see our [instructions for updating Rivet](/components/#updating-the-rivet-npm-package").
+{{< /alert >}}
+
 ## Basic step indicator
 
 {{< example lang="html" >}}<ol class="rvt-steps">
