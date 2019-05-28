@@ -167,7 +167,7 @@ Put text hidden by the `.rvt-sr-only` class inside the `.rvt-steps__indicator` e
 
 ## When to consider something else
 - Navigation for situations when users do not need to complete all steps of a process
-- For general page-to-page navigation, use components like the [header]({{< ref "/components/navigation/header.md" >}}) or [breadcrumb navigation]({{< ref "/components/navigation/breadcrumb.md">}})
+- For general page-to-page navigation, use components like the [header]({{< ref "/components/navigation/header.md" >}}) and [breadcrumb navigation]({{< ref "/components/navigation/breadcrumb.md">}})
 - For navigation between the pages of a specific subsection, use a [menu]({{< ref "/components/navigation/menu.md" >}})
 - For normal lists, use [ordered or unordered lists]({{< ref "/components/page-content/lists.md" >}})
 
