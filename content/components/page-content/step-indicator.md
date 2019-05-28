@@ -2,7 +2,7 @@
 title: "Step Indicator"
 asOf: 1.6.0
 description: "Show the user the current step in a multi-step process"
-status: "Beta"
+status: "Alpha"
 ---
 
 {{< alert variant="info" title="New in Rivet 1.6.0" >}}
