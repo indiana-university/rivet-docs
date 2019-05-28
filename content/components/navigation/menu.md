@@ -170,7 +170,7 @@ You can force a menu to always display links horizontally regardless of screen s
 
 ## When to consider something else
 - For top-level navigation, use components like the [header]({{< ref "/components/navigation/header.md" >}}) and [breadcrumb navigation]({{< ref "/components/navigation/breadcrumb.md" >}})
-- For navigation between steps of a process that's been split across multiple pages, use the [step indicator]({{< ref "/components/navigation/step-indicator.md" >}})
+- For navigation between steps of a process that's been split across multiple pages, use the [step indicator]({{< ref "/components/page-content/step-indicator.md" >}})
 - To allow users to switch between chunks of related content without having to leave the current page, use [tabs]({{< ref "/components/page-content/tabs.md" >}})
 
 ## Implementation notes
