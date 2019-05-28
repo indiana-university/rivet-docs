@@ -136,7 +136,7 @@ Put text hidden by the `.rvt-sr-only` class inside the `.rvt-steps__indicator` e
     </a>
   </li>
   <li class="rvt-steps__item">
-    <span class="rvt-steps__item-content">
+    <a href="#" class="rvt-steps__item-content">
       <span class="rvt-steps__label">Records &amp; transcripts</span>
       <span class="rvt-steps__indicator rvt-steps__indicator--warning">
         <span class="rvt-sr-only">Step has errors that need to be corrected</span>
@@ -144,7 +144,7 @@ Put text hidden by the `.rvt-sr-only` class inside the `.rvt-steps__indicator` e
           <path fill="currentColor" d="M14.62,4.19,11.74,1.34a1.1,1.1,0,0,0-1.55,0L0,11.62,0,16l4.45,0L14.64,5.73A1.1,1.1,0,0,0,14.62,4.19ZM3.62,14H2V12.44l6-6L9.58,8ZM11,6.57,9.4,5,11,3.4,12.57,5Z"/>
         </svg>
       </span>
-    </span>
+    </a>
   </li>
   <li class="rvt-steps__item">
     <span class="rvt-steps__item-content" aria-current="step">
