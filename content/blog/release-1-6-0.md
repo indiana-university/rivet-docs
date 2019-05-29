@@ -1,7 +1,7 @@
 ---
 title: Rivet 1.6.0 release
 description: Rivet 1.6.0 is now available. This release introduces the step indicator and menu components along with a Rivet icons add-on.
-date: "2019-05-28"
+date: "2019-05-29"
 tags:
     - "release"
     - "new component"
@@ -32,7 +32,7 @@ The menu gives you a simple, flexible way to add sidebar or section navigation t
 
 Icons have been available for use in Rivet for a while, but they weren't very easy for developers to use.
 
-This release includes an [icons add-on]({{< ref "/add-ons/rivet-icons.md" >}}) that simplifies the process of using SVG icons in your application. The Rivet icon set has also been bundled into an npm package for those of you writing Node applications.
+This release includes an [icons add-on]({{< ref "/add-ons/rivet-icons.md" >}}) that simplifies the process of using SVG icons in your application. The Rivet icon set has also been bundled into an npm package for those of you using nodejs-based build tools like [webpack](https://webpack.js.org/).
 
 ## Complete list of updates
 
