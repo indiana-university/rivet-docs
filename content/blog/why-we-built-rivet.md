@@ -57,5 +57,5 @@ With familiarity being a key component of usability, IU needs a toolset of its o
 We want people to reach out to us with requests and suggestions — that way, we’re making decisions about IU software together. By using a system designed by members of the university, university developers can worry less about whether stylings match the IU brand, and focus more on actual product creation.
 
 <div class="rvt-m-top-lg">
-{{< button url="contributing-to-rivet">}}Contribute to Rivet{{< /button >}}
+{{< button url="https://github.com/indiana-university/rivet-source/wiki">}}Contribute to Rivet{{< /button >}}
 </div>
