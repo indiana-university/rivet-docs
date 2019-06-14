@@ -797,7 +797,7 @@ a.button--reverse-secondary {
 
 .algolia-autocomplete {
     display: block !important;
-    z-index: 1000;
+    z-index: 100 !important;
 }
 
 .algolia-autocomplete a {
