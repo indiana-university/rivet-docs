@@ -16,7 +16,7 @@ This blog post recaps the key takeaways from Levi's Q2 progress report.
       type="audio-video"
       title="Watch or listen to the quarterly review"
       subtitle="Kaltura video"
-      url="#" >}}
+      url="https://iu.mediaspace.kaltura.com/media/Rivet+Quarterly+Review+-+Q2+2019/1_7o0kx12e" >}}
 
 {{< blog-media-object
       type="slides"
