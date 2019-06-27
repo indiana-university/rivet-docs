@@ -797,7 +797,7 @@ a.button--reverse-secondary {
 
 .algolia-autocomplete {
     display: block !important;
-    z-index: 1000;
+    z-index: 100 !important;
 }
 
 .algolia-autocomplete a {
@@ -965,4 +965,40 @@ a.button--reverse-secondary {
   height: $xl;
   display: block;
   border-radius: 999rem;
+}
+
+@media screen and (max-width: 740px) {
+  .rvt-footer.rvt-footer--hugo {
+    .rvt-footer__mobile-wrapper { 
+      display: flex;
+      flex-direction: column;
+    }
+    .rvt-footer__copyright-lockup {
+      display: flex;
+      position: static;
+      bottom: unset;
+    }  
+    
+    .rvt-footer__privacy-link {
+          left: 43%;
+          position: static;
+          font-size: $ts-12;
+      }
+      .rvt-footer__org-links {
+        position: static;
+        bottom: unset;
+
+          li:first-child {
+              margin-left: 0px;
+          }
+      }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .rvt-footer.rvt-footer--hugo {
+    .rvt-footer__privacy-link {
+      left: 35%;
+    }
+  }
 }
