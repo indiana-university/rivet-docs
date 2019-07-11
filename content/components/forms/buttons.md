@@ -72,6 +72,7 @@ You can use icons inside the `<button>` element. (Just make sure to also include
 
 1. Wrap the button text in a `<span>` element
 2. Use Rivet’s utility classes to add some space between the button text and the icon
+3. When adding icons to Rivet buttons, all icons should appear before the buttons text except for standard conventions like dropdown menus.
 
 For best results, use an SVG icon that is sized to 16px by 16px.
 
