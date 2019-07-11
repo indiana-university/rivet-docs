@@ -25,6 +25,10 @@
   &:last-child {
     margin-right: 5rem;
   }
+  @media screen and (max-width: 739px) {
+    flex-direction: column;
+    line-height: 1.65;
+  }
 }
 
 .rvt-footer__privacy-link {
