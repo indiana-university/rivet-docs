@@ -967,13 +967,10 @@ a.button--reverse-secondary {
   border-radius: 999rem;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 739px) {
   .rvt-footer.rvt-footer--hugo {
-    .rvt-footer__aux-item:first-child {
-      margin-left: auto;
-    }
-    .rvt-footer__aux-item:last-child {
-      margin-right: auto;
+    .rvt-footer__aux-item::after {
+      content: none;
     }
   }
 }
