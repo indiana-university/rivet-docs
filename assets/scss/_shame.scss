@@ -969,36 +969,17 @@ a.button--reverse-secondary {
 
 @media screen and (max-width: 740px) {
   .rvt-footer.rvt-footer--hugo {
-    .rvt-footer__mobile-wrapper { 
-      display: flex;
-      flex-direction: column;
+    .rvt-footer__aux-item:first-child {
+      margin-left: auto;
     }
-    .rvt-footer__copyright-lockup {
-      display: flex;
-      position: static;
-      bottom: unset;
-    }  
-    
-    .rvt-footer__privacy-link {
-          left: 43%;
-          position: static;
-          font-size: $ts-12;
-      }
-      .rvt-footer__org-links {
-        position: static;
-        bottom: unset;
-
-          li:first-child {
-              margin-left: 0px;
-          }
-      }
+    .rvt-footer__aux-item:last-child {
+      margin-right: auto;
+    }
   }
 }
 
 @media screen and (max-width: 950px) {
   .rvt-footer.rvt-footer--hugo {
-    .rvt-footer__privacy-link {
-      left: 35%;
-    }
+    height: initial;
   }
 }
