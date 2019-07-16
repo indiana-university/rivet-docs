@@ -1,6 +1,6 @@
 ---
 title: "Punctuation"
-description: "Learn how to use correct puncuation in your application."
+description: "Learn how to use correct punctuation in your application."
 ---
 ## Colons
 Capitalize the first word after a colon, **only** if what follows is a complete sentence. For example:

@@ -43,7 +43,7 @@ To create an issue for a Rivet Add-on:
 ## Have an idea for an Add-on?
 If you've created a custom Rivet component you think might be useful to other teams, we've created a Rivet [Add-on boilerplate repository][boilerplate] to help you develop your own Add-on in a way that will match the style and structure of other Add-ons.
 
-If you need help developing your Add-on, the Rivet core team is happy to help with visual design, front-end development, and accesibility.
+If you need help developing your Add-on, the Rivet core team is happy to help with visual design, front-end development, and accessibility.
 
 [components-docs]: ../../components
 [rivet-source]: https://github.com/indiana-university/rivet-source/issues/new/choose
