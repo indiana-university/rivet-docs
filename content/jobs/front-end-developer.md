@@ -31,7 +31,7 @@ Our ideal candidate has:
 - Experience maintaining and scaling design systems
 - Experience writing modular, modern JavaScript. Although using frameworks like React and Vue will be a part of the Front-end Developer’s responsibility, we are looking for someone with strong knowledge of vanilla JavaScript.
 - Experience writing modular, scalable CSS using a preprocessor like Sass
-- Experience evaulating the accessibility, readability, and performance of front-end code
+- Experience evaluating the accessibility, readability, and performance of front-end code
 - Enthusiasm about design systems and front-end architecture 
 - A commitment to ongoing learning about principles, best practices, and tools
 

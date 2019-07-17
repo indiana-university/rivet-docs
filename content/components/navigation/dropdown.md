@@ -112,7 +112,7 @@ The Rivet Dropdown is built to follow the WAI-ARIA authoring standards. It is ma
 {{% /a11y %}}
 
 ## Implementation notes
-To use the dropdown component, add a data attribute of `data-dopdown-toggle` to the button element you want to use to show/hide the menu, then add an `id` with a matching value to the `.rvt-dropdown__menu` element.
+To use the dropdown component, add a data attribute of `data-dropdown-toggle` to the button element you want to use to show/hide the menu, then add an `id` with a matching value to the `.rvt-dropdown__menu` element.
 
 ### Right-align modifier
 To align the dropdown menu with the right side of the dropdown button, add the `.rvt-dropdown__menu--right` class to the `.rvt-dropdown__menu` element.

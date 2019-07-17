@@ -139,7 +139,7 @@ A modal dialog is similar to a regular modal except that **it requires the user 
         <div class="rvt-modal__body">
             <p>A modal dialog:</p>
             <ul>
-                <li>Is not dismissable i.e. doesn't have an (X) button</li>
+                <li>Is not dismissible i.e. doesn't have an (X) button</li>
                 <li>Requires user input before they continue their work</li>
             </ul>
         </div>

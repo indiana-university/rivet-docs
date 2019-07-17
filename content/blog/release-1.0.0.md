@@ -10,7 +10,7 @@ author:
   email: "lmcgrana@iu.edu"
   name: "Levi McGranahan"
 ---
-Rivet 1.0.0 is now available. We've made a few updates since the last release (0.5.0). We'll go over the additons and updates in this post.
+Rivet 1.0.0 is now available. We've made a few updates since the last release (0.5.0). We'll go over the additions and updates in this post.
 
 ## Migration guide (0.5.0 – 1.0.0)
 The [last pre-release of Rivet]({{< ref "blog/release-0.5.0.md" >}}) was the most significant to date. We made a handful of breaking changes in 0.5.0 that are documented in the [0.5.0 migration guide]({{< ref "blog/0.5.0-migration-guide.md" >}}). If you have already updated to 0.5.0, you can safely update to 1.0.0 without breaking changes.
