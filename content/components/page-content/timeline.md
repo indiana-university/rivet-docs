@@ -124,7 +124,7 @@ The external labels are set to a width of 10rem in order to create a uniform app
 The timeline component is intended to chronologically order relevant information in a visually meaningful way. As a result, the external labels are intended for **small amounts of text**, such as dates, seasons, or other temporal information.
 {{< /alert >}}
 
-{{< example lang="html" >}}
+{{< example lang="html" timeline="true" >}}
 <div class="rvt-container rvt-container--senior">
     <div class="rvt-grid">
         <div class="rvt-grid__item rvt-timeline">
