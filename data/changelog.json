@@ -1,5 +1,26 @@
 [
   {
+    "tag_name": "v1.7.0",
+    "published_at": "2019-07-31T17:23:27Z",
+    "body": "Rivet 1.7.0 is now available. This release introduces the timeline component as well as a few bug fixes and improvements.<!-- end-overview -->",
+    "pulls": {
+      "items": [
+        {
+          "title": "Added new Timeline component",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/135"
+        },
+        {
+          "title": "Updated focus for input groups",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/123"
+        },
+        {
+          "title": "Incorporated stylelint-config-rivet package",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/118"
+        }
+      ]
+    }
+  },
+  {
     "tag_name": "v1.6.0",
     "published_at": "2019-05-28T17:23:27Z",
     "body": "Rivet 1.6.0 is now available. This release introduces the step indicator and menu components along with a Rivet icons add-on.<!-- end-overview -->",

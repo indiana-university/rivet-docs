@@ -12,7 +12,8 @@
   </button>
   <div id="notification-list" class="rvt-notifications__menu" ref="menuElement" aria-hidden="true">
     <ol class="rvt-notifications__menu-list">
-      {{ range first 3 (where .Site.Pages "Section" "blog") }}
+      {{ range first 4 (where .Site.Pages "Section" "blog") }}
+        {{ if ne .Params.excludeFromNotifications true }}
         <li>
           {{ if .Params.externalURL }}
             <a href="{{ .Params.externalURL }}" target="_blank" rel="noopener">
@@ -39,6 +40,7 @@
             </article>
           </a>
         </li>
+        {{ end }}
       {{ end }}
     </ol>
     <div class="rvt-notifications__actions">

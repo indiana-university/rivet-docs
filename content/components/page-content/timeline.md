@@ -15,29 +15,21 @@ The timeline is a new component in Rivet 1.7.0. If you encounter any issues, [pl
 Use the timeline component to help order chronologically relevant information in a visually meaningful way.
 
 ## Basic timeline
-
-{{< example lang="html" >}}
-<div class="rvt-container rvt-container--senior">
-    <div class="rvt-grid">
-        <div class="rvt-grid__item rvt-timeline">
-            <div class="rvt-timeline__item">
-                <div class="rvt-timeline__marker" aria-hidden="true">
-                </div>
-                <div class="rvt-timeline__content">
-                    <h3 class="rvt-timeline__heading">Sample Item</h3>
-                    <span class="rvt-timeline__date">Spring 2019</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
-                </div>
-            </div>
-            <div class="rvt-timeline__item">
-                <div class="rvt-timeline__marker" aria-hidden="true">
-                </div>
-                <div class="rvt-timeline__content">
-                    <h3 class="rvt-timeline__heading">Sample Item 2</h3>
-                    <span class="rvt-timeline__date">Summer 2019</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
-                </div>
-            </div>
+{{< example lang="html" spacious="true" >}}<div class="rvt-timeline">
+    <div class="rvt-timeline__item">
+        <div class="rvt-timeline__marker" aria-hidden="true"></div>
+        <div class="rvt-timeline__content">
+            <h3 class="rvt-timeline__heading">Sample Item</h3>
+            <span class="rvt-timeline__date">Spring 2019</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
+        </div>
+    </div>
+    <div class="rvt-timeline__item">
+        <div class="rvt-timeline__marker" aria-hidden="true"></div>
+        <div class="rvt-timeline__content">
+            <h3 class="rvt-timeline__heading">Sample Item 2</h3>
+            <span class="rvt-timeline__date">Summer 2019</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
         </div>
     </div>
 </div>
@@ -52,28 +44,21 @@ Elements featuring the `.rvt-timeline__heading` class are intended to be replace
 
 Add the `.rvt-timeline--right` class to align the timeline to the right side of the page.
 
-{{< example lang="html" >}}
-<div class="rvt-container rvt-container--senior">
-    <div class="rvt-grid">
-        <div class="rvt-grid__item rvt-timeline rvt-timeline--right">
-            <div class="rvt-timeline__item">
-                <div class="rvt-timeline__marker" aria-hidden="true">
-                </div>
-                <div class="rvt-timeline__content">
-                    <h3 class="rvt-timeline__heading">Sample Item</h3>
-                    <span class="rvt-timeline__date">Spring 2019</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
-                </div>
-          </div>
-          <div class="rvt-timeline__item">
-              <div class="rvt-timeline__marker"  aria-hidden="true">
-              </div>
-              <div class="rvt-timeline__content">
-                  <h3 class="rvt-timeline__heading">Sample Item 2</h3>
-                  <span class="rvt-timeline__date">Summer 2019</span>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
-              </div>
-          </div>
+{{< example lang="html" >}}<div class="rvt-timeline rvt-timeline--right">
+    <div class="rvt-timeline__item">
+        <div class="rvt-timeline__marker" aria-hidden="true"></div>
+        <div class="rvt-timeline__content">
+            <h3 class="rvt-timeline__heading">Sample Item</h3>
+            <span class="rvt-timeline__date">Spring 2019</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
+        </div>
+    </div>
+    <div class="rvt-timeline__item">
+        <div class="rvt-timeline__marker"  aria-hidden="true"></div>
+        <div class="rvt-timeline__content">
+            <h3 class="rvt-timeline__heading">Sample Item 2</h3>
+            <span class="rvt-timeline__date">Summer 2019</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
         </div>
     </div>
 </div>
@@ -83,31 +68,24 @@ Add the `.rvt-timeline--right` class to align the timeline to the right side of 
 
 Add the `.rvt-timeline--center` class to center your timeline horizontally. Centered timeline items default to appearing on the left-side of the line. To switch an item to appearing on the right, add the `.rvt-timeline__item--right` class to an item.
 
-{{< example lang="html" >}}
-<div class="rvt-container rvt-container--senior">
-    <div class="rvt-grid">
-        <div class="rvt-grid__item rvt-timeline rvt-timeline--center">
-            <div class="rvt-timeline__row">
-                <div class="rvt-timeline__item">
-                    <div class="rvt-timeline__marker" aria-hidden="true">
-                    </div>
-                    <div class="rvt-timeline__content">
-                        <h3 class="rvt-timeline__heading">Sample Item</h3>
-                        <span class="rvt-timeline__date">Spring 2019</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
-                    </div>
-                </div>
+{{< example lang="html" >}}<div class="rvt-timeline rvt-timeline--center">
+    <div class="rvt-timeline__row">
+        <div class="rvt-timeline__item">
+            <div class="rvt-timeline__marker" aria-hidden="true"></div>
+            <div class="rvt-timeline__content">
+                <h3 class="rvt-timeline__heading">Sample Item</h3>
+                <span class="rvt-timeline__date">Spring 2019</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
             </div>
-            <div class="rvt-timeline__row">
-                <div class="rvt-timeline__item rvt-timeline__item--right">
-                    <div class="rvt-timeline__marker" aria-hidden="true">
-                    </div>
-                    <div class="rvt-timeline__content">
-                        <h3 class="rvt-timeline__heading">Sample Item 2</h3>
-                        <span class="rvt-timeline__date">Summer 2019</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
-                    </div>
-                </div>
+        </div>
+    </div>
+    <div class="rvt-timeline__row">
+        <div class="rvt-timeline__item rvt-timeline__item--right">
+            <div class="rvt-timeline__marker" aria-hidden="true"></div>
+            <div class="rvt-timeline__content">
+                <h3 class="rvt-timeline__heading">Sample Item 2</h3>
+                <span class="rvt-timeline__date">Summer 2019</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
             </div>
         </div>
     </div>
@@ -124,29 +102,32 @@ The external labels are set to a width of 10rem in order to create a uniform app
 The timeline component is intended to chronologically order relevant information in a visually meaningful way. As a result, the external labels are intended for **small amounts of text**, such as dates, seasons, or other temporal information.
 {{< /alert >}}
 
-{{< example lang="html" >}}
-<div class="rvt-container rvt-container--senior">
-    <div class="rvt-grid">
-        <div class="rvt-grid__item rvt-timeline">
-            <div class="rvt-timeline__item">
-                <div class="rvt-timeline__marker" aria-hidden="true">
-                </div>
-                <div class="rvt-timeline__content">
-                    <h3 class="rvt-timeline__heading">Sample Item</h3>
-                    <span class="rvt-timeline__date  rvt-timeline__date--label">Spring 2019</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
-                </div>
+{{< example lang="html" timeline="true" >}}<!--
+    NOTE: This container (.rvt-container) is for demo purposes only.
+    It is not required to use the timeline component.
+-->
+<div class="rvt-container">
+    <!-- Start timeline markup -->
+    <div class="rvt-timeline">
+        <div class="rvt-timeline__item">
+            <div class="rvt-timeline__marker" aria-hidden="true">
             </div>
-            <div class="rvt-timeline__item">
-                <div class="rvt-timeline__marker" aria-hidden="true">
-                </div>
-                <div class="rvt-timeline__content">
-                    <h3 class="rvt-timeline__heading">Sample Item 2</h3>
-                    <span class="rvt-timeline__date  rvt-timeline__date--label">Summer 2019</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
-                </div>
+            <div class="rvt-timeline__content">
+                <h3 class="rvt-timeline__heading">Sample Item</h3>
+                <span class="rvt-timeline__date  rvt-timeline__date--label">Spring 2019</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
+            </div>
+        </div>
+        <div class="rvt-timeline__item">
+            <div class="rvt-timeline__marker" aria-hidden="true">
+            </div>
+            <div class="rvt-timeline__content">
+                <h3 class="rvt-timeline__heading">Sample Item 2</h3>
+                <span class="rvt-timeline__date  rvt-timeline__date--label">Summer 2019</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nulla ante. Suspendisse potenti. Donec efficitur, sem vitae dignissim viverra, nunc purus tempus nisi, feugiat ullamcorper tellus urna ut dui. Suspendisse potenti.</p>
             </div>
         </div>
     </div>
+    <!-- End timeline markup -->
 </div>
 {{< /example >}}

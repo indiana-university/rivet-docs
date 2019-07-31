@@ -1,5 +1,5 @@
 <div class="rvtd-example">
-    <div class="rvtd-example__demo{{ with .Get "spacious" }} rvtd-example__demo--spacious{{ end }}"{{ with .Get "background" }} style="background-color: {{ . }}"{{ end }}>
+    <div class="rvtd-example__demo{{ with .Get "spacious" }} rvtd-example__demo--spacious{{ end }}{{ with .Get "timeline" }} rvtd-example__timeline{{ end }}"{{ with .Get "background" }} style="background-color: {{ . }}"{{ end }}>
         {{ .Inner }}
     </div>
     <div class="rvtd-example__code">

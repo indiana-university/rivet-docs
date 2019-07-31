@@ -980,3 +980,14 @@ a.button--reverse-secondary {
     height: initial;
   }
 }
+
+/**
+  * Timeline
+  */
+
+  @include mq(bp(md)) {
+    .rvtd-example__timeline,
+    .rvtd-example__timeline .rvt-container {
+      padding-left: 4.5rem !important;
+    }
+  }
