@@ -9,7 +9,7 @@ excludeFromStatus: true
     <caption class="sr-only">Status description table</caption>
     <thead>
         <th scope="col">Name</th>
-        <th scope="col">Desciption</th>
+        <th scope="col">Description</th>
         <th scope="col">Label</th>
     </thead>
     <tbody>

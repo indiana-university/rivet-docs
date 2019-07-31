@@ -37,7 +37,7 @@ status: "Ready"
 {{< /example >}}
 
 ## Implementation notes
-- Form `<label>`s must be outsite of the `.rvt-input-group` container
+- Form `<label>`s must be outside of the `.rvt-input-group` container
 - Inputs inside an input group need a label. If you don't want them to visually appear in your design, use the `.rvt-sr-only` utility class to hide them visually, but still make them available to assistive technology like a screen reader.
 - The input group `.rvt-input-group__text` elements _are not_ replacements for the standard `<label>` element. They are only meant to help describe certain form inputs.
 - When using `.rvt-input-group__text`, give the input a `aria-describedby` attribute associated with the `id` of the text, as in the following examples.

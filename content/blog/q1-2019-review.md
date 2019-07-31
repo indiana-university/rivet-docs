@@ -43,7 +43,7 @@ In addition, we've created a comprehensive new wiki that lays out our [developme
 
 The new project management processes and [contribution guidelines](https://github.com/indiana-university/rivet-source/wiki/) we put into place all center around the [Rivet public backlog](https://github.com/orgs/indiana-university/projects/2).
 
-A new part of our process this year is [soliticting upvotes from the community on feature requests in the backlog](https://github.com/indiana-university/rivet-source/wiki/Development-process). We were encouraged to see more engagement with the backlog than we were expecting when we put out the first call for upvotes, and we hope engagement continues to increase as people become accustomed to this part of the process.
+A new part of our process this year is [soliciting upvotes from the community on feature requests in the backlog](https://github.com/indiana-university/rivet-source/wiki/Development-process). We were encouraged to see more engagement with the backlog than we were expecting when we put out the first call for upvotes, and we hope engagement continues to increase as people become accustomed to this part of the process.
 
 ## Goal: Establish and document a QA process
 **Status**: <span class="rvt-badge rvt-badge--warning">Ongoing</span>

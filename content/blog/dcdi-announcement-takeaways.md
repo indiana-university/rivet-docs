@@ -28,7 +28,7 @@ As we move through the process of assembling the new design system, we'll be sur
 
 ### We won't stop what we're doing
 
-The Rivet team is continuing to work through the [2019 roadmap]({{< ref "/components/information/roadmap.md" >}}) and we aim to make good on all the committments we've made in it.
+The Rivet team is continuing to work through the [2019 roadmap]({{< ref "/components/information/roadmap.md" >}}) and we aim to make good on all the commitments we've made in it.
 
 ### A gradual and smooth transition is important
 
@@ -38,7 +38,7 @@ We intend to build the new design system in a way that makes it as straightforwa
 
 ### Developers and marketers will be equals
 
-A big motivator for Rivet’s development was the recognition that web applications have unique needs when it comes to design, and new IU-branded assets were needed to better accomodate software in ways the existing marketing-focused assets weren't able to.
+A big motivator for Rivet’s development was the recognition that web applications have unique needs when it comes to design, and new IU-branded assets were needed to better accommodate software in ways the existing marketing-focused assets weren't able to.
 
 While the new unified design system must work for both software and websites, application developers will have an equal seat at the table with marketers. Decisions about what goes into the design system will consider the needs of people building applications at IU, whether it's a new component, a suite of templates, or a set of branding guidelines to be followed by everyone.
 

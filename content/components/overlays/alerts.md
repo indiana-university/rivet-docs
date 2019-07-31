@@ -156,7 +156,7 @@ Inline alerts in Rivet should be used for form validation situations where [the 
 For more information on techniques for better form validation UX, [see this list of form validation tips](../../forms/text-input/#form-validation-tips).
 {{< /alert >}}
 
-When using a standalone inline alert with a group of inputs, make sure to add the `aria-describedby` attribute to **each input** (in this case radio buttons) that is invalid. The `aria-describedy` by value should correspond to a matching `id` attribute on the `.rvt-inline-alert__message` element.
+When using a standalone inline alert with a group of inputs, make sure to add the `aria-describedby` attribute to **each input** (in this case radio buttons) that is invalid. The `aria-describedby` by value should correspond to a matching `id` attribute on the `.rvt-inline-alert__message` element.
 
 
 {{< example lang="html" >}}<form>
