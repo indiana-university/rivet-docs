@@ -105,13 +105,13 @@ To make it easier to keep type sizes to a minimum we have create a few CSS utili
 - `.rvt-ts-xl`
 - `.rvt-ts-xxl`
 
-{{< example lang="html" >}}<h1 class="rvt-ts-xxs">Fulfilling the promise</h1>
-<h1 class="rvt-ts-xs">Fulfilling the promise</h1>
-<h1 class="rvt-ts-sm">Fulfilling the promise</h1>
-<h1 class="rvt-ts-md">Fulfilling the promise</h1>
-<h1 class="rvt-ts-lg">Fulfilling the promise</h1>
-<h1 class="rvt-ts-xl">Fulfilling the promise</h1>
-<h1 class="rvt-ts-xxl">Fulfilling the promise</h1>
+{{< example lang="html" >}}<h1 class="rvt-ts-xxs">Lorem ipsum dolor sit</h1>
+<h1 class="rvt-ts-xs">Lorem ipsum dolor sit</h1>
+<h1 class="rvt-ts-sm">Lorem ipsum dolor sit</h1>
+<h1 class="rvt-ts-md">Lorem ipsum dolor sit</h1>
+<h1 class="rvt-ts-lg">Lorem ipsum dolor sit</h1>
+<h1 class="rvt-ts-xl">Lorem ipsum dolor sit</h1>
+<h1 class="rvt-ts-xxl">Lorem ipsum dolor sit</h1>
 {{< /example >}}
 
 ### Responsive type scale
