@@ -1,7 +1,7 @@
 ---
 title: "Buttons"
 asOf: 1.0.0
-description: "Buttons are used to signal actions, submit forms, or trigger new content within the current context."
+description: "Buttons are intended to signal actions to users. These actions should be informative and concise. With few exceptions, button text should not wrap onto multiple lines."
 requiresJs: false
 weight: 1
 status: "Ready"
