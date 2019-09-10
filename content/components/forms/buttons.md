@@ -1,7 +1,7 @@
 ---
 title: "Buttons"
 asOf: 1.0.0
-description: "Buttons are used to signal actions, submit forms, or trigger new content within the current context."
+description: "Buttons are intended to signal actions to users."
 requiresJs: false
 weight: 1
 status: "Ready"
@@ -55,7 +55,9 @@ In some cases it can be helpful for buttons to have a larger click/touch area. I
 - Navigating to different web page, e.g. external documentation
 
 ## Implementation notes
-There are a number of button styles and sizes that can be achieved using a handful of modifier CSS classes.
+There are a number of button styles and sizes that can be achieved using a handful of modifier CSS classes. 
+
+The actions that buttons describe should be informative and concise. With few exceptions, button text should not wrap onto multiple lines.
 
 ### Contextual button modifiers
 Certain contexts may require alternate button styles. For example, when a user is about to take a destructive action it may be advisable to use a different color button to alert them. In this case, adding the class `.rvt-button--danger` will create an orange button that matches the [error alert color]({{< ref "components/overlays/alerts.md" >}}).

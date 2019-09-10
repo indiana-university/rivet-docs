@@ -4,6 +4,11 @@ asOf: 1.0.0
 description: Use badges to call out or label important information in your UI.
 status: "Ready"
 ---
+
+{{< alert variant="warning" title="Concise labels" >}}
+Because badges are intended to call attention to information, it is important to keep badge text concise. It should not span multiple lines.
+{{< /alert >}}
+
 ## Default Badges
 {{< example lang="html" >}}<span class="rvt-badge">Base</span>
 <span class="rvt-badge rvt-badge--info">Info</span>
