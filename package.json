@@ -1,6 +1,6 @@
 {
   "name": "rivet-docs",
-  "version": "1.15.0",
+  "version": "1.15.1",
   "description": "Rivet design system documentation website",
   "main": "index.html",
   "author": "Indiana University",
