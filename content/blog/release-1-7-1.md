@@ -6,7 +6,7 @@ tags:
     - "minor release"
 excludeFromIndex: true
 author:
-  email: "racmocon@indiana.edu"
+  email: "racmocon@gmail.com"
   name: "Rachel O'Connor"
 ---
 Rivet `1.7.1` is now available! This release refines several styles related to badges as well as some minor bug fixes.
