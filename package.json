@@ -1,6 +1,6 @@
 {
   "name": "rivet-docs",
-  "version": "1.15.0",
+  "version": "1.15.1",
   "description": "Rivet design system documentation website",
   "main": "index.html",
   "author": "Indiana University",
@@ -27,7 +27,7 @@
     "gulp-uglify": "3.0.0",
     "gulp-util": "3.0.8",
     "path": "0.12.7",
-    "rivet-uits": "^1.7.0",
+    "rivet-uits": "^1.7.1",
     "rollup": "^1.11.3",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.3.4",

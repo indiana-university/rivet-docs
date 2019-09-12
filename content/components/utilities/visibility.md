@@ -38,7 +38,7 @@ Resize your browser window to see how the `rvt-hide-*-down` utilities work.
     <dd class="rvt-hide-md-down">Hidden at <strong>medium breakpoint</strong> down</dd>
     <dt>.rvt-hide-lg-down</dt>
     <dd class="rvt-hide-lg-down">Hidden at <strong>large breakpoint</strong> down</dd>
-    <dt>.rvt-ide-xl-down</dt>
+    <dt>.rvt-hide-xl-down</dt>
     <dd class="rvt-hide-xl-down">Hidden at <strong>extra large breakpoint</strong> down</dd>
     <dt>.rvt-hide-xxl-down</dt>
     <dd class="rvt-hide-xxl-down">Hidden at <strong>extra extra large breakpoint</strong> down</dd>
