@@ -14,7 +14,7 @@ In previous versions of Rivet, a `.npmrc` file configured to look at IU's public
 ### Installing via NPM
 Once you have a `package.json` file configured in the root of your project, you can run the following command to install Rivet:
 
-{{< code >}}npm install rivet-uits@1.7.0 --save-dev
+{{< code >}}npm install rivet-uits@1.7.1 --save-dev
 {{< /code >}}
 
 ### Updating the Rivet NPM package
@@ -25,5 +25,5 @@ When a new version of Rivet is released, it will be published to the NPM registr
 
 In this example, `<version>` would be the new version of Rivet you want to install, such as:
 
-{{< code >}}npm install rivet-uits@1.7.0 --save-dev
+{{< code >}}npm install rivet-uits@1.7.1 --save-dev
 {{< /code >}}
