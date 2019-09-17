@@ -18,11 +18,11 @@ sections:
       -
         name: "Levi McGranahan"
         title: "Design System Lead"
-        avatar: "https://ux.iu.edu/img/levi-thumbnail.jpg"
+        avatar: "../img/team/levi-thumbnail.jpg"
       -
         name: "Madeline Grdina"
         title: "UX Architect"
-        avatar: "https://ux.iu.edu/img/madeline-thumbnail.jpg"
+        avatar: "../img/team/madeline-thumbnail.jpg"
       -
         name: "Scott Anthony Murray"
         title: "Developer Advocate"
@@ -30,7 +30,11 @@ sections:
       -
         name: "Rachel O'Connor"
         title: "Front-end Developer"
-        avatar: "https://ux.iu.edu/img/rachel-thumbnail.jpg"
+        avatar: "../img/team/rachel-thumbnail.jpg"
+      -
+        name: "Zachary Todd"
+        title: "Front-end Developer"
+        avatar: "../img/team/zach-thumbnail.jpg"
   -
     image: "../img/about-dev-process.png"
     title: "What is our development process?"
