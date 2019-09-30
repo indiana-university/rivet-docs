@@ -8,7 +8,7 @@ author:
   name: "Austin Lord"
 ---
 
-As laid out in [our 2019 roadmap](https://rivet.iu.edu/components/information/roadmap/#q3-summer-2019-production-sprint), the Rivet team spent a lot of time this summer asking the question, “what does the future of Rivet look like?” During this time, we also underwent [an organizational change](https://rivet.iu.edu/blog/dcdi-announcement-takeaways/) that aligned key groups in User Experience (UX), branding, IT, and marketing & communications under the new [IU Studios](https://studios.iu.edu) organization. We’ve made some decisions about how best to serve the needs of IU, and have created [a roadmap]() that outlines the next iteration of Rivet, and the evolution of our design system. Some key components of our roadmap are outlined below.
+As laid out in [our 2019 roadmap]({{< ref "components/information/roadmap-2019.md#q3-summer-2019-production-sprint" >}}), the Rivet team spent a lot of time this summer asking the question, “what does the future of Rivet look like?” During this time, we also underwent [an organizational change]({{< ref "blog/dcdi-announcement-takeaways.md" >}}) that aligned key groups in User Experience (UX), branding, IT, and marketing & communications under the new [IU Studios](https://studios.iu.edu) organization. We’ve made some decisions about how best to serve the needs of IU, and have created [a roadmap]() that outlines the next iteration of Rivet, and the evolution of our design system. Some key components of our roadmap are outlined below.
 
 ## Rivet 2.0
 
@@ -18,13 +18,13 @@ While version 2.0 may introduce some breaking changes, you can expect many of th
 
 ## A design system for all of IU
 
-Part of Rivet 2’s goals will be to cover a greater spectrum of use cases on the web. We’ll borrow patterns from the Web Style Guide to support the needs of marketing, informational, campaign, and other sites of various sizes and shapes. Every pattern and recommendation will consider accessibility from the start, providing guidance on creating accessible products, and helping to create digital spaces for everyone.
+Part of Rivet 2’s goals will be to cover a greater spectrum of use cases on the web. We’ll borrow patterns from the [Web Style Guide](https://styleguide.iu.edu/) to support the needs of marketing, informational, campaign, and other sites of various sizes and shapes. Every pattern and recommendation will consider accessibility from the start, providing guidance on creating accessible products, and helping to create digital spaces for everyone.
 
-By the release of 2.0, Rivet will have feature parity with the Web Style Guide, and will be fully utilized in the next version of the Web Framework ([check out the Web Framework site for more information about its future](https://docs.google.com/document/d/1R3WOJcucwWc1Avz4Y2YbmK4B3cUIBfQOPr7OjZ4rgI0/edit?usp=sharing)).
+By the release of 2.0, Rivet will have feature parity with the Web Style Guide, and will be fully utilized in the next version of the Web Framework ([check out the Web Framework site for more information about its future](https://framework.iu.edu/v2/)).
 
 Rivet 2 will also provide patterns and resources for IU emails, digital signage, and other digital channels. This represents a significant expansion of scope for Rivet, but allows for IU to make greater use of reusable patterns, and to support the many diverse needs of its users and constituents.
 
-[Rivet went open source](https://rivet.iu.edu/blog/open-sourcing-rivet/) earlier this year, and will remain open source for version 2, allowing contributions from other IU units and transparency as we continue development. That also means you can follow along with development [on GitHub](https://github.com/indiana-university/rivet-source).
+[Rivet went open source]({{< ref "blog/open-sourcing-rivet.md">}}) earlier this year, and will remain open source for version 2, allowing contributions from other IU units and transparency as we continue development. That also means you can follow along with development [on GitHub](https://github.com/indiana-university/rivet-source).
 
 ## Building in brand fundamentals
 
