@@ -1,57 +1,49 @@
 ---
 title: "Roadmap"
-description: "Our plans for Rivet in 2019 and beyond"
+description: "Our plans for Rivet in 2019–2020 and beyond"
 excludeFromStatus: true
 weight: 1
 aliases:
   - /roadmap/
 ---
-Our focus is to keep Rivet healthy, growing, and serving the people using it. To help us accomplish that, we've identified three areas where we should prioritize our efforts: **Infrastructure**; **production**; and **documentation**, **education**, and **outreach**. Although the specific tasks will come and go, the general categories of work will remain the same.
+## Timeline
+{{< roadmap-timeline >}}
 
-To that end, our roadmap focuses on higher-level objectives that will help us accomplish our goals.
+## Q4 2019: Rivet 2.0-alpha release
+By October 1 we’ll start to move the new components and patterns that have been designed during the pilot projects already underway into the Rivet codebase on a new dedicated development branch for version 2.
 
-## Q1: Processes and team organization
-With our proposal to create a dedicated design system team approved, the early part of 2019 we’ll focus some of our time recruiting and hiring a full-time front-end developer/engineer that will be 100% dedicated to Rivet. The proposal also adds two other 50% dedicated Rivet teams members (from within UXO), so we’ll also spend early 2019 developing a plan for how we’ll organize ourselves to get work done as a team.
+As a part of this Alpha phase launch, we will begin work on a Rivet 1.x end-of-life (EOL) plan. The first step of the EOL will be to create a new v2 URL (e.g. `v2.rivet.iu.edu`) where we can design and build the new version of the Rivet docs.
 
-### Q1 Goals
-- Hire new front-end developer
-- Establish team project management processes and release schedule
-    - Identify metrics for measuring success. What do we measure—adoption, satisfaction, improved user experience? How do we measure it?
-    - Plan for regular releases in specific time increments
-    - Build in dedicated time for bug fixes, tackling technical debt, etc. at regular increments
-- Increase visibility of public backlog. Possibly use Github API to pull backlog info into the Rivet website.
-- Establish a process for soliciting community feedback on public backlog items to help us better prioritize new features and requests. For example, create a regular communications schedule for asking community members to visit the public backlog and up vote or down vote requests using built-in Github reactions feature.
-- Establish an official QA process for new additions and updates to existing components/patterns and document it in an easily accessible location
+### Goals
+- Have `v2.rivet.iu.edu` URL in place with an alpha version of documentation for newly added components. As a good first step this URL could be where we publish the component library development environment (Fractal)
+- Complete new header pattern and configurations
+- Complete new footer pattern and configurations
+- Add new versions of content patterns (formerly known as chunks)
+- Remove deprecated code
+- Start to make any breaking changes
 
-## Q2: Rivet Community Workshops & information architecture overhaul
-In the spring we’re planning the first Rivet Community Workshop. This workshop will be a one-day event where developers and designers can learn about Rivet, contribute to Rivet, and meet other developers using Rivet. We’ll be focusing on creating a workshop format that we can use going forward as we establish a regular (at least one per semester) workshop schedule.
+## Q1: Rivet site redesign
+While we’re expanding on the components and patterns that currently exist in Rivet, we’ll be working to redesign the Rivet documentation site. The focus of the work on the updated version of the Rivet site will be [_building the onion_](https://clearleft.com/posts/systematised-design-glossing-over-confusion) structure of our design system.
 
-In addition to planning and having our first community workshop, we’ll be reworking the information architecture of the the main Rivet documentation site. As Rivet has grown, it’s become clear that there’s a need for larger, more complex design patterns in addition to the current lower level components. We’re already in the early stages of design and planning for this IA overhaul. In the second quarter, we’ll build and launch these updates.
+By _building the onion_ we mean improving on the existing foundation of Rivet as a component library to include guidance on using the fundamentals of our brand (color, type, logos, voice) along with our components, page templates, and UX guidelines to create consistent and usable experiences that put our users first. 
 
-### Q2 Goals
-- Create content plan for both tracks (Coding track and Tutorial track) of community workshop.
-- Communications and outreach for workshop
-- Restructure Documentation content to move toward high-level categories, e.g. Base styles, Components, Patterns, Templates
+### Goals
+- Start to implement [updated IA (WIP)](https://www.figma.com/file/WSHuoiTdgK4RTsVsWD6xYx/2019-Rivet-site-IA-Copy?node-id=0%3A1)
+- Add foundation docs (color, type, logos, voice)
+- Create documentation for layouts
+- Create documentation for new content patterns
+- Work to update editorial & content guides
 
-## Q3: Summer 2019 production sprint
-By summer our goal is to have the Rivet team up to full speed. In between the spring and fall semesters, we’ll focus most of our efforts on production, including designing and building more complex patterns and templates.
+## Q2: 2.0 Launch
+During this phase we’ll launch the new v2 docs, which will include publishing a migration guide. Our current plan for the v2 docs launch looks something like this:
 
-As part of this production sprint, we’ll spend some time exploring what the future of Rivet might look like. For instance, how will Rivet and the IU Style Guide eventually merge together?
+1. Archive the 1.x documentation (the current Rivet site) at a new `v1.rivet.iu.edu`
+1. Begin publishing the new v2 documentation site to permanent Rivet documentation site URL `rivet.iu.edu`
+1. Promote v2 migration guide and new legacy/archive URL (`v1.rivet.iu.edu`)
 
-### Q3 Goals
-- Design, build, and document more complex design patterns, e.g. address form, date and time entry patterns, toolbars, complex navigation
-- Build and document common templates that can help developers get started building applications quickly without having to spend time making high-level layout decisions
-- Evaluate the Rivet code base architecture and create a proposal for how we might restructure the next major version of Rivet. We want to make it easier to incorporate parts of Rivet into other projects, so this next version should be less monolithic and more modular. For instance, we’ll explore how Rivet’s form styles would work in the IU Framework/Style guide or other marketing projects.
-
-## Q4: Fall Community Workshop and Rivet 2020
-In the last quarter of 2019, we’ll hold another community workshop. In the early part of the fall, we’ll spend some time reflecting on what worked and what didn’t from our spring workshop, and we'll make any needed adjustments to the workshop content.
-
-Toward the end of 2019, we’ll have had almost a full year with a dedicated design system team and hopefully a bit more insight into what we might be able to achieve in 2020. We’ll spend time measuring what we’ve accomplished and evaluating what worked and what didn’t.
-
-### Q4 Goals
-- Create/revise content plan for both tracks (Coding track and Tutorial track) of community workshop.
-- Communications and outreach for community workshop
-- Rivet team retreat—planning for 2020 Roadmap
-
-
-
+### Goals
+- Official release of `v2.0.0`
+- Launch new official documentation site with revised information architecture in place (foundations, component library, templates and pages, UX guidance docs)
+- Moving content from `v2.rivet.iu.edu` to the permanent URL `rivet.iu.edu`
+- Permanent home for archived v1.x documentation
+- Release Migration guide and tooling
