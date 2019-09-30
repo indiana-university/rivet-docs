@@ -10,6 +10,7 @@
                 <span class="text-uppercase rvt-m-bottom-sm">{{ .Title }}</span>
                 <ul>
                     {{ range .Pages }}
+                    {{ if ne .Params.excludeFromNavigation true }}
                     <li class="{{ lower .Params.status }}{{ if eq $currentPage.Permalink .Permalink }} is-current{{ end }}">
                         <a {{ if .Params.requiresJs }}aria-describedby="{{ .Title | urlize }}-js-req" {{ end }}href="{{ .Permalink }}">
                             {{ .Title }}
@@ -21,6 +22,7 @@
                             {{ end }}
                         </a>
                     </li>
+                    {{ end }}
                     {{ end }}
                 </ul>
             </li>
