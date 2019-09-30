@@ -984,10 +984,20 @@ a.button--reverse-secondary {
 /**
   * Timeline
   */
-
+  
   @include mq(bp(md)) {
     .rvtd-example__timeline,
     .rvtd-example__timeline .rvt-container {
       padding-left: 4.5rem !important;
     }
   }
+  
+/**
+ * Roadmap overrides
+ */
+
+ @include mq($breakpoint-md) {
+   .rvt-d-roadmap-timeline {
+     padding-left: 6rem;
+   }
+ }
