@@ -945,8 +945,8 @@ a.button--reverse-secondary {
   justify-content: center;
   padding: 0;
   position: absolute;
-  right: $md - .125rem;
-  bottom: -$md * .9;
+  right: $lg - $xxs; 
+  bottom: -$md * .8;
   border-radius: 999rem;
   
   &[aria-expanded="true"] svg {
