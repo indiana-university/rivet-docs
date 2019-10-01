@@ -359,7 +359,6 @@ When implementing headers with both a main navigation and identity menu, the ide
             </div>
             <a href="#0" class="rvt-header-id__log-out">Log out</a>
         </div>
-        </div>
         <!-- Drawer close button - shows on small screens -->
         <button type="button" class="rvt-drawer-button" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="mobile-drawer-3">
             <span class="sr-only">Toggle menu</span>
