@@ -9,7 +9,7 @@ status: "Ready"
 To maintain consistent spacing between components and to help create a sense of vertical rhythm, we have created a spacing system based on `.5rem` (8px) unit. Margins and padding can be applied using a set of CSS utility classes to add or remove margin and padding from any element.
 
 ### Spacing examples
-{{< spacing >}}{{< /spacing >}}
+{{< spacing >}}
 
 ## Spacing Sass variables
 If you are using [Rivet's Sass](https://github.com/indiana-university/rivet-source/blob/develop/src/sass/core/_variables.scss#L325) files you can directly access any spacing unit by its variable name. The spacing unit variables follow the same naming conventions as all of Rivet's spacing utility classes.
