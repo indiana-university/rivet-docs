@@ -6,6 +6,8 @@ excludeFromIndex: true
 author:
   email: "ahlord@iu.edu"
   name: "Austin Lord"
+aliases:
+  - /v2/
 ---
 
 As laid out in [our 2019 roadmap]({{< ref "components/information/roadmap-2019.md#q3-summer-2019-production-sprint" >}}), the Rivet team spent a lot of time this summer asking the question, “what does the future of Rivet look like?” During this time, we also underwent [an organizational change]({{< ref "blog/dcdi-announcement-takeaways.md" >}}) that aligned key groups in User Experience (UX), branding, IT, and marketing & communications under the new [IU Studios](https://studios.iu.edu) organization. We’ve made some decisions about how best to serve the needs of IU, and have created [a roadmap]({{< ref "components/information/roadmap.md" >}}) that outlines the next iteration of Rivet, and the evolution of our design system. Some key components of our roadmap are outlined below.
