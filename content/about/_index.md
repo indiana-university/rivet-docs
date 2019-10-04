@@ -20,6 +20,14 @@ sections:
         title: "Design System Lead"
         avatar: "../img/team/levi-thumbnail.jpg"
       -
+        name: "Rachel O'Connor"
+        title: "Front-end Developer"
+        avatar: "../img/team/rachel-thumbnail.jpg"
+      -
+        name: "Zachary Todd"
+        title: "Front-end Developer"
+        avatar: "../img/team/zach-thumbnail.jpg"
+      -
         name: "Madeline Grdina"
         title: "UX Architect"
         avatar: "../img/team/madeline-thumbnail.jpg"
@@ -28,13 +36,9 @@ sections:
         title: "Developer Advocate"
         avatar: "https://ux.iu.edu/img/scott-thumbnail.jpg"
       -
-        name: "Rachel O'Connor"
-        title: "Front-end Developer"
-        avatar: "../img/team/rachel-thumbnail.jpg"
-      -
-        name: "Zachary Todd"
-        title: "Front-end Developer"
-        avatar: "../img/team/zach-thumbnail.jpg"
+        name: "Paco Wong"
+        title: "UX Engineer"
+        avatar: "../img/team/paco-thumbnail.png"
   -
     image: "../img/about-dev-process.png"
     title: "What is our development process?"
