@@ -10,7 +10,7 @@ aliases:
   - /v2/
 ---
 
-As laid out in [our 2019 roadmap]({{< ref "components/information/roadmap-2019.md#q3-summer-2019-production-sprint" >}}), the Rivet team spent a lot of time this summer asking the question, “what does the future of Rivet look like?” During this time, we also underwent [an organizational change]({{< ref "blog/dcdi-announcement-takeaways.md" >}}) that aligned key groups in User Experience (UX), branding, IT, and marketing & communications under the new [IU Studios](https://studios.iu.edu) organization. We’ve made some decisions about how best to serve the needs of IU, and have created [a roadmap]({{< ref "components/information/roadmap.md" >}}) that outlines the next iteration of Rivet, and the evolution of our design system. Some key components of our roadmap are outlined below.
+As laid out in [our 2019 roadmap]({{< ref "components/information/roadmap-2019.md#q3-summer-2019-production-sprint" >}}), the Rivet team spent a lot of time this summer asking the question, “What does the future of Rivet look like?” During this time, we also underwent [an organizational change]({{< ref "blog/dcdi-announcement-takeaways.md" >}}) that aligned key groups in User Experience (UX), branding, IT, and marketing & communications under the new [IU Studios](https://studios.iu.edu) organization. We have created [a roadmap]({{< ref "components/information/roadmap.md" >}}) that outlines the next iteration of Rivet, and the evolution of our design system. Some key components of our roadmap are outlined below.
 
 ## Rivet 2.0
 
@@ -36,8 +36,8 @@ Whether you want to place the IU brand front and center, or just give it a nod w
 
 ## How to get involved
 
+Later this year, you’ll be able to submit feedback and requests directly to us. We’ll begin a Request for Comment (RFC) process that outlines how we’ll be gathering feedback from the IU community. We’ll be opening both technical and general RFCs, allowing developers to comment on specific API changes, and others to comment on general changes to how we’re building the web with Rivet.
+
 Rivet has always relied on the community of people that use it, provide us feedback, and engage in the ongoing process of creating it. A design system is a living thing, and it is shaped by individuals across IU. We appreciate your engagement, and hope you’ll stay involved as we take this exciting next step into the future.
 
-We will begin a Request for Comment (RFC) process later this year that outlines how we’ll be gathering feedback from the IU community. We’ll be opening both technical and general RFCs, allowing developers to comment on specific API changes, and others to comment on general changes to how we’re building the web with Rivet.
-
-If you’re part of the [Web Community of Practice](https://developers.iu.edu/communities/webcop/), we’ll share updates in [the #rivet Slack channel](https://iuwebcommunity.slack.com/messages/CA85K3H6Y), and at monthly meetings. If you’re part of the MarComm community, we’ll regularly attend monthly forums, and share updates in The Skinny. No matter who you are, if you contribute to IU’s web presence, we would love to talk or hear your feedback. Please contact us [via email](mailto:rivet@iu.edu).
+If you’re part of the [Web Community of Practice](https://developers.iu.edu/communities/webcop/), we’ll share updates in [the #rivet Slack channel](https://iuwebcommunity.slack.com/messages/CA85K3H6Y), and at monthly meetings. If you’re part of the [MarComm community](https://studios.iu.edu/learn/events/index.html), we’ll regularly attend monthly forums, and share updates in The Skinny. No matter who you are, if you contribute to IU’s web presence, we would love to talk or hear your feedback. Please contact us [via email](mailto:rivet@iu.edu).
