@@ -18,7 +18,7 @@ The Rivet components documentation contains examples, code snippets, and guidanc
 ## Download Rivet
 You can download a ZIP file that contains the compiled and minified CSS and JavaScript, images, and a starter HTML file.
 
-{{< button url="https://github.com/indiana-university/rivet-source/releases/download/v1.7.1/rivet.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
+{{< button url="https://github.com/indiana-university/rivet-source/releases/download/v1.7.2/rivet.zip" variant="secondary" analytics-action="download" analytics-category="click">}}
     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
       <g fill="currentColor">
         <path d="M14.25,11a1,1,0,0,0-1,1v1H2.75V12a1,1,0,0,0-2,0v1.75A1.25,1.25,0,0,0,2,15H14a1.25,1.25,0,0,0,1.25-1.25V12A1,1,0,0,0,14.25,11Z"/>
@@ -84,11 +84,11 @@ The hosted CSS and JavaScript assets are a good solution for prototyping ideas, 
 
 The quickest way to get started with Rivet is using the centrally-hosted CSS and JavaScript files. Copy and paste this `<link>` element to `<head>` of your document. Make sure it is placed **before** any other stylesheets.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.7.1/rivet.min.css">{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/css link tag">}}<link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.7.2/rivet.min.css">{{< /code >}}
 
 Rivet has a minimal amount of JavaScript that is required for some components, like the [header](../components/navigation/header). Copy and paste this link and add to the end of your document, just before the closing `</body>` tag.
 
-{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/1.7.1/rivet.min.js"></script>{{< /code >}}
+{{< code lang="html" analytics-label="assets.uits.iu.edu/js script tag">}}<script src="https://assets.uits.iu.edu/javascript/rivet/1.7.2/rivet.min.js"></script>{{< /code >}}
 
 ## Starter template
 Here's a basic starter template with the hosted CSS and JavaScript hooked up. Copy and paste into your favorite editor to start using Rivet.
@@ -99,14 +99,14 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.7.1/rivet.min.css">
+    <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/1.7.2/rivet.min.css">
     <title>Rivet starter file</title>
 </head>
 <body>
     <header class="rvt-header" role="banner">
         <a class="rvt-skip-link" href="#main-content">Skip to content</a>
         <div class="rvt-header__trident">
-            <svg class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-describedby="iu-logo" aria-hidden="true">
+            <svg class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" aria-hidden="true">
                 <title id="iu-logo">Indiana University Logo</title>
                 <rect width="41" height="48" fill="#900"/>
                 <polygon points="24.59 12.64 24.59 14.98 26.34 14.98 26.34 27.78 22.84 27.78 22.84 10.9 24.59 10.9 24.59 8.57 16.41 8.57 16.41 10.9 18.16 10.9 18.16 27.78 14.66 27.78 14.66 14.98 16.41 14.98 16.41 12.64 8.22 12.64 8.22 14.98 9.97 14.98 9.97 30.03 12.77 33.02 18.16 33.02 18.16 36.52 16.41 36.52 16.41 39.43 24.59 39.43 24.59 36.52 22.84 36.52 22.84 33.02 28 33.02 31.01 30.03 31.01 14.98 32.78 14.98 32.78 12.64 24.59 12.64" fill="#fff"/>
@@ -144,7 +144,7 @@ Here's a basic starter template with the hosted CSS and JavaScript hooked up. Co
             </li>
         </ul>
     </footer>
-    <script src="https://assets.uits.iu.edu/javascript/rivet/1.7.1/rivet.min.js"></script>
+    <script src="https://assets.uits.iu.edu/javascript/rivet/1.7.2/rivet.min.js"></script>
 </body>
 </html>
 {{< /code >}}
