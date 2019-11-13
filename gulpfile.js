@@ -21,8 +21,8 @@ function watchFiles(callback) {
     notify: false
   });
 
-  watch('assets/js/**/*.js', { ignoreInitial: false }, series(js.transpileJS, js.concatJS));
-  watch('assets/scss/**/*.scss', { ignoreInitial: false }, sass);
+  watch('assets/js/**/*.js', { ignoreInitial: false }, series(js.transpileJS, js.concatJS, hugoDev));
+  watch('assets/scss/**/*.scss', { ignoreInitial: false }, series(sass, hugoDev));
   watch('content/**/*.md');
   watch(
     [
