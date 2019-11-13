@@ -996,12 +996,12 @@ a.button--reverse-secondary {
  * Roadmap overrides
  */
 
- @include mq($breakpoint-md) {
-   .rvt-d-roadmap-timeline {
-     padding-left: 6rem;
-   }
- }
- 
+@include mq($breakpoint-md) {
+  .rvt-d-roadmap-timeline {
+    padding-left: 6rem;
+  }
+}
+
 .rvtd-2-banner {
   background-color: $color-black--100;
 }

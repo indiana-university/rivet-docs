@@ -49,10 +49,11 @@ function hugoDev(callback) {
   callback();
 }
 
-function hugoProd() {
+function hugoProd(callback) {
   hugo(false);
+  callback();
 }
 
-exports.build = series(envProd, sass, js.transpileJS, js.concatJS);
+exports.build = series(envProd, sass, js.transpileJS, js.concatJS, hugoProd);
 
 exports.serve = series(hugoDev, watchFiles);
