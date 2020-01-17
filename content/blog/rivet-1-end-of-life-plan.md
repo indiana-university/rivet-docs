@@ -7,7 +7,7 @@ author:
   email: "lmcgrana@iu.edu"
   name: "Levi McGranahan"
 ---
-As we begin work on Rivet 2 we want to make sure and communicate our current plans for how we will eventually retire the current major version of Rivet.
+As we begin work on [Rivet 2](https://v2.rivet.iu.edu) we want to make sure and communicate our current plans for how we will eventually retire the current major version of Rivet.
 
 **NOTE**: These are our current plans, but they may be subject to change. Generally speaking, we will do our best to allow _more_ time for migration and support of Rivet 1.x.x, not less.
 
