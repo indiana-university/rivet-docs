@@ -1,7 +1,7 @@
 ---
 title: "Rivet announcements: Beta timeline, GitHub Discussions, and 1.8.0 release"
 description: Updates about Rivet's development in the spring and beyond.
-date: "2021-02-11"
+date: "2021-02-15"
 excludeFromIndex: true
 author:
   email: "lmcgrana@iu.edu"
