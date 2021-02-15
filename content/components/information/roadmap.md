@@ -6,6 +6,13 @@ weight: 1
 aliases:
   - /roadmap/
 ---
+
+<div class="rvt-alert rvt-alert--warning rvt-m-bottom-md" role="alertdialog" aria-labelledby="roadmap-outdated">
+    <h1 class="rvt-alert__title rvt-m-bottom-sm" id="roadmap-outdated">This roadmap is out of date</h1>
+    <p class="rvt-alert__message rvt-m-bottom-sm">Last year, members of the Rivet team were reassigned to emergency projects related to IU's coronavirus response and the milestones laid out in the roadmap below were put on hold.</p>
+    <p class="rvt-alert__message">As Digital Campus resumes normal operations, we've begun to restart work on Rivet 2. See the Rivet blog for more information on our <a href="/blog/spring-2021/">development plans for spring 2021</a>.</p>
+</div>
+
 ## Timeline
 {{< roadmap-timeline >}}
 
