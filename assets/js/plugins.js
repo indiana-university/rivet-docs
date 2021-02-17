@@ -12,7 +12,7 @@ export function createCopyright(el) {
   let year = document.querySelector(el);
   if (year == null) return;
   let currentYear = new Date().getFullYear();
-  year.innerHTML = currentYear;
+  year.textContent = currentYear;
 }
 
 /**

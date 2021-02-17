@@ -10,7 +10,7 @@ import { createCopyright, setIndeterminate, stickySupportForm, copyButtonConfirm
  */
 
 
-createCopyright("#year");
+createCopyright("[data-copyright-year]");
 copyButtonConfirm("[data-clipboard-target]", 1500);
 setIndeterminate("#checkbox-indeterminate");
 stickySupportForm();
