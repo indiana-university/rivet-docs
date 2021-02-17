@@ -1,7 +1,7 @@
 ---
 title: "Border"
 asOf: 1.0.0
-description: "Use Rivet's border utilities to add a border to any or all sides of an element."
+description: "Use Rivet's border utilities to add a border to any or all sides of an element"
 status: "Ready"
 ---
 ## Border utility examples
