@@ -1,5 +1,38 @@
 [
   {
+    "tag_name": "v1.8.0",
+    "published_at": "2021-02-25T00:00:00Z",
+    "body": "Rivet 1.8.0 is now available. This release adds border removal utility classes and fixes bugs related to the button, dropdown, and collapsible components.<!-- end-overview -->",
+    "pulls": {
+      "items": [
+        {
+          "title": "Added border removal utility classes",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/435"
+        },
+        {
+          "title": "Updated button focus outline color to match border/fill color",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/436"
+        },
+        {
+          "title": "Added toggle variable check to dropdown component JS",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/437"
+        },
+        {
+          "title": "Updated readme and contributing files for Q1 2021",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/438"
+        },
+        {
+          "title": "Converted utilities .hbs files to .njk",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/440"
+        },
+        {
+          "title": "Added passing automated tests for calling API methods on removed dropdowns",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/443"
+        }
+      ]
+    }
+  },
+  {
     "tag_name": "v1.7.2",
     "published_at": "2019-10-24T17:23:27Z",
     "body": "Rivet 1.7.2 is now available. This release fixes some small styling issues, improves accessibility, and refactors JavaScript syntax.<!-- end-overview -->",
