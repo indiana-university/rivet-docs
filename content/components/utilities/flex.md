@@ -3,7 +3,7 @@ title: "Flex"
 asOf: 1.3.0
 description: "This set of responsive flexbox utilities can help you fine-tune layouts based on different screen sizes."
 requiresJs: false
-status: "Alpha"
+status: "Ready"
 ---
 ## Flex utilities example
 The Rivet flexbox utilities provide a robust set of CSS classes you can use to lay out items in a container. These utilities take advantage of [CSS flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) and are designed to be used when fine-tuning the layout of items at the individual component level. 

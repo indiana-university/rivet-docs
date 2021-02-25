@@ -2,7 +2,7 @@
 title: "Menu"
 asOf: 1.6.0
 description: "Provide additional navigation outside of the main header"
-status: "Alpha"
+status: "Ready"
 ---
 
 {{< alert variant="info" title="New in Rivet 1.6.0" >}}
