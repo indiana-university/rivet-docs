@@ -2,7 +2,7 @@
 title: "Media Object"
 asOf: 1.2.0
 description: "The media object is a simple layout component that can generally be used to display items in a list of content."
-status: "Beta"
+status: "Ready"
 ---
 {{< alert variant="info" title="New in Rivet 1.2.0" >}}
 The media object is new as of 1.2.0. If you need help moving to 1.2.0, see our [instructions for updating Rivet](/components/#updating-the-rivet-npm-package").

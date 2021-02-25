@@ -6,7 +6,7 @@ packageName: rivet-datepicker
 npm: true
 repo: https://github.com/indiana-university/rivet-datepicker
 demo: https://indiana-university.github.io/rivet-datepicker/
-status: Alpha
+status: Ready
 addOnTags:
   - All
   - Forms

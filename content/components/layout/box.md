@@ -2,7 +2,7 @@
 title: "Box"
 asOf: 1.2.0
 description: "The box component can be used to help visually group related content"
-status: "Alpha"
+status: "Ready"
 ---
 {{< alert variant="info" title="New in Rivet 1.2.0" >}}
 The box is new as of 1.2.0. If you need help moving to 1.2.0, see our [instructions for updating Rivet](/components/#updating-the-rivet-npm-package").

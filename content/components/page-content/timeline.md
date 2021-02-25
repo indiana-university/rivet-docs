@@ -2,7 +2,7 @@
 title: "Timeline"
 asOf: 1.7.0
 description: "Show users chronologically ordered information"
-status: "Alpha"
+status: "Ready"
 ---
 
 {{< alert variant="info" title="New in Rivet 1.7.0" >}}
