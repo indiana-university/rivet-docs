@@ -1,7 +1,7 @@
 ---
 title: Rivet 1.8.0 release
 description: Rivet 1.8.0 is now available. This release adds border removal utility classes and fixes bugs related to the button, dropdown, and collapsible components.
-date: "2021-02-17"
+date: "2021-02-25"
 tags:
     - "minor release"
 excludeFromIndex: true
