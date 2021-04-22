@@ -1,7 +1,7 @@
 ---
 title: "Rivet 2 header preview"
 description: A first look at the in-development Rivet 2 header component.
-date: "2021-04-20"
+date: "2021-04-22"
 excludeFromIndex: true
 author:
   email: "scanmurr@iu.edu"
@@ -14,7 +14,7 @@ Last week, we published the [fourth alpha release of Rivet 2](https://github.com
 
 Rivet's scope has broadened to include a wider variety of digital properties than the previous version, so our goal was to create a visually lightweight header that clearly communicated the IU brand while being usable, accessible, and flexible.
 
-You can see an interactive preview of the new header on [v2.rivet.iu.edu](https://v2.rivet.iu.edu/). This preview also contains code examples and implementation notes for development teams using the Rivet 2 alpha.
+You can see an interactive preview of the new header on [v2.rivet.iu.edu](https://v2.rivet.iu.edu/docs/components/header/). This preview also contains code examples and implementation notes for development teams using the Rivet 2 alpha.
 
 ## New documentation features
 
@@ -23,7 +23,7 @@ As part of the alpha development process, we've also been exploring some enhance
 In the header preview linked above, you'll notice two new features attached to code examples:
 
 - **Full-screen preview**. Code examples can be viewed in isolation in a new browser tab. This feature is intended to help give developers a distraction-free way to see how a component looks and works.
-- **Edit in CodePen**. Code examples can be edited directly in CodePen. This feature is intended to provide developers with a sandbox in which they can quickly experiment with components without needing to set up a local development environment.
+- **Edit on CodePen**. Code examples can be edited directly in CodePen. This feature is intended to provide developers with a sandbox in which they can quickly experiment with components without needing to set up a local development environment.
 
 ## Leaving feedback
 
