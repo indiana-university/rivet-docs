@@ -14,7 +14,7 @@ caches:
     maxAge: "10h"
     dir: ":cacheDir/:project"
 params:
-  rivetVersion: 1.8.0
+  rivetVersion: 1.8.1
   tagline: "Design System"
   googleAnalytics: "UA-100560495-3"
   devGoogleAnalytics: "UA-100560495-4"
