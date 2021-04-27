@@ -31,7 +31,7 @@ This release fixes an issue where columns in tables styled with the `.rvt-table-
 
 This release corrects the vertical centering of the XXS loading indicator within a small button.
 
-The [loading indicator documentation]({{< ref "../components/overlays/loading-indicator.md#loading-indicator-sizes" >}}) has been updated to make explicit that only the XSS loading indicator can be used in small buttons.
+The [loading indicator documentation]({{< ref "../components/overlays/loading-indicator.md#loading-indicator-sizes" >}}) has been updated to make explicit that only the XXS loading indicator can be used in small buttons.
 
 ## Complete list of updates
 For a complete list of updates made in version `1.8.1`, see the [Rivet changelog]({{< ref "components/information/changelog.md" >}}).
