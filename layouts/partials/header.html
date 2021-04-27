@@ -23,7 +23,7 @@
               <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
             </svg>
           </button>
-          <div class="rvt-dropdown__menu" id="documentation-dropdown" role="menu" aria-hidden="true">
+          <div class="rvt-dropdown__menu" id="documentation-dropdown" aria-hidden="true">
             <a href="{{ trim .Site.BaseURL "/" }}/components" {{ if eq $currentNav.URL "/components/" }}aria-current="page"{{ end }}>Components</a>
             <a href="{{ trim .Site.BaseURL "/" }}/add-ons" {{ if eq $currentNav.URL "/add-ons/" }}aria-current="page"{{ end }}>Add-ons</a>
             <a href="{{ trim .Site.BaseURL "/" }}/content-guide" {{ if eq $currentNav.URL "/content-guide/" }}aria-current="page"{{ end }}>Content guide</a>
@@ -38,7 +38,7 @@
               <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
             </svg>
           </button>
-          <div class="rvt-dropdown__menu" id="learn-dropdown" role="menu" aria-hidden="true">
+          <div class="rvt-dropdown__menu" id="learn-dropdown" aria-hidden="true">
             <a href="{{ trim .Site.BaseURL "/" }}/about/" {{ if eq $currentNav.URL "/about/" }}aria-current="page"{{ end }}>What is Rivet?</a>
             <a href="{{ trim .Site.BaseURL "/" }}/blog/" {{ if eq $currentNav.URL "/blog/" }}aria-current="page"{{ end }}>Blog</a>
             <a href="{{ trim .Site.BaseURL "/" }}/components/information/roadmap/" {{ if eq $currentNav.URL "/components/information/roadmap/" }}aria-current="page"{{ end }}>Roadmap</a>
@@ -58,7 +58,7 @@
             <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
           </svg>
         </button>
-        <div class="rvt-dropdown__menu rvt-dropdown__menu--right" id="use-dropdown" aria-hidden="true" role="menu">
+        <div class="rvt-dropdown__menu rvt-dropdown__menu--right" id="use-dropdown" aria-hidden="true">
           <a href="{{ trim .Site.BaseURL " / " }}/getting-started/npm/">Install via NPM</a>
           <a href="{{ trim .Site.BaseURL " / " }}/components/#download-rivet">Download CSS &amp; JS</a>
           <a href="{{ trim .Site.BaseURL " / " }}/components/#hosted-css-and-javascript">Hosted assets</a>

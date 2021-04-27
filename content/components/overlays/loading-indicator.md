@@ -38,8 +38,8 @@ If you are using `.rivet-button__text`, please update your application to use th
 ## Loading indicator sizes
 The loading indicator comes in multiple sizes that follow the standard Rivet size naming conventions used for [spacing]({{< ref "/components/layout/spacing.md" >}}) and [typography]({{< ref "components/layout/typography.md" >}}).
 
-- `rvt-loader--xxs`
-- `rvt-loader--xs` - The default size. Same as `rvt-loader` with no modifier. **NOTE**: This is the **only** size usable inside a button.
+- `rvt-loader--xxs` - **NOTE**: This is the **only** size usable inside a small button.
+- `rvt-loader--xs` - The default size. Same as `rvt-loader` with no modifier. **NOTE**: This is the **only** size usable inside a normal-sized button.
 - `rvt-loader--sm`
 - `rvt-loader--md`
 - `rvt-loader--lg`

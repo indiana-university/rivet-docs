@@ -1,8 +1,33 @@
 [
   {
+    "tag_name": "v1.8.1",
+    "published_at": "2021-04-27T00:00:00Z",
+    "body": "This release fixes bugs related to the header, modal, table, and loading indicator components.<!-- end-overview -->",
+    "pulls": {
+      "items": [
+        {
+          "title": "Fixed missing top border from .rvt-table-cells columns",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/471"
+        },
+        {
+          "title": "Updated loading indicator margin to center XXS indicator in small button",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/470"
+        },
+        {
+          "title": "Fixed error when Modal.open or Modal.close is called on a modal that has been removed from the DOM",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/468"
+        },
+        {
+          "title": "Removed role=\"menu\" from header examples and instance",
+          "html_url": "https://github.com/indiana-university/rivet-docs/pull/187"
+        }
+      ]
+    }
+  },
+  {
     "tag_name": "v1.8.0",
     "published_at": "2021-02-25T00:00:00Z",
-    "body": "Rivet 1.8.0 is now available. This release adds border removal utility classes and fixes bugs related to the button, dropdown, and collapsible components.<!-- end-overview -->",
+    "body": "This release adds border removal utility classes and fixes bugs related to the button, dropdown, and collapsible components.<!-- end-overview -->",
     "pulls": {
       "items": [
         {
@@ -35,7 +60,7 @@
   {
     "tag_name": "v1.7.2",
     "published_at": "2019-10-24T17:23:27Z",
-    "body": "Rivet 1.7.2 is now available. This release fixes some small styling issues, improves accessibility, and refactors JavaScript syntax.<!-- end-overview -->",
+    "body": "This release fixes some small styling issues, improves accessibility, and refactors JavaScript syntax.<!-- end-overview -->",
     "pulls": {
       "items": [
         {
@@ -64,7 +89,7 @@
   {
     "tag_name": "v1.7.1",
     "published_at": "2019-09-12T17:23:27Z",
-    "body": "Rivet 1.7.1 is now available. This release refines several styles related to badges as well as other improvements.<!-- end-overview -->",
+    "body": "This release refines several styles related to badges as well as other improvements.<!-- end-overview -->",
     "pulls": {
       "items": [
         {
@@ -93,7 +118,7 @@
   {
     "tag_name": "v1.7.0",
     "published_at": "2019-07-31T17:23:27Z",
-    "body": "Rivet 1.7.0 is now available. This release introduces the timeline component as well as a few bug fixes and improvements.<!-- end-overview -->",
+    "body": "This release introduces the timeline component as well as a few bug fixes and improvements.<!-- end-overview -->",
     "pulls": {
       "items": [
         {

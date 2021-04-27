@@ -161,7 +161,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                                 />
                             </svg>
                         </button>
-                        <div class="rvt-dropdown__menu" id="dropdown-1" role="menu" aria-hidden="true">
+                        <div class="rvt-dropdown__menu" id="dropdown-1" aria-hidden="true">
                             <a href="#">Item one</a>
                             <a href="#">Item two</a>
                             <a href="#">Item three</a>
@@ -180,7 +180,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                                 <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
                             </svg>
                         </button>
-                        <div class="rvt-dropdown__menu" id="dropdown-2" role="menu" aria-hidden="true">
+                        <div class="rvt-dropdown__menu" id="dropdown-2" aria-hidden="true">
                             <a href="#">Item one</a>
                             <a href="#">Item two</a>
                             <a href="#">Item three</a>
@@ -241,7 +241,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                         <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
                         <span class="rvt-header-id__user rvt-header-id__user--has-dropdown">rswanson</span>
                     </button>
-                    <div id="subnav-id" role="menu" aria-hidden="true">
+                    <div id="subnav-id" aria-hidden="true">
                         <ul>
                             <li>
                                 <a href="#">Account settings</a>
@@ -263,7 +263,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                 </li>
                 <li class="has-children">
                     <button type="button" data-subnav-toggle="subnav-1" aria-haspopup="true" aria-expanded="false">Nav two</button>
-                    <div id="subnav-1" role="menu" aria-hidden="true">
+                    <div id="subnav-1" aria-hidden="true">
                         <ul>
                             <li>
                                 <a href="#">Subnav one</a>
@@ -282,7 +282,7 @@ These lists work best for priority tasks and internal navigation. Consider inclu
                 </li>
                 <li class="has-children">
                     <button type="button" data-subnav-toggle="subnav-2" aria-haspopup="true" aria-expanded="false">Nav four</button>
-                    <div id="subnav-2" role="menu" aria-hidden="true">
+                    <div id="subnav-2" aria-hidden="true">
                         <ul>
                             <li>
                                 <a href="#">Subnav one</a>
@@ -338,7 +338,7 @@ When implementing headers with both a main navigation and identity menu, the ide
                                 />
                             </svg>
                         </button>
-                        <div class="rvt-dropdown__menu" id="dropdown-simple-1" role="menu" aria-hidden="true">
+                        <div class="rvt-dropdown__menu" id="dropdown-simple-1" aria-hidden="true">
                             <a href="#">Item one</a>
                             <a href="#">Item two</a>
                             <a href="#">Item three</a>
@@ -397,7 +397,7 @@ When implementing headers with both a main navigation and identity menu, the ide
                 </li>
                 <li class="has-children">
                     <button type="button" data-subnav-toggle="subnav-simple-1" aria-haspopup="true" aria-expanded="false">Nav two</button>
-                    <div id="subnav-simple-1" role="menu" aria-hidden="true">
+                    <div id="subnav-simple-1" aria-hidden="true">
                         <ul>
                             <li>
                                 <a href="#">Subnav one</a>
@@ -445,7 +445,7 @@ To create a nested navigation structure you can use [Rivet's standard dropdown m
 To keep the Rivet drawer nav visible at large screen sizes, add the `.rvt-drawer-button--persistent` class to the `.rvt-drawer-button` element.
 
 ### Nested navigation inside drawer
-To create a nested navigation structure, you can use Rivet's dropdown menus along with the Rivet drawer nav. Dropdown menus can be nested inside of the Rivet drawer navigation `li` and accompanying `<div role="menu">` (wrapping a nested `<ul>`) elements using the appropriate data attributes on the dropdown. Set the data attributes using the `data-subnav-toggle` attribute on the `button` element for the `li` navigation item. Then on each `div` sub navigation element set the id to the matching `data-subnav-toggle`.
+To create a nested navigation structure, you can use Rivet's dropdown menus along with the Rivet drawer nav. Dropdown menus can be nested inside of the Rivet drawer navigation `li` and accompanying `<div>` (wrapping a nested `<ul>`) elements using the appropriate data attributes on the dropdown. Set the data attributes using the `data-subnav-toggle` attribute on the `button` element for the `li` navigation item. Then on each `div` sub navigation element set the id to the matching `data-subnav-toggle`.
 
 Additionally, any navigation item that will contain sub navigation items needs the `has-children` class for appropriate styling in the dropdown menu. Lastly, each `<div>` sub navigation item needs`aria-hidden` set to true to hide the element until the dropdown menu toggle is clicked.
 
@@ -458,7 +458,7 @@ Additionally, any navigation item that will contain sub navigation items needs t
                     <span class="rvt-header-id__avatar" aria-hidden="true">RS</span>
                     <span class="rvt-header-id__user rvt-header-id__user--has-dropdown">rswanson</span>
                 </button>
-                <div id="subnav-id" role="menu" aria-hidden="false">
+                <div id="subnav-id" aria-hidden="false">
                     <ul>
                         <li>
                             <a href="#">Account settings</a>
@@ -478,7 +478,7 @@ Additionally, any navigation item that will contain sub navigation items needs t
             <li><a href="#0">Nav one</a></li>
             <li class="has-children">
                 <button type="button" data-subnav-toggle="subnav-1" aria-haspopup="true" aria-expanded="false">Nav two</button>
-                <div id="subnav-1" role="menu" aria-hidden="true">
+                <div id="subnav-1" aria-hidden="true">
                     <ul>
                         <li>
                             <a href="#">Subnav one</a>
@@ -495,7 +495,7 @@ Additionally, any navigation item that will contain sub navigation items needs t
             <li><a href="#0">Nav three</a></li>
             <li class="has-children">
                 <button type="button" data-subnav-toggle="subnav-2" aria-haspopup="true" aria-expanded="false">Nav four</button>
-                <div id="subnav-2" role="menu" aria-hidden="true">
+                <div id="subnav-2" aria-hidden="true">
                     <ul>
                         <li>
                             <a href="#">Subnav one</a>
