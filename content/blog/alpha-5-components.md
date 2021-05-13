@@ -16,13 +16,17 @@ This week, we published the [fifth alpha release of Rivet](https://github.com/in
 
 Previously a variant of the deprecated box component, the redesigned [card](https://v2.rivet.iu.edu/docs/components/card/) is now a standalone component.
 
-The card component is commonly used on both web applications and marketing websites to group related pieces of information. Cards are also used to present collections of content, such as news items, in a list or grid format.
+The card component is commonly used on both web applications and marketing websites to visually group related pieces of information. Cards are also used to present collections of content, such as news items or resource links, in a grid format.
+
+Cards fill a similar role to the [feature](https://framework.iu.edu/creating-content/chunks/feature.html) and [interactive panel](https://framework.iu.edu/creating-content/chunks/interactive-panel.html) chunks in the IU Web Framework.
 
 ## Billboard
 
 The [billboard](https://v2.rivet.iu.edu/docs/components/billboard/) is a new component for marketing websites based on work the Rivet team did as part of the [iu.edu](https://iu.edu/index.html) redesign.
 
 By combining an image, a headline, teaser text, and a call to action, the billboard component helps guide visitors to news articles, student and alumni stories, or other important content.
+
+Billboards are similar to the [text plus image banner](https://framework.iu.edu/creating-content/banners/text-and-image.html) in the IU Web Framework, but are usable anywhere on a page.
 
 ## Quote
 
@@ -44,7 +48,7 @@ The sidenav component is primarily designed for section navigation (as seen on [
 
 In our previous blog post, we provided a first look at [Rivet's new header system]({{< ref "./alpha-header.md" >}}) and introduced some enhancements we're making to component documentation.
 
-A preview of [Rivet's new footer system](https://rvtnext.sitehost-test.iu.edu/docs/components/footer/) is also available. Like the header, the footer is similar to those you might have seen on the recently relaunched [iu.edu](https://iu.edu), [uits.iu.edu](https://uits.iu.edu), and [covid.iu.edu](https://covid.iu.edu) websites.
+A preview of [Rivet's new footer system](https://v2.rivet.iu.edu/docs/components/footer/) is also available. Like the header, the footer is similar to those you might have seen on the recently relaunched [iu.edu](https://iu.edu), [uits.iu.edu](https://uits.iu.edu), and [covid.iu.edu](https://covid.iu.edu) websites.
 
 ## Leaving feedback
 
