@@ -11,7 +11,7 @@ HideToc: true
 
 Recently, UITS employee and SPEA instructor Mark Niswander collaborated with the Rivet team to teach a unit about Rivet in his undergraduate Information Technology in Public Affairs class.
 
-I reached out to Mark and asked him a few questions about his experience using Rivet in the classroom, how students felt about Rivet, and his ideas for teaching Rivet in the future.
+I reached out to Mark after finals wrapped up and asked him a few questions about his experience using Rivet in the classroom, how students felt about Rivet, and his ideas for teaching Rivet in the future.
 
 **Scott: Why did you decide to teach a unit on Rivet?**
 
@@ -25,7 +25,7 @@ Rivet is like learning an art form. At first, you may only be able to create som
 
 Mark: Rivet reinforces many of the complex topics we cover in my class about designing and maintaining information systems. Rivet also gives my students a chance to put what they learn directly into practice. For example, Rivet requires collaborating with a diverse group of people to create a technology solution for everyone.
 
-We teach students that the web is *not* a place of endless possibilities. Limitations are important for consistency, usability, and accessibility. We spend time every week focusing on how they will consume and influence their organization’s technology choices.
+I teach students that the web is *not* a place of endless possibilities. Limitations are important for consistency, usability, and accessibility. I spend time every week in my class focusing on how the students will consume and influence their organization’s technology choices.
 
 Learning Rivet gives students context about what to consider when they are looking at real-world web solutions. By the end of the unit, students appreciate how to take a complex problem and focus on solutions that work.
 
@@ -43,10 +43,10 @@ Students were proud that IU has thoughtfully considered our web design practices
 
 Teaching Rivet has several long-term benefits.
 
-Most importantly, it demonstrates that we are attentive to the university’s core function of student instruction. Learning Rivet becomes part of a student’s IU technology experience and some students will remember working on their web publishing assignments long into the future.
+Most importantly, it demonstrates UITS and VPCM's attentiveness to the university’s core function of student instruction. Learning Rivet becomes part of a student’s IU technology experience and some students will remember working on their web publishing assignments long into the future.
 
 Also, Rivet can be used to encourage learning more advanced design and programming. Although our course cannot teach one topic in depth, students will often seek out additional learning opportunities in their areas of interest.
 
-I hope to continue working with the Rivet team to create more advanced training and adopting different ways of teaching Rivet to staff, faculty, and students.
+I hope to continue working with the Rivet team to create more advanced training and adopt different ways of teaching Rivet to staff, faculty, and students.
 
 *Thanks to Mark for taking the time to share his experience and for his continued advocacy for Rivet.*
