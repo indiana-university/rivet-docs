@@ -1,7 +1,7 @@
 ---
 title: Introducing layouts
 description: Layouts are starter HTML templates for the design of your website or application.
-date: "2021-06-10"
+date: "2021-06-15"
 excludeFromIndex: true
 author:
   email: "scanmurr@iu.edu"
