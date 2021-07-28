@@ -39,9 +39,6 @@
         <div class="rvt-p-right-xxl-md-up">
           <h2 class="rvt-ts-lg rvt-text-bold rvt-m-bottom-md">{{ (index .Params.sections 1).title }}</h2>
           <p class="rvtd-lh-generous">{{ (index .Params.sections 1).teaser | safeHTML }}</p>
-          <a class="rvt-button rvt-button--secondary rvt-m-top-md" href="{{ (index .Params.sections 1).ctaLink }}">
-            {{ (index .Params.sections 1).ctaText }}
-          </a>
         </div>
       </div>
       <div class="rvt-grid__item-6-md-up rvt-m-bottom-lg">
@@ -61,25 +58,6 @@
         </div>
       </div>
 
-    </div>
-  </div>
-</div>
-
-<div class="rvt-m-bottom-xxl rvt-p-tb-xxl" id="{{ (index .Params.sections 2).slug }}">
-  <div class="rvt-container rvt-container--junior rvt-container--center">
-    <div class="rvt-grid rvt-vertical-center">
-      <div class="rvt-grid__item-6-md-up rvt-m-bottom-xl">
-        <img src="{{ (index .Params.sections 2).image }}" alt="Rivet github project board" style="box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);">
-      </div>
-      <div class="rvt-grid__item-6-md-up">
-        <div class="rvt-p-left-xxl-md-up">
-          <h2 class="rvt-ts-lg rvt-text-bold rvt-m-bottom-md">{{ (index .Params.sections 2).title }}</h2>
-          <p class="rvtd-lh-generous">{{ (index .Params.sections 2).teaser | safeHTML }}</p>
-          <a class="rvt-button rvt-button--secondary rvt-m-top-md" href="{{ (index .Params.sections 2).ctaLink }}">
-            {{ (index .Params.sections 2).ctaText }}
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 </div>
