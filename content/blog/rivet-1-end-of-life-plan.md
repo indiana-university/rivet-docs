@@ -9,7 +9,9 @@ author:
 ---
 As we begin work on [Rivet 2](https://v2.rivet.iu.edu) we want to make sure and communicate our current plans for how we will eventually retire the current major version of Rivet.
 
-**NOTE**: These are our current plans, but they may be subject to change. Generally speaking, we will do our best to allow _more_ time for migration and support of Rivet 1.x.x, not less.
+{{< alert variant="warning" title="Information out of date" >}}
+The information in this post is out of date. For more recent updates about the development of Rivet 2, read our [beta release timeline post]({{< ref "../blog/spring-2021.md" >}}) and visit [v2.rivet.iu.edu](https://v2.rivet.iu.edu).
+{{< /alert >}}
 
 ## Quick glossary of terms
 - We use the terms _Rivet 1.x.x_ and _Rivet 1_ to refer to the most current version of Rivet, and any version number beginning with `1`. From here on out they will be used interchangeably. 
