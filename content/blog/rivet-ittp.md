@@ -1,7 +1,7 @@
 ---
 title: Rivet and the IT Tactical Plan
 description: Experience Architect Kate Robinson talks about Rivet's role in the IT Tactical Plan.
-date: "2021-06-21"
+date: "2021-07-28"
 excludeFromIndex: true
 author:
   email: "scanmurr@iu.edu"
@@ -41,9 +41,9 @@ When people use Rivet, they are creating properties that align with the IU brand
 
 **Scott: What challenges with IU's web space identified by the ITTP must the Rivet team be mindful of in order to be successful with our next major version of the design system?**
 
-Kate: A couple of challenges come to mind. The first is the variety of "types" of digital properties that exist within the ecosystem. IU has a lot of websites with a lot of different purposes. How can Rivet accommodate the majority of those needs so that the majority of people will feel that it's a solution they can use?
+Kate: A couple of challenges come to mind. The first is the variety of "types" of digital properties that exist within the ecosystem. IU has a lot of websites with a lot of different purposes. How can Rivet accommodate the majority of those needs so that most people will feel that it's a solution they can use?
 
-The second challenge is related to resources and the cycle of web development. In the past five years a large number of websites started using the IU Framework. A lot of work went into redesigning, rebuilding, and migrating those websites. 
+The second challenge is related to resources and the cycle of web development. In the past five years a large number of websites started using the IU Web Framework. A lot of work went into redesigning, rebuilding, and migrating those websites. 
 
 It will be important to communicate to those units how Rivet and the Web Framework relate to each other and what work, if any, will be required on their part to take advantage of the new Rivet styles, components, and layouts on their Framework site.
 
