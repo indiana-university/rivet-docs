@@ -17,7 +17,7 @@ sections:
     members:
       -
         name: "Jenn Mansell"
-        title: "Interface Designer"
+        title: "User Interface Designer"
         avatar: "../img/team/jenn-thumbnail.jpeg"
       -
         name: "Levi McGranahan"
