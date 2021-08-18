@@ -1,5 +1,18 @@
 [
   {
+    "tag_name": "v1.8.2",
+    "published_at": "2021-08-18T00:00:00Z",
+    "body": "This release fixes an accessibility issue with the tabs component.<!-- end-overview -->",
+    "pulls": {
+      "items": [
+        {
+          "title": "Removed up and down arrow key listeners from tabs component",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/518"
+        }
+      ]
+    }
+  },
+  {
     "tag_name": "v1.8.1",
     "published_at": "2021-04-27T00:00:00Z",
     "body": "This release fixes bugs related to the header, modal, table, and loading indicator components.<!-- end-overview -->",
