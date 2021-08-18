@@ -2,6 +2,8 @@
 title: "Roadmap"
 description: "Our plans for Rivet in 2019–2020 and beyond"
 excludeFromStatus: true
+excludeFromNavigation: true
+draft: true
 weight: 1
 aliases:
   - /roadmap/
