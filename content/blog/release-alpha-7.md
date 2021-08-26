@@ -32,7 +32,7 @@ An empty state can also contain buttons that suggest next steps to the user, suc
 
 ![Empty state component with placeholder text and action buttons](/img/empty-state-ss.jpg)
 
-## Rivet 1.8.2 release
+## Other updates: Rivet 1.8.2
 Rivet version `1.8.2` is also now available.
 
 This small patch update fixes an issue with the [tabs component]({{< ref "../components/page-content/tabs.md" >}}) that prevented the up and down arrow keys from functioning in an accessible way when the tabs were in focus.
