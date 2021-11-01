@@ -20,7 +20,7 @@ const { buildIcons } = require('rivet-icons')
 
 ## 2. Include custom icons
 
-Even with the vast number of icons in the set, projects will still need to include custom icons. Perhaps the icon is so niche that it would have little utility for the broad community. Perhaps a feature needs to be released quicker than it takes to publish the icon to the Rivet set. Regardless of the reason, these custom icons can be included in the same build step that generates the Rivet icon symbol. This means that there can be a single integration process for any icons used in the project, regardless of if they're part of the official set or not. Now you can configure the `buildIcons()` function as needed to only include the icons you need.
+Even with the vast number of icons in the set, projects will still need to include custom icons. Perhaps the icon is so niche that it would have little utility for the broad community. Perhaps a feature needs to be released quicker than it takes to publish the icon to the Rivet set. Regardless of the reason, these custom icons can be included in the same build step that generates the Rivet icon symbol. This means that there can be a single integration process for any icons used in the project, regardless of if they're part of the official set or not. Now you can configure the `buildIcons()` function as needed to only include the icons used in your project.
 
 ```js
 const { buildIcons } = require('rivet-icons')
