@@ -58,7 +58,7 @@ Some controls require an icon to dynamically change its type. For example, press
 
 JavaScript (or the rendering library) could swap the icons in the DOM. This swap could happen by changing the `<rvt-icon name>` attribute or replacing the `innerHTML` of an element with the SVG source of the icon.
 
-```jsx
+```html
 <button aria-pressed="true" class="favorite" id="favorite-button">
   <rvt-icon class="favorite__icon" name="heart-solid"></rvt-icon>
   Favorite
