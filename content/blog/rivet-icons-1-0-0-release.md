@@ -1,7 +1,7 @@
 ---
 title: Rivet Icons 1.0.0 release
 description: The Rivet icon set reaches 1.0.0 with improvements to developer experience and performance
-date: "2021-11-01"
+date: "2021-11-09"
 excludeFromIndex: true
 author:
   email: "csbasham@iu.edu"
