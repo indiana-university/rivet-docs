@@ -2,6 +2,9 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^rivet.uits.iu.edu
 RewriteRule ^(.*)$ https://rivet.iu.edu/$1 [R=permanent,L]
 
+## Allow cross-origin requests for JSON endpoints
+Header set Access-Control-Allow-Origin "*"
+
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
     ExpiresActive On
