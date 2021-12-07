@@ -1,0 +1,18 @@
+[
+  
+  {{ range $i, $e := first 10 .Data.Pages }}
+    
+    {{ if $i }}, {{ end }}
+    
+    {
+      "title": "{{ .Title }}",
+      "teaser": "{{ .Description }}",
+      "permalink": "{{ replace .Permalink "http://localhost:3000" "https://rivet.iu.edu" }}",
+      "date": "{{ .Date.Format "January 2, 2006" }}",
+      "author": "{{ .Params.author.name }}",
+      "avatar": "https://www.gravatar.com/avatar/{{ .Params.author.email | md5 }}"
+    }
+
+  {{ end }}
+
+]
