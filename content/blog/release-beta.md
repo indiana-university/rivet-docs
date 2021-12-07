@@ -1,7 +1,7 @@
 ---
 title: Rivet 2.0.0-beta release
 description: Rivet 2 is now in the beta stage of development.
-date: "2021-12-03"
+date: "2021-12-07"
 tags:
     - "major release"
 excludeFromIndex: true
