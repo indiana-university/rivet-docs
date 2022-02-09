@@ -1,7 +1,7 @@
 ---
 title: Rivet 2.0.0-beta.2 release
 description: The latest Rivet 2 beta release introduces the link hub component, adds new utility classes, and refactors component JavaScript.
-date: "2022-02-03"
+date: "2022-02-09"
 tags:
     - "minor release"
 excludeFromIndex: true
@@ -26,11 +26,11 @@ Link hubs are often used on website home pages, section index pages, and landing
 
 ## New utility classes
 
-This release adds the `.rvt-width-3-xl` and `.rvt-width-4-xl` [width utility classes](https://v2.rivet.iu.edu/docs/utilities/width/).
+This release adds the `.rvt-width-3-xl` and `.rvt-width-4-xl` [width utility classes](https://v2.rivet.iu.edu/docs/utilities/width/?example=set-element-width).
 
 These new CSS classes bring the width utilities in line with the sizes offered by the spacing utilities.
 
-This release also adds the `.rvt-text-medium` [font weight utility class](https://v2.rivet.iu.edu/docs/utilities/typography/).
+This release also adds the `.rvt-text-medium` [font weight utility class](https://v2.rivet.iu.edu/docs/utilities/typography/?example=set-font-weight).
 
 ## Component JavaScript refactor
 
