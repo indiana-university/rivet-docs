@@ -1,7 +1,7 @@
 ---
 title: Rivet 2.0.0-beta.3 release
-description: The third Rivet 2 beta release adds new button variants and updates accordion, badge, and button styles.
-date: "2022-03-23"
+description: The third Rivet 2 beta release updates accordion, badge, and button styles.
+date: "2022-03-24"
 tags:
     - "minor release"
 excludeFromIndex: true
@@ -10,13 +10,7 @@ author:
   name: "Scott Anthony Murray"
 hideToc: true
 ---
-This week, we published the [third beta release of Rivet 2](https://github.com/indiana-university/rivet-source/releases/tag/v2.0.0-beta.3) to GitHub. This release adds new button variants and updates accordion, badge, and button styles.
-
-## New button variants
-
-This release introduces the new [link button variant](https://v2.rivet.iu.edu/docs/components/button/). This variant behaves like a native `button` element but has the appearance of a text link. This variant can be useful where space in an interface is limited.
-
-This release also introduces a button variant to the [call to action](https://v2.rivet.iu.edu/docs/components/call-to-action/) component. Originally, call to action buttons only appeared in the [hero](https://v2.rivet.iu.edu/docs/components/hero/) component—they can now be used anywhere.
+This week, we published the [third beta release of Rivet 2](https://github.com/indiana-university/rivet-source/releases/tag/v2.0.0-beta.3) to GitHub. This release updates accordion, badge, and button visual styles.
 
 ## Updated accordion styles
 
@@ -32,9 +26,11 @@ The secondary button styles in particular have been adjusted to help make them m
 
 To see all updates made in this release, visit the [Rivet 2 changelog](https://v2.rivet.iu.edu/docs/getting-started/changelog/).
 
-## Learn more about Rivet 2
+## Rivet 1 migration and end of life
 
-You can learn more about the next version of Indiana University's design system by visiting [v2.rivet.iu.edu](https://v2.rivet.iu.edu).
+We've published a summary of our [Rivet 1 migration and end-of-life plan](https://v2.rivet.iu.edu/docs/rivet-1-end-of-life/) to the Rivet 2 website.
+
+More details about migrating to Rivet 2 will be made available as we approach the 2.0.0 production release later this spring.
 
 ## Leaving feedback
 
