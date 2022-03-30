@@ -14,7 +14,7 @@ This week, we published the [third beta release of Rivet 2](https://github.com/i
 
 ## Updated accordion styles
 
-This release updates [accordion](https://v2.rivet.iu.edu/docs/components/badge/) component styles to be more consistent with the appearance of the recently released [link hub](https://v2.rivet.iu.edu/docs/components/link-hub/) component.
+This release updates [accordion](https://v2.rivet.iu.edu/docs/components/accordion/) component styles to be more consistent with the appearance of the recently released [link hub](https://v2.rivet.iu.edu/docs/components/link-hub/) component.
 
 ## Updated badge and button styles
 
