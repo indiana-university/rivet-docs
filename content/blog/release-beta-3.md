@@ -1,7 +1,7 @@
 ---
 title: Rivet 2.0.0-beta.3 release
 description: The third Rivet 2 beta release updates accordion, badge, and button styles.
-date: "2022-03-24"
+date: "2022-03-30"
 tags:
     - "minor release"
 excludeFromIndex: true
