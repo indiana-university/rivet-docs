@@ -36,5 +36,6 @@ kb-api.json
 static/css/style.css
 static/js/*.js
 static/site-index.json
+.hugo_build.lock
 
 /vendor/
