@@ -1,7 +1,7 @@
 ---
 title: Rivet 2.0.0-beta.4 release
 description: The fourth Rivet 2 beta release introduces design updates to several components and a new responsive table wrapper element.
-date: "2022-05-03"
+date: "2022-05-04"
 tags:
     - "minor release"
 excludeFromIndex: true
