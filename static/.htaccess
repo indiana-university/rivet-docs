@@ -103,3 +103,12 @@ Header set Access-Control-Allow-Origin "*"
   BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
   Header append Vary User-Agent
 </IfModule>
+
+# ----------------------------------------------------------------------
+# | Rivet 2 redirects                                                  |
+# ----------------------------------------------------------------------
+
+RedirectMatch 301 ^/about/ https://v2.rivet.iu.edu/about/
+RedirectMatch 301 ^/content-guide/ https://brand.iu.edu/
+RedirectMatch 301 ^/components/information/changelog/ https://v2.rivet.iu.edu/docs/getting-started/changelog/
+RedirectMatch 301 ^/getting-started/ https://v2.rivet.iu.edu/docs/getting-started/
