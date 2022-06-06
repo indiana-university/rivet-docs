@@ -4,6 +4,9 @@ asOf: 1.0.0
 description: "A 12 column responsive grid with support for automatic columns that makes it easy to lay out your application."
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the grid documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/grid/).
+{{< /alert >}}
 
 ## About the grid
 The Rivet grid is a mobile-first grid system built with [flexbox](https://www.w3.org/TR/css-flexbox-1/). It is based on five screen sizes and uses CSS classes to specify how many columns the grid should have at each of the breakpoints listed in the following documentation. 
