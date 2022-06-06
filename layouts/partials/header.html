@@ -1,4 +1,4 @@
-{{ $currentURL := .URL }}
+{{ $currentURL := .Permalink }}
 {{ if or (eq $currentURL "/how-to-use/") }}
   <header class="rvt-header rvt-header--light rvt-header--no-border" role="banner">
 {{ else }}
@@ -24,9 +24,9 @@
             </svg>
           </button>
           <div class="rvt-dropdown__menu" id="documentation-dropdown" aria-hidden="true">
-            <a href="{{ trim .Site.BaseURL "/" }}/components" {{ if eq $currentNav.URL "/components/" }}aria-current="page"{{ end }}>Components</a>
-            <a href="{{ trim .Site.BaseURL "/" }}/add-ons" {{ if eq $currentNav.URL "/add-ons/" }}aria-current="page"{{ end }}>Add-ons</a>
-            <a href="{{ trim .Site.BaseURL "/" }}/content-guide" {{ if eq $currentNav.URL "/content-guide/" }}aria-current="page"{{ end }}>Content guide</a>
+            <a href="{{ trim .Site.BaseURL "/" }}/components" {{ if eq $currentNav.Permalink "/components/" }}aria-current="page"{{ end }}>Components</a>
+            <a href="{{ trim .Site.BaseURL "/" }}/add-ons" {{ if eq $currentNav.Permalink "/add-ons/" }}aria-current="page"{{ end }}>Add-ons</a>
+            <a href="{{ trim .Site.BaseURL "/" }}/content-guide" {{ if eq $currentNav.Permalink "/content-guide/" }}aria-current="page"{{ end }}>Content guide</a>
           </div>
         </div>
       </li>
@@ -39,9 +39,9 @@
             </svg>
           </button>
           <div class="rvt-dropdown__menu" id="learn-dropdown" aria-hidden="true">
-            <a href="{{ trim .Site.BaseURL "/" }}/about/" {{ if eq $currentNav.URL "/about/" }}aria-current="page"{{ end }}>What is Rivet?</a>
-            <a href="{{ trim .Site.BaseURL "/" }}/blog/" {{ if eq $currentNav.URL "/blog/" }}aria-current="page"{{ end }}>Blog</a>
-            <a href="{{ trim .Site.BaseURL "/" }}/components/information/changelog/" {{ if eq $currentNav.URL "/components/information/changelog/" }}aria-current="page"{{ end }}>Changelog</a>
+            <a href="{{ trim .Site.BaseURL "/" }}/about/" {{ if eq $currentNav.Permalink "/about/" }}aria-current="page"{{ end }}>What is Rivet?</a>
+            <a href="{{ trim .Site.BaseURL "/" }}/blog/" {{ if eq $currentNav.Permalink "/blog/" }}aria-current="page"{{ end }}>Blog</a>
+            <a href="{{ trim .Site.BaseURL "/" }}/components/information/changelog/" {{ if eq $currentNav.Permalink "/components/information/changelog/" }}aria-current="page"{{ end }}>Changelog</a>
           </div>
         </div>
       </li>

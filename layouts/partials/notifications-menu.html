@@ -18,7 +18,7 @@
           {{ if .Params.externalURL }}
             <a href="{{ .Params.externalURL }}" target="_blank" rel="noopener">
           {{ else }}
-            <a href="{{ .URL }}">
+            <a href="{{ .Permalink }}">
           {{ end }}
             <article class="rvt-notification">
               <time class="rvt-notification__time">
