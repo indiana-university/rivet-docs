@@ -4,6 +4,10 @@ asOf: 1.2.0
 description: "The Rivet loading indicator helps notify users when their action is being processed"
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the loading indicator documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/loading-indicator/).
+{{< /alert >}}
+
 {{< alert variant="info" title="New in Rivet 1.2.0" >}}
 The loading indicator is new as of 1.2.0. If you need help moving to 1.2.0, see our [instructions for updating Rivet](/components/#updating-the-rivet-npm-package").
 {{< /alert >}}
