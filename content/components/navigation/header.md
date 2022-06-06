@@ -40,6 +40,10 @@ events:
         description: |
             Emitted when the Drawer is closed (using the `Drawer.close()` method, or the `data-drawer-toggle` attribute). The value of the modal `data-drawer-toggle` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the header documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/header/).
+{{< /alert >}}
+
 <div class="rvt-alert rvt-alert--message rvt-m-bottom-md">
     <h2 class="rvt-alert__title">Header changes in Rivet 0.5.0</h2>
     <p class="rvt-alert__message">We made some significant markup changes to the header in Rivet’s 0.5.0 release. The biggest change: The dropdown in the header now uses button elements to toggle dropdown. (Previously it used anchor elements.) We also replaced the dropdown toggle’s background images with inline SVGs. Finally, we updated its data attribute. <a href="../../../blog/0.5/#header-updates">Learn how to make the necessary changes</a>.</p>
