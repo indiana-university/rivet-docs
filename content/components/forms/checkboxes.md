@@ -4,6 +4,10 @@ asOf: 1.0.0
 description: "Checkboxes allow users to select one or more options from a list of choices."
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the checkbox documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/checkbox/).
+{{< /alert >}}
+
 ## Inline checkboxes example
 {{< example lang="html" >}}<form>
     <fieldset>
