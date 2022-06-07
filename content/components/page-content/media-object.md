@@ -4,6 +4,10 @@ asOf: 1.2.0
 description: "The media object is a simple layout component that can generally be used to display items in a list of content."
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. The media object component has been removed in Rivet 2. You can [recreate this component as it appears in Rivet 1 using Rivet 2 utilities](https://codepen.io/scottanthonymurray/pen/OJzBOxe).
+{{< /alert >}}
+
 {{< alert variant="info" title="New in Rivet 1.2.0" >}}
 The media object is new as of 1.2.0. If you need help moving to 1.2.0, see our [instructions for updating Rivet](/components/#updating-the-rivet-npm-package").
 {{< /alert >}}

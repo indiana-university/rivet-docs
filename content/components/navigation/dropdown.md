@@ -48,6 +48,10 @@ events:
         description: |
             Emitted when the Dropdown is closed (using the `Dropdown.close()` method, or the `data-dropdown-toggle` attribute). The value of the Dropdown toggle's `data-dropdown-toggle` attribute is also passed along via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the dropdown documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/dropdown/).
+{{< /alert >}}
+
 ## Dropdown example
 {{< example lang="html" >}}<div class="rvt-dropdown">
     <button

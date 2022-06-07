@@ -27,6 +27,10 @@ events:
         title: "alertDismissed"
         description: "A custom event that is emitted after an alert is dismissed"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the alert documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/alert/).
+{{< /alert >}}
+
 ## Page-level alerts
 {{< example lang="html" >}}<div class="rvt-alert rvt-alert--info rvt-m-bottom-md" role="alertdialog" aria-labelledby="information-alert-title">
     <h1 class="rvt-alert__title" id="information-alert-title">Scheduled System Maintenance</h1>

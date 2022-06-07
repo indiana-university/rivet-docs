@@ -4,6 +4,9 @@ asOf: 1.6.0
 description: "Show the user the current step in a multi-step process"
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the step indicator documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/step-indicator/).
+{{< /alert >}}
 
 {{< alert variant="info" title="New in Rivet 1.6.0" >}}
 The step indicator is new as of `1.6.0`. If you need help updating to `1.6.0`, see our [instructions for updating Rivet](/components/#updating-the-rivet-npm-package").

@@ -4,6 +4,10 @@ asOf: 1.0.0
 description: "Text inputs are the basic building blocks of forms. They allow users to enter various types of data into web-based forms."
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. View the [text input](https://v2.rivet.iu.edu/docs/components/text-input/) and [textarea](https://v2.rivet.iu.edu/docs/components/textarea/) documentation on the Rivet 2 website.
+{{< /alert >}}
+
 ## Text input example
 {{< example lang="html" >}}<label for="demo-1">Text Input</label>
 <input type="text" id="demo-1" aria-describedby="demo-1-note">

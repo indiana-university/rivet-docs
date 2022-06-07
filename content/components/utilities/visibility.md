@@ -4,6 +4,10 @@ asOf: 1.0.0
 description: "Use Rivet's visibility utilities to hide content in a responsive and accessible way."
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the visibility utilities documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/utilities/visibility/).
+{{< /alert >}}
+
 ## Screen reader only
 Use the `.rvt-sr-only` utility class to visually hide content, but still leave it accessible to screen readers.
 

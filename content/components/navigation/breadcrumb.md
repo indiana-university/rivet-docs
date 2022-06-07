@@ -4,6 +4,10 @@ asOf: 1.0.0
 description: A navigation component that indicates the user's current location in the nav hierarchy
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the breadcrumbs documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/breadcrumbs/).
+{{< /alert >}}
+
 ## Default breadcrumb
 {{< example lang="html" >}}<nav role="navigation" aria-label="Breadcrumbs">
     <ol class="rvt-breadcrumbs">

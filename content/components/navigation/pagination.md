@@ -5,6 +5,10 @@ description: "The pagination component is used to break up large sets of data ac
 requiresJs: false
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the pagination documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/pagination/).
+{{< /alert >}}
+
 ## Basic pagination example
 A basic pagination component uses an unordered list wrapped in a `nav` element to let users move between pages in a set of data. Use basic pagination like the following example when you will only ever have five or fewer pages of data to show.
 

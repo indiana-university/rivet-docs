@@ -4,6 +4,10 @@ asOf: 1.2.0
 description: "The box component can be used to help visually group related content"
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. The box component has been replaced by the [card component](https://v2.rivet.iu.edu/docs/components/card/) in Rivet 2. You can also [recreate this component as it appears in Rivet 1 using Rivet 2 utilities](https://codepen.io/scottanthonymurray/pen/ExorKdB?editors=1000).
+{{< /alert >}}
+
 {{< alert variant="info" title="New in Rivet 1.2.0" >}}
 The box is new as of 1.2.0. If you need help moving to 1.2.0, see our [instructions for updating Rivet](/components/#updating-the-rivet-npm-package").
 {{< /alert >}}

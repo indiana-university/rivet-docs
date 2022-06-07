@@ -27,6 +27,10 @@ events:
         description: |
             Emitted when a Tab is activated (using the `Tabs.activateTab()` method, or via a click on a button with the `data-tab` attribute). The value of the tab `data-tab` attribute is also passed along (if it exists) via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the tabs documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/tabs/).
+{{< /alert >}}
+
 ## Default tabs example
 {{< example lang="html" >}}<div class="rvt-tabs">
     <div class="rvt-tabs__tablist" role="tablist" aria-label="Rivet tabs">

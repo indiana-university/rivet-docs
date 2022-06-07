@@ -5,6 +5,9 @@ description: "Tables are used to display tabular data in rows and columns."
 requiresJs: false
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the table documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/table/).
+{{< /alert >}}
 
 ## Default table
 Default tables in Rivet come with styled headers and bottom borders on row to help with readability.

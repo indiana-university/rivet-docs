@@ -5,6 +5,9 @@ description: "Use the Rivet type scale to apply consistent typographic design to
 requiresJs: false
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the typography utilities documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/utilities/typography/).
+{{< /alert >}}
 
 ## About the type scale
 Typography is the core component of any interface. Rivet uses a defined [Major Second](http://type-scale.com/?size=16&scale=1.125&text=A%20Visual%20Type%20Scale&webfont=Libre+Baskerville&font-family=%27Libre%20Baskerville%27,%20serif&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=#333) type scale that has been rounded to the nearest whole pixel value. Using sizes from this scale will help create a hierarchy and consistency throughout your application.

@@ -5,6 +5,9 @@ description: "Use input groups to combine a text input with an action button or 
 requiresJs: false
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the input group documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/input-group/).
+{{< /alert >}}
 
 ## Input group examples
 {{< example lang="html" >}}<label for="search" class="rvt-sr-only">Search</label>

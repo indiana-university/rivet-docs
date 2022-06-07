@@ -5,6 +5,10 @@ requiresJs: false
 status: "Ready"
 asOf: 1.5.0
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the width utilities documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/utilities/width/).
+{{< /alert >}}
+
 {{< alert variant="info" title="New in Rivet 1.5.0" >}}
 The width utilities were introduced in Rivet 1.5.0. If you need help updating to 1.5.0, see our [instructions for updating Rivet](/components/#updating-the-rivet-npm-package").
 {{< /alert >}}

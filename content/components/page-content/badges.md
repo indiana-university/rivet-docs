@@ -4,6 +4,9 @@ asOf: 1.0.0
 description: Use badges to call out or label important information in your UI.
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the badge documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/badge/).
+{{< /alert >}}
 
 {{< alert variant="warning" title="Concise labels" >}}
 Because badges are intended to call attention to information, it is important to keep badge text concise. It should not span multiple lines.

@@ -22,6 +22,10 @@ events:
         description: |
             Emitted after a user clicks on the file input and attaches/uploads a file.
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the file input documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/file-input/).
+{{< /alert >}}
+
 ## Custom file input example
 The custom HTML file input (`<input type="file">`) uses CSS to hide the default file input button and styles the associated `<label>` element to look like a Rivet button.
 
