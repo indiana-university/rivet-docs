@@ -4,6 +4,10 @@ asOf: 1.0.0
 description: "Use Rivet's display utilities to make content containers behave like block or inline elements."
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the display utilities documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/utilities/display/).
+{{< /alert >}}
+
 ## Display property utilities
 The Rivet `rvt-display-*` utilities can be used to easily change the css `display:` property. The display utilities included in Rivet are:
 
