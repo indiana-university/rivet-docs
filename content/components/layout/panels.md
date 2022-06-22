@@ -5,6 +5,10 @@ description: "Use panels to help group content visually or call attention to par
 requiresJs: false
 status: "Deprecated"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. The panel component has been replaced by the [card component](https://v2.rivet.iu.edu/docs/components/card/) and [link hub component](https://v2.rivet.iu.edu/docs/components/link-hub/) in Rivet 2. You can also [recreate this component as it appears in Rivet 1 using Rivet 2 utilities](https://codepen.io/scottanthonymurray/pen/LYeMBPZ?editors=1000).
+{{< /alert >}}
+
 {{< alert variant="danger" title="The Panel component is deprecated" >}}
 The _panel_ component will be removed in the next major version of Rivet in favor of the new box component. See [the box component documentation]({{< ref "/components/layout/box" >}}) for more information.
 {{< /alert >}}

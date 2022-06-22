@@ -5,6 +5,9 @@ description: "The base footer provides consistent branding in a condensed space 
 requiresJs: false
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the footer documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/footer/).
+{{< /alert >}}
 
 ## About the footer
 

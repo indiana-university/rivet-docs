@@ -6,6 +6,9 @@ requiresJs: false
 status: "Ready"
 weight: 2
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the button documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/button/).
+{{< /alert >}}
 
 ## Segmented button examples
 {{< example lang="html" >}}<div class="rvt-button-segmented" role="group" aria-label="Primary controls">

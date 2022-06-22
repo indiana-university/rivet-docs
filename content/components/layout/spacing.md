@@ -5,6 +5,10 @@ description: "A robust set of responsive spacing utilities to help fine-tune you
 requiresJs: false
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the spacing utilities documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/utilities/spacing/).
+{{< /alert >}}
+
 ## About spacing
 To maintain consistent spacing between components and to help create a sense of vertical rhythm, we have created a spacing system based on `.5rem` (8px) unit. Margins and padding can be applied using a set of CSS utility classes to add or remove margin and padding from any element.
 

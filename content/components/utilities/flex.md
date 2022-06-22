@@ -5,6 +5,10 @@ description: "This set of responsive flexbox utilities can help you fine-tune la
 requiresJs: false
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the flex utilities documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/utilities/flex/).
+{{< /alert >}}
+
 ## Flex utilities example
 The Rivet flexbox utilities provide a robust set of CSS classes you can use to lay out items in a container. These utilities take advantage of [CSS flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) and are designed to be used when fine-tuning the layout of items at the individual component level. 
 

@@ -4,6 +4,10 @@ asOf: 1.0.0
 description: "The select element creates a dropdown that allows users to choose one item from a list."
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the select input documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/select-input/).
+{{< /alert >}}
+
 ## Select Example
 {{< example lang="html" >}}<label for="select-demo">Select input:</label>
 <select id="select-demo">

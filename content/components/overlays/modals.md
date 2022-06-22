@@ -46,6 +46,10 @@ events:
         description: |
             Emitted when the Modal is closed (using the `Modal.close()` method, or the `data-modal-trigger` attribute). The value of the modal `id` attribute is also passed along via the custom event’s detail property and is available to use in your scripts as `event.detail.name()`
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the modal documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/modal/).
+{{< /alert >}}
+
 ## Modal example
 {{< example lang="html" >}}<button type="button" class="rvt-button" data-modal-trigger="modal-example-basic">Open modal example</button>
 

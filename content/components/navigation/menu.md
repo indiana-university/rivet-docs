@@ -4,6 +4,9 @@ asOf: 1.6.0
 description: "Provide additional navigation outside of the main header"
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. The menu component has been replaced by the [subnav component](https://v2.rivet.iu.edu/docs/components/subnav/) in Rivet 2.
+{{< /alert >}}
 
 {{< alert variant="info" title="New in Rivet 1.6.0" >}}
 The menu component is new as of `1.6.0`. If you need help updating to `1.6.0`, see our [instructions for updating Rivet](/components/#updating-the-rivet-npm-package").

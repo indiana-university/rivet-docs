@@ -4,6 +4,9 @@ asOf: 1.0.0
 description: "Inline text links are used to navigate between documents (pages)."
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. The link component has been replaced by the [call to action](https://v2.rivet.iu.edu/docs/components/call-to-action/), [link hub](https://v2.rivet.iu.edu/docs/components/link-hub/), and [sidenav](https://v2.rivet.iu.edu/docs/components/sidenav/) components in Rivet 2.
+{{< /alert >}}
 
 ## Inline links
 {{< example lang="html" >}}<p class="rvt-m-top-remove"> <a href="#">This is a text link</a> on a light background.</p>

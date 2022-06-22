@@ -4,6 +4,9 @@ asOf: 1.0.0
 description: "Lists are used to group and organize collections of content."
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the list documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/components/list/).
+{{< /alert >}}
 
 ## Unordered list
 {{< example lang="html" >}}<ul>

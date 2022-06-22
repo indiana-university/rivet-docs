@@ -4,6 +4,10 @@ asOf: 1.0.0
 description: "The Rivet text utilities make it easy to style text."
 status: "Ready"
 ---
+{{< alert variant="warning" title="Migrating to Rivet 2" >}}
+This version of Rivet is deprecated. [View the typography utilities documentation on the Rivet 2 website](https://v2.rivet.iu.edu/docs/utilities/typography/).
+{{< /alert >}}
+
 ## Font weight
 You can use the rivet text utilities to change the `font-weight` property of text. The available utility classes are:
 
