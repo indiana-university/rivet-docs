@@ -93,7 +93,7 @@ This version of Rivet is deprecated. [View the tabs documentation on the Rivet 2
 
 ## Accessibility Requirements
 {{% a11y %}}
-The Rivet Tabs are built to follow the WAI-ARIA authoring standards. It is marked up with the appropriate ARIA attributes and uses the JavaScript included in `rivet.js` to implement the keyboard navigation and focus management required to meet the [ARIA Authoring Practices](http://w3c.github.io/aria-practices/) standards. If you need to create the Tabs functionality in another framework/library like React, Angular, etc., please ensure that it meets the following accessibility requirements.
+If you need to create the Tabs functionality in another framework/library like React, Angular, etc., please ensure that it meets the following accessibility requirements.
 
 ### Focus
 - Tabs should have a visible `:focus` state

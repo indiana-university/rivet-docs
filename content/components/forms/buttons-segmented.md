@@ -35,7 +35,7 @@ When using the segmented button, it’s important to apply the ARIA attribute `r
 
 In addition to the ARIA group role, use the `aria-label` attribute to provide more information to AT. This is especially important if you are using more than one set of segmented buttons on a page.
 
-As an alternative, you could also use an `aria-labelledby` attribute. Its value should correspond to the `id` of text that labels what the segmented button controls.[See this article on associating related controls with WAI-ARIA](https://www.w3.org/WAI/tutorials/forms/grouping/#associating-related-controls-with-wai-aria) for more information.
+As an alternative, you could also use an `aria-labelledby` attribute. Its value should correspond to the `id` of text that labels what the segmented button controls.
 
 ### Fitted modifier
 Adding the `.rvt-button-segmented--fitted` modifier to the segmented buttons' `<div>` container will make the buttons fill the entire width of their parent container.
