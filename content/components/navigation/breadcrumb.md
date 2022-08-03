@@ -44,4 +44,3 @@ The breadcrumb component is wrapped in a `nav` element so that it is announced t
 
 ## Resources
 - [NN Group on the benefits of breadcrumb navigation](https://www.nngroup.com/articles/breadcrumb-navigation-useful/)
-- [ARIA authoring practices example of accessible breadcrumb nav](https://www.w3.org/TR/wai-aria-practices/examples/breadcrumb/index.html)
