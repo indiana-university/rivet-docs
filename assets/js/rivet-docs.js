@@ -3,19 +3,20 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import { createCopyright, setIndeterminate, stickySupportForm, copyButtonConfirm, analyticsTracking } from './plugins';
+import {
+  createCopyright,
+  setIndeterminate,
+  stickySupportForm,
+  copyButtonConfirm
+} from './plugins'
 
 /**
  * One-off scripts for random stuff. See 'plugins.js'
  */
 
+createCopyright('[data-copyright-year]')
+copyButtonConfirm('[data-clipboard-target]', 1500)
+setIndeterminate('#checkbox-indeterminate')
+stickySupportForm()
 
-createCopyright("[data-copyright-year]");
-copyButtonConfirm("[data-clipboard-target]", 1500);
-setIndeterminate("#checkbox-indeterminate");
-stickySupportForm();
-
-// Custom analytics event tracking
-analyticsTracking();
-
-console.log("Enjoy using Rivet and let us know if you have any questions!");
+console.log('Enjoy using Rivet and let us know if you have any questions!')
