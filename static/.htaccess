@@ -1,4 +1,5 @@
 RewriteEngine on
+RewriteRule ^blog(.*)$ https://rivet.iu.edu/blog/ [L,R=301]
 RewriteCond %{HTTP_HOST} ^rivet.uits.iu.edu
 RewriteRule ^(.*)$ https://rivet.iu.edu/$1 [R=permanent,L]
 
