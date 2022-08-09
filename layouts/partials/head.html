@@ -2,15 +2,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="7mM2s6prtRElpRctVcVCik76ufhIXItEmA8NO7fVJw4" />
     {{ if .Page.Description }}
     <meta name="description" content="{{ .Page.Description }}">
     {{ else }}
     <meta name="description" content="{{ .Site.Params.description }}">
     {{ end }}
     <title>{{ .Page.Title | markdownify | plainify }} - {{ .Site.Title }} {{ .Site.Params.tagline }}</title>
-    {{/*  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">  */}}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/a11y-light.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ now.Unix }}">
+    <link rel="stylesheet" href='{{ "css/style.css" | relURL }}?{{ now.Unix }}'>
 </head>

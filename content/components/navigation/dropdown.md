@@ -92,7 +92,7 @@ Although similar to a native HTML `<select>` element, the dropdown component sho
 
 ## Accessibility requirements
 {{% a11y %}}
-The Rivet Dropdown is built to follow the WAI-ARIA authoring standards. It is marked up with the appropriate ARIA attributes and uses the JavaScript included in `rivet.js` to implement the keyboard navigation and focus management required to meet the [ARIA Authoring Practices](http://w3c.github.io/aria-practices/) standards. If you need to create the Dropdown functionality in another framework/library like React, Angular, etc., please ensure that it meets the following accessibility requirements.
+If you need to create the Dropdown functionality in another framework/library like React, Angular, etc., please ensure that it meets the following accessibility requirements.
 
 ### Focus
 - Dropdown button and Menu options should have a visible keyboard `:focus` state

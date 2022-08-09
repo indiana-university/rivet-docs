@@ -2,6 +2,33 @@
 title: "Migration guide"
 description: "Information on migrating from Rivet 1 to Rivet 2"
 ---
+## npm
+
+The `rivet-uits` npm package is deprecated.
+
+To use Rivet 2, uninstall `rivet-core` and install the `rivet-core` package instead:
+
+```
+npm uninstall rivet-uits
+```
+
+```
+npm install rivet-core@2.0.0
+```
+
+## Hosted assets
+
+Rivet 2 assets are not hosted on `assets.uits.iu.edu`.
+
+Instead, Rivet 2 assets are hosted on the [unpkg](https://unpkg.com/) CDN:
+
+```
+https://unpkg.com/rivet-core@2.0.0/css/rivet.min.css
+```
+```
+https://unpkg.com/rivet-core@2.0.0/js/rivet.min.js
+```
+
 ## Components
 
 The table below lists all Rivet 1 components and their Rivet 2 equivalents. For components that do not have a direct equivalent in Rivet 2, similar components are suggested.
