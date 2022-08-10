@@ -49,4 +49,4 @@ To use the Rivet 1 datepicker add-on in a Rivet 2 project, you'll need to add th
 
 All utilities available in Rivet 1 are available in Rivet 2.
 
-Rivet 2 also introduces several new utility classes. See the [Rivet 2 utilities documentation](https://v2.rivet.iu.edu/docs/utilities/) for more.
+Rivet 2 also introduces several new utility classes. See the [Rivet 2 utilities documentation](https://rivet.iu.edu/utilities/) for more.
