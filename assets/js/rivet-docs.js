@@ -6,7 +6,6 @@
 import {
   createCopyright,
   setIndeterminate,
-  stickySupportForm,
   copyButtonConfirm
 } from './plugins'
 
@@ -17,6 +16,5 @@ import {
 createCopyright('[data-copyright-year]')
 copyButtonConfirm('[data-clipboard-target]', 1500)
 setIndeterminate('#checkbox-indeterminate')
-stickySupportForm()
 
 console.log('Enjoy using Rivet and let us know if you have any questions!')

@@ -28,28 +28,6 @@ export function setIndeterminate(checkEl) {
   indCheck.indeterminate = true
 }
 
-export function stickySupportForm() {
-  // Stores a reference to the support form element
-  var supportToggle = document.querySelector('.rvtd-support')
-
-  // Get the current windown size
-  var windowSize = window.innerHeight
-
-  const checkPosition = () => {
-    var scrollPosition = window.pageYOffset
-
-    var bodyHeight = document.body.offsetHeight
-
-    if (Math.max(bodyHeight - (scrollPosition + windowSize), 0) < 40) {
-      supportToggle.classList.add('rvtd-support--bottom')
-    } else {
-      supportToggle.classList.remove('rvtd-support--bottom')
-    }
-  }
-
-  window.addEventListener('scroll', checkPosition, false)
-}
-
 export function copyButtonConfirm(selector, duration) {
   document.addEventListener('click', event => {
     let copyButton = event.target.closest(selector)
