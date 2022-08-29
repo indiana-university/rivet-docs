@@ -24,6 +24,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "3.0.0",
     "gulp-util": "3.0.8",
+    "node-sass": "^7.0.1",
     "path": "0.12.7",
     "rivet-uits": "^1.8.2",
     "rollup": "^1.11.3",

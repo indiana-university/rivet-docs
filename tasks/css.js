@@ -4,7 +4,7 @@
  */
 
 const { dest, src } = require("gulp");
-const scss = require("gulp-sass");
+const scss = require("gulp-sass")(require("node-sass"));
 
 module.exports = {
   sass() {
