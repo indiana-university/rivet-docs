@@ -1,5 +1,18 @@
 [
   {
+    "tag_name": "v1.8.3",
+    "published_at": "2022-09-07T00:00:00Z",
+    "body": "This release improves the accessibility of the dropdown and tabs components.<!-- end-overview -->",
+    "pulls": {
+      "items": [
+        {
+          "title": "Improved accessibility of tabs and dropdown components",
+          "html_url": "https://github.com/indiana-university/rivet-source/pull/627"
+        }
+      ]
+    }
+  },
+  {
     "tag_name": "v1.8.2",
     "published_at": "2021-08-18T00:00:00Z",
     "body": "This release fixes an accessibility issue with the tabs component.<!-- end-overview -->",
