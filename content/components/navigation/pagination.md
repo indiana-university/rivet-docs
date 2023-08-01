@@ -102,7 +102,7 @@ This examples shows the pagination component once a user has navigated to a set 
       <a href="#" aria-label="Page 6">6</a>
     </li>
     <li class="rvt-pagination__item">
-      <a href="#" aria-label="Page 6">7</a>
+      <a href="#" aria-label="Page 7">7</a>
     </li>
     <li class="rvt-pagination__item is-active" aria-current="true">
       <a href="#" aria-label="Page 8, current page">8</a>

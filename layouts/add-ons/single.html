@@ -73,7 +73,7 @@
               </p>
             </div>
           {{ end }}
-          
+
           {{ $apiBaseUrl := replace .Params.repo "https://github.com" "https://api.github.com/repos" }}
           {{ $readmeJson := getJSON $apiBaseUrl "/readme" }}
           {{ markdownify (base64Decode $readmeJson.content) }}

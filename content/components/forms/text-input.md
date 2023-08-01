@@ -134,7 +134,7 @@ Rivet does not make any assumptions about whether you’re using server- or clie
 </div>
 
 <label for="error-state" class="rvt-m-top-md">Description</label>
-<input type="text" id="error-state" class="rvt-validation-info" aria-describedby="description-message">
+<input type="text" id="error-state" class="rvt-validation-info" aria-describedby="description-message-2">
 <div class="rvt-inline-alert rvt-inline-alert--info">
     <span class="rvt-inline-alert__icon">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -145,7 +145,7 @@ Rivet does not make any assumptions about whether you’re using server- or clie
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" id="description-message">
+    <span class="rvt-inline-alert__message" id="description-message-2">
         The
         <strong>Description</strong> tells users more about this stuff.
     </span>
@@ -158,7 +158,7 @@ Rivet does not make any assumptions about whether you’re using server- or clie
 <textarea id="demo-3" class="rvt-m-bottom-md"></textarea>
 
 <label for="demo-4">Textarea (disabled)</label>
-<textarea id="demo-4" class="rvt-m-bottom-md" disabled></textarea>
+<textarea id="demo-4" class="rvt-m-bottom-md" disabled tabindex="0"></textarea>
 {{< /example >}}
 
 ### Textarea inline validation states
@@ -196,7 +196,7 @@ Rivet does not make any assumptions about whether you’re using server- or clie
 </div>
 
 <label for="textarea-error-state" class="rvt-m-top-md">Description</label>
-<textarea type="text" id="textarea-error-state" class="rvt-validation-danger" aria-describedby="description-message" aria-invalid="true"></textarea>
+<textarea type="text" id="textarea-error-state" class="rvt-validation-danger" aria-describedby="description-message-1" aria-invalid="true"></textarea>
 <div class="rvt-inline-alert rvt-inline-alert--danger">
     <span class="rvt-inline-alert__icon">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -207,7 +207,7 @@ Rivet does not make any assumptions about whether you’re using server- or clie
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" id="description-message">
+    <span class="rvt-inline-alert__message" id="description-message-1">
         Your <strong>Description</strong> has special characters that need to be replaced.
     </span>
 </div>

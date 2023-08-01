@@ -108,7 +108,7 @@ Inline alerts in Rivet should be used for form validation situations where [the 
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" id="radio-list-message">
+    <span class="rvt-inline-alert__message" id="radio-list-message-1">
         This field is required to continue.
     </span>
 </div>
@@ -122,7 +122,7 @@ Inline alerts in Rivet should be used for form validation situations where [the 
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" id="radio-list-message">
+    <span class="rvt-inline-alert__message" id="radio-list-message-2">
         This field is required to continue.
     </span>
 </div>
@@ -136,7 +136,7 @@ Inline alerts in Rivet should be used for form validation situations where [the 
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" id="radio-list-message">
+    <span class="rvt-inline-alert__message" id="radio-list-message-3">
         This field is required to continue.
     </span>
 </div>
@@ -150,7 +150,7 @@ Inline alerts in Rivet should be used for form validation situations where [the 
             </g>
         </svg>
     </span>
-    <span class="rvt-inline-alert__message" id="radio-list-message">
+    <span class="rvt-inline-alert__message" id="radio-list-message-4">
         This field is required to continue.
     </span>
 </div>
@@ -308,9 +308,9 @@ See the [content guide section](/content-guide) for additional information.
 The Rivet alert component comes with a couple of methods you can use to programmatically control alerts. The `init()` method is called by default when `rivet.js` is loaded. Alerts are dismissed when clicking a `button` element within the alert with the `data-alert-close` attribute. You can also dismiss an alert by calling the `Alert.dismiss()` method in your own script.
 
 {{< alert variant="warning" title="Alert dismissal class deprecation" >}}
-In previous versions of Rivet, alerts were dismissed by clicking a `button` element within the alert with the `.rvt-alert__dismiss` class. 
+In previous versions of Rivet, alerts were dismissed by clicking a `button` element within the alert with the `.rvt-alert__dismiss` class.
 
-In an effort to [decouple CSS classes from JavaScript behavior](https://github.com/indiana-university/rivet-source/issues/85), the `.rvt-alert__dismiss` class has been deprecated in favor of the `data-alert-close` attribute. The examples on this page have been updated to reflect this new approach. 
+In an effort to [decouple CSS classes from JavaScript behavior](https://github.com/indiana-university/rivet-source/issues/85), the `.rvt-alert__dismiss` class has been deprecated in favor of the `data-alert-close` attribute. The examples on this page have been updated to reflect this new approach.
 
 We recommend updating your application to use the latest version of the alert.
 {{< /alert >}}
