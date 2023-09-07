@@ -12,9 +12,6 @@ This version of Rivet is deprecated. View the [text input](https://v2.rivet.iu.e
 {{< example lang="html" >}}<label for="demo-1">Text Input</label>
 <input type="text" id="demo-1" aria-describedby="demo-1-note">
 <small id="demo-1-note" class="rvt-display-block rvt-m-bottom-md">This is a note about this field.</small>
-
-<label for="demo-2">Text Input (disabled)</label>
-<input type="text" id="demo-2" class="rvt-m-bottom-md" disabled>
 {{< /example >}}
 
 ## Inline validation states
@@ -156,9 +153,6 @@ Rivet does not make any assumptions about whether you’re using server- or clie
 
 {{< example lang="html" >}}<label for="demo-3">Textarea</label>
 <textarea id="demo-3" class="rvt-m-bottom-md"></textarea>
-
-<label for="demo-4">Textarea (disabled)</label>
-<textarea id="demo-4" class="rvt-m-bottom-md" disabled tabindex="0"></textarea>
 {{< /example >}}
 
 ### Textarea inline validation states
