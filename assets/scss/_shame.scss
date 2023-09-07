@@ -488,7 +488,7 @@ a.button--reverse-secondary {
   &__icon {
     color: $color-black--500;
   }
-  
+
   ul {
     list-style: none;
     margin: 0;
@@ -531,7 +531,9 @@ a.button--reverse-secondary {
   text-align: center;
   margin-top: -0.5rem;
   position: absolute;
-  color: white;
+  color: #333333;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -540,11 +542,10 @@ a.button--reverse-secondary {
 .z-example:nth-child(1) {
   top: 0;
   left: 0;
-  background-color: aqua;
+  color: red;
 }
 
 .z-example:nth-child(2) {
-  background-color: tomato;
   top: 3rem;
   left: 3rem;
 }
@@ -552,49 +553,41 @@ a.button--reverse-secondary {
 .z-example:nth-child(3) {
   top: 6rem;
   left: 6rem;
-  background-color: dodgerblue;
 }
 
 .z-example:nth-child(4) {
   top: 9rem;
   left: 9rem;
-  background-color: blueviolet;
 }
 
 .z-example:nth-child(5) {
   top: 12rem;
   left: 12rem;
-  background-color: coral;
 }
 
 .z-example:nth-child(6) {
   top: 15rem;
   left: 15rem;
-  background-color: yellowgreen;
 }
 
 .z-example:nth-child(7) {
   top: 18rem;
   left: 18rem;
-  background-color: palevioletred;
 }
 
 .z-example:nth-child(8) {
   top: 21rem;
   left: 21rem;
-  background-color: green;
 }
 
 .z-example:nth-child(9) {
   top: 24rem;
   left: 24rem;
-  background-color: crimson;
 }
 
 .z-example:nth-child(10) {
   top: 27rem;
   left: 27rem;
-  background-color: cornflowerblue;
 }
 
 /**
@@ -748,8 +741,8 @@ a.button--reverse-secondary {
 @media screen and (min-width: 1024px) {
   // Pushes the event content container up into the cover image on wide screens.
   .rvtd-event-container {
-    background-color: #ffffff; 
-    margin-top: -9rem; 
+    background-color: #ffffff;
+    margin-top: -9rem;
     border-radius: .25rem
   }
 }
@@ -762,7 +755,7 @@ a.button--reverse-secondary {
 }
 
 .rvtd-event-banner-container {
-  position:relative; 
+  position:relative;
   z-index:-1;
 }
 
@@ -945,10 +938,10 @@ a.button--reverse-secondary {
   justify-content: center;
   padding: 0;
   position: absolute;
-  right: $lg - $xxs; 
+  right: $lg - $xxs;
   bottom: -$md * .8;
   border-radius: 999rem;
-  
+
   &[aria-expanded="true"] svg {
     transform: rotate(180deg);
   }
@@ -984,14 +977,14 @@ a.button--reverse-secondary {
 /**
   * Timeline
   */
-  
+
   @include mq(bp(md)) {
     .rvtd-example__timeline,
     .rvtd-example__timeline .rvt-container {
       padding-left: 4.5rem !important;
     }
   }
-  
+
 /**
  * Roadmap overrides
  */
