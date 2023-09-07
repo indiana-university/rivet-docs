@@ -3,6 +3,7 @@
 {{ $currentParentSection := .Section }}
 <nav class="rvtd-nav" role="navigation" aria-label="section" id="main-nav">
     <span class="rvt-m-bottom-md rvt-display-block">Version <span class="rvt-text-bold">{{ .Site.Params.rivetVersion }}</span></span>
+    {{ if ne $currentPage.Params.title "Migration guide" }}
     <ul class="rvtd-toc">
         {{ range where .Site.Sections "Section" $currentParentSection }}
             {{ range .Sections }}
@@ -29,4 +30,5 @@
             {{ end }}
         {{ end }}
     </ul>
+    {{ end }}
 </nav>
