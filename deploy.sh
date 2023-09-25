@@ -31,7 +31,7 @@ if [[ "$production" = true ]]; then
     # Deployment confirmed, deploy to Sitehost
 
     echo "[rsync] Deploying to Sitehost..."
-    rsync -av --delete ./docs/ "$SITEHOST_USERNAME@ssh.sitehost.iu.edu:/groups/$SITEHOST_USERNAME/web/"
+    rsync -av --delete ./public/ "$SITEHOST_USERNAME@ssh.sitehost.iu.edu:/groups/$SITEHOST_USERNAME/web/"
   
   else
 
@@ -46,6 +46,6 @@ else
   # Deploy to Sitehost-Test
 
   echo "[rsync] Deploying to Sitehost-Test..."
-  rsync -av --delete ./docs/ "$SITEHOST_USERNAME@ssh.sitehost-test.iu.edu:/groups/$SITEHOST_USERNAME/web/"
+  rsync -av --delete ./public/ "$SITEHOST_USERNAME@ssh.sitehost-test.iu.edu:/groups/$SITEHOST_USERNAME/web/"
 
 fi
