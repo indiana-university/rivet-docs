@@ -10,7 +10,9 @@
     "url": "https://github.com/indiana-university/rivet-docs"
   },
   "scripts": {
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "publish:test": "gulp build && sh deploy.sh",
+    "publish:live": "gulp build && sh deploy.sh -P"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
