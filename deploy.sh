@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Rebuild site
+
+rm -rf ./public
+npx gulp build
+
 # Read Sitehost username from .env
 
 set -o allexport
@@ -19,6 +24,12 @@ while getopts ':P' opt; do
 done
 
 if [[ "$production" = true ]]; then
+
+  # Run Hugo in production mode
+
+  export HUGO_ENV="production"
+
+  hugo --baseURL $HUGO_BASE_URL_LIVE
   
   # Require confirmation for production deployment
 
@@ -42,6 +53,10 @@ if [[ "$production" = true ]]; then
   fi
 
 else
+
+  # Run Hugo in test (development) mode
+
+  hugo --baseURL $HUGO_BASE_URL_TEST
 
   # Deploy to Sitehost-Test
 

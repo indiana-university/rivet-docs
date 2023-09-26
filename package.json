@@ -11,8 +11,8 @@
   },
   "scripts": {
     "start": "gulp serve",
-    "publish:test": "gulp build && sh deploy.sh",
-    "publish:live": "gulp build && sh deploy.sh -P"
+    "publish:test": "sh deploy.sh",
+    "publish:live": "sh deploy.sh -P"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
