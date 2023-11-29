@@ -13,7 +13,7 @@ npm uninstall rivet-uits
 ```
 
 ```
-npm install rivet-core@2.3.1
+npm install rivet-core@latest
 ```
 
 ## Hosted assets
@@ -23,10 +23,10 @@ Rivet 2 assets are not hosted on `assets.uits.iu.edu`.
 Instead, Rivet 2 assets are hosted on the [unpkg](https://unpkg.com/) CDN:
 
 ```
-https://unpkg.com/rivet-core@2.3.1/css/rivet.min.css
+https://unpkg.com/rivet-core@latest/css/rivet.min.css
 ```
 ```
-https://unpkg.com/rivet-core@2.3.1/js/rivet.min.js
+https://unpkg.com/rivet-core@latest/js/rivet.min.js
 ```
 
 ## Components
