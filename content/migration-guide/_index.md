@@ -6,7 +6,7 @@ description: "Information on migrating from Rivet 1 to Rivet 2"
 
 The `rivet-uits` npm package is deprecated.
 
-To use Rivet 2, uninstall `rivet-core` and install the `rivet-core` package instead:
+To use Rivet 2, uninstall `rivet-uits` and install the `rivet-core` package instead:
 
 ```
 npm uninstall rivet-uits
