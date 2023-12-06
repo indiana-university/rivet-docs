@@ -74,9 +74,7 @@
             </div>
           {{ end }}
 
-          {{ $apiBaseUrl := replace .Params.repo "https://github.com" "https://api.github.com/repos" }}
-          {{ $readmeJson := getJSON $apiBaseUrl "/readme" }}
-          {{ markdownify (base64Decode $readmeJson.content) }}
+            <p>Please see the <a href="{{ .Params.repo }}">documentation</a> for this Add-on on in the repository github.com.</p>
 
         </div>
       </div>

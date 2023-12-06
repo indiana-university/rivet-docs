@@ -65,7 +65,7 @@
     }
 
     &__date {
-        color: $bright-blue;
+        color: #333333;
         font-weight: bold;
         text-transform: uppercase;
         font-size: $ts-12;
@@ -175,10 +175,6 @@
         box-shadow: 0 0 0 0.5rem $color-white;
         background-color: $color-midnight;
         color: $color-white;
-    }
-
-    &--light &__date {
-        color: $color-black--600;
     }
 
     &--light .rvt-grid:first-child &__version:before {
