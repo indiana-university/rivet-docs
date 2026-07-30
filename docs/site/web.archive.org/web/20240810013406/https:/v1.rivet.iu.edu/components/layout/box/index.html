@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=oZ57VlYl" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://v1.rivet.iu.edu/components/layout/box/","20240917103200","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1726569120");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    
+    <meta name="description" content="The box component can be used to help visually group related content">
+    
+    <title>Box - Rivet Design System</title>
+    <link rel="stylesheet" href="https://web.archive.org/web/20240917103200cs_/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/a11y-light.min.css">
+    <link rel="stylesheet" href="https://web.archive.org/web/20240917103200cs_/https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../../../../20240917103200cs_/https:/v1.rivet.iu.edu/css/style.css%3F1705419739.css">
+</head>
+    <body>
+        <div id="wrapper" class="sticky-footer__wrapper">
+            
+                
+
+  <header class="rvt-header rvt-header--light" role="banner">
+
+<a class="rvt-skip-link" href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#main-content">Skip to content</a>
+<div class="rvt-header__trident">
+  <svg class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 41 48" aria-hidden="true">
+    <title>Indiana University Logo</title>
+    <rect width="41" height="48" fill="#900"/>
+    <polygon points="24.59 12.64 24.59 14.98 26.34 14.98 26.34 27.78 22.84 27.78 22.84 10.9 24.59 10.9 24.59 8.57 16.41 8.57 16.41 10.9 18.16 10.9 18.16 27.78 14.66 27.78 14.66 14.98 16.41 14.98 16.41 12.64 8.22 12.64 8.22 14.98 9.97 14.98 9.97 30.03 12.77 33.02 18.16 33.02 18.16 36.52 16.41 36.52 16.41 39.43 24.59 39.43 24.59 36.52 22.84 36.52 22.84 33.02 28 33.02 31.01 30.03 31.01 14.98 32.78 14.98 32.78 12.64 24.59 12.64" fill="#fff"/>
+</svg>
+
+</div>
+<span class="rvt-header__title">
+  <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/index.html"><strong>Rivet</strong> <span class="rvtd-subtitle">Design System</span></a>
+</span>
+<div class="rvt-header__controls">
+  <nav class="rvt-header__main-nav" role="navigation" aria-label="main">
+    <ul>
+      
+      <li>
+        <div class="rvt-dropdown">
+          <button type="button" class="rvt-dropdown__toggle" data-dropdown-toggle="documentation-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="rvt-dropdown__toggle-text">Documentation</span>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+              <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+            </svg>
+          </button>
+          <div class="rvt-dropdown__menu" id="documentation-dropdown" aria-hidden="true">
+            <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components.html">Components</a>
+            <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/add-ons.html">Add-ons</a>
+            <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/content-guide.html">Content guide</a>
+            <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/migration-guide.html">Migration guide</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown">
+          <button type="button" class="dropdown__toggle" data-dropdown-toggle="learn-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="rvt-dropdown__toggle-text">About Rivet</span>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+              <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+            </svg>
+          </button>
+          <div class="rvt-dropdown__menu" id="learn-dropdown" aria-hidden="true">
+            <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/about/index.html">What is Rivet?</a>
+            <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/blog/index.html">Blog</a>
+            <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/information/changelog/index.html">Changelog</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="rvt-supplemental-menu">
+    <div class="rvt-dropdown rvt-notifications">
+  <button role="button" class="rvt-notifications__toggle" ref="notificationButton" data-dropdown-toggle="notification-list" aria-expanded="false">
+    <span class="rvt-sr-only">Show notifications</span>
+    <span aria-hidden="true">
+      <svg class="rvt-open-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+        <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
+      </svg>
+      <svg class="rvt-closed-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+        <path fill="currentColor" d="M14.57,12.06,13,9.7V6A5,5,0,0,0,3,6V9.7L1.43,12.06a1.25,1.25,0,0,0,1,1.94H6a2,2,0,0,0,4,0h3.53a1.25,1.25,0,0,0,1-1.94ZM8,12H3.87L5,10.3V6a3,3,0,0,1,6,0v4.3L12.13,12Z"/>
+      </svg>
+    </span>
+  </button>
+  <div id="notification-list" class="rvt-notifications__menu" ref="menuElement" aria-hidden="true">
+    <ol class="rvt-notifications__menu-list">
+      
+        
+        <li>
+          
+            <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/blog/release-beta-4/index.html">
+          
+            <article class="rvt-notification">
+              <time class="rvt-notification__time">
+                May 4, 2022
+              </time>
+              <h1 class="rvt-notification__title">Rivet 2.0.0-beta.4 release</h1>
+              <p class="rvt-notification__teaser">The fourth Rivet 2 beta release introduces design updates to several components and a new responsive table wrapper element.</p>
+              
+            </article>
+          </a>
+        </li>
+        
+      
+        
+      
+        
+        <li>
+          
+            <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/blog/release-beta-3/index.html">
+          
+            <article class="rvt-notification">
+              <time class="rvt-notification__time">
+                March 30, 2022
+              </time>
+              <h1 class="rvt-notification__title">Rivet 2.0.0-beta.3 release</h1>
+              <p class="rvt-notification__teaser">The third Rivet 2 beta release updates accordion, badge, and button styles.</p>
+              
+            </article>
+          </a>
+        </li>
+        
+      
+        
+        <li>
+          
+            <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/blog/release-beta-2/index.html">
+          
+            <article class="rvt-notification">
+              <time class="rvt-notification__time">
+                February 9, 2022
+              </time>
+              <h1 class="rvt-notification__title">Rivet 2.0.0-beta.2 release</h1>
+              <p class="rvt-notification__teaser">The latest Rivet 2 beta release introduces the link hub component, adds new utility classes, and refactors component JavaScript.</p>
+              
+            </article>
+          </a>
+        </li>
+        
+      
+    </ol>
+    <div class="rvt-notifications__actions">
+      <a class="rvt-button rvt-button--secondary rvt-display-flex rvt-text-center rvt-m-bottom-xs" href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/blog/index.html">More posts</a>
+      <a class="rvt-button rvt-notifications__actions-mail" href="https://web.archive.org/web/20240917103200/https://list.iu.edu/sympa/subscribe/rivet-l" target="_blank" rel="noopener">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+          <path fill="currentColor" d="M13.5,3H2.5A1.5,1.5,0,0,0,1,4.5v8A1.5,1.5,0,0,0,2.5,14h11A1.5,1.5,0,0,0,15,12.5v-8A1.5,1.5,0,0,0,13.5,3ZM11.41,5,8,7.77,4.59,5ZM3,12V6.29L7.11,9.62l.12.08a1.5,1.5,0,0,0,1.54,0L13,6.29V12Z"/>
+        </svg>
+        <span>Get updates in your inbox</span>
+      </a>
+    </div>
+  </div>
+</div>
+    <div class="rvt-hide-lg-down">
+      <div class="rvt-dropdown">
+        <button type="button" class="rvt-button" data-dropdown-toggle="use-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <span>Use Rivet</span>
+          <svg aria-hidden="true" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+            <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+          </svg>
+        </button>
+        <div class="rvt-dropdown__menu rvt-dropdown__menu--right" id="use-dropdown" aria-hidden="true">
+          <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/getting-started/npm/index.html">Install via NPM</a>
+          <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/index.html#download-rivet">Download CSS &amp; JS</a>
+          <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/index.html#hosted-css-and-javascript">Hosted assets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<button type="button" class="rvt-drawer-button" role="button" aria-label="Toggle navigation options" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="docs-drawer">
+    <span class="sr-only">Toggle menu</span>
+    <svg aria-hidden="true" class="rvt-drawer-button-open" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">
+        <g fill="currentColor">
+            <path d="M15,3H1A1,1,0,0,1,1,1H15a1,1,0,0,1,0,2Z"/>
+            <path d="M15,9H1A1,1,0,0,1,1,7H15a1,1,0,0,1,0,2Z"/>
+            <path d="M15,15H1a1,1,0,0,1,0-2H15a1,1,0,0,1,0,2Z"/>
+        </g>
+    </svg>
+    <svg aria-hidden="true" class="rvt-drawer-button-close" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">
+        <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
+    </svg>
+</button>
+
+</div>
+
+
+<div class="rvt-drawer" aria-hidden="true" id="docs-drawer">
+
+    
+    <nav class="rvt-drawer__nav" role="navigation" aria-label="resources">
+        <div class="ts-14 m-top-sm m-bottom-sm text-uppercase">Navigation</div>
+        <ul class="hide-on-desktop">
+            <li class="has-children">
+                <button type="button" role="button" data-subnav-toggle="documentation-subnav" aria-haspopup="true" aria-expanded="false">Documentation</button>
+                <ul id="documentation-subnav" aria-hidden="true">
+                    <li><a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components.html">Components</a></li>
+                    <li><a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/add-ons.html">Add-ons</a></li>
+                    <li><a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/content-guide.html">Content guide</a></li>
+                </ul>
+            </li>
+            <li class="has-children">
+                <button type="button" role="button" data-subnav-toggle="about-subnav" aria-haspopup="true" aria-expanded="false">About Rivet</button>
+                <ul id="about-subnav" aria-hidden="true">
+                    <li><a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/about.html">What is Rivet?</a></li>
+                    <li><a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/blog.html">Blog</a></li>
+                    <li><a href="https://web.archive.org/web/20240917103200/https://v1.rivet.iu.edu/components/information/roadmap/">Roadmap</a></li>
+                    <li><a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/information/changelog/index.html">Changelog</a></li>
+                </ul>
+            </li>
+            <li><a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/index.html">Use Rivet</a></li>
+        </ul>
+        <div class="ts-14 m-top-sm m-bottom-sm text-uppercase">Resources</div>
+        <ul>
+            
+                <li><a target="_blank" href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html">User Experience Office</a></li>
+            
+                <li><a target="_blank" href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html">Accessibility Evaluations</a></li>
+            
+                <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html">Rivet Software Design System</a></li>
+            
+                <li><a target="_blank" href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html">IU Framework for WCMS</a></li>
+            
+        </ul>
+        <button type="button" class="rvt-drawer__bottom-close">Close nav</button>
+    </nav>
+</div>
+
+</header>
+
+            
+            <div class="rvt-p-all-sm rvt-text-center" style="background-color: #ffece5; color: #82270d">
+  <strong>Rivet 1 has been retired and will no longer receive updates.</strong> The v1 source code has been <a href="https://web.archive.org/web/20240917103200/https://github.com/indiana-university/rivet-v1-archive">archived here</a>. Please migrate to <a href="https://web.archive.org/web/20240917103200/https://rivet.iu.edu/">Rivet 2</a> as soon as possible.
+</div>
+            <main id="main-content">
+                
+    <div class="rvtd-wrap">
+        <div class="rvtd-sidebar">
+    
+
+
+<nav class="rvtd-nav" role="navigation" aria-label="section" id="main-nav">
+    <span class="rvt-m-bottom-md rvt-display-block">Version <span class="rvt-text-bold">1.8.3</span></span>
+    
+    <ul class="rvtd-toc">
+        
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Information</span>
+                <ul>
+                    
+                    
+                    <li class="">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/information/changelog/index.html">
+                            Changelog
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/information/component-status/index.html">
+                            Component status
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/information/contributing/index.html">
+                            Contributing
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Getting started</span>
+                <ul>
+                    
+                    
+                    <li class="">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/getting-started/npm/index.html">
+                            Install with NPM
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/getting-started/sass/index.html">
+                            Rivet Sass
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Layout</span>
+                <ul>
+                    
+                    
+                    <li class="ready is-current">
+                        <a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html">
+                            Box
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/layout/grid/index.html">
+                            Grid
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="deprecated">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/layout/panels/index.html">
+                            Panels
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/layout/spacing/index.html">
+                            Spacing
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/layout/typography/index.html">
+                            Typography
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Page content</span>
+                <ul>
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/page-content/badges/index.html">
+                            Badges
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/page-content/links/index.html">
+                            Links
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/page-content/lists/index.html">
+                            Lists
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/page-content/media-object/index.html">
+                            Media Object
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/page-content/step-indicator/index.html">
+                            Step Indicator
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/page-content/tables/index.html">
+                            Tables
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a aria-describedby="tabs-js-req" href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/page-content/tabs/index.html">
+                            Tabs
+                            
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="tabs-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/page-content/timeline/index.html">
+                            Timeline
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Forms</span>
+                <ul>
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/forms/buttons/index.html">
+                            Buttons
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/forms/buttons-segmented/index.html">
+                            Segmented Buttons
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/forms/checkboxes/index.html">
+                            Checkboxes
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a aria-describedby="file-input-js-req" href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/forms/file-input/index.html">
+                            File input
+                            
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="file-input-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/forms/input-group/index.html">
+                            Input group
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/forms/radio-buttons/index.html">
+                            Radio buttons
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/forms/select-input/index.html">
+                            Select element
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/forms/text-input/index.html">
+                            Text inputs
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Navigation</span>
+                <ul>
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/navigation/breadcrumb/index.html">
+                            Breadcrumb
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a aria-describedby="dropdown-js-req" href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/navigation/dropdown/index.html">
+                            Dropdown
+                            
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="dropdown-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/navigation/footer/index.html">
+                            Footer
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a aria-describedby="header-js-req" href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/navigation/header/index.html">
+                            Header
+                            
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="header-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/navigation/menu/index.html">
+                            Menu
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/navigation/pagination/index.html">
+                            Pagination
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Overlays &amp; Feedback</span>
+                <ul>
+                    
+                    
+                    <li class="ready">
+                        <a aria-describedby="alerts-js-req" href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html">
+                            Alerts
+                            
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="alerts-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/overlays/loading-indicator/index.html">
+                            Loading indicator
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a aria-describedby="modals-js-req" href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/overlays/modals/index.html">
+                            Modals
+                            
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="modals-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Utilities</span>
+                <ul>
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/utilities/border/index.html">
+                            Border
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/utilities/display/index.html">
+                            Display
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/utilities/flex/index.html">
+                            Flex
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/utilities/text/index.html">
+                            Text
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/utilities/visibility/index.html">
+                            Visibility
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/utilities/width/index.html">
+                            Width
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/utilities/z-index/index.html">
+                            z-index
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+        
+    </ul>
+    
+</nav>
+
+</div>
+        <div class="rvtd-tube">
+            <div class="rvtd-tube__inner rvtd-typeset">
+                <div class="rvt-flex rvt-items-center rvt-justify-end-md-up rvt-m-bottom-sm">
+                    
+                        <span class="rvt-badge rvt-badge--ready">Ready</span>
+                    
+                    
+                        <span class="rvt-ts-14 rvt-m-left-xs">
+                            Added in <span class="rvt-text-bold">1.2.0</span>
+                        </span>
+                    
+                </div>
+                <h1>Box</h1>
+                <p class="rvtd-lead">The box component can be used to help visually group related content</p>
+                <div class="rvtd-alert-shortcode rvt-alert rvt-alert--warning rvt-m-tb-md" aria-labelledby="migrating-to-rivet-2">
+    <div class="rvt-alert__title" id="migrating-to-rivet-2">Migrating to Rivet 2</div>
+    <p class="rvt-alert__message">This version of Rivet is deprecated. The box component has been replaced by the <a href="https://web.archive.org/web/20240917103200/https://v2.rivet.iu.edu/docs/components/card/">card component</a> in Rivet 2. You can also <a href="https://web.archive.org/web/20240917103200/https://codepen.io/scottanthonymurray/pen/ExorKdB?editors=1000">recreate this component as it appears in Rivet 1 using Rivet 2 utilities</a>.</p>
+</div>
+<div class="rvtd-alert-shortcode rvt-alert rvt-alert--info rvt-m-tb-md" aria-labelledby="new-in-rivet-1.2.0">
+    <div class="rvt-alert__title" id="new-in-rivet-1.2.0">New in Rivet 1.2.0</div>
+    <p class="rvt-alert__message">The box is new as of 1.2.0. If you need help moving to 1.2.0, see our <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/index.html#updating-the-rivet-npm-package%22">instructions for updating Rivet</a>.</p>
+</div>
+<h2 id="default-box">Default box</h2>
+<p>The most basic version of the box component includes a subtle rounded border and a white background. Padding and margins should be applied with <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/layout/spacing/index.html">Rivet&rsquo;s spacing utility classes</a>.</p>
+<p>Additional variants of the box component can be created using the elements described in the following sections.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo rvtd-example__demo--spacious">
+        <div class="rvt-box">
+  This is basic box
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_f05d89704f1f58c83e9daa02a5e1792b" class="language-html">&lt;div class=&#34;rvt-box&#34;&gt;
+  This is basic box
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_f05d89704f1f58c83e9daa02a5e1792b" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<h2 id="box-body">Box body</h2>
+<p>Nesting an element with the <code>.rvt-box__body</code> class inside the box will add equal amounts of padding to each side of the box.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo rvtd-example__demo--spacious">
+        <div class="rvt-box">
+  <div class="rvt-box__body">
+    This is a basic box
+  </div>
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_8640ada225059b54a1306b9741a8c630" class="language-html">&lt;div class=&#34;rvt-box&#34;&gt;
+  &lt;div class=&#34;rvt-box__body&#34;&gt;
+    This is a basic box
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_8640ada225059b54a1306b9741a8c630" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<h2 id="box-header-and-footer">Box header and footer</h2>
+<p>Optional header and footer elements can be nested inside the box to create more complex layouts.</p>
+<p>In this example, we are using the <code>.rvt-box__header</code>, <code>.rvt-box__body</code>, and <code>.rvt-box__footer</code> elements to visually group content.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo rvtd-example__demo--spacious">
+        <div class="rvt-box">
+  <div class="rvt-box__header">
+    Header text
+  </div>
+  <div class="rvt-box__body">
+    <p class="rvt-m-all-remove">This is a box with a header, a footer, and some content with <a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#">a
+        link</a>.</p>
+  </div>
+  <div class="rvt-box__footer rvt-text-right">
+    Footer text
+  </div>
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_97b5d807bd41e1f350a22c7f327472a8" class="language-html">&lt;div class=&#34;rvt-box&#34;&gt;
+  &lt;div class=&#34;rvt-box__header&#34;&gt;
+    Header text
+  &lt;/div&gt;
+  &lt;div class=&#34;rvt-box__body&#34;&gt;
+    &lt;p class=&#34;rvt-m-all-remove&#34;&gt;This is a box with a header, a footer, and some content with &lt;a href=&#34;#&#34;&gt;a
+        link&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;rvt-box__footer rvt-text-right&#34;&gt;
+    Footer text
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_97b5d807bd41e1f350a22c7f327472a8" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<h2 id="light-box-variant">Light box variant</h2>
+<p>You can remove the subtle gray header and footer background by using the <code>.rvt-box--light</code> variant. This can be helpful in reducing visual clutter when using multiple box components on the same page.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo rvtd-example__demo--spacious">
+        <div class="rvt-box rvt-box--light">
+  <div class="rvt-box__header">
+    Header text
+  </div>
+  <div class="rvt-box__body">
+    <p class="rvt-m-all-remove">This is a box with a header, a footer, and some content with <a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#">a
+        link</a>.</p>
+  </div>
+  <div class="rvt-box__footer rvt-text-right">
+    Footer text
+  </div>
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_abe02739a4ddea4787b8dad16c6346f9" class="language-html">&lt;div class=&#34;rvt-box rvt-box--light&#34;&gt;
+  &lt;div class=&#34;rvt-box__header&#34;&gt;
+    Header text
+  &lt;/div&gt;
+  &lt;div class=&#34;rvt-box__body&#34;&gt;
+    &lt;p class=&#34;rvt-m-all-remove&#34;&gt;This is a box with a header, a footer, and some content with &lt;a href=&#34;#&#34;&gt;a
+        link&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;rvt-box__footer rvt-text-right&#34;&gt;
+    Footer text
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_abe02739a4ddea4787b8dad16c6346f9" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<h2 id="box-rows">Box rows</h2>
+<p>The <code>.rvt-box__row</code> class adds a small amount of padding and a subtle top border. This works particularly well for displaying lists of content within a Box.</p>
+<h3 id="box-rows-with-a-list">Box rows with a list</h3>
+<p>In the following example, we&rsquo;re using Rivet&rsquo;s plain list utility class along with the <code>.rvt-box__row</code> class to style the list items.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo rvtd-example__demo--spacious">
+        <div class="rvt-box">
+  <ul class="rvt-plain-list">
+    <li class="rvt-box__row">
+      <a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#" class="rvt-link-bold">A link in a row</a>
+    </li>
+    <li class="rvt-box__row rvt-box__row--selected">
+      Some text in a row
+    </li>
+    <li class="rvt-box__row">
+      Some text in a row
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_e28cc580527056a59e772ad78db8a130" class="language-html">&lt;div class=&#34;rvt-box&#34;&gt;
+  &lt;ul class=&#34;rvt-plain-list&#34;&gt;
+    &lt;li class=&#34;rvt-box__row&#34;&gt;
+      &lt;a href=&#34;#&#34; class=&#34;rvt-link-bold&#34;&gt;A link in a row&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;rvt-box__row rvt-box__row--selected&#34;&gt;
+      Some text in a row
+    &lt;/li&gt;
+    &lt;li class=&#34;rvt-box__row&#34;&gt;
+      Some text in a row
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_e28cc580527056a59e772ad78db8a130" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<h3 id="box-rows-with-generic-elements">Box rows with generic elements</h3>
+<p>Box rows can also be created using <code>div</code> elements if lists do not make sense semantically.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo rvtd-example__demo--spacious">
+        
+<div class="rvt-box">
+  <div>
+    <div class="rvt-box__row">
+      Plain box row one
+    </div>
+    <div class="rvt-box__row">
+      Plain box row two
+    </div>
+    <div class="rvt-box__row">
+      Plain box row three
+    </div>
+  </div>
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_fd261d729e71d997078e8474b014ccfc" class="language-html">
+&lt;div class=&#34;rvt-box&#34;&gt;
+  &lt;div&gt;
+    &lt;div class=&#34;rvt-box__row&#34;&gt;
+      Plain box row one
+    &lt;/div&gt;
+    &lt;div class=&#34;rvt-box__row&#34;&gt;
+      Plain box row two
+    &lt;/div&gt;
+    &lt;div class=&#34;rvt-box__row&#34;&gt;
+      Plain box row three
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_fd261d729e71d997078e8474b014ccfc" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<div class="rvtd-alert-shortcode rvt-alert rvt-alert--warning rvt-m-tb-md" aria-labelledby="box-rows-must-be-wrapped-in-a-parent-element">
+    <div class="rvt-alert__title" id="box-rows-must-be-wrapped-in-a-parent-element">Box rows must be wrapped in a parent element</div>
+    <p class="rvt-alert__message">To ensure correct styling, a series of box rows must be wrapped in a parent element, such as a <code>ul</code> or <code>div</code>. Do not wrap box rows in an element with the <code>.rvt-box__body</code> class applied, as the extra padding will prevent the rows from filling the full width of the box.</p>
+</div>
+<h2 id="compact-box-variant">Compact box variant</h2>
+<p>The compact variant of the box component reduces the amount of padding applied to a box&rsquo;s header, footer, and content. This variant can be useful in situations where you are displaying large amounts of data and need to conserve vertical space.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo rvtd-example__demo--spacious">
+        <div class="rvt-box rvt-box--compact">
+  <div class="rvt-box__header">
+    A box with rows
+  </div>
+  <ul class="rvt-plain-list">
+    <li class="rvt-box__row">
+      Some text in a row
+    </li>
+    <li class="rvt-box__row">
+      Some text in a row
+    </li>
+    <li class="rvt-box__row">
+      Some text in a row
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_529f06a6f45096d13d336ba6fd4e289d" class="language-html">&lt;div class=&#34;rvt-box rvt-box--compact&#34;&gt;
+  &lt;div class=&#34;rvt-box__header&#34;&gt;
+    A box with rows
+  &lt;/div&gt;
+  &lt;ul class=&#34;rvt-plain-list&#34;&gt;
+    &lt;li class=&#34;rvt-box__row&#34;&gt;
+      Some text in a row
+    &lt;/li&gt;
+    &lt;li class=&#34;rvt-box__row&#34;&gt;
+      Some text in a row
+    &lt;/li&gt;
+    &lt;li class=&#34;rvt-box__row&#34;&gt;
+      Some text in a row
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_529f06a6f45096d13d336ba6fd4e289d" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<h2 id="colored-box-variant">Colored box variant</h2>
+<p>The box component also supports colored variants based on <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html">Rivet&rsquo;s alert color naming conventions</a>.</p>
+<p>The colored box variants should be used sparingly and only to indicate some sort of state (error, warning, success, etc.) or call out important information in your application.</p>
+<p>There are four colored box variants that follow Rivet&rsquo;s alert color naming convention:</p>
+<ul>
+<li><code>.rvt-box--info</code></li>
+<li><code>.rvt-box--success</code></li>
+<li><code>.rvt-box--warning</code></li>
+<li><code>.rvt-box--danger</code></li>
+</ul>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo rvtd-example__demo--spacious">
+        <div class="rvt-box rvt-box--danger">
+  <div class="rvt-box__header">
+    A box with rows
+  </div>
+  <ul class="rvt-plain-list">
+    <li class="rvt-box__row">
+      Some text in a row
+    </li>
+    <li class="rvt-box__row">
+      Some text in a row
+    </li>
+    <li class="rvt-box__row">
+      Some text in a row
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_089d84ab0eab9c6837998ae4e6ad5627" class="language-html">&lt;div class=&#34;rvt-box rvt-box--danger&#34;&gt;
+  &lt;div class=&#34;rvt-box__header&#34;&gt;
+    A box with rows
+  &lt;/div&gt;
+  &lt;ul class=&#34;rvt-plain-list&#34;&gt;
+    &lt;li class=&#34;rvt-box__row&#34;&gt;
+      Some text in a row
+    &lt;/li&gt;
+    &lt;li class=&#34;rvt-box__row&#34;&gt;
+      Some text in a row
+    &lt;/li&gt;
+    &lt;li class=&#34;rvt-box__row&#34;&gt;
+      Some text in a row
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_089d84ab0eab9c6837998ae4e6ad5627" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<h3 id="colored-box-row-variants">Colored box row variants</h3>
+<p>Colors can also be applied to individual rows to call out state changes or important information:</p>
+<ul>
+<li><code>.rvt-box__row--info</code></li>
+<li><code>.rvt-box__row--success</code></li>
+<li><code>.rvt-box__row--warning</code></li>
+<li><code>.rvt-box__row--danger</code></li>
+</ul>
+<p>The row variant modifier classes add a subtle background color and left border that matches each of Rivet&rsquo;s alert styles.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo rvtd-example__demo--spacious">
+        <div class="rvt-box">
+  <div class="rvt-box__header">
+    A box with rows
+  </div>
+  <div>
+    <div class="rvt-box__row">
+      Default row
+    </div>
+    <div class="rvt-box__row rvt-box__row--info">
+      Info row variant
+    </div>
+    <div class="rvt-box__row rvt-box__row--success">
+      Success row variant
+    </div>
+    <div class="rvt-box__row rvt-box__row--warning">
+      Warning row variant
+    </div>
+    <div class="rvt-box__row rvt-box__row--danger">
+      Danger row variant
+    </div>
+  </div>
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_4558cead5e883e41e6c4721e1878c1b1" class="language-html">&lt;div class=&#34;rvt-box&#34;&gt;
+  &lt;div class=&#34;rvt-box__header&#34;&gt;
+    A box with rows
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;div class=&#34;rvt-box__row&#34;&gt;
+      Default row
+    &lt;/div&gt;
+    &lt;div class=&#34;rvt-box__row rvt-box__row--info&#34;&gt;
+      Info row variant
+    &lt;/div&gt;
+    &lt;div class=&#34;rvt-box__row rvt-box__row--success&#34;&gt;
+      Success row variant
+    &lt;/div&gt;
+    &lt;div class=&#34;rvt-box__row rvt-box__row--warning&#34;&gt;
+      Warning row variant
+    &lt;/div&gt;
+    &lt;div class=&#34;rvt-box__row rvt-box__row--danger&#34;&gt;
+      Danger row variant
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_4558cead5e883e41e6c4721e1878c1b1" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<h2 id="card-variant">Card variant</h2>
+<p>The card variant of the box component can be used along with Rivet&rsquo;s <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/layout/typography/index.html">type scale utilities</a> and <a href="../../../../../../20240917103200/https:/v1.rivet.iu.edu/components/layout/spacing/index.html">spacing utilities</a> to create basic card layouts. Adding the <code>.rvt-box--card</code> modifier class adds a subtle shadow to help visually separate the the box content from the background.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo rvtd-example__demo--spacious">
+        <div class="rvt-box rvt-box--card">
+  <div class="rvt-box__body">
+    This is the card variant of a box with a body element
+  </div>
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_2c6fc898d553b58cfbec96a8699de6c8" class="language-html">&lt;div class=&#34;rvt-box rvt-box--card&#34;&gt;
+  &lt;div class=&#34;rvt-box__body&#34;&gt;
+    This is the card variant of a box with a body element
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_2c6fc898d553b58cfbec96a8699de6c8" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<h3 id="card-image">Card image</h3>
+<p>The card variant can include an optional image. Nesting an <code>img</code> inside an element with the <code>.rvt-box__image</code> class will apply the proper sizing, cropping, and border radius.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo rvtd-example__demo--spacious">
+        <div class="rvt-box rvt-box--card">
+  <div class="rvt-box__image">
+    <img src="https://web.archive.org/web/20240917103200im_/http://www.fillmurray.com/g/800/450" alt="">
+  </div>
+  <div class="rvt-box__body">
+    <h2 class="rvt-ts-20 rvt-text-bold">Card title</h2>
+    <p class="rvt-m-top-xxs">This is the card variant of a box with a body element</p>
+    <a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#" class="rvt-link-bold">Card link</a>
+  </div>
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_e3a1db6904d40047257b1b33f5d2182d" class="language-html">&lt;div class=&#34;rvt-box rvt-box--card&#34;&gt;
+  &lt;div class=&#34;rvt-box__image&#34;&gt;
+    &lt;img src=&#34;http://www.fillmurray.com/g/800/450&#34; alt=&#34;&#34;&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;rvt-box__body&#34;&gt;
+    &lt;h2 class=&#34;rvt-ts-20 rvt-text-bold&#34;&gt;Card title&lt;/h2&gt;
+    &lt;p class=&#34;rvt-m-top-xxs&#34;&gt;This is the card variant of a box with a body element&lt;/p&gt;
+    &lt;a href=&#34;#&#34; class=&#34;rvt-link-bold&#34;&gt;Card link&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_e3a1db6904d40047257b1b33f5d2182d" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<div class="rvtd-alert-shortcode rvt-alert rvt-alert--warning rvt-m-tb-md" aria-labelledby="card-images-must-be-the-first-child">
+    <div class="rvt-alert__title" id="card-images-must-be-the-first-child">Card images must be the first child</div>
+    <p class="rvt-alert__message">The element with the <code>.rvt-box__image</code> class must be the first child of <code>.rvt-box</code> so that the image sits flush with the sides of the box (see above example). It should not be used inside elements with the <code>.rvt-box__body</code> or <code>.rvt-box__row</code> classes.</p>
+</div>
+
+            </div>
+        </div>
+        <div class="rvtd-article-nav">
+            <p>On this page</p>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#default-box">Default box</a></li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#box-body">Box body</a></li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#box-header-and-footer">Box header and footer</a></li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#light-box-variant">Light box variant</a></li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#box-rows">Box rows</a>
+      <ul>
+        <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#box-rows-with-a-list">Box rows with a list</a></li>
+        <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#box-rows-with-generic-elements">Box rows with generic elements</a></li>
+      </ul>
+    </li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#compact-box-variant">Compact box variant</a></li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#colored-box-variant">Colored box variant</a>
+      <ul>
+        <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#colored-box-row-variants">Colored box row variants</a></li>
+      </ul>
+    </li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#card-variant">Card variant</a>
+      <ul>
+        <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#card-image">Card image</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </div>
+
+            </main>
+            <footer class="rvt-footer rvt-footer--hugo" role="contentinfo">
+  <div class="rvt-footer__trident">
+      <svg alt="" xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewbox="0 0 20 25">
+          <polygon points="13.33 3.32 13.33 5.21 14.76 5.21 14.76 15.64 11.9 15.64 11.9 1.9 13.33 1.9 13.33 0 6.67 0 6.67 1.9 8.09 1.9 8.09 15.64 5.24 15.64 5.24 5.21 6.67 5.21 6.67 3.32 0 3.32 0 5.21 1.43 5.21 1.43 17.47 3.7 19.91 8.09 19.91 8.09 22.76 6.67 22.76 6.67 25.13 13.33 25.13 13.33 22.76 11.9 22.76 11.9 19.91 16.1 19.91 18.56 17.47 18.56 5.21 20 5.21 20 3.32 13.33 3.32" fill="#900"/>
+      </svg>
+  </div>
+  <ul class="rvt-footer__aux-links">
+      <li class="rvt-footer__aux-item">
+          <a href="https://web.archive.org/web/20240917103200/https://accessibility.iu.edu/assistance/">Accessibility</a>
+      </li>
+      <li class="rvt-footer__aux-item">
+          
+          <a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/layout/box/index.html#0">Privacy Notice</a>
+      </li>
+      <li class="rvt-footer__aux-item">
+          <a href="https://web.archive.org/web/20240917103200/https://www.iu.edu/copyright/index.html">Copyright</a> &copy; <span data-copyright-year></span> The Trustees of <a href="https://web.archive.org/web/20240917103200/https://www.iu.edu/">Indiana University</a>
+      </li>
+  </ul>
+</footer>
+        </div>
+        
+
+
+
+
+
+<script>
+
+  var baseURL = "https:\/\/web.archive.org\/web\/20240917103200\/https:\/\/v1.rivet.iu.edu\/";
+</script>
+
+<script src="../../../../../../20240917103200js_/https:/v1.rivet.iu.edu/js/rivet-docs.js%3F1705419739"></script>
+
+<script src="https://web.archive.org/web/20240917103200js_/https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script>
+  
+
+  new ClipboardJS('.rvtd-example__copy');
+  new ClipboardJS('.rvtd-package-copy');
+
+</script>
+
+    </body>
+</html>
+<script id="f5_cspm">(function(){var f5_cspm={f5_p:'HDAADDAHLGCAMMFJHECPHOMIOEPBFHMNGMDDPCODANCFDPCBKDGNOMCINEENLPPMFCNBFELDAALOCGHKFBIAPHFAAACIMAGGDFFPBPFDOHICGLCEPMMFNPCFNDBJDAAN',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,40,(latency>>8));str=f5_cspm.set_byte(str,41,(latency&0xff));str=f5_cspm.set_byte(str,35,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr0898702336aaaaaaaaaaaaaaaa_cspm_='+encodeURIComponent(cookie_val)+';path=/;'+'';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;'+';';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script><!--
+     FILE ARCHIVED ON 10:32:00 Sep 17, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 10:51:17 May 29, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  capture_cache.get: 0.407
+  load_resource: 782.125
+  PetaboxLoader3.resolve: 392.343
+  PetaboxLoader3.datanode: 377.902 (2)
+  loaddict: 355.046
+-->

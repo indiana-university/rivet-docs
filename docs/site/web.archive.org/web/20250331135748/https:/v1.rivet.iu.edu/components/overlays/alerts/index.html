@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=oZ57VlYl" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://v1.rivet.iu.edu/components/overlays/alerts/","20240917152211","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1726586531");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    
+    <meta name="description" content="Alerts are used to display brief important messages to users. They are designed to attract the user’s attention, but not interrupt their work.">
+    
+    <title>Alerts - Rivet Design System</title>
+    <link rel="stylesheet" href="https://web.archive.org/web/20240917152211cs_/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/a11y-light.min.css">
+    <link rel="stylesheet" href="https://web.archive.org/web/20240917152211cs_/https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../../../../20240917152211cs_/https:/v1.rivet.iu.edu/css/style.css%3F1705419739.css">
+</head>
+    <body>
+        <div id="wrapper" class="sticky-footer__wrapper">
+            
+                
+
+  <header class="rvt-header rvt-header--light" role="banner">
+
+<a class="rvt-skip-link" href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#main-content">Skip to content</a>
+<div class="rvt-header__trident">
+  <svg class="rvt-header__trident-logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 41 48" aria-hidden="true">
+    <title>Indiana University Logo</title>
+    <rect width="41" height="48" fill="#900"/>
+    <polygon points="24.59 12.64 24.59 14.98 26.34 14.98 26.34 27.78 22.84 27.78 22.84 10.9 24.59 10.9 24.59 8.57 16.41 8.57 16.41 10.9 18.16 10.9 18.16 27.78 14.66 27.78 14.66 14.98 16.41 14.98 16.41 12.64 8.22 12.64 8.22 14.98 9.97 14.98 9.97 30.03 12.77 33.02 18.16 33.02 18.16 36.52 16.41 36.52 16.41 39.43 24.59 39.43 24.59 36.52 22.84 36.52 22.84 33.02 28 33.02 31.01 30.03 31.01 14.98 32.78 14.98 32.78 12.64 24.59 12.64" fill="#fff"/>
+</svg>
+
+</div>
+<span class="rvt-header__title">
+  <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/index.html"><strong>Rivet</strong> <span class="rvtd-subtitle">Design System</span></a>
+</span>
+<div class="rvt-header__controls">
+  <nav class="rvt-header__main-nav" role="navigation" aria-label="main">
+    <ul>
+      
+      <li>
+        <div class="rvt-dropdown">
+          <button type="button" class="rvt-dropdown__toggle" data-dropdown-toggle="documentation-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="rvt-dropdown__toggle-text">Documentation</span>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+              <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+            </svg>
+          </button>
+          <div class="rvt-dropdown__menu" id="documentation-dropdown" aria-hidden="true">
+            <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components.html">Components</a>
+            <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/add-ons.html">Add-ons</a>
+            <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/content-guide.html">Content guide</a>
+            <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/migration-guide.html">Migration guide</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown">
+          <button type="button" class="dropdown__toggle" data-dropdown-toggle="learn-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="rvt-dropdown__toggle-text">About Rivet</span>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+              <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+            </svg>
+          </button>
+          <div class="rvt-dropdown__menu" id="learn-dropdown" aria-hidden="true">
+            <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/about/index.html">What is Rivet?</a>
+            <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/blog/index.html">Blog</a>
+            <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/information/changelog/index.html">Changelog</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="rvt-supplemental-menu">
+    <div class="rvt-dropdown rvt-notifications">
+  <button role="button" class="rvt-notifications__toggle" ref="notificationButton" data-dropdown-toggle="notification-list" aria-expanded="false">
+    <span class="rvt-sr-only">Show notifications</span>
+    <span aria-hidden="true">
+      <svg class="rvt-open-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+        <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
+      </svg>
+      <svg class="rvt-closed-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+        <path fill="currentColor" d="M14.57,12.06,13,9.7V6A5,5,0,0,0,3,6V9.7L1.43,12.06a1.25,1.25,0,0,0,1,1.94H6a2,2,0,0,0,4,0h3.53a1.25,1.25,0,0,0,1-1.94ZM8,12H3.87L5,10.3V6a3,3,0,0,1,6,0v4.3L12.13,12Z"/>
+      </svg>
+    </span>
+  </button>
+  <div id="notification-list" class="rvt-notifications__menu" ref="menuElement" aria-hidden="true">
+    <ol class="rvt-notifications__menu-list">
+      
+        
+        <li>
+          
+            <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/blog/release-beta-4/index.html">
+          
+            <article class="rvt-notification">
+              <time class="rvt-notification__time">
+                May 4, 2022
+              </time>
+              <h1 class="rvt-notification__title">Rivet 2.0.0-beta.4 release</h1>
+              <p class="rvt-notification__teaser">The fourth Rivet 2 beta release introduces design updates to several components and a new responsive table wrapper element.</p>
+              
+            </article>
+          </a>
+        </li>
+        
+      
+        
+      
+        
+        <li>
+          
+            <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/blog/release-beta-3/index.html">
+          
+            <article class="rvt-notification">
+              <time class="rvt-notification__time">
+                March 30, 2022
+              </time>
+              <h1 class="rvt-notification__title">Rivet 2.0.0-beta.3 release</h1>
+              <p class="rvt-notification__teaser">The third Rivet 2 beta release updates accordion, badge, and button styles.</p>
+              
+            </article>
+          </a>
+        </li>
+        
+      
+        
+        <li>
+          
+            <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/blog/release-beta-2/index.html">
+          
+            <article class="rvt-notification">
+              <time class="rvt-notification__time">
+                February 9, 2022
+              </time>
+              <h1 class="rvt-notification__title">Rivet 2.0.0-beta.2 release</h1>
+              <p class="rvt-notification__teaser">The latest Rivet 2 beta release introduces the link hub component, adds new utility classes, and refactors component JavaScript.</p>
+              
+            </article>
+          </a>
+        </li>
+        
+      
+    </ol>
+    <div class="rvt-notifications__actions">
+      <a class="rvt-button rvt-button--secondary rvt-display-flex rvt-text-center rvt-m-bottom-xs" href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/blog/index.html">More posts</a>
+      <a class="rvt-button rvt-notifications__actions-mail" href="https://web.archive.org/web/20240917152211/https://list.iu.edu/sympa/subscribe/rivet-l" target="_blank" rel="noopener">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+          <path fill="currentColor" d="M13.5,3H2.5A1.5,1.5,0,0,0,1,4.5v8A1.5,1.5,0,0,0,2.5,14h11A1.5,1.5,0,0,0,15,12.5v-8A1.5,1.5,0,0,0,13.5,3ZM11.41,5,8,7.77,4.59,5ZM3,12V6.29L7.11,9.62l.12.08a1.5,1.5,0,0,0,1.54,0L13,6.29V12Z"/>
+        </svg>
+        <span>Get updates in your inbox</span>
+      </a>
+    </div>
+  </div>
+</div>
+    <div class="rvt-hide-lg-down">
+      <div class="rvt-dropdown">
+        <button type="button" class="rvt-button" data-dropdown-toggle="use-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <span>Use Rivet</span>
+          <svg aria-hidden="true" class="rvt-m-left-xs" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+            <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+          </svg>
+        </button>
+        <div class="rvt-dropdown__menu rvt-dropdown__menu--right" id="use-dropdown" aria-hidden="true">
+          <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/getting-started/npm/index.html">Install via NPM</a>
+          <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/index.html#download-rivet">Download CSS &amp; JS</a>
+          <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/index.html#hosted-css-and-javascript">Hosted assets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<button type="button" class="rvt-drawer-button" role="button" aria-label="Toggle navigation options" aria-haspopup="true" aria-expanded="false" data-drawer-toggle="docs-drawer">
+    <span class="sr-only">Toggle menu</span>
+    <svg aria-hidden="true" class="rvt-drawer-button-open" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">
+        <g fill="currentColor">
+            <path d="M15,3H1A1,1,0,0,1,1,1H15a1,1,0,0,1,0,2Z"/>
+            <path d="M15,9H1A1,1,0,0,1,1,7H15a1,1,0,0,1,0,2Z"/>
+            <path d="M15,15H1a1,1,0,0,1,0-2H15a1,1,0,0,1,0,2Z"/>
+        </g>
+    </svg>
+    <svg aria-hidden="true" class="rvt-drawer-button-close" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">
+        <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
+    </svg>
+</button>
+
+</div>
+
+
+<div class="rvt-drawer" aria-hidden="true" id="docs-drawer">
+
+    
+    <nav class="rvt-drawer__nav" role="navigation" aria-label="resources">
+        <div class="ts-14 m-top-sm m-bottom-sm text-uppercase">Navigation</div>
+        <ul class="hide-on-desktop">
+            <li class="has-children">
+                <button type="button" role="button" data-subnav-toggle="documentation-subnav" aria-haspopup="true" aria-expanded="false">Documentation</button>
+                <ul id="documentation-subnav" aria-hidden="true">
+                    <li><a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components.html">Components</a></li>
+                    <li><a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/add-ons.html">Add-ons</a></li>
+                    <li><a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/content-guide.html">Content guide</a></li>
+                </ul>
+            </li>
+            <li class="has-children">
+                <button type="button" role="button" data-subnav-toggle="about-subnav" aria-haspopup="true" aria-expanded="false">About Rivet</button>
+                <ul id="about-subnav" aria-hidden="true">
+                    <li><a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/about.html">What is Rivet?</a></li>
+                    <li><a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/blog.html">Blog</a></li>
+                    <li><a href="https://web.archive.org/web/20240917152211/https://v1.rivet.iu.edu/components/information/roadmap/">Roadmap</a></li>
+                    <li><a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/information/changelog/index.html">Changelog</a></li>
+                </ul>
+            </li>
+            <li><a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/index.html">Use Rivet</a></li>
+        </ul>
+        <div class="ts-14 m-top-sm m-bottom-sm text-uppercase">Resources</div>
+        <ul>
+            
+                <li><a target="_blank" href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html">User Experience Office</a></li>
+            
+                <li><a target="_blank" href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html">Accessibility Evaluations</a></li>
+            
+                <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html">Rivet Software Design System</a></li>
+            
+                <li><a target="_blank" href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html">IU Framework for WCMS</a></li>
+            
+        </ul>
+        <button type="button" class="rvt-drawer__bottom-close">Close nav</button>
+    </nav>
+</div>
+
+</header>
+
+            
+            <div class="rvt-p-all-sm rvt-text-center" style="background-color: #ffece5; color: #82270d">
+  <strong>Rivet 1 has been retired and will no longer receive updates.</strong> The v1 source code has been <a href="https://web.archive.org/web/20240917152211/https://github.com/indiana-university/rivet-v1-archive">archived here</a>. Please migrate to <a href="https://web.archive.org/web/20240917152211/https://rivet.iu.edu/">Rivet 2</a> as soon as possible.
+</div>
+            <main id="main-content">
+                
+    <div class="rvtd-wrap">
+        <div class="rvtd-sidebar">
+    
+
+
+<nav class="rvtd-nav" role="navigation" aria-label="section" id="main-nav">
+    <span class="rvt-m-bottom-md rvt-display-block">Version <span class="rvt-text-bold">1.8.3</span></span>
+    
+    <ul class="rvtd-toc">
+        
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Information</span>
+                <ul>
+                    
+                    
+                    <li class="">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/information/changelog/index.html">
+                            Changelog
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/information/component-status/index.html">
+                            Component status
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/information/contributing/index.html">
+                            Contributing
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Getting started</span>
+                <ul>
+                    
+                    
+                    <li class="">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/getting-started/npm/index.html">
+                            Install with NPM
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/getting-started/sass/index.html">
+                            Rivet Sass
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Layout</span>
+                <ul>
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/layout/box/index.html">
+                            Box
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/layout/grid/index.html">
+                            Grid
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="deprecated">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/layout/panels/index.html">
+                            Panels
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/layout/spacing/index.html">
+                            Spacing
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/layout/typography/index.html">
+                            Typography
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Page content</span>
+                <ul>
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/page-content/badges/index.html">
+                            Badges
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/page-content/links/index.html">
+                            Links
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/page-content/lists/index.html">
+                            Lists
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/page-content/media-object/index.html">
+                            Media Object
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/page-content/step-indicator/index.html">
+                            Step Indicator
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/page-content/tables/index.html">
+                            Tables
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a aria-describedby="tabs-js-req" href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/page-content/tabs/index.html">
+                            Tabs
+                            
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="tabs-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/page-content/timeline/index.html">
+                            Timeline
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Forms</span>
+                <ul>
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/forms/buttons/index.html">
+                            Buttons
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/forms/buttons-segmented/index.html">
+                            Segmented Buttons
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/forms/checkboxes/index.html">
+                            Checkboxes
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a aria-describedby="file-input-js-req" href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/forms/file-input/index.html">
+                            File input
+                            
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="file-input-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/forms/input-group/index.html">
+                            Input group
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/forms/radio-buttons/index.html">
+                            Radio buttons
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/forms/select-input/index.html">
+                            Select element
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/forms/text-input/index.html">
+                            Text inputs
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Navigation</span>
+                <ul>
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/navigation/breadcrumb/index.html">
+                            Breadcrumb
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a aria-describedby="dropdown-js-req" href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/navigation/dropdown/index.html">
+                            Dropdown
+                            
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="dropdown-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/navigation/footer/index.html">
+                            Footer
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a aria-describedby="header-js-req" href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/navigation/header/index.html">
+                            Header
+                            
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="header-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/navigation/menu/index.html">
+                            Menu
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/navigation/pagination/index.html">
+                            Pagination
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Overlays &amp; Feedback</span>
+                <ul>
+                    
+                    
+                    <li class="ready is-current">
+                        <a aria-describedby="alerts-js-req" href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html">
+                            Alerts
+                            
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="alerts-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/overlays/loading-indicator/index.html">
+                            Loading indicator
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a aria-describedby="modals-js-req" href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/overlays/modals/index.html">
+                            Modals
+                            
+                            <span class="rvt-display-inline rvt-badge rvt-badge--warning-secondary" id="modals-js-req">
+                                <span class="rvt-sr-only">This component requires</span>
+                                <abbr aria-label="JavaScript" title="JavaScript">JS</abbr>
+                            </span>
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <span class="text-uppercase rvt-m-bottom-sm">Utilities</span>
+                <ul>
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/utilities/border/index.html">
+                            Border
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/utilities/display/index.html">
+                            Display
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/utilities/flex/index.html">
+                            Flex
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/utilities/text/index.html">
+                            Text
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/utilities/visibility/index.html">
+                            Visibility
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/utilities/width/index.html">
+                            Width
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="ready">
+                        <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/utilities/z-index/index.html">
+                            z-index
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+        
+    </ul>
+    
+</nav>
+
+</div>
+        <div class="rvtd-tube">
+            <div class="rvtd-tube__inner rvtd-typeset">
+                <div class="rvt-flex rvt-items-center rvt-justify-end-md-up rvt-m-bottom-sm">
+                    
+                        <span class="rvt-badge rvt-badge--ready">Ready</span>
+                    
+                    
+                        <span class="rvt-ts-14 rvt-m-left-xs">
+                            Added in <span class="rvt-text-bold">1.0.0</span>
+                        </span>
+                    
+                </div>
+                <h1>Alerts</h1>
+                <p class="rvtd-lead">Alerts are used to display brief important messages to users. They are designed to attract the user’s attention, but not interrupt their work.</p>
+                <div class="rvtd-alert-shortcode rvt-alert rvt-alert--warning rvt-m-tb-md" aria-labelledby="migrating-to-rivet-2">
+    <div class="rvt-alert__title" id="migrating-to-rivet-2">Migrating to Rivet 2</div>
+    <p class="rvt-alert__message">This version of Rivet is deprecated. <a href="https://web.archive.org/web/20240917152211/https://v2.rivet.iu.edu/docs/components/alert/">View the alert documentation on the Rivet 2 website</a>.</p>
+</div>
+<h2 id="page-level-alerts">Page-level alerts</h2>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo">
+        <div class="rvt-alert rvt-alert--info rvt-m-bottom-md" role="alertdialog" aria-labelledby="information-alert-title">
+    <h1 class="rvt-alert__title" id="information-alert-title">Scheduled System Maintenance</h1>
+    <p class="rvt-alert__message">This system will be unavailable on August 1st due to scheduled system maintenance. Please check back on August 2nd.</p>
+    <button type="button" class="rvt-alert__dismiss" data-alert-close>
+        <span class="v-hide">Dismiss this alert</span>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+            <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
+        </svg>
+    </button>
+</div>
+
+<div class="rvt-alert rvt-alert--success rvt-m-bottom-md" role="alertdialog" aria-labelledby="success-alert-title">
+    <h1 class="rvt-alert__title" id="success-alert-title">Thank you!</h1>
+    <p class="rvt-alert__message">We have received your application. Check your email in a few weeks to find out if you’ve been admitted.</p>
+    <button type="button" class="rvt-alert__dismiss" data-alert-close>
+        <span class="v-hide">Dismiss this alert</span>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+            <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
+        </svg>
+    </button>
+</div>
+
+<div class="rvt-alert rvt-alert--warning rvt-m-bottom-md" role="alertdialog" aria-labelledby="warning-alert-title">
+    <h1 class="rvt-alert__title" id="warning-alert-title">Unsaved Changes</h1>
+    <p class="rvt-alert__message">Your changes have not been saved. To save your changes, click ‘Save my changes’ or click ‘Cancel’ to exit without saving.</p>
+    <button type="button" class="rvt-alert__dismiss" data-alert-close>
+        <span class="v-hide">Dismiss this alert</span>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+            <path fill="currentColor" d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
+        </svg>
+    </button>
+</div>
+
+<div class="rvt-alert rvt-alert--danger" role="alert" aria-labelledby="error-alert-title">
+    <h1 class="rvt-alert__title" id="danger-alert-title">Incorrect User ID or Password</h1>
+    <p class="rvt-alert__message">The user ID and password you entered do not match. Please check your entries and try again. <a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#">Forgot your user ID or password?</a></p>
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_a1f0e592f5ef9f55cabddc9d951969b6" class="language-html">&lt;div class=&#34;rvt-alert rvt-alert--info rvt-m-bottom-md&#34; role=&#34;alertdialog&#34; aria-labelledby=&#34;information-alert-title&#34;&gt;
+    &lt;h1 class=&#34;rvt-alert__title&#34; id=&#34;information-alert-title&#34;&gt;Scheduled System Maintenance&lt;/h1&gt;
+    &lt;p class=&#34;rvt-alert__message&#34;&gt;This system will be unavailable on August 1st due to scheduled system maintenance. Please check back on August 2nd.&lt;/p&gt;
+    &lt;button type=&#34;button&#34; class=&#34;rvt-alert__dismiss&#34; data-alert-close&gt;
+        &lt;span class=&#34;v-hide&#34;&gt;Dismiss this alert&lt;/span&gt;
+        &lt;svg aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 16 16&#34;&gt;
+            &lt;path fill=&#34;currentColor&#34; d=&#34;M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z&#34;/&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;rvt-alert rvt-alert--success rvt-m-bottom-md&#34; role=&#34;alertdialog&#34; aria-labelledby=&#34;success-alert-title&#34;&gt;
+    &lt;h1 class=&#34;rvt-alert__title&#34; id=&#34;success-alert-title&#34;&gt;Thank you!&lt;/h1&gt;
+    &lt;p class=&#34;rvt-alert__message&#34;&gt;We have received your application. Check your email in a few weeks to find out if you’ve been admitted.&lt;/p&gt;
+    &lt;button type=&#34;button&#34; class=&#34;rvt-alert__dismiss&#34; data-alert-close&gt;
+        &lt;span class=&#34;v-hide&#34;&gt;Dismiss this alert&lt;/span&gt;
+        &lt;svg aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 16 16&#34;&gt;
+            &lt;path fill=&#34;currentColor&#34; d=&#34;M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z&#34;/&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;rvt-alert rvt-alert--warning rvt-m-bottom-md&#34; role=&#34;alertdialog&#34; aria-labelledby=&#34;warning-alert-title&#34;&gt;
+    &lt;h1 class=&#34;rvt-alert__title&#34; id=&#34;warning-alert-title&#34;&gt;Unsaved Changes&lt;/h1&gt;
+    &lt;p class=&#34;rvt-alert__message&#34;&gt;Your changes have not been saved. To save your changes, click ‘Save my changes’ or click ‘Cancel’ to exit without saving.&lt;/p&gt;
+    &lt;button type=&#34;button&#34; class=&#34;rvt-alert__dismiss&#34; data-alert-close&gt;
+        &lt;span class=&#34;v-hide&#34;&gt;Dismiss this alert&lt;/span&gt;
+        &lt;svg aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 16 16&#34;&gt;
+            &lt;path fill=&#34;currentColor&#34; d=&#34;M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z&#34;/&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;rvt-alert rvt-alert--danger&#34; role=&#34;alert&#34; aria-labelledby=&#34;error-alert-title&#34;&gt;
+    &lt;h1 class=&#34;rvt-alert__title&#34; id=&#34;danger-alert-title&#34;&gt;Incorrect User ID or Password&lt;/h1&gt;
+    &lt;p class=&#34;rvt-alert__message&#34;&gt;The user ID and password you entered do not match. Please check your entries and try again. &lt;a href=&#34;#&#34;&gt;Forgot your user ID or password?&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_a1f0e592f5ef9f55cabddc9d951969b6" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<h3 id="deprecated-page-level-alert-class-names">Deprecated page-level alert class names</h3>
+<p>Version <code>1.1.0</code> of Rivet updated the CSS class names used by page-level alerts to be consistent with class names used by other components. The table below shows the deprecated class names and their replacements.</p>
+<p>The deprecated class names will still work in version <code>1.1.0</code>. However, they will be removed in a future release.</p>
+<!-- raw HTML omitted -->
+<h2 id="standalone-inline-alerts">Standalone inline alerts</h2>
+<p>Inline alerts in Rivet should be used for form validation situations where <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/forms/text-input/index.html#inline-validation-states">the standard inline form input validation</a> error would not make sense. For instance, marking a group of radio buttons or checkboxes will give an input error. Adding the <code>rvt-inline-alert--standalone</code> modifier class to the standard inline alert element will give the alert a subtle background color and left border to add some visual contrast.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo">
+        
+<div class="rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--info">
+    <span class="rvt-inline-alert__icon">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+            <g fill="currentColor">
+                <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"/>
+                <path d="M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z"/>
+                <circle cx="8" cy="5" r="1"/>
+            </g>
+        </svg>
+    </span>
+    <span class="rvt-inline-alert__message" id="radio-list-message-1">
+        This field is required to continue.
+    </span>
+</div>
+
+<div class="rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--success">
+    <span class="rvt-inline-alert__icon">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+            <g fill="currentColor">
+                <path d="M10.2,5.4,7.1,9.53,5.67,8.25a1,1,0,1,0-1.34,1.5l2.05,1.82a1.29,1.29,0,0,0,.83.32h.12a1.23,1.23,0,0,0,.88-.49L11.8,6.6a1,1,0,1,0-1.6-1.2Z"/>
+                <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"/>
+            </g>
+        </svg>
+    </span>
+    <span class="rvt-inline-alert__message" id="radio-list-message-2">
+        This field is required to continue.
+    </span>
+</div>
+
+<div class="rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--warning">
+    <span class="rvt-inline-alert__icon">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+            <g fill="currentColor">
+                <path d="M11,9H5A1,1,0,0,1,5,7h6a1,1,0,0,1,0,2Z"/>
+                <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"/>
+            </g>
+        </svg>
+    </span>
+    <span class="rvt-inline-alert__message" id="radio-list-message-3">
+        This field is required to continue.
+    </span>
+</div>
+
+<div class="rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--danger">
+    <span class="rvt-inline-alert__icon">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+            <g fill="currentColor">
+                <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"/>
+                <path d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
+            </g>
+        </svg>
+    </span>
+    <span class="rvt-inline-alert__message" id="radio-list-message-4">
+        This field is required to continue.
+    </span>
+</div>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_b19d5f207a18c4bd648be5315d5e3ab4" class="language-html">
+&lt;div class=&#34;rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--info&#34;&gt;
+    &lt;span class=&#34;rvt-inline-alert__icon&#34;&gt;
+        &lt;svg aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 16 16&#34;&gt;
+            &lt;g fill=&#34;currentColor&#34;&gt;
+                &lt;path d=&#34;M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z&#34;/&gt;
+                &lt;path d=&#34;M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z&#34;/&gt;
+                &lt;circle cx=&#34;8&#34; cy=&#34;5&#34; r=&#34;1&#34;/&gt;
+            &lt;/g&gt;
+        &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&#34;rvt-inline-alert__message&#34; id=&#34;radio-list-message-1&#34;&gt;
+        This field is required to continue.
+    &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--success&#34;&gt;
+    &lt;span class=&#34;rvt-inline-alert__icon&#34;&gt;
+        &lt;svg aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 16 16&#34;&gt;
+            &lt;g fill=&#34;currentColor&#34;&gt;
+                &lt;path d=&#34;M10.2,5.4,7.1,9.53,5.67,8.25a1,1,0,1,0-1.34,1.5l2.05,1.82a1.29,1.29,0,0,0,.83.32h.12a1.23,1.23,0,0,0,.88-.49L11.8,6.6a1,1,0,1,0-1.6-1.2Z&#34;/&gt;
+                &lt;path d=&#34;M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z&#34;/&gt;
+            &lt;/g&gt;
+        &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&#34;rvt-inline-alert__message&#34; id=&#34;radio-list-message-2&#34;&gt;
+        This field is required to continue.
+    &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--warning&#34;&gt;
+    &lt;span class=&#34;rvt-inline-alert__icon&#34;&gt;
+        &lt;svg aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 16 16&#34;&gt;
+            &lt;g fill=&#34;currentColor&#34;&gt;
+                &lt;path d=&#34;M11,9H5A1,1,0,0,1,5,7h6a1,1,0,0,1,0,2Z&#34;/&gt;
+                &lt;path d=&#34;M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z&#34;/&gt;
+            &lt;/g&gt;
+        &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&#34;rvt-inline-alert__message&#34; id=&#34;radio-list-message-3&#34;&gt;
+        This field is required to continue.
+    &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--danger&#34;&gt;
+    &lt;span class=&#34;rvt-inline-alert__icon&#34;&gt;
+        &lt;svg aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 16 16&#34;&gt;
+            &lt;g fill=&#34;currentColor&#34;&gt;
+                &lt;path d=&#34;M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z&#34; /&gt;
+                &lt;path d=&#34;M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z&#34;/&gt;
+            &lt;/g&gt;
+        &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&#34;rvt-inline-alert__message&#34; id=&#34;radio-list-message-4&#34;&gt;
+        This field is required to continue.
+    &lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_b19d5f207a18c4bd648be5315d5e3ab4" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<div class="rvtd-alert-shortcode rvt-alert rvt-alert--info rvt-m-tb-md" aria-labelledby="more-form-validation-tips">
+    <div class="rvt-alert__title" id="more-form-validation-tips">More form validation tips</div>
+    <p class="rvt-alert__message">For more information on techniques for better form validation UX, <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/components/forms/text-input/index.html#form-validation-tips">see this list of form validation tips</a>.</p>
+</div>
+<p>When using a standalone inline alert with a group of inputs, make sure to add the <code>aria-describedby</code> attribute to <strong>each input</strong> (in this case radio buttons) that is invalid. The <code>aria-describedby</code> by value should correspond to a matching <code>id</code> attribute on the <code>.rvt-inline-alert__message</code> element.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo">
+        <form>
+    <fieldset>
+        <legend class="rvt-ts-23 rvt-text-bold rvt-m-bottom-sm">Radio list</legend>
+        <ul class="rvt-plain-list">
+            <li>
+                <input type="radio" name="radio-demo-2" id="radio-3" aria-describedby="radio-list-message">
+                <label for="radio-3">Option one</label>
+            </li>
+            <li>
+                <input type="radio" name="radio-demo-2" id="radio-4" aria-describedby="radio-list-message">
+                <label for="radio-4">Option two</label>
+            </li>
+            <li>
+                <input type="radio" name="radio-demo-2" id="radio-4-disabled" aria-describedby="radio-list-message">
+                <label for="radio-4-disabled">Option three disabled</label>
+            </li>
+            <li>
+                <input type="radio" name="radio-demo-2" id="radio-5" aria-describedby="radio-list-message">
+                <label for="radio-5">Option four checked and disabled</label>
+            </li>
+        </ul>
+        <div class="rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--danger">
+            <span class="rvt-inline-alert__icon">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
+                    <g fill="currentColor">
+                        <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"/>
+                        <path d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
+                    </g>
+                </svg>
+            </span>
+            <span class="rvt-inline-alert__message" id="radio-list-message">
+                This field is required to continue.
+            </span>
+        </div>
+    </fieldset>
+</form>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_068b96552b727f069bdf2dc83d7f16d8" class="language-html">&lt;form&gt;
+    &lt;fieldset&gt;
+        &lt;legend class=&#34;rvt-ts-23 rvt-text-bold rvt-m-bottom-sm&#34;&gt;Radio list&lt;/legend&gt;
+        &lt;ul class=&#34;rvt-plain-list&#34;&gt;
+            &lt;li&gt;
+                &lt;input type=&#34;radio&#34; name=&#34;radio-demo-2&#34; id=&#34;radio-3&#34; aria-describedby=&#34;radio-list-message&#34;&gt;
+                &lt;label for=&#34;radio-3&#34;&gt;Option one&lt;/label&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type=&#34;radio&#34; name=&#34;radio-demo-2&#34; id=&#34;radio-4&#34; aria-describedby=&#34;radio-list-message&#34;&gt;
+                &lt;label for=&#34;radio-4&#34;&gt;Option two&lt;/label&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type=&#34;radio&#34; name=&#34;radio-demo-2&#34; id=&#34;radio-4-disabled&#34; aria-describedby=&#34;radio-list-message&#34;&gt;
+                &lt;label for=&#34;radio-4-disabled&#34;&gt;Option three disabled&lt;/label&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type=&#34;radio&#34; name=&#34;radio-demo-2&#34; id=&#34;radio-5&#34; aria-describedby=&#34;radio-list-message&#34;&gt;
+                &lt;label for=&#34;radio-5&#34;&gt;Option four checked and disabled&lt;/label&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&#34;rvt-inline-alert rvt-inline-alert--standalone rvt-inline-alert--danger&#34;&gt;
+            &lt;span class=&#34;rvt-inline-alert__icon&#34;&gt;
+                &lt;svg aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 16 16&#34;&gt;
+                    &lt;g fill=&#34;currentColor&#34;&gt;
+                        &lt;path d=&#34;M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z&#34; /&gt;
+                        &lt;path d=&#34;M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z&#34;/&gt;
+                    &lt;/g&gt;
+                &lt;/svg&gt;
+            &lt;/span&gt;
+            &lt;span class=&#34;rvt-inline-alert__message&#34; id=&#34;radio-list-message&#34;&gt;
+                This field is required to continue.
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_068b96552b727f069bdf2dc83d7f16d8" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<h3 id="deprecated-standalone-inline-alert-class-names">Deprecated standalone inline alert class names</h3>
+<p>Version <code>1.1.0</code> of Rivet updated the CSS class names used by standalone inline alerts to be consistent with class names used by other components. The table below shows the deprecated class names and their replacements.</p>
+<p>The deprecated class names will still work in version <code>1.1.0</code>. However, they will be removed in a future release.</p>
+<!-- raw HTML omitted -->
+<h2 id="alert-lists">Alert lists</h2>
+<p>Alert lists provide a way to group a set of errors together. For instance, when summarizing a list of errors on a long form.</p>
+<div class="rvtd-example">
+    <div class="rvtd-example__demo">
+        <ul class="rvt-alert-list">
+    <li class="rvt-alert-list__item">
+        <div class="rvt-alert rvt-alert--danger" role="alert">
+            <h1 class="rvt-alert__title">Please correct the following errors.</h1>
+            <p class="rvt-alert__message">Alert lists are useful for summarizing multiple errors on a page.</p>
+        </div>
+    </li>
+    <li class="rvt-alert-list__item">
+        <div class="rvt-alert rvt-alert--danger" role="alert">
+            <h1 class="rvt-alert__title">Errors can have a title only, <a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#">with a link</a> to the invalid element.</h1>
+        </div>
+    </li>
+    <li class="rvt-alert-list__item">
+        <div class="rvt-alert rvt-alert--danger" role="alert">
+            <h1 class="rvt-alert__title">Error message three is soooo long!</h1>
+            <p class="rvt-alert__message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veniam iste, nesciunt aliquam illum quaerat hic expedita ducimus error assumenda explicabo quos harum delectus deserunt, autem corrupti quas doloremque. Veritatis.</p>
+        </div>
+    </li>
+</ul>
+
+    </div>
+    <div class="rvtd-example__code">
+        <pre><code id="code_6045c7c6d6d218ae1bb2684031c02268" class="language-html">&lt;ul class=&#34;rvt-alert-list&#34;&gt;
+    &lt;li class=&#34;rvt-alert-list__item&#34;&gt;
+        &lt;div class=&#34;rvt-alert rvt-alert--danger&#34; role=&#34;alert&#34;&gt;
+            &lt;h1 class=&#34;rvt-alert__title&#34;&gt;Please correct the following errors.&lt;/h1&gt;
+            &lt;p class=&#34;rvt-alert__message&#34;&gt;Alert lists are useful for summarizing multiple errors on a page.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;rvt-alert-list__item&#34;&gt;
+        &lt;div class=&#34;rvt-alert rvt-alert--danger&#34; role=&#34;alert&#34;&gt;
+            &lt;h1 class=&#34;rvt-alert__title&#34;&gt;Errors can have a title only, &lt;a href=&#34;#&#34;&gt;with a link&lt;/a&gt; to the invalid element.&lt;/h1&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;rvt-alert-list__item&#34;&gt;
+        &lt;div class=&#34;rvt-alert rvt-alert--danger&#34; role=&#34;alert&#34;&gt;
+            &lt;h1 class=&#34;rvt-alert__title&#34;&gt;Error message three is soooo long!&lt;/h1&gt;
+            &lt;p class=&#34;rvt-alert__message&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veniam iste, nesciunt aliquam illum quaerat hic expedita ducimus error assumenda explicabo quos harum delectus deserunt, autem corrupti quas doloremque. Veritatis.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+        <button type="button" class="rvtd-example__copy button button--small" data-clipboard-target="#code_6045c7c6d6d218ae1bb2684031c02268" title="Copied">
+            Copy
+        </button>
+    </div>
+</div>
+
+<h2 id="when-to-use">When to use</h2>
+<ul>
+<li>To notify users about system status including error, warnings, and updates.</li>
+<li>To notify users they’ve successfully completed a task</li>
+<li>Use along with inline validation alerts to summarize multiple errors on longer forms</li>
+</ul>
+<h2 id="when-to-use-something-else">When to use something else</h2>
+<ul>
+<li>When it’s necessary to interrupt the user’s work flow.</li>
+<li>When user input/action is required to continue working</li>
+<li>If action taken by the user will result in losing/destroying their work, use a modal dialog that allows the user to confirm the destructive action.</li>
+</ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>Alerts should use the <code>role=&quot;alert&quot;</code> attribute</li>
+<li>Alerts that have a dismiss or close button should use the <code>role=&quot;alertdialog&quot;</code> attribute</li>
+<li>Use the <code>aria-labelledby</code> attribute to link the alert title with the alert element</li>
+<li>Dynamically rendered alerts are automatically announced by most screen readers, but it’s important to note that screen readers will not inform users of alerts that are present before a page has finished loading</li>
+</ul>
+<h3 id="alert-list-accessibility">Alert list accessibility</h3>
+<p>Alert lists can be particularly useful for summarizing multiple errors on a page, and providing links to the invalid fields. These summaries are especially helpful for non-sighted users, who will not receive the visual cue provided by multiple inline alerts appearing on the page when a form is submitted.</p>
+<h2 id="microcopy-notes">Microcopy notes</h2>
+<ul>
+<li>Alert title should be clear and concise. “Success!” rather than “Application was submitted successfully!&quot;</li>
+<li>Alert message should be descriptive and should clearly articulate the problem the user has encountered or the information you are trying to convey to the user. “The user ID and password you entered do not match” is more clear than “Unauthorized”.</li>
+<li>Where appropriate, alert title should be a link to the position on the page where the invalid element can be found.</li>
+<li>Alert message should offer next steps where appropriate.</li>
+</ul>
+<h3 id="good-example">Good example:</h3>
+<p><strong>Scheduled System Maintenance</strong>
+This system will be unavailable on August 1st due to scheduled system maintenance. Please check back on August 2nd.</p>
+<ul>
+<li>Clear title; explains that maintenance was scheduled and expected</li>
+<li>Informs the user of the length of the outage</li>
+<li>Lets the user know when the system is expected to be available</li>
+</ul>
+<h3 id="bad-example">Bad example:</h3>
+<p><strong>System is Down</strong>
+The system is currently unavailable.</p>
+<ul>
+<li>Doesn&rsquo;t indicate that maintenance was scheduled and expected</li>
+<li>Doesn&rsquo;t inform the user how long the system will be unavailable</li>
+<li>Doesn&rsquo;t let the user know when the system is expected to be available again</li>
+</ul>
+<p>See the <a href="../../../../../../20240917152211/https:/v1.rivet.iu.edu/content-guide.html">content guide section</a> for additional information.</p>
+<h3 id="implementation">Implementation</h3>
+<ul>
+<li>Page-level alerts can be used with an optional dismiss button (X icon), however it’s important to avoid allowing users to dismiss alerts that are used to display error messages. Do allow users to dismiss alerts wherever appropriate.</li>
+<li>Avoid using error messages that automatically disappear. If a user doesn’t have time to read the error message they may not know how to correct the problem once it has been automatically removed.</li>
+<li>Write helpful alert messages. For errors, Include a brief description of the problem and how to fix it. Check out the Voice and tone/microcopy section for more information.</li>
+</ul>
+<h2 id="javascript-api">JavaScript API</h2>
+<p>The Rivet alert component comes with a couple of methods you can use to programmatically control alerts. The <code>init()</code> method is called by default when <code>rivet.js</code> is loaded. Alerts are dismissed when clicking a <code>button</code> element within the alert with the <code>data-alert-close</code> attribute. You can also dismiss an alert by calling the <code>Alert.dismiss()</code> method in your own script.</p>
+<div class="rvtd-alert-shortcode rvt-alert rvt-alert--warning rvt-m-tb-md" aria-labelledby="alert-dismissal-class-deprecation">
+    <div class="rvt-alert__title" id="alert-dismissal-class-deprecation">Alert dismissal class deprecation</div>
+    <p class="rvt-alert__message"><p>In previous versions of Rivet, alerts were dismissed by clicking a <code>button</code> element within the alert with the <code>.rvt-alert__dismiss</code> class.</p>
+<p>In an effort to <a href="https://web.archive.org/web/20240917152211/https://github.com/indiana-university/rivet-source/issues/85">decouple CSS classes from JavaScript behavior</a>, the <code>.rvt-alert__dismiss</code> class has been deprecated in favor of the <code>data-alert-close</code> attribute. The examples on this page have been updated to reflect this new approach.</p>
+<p>We recommend updating your application to use the latest version of the alert.</p>
+</p>
+</div>
+<h3 id="available-methods">Available methods</h3>
+
+
+
+
+
+
+
+<table class="rvt-table-cells">
+    <caption class="sr-only">Alerts JavaScript methods</caption>
+    <thead>
+        <tr>
+            <th scope="col">Method</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td width="350" style="vertical-align: top;">
+                <code>Alert.init(context)</code>
+                
+            </td>
+            <td style="vertical-align: top;">
+                <ul>
+<li>Initializes the <code>Alert</code> component</li>
+<li>Accepts an optional DOM element. If no element is provided in the argument it defaults to the <code>document</code> element.</li>
+<li>NOTE: the <code>init()</code> method is called automatically when <code>rivet.js</code> is loaded.</li>
+</ul>
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="350" style="vertical-align: top;">
+                <code>Alert.destroy(context)</code>
+                
+            </td>
+            <td style="vertical-align: top;">
+                <ul>
+<li>Destroys any currently initialized Alerts and removes their event listeners.</li>
+<li>Accepts an optional DOM element. If no element is provided in the argument it defaults to the <code>document</code> element. <strong>NOTE</strong>: the optional <code>context</code> argument only needs to be passed into <code>.destroy()</code> if a DOM element was passed into the <code>.init()</code> method. If so, it must be the DOM element that was passed into <code>.init()</code> when the Alert was initialized.</li>
+</ul>
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="350" style="vertical-align: top;">
+                <code>Alert.dismiss(id, callback)</code>
+                
+            </td>
+            <td style="vertical-align: top;">
+                <ul>
+<li><code>id</code> - The unique id (String) of the Alert you want to dismiss.</li>
+<li><code>callback</code> - An optional function that gets executed after the alert is dismissed</li>
+<li><strong>NOTE</strong>: In previous versions of Rivet, the <code>Alert.dismiss()</code> method accepted an Alert DOM Element. The <code>.dismiss()</code> method will still work if you pass it a DOM element (the Alert element itself), but <strong>this functionality will be deprecated in the next major version of Rivet</strong>.</li>
+</ul>
+
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+
+
+
+
+            </div>
+        </div>
+        <div class="rvtd-article-nav">
+            <p>On this page</p>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#page-level-alerts">Page-level alerts</a>
+      <ul>
+        <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#deprecated-page-level-alert-class-names">Deprecated page-level alert class names</a></li>
+      </ul>
+    </li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#standalone-inline-alerts">Standalone inline alerts</a>
+      <ul>
+        <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#deprecated-standalone-inline-alert-class-names">Deprecated standalone inline alert class names</a></li>
+      </ul>
+    </li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#alert-lists">Alert lists</a></li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#when-to-use">When to use</a></li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#when-to-use-something-else">When to use something else</a></li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#accessibility">Accessibility</a>
+      <ul>
+        <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#alert-list-accessibility">Alert list accessibility</a></li>
+      </ul>
+    </li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#microcopy-notes">Microcopy notes</a>
+      <ul>
+        <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#good-example">Good example:</a></li>
+        <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#bad-example">Bad example:</a></li>
+        <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#implementation">Implementation</a></li>
+      </ul>
+    </li>
+    <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#javascript-api">JavaScript API</a>
+      <ul>
+        <li><a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#available-methods">Available methods</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </div>
+
+            </main>
+            <footer class="rvt-footer rvt-footer--hugo" role="contentinfo">
+  <div class="rvt-footer__trident">
+      <svg alt="" xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewbox="0 0 20 25">
+          <polygon points="13.33 3.32 13.33 5.21 14.76 5.21 14.76 15.64 11.9 15.64 11.9 1.9 13.33 1.9 13.33 0 6.67 0 6.67 1.9 8.09 1.9 8.09 15.64 5.24 15.64 5.24 5.21 6.67 5.21 6.67 3.32 0 3.32 0 5.21 1.43 5.21 1.43 17.47 3.7 19.91 8.09 19.91 8.09 22.76 6.67 22.76 6.67 25.13 13.33 25.13 13.33 22.76 11.9 22.76 11.9 19.91 16.1 19.91 18.56 17.47 18.56 5.21 20 5.21 20 3.32 13.33 3.32" fill="#900"/>
+      </svg>
+  </div>
+  <ul class="rvt-footer__aux-links">
+      <li class="rvt-footer__aux-item">
+          <a href="https://web.archive.org/web/20240917152211/https://accessibility.iu.edu/assistance/">Accessibility</a>
+      </li>
+      <li class="rvt-footer__aux-item">
+          
+          <a href="../../../../../../20240917095520/https:/v1.rivet.iu.edu/components/overlays/alerts/index.html#0">Privacy Notice</a>
+      </li>
+      <li class="rvt-footer__aux-item">
+          <a href="https://web.archive.org/web/20240917152211/https://www.iu.edu/copyright/index.html">Copyright</a> &copy; <span data-copyright-year></span> The Trustees of <a href="https://web.archive.org/web/20240917152211/https://www.iu.edu/">Indiana University</a>
+      </li>
+  </ul>
+</footer>
+        </div>
+        
+
+
+
+
+
+<script>
+
+  var baseURL = "https:\/\/web.archive.org\/web\/20240917152211\/https:\/\/v1.rivet.iu.edu\/";
+</script>
+
+<script src="../../../../../../20240917152211js_/https:/v1.rivet.iu.edu/js/rivet-docs.js%3F1705419739"></script>
+
+<script src="https://web.archive.org/web/20240917152211js_/https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script>
+  
+
+  new ClipboardJS('.rvtd-example__copy');
+  new ClipboardJS('.rvtd-package-copy');
+
+</script>
+
+    </body>
+</html>
+<script id="f5_cspm">(function(){var f5_cspm={f5_p:'GNDJOJJPCJFJHLHMNMAPHAKGJDALCEKGMBICKGOGFBJPDFPADDECAKGHHFALBNEMFCPBLFPDAAGOFKKGPFLAFGKFAAEOKCFNGKFIGJENEPNIEMOOCFHDDOFCMMNNKCLO',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,40,(latency>>8));str=f5_cspm.set_byte(str,41,(latency&0xff));str=f5_cspm.set_byte(str,35,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr0898702336aaaaaaaaaaaaaaaa_cspm_='+encodeURIComponent(cookie_val)+';path=/;'+'';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;'+';';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script><!--
+     FILE ARCHIVED ON 15:22:11 Sep 17, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 20:52:19 May 28, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  capture_cache.get: 0.779
+  load_resource: 355.386
+  PetaboxLoader3.resolve: 323.244
+  PetaboxLoader3.datanode: 27.417 (2)
+  loaddict: 20.821
+-->
