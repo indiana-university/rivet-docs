@@ -1,13 +1,13 @@
-# Rivet documentation site 
+# Rivet documentation site
 
 > [!NOTE]
 > [Rivet v1 docs](https://indiana-university.github.io/rivet-docs/) (2019–2022) is a public archive of this repo.
-> 
+>
 > See the latest documentation at the [Rivet site](https://rivet.iu.edu/).
 
 ## What's on this branch
 
-The `archive` branch does not contain the Rivet source (that's on `develop`). It contains a static, self-contained snapshot of the old **v1** docs site (`v1.rivet.iu.edu`), rebuilt from the [Wayback Machine](https://web.archive.org/), plus the scripts used to produce it:
+The `archive` branch does not contain the Rivet source. It contains a static, self-contained snapshot of the old **v1** docs site (`v1.rivet.iu.edu`), rebuilt from the [Wayback Machine](https://web.archive.org/), and the scripts used to produce it:
 
 - `docs/` — the finished static site. This is what GitHub Pages serves.
 - `archive.sh` — mirrors `v1.rivet.iu.edu` from the Wayback Machine into `site/`.
@@ -58,4 +58,4 @@ Then open [http://localhost:8000](http://localhost:8000).
 
 ## GitHub Pages
 
-There's no GitHub Actions workflow in this repo, and `docs/.nojekyll` is present, so the live site at https://indiana-university.github.io/rivet-docs/ is almost certainly served via the classic **Settings → Pages → Deploy from a branch** option, pointed at `archive` / `/docs`. Worth confirming that setting is actually saved that way in Settings → Pages — if so, pushing to `archive` with changes under `docs/` is all it takes to update the live site.
+There's no GitHub Actions workflow in this repo, and `docs/.nojekyll` is present, so the live site at https://indiana-university.github.io/rivet-docs/ is served via the classic **Settings → Pages → Deploy from a branch** option, pointed at `archive` / `/docs`.
