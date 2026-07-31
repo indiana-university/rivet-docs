@@ -1,7 +1,7 @@
 # Rivet documentation site
 
 > [!NOTE]
-> [Rivet v1 docs](https://indiana-university.github.io/rivet-docs/) (2019–2022) is a public archive of this repo.
+> [Rivet v1 docs](https://indiana-university.github.io/rivet-docs/) (2019–2022) is a public [archive](https://github.com/indiana-university/rivet-docs/tree/archive) of this repo.
 >
 > See the latest documentation at the [Rivet site](https://rivet.iu.edu/).
 
