@@ -1,5 +1,10 @@
 # Rivet documentation site
 
+> [!NOTE]
+> [Rivet v1 docs](https://indiana-university.github.io/rivet-docs/) (2019–2022) is a public archive of this repo.
+>
+> See the latest documentation at the [Rivet site](https://rivet.iu.edu/).
+
 This is the source for the Rivet documentation site. It is built with [Hugo](https://gohugo.io/), a static site generator written in Go (no Go experience is necessary to edit this site). Development is designed for macOS, but should be possible in other environments. To get started:
 ```
 git clone https://github.com/indiana-university/rivet-docs.git
